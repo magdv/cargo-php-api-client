@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ */
+
+declare(strict_types=1);
+
+namespace Cargomart\ApiClient\Builder\User\Recovery;
+
+use Cargomart\ApiClient\AbstractRequest;
+use Cargomart\ApiClient\Entity\User\Responses\UserRecoveryResponse;
+
+class IdGet extends AbstractRequest
+{
+    /** @var string[][] */
+    public $query = [];
+
+    /** @var string[] */
+    public $headers = [];
+
+    /**
+     * Получение процесса восстановления пароля.
+     *
+     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     */
+    public function do(): UserRecoveryResponse
+    {
+        return $this->client->doRequest(
+            'GET',
+            $this->url,
+            UserRecoveryResponse::class,
+            http_build_query($this->query),
+            null,
+            $this->headers
+        );
+    }
+}

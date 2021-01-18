@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ */
+
+declare(strict_types=1);
+
+namespace Cargomart\ApiClient\Builder\Company;
+
+use Cargomart\ApiClient\AbstractRequest;
+use Cargomart\ApiClient\Entity\Company\Requests\CompanyPatch;
+use Cargomart\ApiClient\Entity\Company\Responses\CompanyInfoResponse;
+
+class HashPatch extends AbstractRequest
+{
+    /** @var string[][] */
+    public $query = [];
+
+    /** @var string[] */
+    public $headers = [];
+
+    /**
+     * Метод редактирует данные компании.
+     *
+     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     */
+    public function do(CompanyPatch $body): CompanyInfoResponse
+    {
+        return $this->client->doRequest(
+            'PATCH',
+            $this->url,
+            CompanyInfoResponse::class,
+            http_build_query($this->query),
+            $body,
+            $this->headers
+        );
+    }
+}

@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ */
+
+declare(strict_types=1);
+
+namespace Cargomart\ApiClient\Builder\User;
+
+use Cargomart\ApiClient\AbstractRequest;
+use Cargomart\ApiClient\Entity\User\Requests\UserRecoveryCreateRequest;
+use Cargomart\ApiClient\Entity\User\Responses\UserRecoveryResponse;
+
+class RecoveryPost extends AbstractRequest
+{
+    /** @var string[][] */
+    public $query = [];
+
+    /** @var string[] */
+    public $headers = [];
+
+    /**
+     * Запрос на восстановление пароля.
+     *
+     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     */
+    public function do(UserRecoveryCreateRequest $body): UserRecoveryResponse
+    {
+        return $this->client->doRequest(
+            'POST',
+            $this->url,
+            UserRecoveryResponse::class,
+            http_build_query($this->query),
+            $body,
+            $this->headers
+        );
+    }
+}
