@@ -17,16 +17,9 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $truckId
  * @property string $departureCode
  * @property string $fromDate
- * @property OrderSearchCriteriaAccess $access
  */
 final class OrderSearchCriteria extends AbstractEntity
 {
-    protected static $types = [
-        'truckId' => ['int'],
-        'departureCode' => ['string'],
-        'fromDate' => ['string'],
-        'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderSearchCriteriaAccess'],
-    ];
-
-    protected static $nullables = ['truckId' => false, 'departureCode' => false, 'fromDate' => false, 'access' => false];
+    protected static $types = ['truckId' => ['int'], 'departureCode' => ['string'], 'fromDate' => ['string']];
+    protected static $nullables = ['truckId' => false, 'departureCode' => false, 'fromDate' => false];
 }

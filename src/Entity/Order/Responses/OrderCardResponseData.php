@@ -24,12 +24,12 @@ use Cargomart\ApiClient\Entity\Locality\Objects\Locality;
 use Cargomart\ApiClient\Entity\Order\Objects\MonitoringItem;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderCardFull;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderCondition;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderRefuseReasonItem;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderStatus;
 use Cargomart\ApiClient\Entity\Order\Objects\StoragePointExport;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\ContactItem;
 use Cargomart\ApiClient\Entity\Truck\Objects\TruckOld;
+use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 
 /**
  * Common response data
@@ -41,7 +41,7 @@ use Cargomart\ApiClient\Entity\Truck\Objects\TruckOld;
  * @property ContactItem[] $storagePointContact
  * @property CompanyShort[] $company
  * @property CompanyBranch[] $companyBranch
- * @property OrderContactItem[] $contact
+ * @property UserContactShort[] $contact
  * @property TruckDevice[] $device
  * @property OrderCondition[] $condition
  * @property LoadingType[] $loadingType
@@ -68,7 +68,7 @@ final class OrderCardResponseData extends AbstractEntity
         'storagePointContact' => ['array', 'Cargomart\ApiClient\Entity\StoragePoint\Objects\ContactItem'],
         'company' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CompanyShort'],
         'companyBranch' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CompanyBranch'],
-        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem'],
+        'contact' => ['array', 'Cargomart\ApiClient\Entity\User\Objects\UserContactShort'],
         'device' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TruckDevice'],
         'condition' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderCondition'],
         'loadingType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\LoadingType'],

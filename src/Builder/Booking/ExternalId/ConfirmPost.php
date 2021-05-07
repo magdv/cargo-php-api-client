@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Booking\ExternalId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Tms\Requests\TmsBookingConfirm;
-use Cargomart\ApiClient\Entity\Tms\Responses\AvailabilityListResponse;
+use Cargomart\ApiClient\Entity\Tms\Requests\ConfirmInput;
+use Cargomart\ApiClient\Entity\Tms\Responses\ReceptionResponse;
 
 class ConfirmPost extends AbstractRequest
 {
@@ -25,12 +25,12 @@ class ConfirmPost extends AbstractRequest
      *
      * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
      */
-    public function do(TmsBookingConfirm $body): AvailabilityListResponse
+    public function do(ConfirmInput $body): ReceptionResponse
     {
         return $this->client->doRequest(
             'POST',
             $this->url,
-            AvailabilityListResponse::class,
+            ReceptionResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

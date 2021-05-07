@@ -22,6 +22,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $ogrn
  * @property string $countryCode
  * @property string $taxSystem
+ * @property int $carTotalNumber
  * @property bool $isNotTaxReturnDate
  * @property int $activityTypeId
  * @property string $createDate
@@ -38,6 +39,7 @@ final class Company extends AbstractEntity
         'ogrn' => ['string'],
         'countryCode' => ['string'],
         'taxSystem' => ['string'],
+        'carTotalNumber' => ['int'],
         'isNotTaxReturnDate' => ['bool'],
         'activityTypeId' => ['int'],
         'createDate' => ['string'],
@@ -53,6 +55,7 @@ final class Company extends AbstractEntity
         'ogrn' => false,
         'countryCode' => false,
         'taxSystem' => false,
+        'carTotalNumber' => false,
         'isNotTaxReturnDate' => false,
         'activityTypeId' => false,
         'createDate' => false,

@@ -13,11 +13,11 @@ use Cargomart\ApiClient\Entity\Company\Objects\CompanyBranch;
 use Cargomart\ApiClient\Entity\Company\Objects\CompanyShort;
 use Cargomart\ApiClient\Entity\GeneralPartner\Objects\GeneralPartnerContract;
 use Cargomart\ApiClient\Entity\Locality\Objects\Locality;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderEditItem;
 use Cargomart\ApiClient\Entity\Order\Objects\ProgressItemListProgress;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\ContactItem;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointItem;
+use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 
 /**
  * Common response data
@@ -30,7 +30,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointItem;
  * @property Locality[] $locality
  * @property CompanyShort[] $company
  * @property CompanyBranch[] $companyBranch
- * @property OrderContactItem[] $contact
+ * @property UserContactShort[] $contact
  * @property GeneralPartnerContract[] $generalPartnerContract
  */
 final class OrderEditResponseData extends AbstractEntity
@@ -43,7 +43,7 @@ final class OrderEditResponseData extends AbstractEntity
         'locality' => ['array', 'Cargomart\ApiClient\Entity\Locality\Objects\Locality'],
         'company' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CompanyShort'],
         'companyBranch' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CompanyBranch'],
-        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem'],
+        'contact' => ['array', 'Cargomart\ApiClient\Entity\User\Objects\UserContactShort'],
         'generalPartnerContract' => ['array', 'Cargomart\ApiClient\Entity\GeneralPartner\Objects\GeneralPartnerContract'],
     ];
 

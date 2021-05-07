@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ */
+
+declare(strict_types=1);
+
+namespace Cargomart\ApiClient\Builder\Ws;
+
+use Cargomart\ApiClient\AbstractRequest;
+use Cargomart\ApiClient\Entity\Ws\Responses\WsConfigResponse;
+
+class ConfigPost extends AbstractRequest
+{
+    /** @var string[][] */
+    public $query = [];
+
+    /** @var string[] */
+    public $headers = [];
+
+    /**
+     * Возвращает конфигурацияю для WS.
+     *
+     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     */
+    public function do(): WsConfigResponse
+    {
+        return $this->client->doRequest(
+            'POST',
+            $this->url,
+            WsConfigResponse::class,
+            http_build_query($this->query),
+            null,
+            $this->headers
+        );
+    }
+}

@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\DriverApp;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\DriverApp\Requests\DriverAppInvitePostRequest;
-use Cargomart\ApiClient\Entity\DriverApp\Responses\DriverAppPhoneResponse;
+use Cargomart\ApiClient\Entity\DriverApp\Responses\DriverAppPhoneItemResponse;
 
 class InvitePost extends AbstractRequest
 {
@@ -25,12 +25,12 @@ class InvitePost extends AbstractRequest
      *
      * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
      */
-    public function do(DriverAppInvitePostRequest $body): DriverAppPhoneResponse
+    public function do(DriverAppInvitePostRequest $body): DriverAppPhoneItemResponse
     {
         return $this->client->doRequest(
             'POST',
             $this->url,
-            DriverAppPhoneResponse::class,
+            DriverAppPhoneItemResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

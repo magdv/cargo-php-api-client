@@ -11,7 +11,7 @@ namespace Cargomart\ApiClient\Entity\Order\Responses;
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Order\Objects\BidItem;
 use Cargomart\ApiClient\Entity\Order\Objects\CompanyExport;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem;
+use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 
 /**
  * Common response data
@@ -19,14 +19,14 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem;
  *
  * @property BidItem[] $bid
  * @property CompanyExport[] $company
- * @property OrderContactItem[] $contact
+ * @property UserContactShort[] $contact
  */
 final class BidListResponseData extends AbstractEntity
 {
     protected static $types = [
         'bid' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\BidItem'],
         'company' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\CompanyExport'],
-        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem'],
+        'contact' => ['array', 'Cargomart\ApiClient\Entity\User\Objects\UserContactShort'],
     ];
 
     protected static $nullables = ['bid' => false, 'company' => false, 'contact' => false];

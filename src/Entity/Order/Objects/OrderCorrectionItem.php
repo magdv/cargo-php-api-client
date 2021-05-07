@@ -25,6 +25,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int[] $loading
  * @property string[] $device
  * @property string[] $conditions
+ * @property \stdClass $vatRate
  * @property string $currentPrice
  * @property RoutePointCard[] $point
  * @property int[] $contact
@@ -46,6 +47,7 @@ final class OrderCorrectionItem extends AbstractEntity
         'loading' => ['array', 'int'],
         'device' => ['array', 'string'],
         'conditions' => ['array', 'string'],
+        'vatRate' => ['\stdClass'],
         'currentPrice' => ['string'],
         'point' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointCard'],
         'contact' => ['array', 'int'],
@@ -66,6 +68,7 @@ final class OrderCorrectionItem extends AbstractEntity
         'loading' => false,
         'device' => false,
         'conditions' => false,
+        'vatRate' => true,
         'currentPrice' => false,
         'point' => false,
         'contact' => false,

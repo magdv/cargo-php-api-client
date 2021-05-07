@@ -16,9 +16,19 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property bool $useOnlyOwnTrucks
  * @property bool $hireAnotherCarriers
+ * @property bool $internationalCarriage
  */
 final class CompanyProfileCarryingOption extends AbstractEntity
 {
-    protected static $types = ['useOnlyOwnTrucks' => ['bool'], 'hireAnotherCarriers' => ['bool']];
-    protected static $nullables = ['useOnlyOwnTrucks' => false, 'hireAnotherCarriers' => false];
+    protected static $types = [
+        'useOnlyOwnTrucks' => ['bool'],
+        'hireAnotherCarriers' => ['bool'],
+        'internationalCarriage' => ['bool'],
+    ];
+
+    protected static $nullables = [
+        'useOnlyOwnTrucks' => false,
+        'hireAnotherCarriers' => false,
+        'internationalCarriage' => false,
+    ];
 }

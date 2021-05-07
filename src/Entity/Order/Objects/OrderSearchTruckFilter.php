@@ -16,13 +16,15 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property TruckForFilter $truck
  * @property OrderSearchCriteria $searchCriteria
+ * @property OrderSearchTruckFilterAccess $access
  */
 final class OrderSearchTruckFilter extends AbstractEntity
 {
     protected static $types = [
         'truck' => ['Cargomart\ApiClient\Entity\Order\Objects\TruckForFilter'],
         'searchCriteria' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderSearchCriteria'],
+        'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderSearchTruckFilterAccess'],
     ];
 
-    protected static $nullables = ['truck' => false, 'searchCriteria' => false];
+    protected static $nullables = ['truck' => false, 'searchCriteria' => false, 'access' => false];
 }

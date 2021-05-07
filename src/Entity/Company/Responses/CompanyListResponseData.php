@@ -11,21 +11,21 @@ namespace Cargomart\ApiClient\Entity\Company\Responses;
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\Pagination;
 use Cargomart\ApiClient\Entity\Company\Objects\CompanyInfo;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem;
+use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 
 /**
  * Common response data
  * source: company/responses/company-list-response.json#/properties/data
  *
  * @property CompanyInfo[] $company
- * @property OrderContactItem[] $contact
+ * @property UserContactShort[] $contact
  * @property Pagination $pagination
  */
 final class CompanyListResponseData extends AbstractEntity
 {
     protected static $types = [
         'company' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CompanyInfo'],
-        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem'],
+        'contact' => ['array', 'Cargomart\ApiClient\Entity\User\Objects\UserContactShort'],
         'pagination' => ['Cargomart\ApiClient\Entity\Base\Pagination'],
     ];
 

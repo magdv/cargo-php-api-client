@@ -113,7 +113,7 @@ class LocalityGet extends AbstractRequest
     }
 
     /**
-     * Фильт по административным уровням
+     * Фильтр по административным уровням
      *
      * @var null|string $value
      *

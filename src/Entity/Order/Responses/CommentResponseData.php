@@ -11,7 +11,7 @@ namespace Cargomart\ApiClient\Entity\Order\Responses;
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Company\Objects\CompanyShort;
 use Cargomart\ApiClient\Entity\Order\Objects\Comment;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem;
+use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 
 /**
  * Комментарий
@@ -19,14 +19,14 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem;
  *
  * @property Comment $comment
  * @property CompanyShort[] $company
- * @property OrderContactItem[] $contact
+ * @property UserContactShort[] $contact
  */
 final class CommentResponseData extends AbstractEntity
 {
     protected static $types = [
         'comment' => ['Cargomart\ApiClient\Entity\Order\Objects\Comment'],
         'company' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CompanyShort'],
-        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem'],
+        'contact' => ['array', 'Cargomart\ApiClient\Entity\User\Objects\UserContactShort'],
     ];
 
     protected static $nullables = ['comment' => false, 'company' => false, 'contact' => false];

@@ -25,6 +25,7 @@ use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckMode;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckType;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\Vat;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderCondition;
+use Cargomart\ApiClient\Entity\Order\Objects\OrderDocumentType;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderPriceTypeItem;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderRefuseReasonItem;
 
@@ -50,6 +51,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderRefuseReasonItem;
  * @property CarPerPeriod[] $carPerPeriod
  * @property TenderCarriage[] $tenderCarriage
  * @property LegalStatus[] $legalStatus
+ * @property OrderDocumentType[] $orderDocumentType
  */
 final class DictionaryListData extends AbstractEntity
 {
@@ -72,6 +74,7 @@ final class DictionaryListData extends AbstractEntity
         'carPerPeriod' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\CarPerPeriod'],
         'tenderCarriage' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TenderCarriage'],
         'legalStatus' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\LegalStatus'],
+        'orderDocumentType' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDocumentType'],
     ];
 
     protected static $nullables = [
@@ -93,5 +96,6 @@ final class DictionaryListData extends AbstractEntity
         'carPerPeriod' => false,
         'tenderCarriage' => false,
         'legalStatus' => false,
+        'orderDocumentType' => false,
     ];
 }

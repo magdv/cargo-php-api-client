@@ -41,6 +41,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property float $latitude
  * @property int $legalStatus
  * @property string $legalName
+ * @property int $status
  */
 final class RoutePointCard extends AbstractEntity
 {
@@ -72,6 +73,7 @@ final class RoutePointCard extends AbstractEntity
         'latitude' => ['float'],
         'legalStatus' => ['int'],
         'legalName' => ['string'],
+        'status' => ['int'],
     ];
 
     protected static $nullables = [
@@ -102,5 +104,6 @@ final class RoutePointCard extends AbstractEntity
         'latitude' => false,
         'legalStatus' => false,
         'legalName' => false,
+        'status' => false,
     ];
 }

@@ -6,44 +6,35 @@
 
 declare(strict_types=1);
 
-namespace Cargomart\ApiClient\Entity\Base;
+namespace Cargomart\ApiClient\Entity\CompanyConfirmation\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
 
 /**
- * Объект контакта
- * source: base/user.json
+ * Контакт бухгалтера
+ * source: company-confirmation/objects/company-profile.json#/properties/bookkeeperDetails
  *
- * @property int $id
  * @property string $lastName
  * @property string $firstName
  * @property string $secondName
+ * @property string $phone
  * @property string $email
- * @property string $position
- * @property string $contactPhone
- * @property string $contactPhoneExt
  */
-final class User extends AbstractEntity
+final class CompanyProfileBookkeeperDetails extends AbstractEntity
 {
     protected static $types = [
-        'id' => ['int'],
         'lastName' => ['string'],
         'firstName' => ['string'],
         'secondName' => ['string'],
+        'phone' => ['string'],
         'email' => ['string'],
-        'position' => ['string'],
-        'contactPhone' => ['string'],
-        'contactPhoneExt' => ['string'],
     ];
 
     protected static $nullables = [
-        'id' => false,
         'lastName' => false,
         'firstName' => false,
         'secondName' => false,
+        'phone' => false,
         'email' => false,
-        'position' => false,
-        'contactPhone' => false,
-        'contactPhoneExt' => false,
     ];
 }

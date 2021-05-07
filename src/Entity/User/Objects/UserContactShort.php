@@ -21,7 +21,9 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $email
  * @property string $position
  * @property string $contactPhone
+ * @property string $contactPhoneExt
  * @property string $companyId
+ * @property bool $disabled
  */
 final class UserContactShort extends AbstractEntity
 {
@@ -33,7 +35,9 @@ final class UserContactShort extends AbstractEntity
         'email' => ['string'],
         'position' => ['string'],
         'contactPhone' => ['string'],
+        'contactPhoneExt' => ['string'],
         'companyId' => ['string'],
+        'disabled' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -44,6 +48,8 @@ final class UserContactShort extends AbstractEntity
         'email' => false,
         'position' => false,
         'contactPhone' => false,
+        'contactPhoneExt' => false,
         'companyId' => false,
+        'disabled' => false,
     ];
 }

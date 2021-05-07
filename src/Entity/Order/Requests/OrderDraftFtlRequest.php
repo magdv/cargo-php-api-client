@@ -17,8 +17,10 @@ use Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange;
  * source: order/requests/order-draft-ftl-request.json
  *
  * @property int $version
- * @property string $comment
- * @property string $date
+ * @property string $carriageDetail
+ * @property int $companyBranchId
+ * @property string $externalId
+ * @property OrderDraftFtlPoint[] $routePoint
  * @property int $truckTypeId
  * @property float $cargoWeight
  * @property int $cargoCapacity
@@ -32,24 +34,25 @@ use Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange;
  * @property string $currencyCode
  * @property float $vatRate
  * @property string $openPrice
- * @property string $externalId
- * @property OrderDraftFtlPoint[] $route
- * @property int[] $contact
- * @property string[] $tags
  * @property string $stepBid
- * @property string $type
+ * @property int[] $contact
+ * @property string $biddingType
+ * @property string $biddingStartDate
+ * @property string $biddingEndDate
+ * @property int $biddingDuration
  * @property string $accessTypeId
+ * @property string[] $accessClient
  * @property int $contractTypeId
- * @property string $startDate
- * @property string $endDate
- * @property int $duration
+ * @property string[] $tag
  */
 final class OrderDraftFtlRequest extends AbstractEntity
 {
     protected static $types = [
         'version' => ['int'],
-        'comment' => ['string'],
-        'date' => ['string'],
+        'carriageDetail' => ['string'],
+        'companyBranchId' => ['int'],
+        'externalId' => ['string'],
+        'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDraftFtlPoint'],
         'truckTypeId' => ['int'],
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],
@@ -63,23 +66,24 @@ final class OrderDraftFtlRequest extends AbstractEntity
         'currencyCode' => ['string'],
         'vatRate' => ['float'],
         'openPrice' => ['string'],
-        'externalId' => ['string'],
-        'route' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDraftFtlPoint'],
-        'contact' => ['array', 'int'],
-        'tags' => ['array', 'string'],
         'stepBid' => ['string'],
-        'type' => ['string'],
+        'contact' => ['array', 'int'],
+        'biddingType' => ['string'],
+        'biddingStartDate' => ['string'],
+        'biddingEndDate' => ['string'],
+        'biddingDuration' => ['int'],
         'accessTypeId' => ['string'],
+        'accessClient' => ['array', 'string'],
         'contractTypeId' => ['int'],
-        'startDate' => ['string'],
-        'endDate' => ['string'],
-        'duration' => ['int'],
+        'tag' => ['array', 'string'],
     ];
 
     protected static $nullables = [
         'version' => false,
-        'comment' => false,
-        'date' => false,
+        'carriageDetail' => false,
+        'companyBranchId' => false,
+        'externalId' => false,
+        'routePoint' => false,
         'truckTypeId' => false,
         'cargoWeight' => false,
         'cargoCapacity' => false,
@@ -93,16 +97,15 @@ final class OrderDraftFtlRequest extends AbstractEntity
         'currencyCode' => false,
         'vatRate' => false,
         'openPrice' => false,
-        'externalId' => false,
-        'route' => false,
-        'contact' => false,
-        'tags' => false,
         'stepBid' => false,
-        'type' => false,
+        'contact' => false,
+        'biddingType' => false,
+        'biddingStartDate' => false,
+        'biddingEndDate' => false,
+        'biddingDuration' => false,
         'accessTypeId' => false,
+        'accessClient' => false,
         'contractTypeId' => false,
-        'startDate' => false,
-        'endDate' => false,
-        'duration' => false,
+        'tag' => false,
     ];
 }

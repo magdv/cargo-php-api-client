@@ -16,6 +16,7 @@ use Cargomart\ApiClient\Entity\Base\CoordinateRadius;
  * source: tms/objects/tms-input-element.json#/properties/route
  *
  * @property string $routeId
+ * @property int $curatorId
  * @property CoordinateRadius $departure
  * @property CoordinateRadius $destination
  */
@@ -23,9 +24,10 @@ final class TmsInputElementRoute extends AbstractEntity
 {
     protected static $types = [
         'routeId' => ['string'],
+        'curatorId' => ['int'],
         'departure' => ['Cargomart\ApiClient\Entity\Base\CoordinateRadius'],
         'destination' => ['Cargomart\ApiClient\Entity\Base\CoordinateRadius'],
     ];
 
-    protected static $nullables = ['routeId' => false, 'departure' => false, 'destination' => false];
+    protected static $nullables = ['routeId' => false, 'curatorId' => false, 'departure' => false, 'destination' => false];
 }

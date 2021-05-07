@@ -6,23 +6,23 @@
 
 declare(strict_types=1);
 
-namespace Cargomart\ApiClient\Entity\DriverApp\Responses;
+namespace Cargomart\ApiClient\Entity\Order\Responses;
 
 use Cargomart\ApiClient\AbstractResponse;
 use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
- * Ответ с данными по статусам установки 'приложения водителя' для одного телефона
- * source: driver-app/responses/driver-app-phone-item-response.json
+ * Ответ с документом заказа
+ * source: order/responses/order-document-response.json
  *
  * @property MessageV2[] $message
- * @property DriverAppPhoneResponseData $data
+ * @property OrderDocumentResponseData $data
  */
-final class DriverAppPhoneResponse extends AbstractResponse
+final class OrderDocumentResponse extends AbstractResponse
 {
     protected static $types = [
         'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
-        'data' => ['Cargomart\ApiClient\Entity\DriverApp\Responses\DriverAppPhoneResponseData'],
+        'data' => ['Cargomart\ApiClient\Entity\Order\Responses\OrderDocumentResponseData'],
     ];
 
     protected static $nullables = ['message' => false, 'data' => false];

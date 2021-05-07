@@ -43,6 +43,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $contactExt
  * @property float $longitude
  * @property float $latitude
+ * @property int $status
  * @property OrderPointAccess $access
  */
 final class RoutePointEdit extends AbstractEntity
@@ -77,6 +78,7 @@ final class RoutePointEdit extends AbstractEntity
         'contactExt' => ['string'],
         'longitude' => ['float'],
         'latitude' => ['float'],
+        'status' => ['int'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPointAccess'],
     ];
 
@@ -110,6 +112,7 @@ final class RoutePointEdit extends AbstractEntity
         'contactExt' => false,
         'longitude' => false,
         'latitude' => false,
+        'status' => false,
         'access' => false,
     ];
 }

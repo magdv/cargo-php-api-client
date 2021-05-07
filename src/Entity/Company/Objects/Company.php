@@ -59,6 +59,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property CompanyAccess $access
  * @property bool $isValidated
  * @property int $legalStatusId
+ * @property bool $hasCompanyContactGroups
  */
 final class Company extends AbstractEntity
 {
@@ -108,6 +109,7 @@ final class Company extends AbstractEntity
         'access' => ['Cargomart\ApiClient\Entity\Company\Objects\CompanyAccess'],
         'isValidated' => ['bool'],
         'legalStatusId' => ['int'],
+        'hasCompanyContactGroups' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -156,5 +158,6 @@ final class Company extends AbstractEntity
         'access' => false,
         'isValidated' => false,
         'legalStatusId' => false,
+        'hasCompanyContactGroups' => false,
     ];
 }

@@ -117,6 +117,8 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property OrderAccess $access
  * @property OrderPreOrder $preOrder
  * @property string $paidInvoiceDate
+ * @property string $carrierPackageId
+ * @property string $carrierPackageStatus
  */
 final class OrderCardFull extends AbstractEntity
 {
@@ -223,6 +225,8 @@ final class OrderCardFull extends AbstractEntity
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderAccess'],
         'preOrder' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPreOrder'],
         'paidInvoiceDate' => ['string'],
+        'carrierPackageId' => ['string'],
+        'carrierPackageStatus' => ['string'],
     ];
 
     protected static $nullables = [
@@ -328,5 +332,7 @@ final class OrderCardFull extends AbstractEntity
         'access' => false,
         'preOrder' => false,
         'paidInvoiceDate' => false,
+        'carrierPackageId' => false,
+        'carrierPackageStatus' => false,
     ];
 }

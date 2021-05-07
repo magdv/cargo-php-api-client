@@ -13,7 +13,7 @@ use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Успешный ответ
- * source: tms/responses/reception-response.json
+ * source: tms/responses/availability-list-response.json
  *
  * @property MessageV2[] $message
  * @property AvailabilityListResponseData $data

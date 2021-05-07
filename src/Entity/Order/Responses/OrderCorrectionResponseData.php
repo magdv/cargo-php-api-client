@@ -15,8 +15,8 @@ use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckDevice;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckType;
 use Cargomart\ApiClient\Entity\Locality\Objects\Locality;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderCondition;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderCorrectionItem;
+use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 
 /**
  * source: order/responses/order-correction-response.json#/properties/data
@@ -27,7 +27,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderCorrectionItem;
  * @property OrderCondition[] $condition
  * @property LoadingType[] $loadingType
  * @property Locality[] $locality
- * @property OrderContactItem[] $contact
+ * @property UserContactShort[] $contact
  * @property OrderCorrectionItem $orderCorrection
  */
 final class OrderCorrectionResponseData extends AbstractEntity
@@ -39,7 +39,7 @@ final class OrderCorrectionResponseData extends AbstractEntity
         'condition' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderCondition'],
         'loadingType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\LoadingType'],
         'locality' => ['array', 'Cargomart\ApiClient\Entity\Locality\Objects\Locality'],
-        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem'],
+        'contact' => ['array', 'Cargomart\ApiClient\Entity\User\Objects\UserContactShort'],
         'orderCorrection' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderCorrectionItem'],
     ];
 

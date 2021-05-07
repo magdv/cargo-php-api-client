@@ -16,7 +16,7 @@ use Cargomart\ApiClient\Entity\DriverApp\Objects\DriverAppDetail;
  *
  * @property DriverAppDetail $driverAppDetail
  */
-final class DriverAppPhoneResponseData extends AbstractEntity
+final class DriverAppPhoneItemResponseData extends AbstractEntity
 {
     protected static $types = ['driverAppDetail' => ['Cargomart\ApiClient\Entity\DriverApp\Objects\DriverAppDetail']];
     protected static $nullables = ['driverAppDetail' => false];

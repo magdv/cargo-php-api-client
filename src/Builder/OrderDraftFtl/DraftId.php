@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderDraftFtl;
 
 use Cargomart\ApiClient\AbstractBuilder;
+use Cargomart\ApiClient\Builder\OrderDraftFtl\DraftId\Publish;
 
 /**
  * url: /api/v2/order-draft-ftl/{draftId}
@@ -16,6 +17,11 @@ use Cargomart\ApiClient\AbstractBuilder;
 final class DraftId extends AbstractBuilder
 {
     protected const URL = '/api/v2/order-draft-ftl/{draftId}';
+
+    public function publish(): Publish
+    {
+        return new Publish($this->params, $this->client);
+    }
 
     public function get(): DraftIdGet
     {

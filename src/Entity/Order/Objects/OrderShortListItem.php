@@ -15,6 +15,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: order/objects/order-short-list-item.json
  *
  * @property string $id
+ * @property string $draftId
  * @property int $serialId
  * @property int $statusId
  * @property int $extStatusId
@@ -90,6 +91,7 @@ final class OrderShortListItem extends AbstractEntity
 {
     protected static $types = [
         'id' => ['string'],
+        'draftId' => ['string'],
         'serialId' => ['int'],
         'statusId' => ['int'],
         'extStatusId' => ['int'],
@@ -164,6 +166,7 @@ final class OrderShortListItem extends AbstractEntity
 
     protected static $nullables = [
         'id' => false,
+        'draftId' => false,
         'serialId' => false,
         'statusId' => false,
         'extStatusId' => false,

@@ -105,6 +105,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $waybillGpView
  * @property bool $updateProxyConsignorCarrierAdditionalInfo
  * @property bool $viewProxyConsignorCarrierAdditionalInfo
+ * @property bool $viewDownloadExpeditorAssignment
  */
 final class OrderAccess extends AbstractEntity
 {
@@ -200,6 +201,7 @@ final class OrderAccess extends AbstractEntity
         'waybillGpView' => ['bool'],
         'updateProxyConsignorCarrierAdditionalInfo' => ['bool'],
         'viewProxyConsignorCarrierAdditionalInfo' => ['bool'],
+        'viewDownloadExpeditorAssignment' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -294,5 +296,6 @@ final class OrderAccess extends AbstractEntity
         'waybillGpView' => false,
         'updateProxyConsignorCarrierAdditionalInfo' => false,
         'viewProxyConsignorCarrierAdditionalInfo' => false,
+        'viewDownloadExpeditorAssignment' => false,
     ];
 }

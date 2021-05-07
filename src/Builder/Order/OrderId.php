@@ -25,6 +25,7 @@ use Cargomart\ApiClient\Builder\Order\OrderId\Contact;
 use Cargomart\ApiClient\Builder\Order\OrderId\Correction;
 use Cargomart\ApiClient\Builder\Order\OrderId\Document;
 use Cargomart\ApiClient\Builder\Order\OrderId\Edit;
+use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorAssignment;
 use Cargomart\ApiClient\Builder\Order\OrderId\Finish;
 use Cargomart\ApiClient\Builder\Order\OrderId\GeneralPartnerDocument;
 use Cargomart\ApiClient\Builder\Order\OrderId\GeneralPartnerProposalTemplate;
@@ -53,6 +54,7 @@ use Cargomart\ApiClient\Builder\Order\OrderId\RefuseAppeal;
 use Cargomart\ApiClient\Builder\Order\OrderId\RefuseCancel;
 use Cargomart\ApiClient\Builder\Order\OrderId\Repeat;
 use Cargomart\ApiClient\Builder\Order\OrderId\Save;
+use Cargomart\ApiClient\Builder\Order\OrderId\Sign;
 use Cargomart\ApiClient\Builder\Order\OrderId\Tag;
 use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriver;
 use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriverCorrection;
@@ -282,6 +284,16 @@ final class OrderId extends AbstractBuilder
     public function invoiceGpCarrier(): InvoiceGpCarrier
     {
         return new InvoiceGpCarrier($this->params, $this->client);
+    }
+
+    public function expeditorAssignment(): ExpeditorAssignment
+    {
+        return new ExpeditorAssignment($this->params, $this->client);
+    }
+
+    public function sign(): Sign
+    {
+        return new Sign($this->params, $this->client);
     }
 
     public function correction(): Correction

@@ -16,7 +16,7 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property string $status
  */
-final class TmsBookingConfirm extends AbstractEntity
+final class ConfirmInput extends AbstractEntity
 {
     protected static $types = ['status' => ['string']];
     protected static $nullables = ['status' => false];

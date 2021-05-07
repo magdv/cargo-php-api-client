@@ -18,7 +18,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItem;
  * @property StoragePointItem $storage
  * @property string $type
  * @property string $additionalInfo
- * @property string $onDate
+ * @property string $fromDate
  * @property string $fromTime
  * @property string $toTime
  */
@@ -28,7 +28,7 @@ final class OrderDraftFtlPoint extends AbstractEntity
         'storage' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItem'],
         'type' => ['string'],
         'additionalInfo' => ['string'],
-        'onDate' => ['string'],
+        'fromDate' => ['string'],
         'fromTime' => ['string'],
         'toTime' => ['string'],
     ];
@@ -37,7 +37,7 @@ final class OrderDraftFtlPoint extends AbstractEntity
         'storage' => false,
         'type' => false,
         'additionalInfo' => false,
-        'onDate' => false,
+        'fromDate' => false,
         'fromTime' => false,
         'toTime' => false,
     ];

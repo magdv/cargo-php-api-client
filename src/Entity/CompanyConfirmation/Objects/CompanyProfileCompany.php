@@ -17,8 +17,10 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $phone
  * @property string $email
  * @property string $actualAddress
+ * @property string $legalAddress
  * @property string $url
  * @property string $taxSystem
+ * @property int $carTotalNumber
  */
 final class CompanyProfileCompany extends AbstractEntity
 {
@@ -26,15 +28,19 @@ final class CompanyProfileCompany extends AbstractEntity
         'phone' => ['string'],
         'email' => ['string'],
         'actualAddress' => ['string'],
+        'legalAddress' => ['string'],
         'url' => ['string'],
         'taxSystem' => ['string'],
+        'carTotalNumber' => ['int'],
     ];
 
     protected static $nullables = [
         'phone' => false,
         'email' => false,
         'actualAddress' => false,
+        'legalAddress' => false,
         'url' => false,
         'taxSystem' => false,
+        'carTotalNumber' => false,
     ];
 }

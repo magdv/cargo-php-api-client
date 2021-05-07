@@ -52,6 +52,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $status
  * @property PartnerContract $contract
  * @property PartnerContractWithType[] $partnerContract
+ * @property bool $hasCompanyContactGroups
  * @property CompanyAccess $access
  */
 final class CompanyInfo extends AbstractEntity
@@ -95,6 +96,7 @@ final class CompanyInfo extends AbstractEntity
         'status' => ['int'],
         'contract' => ['Cargomart\ApiClient\Entity\Company\Objects\PartnerContract'],
         'partnerContract' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\PartnerContractWithType'],
+        'hasCompanyContactGroups' => ['bool'],
         'access' => ['Cargomart\ApiClient\Entity\Company\Objects\CompanyAccess'],
     ];
 
@@ -137,6 +139,7 @@ final class CompanyInfo extends AbstractEntity
         'status' => false,
         'contract' => false,
         'partnerContract' => false,
+        'hasCompanyContactGroups' => false,
         'access' => false,
     ];
 }

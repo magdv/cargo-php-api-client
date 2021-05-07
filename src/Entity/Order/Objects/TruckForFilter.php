@@ -16,15 +16,9 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property int $id
  * @property string $number
- * @property TruckForFilterAccess $access
  */
 final class TruckForFilter extends AbstractEntity
 {
-    protected static $types = [
-        'id' => ['int'],
-        'number' => ['string'],
-        'access' => ['Cargomart\ApiClient\Entity\Order\Objects\TruckForFilterAccess'],
-    ];
-
-    protected static $nullables = ['id' => false, 'number' => false, 'access' => false];
+    protected static $types = ['id' => ['int'], 'number' => ['string']];
+    protected static $nullables = ['id' => false, 'number' => false];
 }

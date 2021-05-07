@@ -10,8 +10,8 @@ namespace Cargomart\ApiClient\Entity\Order\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Company\Objects\CompanyShort;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderOffer;
+use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 
 /**
  * Common response data
@@ -19,14 +19,14 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderOffer;
  *
  * @property OrderOffer[] $offer
  * @property CompanyShort[] $company
- * @property OrderContactItem[] $contact
+ * @property UserContactShort[] $contact
  */
 final class OrderOfferListResponseData extends AbstractEntity
 {
     protected static $types = [
         'offer' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderOffer'],
         'company' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CompanyShort'],
-        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderContactItem'],
+        'contact' => ['array', 'Cargomart\ApiClient\Entity\User\Objects\UserContactShort'],
     ];
 
     protected static $nullables = ['offer' => false, 'company' => false, 'contact' => false];

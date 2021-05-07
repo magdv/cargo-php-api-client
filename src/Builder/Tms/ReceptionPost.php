@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\Tms;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Tms\Requests\TmsInput;
-use Cargomart\ApiClient\Entity\Tms\Responses\AvailabilityListResponse;
+use Cargomart\ApiClient\Entity\Tms\Responses\ReceptionResponse;
 
 class ReceptionPost extends AbstractRequest
 {
@@ -25,12 +25,12 @@ class ReceptionPost extends AbstractRequest
      *
      * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
      */
-    public function do(TmsInput $body): AvailabilityListResponse
+    public function do(TmsInput $body): ReceptionResponse
     {
         return $this->client->doRequest(
             'POST',
             $this->url,
-            AvailabilityListResponse::class,
+            ReceptionResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

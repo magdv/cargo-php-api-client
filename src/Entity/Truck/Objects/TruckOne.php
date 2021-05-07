@@ -23,6 +23,11 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property float $truckCarryingCapacity
  * @property float $truckCubicCapacity
  * @property int $truckTypeId
+ * @property string $ownershipType
+ * @property string $affiliationType
+ * @property string $companyOwnerInn
+ * @property string $companyOwnerName
+ * @property string $companyOwnerAddress
  * @property int $truckModeId
  * @property string[] $phones
  * @property int[] $ptsFileIds
@@ -42,6 +47,11 @@ final class TruckOne extends AbstractEntity
         'truckCarryingCapacity' => ['float'],
         'truckCubicCapacity' => ['float'],
         'truckTypeId' => ['int'],
+        'ownershipType' => ['string'],
+        'affiliationType' => ['string'],
+        'companyOwnerInn' => ['string'],
+        'companyOwnerName' => ['string'],
+        'companyOwnerAddress' => ['string'],
         'truckModeId' => ['int'],
         'phones' => ['array', 'string'],
         'ptsFileIds' => ['array', 'int'],
@@ -60,6 +70,11 @@ final class TruckOne extends AbstractEntity
         'truckCarryingCapacity' => false,
         'truckCubicCapacity' => false,
         'truckTypeId' => false,
+        'ownershipType' => false,
+        'affiliationType' => false,
+        'companyOwnerInn' => false,
+        'companyOwnerName' => false,
+        'companyOwnerAddress' => false,
         'truckModeId' => false,
         'phones' => false,
         'ptsFileIds' => false,

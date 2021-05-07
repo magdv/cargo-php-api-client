@@ -16,12 +16,16 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property string $id
  * @property string $orderId
- * @property int $version
- * @property string $date
  * @property int $serialId
  * @property int $statusId
  * @property int $extStatusId
- * @property string $comment
+ * @property int $version
+ * @property string $carriageDetail
+ * @property string $consignorId
+ * @property int $companyBranchId
+ * @property int[] $contact
+ * @property string $externalId
+ * @property OrderDraftFtlPoint[] $routePoint
  * @property int $truckTypeId
  * @property float $cargoWeight
  * @property int $cargoCapacity
@@ -34,32 +38,34 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $paymentDetail
  * @property string $currencyCode
  * @property float $vatRate
+ * @property string $priceType
  * @property string $openPrice
  * @property string $stepBid
- * @property string $type
+ * @property string $biddingType
+ * @property string $biddingStartDate
+ * @property string $biddingEndDate
+ * @property int $biddingDuration
  * @property string $accessTypeId
- * @property string $startDate
- * @property string $endDate
- * @property int $duration
- * @property OrderDraftFtlPoint[] $route
+ * @property string[] $accessClient
  * @property int $contractTypeId
- * @property int[] $contact
- * @property string[] $tags
- * @property string $externalId
- * @property int $companyBranchId
- * @property OrderAccess $access
+ * @property string[] $tag
+ * @property OrderDraftFtlAccess $access
  */
 final class OrderDraftFtlEditItem extends AbstractEntity
 {
     protected static $types = [
         'id' => ['string'],
         'orderId' => ['string'],
-        'version' => ['int'],
-        'date' => ['string'],
         'serialId' => ['int'],
         'statusId' => ['int'],
         'extStatusId' => ['int'],
-        'comment' => ['string'],
+        'version' => ['int'],
+        'carriageDetail' => ['string'],
+        'consignorId' => ['string'],
+        'companyBranchId' => ['int'],
+        'contact' => ['array', 'int'],
+        'externalId' => ['string'],
+        'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDraftFtlPoint'],
         'truckTypeId' => ['int'],
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],
@@ -72,31 +78,33 @@ final class OrderDraftFtlEditItem extends AbstractEntity
         'paymentDetail' => ['string'],
         'currencyCode' => ['string'],
         'vatRate' => ['float'],
+        'priceType' => ['string'],
         'openPrice' => ['string'],
         'stepBid' => ['string'],
-        'type' => ['string'],
+        'biddingType' => ['string'],
+        'biddingStartDate' => ['string'],
+        'biddingEndDate' => ['string'],
+        'biddingDuration' => ['int'],
         'accessTypeId' => ['string'],
-        'startDate' => ['string'],
-        'endDate' => ['string'],
-        'duration' => ['int'],
-        'route' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDraftFtlPoint'],
+        'accessClient' => ['array', 'string'],
         'contractTypeId' => ['int'],
-        'contact' => ['array', 'int'],
-        'tags' => ['array', 'string'],
-        'externalId' => ['string'],
-        'companyBranchId' => ['int'],
-        'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderAccess'],
+        'tag' => ['array', 'string'],
+        'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderDraftFtlAccess'],
     ];
 
     protected static $nullables = [
         'id' => false,
         'orderId' => false,
-        'version' => false,
-        'date' => false,
         'serialId' => false,
         'statusId' => false,
         'extStatusId' => false,
-        'comment' => false,
+        'version' => false,
+        'carriageDetail' => false,
+        'consignorId' => false,
+        'companyBranchId' => false,
+        'contact' => false,
+        'externalId' => false,
+        'routePoint' => false,
         'truckTypeId' => false,
         'cargoWeight' => false,
         'cargoCapacity' => false,
@@ -109,19 +117,17 @@ final class OrderDraftFtlEditItem extends AbstractEntity
         'paymentDetail' => false,
         'currencyCode' => false,
         'vatRate' => false,
+        'priceType' => false,
         'openPrice' => false,
         'stepBid' => false,
-        'type' => false,
+        'biddingType' => false,
+        'biddingStartDate' => false,
+        'biddingEndDate' => false,
+        'biddingDuration' => false,
         'accessTypeId' => false,
-        'startDate' => false,
-        'endDate' => false,
-        'duration' => false,
-        'route' => false,
+        'accessClient' => false,
         'contractTypeId' => false,
-        'contact' => false,
-        'tags' => false,
-        'externalId' => false,
-        'companyBranchId' => false,
+        'tag' => false,
         'access' => false,
     ];
 }

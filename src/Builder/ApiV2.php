@@ -142,9 +142,24 @@ final class ApiV2 extends AbstractBuilder
         return new Tracking($this->params, $this->client);
     }
 
+    public function orderDraftExpeditor(): OrderDraftExpeditor
+    {
+        return new OrderDraftExpeditor($this->params, $this->client);
+    }
+
     public function orderSearch(): OrderSearch
     {
         return new OrderSearch($this->params, $this->client);
+    }
+
+    public function truckOrderSearch(): TruckOrderSearch
+    {
+        return new TruckOrderSearch($this->params, $this->client);
+    }
+
+    public function truckOrderQueue(): TruckOrderQueue
+    {
+        return new TruckOrderQueue($this->params, $this->client);
     }
 
     public function orderDraftFtl(): OrderDraftFtl
@@ -152,9 +167,24 @@ final class ApiV2 extends AbstractBuilder
         return new OrderDraftFtl($this->params, $this->client);
     }
 
+    public function orderDocumentPackage(): OrderDocumentPackage
+    {
+        return new OrderDocumentPackage($this->params, $this->client);
+    }
+
+    public function orderDocument(): OrderDocument
+    {
+        return new OrderDocument($this->params, $this->client);
+    }
+
     public function driver(): Driver
     {
         return new Driver($this->params, $this->client);
+    }
+
+    public function ws(): Ws
+    {
+        return new Ws($this->params, $this->client);
     }
 
     public function message(): Message
@@ -175,5 +205,10 @@ final class ApiV2 extends AbstractBuilder
     public function booking(): Booking
     {
         return new Booking($this->params, $this->client);
+    }
+
+    public function predictor(): Predictor
+    {
+        return new Predictor($this->params, $this->client);
     }
 }

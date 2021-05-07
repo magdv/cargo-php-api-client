@@ -17,6 +17,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property CompanyProfilePassport $passport
  * @property CompanyProfileCompany $company
  * @property CompanyProfileBankingDetails $bankingDetails
+ * @property CompanyProfileBookkeeperDetails $bookkeeperDetails
  * @property CompanyProfileCarryingOption $carryingOption
  */
 final class CompanyProfile extends AbstractEntity
@@ -25,6 +26,7 @@ final class CompanyProfile extends AbstractEntity
         'passport' => ['Cargomart\ApiClient\Entity\CompanyConfirmation\Objects\CompanyProfilePassport'],
         'company' => ['Cargomart\ApiClient\Entity\CompanyConfirmation\Objects\CompanyProfileCompany'],
         'bankingDetails' => ['Cargomart\ApiClient\Entity\CompanyConfirmation\Objects\CompanyProfileBankingDetails'],
+        'bookkeeperDetails' => ['Cargomart\ApiClient\Entity\CompanyConfirmation\Objects\CompanyProfileBookkeeperDetails'],
         'carryingOption' => ['Cargomart\ApiClient\Entity\CompanyConfirmation\Objects\CompanyProfileCarryingOption'],
     ];
 
@@ -32,6 +34,7 @@ final class CompanyProfile extends AbstractEntity
         'passport' => false,
         'company' => false,
         'bankingDetails' => false,
+        'bookkeeperDetails' => false,
         'carryingOption' => false,
     ];
 }
