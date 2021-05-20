@@ -22,7 +22,9 @@ class ChangingLogGet extends AbstractRequest
     /**
      * Получение истории изменения группы предзаказов
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PreOrderGroupChangingLogResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): PreOrderGroupChangingLogResponse
     {

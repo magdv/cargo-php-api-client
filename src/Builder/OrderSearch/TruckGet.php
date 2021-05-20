@@ -22,7 +22,9 @@ class TruckGet extends AbstractRequest
     /**
      * Получение списка машин и критериев поиска для них по заказам
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderSearchCriteriaListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderSearchCriteriaListResponse
     {

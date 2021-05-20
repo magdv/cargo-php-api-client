@@ -22,7 +22,9 @@ class CountActiveGet extends AbstractRequest
     /**
      * Количество активных пользователей
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserCountActive
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): UserCountActive
     {

@@ -22,7 +22,9 @@ class PointIdDelete extends AbstractRequest
     /**
      * Удаление маршрутной точки
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageResponse
     {

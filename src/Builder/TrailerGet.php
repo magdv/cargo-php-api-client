@@ -22,7 +22,9 @@ class TrailerGet extends AbstractRequest
     /**
      * Метод поиска тягачей и прицепов.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TrailerListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): TrailerListResponse
     {

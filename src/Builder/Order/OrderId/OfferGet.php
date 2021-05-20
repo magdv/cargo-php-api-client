@@ -22,7 +22,9 @@ class OfferGet extends AbstractRequest
     /**
      * получение списка предложений на заказ.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderOfferListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderOfferListResponse
     {

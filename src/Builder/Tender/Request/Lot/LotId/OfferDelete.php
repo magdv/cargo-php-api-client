@@ -22,7 +22,9 @@ class OfferDelete extends AbstractRequest
     /**
      * Удаление отклика лота
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageResponse
     {

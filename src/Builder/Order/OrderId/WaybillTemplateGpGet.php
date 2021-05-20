@@ -22,7 +22,9 @@ class WaybillTemplateGpGet extends AbstractRequest
     /**
      * Скачать транспортную накладную (подготовить ссылку на скачивание) для ГП
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return FileLinkResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): FileLinkResponse
     {

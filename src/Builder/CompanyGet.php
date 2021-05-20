@@ -22,7 +22,9 @@ class CompanyGet extends AbstractRequest
     /**
      * Метод возвращает все компании с учетом фильтров
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CompanyListResponse
     {

@@ -22,7 +22,9 @@ class ConfigPost extends AbstractRequest
     /**
      * Возвращает конфигурацияю для WS.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return WsConfigResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): WsConfigResponse
     {

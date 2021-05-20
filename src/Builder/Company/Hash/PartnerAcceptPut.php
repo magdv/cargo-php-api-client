@@ -23,7 +23,9 @@ class PartnerAcceptPut extends AbstractRequest
     /**
      * Метод принимет запрос от компании на партнёрство
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PartnerStatusResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(PartnerContractRequest $body): PartnerStatusResponse
     {

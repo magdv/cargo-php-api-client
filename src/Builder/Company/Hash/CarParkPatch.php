@@ -23,7 +23,9 @@ class CarParkPatch extends AbstractRequest
     /**
      * автопарк перевозчика.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CarParkResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(CarPark $body): CarParkResponse
     {

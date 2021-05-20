@@ -22,7 +22,9 @@ class ApprovePost extends AbstractRequest
     /**
      * Подтверждение запроса на изменение водителя или машины.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageResponse
     {

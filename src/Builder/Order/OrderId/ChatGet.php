@@ -22,7 +22,9 @@ class ChatGet extends AbstractRequest
     /**
      * Получение списка комнат по заказу.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return ChatListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): ChatListResponse
     {

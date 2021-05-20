@@ -23,7 +23,9 @@ class CompanyProfileSendPost extends AbstractRequest
     /**
      * Отправить анкету, перейти к следующему шагу
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Status
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(CompanyProfileRequest $body): Status
     {

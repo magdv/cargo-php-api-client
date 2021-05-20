@@ -22,7 +22,9 @@ class CompanyGet extends AbstractRequest
     /**
      * Поиск по данным контактов точек маршурта текущего клиента.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderClientAccessListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderClientAccessListResponse
     {

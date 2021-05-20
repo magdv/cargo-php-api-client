@@ -22,7 +22,9 @@ class ImportPost extends AbstractRequest
     /**
      * Импорт заказа из xlsx.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderImport
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderImport
     {

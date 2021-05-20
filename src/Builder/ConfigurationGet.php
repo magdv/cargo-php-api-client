@@ -22,7 +22,9 @@ class ConfigurationGet extends AbstractRequest
     /**
      * Получение текущей конфигурации системы
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return ConfigurationResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): ConfigurationResponse
     {

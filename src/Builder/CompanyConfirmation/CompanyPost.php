@@ -23,7 +23,9 @@ class CompanyPost extends AbstractRequest
     /**
      * Установка начальных данных компании.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Status
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(CompanyCreate $body): Status
     {

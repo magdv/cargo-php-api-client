@@ -23,7 +23,9 @@ class ValidatePost extends AbstractRequest
     /**
      * Бизнес валидация черновика.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderDraftExpeditorValidateResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderDraftExpeditorUpdateRequest $body): OrderDraftExpeditorValidateResponse
     {

@@ -23,7 +23,9 @@ class RefuseAppealPost extends AbstractRequest
     /**
      * Жалоба на отказ.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(MessageRequest $body): OrderCardResponse
     {

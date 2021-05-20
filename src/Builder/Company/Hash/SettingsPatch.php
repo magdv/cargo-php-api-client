@@ -23,7 +23,9 @@ class SettingsPatch extends AbstractRequest
     /**
      * Сохранение настроек компании.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanySettings
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(SettingsData $body): CompanySettings
     {

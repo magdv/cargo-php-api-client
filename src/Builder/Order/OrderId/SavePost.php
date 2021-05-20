@@ -22,7 +22,9 @@ class SavePost extends AbstractRequest
     /**
      * Перевод заказа из времменого в черновики.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderEditResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderEditResponse
     {

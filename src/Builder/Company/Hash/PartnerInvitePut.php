@@ -23,7 +23,9 @@ class PartnerInvitePut extends AbstractRequest
     /**
      * Метод добавляет компанию в партнёры
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PartnerStatusResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(PartnerFormRequest $body): PartnerStatusResponse
     {

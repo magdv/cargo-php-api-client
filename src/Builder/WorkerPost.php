@@ -23,7 +23,9 @@ class WorkerPost extends AbstractRequest
     /**
      * Создание нового сотрудника.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return WorkerResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(WorkerChangeRequest $body): WorkerResponse
     {

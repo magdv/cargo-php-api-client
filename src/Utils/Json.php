@@ -17,8 +17,9 @@ class Json
      */
     public static function encode($value, int $options = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE): string
     {
-        set_error_handler(static function () {
+        set_error_handler(static function (): ?bool {
             static::handleJsonError(JSON_ERROR_SYNTAX);
+            return true;
         }, E_WARNING);
         $json = json_encode($value, $options);
         restore_error_handler();

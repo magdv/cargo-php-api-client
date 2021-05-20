@@ -22,7 +22,9 @@ class ContactGet extends AbstractRequest
     /**
      * Получение списка контактов.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderContactListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderContactListResponse
     {

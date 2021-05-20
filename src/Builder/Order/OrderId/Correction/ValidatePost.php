@@ -23,7 +23,9 @@ class ValidatePost extends AbstractRequest
     /**
      * Валидация формы запроса на изменение заказа.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCorrectionValidateResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderCorrectionValidateRequest $body): OrderCorrectionValidateResponse
     {

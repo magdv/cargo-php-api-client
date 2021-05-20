@@ -22,7 +22,9 @@ class ContactIdDelete extends AbstractRequest
     /**
      * Удаление одного контакта пункта погрузки/выгрузки
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageResponse
     {

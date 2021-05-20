@@ -23,7 +23,9 @@ class GroupIdPut extends AbstractRequest
     /**
      * Сохранение группы предзаказов
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PreOrderGroupResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(PreOrderGroupUpdateRequest $body): PreOrderGroupResponse
     {

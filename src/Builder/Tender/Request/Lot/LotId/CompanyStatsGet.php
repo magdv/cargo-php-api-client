@@ -22,7 +22,9 @@ class CompanyStatsGet extends AbstractRequest
     /**
      * Получить список компаний со статистикой по лоту
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TenderCompanyStatListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): TenderCompanyStatListResponse
     {

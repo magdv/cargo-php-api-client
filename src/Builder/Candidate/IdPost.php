@@ -23,7 +23,9 @@ class IdPost extends AbstractRequest
     /**
      * Создать сотрудника из потенциального сотрудника.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return WorkerResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(CandidateRequest $body): WorkerResponse
     {

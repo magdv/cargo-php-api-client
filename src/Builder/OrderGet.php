@@ -22,7 +22,9 @@ class OrderGet extends AbstractRequest
     /**
      * Метод для получения списка заказов согласно фильтру.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderListResponse
     {

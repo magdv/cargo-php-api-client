@@ -23,7 +23,9 @@ class OfferPost extends AbstractRequest
     /**
      * Разместить отклик на лот
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TenderRequestLotOfferItemResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(LotOfferPushRequest $body): TenderRequestLotOfferItemResponse
     {

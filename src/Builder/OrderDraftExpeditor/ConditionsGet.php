@@ -22,7 +22,9 @@ class ConditionsGet extends AbstractRequest
     /**
      * Получить цену по маршруту и условия оплаты
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderDraftExpeditorConditionsResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderDraftExpeditorConditionsResponse
     {

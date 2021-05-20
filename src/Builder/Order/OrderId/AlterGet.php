@@ -22,7 +22,9 @@ class AlterGet extends AbstractRequest
     /**
      * Получение списка полей, которые можно изменить.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderAlterAllowFieldsResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderAlterAllowFieldsResponse
     {

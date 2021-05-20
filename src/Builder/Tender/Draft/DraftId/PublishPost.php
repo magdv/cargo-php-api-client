@@ -22,7 +22,9 @@ class PublishPost extends AbstractRequest
     /**
      * Публикация черновика
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TenderDraftRequestResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): TenderDraftRequestResponse
     {

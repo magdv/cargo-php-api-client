@@ -23,7 +23,9 @@ class BrokerPut extends AbstractRequest
     /**
      * Установка брокера на заказ.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return BrokerResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(BrokerPutRequest $body): BrokerResponse
     {

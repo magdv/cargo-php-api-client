@@ -22,7 +22,9 @@ class TypePost extends AbstractRequest
     /**
      * создание комнаты по типу.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return ChatResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): ChatResponse
     {

@@ -22,7 +22,9 @@ class TokenPost extends AbstractRequest
     /**
      * Создание одноразового токена
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserOneTimeTokenResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): UserOneTimeTokenResponse
     {

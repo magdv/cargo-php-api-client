@@ -22,7 +22,9 @@ class NearestGet extends AbstractRequest
     /**
      * Поиск ближайших локалити в радиусе 50 км от заданных координат
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return LocalityResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): LocalityResponse
     {

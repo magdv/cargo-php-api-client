@@ -23,7 +23,9 @@ class OrderPost extends AbstractRequest
     /**
      * Создание нового заказа
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderEditResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderCreateRequest $body): OrderEditResponse
     {

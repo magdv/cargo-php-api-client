@@ -23,7 +23,9 @@ class DocumentIdPut extends AbstractRequest
     /**
      * Редактирование документа
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderDocumentResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderDocumentUpdateRequest $body): OrderDocumentResponse
     {

@@ -23,7 +23,9 @@ class LoginPost extends AbstractRequest
     /**
      * Авторизация пользователя и выдача токена.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserLoginResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(UserLoginRequest $body): UserLoginResponse
     {

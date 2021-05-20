@@ -23,7 +23,9 @@ class HashPatch extends AbstractRequest
     /**
      * Метод редактирует данные компании.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyInfoResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(CompanyPatch $body): CompanyInfoResponse
     {

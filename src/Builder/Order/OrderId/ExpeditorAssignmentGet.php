@@ -22,7 +22,9 @@ class ExpeditorAssignmentGet extends AbstractRequest
     /**
      * Скачать поручение экспедитору.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return FileLinkResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): FileLinkResponse
     {

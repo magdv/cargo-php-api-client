@@ -22,7 +22,9 @@ class ContractTypeGet extends AbstractRequest
     /**
      * Получение списка типов договоров.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return ContractTypeList
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): ContractTypeList
     {

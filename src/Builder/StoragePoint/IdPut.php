@@ -23,7 +23,9 @@ class IdPut extends AbstractRequest
     /**
      * Редактирование пункта погрузки/выгрузки
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PointOne
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(SpPoint $body): PointOne
     {

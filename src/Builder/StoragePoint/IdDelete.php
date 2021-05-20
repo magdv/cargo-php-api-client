@@ -22,7 +22,9 @@ class IdDelete extends AbstractRequest
     /**
      * Удаление пункта погрузки/выгрузки
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageResponse
     {

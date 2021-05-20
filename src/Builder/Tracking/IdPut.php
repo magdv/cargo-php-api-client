@@ -23,7 +23,9 @@ class IdPut extends AbstractRequest
     /**
      * Редактирование конкретного отслеживания.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TrackingItem
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(TrackingEdit $body): TrackingItem
     {

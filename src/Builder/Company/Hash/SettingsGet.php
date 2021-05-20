@@ -22,7 +22,9 @@ class SettingsGet extends AbstractRequest
     /**
      * Получение настроек компании.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanySettings
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CompanySettings
     {

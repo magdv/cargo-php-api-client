@@ -23,7 +23,9 @@ class InvoiceGpCarrierPut extends AbstractRequest
     /**
      * Добавление данных о платежах генерального партнера для перевозчика
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderInvoiceResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderInvoiceRequest $body): OrderInvoiceResponse
     {

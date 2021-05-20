@@ -22,7 +22,9 @@ class WorkerGet extends AbstractRequest
     /**
      * Вывод списка сотрудников компании.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return WorkerListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): WorkerListResponse
     {

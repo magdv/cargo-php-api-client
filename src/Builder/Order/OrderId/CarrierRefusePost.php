@@ -23,7 +23,9 @@ class CarrierRefusePost extends AbstractRequest
     /**
      * Оформить отказ перевозчика.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(ReasonRequest $body): OrderCardResponse
     {

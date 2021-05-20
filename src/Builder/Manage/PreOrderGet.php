@@ -22,7 +22,9 @@ class PreOrderGet extends AbstractRequest
     /**
      * Получение списка предзаказов
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PreOrderListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): PreOrderListResponse
     {

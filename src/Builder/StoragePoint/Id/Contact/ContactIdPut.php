@@ -23,7 +23,9 @@ class ContactIdPut extends AbstractRequest
     /**
      * Редактирование контакта пункта погрузки/выгрузки
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return ContactList
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(SpContact $body): ContactList
     {

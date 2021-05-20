@@ -22,7 +22,9 @@ class IdGet extends AbstractRequest
     /**
      * Получение шаблона предзаказа
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PreOrderTemplateResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): PreOrderTemplateResponse
     {

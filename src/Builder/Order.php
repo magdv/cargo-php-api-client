@@ -25,16 +25,6 @@ final class Order extends AbstractBuilder
 {
     protected const URL = '/api/v2/order';
 
-    public function excel(): Excel
-    {
-        return new Excel($this->params, $this->client);
-    }
-
-    public function import(): Import
-    {
-        return new Import($this->params, $this->client);
-    }
-
     public function orderId(string $orderId): OrderId
     {
         $params = $this->params;
@@ -57,14 +47,24 @@ final class Order extends AbstractBuilder
         return new Count($this->params, $this->client);
     }
 
-    public function categoryStatistics(): CategoryStatistics
-    {
-        return new CategoryStatistics($this->params, $this->client);
-    }
-
     public function ac(): Ac
     {
         return new Ac($this->params, $this->client);
+    }
+
+    public function excel(): Excel
+    {
+        return new Excel($this->params, $this->client);
+    }
+
+    public function import(): Import
+    {
+        return new Import($this->params, $this->client);
+    }
+
+    public function categoryStatistics(): CategoryStatistics
+    {
+        return new CategoryStatistics($this->params, $this->client);
     }
 
     public function get(): OrderGet

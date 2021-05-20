@@ -23,7 +23,9 @@ class PreOrderGroupPost extends AbstractRequest
     /**
      * Создание группы предзаказа
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PreOrderGroupResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(PreOrderGroupUpdateRequest $body): PreOrderGroupResponse
     {

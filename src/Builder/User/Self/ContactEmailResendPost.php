@@ -22,7 +22,9 @@ class ContactEmailResendPost extends AbstractRequest
     /**
      * Запрос на повторную отправку кода.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserFullResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): UserFullResponse
     {

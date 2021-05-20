@@ -22,7 +22,9 @@ class GeneralPartnerProxyTemplateGet extends AbstractRequest
     /**
      * Генеральный партнер. Скачать доверенность на заказ для ГП.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return FileLinkResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): FileLinkResponse
     {

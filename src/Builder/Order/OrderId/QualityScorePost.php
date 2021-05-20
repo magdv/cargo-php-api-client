@@ -23,7 +23,9 @@ class QualityScorePost extends AbstractRequest
     /**
      * Добавить оценку.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderQualityScoreResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderQualityScoreRequest $body): OrderQualityScoreResponse
     {

@@ -22,7 +22,9 @@ class BidGet extends AbstractRequest
     /**
      * получение списка ставок на заказ.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return BidListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): BidListResponse
     {

@@ -22,7 +22,9 @@ class UserSelfGet extends AbstractRequest
     /**
      * Возвращает реквизиты своей организации.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserFullResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): UserFullResponse
     {

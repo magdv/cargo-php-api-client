@@ -23,7 +23,9 @@ class EmailChangePost extends AbstractRequest
     /**
      * Посылает email на подтверждение почты.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserFullResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(UserEmailChangeRequest $body): UserFullResponse
     {

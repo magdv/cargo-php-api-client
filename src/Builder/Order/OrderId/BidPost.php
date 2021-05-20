@@ -23,7 +23,9 @@ class BidPost extends AbstractRequest
     /**
      * Установка ставки на заказ.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return BidLastResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(BidPushRequest $body): BidLastResponse
     {

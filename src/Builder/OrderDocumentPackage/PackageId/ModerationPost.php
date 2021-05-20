@@ -22,7 +22,9 @@ class ModerationPost extends AbstractRequest
     /**
      * Отправка пакета документов на проверку
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderDocumentPackageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderDocumentPackageResponse
     {

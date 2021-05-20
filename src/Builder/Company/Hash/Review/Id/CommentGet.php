@@ -22,7 +22,9 @@ class CommentGet extends AbstractRequest
     /**
      * Комментарии к отзыву на компанию.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyReviewCommentListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CompanyReviewCommentListResponse
     {

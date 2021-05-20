@@ -22,7 +22,9 @@ class IdGet extends AbstractRequest
     /**
      * Получение данных конкретного отслеживания.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TrackingItem
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): TrackingItem
     {

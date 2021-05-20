@@ -22,7 +22,9 @@ class RefreshDriverPatch extends AbstractRequest
     /**
      * Обновить данные водителя в заказе
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderDriverResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderDriverResponse
     {

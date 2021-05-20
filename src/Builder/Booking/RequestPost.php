@@ -23,7 +23,9 @@ class RequestPost extends AbstractRequest
     /**
      * Создание резервирования на машину
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return BookingDraftResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(BookingCreateRequest $body): BookingDraftResponse
     {

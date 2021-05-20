@@ -22,7 +22,9 @@ class ResultsGet extends AbstractRequest
     /**
      * Получить результаты приема заявок в формате xlsx
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageResponse
     {

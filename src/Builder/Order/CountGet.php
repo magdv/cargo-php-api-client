@@ -22,7 +22,9 @@ class CountGet extends AbstractRequest
     /**
      * Метод для получения количества заказов согласно фильтру.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCountResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderCountResponse
     {

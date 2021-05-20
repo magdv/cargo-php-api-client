@@ -22,7 +22,9 @@ class DriverGet extends AbstractRequest
     /**
      * Получение списка водителей.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return DriverListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): DriverListResponse
     {

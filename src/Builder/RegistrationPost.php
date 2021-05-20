@@ -23,7 +23,9 @@ class RegistrationPost extends AbstractRequest
     /**
      * Задание логина пользователя/начало процесса регистрации.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Reg
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(RegistrationBaseRequest $body): Reg
     {

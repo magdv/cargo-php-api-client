@@ -22,7 +22,9 @@ class CuratorGet extends AbstractRequest
     /**
      * Поиск кураторов заказов от отправителя
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return AcCuratorResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): AcCuratorResponse
     {

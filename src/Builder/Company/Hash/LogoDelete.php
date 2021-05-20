@@ -22,7 +22,9 @@ class LogoDelete extends AbstractRequest
     /**
      * Метод удаляет логотип организации.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CompanyResponse
     {

@@ -22,7 +22,9 @@ class RepeatPost extends AbstractRequest
     /**
      * Переразместить заказ.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderEditResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderEditResponse
     {

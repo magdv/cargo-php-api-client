@@ -23,7 +23,9 @@ class RolePut extends AbstractRequest
     /**
      * Установка роли клиента.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Status
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(RoleSet $body): Status
     {

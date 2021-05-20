@@ -23,7 +23,9 @@ class IncomeRequestPost extends AbstractRequest
     /**
      * Отправка запроса на добавление в сотрудники в компанию дубликат.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Status
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(IncomeRequest $body): Status
     {

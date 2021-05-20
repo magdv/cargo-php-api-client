@@ -22,7 +22,9 @@ class IdDelete extends AbstractRequest
     /**
      * Удаление документа.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Status
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): Status
     {

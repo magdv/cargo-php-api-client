@@ -23,7 +23,9 @@ class PointIdPatch extends AbstractRequest
     /**
      * Редактирование маршрутной точки
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderPointEditResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderPointEditRequest $body): OrderPointEditResponse
     {

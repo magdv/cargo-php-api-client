@@ -23,7 +23,9 @@ class StoragePointDelete extends AbstractRequest
     /**
      * Удаление нескольких пунктов погрузки/выгрузки. Список идентификаторов должен быть передан в теле запроса.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(SpBatchDeleteRequest $body): MessageResponse
     {

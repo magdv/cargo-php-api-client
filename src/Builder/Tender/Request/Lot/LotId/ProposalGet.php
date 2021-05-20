@@ -22,7 +22,9 @@ class ProposalGet extends AbstractRequest
     /**
      * Получить список предложений по лоту
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TenderRequestLotProposalListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): TenderRequestLotProposalListResponse
     {

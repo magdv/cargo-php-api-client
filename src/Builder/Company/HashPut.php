@@ -23,7 +23,9 @@ class HashPut extends AbstractRequest
     /**
      * Метод сохраняет реквизиты своей организации.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyInfoResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(CompanyPut $body): CompanyInfoResponse
     {

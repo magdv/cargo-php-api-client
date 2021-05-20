@@ -22,7 +22,9 @@ class DisabledDelete extends AbstractRequest
     /**
      * Метод удаляет компанию из чёрного списка.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyInfoResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CompanyInfoResponse
     {

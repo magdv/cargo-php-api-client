@@ -22,7 +22,9 @@ class IdGet extends AbstractRequest
     /**
      * Получение процесса регистрации.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Reg
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): Reg
     {

@@ -23,7 +23,9 @@ class SmsCodeConfirmPost extends AbstractRequest
     /**
      * Подтверждение телефона по коду из смс.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserCodeSuccessResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(UserConfirmPhoneRequest $body): UserCodeSuccessResponse
     {

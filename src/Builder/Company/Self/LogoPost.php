@@ -22,7 +22,9 @@ class LogoPost extends AbstractRequest
     /**
      * Метод сохраняет логотип моей организации.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CompanyResponse
     {

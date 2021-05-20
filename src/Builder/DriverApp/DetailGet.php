@@ -22,7 +22,9 @@ class DetailGet extends AbstractRequest
     /**
      * Получить по группе номеров телефона информацию о статусе установки 'приложения водителя'.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return DriverAppPhoneListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): DriverAppPhoneListResponse
     {

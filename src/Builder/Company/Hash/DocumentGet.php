@@ -22,7 +22,9 @@ class DocumentGet extends AbstractRequest
     /**
      * Метод возвращает список документов, загруженный компанией.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyDocumentList
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CompanyDocumentList
     {

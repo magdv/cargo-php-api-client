@@ -6,14 +6,16 @@ namespace Cargomart\ApiClient;
 
 abstract class AbstractBuilder
 {
+    protected const URL = '';
+
     /**
      * @var array
      */
-    protected $params;
+    protected array $params;
     /**
      * @var Client
      */
-    protected $client;
+    protected Client $client;
 
     public function __construct(array $params, Client $client)
     {
@@ -21,7 +23,7 @@ abstract class AbstractBuilder
         $this->client = $client;
     }
 
-    protected function getUrl()
+    protected function getUrl(): string
     {
         if (empty($this->params)) {
             return static::URL;

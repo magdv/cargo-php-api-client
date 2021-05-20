@@ -23,7 +23,9 @@ class PublishPost extends AbstractRequest
     /**
      * Публикация черновика FTL заказа.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderDraftFtlResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderDraftFtlRequest $body): OrderDraftFtlResponse
     {

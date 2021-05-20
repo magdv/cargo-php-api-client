@@ -22,7 +22,9 @@ class PreOrderGroupGet extends AbstractRequest
     /**
      * Получение списка сгруппированных предзаказов.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PreOrderGroupList
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): PreOrderGroupList
     {

@@ -22,7 +22,9 @@ class CancelPost extends AbstractRequest
     /**
      * Отмена тендера
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TenderRequestItemResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): TenderRequestItemResponse
     {

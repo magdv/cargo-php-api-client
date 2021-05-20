@@ -22,7 +22,9 @@ class LastGet extends AbstractRequest
     /**
      * Получение последней информации связанной с торгами.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return BidLastResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): BidLastResponse
     {

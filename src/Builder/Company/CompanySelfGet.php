@@ -22,7 +22,9 @@ class CompanySelfGet extends AbstractRequest
     /**
      * Метод возвращает реквизиты моей организации.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CompanyResponse
     {

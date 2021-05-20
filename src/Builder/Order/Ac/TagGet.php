@@ -22,7 +22,9 @@ class TagGet extends AbstractRequest
     /**
      * Поиск по тегам клиента.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return AcTagResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): AcTagResponse
     {

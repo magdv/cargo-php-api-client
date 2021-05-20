@@ -22,7 +22,9 @@ class DriverNameGet extends AbstractRequest
     /**
      * Поиск водителей по имени, с которыми ранее работал клиент
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return AcDriverNameResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): AcDriverNameResponse
     {

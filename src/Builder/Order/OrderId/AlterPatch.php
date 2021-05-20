@@ -23,7 +23,9 @@ class AlterPatch extends AbstractRequest
     /**
      * редактировать список полей на заказ.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderAlterRequest $body): OrderCardResponse
     {

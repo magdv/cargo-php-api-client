@@ -22,7 +22,9 @@ class PointContactsGet extends AbstractRequest
     /**
      * Поиск по данным контактов точек маршурта текущего клиента.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return AcPointListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): AcPointListResponse
     {

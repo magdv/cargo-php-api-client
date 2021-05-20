@@ -22,7 +22,9 @@ class TruckIdGet extends AbstractRequest
     /**
      * Найти заказы подходящие для выбранной машины по ранее созданным криитериям
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TruckOrderListSearchResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): TruckOrderListSearchResponse
     {

@@ -22,7 +22,9 @@ class CorrectionGet extends AbstractRequest
     /**
      * Получение данных последнего опубликованного запроса на изменение заказа.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCorrectionResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderCorrectionResponse
     {

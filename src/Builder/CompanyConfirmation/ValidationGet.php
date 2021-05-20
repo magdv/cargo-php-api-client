@@ -22,7 +22,9 @@ class ValidationGet extends AbstractRequest
     /**
      * Получение текущего статуса валидации.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Status
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): Status
     {

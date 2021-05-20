@@ -22,7 +22,9 @@ class PointIdGet extends AbstractRequest
     /**
      * Получение информации по кокретной точке
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderPointEditResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderPointEditResponse
     {

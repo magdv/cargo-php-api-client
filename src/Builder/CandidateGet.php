@@ -22,7 +22,9 @@ class CandidateGet extends AbstractRequest
     /**
      * Вывод списка потенциальных сотрудников компании.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CandidateListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CandidateListResponse
     {

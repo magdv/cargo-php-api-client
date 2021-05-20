@@ -23,7 +23,9 @@ class ChatIdPost extends AbstractRequest
     /**
      * Отправка нового сообщения.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(ChatNewPostRequest $body): MessageResponse
     {

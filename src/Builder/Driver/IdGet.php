@@ -22,7 +22,9 @@ class IdGet extends AbstractRequest
     /**
      * Получение информации по водителю.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return DriverResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): DriverResponse
     {

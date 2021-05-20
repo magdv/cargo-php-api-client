@@ -22,7 +22,9 @@ class RateGet extends AbstractRequest
     /**
      * Вывод списка котировок.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return RateList
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): RateList
     {

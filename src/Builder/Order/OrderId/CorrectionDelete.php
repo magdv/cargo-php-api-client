@@ -22,7 +22,9 @@ class CorrectionDelete extends AbstractRequest
     /**
      * Отмена запроса на изменение заказа.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageResponse
     {

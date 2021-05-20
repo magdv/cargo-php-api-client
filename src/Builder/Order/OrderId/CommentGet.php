@@ -22,7 +22,9 @@ class CommentGet extends AbstractRequest
     /**
      * Метод возвращает список комментариев по заказу.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CommentListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CommentListResponse
     {

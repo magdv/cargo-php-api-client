@@ -22,7 +22,9 @@ class IdGet extends AbstractRequest
     /**
      * Получение информации по указанному сотруднику компании.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return WorkerResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): WorkerResponse
     {

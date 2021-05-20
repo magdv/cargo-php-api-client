@@ -23,7 +23,9 @@ class ReceptionPost extends AbstractRequest
     /**
      * Принятие данных о свободных машинах от TMS
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return ReceptionResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(TmsInput $body): ReceptionResponse
     {

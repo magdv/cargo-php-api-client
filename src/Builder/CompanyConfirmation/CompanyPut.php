@@ -23,7 +23,9 @@ class CompanyPut extends AbstractRequest
     /**
      * Доработка данных компании (СНО, флаг декларации).
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Status
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(CompanyUpdate $body): Status
     {

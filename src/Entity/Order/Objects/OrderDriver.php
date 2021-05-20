@@ -18,6 +18,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $name
  * @property string[] $phones
  * @property string $licenseNumber
+ * @property string $inn
  * @property string $passportSeries
  * @property string $passportNumber
  * @property string $passportWhen
@@ -33,6 +34,7 @@ final class OrderDriver extends AbstractEntity
         'name' => ['string'],
         'phones' => ['array', 'string'],
         'licenseNumber' => ['string'],
+        'inn' => ['string'],
         'passportSeries' => ['string'],
         'passportNumber' => ['string'],
         'passportWhen' => ['string'],
@@ -47,6 +49,7 @@ final class OrderDriver extends AbstractEntity
         'name' => false,
         'phones' => false,
         'licenseNumber' => false,
+        'inn' => false,
         'passportSeries' => false,
         'passportNumber' => false,
         'passportWhen' => false,

@@ -22,11 +22,12 @@ class Client
     /**
      * @var ClientInterface
      */
-    private $client;
+    private ClientInterface $client;
+
     /**
-     * @var AuthenticationInterface
+     * @var null|AuthenticationInterface
      */
-    private $authentication;
+    private ?AuthenticationInterface $authentication;
 
     public function __construct(ClientInterface $client, ?AuthenticationInterface $authentication = null)
     {
@@ -39,20 +40,22 @@ class Client
         $this->authentication = $authentication;
     }
 
-    public function apiV2()
+    public function apiV2(): Builder\ApiV2
     {
         return new Builder\ApiV2([], $this);
     }
 
     /**
+     * @template T
+     *
      * @param string $method
      * @param string $url
-     * @param string $responseClass
+     * @param string|class-string<T> $responseClass
      * @param string|null $query
      * @param object|null $body
      * @param array|null $headers
      *
-     * @return AbstractResponse
+     * @return AbstractResponse|T
      *
      * @throws CargomartClientException|Authentication\exceptions\TokenInvalidException
      * @internal

@@ -22,7 +22,9 @@ class TrackingGet extends AbstractRequest
     /**
      * Получения списка текущего отслеживания заказов.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TrackingList
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): TrackingList
     {

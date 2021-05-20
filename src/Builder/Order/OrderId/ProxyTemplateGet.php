@@ -22,7 +22,9 @@ class ProxyTemplateGet extends AbstractRequest
     /**
      * Скачать шаблон доверенности.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return FileLinkResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): FileLinkResponse
     {

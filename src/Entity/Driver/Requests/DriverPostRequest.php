@@ -26,6 +26,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $registrationAddress
  * @property string $licenceNumber
  * @property string $licenceIssueDate
+ * @property string $inn
  */
 final class DriverPostRequest extends AbstractEntity
 {
@@ -42,6 +43,7 @@ final class DriverPostRequest extends AbstractEntity
         'registrationAddress' => ['string'],
         'licenceNumber' => ['string'],
         'licenceIssueDate' => ['string'],
+        'inn' => ['string'],
     ];
 
     protected static $nullables = [
@@ -57,5 +59,6 @@ final class DriverPostRequest extends AbstractEntity
         'registrationAddress' => false,
         'licenceNumber' => false,
         'licenceIssueDate' => false,
+        'inn' => false,
     ];
 }

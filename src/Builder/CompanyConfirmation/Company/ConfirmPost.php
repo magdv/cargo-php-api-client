@@ -22,7 +22,9 @@ class ConfirmPost extends AbstractRequest
     /**
      * Подтверждение данных компании.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Status
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): Status
     {

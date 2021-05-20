@@ -22,7 +22,9 @@ class PartnerConditionsGet extends AbstractRequest
     /**
      * Получение условий партнёрства.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PartnerConditionsResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): PartnerConditionsResponse
     {

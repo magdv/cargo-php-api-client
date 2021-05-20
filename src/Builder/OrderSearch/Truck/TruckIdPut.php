@@ -23,7 +23,9 @@ class TruckIdPut extends AbstractRequest
     /**
      * Создание/редактирование критерия поиска машины
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderSearchCriteriaResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderSearchUpdateCriteriaRequest $body): OrderSearchCriteriaResponse
     {

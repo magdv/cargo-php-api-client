@@ -23,7 +23,9 @@ class RecoveryPost extends AbstractRequest
     /**
      * Запрос на восстановление пароля.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserRecoveryResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(UserRecoveryCreateRequest $body): UserRecoveryResponse
     {

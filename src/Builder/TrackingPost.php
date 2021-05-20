@@ -23,7 +23,9 @@ class TrackingPost extends AbstractRequest
     /**
      * Создание нового отслеживания.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TrackingItem
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(TrackingEdit $body): TrackingItem
     {

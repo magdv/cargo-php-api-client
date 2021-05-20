@@ -22,7 +22,9 @@ class ValidatePost extends AbstractRequest
     /**
      * Проверка валидности заказа
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderEditResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderEditResponse
     {

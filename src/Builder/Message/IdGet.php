@@ -22,7 +22,9 @@ class IdGet extends AbstractRequest
     /**
      * Получение сообщения
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageResponse
     {

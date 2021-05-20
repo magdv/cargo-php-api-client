@@ -23,7 +23,9 @@ class CommunicationContactsPut extends AbstractRequest
     /**
      * Метод редактирует контакты для связи.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CommunicationContactsResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(CommunicationContactsRequest $body): CommunicationContactsResponse
     {

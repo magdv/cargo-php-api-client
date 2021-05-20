@@ -22,7 +22,9 @@ class OfferReportGet extends AbstractRequest
     /**
      * выгрузка xlsx с отчетом по запросам цен.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageResponse
     {

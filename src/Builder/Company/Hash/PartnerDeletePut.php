@@ -23,7 +23,9 @@ class PartnerDeletePut extends AbstractRequest
     /**
      * Метод удаляет компанию из партнёров
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PartnerStatusResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(PartnerShortFormRequest $body): PartnerStatusResponse
     {

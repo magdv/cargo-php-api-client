@@ -23,7 +23,9 @@ class PartnerContractPut extends AbstractRequest
     /**
      * Метод для редактирования данных о договоре партнёров.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyInfoResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(PartnerContractRequest $body): CompanyInfoResponse
     {

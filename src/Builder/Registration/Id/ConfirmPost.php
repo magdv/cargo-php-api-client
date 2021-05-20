@@ -23,7 +23,9 @@ class ConfirmPost extends AbstractRequest
     /**
      * Подтверждение регистрации/ввод проверочного кода.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Reg
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(RegistrationConfirmRequest $body): Reg
     {

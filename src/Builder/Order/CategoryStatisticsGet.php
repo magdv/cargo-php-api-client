@@ -22,7 +22,9 @@ class CategoryStatisticsGet extends AbstractRequest
     /**
      * Получение статистики заказов по категориям
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCategoryStatisticsResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderCategoryStatisticsResponse
     {

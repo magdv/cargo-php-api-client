@@ -23,7 +23,9 @@ class MonitoringPost extends AbstractRequest
     /**
      * Добавить ссылку на отслеживание.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(MonitoringRequest $body): OrderCardResponse
     {

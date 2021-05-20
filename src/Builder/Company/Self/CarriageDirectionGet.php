@@ -22,7 +22,9 @@ class CarriageDirectionGet extends AbstractRequest
     /**
      * Направления своих перевозок.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CarriageDirection
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CarriageDirection
     {

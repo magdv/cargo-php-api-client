@@ -22,7 +22,9 @@ class DraftIdGet extends AbstractRequest
     /**
      * Просмотр черновика заказа
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderDraftExpeditorCruResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderDraftExpeditorCruResponse
     {

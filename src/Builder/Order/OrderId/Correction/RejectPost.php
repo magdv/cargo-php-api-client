@@ -23,7 +23,9 @@ class RejectPost extends AbstractRequest
     /**
      * Отклонение запроса на изменение заказа.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderCorrectionRejectRequest $body): MessageResponse
     {

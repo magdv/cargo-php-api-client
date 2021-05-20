@@ -22,7 +22,9 @@ class RequestGet extends AbstractRequest
     /**
      * Получение списка тендеров в статусе запроса цены
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TenderRequestListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): TenderRequestListResponse
     {

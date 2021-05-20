@@ -23,7 +23,9 @@ class InvitePost extends AbstractRequest
     /**
      * Отправить на номер телефона водителя приглашение на установку 'приложения водителя'.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return DriverAppPhoneItemResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(DriverAppInvitePostRequest $body): DriverAppPhoneItemResponse
     {

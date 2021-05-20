@@ -23,7 +23,9 @@ class ValidatePost extends AbstractRequest
     /**
      * Бизнес валидация черновика FTL.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderDraftFtlValidateResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderDraftFtlRequest $body): OrderDraftFtlValidateResponse
     {

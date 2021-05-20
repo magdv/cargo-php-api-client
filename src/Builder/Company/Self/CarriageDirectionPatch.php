@@ -23,7 +23,9 @@ class CarriageDirectionPatch extends AbstractRequest
     /**
      * Направления перевозок отправителя.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CarriageDirection
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(CarriageDirection $body): CarriageDirection
     {

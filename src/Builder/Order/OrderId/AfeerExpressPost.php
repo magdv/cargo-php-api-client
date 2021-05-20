@@ -22,7 +22,9 @@ class AfeerExpressPost extends AbstractRequest
     /**
      * Подтверждение везти экспресс - заказ
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderCardResponse
     {

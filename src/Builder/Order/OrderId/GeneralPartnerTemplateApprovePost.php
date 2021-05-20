@@ -22,7 +22,9 @@ class GeneralPartnerTemplateApprovePost extends AbstractRequest
     /**
      * Генеральный партнер создает документы из шаблонов.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderCardResponse
     {

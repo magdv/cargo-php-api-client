@@ -23,7 +23,9 @@ class IdPatch extends AbstractRequest
     /**
      * Обновить данные водителя.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return DriverResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(DriverPostRequest $body): DriverResponse
     {

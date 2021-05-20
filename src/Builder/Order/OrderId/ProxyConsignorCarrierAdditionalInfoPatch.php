@@ -23,7 +23,9 @@ class ProxyConsignorCarrierAdditionalInfoPatch extends AbstractRequest
     /**
      * Заполнить или изменить добавочные данные в будущую довереность на самовывоз c\без факсимиле.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderAdditionalInfoResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderAdditionalInfo $body): OrderAdditionalInfoResponse
     {

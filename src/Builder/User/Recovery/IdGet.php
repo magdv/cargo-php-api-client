@@ -22,7 +22,9 @@ class IdGet extends AbstractRequest
     /**
      * Получение процесса восстановления пароля.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserRecoveryResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): UserRecoveryResponse
     {

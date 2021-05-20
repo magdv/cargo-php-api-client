@@ -22,7 +22,9 @@ class OrderIdGet extends AbstractRequest
     /**
      * Получение иформации для карточки заказа.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderCardResponse
     {

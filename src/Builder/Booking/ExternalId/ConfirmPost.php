@@ -23,7 +23,9 @@ class ConfirmPost extends AbstractRequest
     /**
      * Подтверждение бронирования со стороны TMS
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return ReceptionResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(ConfirmInput $body): ReceptionResponse
     {

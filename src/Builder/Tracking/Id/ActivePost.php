@@ -22,7 +22,9 @@ class ActivePost extends AbstractRequest
     /**
      * Активация фильтра отслеживания.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TrackingItem
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): TrackingItem
     {

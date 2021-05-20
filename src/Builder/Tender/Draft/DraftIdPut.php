@@ -23,7 +23,9 @@ class DraftIdPut extends AbstractRequest
     /**
      * Сохранение черновика тендера
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TenderDraftItemResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(TenderDraftUpdateRequest $body): TenderDraftItemResponse
     {

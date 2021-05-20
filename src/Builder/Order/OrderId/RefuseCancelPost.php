@@ -22,7 +22,9 @@ class RefuseCancelPost extends AbstractRequest
     /**
      * Отменить отказ от заказа.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderCardResponse
     {

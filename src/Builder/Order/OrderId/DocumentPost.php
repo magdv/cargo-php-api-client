@@ -23,7 +23,9 @@ class DocumentPost extends AbstractRequest
     /**
      * Загрузить документы перевозчика.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderDocumentFileIdRequest $body): OrderCardResponse
     {

@@ -22,7 +22,9 @@ class StoragePointGet extends AbstractRequest
     /**
      * Метод возвращает список пунктов погрузки/выгрузки.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PointList
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): PointList
     {

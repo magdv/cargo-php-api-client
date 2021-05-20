@@ -22,7 +22,9 @@ class SmsCodeSendPost extends AbstractRequest
     /**
      * Посылает повторную смс.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserFullResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): UserFullResponse
     {

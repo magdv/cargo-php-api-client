@@ -23,7 +23,9 @@ class NamePatch extends AbstractRequest
     /**
      * Изменение значения настройки
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return SettingList
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(SettingRequest $body): SettingList
     {

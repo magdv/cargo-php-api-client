@@ -22,7 +22,9 @@ class CarriageRegionGet extends AbstractRequest
     /**
      * Области своих перевозок.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CarriageRegion
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CarriageRegion
     {

@@ -22,7 +22,9 @@ class IdGet extends AbstractRequest
     /**
      * Информация о конкретном пункте погрузки/выгрузки
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PointOne
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): PointOne
     {

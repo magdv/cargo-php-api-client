@@ -22,7 +22,9 @@ class EmailChangeDelete extends AbstractRequest
     /**
      * Отмена запроса на изменение почты.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserFullResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): UserFullResponse
     {

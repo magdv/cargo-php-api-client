@@ -22,7 +22,9 @@ class PhoneChangeDelete extends AbstractRequest
     /**
      * Отменяет запроса на изменение телефона.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserFullResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): UserFullResponse
     {

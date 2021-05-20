@@ -22,7 +22,9 @@ class ModerationDelete extends AbstractRequest
     /**
      * Забрать заказ на модерации ГП.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderEditResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderEditResponse
     {

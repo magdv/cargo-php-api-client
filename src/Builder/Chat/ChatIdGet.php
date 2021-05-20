@@ -22,7 +22,9 @@ class ChatIdGet extends AbstractRequest
     /**
      * Получение списка сообщений чата.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return ChatPostListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): ChatPostListResponse
     {

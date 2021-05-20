@@ -23,7 +23,9 @@ class ClientAccessPatch extends AbstractRequest
     /**
      * Отправить список партнеров на исключение.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(HashListRequest $body): MessageResponse
     {

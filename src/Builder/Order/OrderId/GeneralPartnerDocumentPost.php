@@ -23,7 +23,9 @@ class GeneralPartnerDocumentPost extends AbstractRequest
     /**
      * Генеральный партнер прикрепляет документы.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderDocumentFileIdRequest $body): OrderCardResponse
     {

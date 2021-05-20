@@ -22,7 +22,9 @@ class ByKladrGet extends AbstractRequest
     /**
      * Метод возвращает данные маршрута, по точкам кладра.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return ItineraryListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): ItineraryListResponse
     {

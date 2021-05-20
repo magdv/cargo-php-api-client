@@ -22,7 +22,9 @@ class LocalityGet extends AbstractRequest
     /**
      * регионы доступные для перевозок.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyLocalityResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CompanyLocalityResponse
     {

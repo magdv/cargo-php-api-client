@@ -22,7 +22,9 @@ class RequestGet extends AbstractRequest
     /**
      * Получение списка резервирований
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return BookingDraftListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): BookingDraftListResponse
     {

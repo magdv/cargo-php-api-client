@@ -23,7 +23,9 @@ class CarrierContactPatch extends AbstractRequest
     /**
      * Отправить список кураторов перевозчика для добавления.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(CarrierContactRequest $body): OrderCardResponse
     {

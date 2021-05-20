@@ -22,7 +22,9 @@ class DraftGet extends AbstractRequest
     /**
      * Получение списка черновиков тендера
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TenderDraftListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): TenderDraftListResponse
     {

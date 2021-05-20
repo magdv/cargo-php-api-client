@@ -22,7 +22,9 @@ class LotIdGet extends AbstractRequest
     /**
      * Получение лота по тендеру в статусе запроса цены
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TenderRequestLotItemResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): TenderRequestLotItemResponse
     {

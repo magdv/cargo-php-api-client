@@ -22,7 +22,9 @@ class GroupIdGet extends AbstractRequest
     /**
      * Получение группы предзаказов
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PreOrderGroupResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): PreOrderGroupResponse
     {

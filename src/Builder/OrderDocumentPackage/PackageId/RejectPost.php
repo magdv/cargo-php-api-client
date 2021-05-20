@@ -23,7 +23,9 @@ class RejectPost extends AbstractRequest
     /**
      * Отклонение пакета сканов документов перевозчика
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderDocumentRejectPackageRequest $body): MessageResponse
     {

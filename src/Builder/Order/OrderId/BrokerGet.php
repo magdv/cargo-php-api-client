@@ -22,7 +22,9 @@ class BrokerGet extends AbstractRequest
     /**
      * Получение брокера на заказ.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return BrokerResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): BrokerResponse
     {

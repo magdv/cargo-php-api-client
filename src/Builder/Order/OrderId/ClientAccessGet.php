@@ -22,7 +22,9 @@ class ClientAccessGet extends AbstractRequest
     /**
      * Получение списка исключеных партнеров.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderClientAccessListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderClientAccessListResponse
     {

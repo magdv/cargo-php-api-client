@@ -22,7 +22,9 @@ class DocumentPost extends AbstractRequest
     /**
      * Загрузка нового документа
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Status
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): Status
     {

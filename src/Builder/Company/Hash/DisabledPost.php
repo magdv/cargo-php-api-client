@@ -23,7 +23,9 @@ class DisabledPost extends AbstractRequest
     /**
      * Метод добавления компании в чёрный список.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyInfoResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(DisabledRequest $body): CompanyInfoResponse
     {

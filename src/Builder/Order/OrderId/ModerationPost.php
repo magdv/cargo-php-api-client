@@ -23,7 +23,9 @@ class ModerationPost extends AbstractRequest
     /**
      * Отправка заказа на модерацию ГП.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderEditResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderPublishRequest $body): OrderEditResponse
     {

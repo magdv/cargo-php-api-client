@@ -22,7 +22,9 @@ class CountGet extends AbstractRequest
     /**
      * Вывод количество потенциальных сотрудников компании.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CandidateCountResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CandidateCountResponse
     {

@@ -23,7 +23,9 @@ class OrderIdPatch extends AbstractRequest
     /**
      * Редактирование информации о заказе
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderEditResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderEditRequest $body): OrderEditResponse
     {

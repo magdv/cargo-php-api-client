@@ -23,7 +23,9 @@ class PointPost extends AbstractRequest
     /**
      * Создание новой маршрутной точки
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderPointEditResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderPointCreateRequest $body): OrderPointEditResponse
     {

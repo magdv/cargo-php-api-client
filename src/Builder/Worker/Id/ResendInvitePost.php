@@ -22,7 +22,9 @@ class ResendInvitePost extends AbstractRequest
     /**
      * Повторно отправть письмо с приглашением в сотрудники.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return WorkerResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): WorkerResponse
     {

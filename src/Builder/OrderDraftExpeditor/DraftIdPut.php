@@ -23,7 +23,9 @@ class DraftIdPut extends AbstractRequest
     /**
      * Редактирование черновика заказа
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderDraftExpeditorCruResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderDraftExpeditorUpdateRequest $body): OrderDraftExpeditorCruResponse
     {

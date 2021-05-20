@@ -22,7 +22,9 @@ class ContactEmailDelete extends AbstractRequest
     /**
      * Удаление контактного email.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserFullResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): UserFullResponse
     {

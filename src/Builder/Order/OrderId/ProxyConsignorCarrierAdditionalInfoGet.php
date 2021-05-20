@@ -22,7 +22,9 @@ class ProxyConsignorCarrierAdditionalInfoGet extends AbstractRequest
     /**
      * Получить добавочные данные, или проверить их наличие.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderAdditionalInfoResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderAdditionalInfoResponse
     {

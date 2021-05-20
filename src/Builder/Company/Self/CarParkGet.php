@@ -22,7 +22,9 @@ class CarParkGet extends AbstractRequest
     /**
      * Мой автопарк.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CarParkResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CarParkResponse
     {

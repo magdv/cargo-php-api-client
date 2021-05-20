@@ -23,7 +23,9 @@ class UserSelfPut extends AbstractRequest
     /**
      * Сохраняет данные пользователя.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserFullResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(UserProfileRequest $body): UserFullResponse
     {

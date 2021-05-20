@@ -23,7 +23,9 @@ class DriverPost extends AbstractRequest
     /**
      * Создание нового водителя.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return DriverResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(DriverPostRequest $body): DriverResponse
     {

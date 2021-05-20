@@ -23,7 +23,9 @@ class ProxyPost extends AbstractRequest
     /**
      * Использовать /order/{orderId}/document
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderDocumentIdRequest $body): MessageResponse
     {

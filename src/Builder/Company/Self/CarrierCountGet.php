@@ -22,7 +22,9 @@ class CarrierCountGet extends AbstractRequest
     /**
      * Получение количества перевозчиков, которые могут участвовать в заказах
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CarrierCountResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CarrierCountResponse
     {

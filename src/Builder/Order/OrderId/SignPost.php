@@ -23,7 +23,9 @@ class SignPost extends AbstractRequest
     /**
      * Подписаться на заказ
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderSignCreateRequest $body): OrderCardResponse
     {

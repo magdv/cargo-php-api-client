@@ -22,7 +22,9 @@ class InfoGet extends AbstractRequest
     /**
      * Получение информационного (reclamnogo) сообщения.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return AdItem
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): AdItem
     {

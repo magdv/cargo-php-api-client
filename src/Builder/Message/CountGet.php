@@ -22,7 +22,9 @@ class CountGet extends AbstractRequest
     /**
      * Получение количества сообщений
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageCountResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageCountResponse
     {

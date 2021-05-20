@@ -22,7 +22,9 @@ class CountGet extends AbstractRequest
     /**
      * Получения количества отслеживаний.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TrackingCountResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): TrackingCountResponse
     {

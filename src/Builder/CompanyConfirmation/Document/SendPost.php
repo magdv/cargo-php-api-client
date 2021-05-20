@@ -22,7 +22,9 @@ class SendPost extends AbstractRequest
     /**
      * Отправка документа на проверку.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Status
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): Status
     {

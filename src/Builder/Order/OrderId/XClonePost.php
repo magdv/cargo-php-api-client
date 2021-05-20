@@ -22,7 +22,9 @@ class XClonePost extends AbstractRequest
     /**
      * Создание нового заказа из шаблона или на основании
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderEditResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderEditResponse
     {

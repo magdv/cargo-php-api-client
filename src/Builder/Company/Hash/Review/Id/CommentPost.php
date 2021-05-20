@@ -23,7 +23,9 @@ class CommentPost extends AbstractRequest
     /**
      * Комментарий к отзыву на компанию.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyReviewCommentResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(CompanyReviewCommentRequest $body): CompanyReviewCommentResponse
     {

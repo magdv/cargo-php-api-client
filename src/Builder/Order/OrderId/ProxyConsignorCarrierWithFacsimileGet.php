@@ -22,7 +22,9 @@ class ProxyConsignorCarrierWithFacsimileGet extends AbstractRequest
     /**
      * Скачать доверенность на заказ для заказчика с факсимиле.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return FileLinkResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): FileLinkResponse
     {

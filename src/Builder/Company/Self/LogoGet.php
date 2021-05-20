@@ -22,7 +22,9 @@ class LogoGet extends AbstractRequest
     /**
      * Получения логотипа моей оранизации.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageResponse
     {

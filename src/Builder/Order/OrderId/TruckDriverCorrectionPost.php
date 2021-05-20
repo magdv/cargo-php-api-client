@@ -23,7 +23,9 @@ class TruckDriverCorrectionPost extends AbstractRequest
     /**
      * Создание запроса на смену водителя или машины.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderTruckDriverCorrectionResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderTruckDriverCorrectionRequest $body): OrderTruckDriverCorrectionResponse
     {

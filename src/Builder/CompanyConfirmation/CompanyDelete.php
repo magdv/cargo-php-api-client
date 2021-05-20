@@ -22,7 +22,9 @@ class CompanyDelete extends AbstractRequest
     /**
      * Откат к шагу ввода ИНН.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Status
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): Status
     {

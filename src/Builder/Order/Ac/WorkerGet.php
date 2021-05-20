@@ -22,7 +22,9 @@ class WorkerGet extends AbstractRequest
     /**
      * Поиск контактов для автокомплита при создании заказа
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return AcWorkerResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): AcWorkerResponse
     {

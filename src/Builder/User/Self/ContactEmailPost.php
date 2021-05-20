@@ -23,7 +23,9 @@ class ContactEmailPost extends AbstractRequest
     /**
      * Создание контактного email.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserFullResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(UserContactEmailRequest $body): UserFullResponse
     {

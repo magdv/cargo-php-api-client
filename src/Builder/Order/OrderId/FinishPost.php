@@ -22,7 +22,9 @@ class FinishPost extends AbstractRequest
     /**
      * Ручное завершение заказа
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderCardResponse
     {

@@ -23,7 +23,9 @@ class CommentPost extends AbstractRequest
     /**
      * Создание комментария
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CommentResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderCommentRequest $body): CommentResponse
     {

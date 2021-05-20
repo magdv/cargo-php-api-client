@@ -22,7 +22,9 @@ class ItineraryGet extends AbstractRequest
     /**
      * Получение данных по точкам маршрута.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return ItineraryListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): ItineraryListResponse
     {

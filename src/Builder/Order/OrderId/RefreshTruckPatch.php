@@ -22,7 +22,9 @@ class RefreshTruckPatch extends AbstractRequest
     /**
      * Обновить данные транспортного средства в заказе
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderTruckResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderTruckResponse
     {

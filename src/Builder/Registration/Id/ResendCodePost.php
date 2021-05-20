@@ -22,7 +22,9 @@ class ResendCodePost extends AbstractRequest
     /**
      * Повторная отправка проверочного кода.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Reg
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): Reg
     {

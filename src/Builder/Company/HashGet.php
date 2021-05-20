@@ -22,7 +22,9 @@ class HashGet extends AbstractRequest
     /**
      * Метод возвращает реквизиты организации по хэшу.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CompanyResponse
     {

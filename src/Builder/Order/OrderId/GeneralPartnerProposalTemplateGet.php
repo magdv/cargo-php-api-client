@@ -22,7 +22,9 @@ class GeneralPartnerProposalTemplateGet extends AbstractRequest
     /**
      * Генеральный партнер. Скачать заяку на заказ для ГП.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return FileLinkResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): FileLinkResponse
     {

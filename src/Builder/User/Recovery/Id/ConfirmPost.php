@@ -23,7 +23,9 @@ class ConfirmPost extends AbstractRequest
     /**
      * Подтверждение восстановления/ввод проверочного кода.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserRecoveryResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(UserRecoveryConfirmRequest $body): UserRecoveryResponse
     {

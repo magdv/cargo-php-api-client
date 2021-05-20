@@ -22,7 +22,9 @@ class PriceGet extends AbstractRequest
     /**
      * Возвращает предсказание цены для маршрута
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PricePredictorResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): PricePredictorResponse
     {

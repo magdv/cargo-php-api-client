@@ -22,7 +22,9 @@ class WorkerDelete extends AbstractRequest
     /**
      * Удаление списка сотрудников по списку идентификаторов.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageResponse
     {

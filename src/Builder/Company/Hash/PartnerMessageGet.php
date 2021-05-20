@@ -22,7 +22,9 @@ class PartnerMessageGet extends AbstractRequest
     /**
      * Получение последнего партнёрского сообщения от компании.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PartnerMessage
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): PartnerMessage
     {

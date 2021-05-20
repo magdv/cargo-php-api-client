@@ -22,7 +22,9 @@ class TruckIdGet extends AbstractRequest
     /**
      * Получение списка заказов в очереди и в рейсе для выбранной машины
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return TruckOrderQueueResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): TruckOrderQueueResponse
     {

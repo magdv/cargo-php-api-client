@@ -22,7 +22,9 @@ class DraftIdDelete extends AbstractRequest
     /**
      * Пометить черновик заказа удалённым
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageResponse
     {

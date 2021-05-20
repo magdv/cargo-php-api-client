@@ -23,7 +23,9 @@ class CancelPut extends AbstractRequest
     /**
      * Отмена конкретного предзаказа.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(PreOrderCancelRequest $body): MessageResponse
     {

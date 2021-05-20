@@ -23,7 +23,9 @@ class DraftIdPut extends AbstractRequest
     /**
      * Редактирование черновика заказа FTL
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderDraftFtlResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderDraftFtlRequest $body): OrderDraftFtlResponse
     {

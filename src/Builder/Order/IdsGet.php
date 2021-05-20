@@ -22,7 +22,9 @@ class IdsGet extends AbstractRequest
     /**
      * Метод для получения списка идентификаторов (хешей) заказов согласно фильтру.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderIdsResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderIdsResponse
     {

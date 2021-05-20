@@ -23,7 +23,9 @@ class ContactPatch extends AbstractRequest
     /**
      * Отправить список контактов для добавления.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(IdListRequest $body): MessageResponse
     {

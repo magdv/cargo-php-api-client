@@ -17,6 +17,11 @@ final class DocumentId extends AbstractBuilder
 {
     protected const URL = '/api/v2/order-document/{documentId}';
 
+    public function get(): DocumentIdGet
+    {
+        return new DocumentIdGet($this->client, $this->getUrl());
+    }
+
     public function put(): DocumentIdPut
     {
         return new DocumentIdPut($this->client, $this->getUrl());

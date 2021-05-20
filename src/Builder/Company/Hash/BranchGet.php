@@ -22,7 +22,9 @@ class BranchGet extends AbstractRequest
     /**
      * Получение списка дочерних компаний.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyBranchResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CompanyBranchResponse
     {

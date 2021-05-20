@@ -22,7 +22,9 @@ class BookingIdGet extends AbstractRequest
     /**
      * Получение данных резервирования
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return BookingDraftResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): BookingDraftResponse
     {

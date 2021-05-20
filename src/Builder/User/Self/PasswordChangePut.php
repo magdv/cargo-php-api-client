@@ -23,7 +23,9 @@ class PasswordChangePut extends AbstractRequest
     /**
      * Меняет пароль пользователю.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return UserFullResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(UserPasswordChangeRequest $body): UserFullResponse
     {

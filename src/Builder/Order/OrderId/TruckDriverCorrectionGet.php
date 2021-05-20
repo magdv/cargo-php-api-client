@@ -22,7 +22,9 @@ class TruckDriverCorrectionGet extends AbstractRequest
     /**
      * Получение данных о запросе на смену водителя или машины
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderTruckDriverCorrectionResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderTruckDriverCorrectionResponse
     {

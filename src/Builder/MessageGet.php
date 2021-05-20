@@ -22,7 +22,9 @@ class MessageGet extends AbstractRequest
     /**
      * Получение всех сообщений
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageListResponse
     {

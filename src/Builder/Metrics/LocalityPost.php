@@ -23,7 +23,9 @@ class LocalityPost extends AbstractRequest
     /**
      * Отправка нового события метрики для поиска по пунктам отправления/назначения
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(LocalityMetricRequest $body): MessageResponse
     {

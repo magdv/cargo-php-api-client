@@ -22,7 +22,9 @@ class IdGet extends AbstractRequest
     /**
      * Метод возвращает указанный документ, принадлежащий компании
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyDocumentItem
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CompanyDocumentItem
     {

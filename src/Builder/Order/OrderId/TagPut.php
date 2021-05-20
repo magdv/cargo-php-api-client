@@ -23,7 +23,9 @@ class TagPut extends AbstractRequest
     /**
      * Запись списка тэгов.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderTagListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderEditTagRequest $body): OrderTagListResponse
     {

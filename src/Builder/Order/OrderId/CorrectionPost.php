@@ -23,7 +23,9 @@ class CorrectionPost extends AbstractRequest
     /**
      * Создание запроса на изменение заказа.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCorrectionResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderCorrectionRequest $body): OrderCorrectionResponse
     {

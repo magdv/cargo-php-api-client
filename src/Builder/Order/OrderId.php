@@ -71,14 +71,14 @@ final class OrderId extends AbstractBuilder
 {
     protected const URL = '/api/v2/order/{orderId}';
 
-    public function offer(): Offer
+    public function comment(): Comment
     {
-        return new Offer($this->params, $this->client);
+        return new Comment($this->params, $this->client);
     }
 
-    public function chat(): Chat
+    public function correction(): Correction
     {
-        return new Chat($this->params, $this->client);
+        return new Correction($this->params, $this->client);
     }
 
     public function xClone(): XClone
@@ -141,9 +141,59 @@ final class OrderId extends AbstractBuilder
         return new ModerationApprove($this->params, $this->client);
     }
 
-    public function comment(): Comment
+    public function chat(): Chat
     {
-        return new Comment($this->params, $this->client);
+        return new Chat($this->params, $this->client);
+    }
+
+    public function offer(): Offer
+    {
+        return new Offer($this->params, $this->client);
+    }
+
+    public function sign(): Sign
+    {
+        return new Sign($this->params, $this->client);
+    }
+
+    public function itinerary(): Itinerary
+    {
+        return new Itinerary($this->params, $this->client);
+    }
+
+    public function cancel(): Cancel
+    {
+        return new Cancel($this->params, $this->client);
+    }
+
+    public function pin(): Pin
+    {
+        return new Pin($this->params, $this->client);
+    }
+
+    public function bid(): Bid
+    {
+        return new Bid($this->params, $this->client);
+    }
+
+    public function broker(): Broker
+    {
+        return new Broker($this->params, $this->client);
+    }
+
+    public function afeerExpress(): AfeerExpress
+    {
+        return new AfeerExpress($this->params, $this->client);
+    }
+
+    public function visitor(): Visitor
+    {
+        return new Visitor($this->params, $this->client);
+    }
+
+    public function alter(): Alter
+    {
+        return new Alter($this->params, $this->client);
     }
 
     public function carrierRefuse(): CarrierRefuse
@@ -289,56 +339,6 @@ final class OrderId extends AbstractBuilder
     public function expeditorAssignment(): ExpeditorAssignment
     {
         return new ExpeditorAssignment($this->params, $this->client);
-    }
-
-    public function sign(): Sign
-    {
-        return new Sign($this->params, $this->client);
-    }
-
-    public function correction(): Correction
-    {
-        return new Correction($this->params, $this->client);
-    }
-
-    public function itinerary(): Itinerary
-    {
-        return new Itinerary($this->params, $this->client);
-    }
-
-    public function cancel(): Cancel
-    {
-        return new Cancel($this->params, $this->client);
-    }
-
-    public function pin(): Pin
-    {
-        return new Pin($this->params, $this->client);
-    }
-
-    public function bid(): Bid
-    {
-        return new Bid($this->params, $this->client);
-    }
-
-    public function broker(): Broker
-    {
-        return new Broker($this->params, $this->client);
-    }
-
-    public function afeerExpress(): AfeerExpress
-    {
-        return new AfeerExpress($this->params, $this->client);
-    }
-
-    public function visitor(): Visitor
-    {
-        return new Visitor($this->params, $this->client);
-    }
-
-    public function alter(): Alter
-    {
-        return new Alter($this->params, $this->client);
     }
 
     public function get(): OrderIdGet

@@ -22,7 +22,9 @@ class QualityScoreGet extends AbstractRequest
     /**
      * Получить оценку.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderQualityScoreResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderQualityScoreResponse
     {

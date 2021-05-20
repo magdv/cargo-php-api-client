@@ -22,7 +22,9 @@ class HistoryGet extends AbstractRequest
     /**
      * Получение разницы параметров заказа и заявки на изменение заказа.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCorrectionHistoryResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderCorrectionHistoryResponse
     {

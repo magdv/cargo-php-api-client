@@ -23,7 +23,9 @@ class OfferPost extends AbstractRequest
     /**
      * Установка предложения на заказ.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OfferPushRequest $body): OrderCardResponse
     {

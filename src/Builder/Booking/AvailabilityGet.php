@@ -22,7 +22,9 @@ class AvailabilityGet extends AbstractRequest
     /**
      * Получение данных машинах от TMS по городу и типу кузова
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return AvailabilityListResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): AvailabilityListResponse
     {

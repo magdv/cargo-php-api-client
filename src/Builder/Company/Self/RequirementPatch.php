@@ -23,7 +23,9 @@ class RequirementPatch extends AbstractRequest
     /**
      * Требования отправителя к перевозкам.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return Requirement
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(Requirement $body): Requirement
     {

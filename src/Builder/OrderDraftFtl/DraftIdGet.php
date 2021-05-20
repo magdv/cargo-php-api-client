@@ -22,7 +22,9 @@ class DraftIdGet extends AbstractRequest
     /**
      * Получение иформации о черновике FTL заказа.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderDraftFtlResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderDraftFtlResponse
     {

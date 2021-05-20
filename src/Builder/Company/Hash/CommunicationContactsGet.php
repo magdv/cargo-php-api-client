@@ -22,7 +22,9 @@ class CommunicationContactsGet extends AbstractRequest
     /**
      * Получение контактов для связи.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CommunicationContactsResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CommunicationContactsResponse
     {

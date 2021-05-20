@@ -22,7 +22,9 @@ class ExcelGet extends AbstractRequest
     /**
      * выгрузка xlsx файла со списком предложений.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageResponse
     {

@@ -22,7 +22,9 @@ class BuyingLogGet extends AbstractRequest
     /**
      * Получение истории покупки/отмены предзаказов в группе
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PreOrderGroupBuyingLogResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): PreOrderGroupBuyingLogResponse
     {

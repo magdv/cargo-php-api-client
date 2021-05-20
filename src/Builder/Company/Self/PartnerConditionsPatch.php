@@ -23,7 +23,9 @@ class PartnerConditionsPatch extends AbstractRequest
     /**
      * Метод редактирует условия партнёрства.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return PartnerConditionsResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(PartnerConditionsRequest $body): PartnerConditionsResponse
     {

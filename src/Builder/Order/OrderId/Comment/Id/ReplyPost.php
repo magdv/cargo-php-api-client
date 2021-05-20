@@ -23,7 +23,9 @@ class ReplyPost extends AbstractRequest
     /**
      * Добавление ответа на комментарий
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CommentResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderCommentReplyRequest $body): CommentResponse
     {

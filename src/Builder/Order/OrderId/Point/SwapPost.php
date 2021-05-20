@@ -23,7 +23,9 @@ class SwapPost extends AbstractRequest
     /**
      * Изменение последовательности точек.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderPointEditSwapRequest $body): MessageResponse
     {

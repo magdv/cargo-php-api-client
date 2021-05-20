@@ -22,7 +22,9 @@ class BookingIdDelete extends AbstractRequest
     /**
      * Отмена резервирования, перевод в статус ручной отмены
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return MessageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): MessageResponse
     {

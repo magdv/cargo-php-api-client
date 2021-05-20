@@ -22,7 +22,9 @@ class EditGet extends AbstractRequest
     /**
      * Получение данных для редактирования заказа
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderEditResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderEditResponse
     {

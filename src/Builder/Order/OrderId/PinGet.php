@@ -22,7 +22,9 @@ class PinGet extends AbstractRequest
     /**
      * Получить список пользователей закрепивших заказ
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderUsersResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderUsersResponse
     {

@@ -22,7 +22,9 @@ class IdGet extends AbstractRequest
     /**
      * Получение конкретного типа договора.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return ContractTypeItem
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): ContractTypeItem
     {

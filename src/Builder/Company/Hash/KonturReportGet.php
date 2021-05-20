@@ -22,7 +22,9 @@ class KonturReportGet extends AbstractRequest
     /**
      * Получение ссылки на отчет контура по компании.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return CompanyKonturReportResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): CompanyKonturReportResponse
     {

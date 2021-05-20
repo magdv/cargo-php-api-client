@@ -22,7 +22,9 @@ class PackageIdGet extends AbstractRequest
     /**
      * Получение пакета документов по заказу
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderDocumentPackageResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderDocumentPackageResponse
     {

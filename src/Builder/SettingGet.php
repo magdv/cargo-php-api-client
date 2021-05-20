@@ -22,7 +22,9 @@ class SettingGet extends AbstractRequest
     /**
      * Получение списка настроек пользователя
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return SettingList
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): SettingList
     {

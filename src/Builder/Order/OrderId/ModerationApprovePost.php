@@ -22,7 +22,9 @@ class ModerationApprovePost extends AbstractRequest
     /**
      * Опубликовать заказ под ГП.
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderEditResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(): OrderEditResponse
     {

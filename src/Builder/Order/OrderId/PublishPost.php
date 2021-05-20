@@ -23,7 +23,9 @@ class PublishPost extends AbstractRequest
     /**
      * Публикация заказа
      *
-     * @throws \Cargomart\ApiClient\exceptions\CargomartClientException
+     * @return OrderCardResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
     public function do(OrderPublishRequest $body): OrderCardResponse
     {
