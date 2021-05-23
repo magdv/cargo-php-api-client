@@ -17,7 +17,7 @@ use Cargomart\ApiClient\Entity\Base\DateTimeRange;
  *
  * @property string $id
  * @property int $serialId
- * @property int $customerId
+ * @property string $customerId
  * @property int[] $curators
  * @property Price $price
  * @property int $status
@@ -32,7 +32,7 @@ final class ProposalCardFull extends AbstractEntity
     protected static $types = [
         'id' => ['string'],
         'serialId' => ['int'],
-        'customerId' => ['int'],
+        'customerId' => ['string'],
         'curators' => ['array', 'int'],
         'price' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\Price'],
         'status' => ['int'],

@@ -9,30 +9,28 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Expeditor\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\Driver\Models\Driver;
-use Cargomart\ApiClient\Entity\Truck\Objects\TruckOld;
 
 /**
  * Перевозчик
  * source: expeditor/objects/proposal-carrier.json
  *
- * @property int $carrierId
+ * @property string $carrierId
  * @property int $status
  * @property int[] $curators
  * @property BankingDetails $bankingDetails
- * @property Driver[] $driver
- * @property TruckOld[] $truck
+ * @property ProposalDriver $driver
+ * @property ProposalTruck $truck
  * @property Price $price
  */
 final class ProposalCarrier extends AbstractEntity
 {
     protected static $types = [
-        'carrierId' => ['int'],
+        'carrierId' => ['string'],
         'status' => ['int'],
         'curators' => ['array', 'int'],
         'bankingDetails' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\BankingDetails'],
-        'driver' => ['array', 'Cargomart\ApiClient\Entity\Driver\Models\Driver'],
-        'truck' => ['array', 'Cargomart\ApiClient\Entity\Truck\Objects\TruckOld'],
+        'driver' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalDriver'],
+        'truck' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalTruck'],
         'price' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\Price'],
     ];
 

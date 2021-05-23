@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Cargomart\ApiClient\Builder\Expeditor;
+namespace Cargomart\ApiClient\Builder\ExpeditorProposal;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Responses\ProposalCardResponse;

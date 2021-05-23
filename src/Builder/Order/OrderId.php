@@ -60,6 +60,7 @@ use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriver;
 use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriverCorrection;
 use Cargomart\ApiClient\Builder\Order\OrderId\Validate;
 use Cargomart\ApiClient\Builder\Order\OrderId\Visitor;
+use Cargomart\ApiClient\Builder\Order\OrderId\WaybillAdditionalInfo;
 use Cargomart\ApiClient\Builder\Order\OrderId\WaybillTemplate;
 use Cargomart\ApiClient\Builder\Order\OrderId\WaybillTemplateGp;
 use Cargomart\ApiClient\Builder\Order\OrderId\XClone;
@@ -279,6 +280,11 @@ final class OrderId extends AbstractBuilder
     public function waybillTemplate(): WaybillTemplate
     {
         return new WaybillTemplate($this->params, $this->client);
+    }
+
+    public function waybillAdditionalInfo(): WaybillAdditionalInfo
+    {
+        return new WaybillAdditionalInfo($this->params, $this->client);
     }
 
     public function waybillTemplateGp(): WaybillTemplateGp

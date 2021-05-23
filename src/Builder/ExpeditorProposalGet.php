@@ -11,7 +11,7 @@ namespace Cargomart\ApiClient\Builder;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Responses\ProposalListResponse;
 
-class ExpeditorGet extends AbstractRequest
+class ExpeditorProposalGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['page' => 1, 'perPage' => 20];
@@ -356,25 +356,6 @@ class ExpeditorGet extends AbstractRequest
             unset($c->query['filter[createTo]']);
         } else {
             $c->query['filter[createTo]'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
-     * Тип заказа.
-     *
-     * @var null|string[] $value
-     *
-     * @return self
-     */
-    public function qFilterKind(?array $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['filter[kind]']);
-        } else {
-            $c->query['filter[kind]'] = $value;
         }
 
         return $c;

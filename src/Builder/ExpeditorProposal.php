@@ -9,14 +9,14 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder;
 
 use Cargomart\ApiClient\AbstractBuilder;
-use Cargomart\ApiClient\Builder\Expeditor\Id;
+use Cargomart\ApiClient\Builder\ExpeditorProposal\Id;
 
 /**
- * url: /api/v2/expeditor
+ * url: /api/v2/expeditor-proposal
  */
-final class Expeditor extends AbstractBuilder
+final class ExpeditorProposal extends AbstractBuilder
 {
-    protected const URL = '/api/v2/expeditor';
+    protected const URL = '/api/v2/expeditor-proposal';
 
     public function id(string $id): Id
     {
@@ -25,8 +25,8 @@ final class Expeditor extends AbstractBuilder
         return new Id($params, $this->client);
     }
 
-    public function get(): ExpeditorGet
+    public function get(): ExpeditorProposalGet
     {
-        return new ExpeditorGet($this->client, $this->getUrl());
+        return new ExpeditorProposalGet($this->client, $this->getUrl());
     }
 }

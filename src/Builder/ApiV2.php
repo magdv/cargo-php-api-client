@@ -132,9 +132,9 @@ final class ApiV2 extends AbstractBuilder
         return new DriverApp($this->params, $this->client);
     }
 
-    public function expeditor(): Expeditor
+    public function expeditorProposal(): ExpeditorProposal
     {
-        return new Expeditor($this->params, $this->client);
+        return new ExpeditorProposal($this->params, $this->client);
     }
 
     public function setting(): Setting
