@@ -17,34 +17,14 @@ final class ApiV2 extends AbstractBuilder
 {
     protected const URL = '/api/v2';
 
+    public function tender(): Tender
+    {
+        return new Tender($this->params, $this->client);
+    }
+
     public function configuration(): Configuration
     {
         return new Configuration($this->params, $this->client);
-    }
-
-    public function rate(): Rate
-    {
-        return new Rate($this->params, $this->client);
-    }
-
-    public function device(): Device
-    {
-        return new Device($this->params, $this->client);
-    }
-
-    public function ws(): Ws
-    {
-        return new Ws($this->params, $this->client);
-    }
-
-    public function trailer(): Trailer
-    {
-        return new Trailer($this->params, $this->client);
-    }
-
-    public function candidate(): Candidate
-    {
-        return new Candidate($this->params, $this->client);
     }
 
     public function itinerary(): Itinerary
@@ -52,14 +32,84 @@ final class ApiV2 extends AbstractBuilder
         return new Itinerary($this->params, $this->client);
     }
 
+    public function driverApp(): DriverApp
+    {
+        return new DriverApp($this->params, $this->client);
+    }
+
+    public function company(): Company
+    {
+        return new Company($this->params, $this->client);
+    }
+
+    public function device(): Device
+    {
+        return new Device($this->params, $this->client);
+    }
+
+    public function setting(): Setting
+    {
+        return new Setting($this->params, $this->client);
+    }
+
     public function chat(): Chat
     {
         return new Chat($this->params, $this->client);
     }
 
-    public function predictor(): Predictor
+    public function info(): Info
     {
-        return new Predictor($this->params, $this->client);
+        return new Info($this->params, $this->client);
+    }
+
+    public function manage(): Manage
+    {
+        return new Manage($this->params, $this->client);
+    }
+
+    public function contractType(): ContractType
+    {
+        return new ContractType($this->params, $this->client);
+    }
+
+    public function registration(): Registration
+    {
+        return new Registration($this->params, $this->client);
+    }
+
+    public function user(): User
+    {
+        return new User($this->params, $this->client);
+    }
+
+    public function storagePoint(): StoragePoint
+    {
+        return new StoragePoint($this->params, $this->client);
+    }
+
+    public function ac(): Ac
+    {
+        return new Ac($this->params, $this->client);
+    }
+
+    public function metrics(): Metrics
+    {
+        return new Metrics($this->params, $this->client);
+    }
+
+    public function expeditorProposal(): ExpeditorProposal
+    {
+        return new ExpeditorProposal($this->params, $this->client);
+    }
+
+    public function rate(): Rate
+    {
+        return new Rate($this->params, $this->client);
+    }
+
+    public function candidate(): Candidate
+    {
+        return new Candidate($this->params, $this->client);
     }
 
     public function preOrder(): PreOrder
@@ -72,24 +122,9 @@ final class ApiV2 extends AbstractBuilder
         return new PreOrderGroup($this->params, $this->client);
     }
 
-    public function companyConfirmation(): CompanyConfirmation
+    public function trailer(): Trailer
     {
-        return new CompanyConfirmation($this->params, $this->client);
-    }
-
-    public function tms(): Tms
-    {
-        return new Tms($this->params, $this->client);
-    }
-
-    public function booking(): Booking
-    {
-        return new Booking($this->params, $this->client);
-    }
-
-    public function company(): Company
-    {
-        return new Company($this->params, $this->client);
+        return new Trailer($this->params, $this->client);
     }
 
     public function locality(): Locality
@@ -97,49 +132,9 @@ final class ApiV2 extends AbstractBuilder
         return new Locality($this->params, $this->client);
     }
 
-    public function info(): Info
+    public function companyConfirmation(): CompanyConfirmation
     {
-        return new Info($this->params, $this->client);
-    }
-
-    public function message(): Message
-    {
-        return new Message($this->params, $this->client);
-    }
-
-    public function tender(): Tender
-    {
-        return new Tender($this->params, $this->client);
-    }
-
-    public function worker(): Worker
-    {
-        return new Worker($this->params, $this->client);
-    }
-
-    public function user(): User
-    {
-        return new User($this->params, $this->client);
-    }
-
-    public function registration(): Registration
-    {
-        return new Registration($this->params, $this->client);
-    }
-
-    public function driverApp(): DriverApp
-    {
-        return new DriverApp($this->params, $this->client);
-    }
-
-    public function expeditorProposal(): ExpeditorProposal
-    {
-        return new ExpeditorProposal($this->params, $this->client);
-    }
-
-    public function setting(): Setting
-    {
-        return new Setting($this->params, $this->client);
+        return new CompanyConfirmation($this->params, $this->client);
     }
 
     public function order(): Order
@@ -147,29 +142,19 @@ final class ApiV2 extends AbstractBuilder
         return new Order($this->params, $this->client);
     }
 
+    public function tracking(): Tracking
+    {
+        return new Tracking($this->params, $this->client);
+    }
+
     public function orderDraftExpeditor(): OrderDraftExpeditor
     {
         return new OrderDraftExpeditor($this->params, $this->client);
     }
 
-    public function orderDraftFtl(): OrderDraftFtl
+    public function orderPatch(): OrderPatch
     {
-        return new OrderDraftFtl($this->params, $this->client);
-    }
-
-    public function orderDocumentPackage(): OrderDocumentPackage
-    {
-        return new OrderDocumentPackage($this->params, $this->client);
-    }
-
-    public function orderDocument(): OrderDocument
-    {
-        return new OrderDocument($this->params, $this->client);
-    }
-
-    public function tracking(): Tracking
-    {
-        return new Tracking($this->params, $this->client);
+        return new OrderPatch($this->params, $this->client);
     }
 
     public function orderSearch(): OrderSearch
@@ -187,33 +172,53 @@ final class ApiV2 extends AbstractBuilder
         return new TruckOrderQueue($this->params, $this->client);
     }
 
-    public function storagePoint(): StoragePoint
+    public function orderDraftFtl(): OrderDraftFtl
     {
-        return new StoragePoint($this->params, $this->client);
+        return new OrderDraftFtl($this->params, $this->client);
     }
 
-    public function ac(): Ac
+    public function orderDocumentPackage(): OrderDocumentPackage
     {
-        return new Ac($this->params, $this->client);
+        return new OrderDocumentPackage($this->params, $this->client);
     }
 
-    public function manage(): Manage
+    public function orderDocument(): OrderDocument
     {
-        return new Manage($this->params, $this->client);
-    }
-
-    public function metrics(): Metrics
-    {
-        return new Metrics($this->params, $this->client);
-    }
-
-    public function contractType(): ContractType
-    {
-        return new ContractType($this->params, $this->client);
+        return new OrderDocument($this->params, $this->client);
     }
 
     public function driver(): Driver
     {
         return new Driver($this->params, $this->client);
+    }
+
+    public function ws(): Ws
+    {
+        return new Ws($this->params, $this->client);
+    }
+
+    public function message(): Message
+    {
+        return new Message($this->params, $this->client);
+    }
+
+    public function worker(): Worker
+    {
+        return new Worker($this->params, $this->client);
+    }
+
+    public function tms(): Tms
+    {
+        return new Tms($this->params, $this->client);
+    }
+
+    public function booking(): Booking
+    {
+        return new Booking($this->params, $this->client);
+    }
+
+    public function predictor(): Predictor
+    {
+        return new Predictor($this->params, $this->client);
     }
 }

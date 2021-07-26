@@ -18,6 +18,10 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $update
  * @property bool $delete
  * @property bool $createResendInvite
+ * @property bool $viewIssueCertificate
+ * @property bool $createIssueCertificate
+ * @property bool $updateIssueCertificate
+ * @property bool $deleteIssueCertificate
  */
 final class WorkerAccess extends AbstractEntity
 {
@@ -26,7 +30,20 @@ final class WorkerAccess extends AbstractEntity
         'update' => ['bool'],
         'delete' => ['bool'],
         'createResendInvite' => ['bool'],
+        'viewIssueCertificate' => ['bool'],
+        'createIssueCertificate' => ['bool'],
+        'updateIssueCertificate' => ['bool'],
+        'deleteIssueCertificate' => ['bool'],
     ];
 
-    protected static $nullables = ['view' => false, 'update' => false, 'delete' => false, 'createResendInvite' => false];
+    protected static $nullables = [
+        'view' => false,
+        'update' => false,
+        'delete' => false,
+        'createResendInvite' => false,
+        'viewIssueCertificate' => false,
+        'createIssueCertificate' => false,
+        'updateIssueCertificate' => false,
+        'deleteIssueCertificate' => false,
+    ];
 }

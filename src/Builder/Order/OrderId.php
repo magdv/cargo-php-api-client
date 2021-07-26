@@ -11,6 +11,7 @@ namespace Cargomart\ApiClient\Builder\Order;
 use Cargomart\ApiClient\AbstractBuilder;
 use Cargomart\ApiClient\Builder\Order\OrderId\AfeerExpress;
 use Cargomart\ApiClient\Builder\Order\OrderId\Alter;
+use Cargomart\ApiClient\Builder\Order\OrderId\Archive;
 use Cargomart\ApiClient\Builder\Order\OrderId\Bid;
 use Cargomart\ApiClient\Builder\Order\OrderId\Broker;
 use Cargomart\ApiClient\Builder\Order\OrderId\Cancel;
@@ -19,6 +20,7 @@ use Cargomart\ApiClient\Builder\Order\OrderId\CarrierRefuse;
 use Cargomart\ApiClient\Builder\Order\OrderId\Chat;
 use Cargomart\ApiClient\Builder\Order\OrderId\ClientAccess;
 use Cargomart\ApiClient\Builder\Order\OrderId\Comment;
+use Cargomart\ApiClient\Builder\Order\OrderId\ConsignorContact;
 use Cargomart\ApiClient\Builder\Order\OrderId\ConsignorDocument;
 use Cargomart\ApiClient\Builder\Order\OrderId\ConsignorRefuse;
 use Cargomart\ApiClient\Builder\Order\OrderId\Contact;
@@ -27,6 +29,7 @@ use Cargomart\ApiClient\Builder\Order\OrderId\Document;
 use Cargomart\ApiClient\Builder\Order\OrderId\Edit;
 use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorAssignment;
 use Cargomart\ApiClient\Builder\Order\OrderId\Finish;
+use Cargomart\ApiClient\Builder\Order\OrderId\FixPrice;
 use Cargomart\ApiClient\Builder\Order\OrderId\GeneralPartnerDocument;
 use Cargomart\ApiClient\Builder\Order\OrderId\GeneralPartnerProposalTemplate;
 use Cargomart\ApiClient\Builder\Order\OrderId\GeneralPartnerProxyTemplate;
@@ -38,6 +41,9 @@ use Cargomart\ApiClient\Builder\Order\OrderId\ModerationApprove;
 use Cargomart\ApiClient\Builder\Order\OrderId\ModerationReject;
 use Cargomart\ApiClient\Builder\Order\OrderId\Monitoring;
 use Cargomart\ApiClient\Builder\Order\OrderId\Offer;
+use Cargomart\ApiClient\Builder\Order\OrderId\OriginalDocsAccept;
+use Cargomart\ApiClient\Builder\Order\OrderId\OriginalDocsReject;
+use Cargomart\ApiClient\Builder\Order\OrderId\OriginalDocsTrackingNumber;
 use Cargomart\ApiClient\Builder\Order\OrderId\Pin;
 use Cargomart\ApiClient\Builder\Order\OrderId\Point;
 use Cargomart\ApiClient\Builder\Order\OrderId\Proposal;
@@ -55,6 +61,7 @@ use Cargomart\ApiClient\Builder\Order\OrderId\RefuseCancel;
 use Cargomart\ApiClient\Builder\Order\OrderId\Repeat;
 use Cargomart\ApiClient\Builder\Order\OrderId\Save;
 use Cargomart\ApiClient\Builder\Order\OrderId\Sign;
+use Cargomart\ApiClient\Builder\Order\OrderId\SimpleDocument;
 use Cargomart\ApiClient\Builder\Order\OrderId\Tag;
 use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriver;
 use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriverCorrection;
@@ -72,14 +79,19 @@ final class OrderId extends AbstractBuilder
 {
     protected const URL = '/api/v2/order/{orderId}';
 
-    public function comment(): Comment
+    public function offer(): Offer
     {
-        return new Comment($this->params, $this->client);
+        return new Offer($this->params, $this->client);
     }
 
-    public function correction(): Correction
+    public function fixPrice(): FixPrice
     {
-        return new Correction($this->params, $this->client);
+        return new FixPrice($this->params, $this->client);
+    }
+
+    public function chat(): Chat
+    {
+        return new Chat($this->params, $this->client);
     }
 
     public function xClone(): XClone
@@ -142,59 +154,9 @@ final class OrderId extends AbstractBuilder
         return new ModerationApprove($this->params, $this->client);
     }
 
-    public function chat(): Chat
+    public function comment(): Comment
     {
-        return new Chat($this->params, $this->client);
-    }
-
-    public function offer(): Offer
-    {
-        return new Offer($this->params, $this->client);
-    }
-
-    public function sign(): Sign
-    {
-        return new Sign($this->params, $this->client);
-    }
-
-    public function itinerary(): Itinerary
-    {
-        return new Itinerary($this->params, $this->client);
-    }
-
-    public function cancel(): Cancel
-    {
-        return new Cancel($this->params, $this->client);
-    }
-
-    public function pin(): Pin
-    {
-        return new Pin($this->params, $this->client);
-    }
-
-    public function bid(): Bid
-    {
-        return new Bid($this->params, $this->client);
-    }
-
-    public function broker(): Broker
-    {
-        return new Broker($this->params, $this->client);
-    }
-
-    public function afeerExpress(): AfeerExpress
-    {
-        return new AfeerExpress($this->params, $this->client);
-    }
-
-    public function visitor(): Visitor
-    {
-        return new Visitor($this->params, $this->client);
-    }
-
-    public function alter(): Alter
-    {
-        return new Alter($this->params, $this->client);
+        return new Comment($this->params, $this->client);
     }
 
     public function carrierRefuse(): CarrierRefuse
@@ -332,6 +294,11 @@ final class OrderId extends AbstractBuilder
         return new Finish($this->params, $this->client);
     }
 
+    public function consignorContact(): ConsignorContact
+    {
+        return new ConsignorContact($this->params, $this->client);
+    }
+
     public function carrierContact(): CarrierContact
     {
         return new CarrierContact($this->params, $this->client);
@@ -345,6 +312,81 @@ final class OrderId extends AbstractBuilder
     public function expeditorAssignment(): ExpeditorAssignment
     {
         return new ExpeditorAssignment($this->params, $this->client);
+    }
+
+    public function sign(): Sign
+    {
+        return new Sign($this->params, $this->client);
+    }
+
+    public function correction(): Correction
+    {
+        return new Correction($this->params, $this->client);
+    }
+
+    public function itinerary(): Itinerary
+    {
+        return new Itinerary($this->params, $this->client);
+    }
+
+    public function cancel(): Cancel
+    {
+        return new Cancel($this->params, $this->client);
+    }
+
+    public function pin(): Pin
+    {
+        return new Pin($this->params, $this->client);
+    }
+
+    public function bid(): Bid
+    {
+        return new Bid($this->params, $this->client);
+    }
+
+    public function broker(): Broker
+    {
+        return new Broker($this->params, $this->client);
+    }
+
+    public function afeerExpress(): AfeerExpress
+    {
+        return new AfeerExpress($this->params, $this->client);
+    }
+
+    public function visitor(): Visitor
+    {
+        return new Visitor($this->params, $this->client);
+    }
+
+    public function alter(): Alter
+    {
+        return new Alter($this->params, $this->client);
+    }
+
+    public function archive(): Archive
+    {
+        return new Archive($this->params, $this->client);
+    }
+
+    public function originalDocsTrackingNumber(): OriginalDocsTrackingNumber
+    {
+        return new OriginalDocsTrackingNumber($this->params, $this->client);
+    }
+
+    public function originalDocsAccept(): OriginalDocsAccept
+    {
+        return new OriginalDocsAccept($this->params, $this->client);
+    }
+
+    public function originalDocsReject(): OriginalDocsReject
+    {
+        return new OriginalDocsReject($this->params, $this->client);
+    }
+
+    public function simpleDocument(): SimpleDocument
+    {
+        return new SimpleDocument($this->params, $this->client);
     }
 
     public function get(): OrderIdGet

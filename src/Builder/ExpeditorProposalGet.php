@@ -39,19 +39,19 @@ class ExpeditorProposalGet extends AbstractRequest
     }
 
     /**
-     * Тип показываемого заказа.
+     * Идентификатор события для получения заказов которые измененились после этого события
      *
-     * @var null|string $value
+     * @var null|int $value
      *
      * @return self
      */
-    public function qFilterType(?string $value): self
+    public function xModifyFromEventHeader(?int $value): self
     {
         $c = clone $this;
         if (null === $value) {
-            unset($c->query['filter[type]']);
+            unset($c->headers['X-Modify-From-Event']);
         } else {
-            $c->query['filter[type]'] = $value;
+            $c->headers['X-Modify-From-Event'] = $value;
         }
 
         return $c;
@@ -115,44 +115,6 @@ class ExpeditorProposalGet extends AbstractRequest
     }
 
     /**
-     * Дата погрузки ОТ.
-     *
-     * @var null|string $value
-     *
-     * @return self
-     */
-    public function qFilterLoadingFrom(?string $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['filter[loadingFrom]']);
-        } else {
-            $c->query['filter[loadingFrom]'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
-     * Дата погрузки ДО.
-     *
-     * @var null|string $value
-     *
-     * @return self
-     */
-    public function qFilterLoadingTo(?string $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['filter[loadingTo]']);
-        } else {
-            $c->query['filter[loadingTo]'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
      * Список идентификаторов типов ТС.
      *
      * @var null|int[] $value
@@ -172,83 +134,7 @@ class ExpeditorProposalGet extends AbstractRequest
     }
 
     /**
-     * Вес груза в ОТ, кг.
-     *
-     * @var null|int $value
-     *
-     * @return self
-     */
-    public function qFilterWeightFrom(?int $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['filter[weightFrom]']);
-        } else {
-            $c->query['filter[weightFrom]'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
-     * Вес груза в ДО, кг.
-     *
-     * @var null|int $value
-     *
-     * @return self
-     */
-    public function qFilterWeightTo(?int $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['filter[weightTo]']);
-        } else {
-            $c->query['filter[weightTo]'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
-     * Объём груза в ОТ, м3.
-     *
-     * @var null|int $value
-     *
-     * @return self
-     */
-    public function qFilterCapacityFrom(?int $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['filter[capacityFrom]']);
-        } else {
-            $c->query['filter[capacityFrom]'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
-     * Объём груза в ДО, м3.
-     *
-     * @var null|int $value
-     *
-     * @return self
-     */
-    public function qFilterCapacityTo(?int $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['filter[capacityTo]']);
-        } else {
-            $c->query['filter[capacityTo]'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
-     * Массив id cтатусов заказов. 100 - нет ставок, 250 - не подтвержден, 240 - подтвержден, 110 - отказ перевозчика, 120 - отказ отправителя, 6 - в рейсе, 7 - исполнен, 21 - на модерации, 22 - отклонен с модерации.
+     * Массив id cтатусов заказов.
      *
      * @var null|int[] $value
      *
@@ -261,6 +147,44 @@ class ExpeditorProposalGet extends AbstractRequest
             unset($c->query['filter[status]']);
         } else {
             $c->query['filter[status]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Список статусов доверенности.
+     *
+     * @var null|string[] $value
+     *
+     * @return self
+     */
+    public function qFilterProxyStatus(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[proxyStatus]']);
+        } else {
+            $c->query['filter[proxyStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Дата погрузки ОТ.
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterLoadingFrom(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[loadingFrom]']);
+        } else {
+            $c->query['filter[loadingFrom]'] = $value;
         }
 
         return $c;
@@ -299,63 +223,6 @@ class ExpeditorProposalGet extends AbstractRequest
             unset($c->query['filter[consignor]']);
         } else {
             $c->query['filter[consignor]'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
-     * ФИО водителя
-     *
-     * @var null|string $value
-     *
-     * @return self
-     */
-    public function qFilterDriverName(?string $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['filter[driverName]']);
-        } else {
-            $c->query['filter[driverName]'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
-     * Массив uuid заказов экспедитора
-     *
-     * @var null|string[] $value
-     *
-     * @return self
-     */
-    public function qFilterOrder(?array $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['filter[order]']);
-        } else {
-            $c->query['filter[order]'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
-     * Дата создания заказа ДО
-     *
-     * @var null|string $value
-     *
-     * @return self
-     */
-    public function qFilterCreateTo(?string $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['filter[createTo]']);
-        } else {
-            $c->query['filter[createTo]'] = $value;
         }
 
         return $c;

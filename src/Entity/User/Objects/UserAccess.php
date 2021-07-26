@@ -29,6 +29,9 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $smsCodeSend
  * @property bool $emailCodeSend
  * @property bool $passwordChange
+ * @property bool $createVerificationCode
+ * @property bool $createIssueCertificateSign
+ * @property bool $createIssueCertificateReject
  */
 final class UserAccess extends AbstractEntity
 {
@@ -48,6 +51,9 @@ final class UserAccess extends AbstractEntity
         'smsCodeSend' => ['bool'],
         'emailCodeSend' => ['bool'],
         'passwordChange' => ['bool'],
+        'createVerificationCode' => ['bool'],
+        'createIssueCertificateSign' => ['bool'],
+        'createIssueCertificateReject' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -66,5 +72,8 @@ final class UserAccess extends AbstractEntity
         'smsCodeSend' => false,
         'emailCodeSend' => false,
         'passwordChange' => false,
+        'createVerificationCode' => false,
+        'createIssueCertificateSign' => false,
+        'createIssueCertificateReject' => false,
     ];
 }

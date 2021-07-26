@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Requests;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Order\Objects\OrderEditParams;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCarRequest;
 use Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange;
 
@@ -45,6 +46,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange;
  * @property string $priceType
  * @property OrderOfferCarRequest $carRequest
  * @property int $companyBranchId
+ * @property OrderEditParams $params
  */
 final class OrderEditRequest extends AbstractEntity
 {
@@ -78,6 +80,7 @@ final class OrderEditRequest extends AbstractEntity
         'priceType' => ['string'],
         'carRequest' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCarRequest'],
         'companyBranchId' => ['int'],
+        'params' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderEditParams'],
     ];
 
     protected static $nullables = [
@@ -110,5 +113,6 @@ final class OrderEditRequest extends AbstractEntity
         'priceType' => false,
         'carRequest' => false,
         'companyBranchId' => false,
+        'params' => false,
     ];
 }

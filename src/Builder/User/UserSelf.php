@@ -12,9 +12,12 @@ use Cargomart\ApiClient\AbstractBuilder;
 use Cargomart\ApiClient\Builder\User\Self\ContactEmail;
 use Cargomart\ApiClient\Builder\User\Self\ContactEmailConfirm;
 use Cargomart\ApiClient\Builder\User\Self\ContactEmailResend;
+use Cargomart\ApiClient\Builder\User\Self\DsPhoneVerificationCode;
 use Cargomart\ApiClient\Builder\User\Self\EmailChange;
 use Cargomart\ApiClient\Builder\User\Self\EmailCodeConfirm;
 use Cargomart\ApiClient\Builder\User\Self\EmailCodeSend;
+use Cargomart\ApiClient\Builder\User\Self\IssueCertificateReject;
+use Cargomart\ApiClient\Builder\User\Self\IssueCertificateSign;
 use Cargomart\ApiClient\Builder\User\Self\PasswordChange;
 use Cargomart\ApiClient\Builder\User\Self\PhoneChange;
 use Cargomart\ApiClient\Builder\User\Self\SmsCodeConfirm;
@@ -81,6 +84,21 @@ final class UserSelf extends AbstractBuilder
     public function contactEmailResend(): ContactEmailResend
     {
         return new ContactEmailResend($this->params, $this->client);
+    }
+
+    public function dsPhoneVerificationCode(): DsPhoneVerificationCode
+    {
+        return new DsPhoneVerificationCode($this->params, $this->client);
+    }
+
+    public function issueCertificateSign(): IssueCertificateSign
+    {
+        return new IssueCertificateSign($this->params, $this->client);
+    }
+
+    public function issueCertificateReject(): IssueCertificateReject
+    {
+        return new IssueCertificateReject($this->params, $this->client);
     }
 
     public function get(): UserSelfGet

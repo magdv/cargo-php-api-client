@@ -22,6 +22,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $type
  * @property string $consignorId
  * @property string $carrierId
+ * @property string $expeditorId
  * @property string $startDate
  * @property string $endDate
  * @property string $createDate
@@ -42,6 +43,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property float $cargoWeight
  * @property int $cargoCapacity
  * @property string[] $tag
+ * @property bool $isArchived
  * @property bool $isRound
  * @property bool $isPin
  * @property bool $isView
@@ -98,6 +100,7 @@ final class OrderShortListItem extends AbstractEntity
         'type' => ['string'],
         'consignorId' => ['string'],
         'carrierId' => ['string'],
+        'expeditorId' => ['string'],
         'startDate' => ['string'],
         'endDate' => ['string'],
         'createDate' => ['string'],
@@ -118,6 +121,7 @@ final class OrderShortListItem extends AbstractEntity
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],
         'tag' => ['array', 'string'],
+        'isArchived' => ['bool'],
         'isRound' => ['bool'],
         'isPin' => ['bool'],
         'isView' => ['bool'],
@@ -173,6 +177,7 @@ final class OrderShortListItem extends AbstractEntity
         'type' => false,
         'consignorId' => false,
         'carrierId' => false,
+        'expeditorId' => false,
         'startDate' => false,
         'endDate' => false,
         'createDate' => false,
@@ -193,6 +198,7 @@ final class OrderShortListItem extends AbstractEntity
         'cargoWeight' => false,
         'cargoCapacity' => false,
         'tag' => false,
+        'isArchived' => false,
         'isRound' => false,
         'isPin' => false,
         'isView' => false,

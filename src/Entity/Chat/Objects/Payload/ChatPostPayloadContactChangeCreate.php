@@ -11,19 +11,16 @@ namespace Cargomart\ApiClient\Entity\Chat\Objects\Payload;
 use Cargomart\ApiClient\AbstractEntity;
 
 /**
- * source: chat/objects/payload/chat-post-payload-carrier-contact-change.json#/properties/create
+ * source: chat/objects/payload/chat-post-payload-contact-change.json#/properties/create
  *
  * @property string $operation
- * @property ChatPostPayloadCarrierContactChangeCreateUsers[] $users
+ * @property ChatPostPayloadContactChangeCreateUsers[] $users
  */
-final class ChatPostPayloadCarrierContactChangeCreate extends AbstractEntity
+final class ChatPostPayloadContactChangeCreate extends AbstractEntity
 {
     protected static $types = [
         'operation' => ['string'],
-        'users' => [
-            'array',
-            'Cargomart\ApiClient\Entity\Chat\Objects\Payload\ChatPostPayloadCarrierContactChangeCreateUsers',
-        ],
+        'users' => ['array', 'Cargomart\ApiClient\Entity\Chat\Objects\Payload\ChatPostPayloadContactChangeCreateUsers'],
     ];
 
     protected static $nullables = ['operation' => false, 'users' => false];

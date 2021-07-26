@@ -55,6 +55,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $viewOrderCarrierListOffer
  * @property bool $viewOrderCarrierListWorking
  * @property bool $viewOrderCarrierListCompleted
+ * @property bool $viewOrderCarrierListArchived
  * @property bool $viewOrderConsignorListBidding
  * @property bool $viewOrderConsignorListBiddingAll
  * @property bool $viewOrderConsignorListDraft
@@ -62,10 +63,13 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $viewOrderConsignorListOffer
  * @property bool $viewOrderConsignorListWorking
  * @property bool $viewOrderConsignorListCompleted
+ * @property bool $viewOrderConsignorListArchived
+ * @property bool $viewOrderExpeditorListArchived
  * @property bool $viewOrderGeneralPartnerListBidding
  * @property bool $viewOrderGeneralPartnerListCorrectionRequest
  * @property bool $viewOrderGeneralPartnerListModerate
  * @property bool $viewOrderGeneralPartnerListWorking
+ * @property bool $viewOrderGeneralPartnerListArchived
  * @property bool $viewOrderShowcase
  * @property bool $viewOrderCreateButton
  * @property bool $createOrderDraftFtl
@@ -74,6 +78,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $createOrderDraftProject
  * @property bool $createOrderDraftFtlGp
  * @property bool $createOrderDraftOffer
+ * @property bool $createOrderExpeditorProposal
  * @property bool $importOrders
  * @property bool $exportOrders
  * @property bool $exportOrderOffers
@@ -139,6 +144,7 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewOrderCarrierListOffer' => ['bool'],
         'viewOrderCarrierListWorking' => ['bool'],
         'viewOrderCarrierListCompleted' => ['bool'],
+        'viewOrderCarrierListArchived' => ['bool'],
         'viewOrderConsignorListBidding' => ['bool'],
         'viewOrderConsignorListBiddingAll' => ['bool'],
         'viewOrderConsignorListDraft' => ['bool'],
@@ -146,10 +152,13 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewOrderConsignorListOffer' => ['bool'],
         'viewOrderConsignorListWorking' => ['bool'],
         'viewOrderConsignorListCompleted' => ['bool'],
+        'viewOrderConsignorListArchived' => ['bool'],
+        'viewOrderExpeditorListArchived' => ['bool'],
         'viewOrderGeneralPartnerListBidding' => ['bool'],
         'viewOrderGeneralPartnerListCorrectionRequest' => ['bool'],
         'viewOrderGeneralPartnerListModerate' => ['bool'],
         'viewOrderGeneralPartnerListWorking' => ['bool'],
+        'viewOrderGeneralPartnerListArchived' => ['bool'],
         'viewOrderShowcase' => ['bool'],
         'viewOrderCreateButton' => ['bool'],
         'createOrderDraftFtl' => ['bool'],
@@ -158,6 +167,7 @@ final class ConfigurationPermissions extends AbstractEntity
         'createOrderDraftProject' => ['bool'],
         'createOrderDraftFtlGp' => ['bool'],
         'createOrderDraftOffer' => ['bool'],
+        'createOrderExpeditorProposal' => ['bool'],
         'importOrders' => ['bool'],
         'exportOrders' => ['bool'],
         'exportOrderOffers' => ['bool'],
@@ -222,6 +232,7 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewOrderCarrierListOffer' => false,
         'viewOrderCarrierListWorking' => false,
         'viewOrderCarrierListCompleted' => false,
+        'viewOrderCarrierListArchived' => false,
         'viewOrderConsignorListBidding' => false,
         'viewOrderConsignorListBiddingAll' => false,
         'viewOrderConsignorListDraft' => false,
@@ -229,10 +240,13 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewOrderConsignorListOffer' => false,
         'viewOrderConsignorListWorking' => false,
         'viewOrderConsignorListCompleted' => false,
+        'viewOrderConsignorListArchived' => false,
+        'viewOrderExpeditorListArchived' => false,
         'viewOrderGeneralPartnerListBidding' => false,
         'viewOrderGeneralPartnerListCorrectionRequest' => false,
         'viewOrderGeneralPartnerListModerate' => false,
         'viewOrderGeneralPartnerListWorking' => false,
+        'viewOrderGeneralPartnerListArchived' => false,
         'viewOrderShowcase' => false,
         'viewOrderCreateButton' => false,
         'createOrderDraftFtl' => false,
@@ -241,6 +255,7 @@ final class ConfigurationPermissions extends AbstractEntity
         'createOrderDraftProject' => false,
         'createOrderDraftFtlGp' => false,
         'createOrderDraftOffer' => false,
+        'createOrderExpeditorProposal' => false,
         'importOrders' => false,
         'exportOrders' => false,
         'exportOrderOffers' => false,

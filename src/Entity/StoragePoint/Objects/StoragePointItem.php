@@ -19,6 +19,7 @@ use Cargomart\ApiClient\Entity\Base\CustomContactContact;
  * @property int $id
  * @property string $code
  * @property string $title
+ * @property string $localityName
  * @property string $address
  * @property string $house
  * @property string $comment
@@ -35,6 +36,7 @@ final class StoragePointItem extends AbstractEntity
         'id' => ['int'],
         'code' => ['string'],
         'title' => ['string'],
+        'localityName' => ['string'],
         'address' => ['string'],
         'house' => ['string'],
         'comment' => ['string'],
@@ -50,6 +52,7 @@ final class StoragePointItem extends AbstractEntity
         'id' => false,
         'code' => false,
         'title' => false,
+        'localityName' => false,
         'address' => false,
         'house' => false,
         'comment' => false,

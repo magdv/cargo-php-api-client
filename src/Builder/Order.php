@@ -16,6 +16,7 @@ use Cargomart\ApiClient\Builder\Order\Count;
 use Cargomart\ApiClient\Builder\Order\Excel;
 use Cargomart\ApiClient\Builder\Order\Ids;
 use Cargomart\ApiClient\Builder\Order\Import;
+use Cargomart\ApiClient\Builder\Order\OrderHash;
 use Cargomart\ApiClient\Builder\Order\OrderId;
 
 /**
@@ -24,6 +25,16 @@ use Cargomart\ApiClient\Builder\Order\OrderId;
 final class Order extends AbstractBuilder
 {
     protected const URL = '/api/v2/order';
+
+    public function excel(): Excel
+    {
+        return new Excel($this->params, $this->client);
+    }
+
+    public function import(): Import
+    {
+        return new Import($this->params, $this->client);
+    }
 
     public function orderId(string $orderId): OrderId
     {
@@ -47,24 +58,21 @@ final class Order extends AbstractBuilder
         return new Count($this->params, $this->client);
     }
 
-    public function ac(): Ac
-    {
-        return new Ac($this->params, $this->client);
-    }
-
-    public function excel(): Excel
-    {
-        return new Excel($this->params, $this->client);
-    }
-
-    public function import(): Import
-    {
-        return new Import($this->params, $this->client);
-    }
-
     public function categoryStatistics(): CategoryStatistics
     {
         return new CategoryStatistics($this->params, $this->client);
+    }
+
+    public function orderHash(string $orderHash): OrderHash
+    {
+        $params = $this->params;
+        $params['orderHash'] = $orderHash;
+        return new OrderHash($params, $this->client);
+    }
+
+    public function ac(): Ac
+    {
+        return new Ac($this->params, $this->client);
     }
 
     public function get(): OrderGet

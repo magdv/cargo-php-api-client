@@ -761,6 +761,25 @@ class OrderGet extends AbstractRequest
     }
 
     /**
+     * Только заказы в архиве
+     *
+     * @var null|bool $value
+     *
+     * @return self
+     */
+    public function qFilterIsArchived(?bool $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[isArchived]']);
+        } else {
+            $c->query['filter[isArchived]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
      * Массив доп данных.
      *
      * @var null|string[] $value

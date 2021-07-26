@@ -21,6 +21,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $inn
  * @property string $kpp
  * @property bool $isWithVat
+ * @property bool $isMain
  */
 final class CompanyBranch extends AbstractEntity
 {
@@ -32,6 +33,7 @@ final class CompanyBranch extends AbstractEntity
         'inn' => ['string'],
         'kpp' => ['string'],
         'isWithVat' => ['bool'],
+        'isMain' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -42,5 +44,6 @@ final class CompanyBranch extends AbstractEntity
         'inn' => false,
         'kpp' => false,
         'isWithVat' => false,
+        'isMain' => false,
     ];
 }

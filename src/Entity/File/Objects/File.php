@@ -12,10 +12,11 @@ use Cargomart\ApiClient\AbstractEntity;
 
 /**
  * Объект файла
- * source: file/objects/file-v2.json
+ * source: file/objects/file.json
  *
- * @property string $id
+ * @property int $id
  * @property string $title
+ * @property string $name
  * @property string $extension
  * @property string $mime
  * @property int $size
@@ -24,8 +25,9 @@ use Cargomart\ApiClient\AbstractEntity;
 final class File extends AbstractEntity
 {
     protected static $types = [
-        'id' => ['string'],
+        'id' => ['int'],
         'title' => ['string'],
+        'name' => ['string'],
         'extension' => ['string'],
         'mime' => ['string'],
         'size' => ['int'],
@@ -35,6 +37,7 @@ final class File extends AbstractEntity
     protected static $nullables = [
         'id' => false,
         'title' => false,
+        'name' => false,
         'extension' => false,
         'mime' => false,
         'size' => false,

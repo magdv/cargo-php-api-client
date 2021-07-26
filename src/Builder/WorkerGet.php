@@ -77,6 +77,25 @@ class WorkerGet extends AbstractRequest
     }
 
     /**
+     * Присвоенная роль для работы с простой подписью
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterSimpleSignatureRole(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[simpleSignatureRole]']);
+        } else {
+            $c->query['filter[simpleSignatureRole]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
      * Просматриваемая страница, по умолчанию 1
      *
      * @var null|int $value

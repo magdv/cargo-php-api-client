@@ -11,6 +11,7 @@ namespace Cargomart\ApiClient\Entity\User\Objects;
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Company\Objects\CompanyInfo;
 use Cargomart\ApiClient\Entity\Company\Objects\PersonalManager;
+use Cargomart\ApiClient\Entity\DigitalSignature\Objects\IssueCertificate;
 
 /**
  * Профиль пользователя
@@ -37,6 +38,7 @@ use Cargomart\ApiClient\Entity\Company\Objects\PersonalManager;
  * @property string $role
  * @property int $roleId
  * @property bool $isBlocked
+ * @property bool $lockedProfile
  * @property bool $isValidated
  * @property int $legalStatusId
  * @property bool $isHaveBid
@@ -46,6 +48,8 @@ use Cargomart\ApiClient\Entity\Company\Objects\PersonalManager;
  * @property CompanyInfo $company
  * @property UserAccess $access
  * @property PersonalManager[] $personalManager
+ * @property IssueCertificate $issueCertificate
+ * @property ValueWithCodeVerification $simpleSignaturePhoneVerification
  */
 final class UserProfileFull extends AbstractEntity
 {
@@ -71,6 +75,7 @@ final class UserProfileFull extends AbstractEntity
         'role' => ['string'],
         'roleId' => ['int'],
         'isBlocked' => ['bool'],
+        'lockedProfile' => ['bool'],
         'isValidated' => ['bool'],
         'legalStatusId' => ['int'],
         'isHaveBid' => ['bool'],
@@ -80,6 +85,8 @@ final class UserProfileFull extends AbstractEntity
         'company' => ['Cargomart\ApiClient\Entity\Company\Objects\CompanyInfo'],
         'access' => ['Cargomart\ApiClient\Entity\User\Objects\UserAccess'],
         'personalManager' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\PersonalManager'],
+        'issueCertificate' => ['Cargomart\ApiClient\Entity\DigitalSignature\Objects\IssueCertificate'],
+        'simpleSignaturePhoneVerification' => ['Cargomart\ApiClient\Entity\User\Objects\ValueWithCodeVerification'],
     ];
 
     protected static $nullables = [
@@ -104,6 +111,7 @@ final class UserProfileFull extends AbstractEntity
         'role' => false,
         'roleId' => false,
         'isBlocked' => false,
+        'lockedProfile' => false,
         'isValidated' => false,
         'legalStatusId' => false,
         'isHaveBid' => false,
@@ -113,5 +121,7 @@ final class UserProfileFull extends AbstractEntity
         'company' => false,
         'access' => false,
         'personalManager' => false,
+        'issueCertificate' => false,
+        'simpleSignaturePhoneVerification' => false,
     ];
 }

@@ -19,6 +19,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $webSocket
  * @property bool $newOrderEditForm
  * @property bool $pricePrediction
+ * @property bool $expeditorCustomer
  */
 final class ConfigurationFeatures extends AbstractEntity
 {
@@ -28,6 +29,7 @@ final class ConfigurationFeatures extends AbstractEntity
         'webSocket' => ['bool'],
         'newOrderEditForm' => ['bool'],
         'pricePrediction' => ['bool'],
+        'expeditorCustomer' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -36,5 +38,6 @@ final class ConfigurationFeatures extends AbstractEntity
         'webSocket' => false,
         'newOrderEditForm' => false,
         'pricePrediction' => false,
+        'expeditorCustomer' => false,
     ];
 }

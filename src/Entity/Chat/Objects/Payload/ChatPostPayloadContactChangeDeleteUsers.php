@@ -12,12 +12,12 @@ use Cargomart\ApiClient\AbstractEntity;
 
 /**
  * Пользователи
- * source: chat/objects/payload/chat-post-payload-carrier-contact-change.json#/properties/delete#/properties/users
+ * source: chat/objects/payload/chat-post-payload-contact-change.json#/properties/delete#/properties/users
  *
  * @property int $id
  * @property string $name
  */
-final class ChatPostPayloadCarrierContactChangeDeleteUsers extends AbstractEntity
+final class ChatPostPayloadContactChangeDeleteUsers extends AbstractEntity
 {
     protected static $types = ['id' => ['int'], 'name' => ['string']];
     protected static $nullables = ['id' => false, 'name' => false];

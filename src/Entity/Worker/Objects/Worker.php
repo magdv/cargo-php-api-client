@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Worker\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\DigitalSignature\Objects\IssueCertificate;
+use Cargomart\ApiClient\Entity\User\Objects\ValueWithCodeVerification;
 
 /**
  * Сотрудник
@@ -29,7 +31,10 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $isBlocked
  * @property string $timezone
  * @property string $inviteStatus
+ * @property IssueCertificate $issueCertificate
+ * @property ValueWithCodeVerification $simpleSignaturePhoneVerification
  * @property string $inviteExpireDate
+ * @property bool $lockedProfile
  * @property WorkerAccess $access
  */
 final class Worker extends AbstractEntity
@@ -50,7 +55,10 @@ final class Worker extends AbstractEntity
         'isBlocked' => ['bool'],
         'timezone' => ['string'],
         'inviteStatus' => ['string'],
+        'issueCertificate' => ['Cargomart\ApiClient\Entity\DigitalSignature\Objects\IssueCertificate'],
+        'simpleSignaturePhoneVerification' => ['Cargomart\ApiClient\Entity\User\Objects\ValueWithCodeVerification'],
         'inviteExpireDate' => ['string'],
+        'lockedProfile' => ['bool'],
         'access' => ['Cargomart\ApiClient\Entity\Worker\Objects\WorkerAccess'],
     ];
 
@@ -70,7 +78,10 @@ final class Worker extends AbstractEntity
         'isBlocked' => false,
         'timezone' => false,
         'inviteStatus' => false,
+        'issueCertificate' => false,
+        'simpleSignaturePhoneVerification' => false,
         'inviteExpireDate' => false,
+        'lockedProfile' => false,
         'access' => false,
     ];
 }

@@ -31,6 +31,7 @@ use Cargomart\ApiClient\Entity\Base\DateTimeRange;
  * @property string $externalId
  * @property string $periodFromDate
  * @property string $periodToDate
+ * @property ProposalProxy $proxy
  * @property ProposalAccess $access
  */
 final class ShortListItem extends AbstractEntity
@@ -52,6 +53,7 @@ final class ShortListItem extends AbstractEntity
         'externalId' => ['string'],
         'periodFromDate' => ['string'],
         'periodToDate' => ['string'],
+        'proxy' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalProxy'],
         'access' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalAccess'],
     ];
 
@@ -72,6 +74,7 @@ final class ShortListItem extends AbstractEntity
         'externalId' => false,
         'periodFromDate' => false,
         'periodToDate' => false,
+        'proxy' => false,
         'access' => false,
     ];
 }

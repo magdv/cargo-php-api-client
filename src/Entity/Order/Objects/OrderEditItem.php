@@ -58,6 +58,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property OrderOfferCarRequest $carRequest
  * @property string $recommendedPrice
  * @property ProgressItemListProgress[] $progress
+ * @property OrderEditParams $params
  * @property OrderAccess $access
  */
 final class OrderEditItem extends AbstractEntity
@@ -107,6 +108,7 @@ final class OrderEditItem extends AbstractEntity
         'carRequest' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCarRequest'],
         'recommendedPrice' => ['string'],
         'progress' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\ProgressItemListProgress'],
+        'params' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderEditParams'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderAccess'],
     ];
 
@@ -155,6 +157,7 @@ final class OrderEditItem extends AbstractEntity
         'carRequest' => false,
         'recommendedPrice' => false,
         'progress' => false,
+        'params' => false,
         'access' => false,
     ];
 }

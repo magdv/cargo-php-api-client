@@ -60,6 +60,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property int $contractTypeId
  * @property UserRefuseProfile $refuseProfile
  * @property UserRefuseProfile $refuseAppealProfile
+ * @property bool $isArchived
  * @property bool $isRound
  * @property bool $isPin
  * @property bool $isView
@@ -89,6 +90,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property string $periodToDate
  * @property int $bidCreatorId
  * @property int[] $carrierContactIds
+ * @property string $expeditorId
  * @property int[] $generalPartnerContact
  * @property int $generalPartnerDocId
  * @property bool $isGeneralPartner
@@ -119,7 +121,10 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property string $paidInvoiceDate
  * @property string $carrierPackageId
  * @property string $carrierPackageStatus
+ * @property string $carrierPaymentType
  * @property OrderBanking $bankingDetails
+ * @property OriginalDocument $originalDocument
+ * @property OrderPatchLastItem $lastPatch
  */
 final class OrderCardFull extends AbstractEntity
 {
@@ -169,6 +174,7 @@ final class OrderCardFull extends AbstractEntity
         'contractTypeId' => ['int'],
         'refuseProfile' => ['Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile'],
         'refuseAppealProfile' => ['Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile'],
+        'isArchived' => ['bool'],
         'isRound' => ['bool'],
         'isPin' => ['bool'],
         'isView' => ['bool'],
@@ -198,6 +204,7 @@ final class OrderCardFull extends AbstractEntity
         'periodToDate' => ['string'],
         'bidCreatorId' => ['int'],
         'carrierContactIds' => ['array', 'int'],
+        'expeditorId' => ['string'],
         'generalPartnerContact' => ['array', 'int'],
         'generalPartnerDocId' => ['int'],
         'isGeneralPartner' => ['bool'],
@@ -228,7 +235,10 @@ final class OrderCardFull extends AbstractEntity
         'paidInvoiceDate' => ['string'],
         'carrierPackageId' => ['string'],
         'carrierPackageStatus' => ['string'],
+        'carrierPaymentType' => ['string'],
         'bankingDetails' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderBanking'],
+        'originalDocument' => ['Cargomart\ApiClient\Entity\Order\Objects\OriginalDocument'],
+        'lastPatch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
     ];
 
     protected static $nullables = [
@@ -277,6 +287,7 @@ final class OrderCardFull extends AbstractEntity
         'contractTypeId' => false,
         'refuseProfile' => false,
         'refuseAppealProfile' => false,
+        'isArchived' => false,
         'isRound' => false,
         'isPin' => false,
         'isView' => false,
@@ -306,6 +317,7 @@ final class OrderCardFull extends AbstractEntity
         'periodToDate' => false,
         'bidCreatorId' => false,
         'carrierContactIds' => false,
+        'expeditorId' => false,
         'generalPartnerContact' => false,
         'generalPartnerDocId' => false,
         'isGeneralPartner' => false,
@@ -336,6 +348,9 @@ final class OrderCardFull extends AbstractEntity
         'paidInvoiceDate' => false,
         'carrierPackageId' => false,
         'carrierPackageStatus' => false,
+        'carrierPaymentType' => false,
         'bankingDetails' => false,
+        'originalDocument' => false,
+        'lastPatch' => false,
     ];
 }

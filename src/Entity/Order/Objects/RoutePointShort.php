@@ -20,6 +20,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $code
  * @property string $fromDate
  * @property string $toDate
+ * @property string $fromTime
+ * @property string $toTime
  */
 final class RoutePointShort extends AbstractEntity
 {
@@ -30,6 +32,8 @@ final class RoutePointShort extends AbstractEntity
         'code' => ['string'],
         'fromDate' => ['string'],
         'toDate' => ['string'],
+        'fromTime' => ['string'],
+        'toTime' => ['string'],
     ];
 
     protected static $nullables = [
@@ -39,5 +43,7 @@ final class RoutePointShort extends AbstractEntity
         'code' => false,
         'fromDate' => false,
         'toDate' => false,
+        'fromTime' => false,
+        'toTime' => false,
     ];
 }
