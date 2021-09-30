@@ -17,6 +17,8 @@ use Cargomart\ApiClient\Entity\Base\TemperatureRange;
  *
  * @property float $weight
  * @property int $capacity
+ * @property float $loadWeight
+ * @property int $loadCapacity
  * @property string[] $conditions
  * @property string[] $devices
  * @property int $truckType
@@ -29,6 +31,8 @@ final class ProposalCargo extends AbstractEntity
     protected static $types = [
         'weight' => ['float'],
         'capacity' => ['int'],
+        'loadWeight' => ['float'],
+        'loadCapacity' => ['int'],
         'conditions' => ['array', 'string'],
         'devices' => ['array', 'string'],
         'truckType' => ['int'],
@@ -40,6 +44,8 @@ final class ProposalCargo extends AbstractEntity
     protected static $nullables = [
         'weight' => false,
         'capacity' => false,
+        'loadWeight' => false,
+        'loadCapacity' => false,
         'conditions' => false,
         'devices' => false,
         'truckType' => false,

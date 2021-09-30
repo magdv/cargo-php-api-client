@@ -9,14 +9,14 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order;
 
 use Cargomart\ApiClient\AbstractBuilder;
-use Cargomart\ApiClient\Builder\Order\OrderHash\Patch;
+use Cargomart\ApiClient\Builder\Order\Id\Patch;
 
 /**
- * url: /api/v2/order/{orderHash}
+ * url: /api/v2/order/{id}
  */
-final class OrderHash extends AbstractBuilder
+final class Id extends AbstractBuilder
 {
-    protected const URL = '/api/v2/order/{orderHash}';
+    protected const URL = '/api/v2/order/{id}';
 
     public function patch(): Patch
     {

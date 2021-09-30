@@ -702,4 +702,23 @@ class ExcelGet extends AbstractRequest
 
         return $c;
     }
+
+    /**
+     * Заказы дочерней компании
+     *
+     * @var null|int $value
+     *
+     * @return self
+     */
+    public function qFilterBranchId(?int $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[branchId]']);
+        } else {
+            $c->query['filter[branchId]'] = $value;
+        }
+
+        return $c;
+    }
 }

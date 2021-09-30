@@ -13,7 +13,7 @@ use Cargomart\ApiClient\Entity\Locality\Objects\Locality;
 
 /**
  * Common response data
- * source: company/responses/carriage-direction.json#/properties/data
+ * source: company/responses/company-carriage-direction-response.json#/properties/data
  *
  * @property CarriageDirectionDataCompany $company
  * @property Locality[] $locality

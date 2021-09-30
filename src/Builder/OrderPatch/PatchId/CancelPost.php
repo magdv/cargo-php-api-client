@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderPatch\PatchId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Base\Responses\MessageResponse;
+use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderPatchCancelRequest;
 
 class CancelPost extends AbstractRequest
@@ -23,16 +23,16 @@ class CancelPost extends AbstractRequest
     /**
      * Отмена запроса на изменение заказа его создателем.
      *
-     * @return MessageResponse
+     * @return EmptyDataResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(OrderPatchCancelRequest $body): MessageResponse
+    public function do(OrderPatchCancelRequest $body): EmptyDataResponse
     {
         return $this->client->doRequest(
             'POST',
             $this->url,
-            MessageResponse::class,
+            EmptyDataResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

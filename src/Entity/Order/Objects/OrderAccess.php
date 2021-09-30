@@ -32,6 +32,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $validate
  * @property bool $publish
  * @property bool $view
+ * @property bool $createArchive
  * @property bool $createFavorite
  * @property bool $deleteFavorite
  * @property bool $createPin
@@ -41,6 +42,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $createBid
  * @property bool $createCarrierRefuse
  * @property bool $createConsignorRefuse
+ * @property bool $createRefuse
  * @property bool $createRefuseAppeal
  * @property bool $createRefuseCancel
  * @property bool $proposal
@@ -51,6 +53,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $viewProxy
  * @property bool $createDocument
  * @property bool $viewDocument
+ * @property bool $updateCarrierDocumentTrackingNumber
+ * @property bool $viewCarrierDocumentTrackingNumber
  * @property bool $viewRate
  * @property bool $updateRate
  * @property bool $cancel
@@ -106,6 +110,10 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $updateProxyConsignorCarrierAdditionalInfo
  * @property bool $viewProxyConsignorCarrierAdditionalInfo
  * @property bool $viewDownloadExpeditorAssignment
+ * @property bool $viewExpeditorPayment
+ * @property bool $updateExpeditorPayment
+ * @property bool $viewSimpleDocument
+ * @property bool $createTruckDriverPatch
  */
 final class OrderAccess extends AbstractEntity
 {
@@ -128,6 +136,7 @@ final class OrderAccess extends AbstractEntity
         'validate' => ['bool'],
         'publish' => ['bool'],
         'view' => ['bool'],
+        'createArchive' => ['bool'],
         'createFavorite' => ['bool'],
         'deleteFavorite' => ['bool'],
         'createPin' => ['bool'],
@@ -137,6 +146,7 @@ final class OrderAccess extends AbstractEntity
         'createBid' => ['bool'],
         'createCarrierRefuse' => ['bool'],
         'createConsignorRefuse' => ['bool'],
+        'createRefuse' => ['bool'],
         'createRefuseAppeal' => ['bool'],
         'createRefuseCancel' => ['bool'],
         'proposal' => ['bool'],
@@ -147,6 +157,8 @@ final class OrderAccess extends AbstractEntity
         'viewProxy' => ['bool'],
         'createDocument' => ['bool'],
         'viewDocument' => ['bool'],
+        'updateCarrierDocumentTrackingNumber' => ['bool'],
+        'viewCarrierDocumentTrackingNumber' => ['bool'],
         'viewRate' => ['bool'],
         'updateRate' => ['bool'],
         'cancel' => ['bool'],
@@ -202,6 +214,10 @@ final class OrderAccess extends AbstractEntity
         'updateProxyConsignorCarrierAdditionalInfo' => ['bool'],
         'viewProxyConsignorCarrierAdditionalInfo' => ['bool'],
         'viewDownloadExpeditorAssignment' => ['bool'],
+        'viewExpeditorPayment' => ['bool'],
+        'updateExpeditorPayment' => ['bool'],
+        'viewSimpleDocument' => ['bool'],
+        'createTruckDriverPatch' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -223,6 +239,7 @@ final class OrderAccess extends AbstractEntity
         'validate' => false,
         'publish' => false,
         'view' => false,
+        'createArchive' => false,
         'createFavorite' => false,
         'deleteFavorite' => false,
         'createPin' => false,
@@ -232,6 +249,7 @@ final class OrderAccess extends AbstractEntity
         'createBid' => false,
         'createCarrierRefuse' => false,
         'createConsignorRefuse' => false,
+        'createRefuse' => false,
         'createRefuseAppeal' => false,
         'createRefuseCancel' => false,
         'proposal' => false,
@@ -242,6 +260,8 @@ final class OrderAccess extends AbstractEntity
         'viewProxy' => false,
         'createDocument' => false,
         'viewDocument' => false,
+        'updateCarrierDocumentTrackingNumber' => false,
+        'viewCarrierDocumentTrackingNumber' => false,
         'viewRate' => false,
         'updateRate' => false,
         'cancel' => false,
@@ -297,5 +317,9 @@ final class OrderAccess extends AbstractEntity
         'updateProxyConsignorCarrierAdditionalInfo' => false,
         'viewProxyConsignorCarrierAdditionalInfo' => false,
         'viewDownloadExpeditorAssignment' => false,
+        'viewExpeditorPayment' => false,
+        'updateExpeditorPayment' => false,
+        'viewSimpleDocument' => false,
+        'createTruckDriverPatch' => false,
     ];
 }

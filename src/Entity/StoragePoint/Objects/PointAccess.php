@@ -14,11 +14,12 @@ use Cargomart\ApiClient\AbstractEntity;
  * Модель разрешений склада
  * source: storage-point/objects/point-access.json
  *
+ * @property bool $view
  * @property bool $update
  * @property bool $delete
  */
 final class PointAccess extends AbstractEntity
 {
-    protected static $types = ['update' => ['bool'], 'delete' => ['bool']];
-    protected static $nullables = ['update' => false, 'delete' => false];
+    protected static $types = ['view' => ['bool'], 'update' => ['bool'], 'delete' => ['bool']];
+    protected static $nullables = ['view' => false, 'update' => false, 'delete' => false];
 }

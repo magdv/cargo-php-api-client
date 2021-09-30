@@ -8,34 +8,17 @@ declare(strict_types=1);
 
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
-use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Base\Responses\MessageResponse;
-use Cargomart\ApiClient\Entity\Order\Requests\TruckDriver;
+use Cargomart\ApiClient\AbstractBuilder;
 
-class TruckDriverPatch extends AbstractRequest
+/**
+ * url: /api/v2/order/{orderId}/truck-driver-patch
+ */
+final class TruckDriverPatch extends AbstractBuilder
 {
-    /** @var string[][] */
-    public $query = [];
+    protected const URL = '/api/v2/order/{orderId}/truck-driver-patch';
 
-    /** @var string[] */
-    public $headers = [];
-
-    /**
-     * Прикрепить к заказу водителя и машину.
-     *
-     * @return MessageResponse
-     *
-     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
-     */
-    public function do(TruckDriver $body): MessageResponse
+    public function post(): TruckDriverPatchPost
     {
-        return $this->client->doRequest(
-            'PATCH',
-            $this->url,
-            MessageResponse::class,
-            http_build_query($this->query),
-            $body,
-            $this->headers
-        );
+        return new TruckDriverPatchPost($this->client, $this->getUrl());
     }
 }

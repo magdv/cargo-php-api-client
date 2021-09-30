@@ -15,24 +15,24 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: order/objects/order-quality-score-by-carrier.json
  *
  * @property bool $isNotDelayed
- * @property string[] $delayPoint
+ * @property \stdClass $delayPoint
  * @property bool $isOtherConditionsOk
- * @property string $comment
+ * @property \stdClass $comment
  * @property int $creatorId
  */
 final class OrderQualityScoreByCarrier extends AbstractEntity
 {
     protected static $types = [
         'isNotDelayed' => ['bool'],
-        'delayPoint' => ['array', 'string'],
+        'delayPoint' => ['\stdClass'],
         'isOtherConditionsOk' => ['bool'],
-        'comment' => ['string'],
+        'comment' => ['\stdClass'],
         'creatorId' => ['int'],
     ];
 
     protected static $nullables = [
         'isNotDelayed' => false,
-        'delayPoint' => false,
+        'delayPoint' => true,
         'isOtherConditionsOk' => false,
         'comment' => true,
         'creatorId' => false,

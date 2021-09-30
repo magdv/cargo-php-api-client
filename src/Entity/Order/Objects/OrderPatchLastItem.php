@@ -17,9 +17,36 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $id
  * @property int $statusId
  * @property string $reason
+ * @property string $commentForConsignor
+ * @property string $commentForCarrier
+ * @property string $createDate
+ * @property int $creatorId
+ * @property string $updateDate
+ * @property OrderPatchAccess $access
  */
 final class OrderPatchLastItem extends AbstractEntity
 {
-    protected static $types = ['id' => ['string'], 'statusId' => ['int'], 'reason' => ['string']];
-    protected static $nullables = ['id' => false, 'statusId' => false, 'reason' => false];
+    protected static $types = [
+        'id' => ['string'],
+        'statusId' => ['int'],
+        'reason' => ['string'],
+        'commentForConsignor' => ['string'],
+        'commentForCarrier' => ['string'],
+        'createDate' => ['string'],
+        'creatorId' => ['int'],
+        'updateDate' => ['string'],
+        'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchAccess'],
+    ];
+
+    protected static $nullables = [
+        'id' => false,
+        'statusId' => false,
+        'reason' => false,
+        'commentForConsignor' => false,
+        'commentForCarrier' => false,
+        'createDate' => false,
+        'creatorId' => false,
+        'updateDate' => false,
+        'access' => false,
+    ];
 }

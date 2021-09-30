@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Chat;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Base\Responses\MessageResponse;
+use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 use Cargomart\ApiClient\Entity\Chat\Requests\ChatNewPostRequest;
 
 class ChatIdPost extends AbstractRequest
@@ -23,16 +23,16 @@ class ChatIdPost extends AbstractRequest
     /**
      * Отправка нового сообщения.
      *
-     * @return MessageResponse
+     * @return EmptyDataResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(ChatNewPostRequest $body): MessageResponse
+    public function do(ChatNewPostRequest $body): EmptyDataResponse
     {
         return $this->client->doRequest(
             'POST',
             $this->url,
-            MessageResponse::class,
+            EmptyDataResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

@@ -191,6 +191,25 @@ class ExpeditorProposalGet extends AbstractRequest
     }
 
     /**
+     * Дата погрузки ДО
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterLoadingTo(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[loadingTo]']);
+        } else {
+            $c->query['filter[loadingTo]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
      * Хэш код компании перевозчика
      *
      * @var null|string $value
@@ -223,6 +242,25 @@ class ExpeditorProposalGet extends AbstractRequest
             unset($c->query['filter[consignor]']);
         } else {
             $c->query['filter[consignor]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Статус архивации заказа
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterArchiveStatus(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[archiveStatus]']);
+        } else {
+            $c->query['filter[archiveStatus]'] = $value;
         }
 
         return $c;

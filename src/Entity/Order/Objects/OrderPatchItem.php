@@ -15,38 +15,47 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: order/objects/order-patch-item.json
  *
  * @property string $id
- * @property OrderPatchDiffItem $oldValues
- * @property OrderPatchDiffItem $newValues
  * @property int $statusId
+ * @property string $reason
  * @property string $commentForConsignor
  * @property string $commentForCarrier
- * @property string $rejectionReason
- * @property string $cancellationReason
+ * @property string $createDate
+ * @property int $creatorId
+ * @property string $updateDate
+ * @property string $orderId
+ * @property \stdClass $oldValues
+ * @property \stdClass $newValues
  * @property OrderPatchAccess $access
  */
 final class OrderPatchItem extends AbstractEntity
 {
     protected static $types = [
         'id' => ['string'],
-        'oldValues' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchDiffItem'],
-        'newValues' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchDiffItem'],
         'statusId' => ['int'],
+        'reason' => ['string'],
         'commentForConsignor' => ['string'],
         'commentForCarrier' => ['string'],
-        'rejectionReason' => ['string'],
-        'cancellationReason' => ['string'],
+        'createDate' => ['string'],
+        'creatorId' => ['int'],
+        'updateDate' => ['string'],
+        'orderId' => ['string'],
+        'oldValues' => ['\stdClass'],
+        'newValues' => ['\stdClass'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchAccess'],
     ];
 
     protected static $nullables = [
         'id' => false,
-        'oldValues' => false,
-        'newValues' => false,
         'statusId' => false,
+        'reason' => false,
         'commentForConsignor' => false,
         'commentForCarrier' => false,
-        'rejectionReason' => false,
-        'cancellationReason' => false,
+        'createDate' => false,
+        'creatorId' => false,
+        'updateDate' => false,
+        'orderId' => false,
+        'oldValues' => true,
+        'newValues' => true,
         'access' => false,
     ];
 }

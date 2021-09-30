@@ -12,7 +12,7 @@ use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Partner\Object\PartnerMessage;
 
 /**
- * source: partner/response/partner-message.json#/properties/data
+ * source: partner/response/partner-message-response.json#/properties/data
  *
  * @property PartnerMessage $message
  */

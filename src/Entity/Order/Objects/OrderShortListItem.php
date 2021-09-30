@@ -23,6 +23,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $consignorId
  * @property string $carrierId
  * @property string $expeditorId
+ * @property string $truckSearchTimeEnd
  * @property string $startDate
  * @property string $endDate
  * @property string $createDate
@@ -42,6 +43,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $accessTypeId
  * @property float $cargoWeight
  * @property int $cargoCapacity
+ * @property float $loadWeight
+ * @property int $loadCapacity
  * @property string[] $tag
  * @property bool $isArchived
  * @property bool $isRound
@@ -74,6 +77,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $companyBranchId
  * @property int[] $monitoringIds
  * @property bool $isProxyDateEnd
+ * @property OrderPatchLastItem $lastPatch
+ * @property OrderPatchLastItem $truckDriverPatch
  * @property string $qualityScoreStatusByConsignor
  * @property string $qualityScoreStatusByCarrier
  * @property bool $isTruckDriverChanged
@@ -86,8 +91,11 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property OrderCorrectionStatus $correctionStatus
  * @property OrderTruckDriverCorrectionStatus $truckDriverCorrectionStatus
  * @property string $paidInvoiceDate
+ * @property string $paidExpeditorPaymentDate
  * @property OrderAccess $access
  * @property bool $isQualityScoreManager
+ * @property OriginalDocument $originalDocument
+ * @property string $carrierPackageStatus
  */
 final class OrderShortListItem extends AbstractEntity
 {
@@ -101,6 +109,7 @@ final class OrderShortListItem extends AbstractEntity
         'consignorId' => ['string'],
         'carrierId' => ['string'],
         'expeditorId' => ['string'],
+        'truckSearchTimeEnd' => ['string'],
         'startDate' => ['string'],
         'endDate' => ['string'],
         'createDate' => ['string'],
@@ -120,6 +129,8 @@ final class OrderShortListItem extends AbstractEntity
         'accessTypeId' => ['string'],
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],
+        'loadWeight' => ['float'],
+        'loadCapacity' => ['int'],
         'tag' => ['array', 'string'],
         'isArchived' => ['bool'],
         'isRound' => ['bool'],
@@ -152,6 +163,8 @@ final class OrderShortListItem extends AbstractEntity
         'companyBranchId' => ['int'],
         'monitoringIds' => ['array', 'int'],
         'isProxyDateEnd' => ['bool'],
+        'lastPatch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
+        'truckDriverPatch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
         'qualityScoreStatusByConsignor' => ['string'],
         'qualityScoreStatusByCarrier' => ['string'],
         'isTruckDriverChanged' => ['bool'],
@@ -164,8 +177,11 @@ final class OrderShortListItem extends AbstractEntity
         'correctionStatus' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderCorrectionStatus'],
         'truckDriverCorrectionStatus' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderTruckDriverCorrectionStatus'],
         'paidInvoiceDate' => ['string'],
+        'paidExpeditorPaymentDate' => ['string'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderAccess'],
         'isQualityScoreManager' => ['bool'],
+        'originalDocument' => ['Cargomart\ApiClient\Entity\Order\Objects\OriginalDocument'],
+        'carrierPackageStatus' => ['string'],
     ];
 
     protected static $nullables = [
@@ -178,6 +194,7 @@ final class OrderShortListItem extends AbstractEntity
         'consignorId' => false,
         'carrierId' => false,
         'expeditorId' => false,
+        'truckSearchTimeEnd' => false,
         'startDate' => false,
         'endDate' => false,
         'createDate' => false,
@@ -197,6 +214,8 @@ final class OrderShortListItem extends AbstractEntity
         'accessTypeId' => false,
         'cargoWeight' => false,
         'cargoCapacity' => false,
+        'loadWeight' => false,
+        'loadCapacity' => false,
         'tag' => false,
         'isArchived' => false,
         'isRound' => false,
@@ -229,6 +248,8 @@ final class OrderShortListItem extends AbstractEntity
         'companyBranchId' => false,
         'monitoringIds' => false,
         'isProxyDateEnd' => false,
+        'lastPatch' => false,
+        'truckDriverPatch' => false,
         'qualityScoreStatusByConsignor' => false,
         'qualityScoreStatusByCarrier' => false,
         'isTruckDriverChanged' => false,
@@ -241,7 +262,10 @@ final class OrderShortListItem extends AbstractEntity
         'correctionStatus' => false,
         'truckDriverCorrectionStatus' => false,
         'paidInvoiceDate' => false,
+        'paidExpeditorPaymentDate' => false,
         'access' => false,
         'isQualityScoreManager' => false,
+        'originalDocument' => false,
+        'carrierPackageStatus' => false,
     ];
 }

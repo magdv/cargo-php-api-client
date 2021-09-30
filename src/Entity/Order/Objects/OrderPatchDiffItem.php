@@ -17,9 +17,11 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $consignorPrice
  * @property string $carrierPrice
  * @property int $truckTypeId
- * @property int $companyBranchId
+ * @property \stdClass $companyBranchId
  * @property float $cargoWeight
  * @property int $cargoCapacity
+ * @property float $loadWeight
+ * @property int $loadCapacity
  * @property string $cargoType
  * @property TemperatureRange $temperature
  * @property string[] $device
@@ -35,9 +37,11 @@ final class OrderPatchDiffItem extends AbstractEntity
         'consignorPrice' => ['string'],
         'carrierPrice' => ['string'],
         'truckTypeId' => ['int'],
-        'companyBranchId' => ['int'],
+        'companyBranchId' => ['\stdClass'],
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],
+        'loadWeight' => ['float'],
+        'loadCapacity' => ['int'],
         'cargoType' => ['string'],
         'temperature' => ['Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange'],
         'device' => ['array', 'string'],
@@ -52,9 +56,11 @@ final class OrderPatchDiffItem extends AbstractEntity
         'consignorPrice' => false,
         'carrierPrice' => false,
         'truckTypeId' => false,
-        'companyBranchId' => false,
+        'companyBranchId' => true,
         'cargoWeight' => false,
         'cargoCapacity' => false,
+        'loadWeight' => false,
+        'loadCapacity' => false,
         'cargoType' => false,
         'temperature' => false,
         'device' => false,

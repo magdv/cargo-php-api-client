@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Metrics;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Base\Responses\MessageResponse;
+use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 use Cargomart\ApiClient\Entity\Metric\Requests\LocalityMetricRequest;
 
 class LocalityPost extends AbstractRequest
@@ -23,16 +23,16 @@ class LocalityPost extends AbstractRequest
     /**
      * Отправка нового события метрики для поиска по пунктам отправления/назначения
      *
-     * @return MessageResponse
+     * @return EmptyDataResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(LocalityMetricRequest $body): MessageResponse
+    public function do(LocalityMetricRequest $body): EmptyDataResponse
     {
         return $this->client->doRequest(
             'POST',
             $this->url,
-            MessageResponse::class,
+            EmptyDataResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

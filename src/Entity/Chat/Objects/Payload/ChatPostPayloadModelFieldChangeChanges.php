@@ -16,8 +16,8 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property string $field
  * @property string $name
- * @property string $old
- * @property string $new
+ * @property \stdClass $old
+ * @property \stdClass $new
  * @property string $operation
  */
 final class ChatPostPayloadModelFieldChangeChanges extends AbstractEntity
@@ -25,8 +25,8 @@ final class ChatPostPayloadModelFieldChangeChanges extends AbstractEntity
     protected static $types = [
         'field' => ['string'],
         'name' => ['string'],
-        'old' => ['string'],
-        'new' => ['string'],
+        'old' => ['\stdClass'],
+        'new' => ['\stdClass'],
         'operation' => ['string'],
     ];
 

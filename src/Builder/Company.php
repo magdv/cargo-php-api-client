@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder;
 
 use Cargomart\ApiClient\AbstractBuilder;
+use Cargomart\ApiClient\Builder\Company\Branch;
 use Cargomart\ApiClient\Builder\Company\CompanySelf;
 use Cargomart\ApiClient\Builder\Company\Hash;
 use Cargomart\ApiClient\Builder\Company\Locality;
@@ -35,6 +36,11 @@ final class Company extends AbstractBuilder
     public function locality(): Locality
     {
         return new Locality($this->params, $this->client);
+    }
+
+    public function branch(): Branch
+    {
+        return new Branch($this->params, $this->client);
     }
 
     public function get(): CompanyGet

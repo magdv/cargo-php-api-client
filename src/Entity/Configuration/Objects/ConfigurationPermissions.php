@@ -50,6 +50,12 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $viewProfileDocumentList
  * @property bool $createProfileDocument
  * @property bool $viewOrders
+ * @property bool $viewConsignorShippingWorkingList
+ * @property bool $viewConsignorShippingArchivedList
+ * @property bool $viewConsignorShipping
+ * @property bool $viewConsignorOrders
+ * @property bool $viewCarrierOrders
+ * @property bool $viewGeneralPartnerOrders
  * @property bool $viewOrderCarrierListBidding
  * @property bool $viewOrderCarrierListMarked
  * @property bool $viewOrderCarrierListOffer
@@ -78,6 +84,11 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $createOrderDraftProject
  * @property bool $createOrderDraftFtlGp
  * @property bool $createOrderDraftOffer
+ * @property bool $viewExpeditorProposals
+ * @property bool $viewExpeditorProposalProxySignList
+ * @property bool $viewExpeditorProposalWorkingList
+ * @property bool $viewExpeditorProposalArchiveList
+ * @property bool $viewExpeditorProposalCorrectionList
  * @property bool $createOrderExpeditorProposal
  * @property bool $importOrders
  * @property bool $exportOrders
@@ -99,6 +110,10 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $viewLandingExpress
  * @property bool $viewLandingForCarrier
  * @property bool $viewLandingForConsignor
+ * @property bool $createPriceLocal
+ * @property bool $viewPriceLocalList
+ * @property bool $viewStoragePointEmails
+ * @property bool $updateStoragePointEmails
  */
 final class ConfigurationPermissions extends AbstractEntity
 {
@@ -139,6 +154,12 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewProfileDocumentList' => ['bool'],
         'createProfileDocument' => ['bool'],
         'viewOrders' => ['bool'],
+        'viewConsignorShippingWorkingList' => ['bool'],
+        'viewConsignorShippingArchivedList' => ['bool'],
+        'viewConsignorShipping' => ['bool'],
+        'viewConsignorOrders' => ['bool'],
+        'viewCarrierOrders' => ['bool'],
+        'viewGeneralPartnerOrders' => ['bool'],
         'viewOrderCarrierListBidding' => ['bool'],
         'viewOrderCarrierListMarked' => ['bool'],
         'viewOrderCarrierListOffer' => ['bool'],
@@ -167,6 +188,11 @@ final class ConfigurationPermissions extends AbstractEntity
         'createOrderDraftProject' => ['bool'],
         'createOrderDraftFtlGp' => ['bool'],
         'createOrderDraftOffer' => ['bool'],
+        'viewExpeditorProposals' => ['bool'],
+        'viewExpeditorProposalProxySignList' => ['bool'],
+        'viewExpeditorProposalWorkingList' => ['bool'],
+        'viewExpeditorProposalArchiveList' => ['bool'],
+        'viewExpeditorProposalCorrectionList' => ['bool'],
         'createOrderExpeditorProposal' => ['bool'],
         'importOrders' => ['bool'],
         'exportOrders' => ['bool'],
@@ -188,6 +214,10 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewLandingExpress' => ['bool'],
         'viewLandingForCarrier' => ['bool'],
         'viewLandingForConsignor' => ['bool'],
+        'createPriceLocal' => ['bool'],
+        'viewPriceLocalList' => ['bool'],
+        'viewStoragePointEmails' => ['bool'],
+        'updateStoragePointEmails' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -227,6 +257,12 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewProfileDocumentList' => false,
         'createProfileDocument' => false,
         'viewOrders' => false,
+        'viewConsignorShippingWorkingList' => false,
+        'viewConsignorShippingArchivedList' => false,
+        'viewConsignorShipping' => false,
+        'viewConsignorOrders' => false,
+        'viewCarrierOrders' => false,
+        'viewGeneralPartnerOrders' => false,
         'viewOrderCarrierListBidding' => false,
         'viewOrderCarrierListMarked' => false,
         'viewOrderCarrierListOffer' => false,
@@ -255,6 +291,11 @@ final class ConfigurationPermissions extends AbstractEntity
         'createOrderDraftProject' => false,
         'createOrderDraftFtlGp' => false,
         'createOrderDraftOffer' => false,
+        'viewExpeditorProposals' => false,
+        'viewExpeditorProposalProxySignList' => false,
+        'viewExpeditorProposalWorkingList' => false,
+        'viewExpeditorProposalArchiveList' => false,
+        'viewExpeditorProposalCorrectionList' => false,
         'createOrderExpeditorProposal' => false,
         'importOrders' => false,
         'exportOrders' => false,
@@ -276,5 +317,9 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewLandingExpress' => false,
         'viewLandingForCarrier' => false,
         'viewLandingForConsignor' => false,
+        'createPriceLocal' => false,
+        'viewPriceLocalList' => false,
+        'viewStoragePointEmails' => false,
+        'updateStoragePointEmails' => false,
     ];
 }

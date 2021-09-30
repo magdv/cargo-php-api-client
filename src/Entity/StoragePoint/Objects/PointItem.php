@@ -28,6 +28,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $legalName
  * @property string $externalId
  * @property int $status
+ * @property PointEmailContact[] $emailList
  * @property PointAccess $access
  */
 final class PointItem extends AbstractEntity
@@ -47,6 +48,7 @@ final class PointItem extends AbstractEntity
         'legalName' => ['string'],
         'externalId' => ['string'],
         'status' => ['int'],
+        'emailList' => ['array', 'Cargomart\ApiClient\Entity\StoragePoint\Objects\PointEmailContact'],
         'access' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\PointAccess'],
     ];
 
@@ -65,6 +67,7 @@ final class PointItem extends AbstractEntity
         'legalName' => false,
         'externalId' => false,
         'status' => false,
+        'emailList' => false,
         'access' => false,
     ];
 }

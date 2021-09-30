@@ -19,6 +19,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $currencyCode
  * @property string $currentPrice
  * @property float $vatRate
+ * @property string $vat
+ * @property string $vatLessPrice
  * @property bool $isConsignorVat
  * @property int $distance
  * @property SmallCarrierRoutePoint[] $point
@@ -34,6 +36,8 @@ final class SmallCarrierOrder extends AbstractEntity
         'currencyCode' => ['string'],
         'currentPrice' => ['string'],
         'vatRate' => ['float'],
+        'vat' => ['string'],
+        'vatLessPrice' => ['string'],
         'isConsignorVat' => ['bool'],
         'distance' => ['int'],
         'point' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\SmallCarrierRoutePoint'],
@@ -48,6 +52,8 @@ final class SmallCarrierOrder extends AbstractEntity
         'currencyCode' => false,
         'currentPrice' => false,
         'vatRate' => false,
+        'vat' => false,
+        'vatLessPrice' => false,
         'isConsignorVat' => false,
         'distance' => false,
         'point' => false,

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderSearch\Truck;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Base\Responses\MessageResponse;
+use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 
 class TruckIdDelete extends AbstractRequest
 {
@@ -22,16 +22,16 @@ class TruckIdDelete extends AbstractRequest
     /**
      * Удаление критерия поиска
      *
-     * @return MessageResponse
+     * @return EmptyDataResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): MessageResponse
+    public function do(): EmptyDataResponse
     {
         return $this->client->doRequest(
             'DELETE',
             $this->url,
-            MessageResponse::class,
+            EmptyDataResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

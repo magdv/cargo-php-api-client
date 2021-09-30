@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Base\Responses\MessageResponse;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderDocumentIdRequest;
+use Cargomart\ApiClient\Entity\Order\Responses\OrderCardResponse;
 
 class ProxyPost extends AbstractRequest
 {
@@ -23,16 +23,16 @@ class ProxyPost extends AbstractRequest
     /**
      * Использовать /order/{orderId}/document
      *
-     * @return MessageResponse
+     * @return OrderCardResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(OrderDocumentIdRequest $body): MessageResponse
+    public function do(OrderDocumentIdRequest $body): OrderCardResponse
     {
         return $this->client->doRequest(
             'POST',
             $this->url,
-            MessageResponse::class,
+            OrderCardResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

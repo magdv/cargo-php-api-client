@@ -13,7 +13,7 @@ use Cargomart\ApiClient\Entity\Company\Objects\Requirement;
 
 /**
  * Компания отправителя
- * source: company/responses/requirement.json#/properties/data#/properties/company
+ * source: company/responses/company-requirement-response.json#/properties/data#/properties/company
  *
  * @property string $id
  * @property Requirement $requirement

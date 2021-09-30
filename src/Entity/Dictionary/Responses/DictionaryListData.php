@@ -28,6 +28,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderCondition;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderDocumentType;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderPriceTypeItem;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderRefuseReasonItem;
+use Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleType;
 
 /**
  * Словари
@@ -52,6 +53,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderRefuseReasonItem;
  * @property TenderCarriage[] $tenderCarriage
  * @property LegalStatus[] $legalStatus
  * @property OrderDocumentType[] $orderDocumentType
+ * @property SimpleDocumentTitleType[] $simpleDocumentTitleType
  */
 final class DictionaryListData extends AbstractEntity
 {
@@ -75,6 +77,7 @@ final class DictionaryListData extends AbstractEntity
         'tenderCarriage' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TenderCarriage'],
         'legalStatus' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\LegalStatus'],
         'orderDocumentType' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDocumentType'],
+        'simpleDocumentTitleType' => ['array', 'Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleType'],
     ];
 
     protected static $nullables = [
@@ -97,5 +100,6 @@ final class DictionaryListData extends AbstractEntity
         'tenderCarriage' => false,
         'legalStatus' => false,
         'orderDocumentType' => false,
+        'simpleDocumentTitleType' => false,
     ];
 }

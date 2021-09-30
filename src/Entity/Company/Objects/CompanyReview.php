@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Company\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 
 /**
  * Отзыв на компанию
@@ -19,8 +18,8 @@ use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
  * @property string $message
  * @property string $createDate
  * @property int $commentCount
- * @property CompanyShort $company
- * @property UserContactShort $contact
+ * @property \stdClass $company
+ * @property \stdClass $contact
  * @property CompanyReviewAccess $access
  */
 final class CompanyReview extends AbstractEntity
@@ -30,8 +29,8 @@ final class CompanyReview extends AbstractEntity
         'message' => ['string'],
         'createDate' => ['string'],
         'commentCount' => ['int'],
-        'company' => ['Cargomart\ApiClient\Entity\Company\Objects\CompanyShort'],
-        'contact' => ['Cargomart\ApiClient\Entity\User\Objects\UserContactShort'],
+        'company' => ['\stdClass'],
+        'contact' => ['\stdClass'],
         'access' => ['Cargomart\ApiClient\Entity\Company\Objects\CompanyReviewAccess'],
     ];
 
@@ -40,8 +39,8 @@ final class CompanyReview extends AbstractEntity
         'message' => false,
         'createDate' => false,
         'commentCount' => false,
-        'company' => false,
-        'contact' => false,
+        'company' => true,
+        'contact' => true,
         'access' => false,
     ];
 }

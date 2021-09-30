@@ -28,6 +28,7 @@ use Cargomart\ApiClient\Builder\Order\OrderId\Correction;
 use Cargomart\ApiClient\Builder\Order\OrderId\Document;
 use Cargomart\ApiClient\Builder\Order\OrderId\Edit;
 use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorAssignment;
+use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorPayment;
 use Cargomart\ApiClient\Builder\Order\OrderId\Finish;
 use Cargomart\ApiClient\Builder\Order\OrderId\FixPrice;
 use Cargomart\ApiClient\Builder\Order\OrderId\GeneralPartnerDocument;
@@ -56,6 +57,7 @@ use Cargomart\ApiClient\Builder\Order\OrderId\Publish;
 use Cargomart\ApiClient\Builder\Order\OrderId\QualityScore;
 use Cargomart\ApiClient\Builder\Order\OrderId\RefreshDriver;
 use Cargomart\ApiClient\Builder\Order\OrderId\RefreshTruck;
+use Cargomart\ApiClient\Builder\Order\OrderId\Refuse;
 use Cargomart\ApiClient\Builder\Order\OrderId\RefuseAppeal;
 use Cargomart\ApiClient\Builder\Order\OrderId\RefuseCancel;
 use Cargomart\ApiClient\Builder\Order\OrderId\Repeat;
@@ -65,6 +67,7 @@ use Cargomart\ApiClient\Builder\Order\OrderId\SimpleDocument;
 use Cargomart\ApiClient\Builder\Order\OrderId\Tag;
 use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriver;
 use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriverCorrection;
+use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriverPatch;
 use Cargomart\ApiClient\Builder\Order\OrderId\Validate;
 use Cargomart\ApiClient\Builder\Order\OrderId\Visitor;
 use Cargomart\ApiClient\Builder\Order\OrderId\WaybillAdditionalInfo;
@@ -82,6 +85,11 @@ final class OrderId extends AbstractBuilder
     public function offer(): Offer
     {
         return new Offer($this->params, $this->client);
+    }
+
+    public function expeditorPayment(): ExpeditorPayment
+    {
+        return new ExpeditorPayment($this->params, $this->client);
     }
 
     public function fixPrice(): FixPrice
@@ -167,6 +175,11 @@ final class OrderId extends AbstractBuilder
     public function consignorRefuse(): ConsignorRefuse
     {
         return new ConsignorRefuse($this->params, $this->client);
+    }
+
+    public function refuse(): Refuse
+    {
+        return new Refuse($this->params, $this->client);
     }
 
     public function refuseAppeal(): RefuseAppeal
@@ -317,6 +330,11 @@ final class OrderId extends AbstractBuilder
     public function sign(): Sign
     {
         return new Sign($this->params, $this->client);
+    }
+
+    public function truckDriverPatch(): TruckDriverPatch
+    {
+        return new TruckDriverPatch($this->params, $this->client);
     }
 
     public function correction(): Correction

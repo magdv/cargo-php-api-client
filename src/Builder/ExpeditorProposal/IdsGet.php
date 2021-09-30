@@ -191,6 +191,25 @@ class IdsGet extends AbstractRequest
     }
 
     /**
+     * Дата погрузки ДО
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterLoadingTo(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[loadingTo]']);
+        } else {
+            $c->query['filter[loadingTo]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
      * Хэш код компании перевозчика
      *
      * @var null|string $value
@@ -223,6 +242,120 @@ class IdsGet extends AbstractRequest
             unset($c->query['filter[consignor]']);
         } else {
             $c->query['filter[consignor]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Статус архивации заказа
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterArchiveStatus(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[archiveStatus]']);
+        } else {
+            $c->query['filter[archiveStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Идентификатор водителя
+     *
+     * @var null|int $value
+     *
+     * @return self
+     */
+    public function qFilterDriver(?int $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[driver]']);
+        } else {
+            $c->query['filter[driver]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * ФИО водителя
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterDriverName(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[driverName]']);
+        } else {
+            $c->query['filter[driverName]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Предел времени закрытия заказа
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterMaxEndTime(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[maxEndTime]']);
+        } else {
+            $c->query['filter[maxEndTime]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Трек номер
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterTrackingNumber(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[trackingNumber]']);
+        } else {
+            $c->query['filter[trackingNumber]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Статус оригинала документа
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterDocumentOriginalsStatus(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[documentOriginalsStatus]']);
+        } else {
+            $c->query['filter[documentOriginalsStatus]'] = $value;
         }
 
         return $c;

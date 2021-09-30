@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\StoragePoint;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Base\Responses\MessageResponse;
+use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 
 class IdDelete extends AbstractRequest
 {
@@ -22,16 +22,16 @@ class IdDelete extends AbstractRequest
     /**
      * Удаление пункта погрузки/выгрузки
      *
-     * @return MessageResponse
+     * @return EmptyDataResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): MessageResponse
+    public function do(): EmptyDataResponse
     {
         return $this->client->doRequest(
             'DELETE',
             $this->url,
-            MessageResponse::class,
+            EmptyDataResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

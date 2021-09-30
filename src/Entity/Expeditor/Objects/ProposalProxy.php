@@ -16,6 +16,8 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property string $proxyId
  * @property string $url
+ * @property string $title
+ * @property string $extension
  * @property string $proxyUrl
  * @property string $proxySignUrl
  * @property string $cancellationUrl
@@ -28,6 +30,8 @@ final class ProposalProxy extends AbstractEntity
     protected static $types = [
         'proxyId' => ['string'],
         'url' => ['string'],
+        'title' => ['string'],
+        'extension' => ['string'],
         'proxyUrl' => ['string'],
         'proxySignUrl' => ['string'],
         'cancellationUrl' => ['string'],
@@ -39,6 +43,8 @@ final class ProposalProxy extends AbstractEntity
     protected static $nullables = [
         'proxyId' => false,
         'url' => false,
+        'title' => false,
+        'extension' => false,
         'proxyUrl' => false,
         'proxySignUrl' => false,
         'cancellationUrl' => false,

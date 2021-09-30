@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Cargomart\ApiClient\Builder\Order\OrderHash;
+namespace Cargomart\ApiClient\Builder\Order\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderPatchRequest;

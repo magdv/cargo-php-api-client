@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Base\Responses\MessageResponse;
+use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderDocumentRejectPackageRequest;
 
 class RejectPost extends AbstractRequest
@@ -23,16 +23,16 @@ class RejectPost extends AbstractRequest
     /**
      * Отклонение пакета сканов документов перевозчика
      *
-     * @return MessageResponse
+     * @return EmptyDataResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(OrderDocumentRejectPackageRequest $body): MessageResponse
+    public function do(OrderDocumentRejectPackageRequest $body): EmptyDataResponse
     {
         return $this->client->doRequest(
             'POST',
             $this->url,
-            MessageResponse::class,
+            EmptyDataResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

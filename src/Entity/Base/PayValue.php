@@ -15,7 +15,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: base/pay-value.json
  *
  * @property string $value
- * @property string $vatRate
+ * @property \stdClass $vatRate
  * @property string $vat
  * @property string $currency
  * @property string $type
@@ -24,7 +24,7 @@ final class PayValue extends AbstractEntity
 {
     protected static $types = [
         'value' => ['string'],
-        'vatRate' => ['string'],
+        'vatRate' => ['\stdClass'],
         'vat' => ['string'],
         'currency' => ['string'],
         'type' => ['string'],

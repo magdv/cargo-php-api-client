@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Worker\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Base\Responses\MessageResponse;
+use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 use Cargomart\ApiClient\Entity\Worker\Requests\ContactComplainRequest;
 
 class ContactComplainPost extends AbstractRequest
@@ -23,16 +23,16 @@ class ContactComplainPost extends AbstractRequest
     /**
      * Оставить жалобу на контакты сотрудника.
      *
-     * @return MessageResponse
+     * @return EmptyDataResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(ContactComplainRequest $body): MessageResponse
+    public function do(ContactComplainRequest $body): EmptyDataResponse
     {
         return $this->client->doRequest(
             'POST',
             $this->url,
-            MessageResponse::class,
+            EmptyDataResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

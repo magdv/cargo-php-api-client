@@ -15,9 +15,32 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: expeditor/objects/proposal-access.json
  *
  * @property bool $view
+ * @property bool $viewCarrierDocumentTrackingNumber
+ * @property bool $viewChat
+ * @property bool $createPatch
+ * @property bool $createCarrierRefuse
+ * @property bool $createRefuse
+ * @property bool $viewSimpleDocument
  */
 final class ProposalAccess extends AbstractEntity
 {
-    protected static $types = ['view' => ['bool']];
-    protected static $nullables = ['view' => false];
+    protected static $types = [
+        'view' => ['bool'],
+        'viewCarrierDocumentTrackingNumber' => ['bool'],
+        'viewChat' => ['bool'],
+        'createPatch' => ['bool'],
+        'createCarrierRefuse' => ['bool'],
+        'createRefuse' => ['bool'],
+        'viewSimpleDocument' => ['bool'],
+    ];
+
+    protected static $nullables = [
+        'view' => false,
+        'viewCarrierDocumentTrackingNumber' => false,
+        'viewChat' => false,
+        'createPatch' => false,
+        'createCarrierRefuse' => false,
+        'createRefuse' => false,
+        'viewSimpleDocument' => false,
+    ];
 }

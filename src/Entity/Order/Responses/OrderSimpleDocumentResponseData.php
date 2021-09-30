@@ -9,17 +9,15 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Order\Objects\OrderSimpleDocument;
 
 /**
  * source: order/responses/order-simple-document-response.json#/properties/data
  *
- * @property OrderSimpleDocumentResponseDataSimpleDocument $simpleDocument
+ * @property OrderSimpleDocument $order
  */
 final class OrderSimpleDocumentResponseData extends AbstractEntity
 {
-    protected static $types = [
-        'simpleDocument' => ['Cargomart\ApiClient\Entity\Order\Responses\OrderSimpleDocumentResponseDataSimpleDocument'],
-    ];
-
-    protected static $nullables = ['simpleDocument' => false];
+    protected static $types = ['order' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderSimpleDocument']];
+    protected static $nullables = ['order' => false];
 }

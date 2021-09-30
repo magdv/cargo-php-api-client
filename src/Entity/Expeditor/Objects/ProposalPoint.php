@@ -10,14 +10,12 @@ namespace Cargomart\ApiClient\Entity\Expeditor\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItem;
-use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 
 /**
  * Данные маршрутного пункта
  * source: expeditor/objects/proposal-point.json
  *
  * @property int $id
- * @property UserContactShort[] $contact
  * @property StoragePointItem $storage
  * @property CargoOwner $cargoOwner
  * @property string $type
@@ -30,7 +28,6 @@ final class ProposalPoint extends AbstractEntity
 {
     protected static $types = [
         'id' => ['int'],
-        'contact' => ['array', 'Cargomart\ApiClient\Entity\User\Objects\UserContactShort'],
         'storage' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItem'],
         'cargoOwner' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\CargoOwner'],
         'type' => ['string'],
@@ -42,7 +39,6 @@ final class ProposalPoint extends AbstractEntity
 
     protected static $nullables = [
         'id' => false,
-        'contact' => false,
         'storage' => false,
         'cargoOwner' => false,
         'type' => false,

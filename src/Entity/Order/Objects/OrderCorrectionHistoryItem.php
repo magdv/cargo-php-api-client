@@ -15,7 +15,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: order/objects/order-correction-history-item.json
  *
  * @property int $truckTypeId
- * @property int $companyBranchId
+ * @property \stdClass $companyBranchId
  * @property float $cargoWeight
  * @property int $cargoCapacity
  * @property string $cargoType
@@ -33,7 +33,7 @@ final class OrderCorrectionHistoryItem extends AbstractEntity
 {
     protected static $types = [
         'truckTypeId' => ['int'],
-        'companyBranchId' => ['int'],
+        'companyBranchId' => ['\stdClass'],
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],
         'cargoType' => ['string'],

@@ -22,6 +22,11 @@ final class ApiV2 extends AbstractBuilder
         return new Tender($this->params, $this->client);
     }
 
+    public function truck(): Truck
+    {
+        return new Truck($this->params, $this->client);
+    }
+
     public function configuration(): Configuration
     {
         return new Configuration($this->params, $this->client);
@@ -45,6 +50,16 @@ final class ApiV2 extends AbstractBuilder
     public function device(): Device
     {
         return new Device($this->params, $this->client);
+    }
+
+    public function file(): File
+    {
+        return new File($this->params, $this->client);
+    }
+
+    public function upload(): Upload
+    {
+        return new Upload($this->params, $this->client);
     }
 
     public function setting(): Setting
@@ -102,6 +117,11 @@ final class ApiV2 extends AbstractBuilder
         return new ExpeditorProposal($this->params, $this->client);
     }
 
+    public function expeditor(): Expeditor
+    {
+        return new Expeditor($this->params, $this->client);
+    }
+
     public function rate(): Rate
     {
         return new Rate($this->params, $this->client);
@@ -125,6 +145,21 @@ final class ApiV2 extends AbstractBuilder
     public function trailer(): Trailer
     {
         return new Trailer($this->params, $this->client);
+    }
+
+    public function orderRefuseReason(): OrderRefuseReason
+    {
+        return new OrderRefuseReason($this->params, $this->client);
+    }
+
+    public function priceType(): PriceType
+    {
+        return new PriceType($this->params, $this->client);
+    }
+
+    public function dictionary(): Dictionary
+    {
+        return new Dictionary($this->params, $this->client);
     }
 
     public function locality(): Locality

@@ -14,9 +14,9 @@ use Cargomart\ApiClient\Builder\Order\Broker;
 use Cargomart\ApiClient\Builder\Order\CategoryStatistics;
 use Cargomart\ApiClient\Builder\Order\Count;
 use Cargomart\ApiClient\Builder\Order\Excel;
+use Cargomart\ApiClient\Builder\Order\Id;
 use Cargomart\ApiClient\Builder\Order\Ids;
 use Cargomart\ApiClient\Builder\Order\Import;
-use Cargomart\ApiClient\Builder\Order\OrderHash;
 use Cargomart\ApiClient\Builder\Order\OrderId;
 
 /**
@@ -63,11 +63,11 @@ final class Order extends AbstractBuilder
         return new CategoryStatistics($this->params, $this->client);
     }
 
-    public function orderHash(string $orderHash): OrderHash
+    public function id(string $id): Id
     {
         $params = $this->params;
-        $params['orderHash'] = $orderHash;
-        return new OrderHash($params, $this->client);
+        $params['id'] = $id;
+        return new Id($params, $this->client);
     }
 
     public function ac(): Ac

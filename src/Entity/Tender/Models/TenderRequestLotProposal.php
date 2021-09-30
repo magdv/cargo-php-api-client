@@ -16,7 +16,7 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property string $id
  * @property string $lotId
- * @property float $vatRate
+ * @property \stdClass $vatRate
  * @property string $price
  * @property float $volume
  * @property string $unit
@@ -31,7 +31,7 @@ final class TenderRequestLotProposal extends AbstractEntity
     protected static $types = [
         'id' => ['string'],
         'lotId' => ['string'],
-        'vatRate' => ['float'],
+        'vatRate' => ['\stdClass'],
         'price' => ['string'],
         'volume' => ['float'],
         'unit' => ['string'],

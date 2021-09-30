@@ -21,6 +21,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $orderId
  * @property string $localityName
  * @property string $title
+ * @property string $legalName
  * @property string $address
  * @property string $house
  * @property string $comment
@@ -56,6 +57,7 @@ final class RoutePointEdit extends AbstractEntity
         'orderId' => ['int'],
         'localityName' => ['string'],
         'title' => ['string'],
+        'legalName' => ['string'],
         'address' => ['string'],
         'house' => ['string'],
         'comment' => ['string'],
@@ -90,6 +92,7 @@ final class RoutePointEdit extends AbstractEntity
         'orderId' => false,
         'localityName' => false,
         'title' => false,
+        'legalName' => false,
         'address' => false,
         'house' => false,
         'comment' => false,

@@ -14,7 +14,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * Отклик на Лот
  * source: tender/models/tender-request-lot-offer.json
  *
- * @property float $vatRate
+ * @property \stdClass $vatRate
  * @property string $price
  * @property float $volume
  * @property string $unit
@@ -24,7 +24,7 @@ use Cargomart\ApiClient\AbstractEntity;
 final class TenderRequestLotOffer extends AbstractEntity
 {
     protected static $types = [
-        'vatRate' => ['float'],
+        'vatRate' => ['\stdClass'],
         'price' => ['string'],
         'volume' => ['float'],
         'unit' => ['string'],

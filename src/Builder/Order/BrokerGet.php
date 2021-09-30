@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Base\Responses\MessageResponse;
+use Cargomart\ApiClient\Entity\Order\Responses\BrokerResponse;
 
 class BrokerGet extends AbstractRequest
 {
@@ -22,16 +22,16 @@ class BrokerGet extends AbstractRequest
     /**
      * Получение списка брокеров.
      *
-     * @return MessageResponse
+     * @return BrokerResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): MessageResponse
+    public function do(): BrokerResponse
     {
         return $this->client->doRequest(
             'GET',
             $this->url,
-            MessageResponse::class,
+            BrokerResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

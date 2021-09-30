@@ -6,24 +6,25 @@
 
 declare(strict_types=1);
 
-namespace Cargomart\ApiClient\Entity\Order\Responses;
+namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\Order\Objects\SimpleDocumentAssignment;
+use Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentAssignment;
 
 /**
- * source: order/responses/order-simple-document-response.json#/properties/data#/properties/simpleDocument
+ * Документы и список титулов заказа
+ * source: order/objects/order-simple-document.json
  *
  * @property string $id
  * @property SimpleDocumentAssignment $expeditorAssignment
  * @property SimpleDocumentAssignment $carrierAssignment
  */
-final class OrderSimpleDocumentResponseDataSimpleDocument extends AbstractEntity
+final class OrderSimpleDocument extends AbstractEntity
 {
     protected static $types = [
         'id' => ['string'],
-        'expeditorAssignment' => ['Cargomart\ApiClient\Entity\Order\Objects\SimpleDocumentAssignment'],
-        'carrierAssignment' => ['Cargomart\ApiClient\Entity\Order\Objects\SimpleDocumentAssignment'],
+        'expeditorAssignment' => ['Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentAssignment'],
+        'carrierAssignment' => ['Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentAssignment'],
     ];
 
     protected static $nullables = ['id' => false, 'expeditorAssignment' => false, 'carrierAssignment' => false];

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ */
+
+declare(strict_types=1);
+
+namespace Cargomart\ApiClient\Entity\Order\Objects;
+
+use Cargomart\ApiClient\AbstractEntity;
+
+/**
+ * Объект оплаты по заказу
+ * source: order/objects/expeditor-payment-transactions.json
+ *
+ * @property string $date
+ * @property string $value
+ */
+final class ExpeditorPaymentTransactions extends AbstractEntity
+{
+    protected static $types = ['date' => ['string'], 'value' => ['string']];
+    protected static $nullables = ['date' => false, 'value' => false];
+}

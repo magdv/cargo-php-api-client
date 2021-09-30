@@ -14,28 +14,28 @@ use Cargomart\ApiClient\AbstractEntity;
  * Показатели работы компании
  * source: company/objects/company-metrics.json
  *
- * @property int $ordersWon
- * @property float $ordersConfirmed
- * @property float $ordersRejected
- * @property int $ordersConfirmedTime
- * @property int $ordersCreated
- * @property int $ordersQualityScore
- * @property float $ordersNotDelayed
- * @property float $ordersInSafe
- * @property float $ordersOtherConditionsOk
+ * @property \stdClass $ordersWon
+ * @property \stdClass $ordersConfirmed
+ * @property \stdClass $ordersRejected
+ * @property \stdClass $ordersConfirmedTime
+ * @property \stdClass $ordersCreated
+ * @property \stdClass $ordersQualityScore
+ * @property \stdClass $ordersNotDelayed
+ * @property \stdClass $ordersInSafe
+ * @property \stdClass $ordersOtherConditionsOk
  */
 final class CompanyMetrics extends AbstractEntity
 {
     protected static $types = [
-        'ordersWon' => ['int'],
-        'ordersConfirmed' => ['float'],
-        'ordersRejected' => ['float'],
-        'ordersConfirmedTime' => ['int'],
-        'ordersCreated' => ['int'],
-        'ordersQualityScore' => ['int'],
-        'ordersNotDelayed' => ['float'],
-        'ordersInSafe' => ['float'],
-        'ordersOtherConditionsOk' => ['float'],
+        'ordersWon' => ['\stdClass'],
+        'ordersConfirmed' => ['\stdClass'],
+        'ordersRejected' => ['\stdClass'],
+        'ordersConfirmedTime' => ['\stdClass'],
+        'ordersCreated' => ['\stdClass'],
+        'ordersQualityScore' => ['\stdClass'],
+        'ordersNotDelayed' => ['\stdClass'],
+        'ordersInSafe' => ['\stdClass'],
+        'ordersOtherConditionsOk' => ['\stdClass'],
     ];
 
     protected static $nullables = [

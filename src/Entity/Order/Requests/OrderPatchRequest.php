@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Requests;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange;
 
 /**
  * Данные для создания запроса на изменение заказа
@@ -21,7 +20,9 @@ use Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange;
  * @property string $cargoType
  * @property float $cargoWeight
  * @property int $cargoCapacity
- * @property TemperatureRange $temperature
+ * @property float $loadWeight
+ * @property int $loadCapacity
+ * @property \stdClass $temperature
  * @property string[] $device
  * @property string[] $conditions
  * @property \stdClass $comment
@@ -40,7 +41,9 @@ final class OrderPatchRequest extends AbstractEntity
         'cargoType' => ['string'],
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],
-        'temperature' => ['Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange'],
+        'loadWeight' => ['float'],
+        'loadCapacity' => ['int'],
+        'temperature' => ['\stdClass'],
         'device' => ['array', 'string'],
         'conditions' => ['array', 'string'],
         'comment' => ['\stdClass'],
@@ -58,7 +61,9 @@ final class OrderPatchRequest extends AbstractEntity
         'cargoType' => false,
         'cargoWeight' => false,
         'cargoCapacity' => false,
-        'temperature' => false,
+        'loadWeight' => false,
+        'loadCapacity' => false,
+        'temperature' => true,
         'device' => false,
         'conditions' => false,
         'comment' => true,

@@ -10,27 +10,25 @@ namespace Cargomart\ApiClient\Entity\Order\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderAccess;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderQualityScoreByCarrier;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderQualityScoreByConsignor;
 
 /**
  * source: order/responses/order-quality-score-response.json#/properties/data#/properties/order
  *
  * @property string $id
- * @property string $qualityScoreStatusByConsignor
- * @property string $qualityScoreStatusByCarrier
- * @property OrderQualityScoreByConsignor $qualityScoreByConsignor
- * @property OrderQualityScoreByCarrier $qualityScoreByCarrier
+ * @property \stdClass $qualityScoreStatusByConsignor
+ * @property \stdClass $qualityScoreStatusByCarrier
+ * @property \stdClass $qualityScoreByConsignor
+ * @property \stdClass $qualityScoreByCarrier
  * @property OrderAccess $access
  */
 final class OrderQualityScoreResponseDataOrder extends AbstractEntity
 {
     protected static $types = [
         'id' => ['string'],
-        'qualityScoreStatusByConsignor' => ['string'],
-        'qualityScoreStatusByCarrier' => ['string'],
-        'qualityScoreByConsignor' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderQualityScoreByConsignor'],
-        'qualityScoreByCarrier' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderQualityScoreByCarrier'],
+        'qualityScoreStatusByConsignor' => ['\stdClass'],
+        'qualityScoreStatusByCarrier' => ['\stdClass'],
+        'qualityScoreByConsignor' => ['\stdClass'],
+        'qualityScoreByCarrier' => ['\stdClass'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderAccess'],
     ];
 
@@ -38,8 +36,8 @@ final class OrderQualityScoreResponseDataOrder extends AbstractEntity
         'id' => false,
         'qualityScoreStatusByConsignor' => true,
         'qualityScoreStatusByCarrier' => true,
-        'qualityScoreByConsignor' => false,
-        'qualityScoreByCarrier' => false,
+        'qualityScoreByConsignor' => true,
+        'qualityScoreByCarrier' => true,
         'access' => false,
     ];
 }

@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\StoragePoint\Requests;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointEmailContact;
 
 /**
  * Структура тела запроса на добавление/редактирование пункта погрузки
@@ -26,6 +27,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property float $legalStatus
  * @property string $legalName
  * @property string $externalId
+ * @property PointEmailContact[] $emailList
  */
 final class SpPoint extends AbstractEntity
 {
@@ -42,6 +44,7 @@ final class SpPoint extends AbstractEntity
         'legalStatus' => ['float'],
         'legalName' => ['string'],
         'externalId' => ['string'],
+        'emailList' => ['array', 'Cargomart\ApiClient\Entity\StoragePoint\Objects\PointEmailContact'],
     ];
 
     protected static $nullables = [
@@ -57,5 +60,6 @@ final class SpPoint extends AbstractEntity
         'legalStatus' => false,
         'legalName' => false,
         'externalId' => false,
+        'emailList' => false,
     ];
 }

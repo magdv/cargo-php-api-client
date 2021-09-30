@@ -16,9 +16,10 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property int $driverId
  * @property int $truckId
+ * @property string $token
  */
 final class OrderSignCreateRequest extends AbstractEntity
 {
-    protected static $types = ['driverId' => ['int'], 'truckId' => ['int']];
-    protected static $nullables = ['driverId' => false, 'truckId' => false];
+    protected static $types = ['driverId' => ['int'], 'truckId' => ['int'], 'token' => ['string']];
+    protected static $nullables = ['driverId' => false, 'truckId' => false, 'token' => false];
 }

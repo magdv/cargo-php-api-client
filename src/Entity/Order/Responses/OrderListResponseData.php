@@ -20,6 +20,7 @@ use Cargomart\ApiClient\Entity\Locality\Objects\Locality;
 use Cargomart\ApiClient\Entity\Order\Objects\MonitoringItem;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderShortListItem;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderStatus;
+use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 
 /**
  * Common response data
@@ -28,6 +29,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderStatus;
  * @property OrderShortListItem[] $order
  * @property CompanyShort[] $company
  * @property CompanyBranch[] $companyBranch
+ * @property UserContactShort[] $contact
  * @property TruckType[] $truckType
  * @property Pagination $pagination
  * @property string $serverTime
@@ -45,6 +47,7 @@ final class OrderListResponseData extends AbstractEntity
         'order' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderShortListItem'],
         'company' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CompanyShort'],
         'companyBranch' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CompanyBranch'],
+        'contact' => ['array', 'Cargomart\ApiClient\Entity\User\Objects\UserContactShort'],
         'truckType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TruckType'],
         'pagination' => ['Cargomart\ApiClient\Entity\Base\Pagination'],
         'serverTime' => ['string'],
@@ -61,6 +64,7 @@ final class OrderListResponseData extends AbstractEntity
         'order' => false,
         'company' => false,
         'companyBranch' => false,
+        'contact' => false,
         'truckType' => false,
         'pagination' => false,
         'serverTime' => false,

@@ -15,7 +15,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: order/objects/order-correction-item.json
  *
  * @property string $status
- * @property int $companyBranchId
+ * @property \stdClass $companyBranchId
  * @property string $comment
  * @property int $truckTypeId
  * @property float $cargoWeight
@@ -37,7 +37,7 @@ final class OrderCorrectionItem extends AbstractEntity
 {
     protected static $types = [
         'status' => ['string'],
-        'companyBranchId' => ['int'],
+        'companyBranchId' => ['\stdClass'],
         'comment' => ['string'],
         'truckTypeId' => ['int'],
         'cargoWeight' => ['float'],

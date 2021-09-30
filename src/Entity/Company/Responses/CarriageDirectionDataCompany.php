@@ -13,7 +13,7 @@ use Cargomart\ApiClient\Entity\Company\Objects\CarriageDirection;
 
 /**
  * Компания отправителя
- * source: company/responses/carriage-direction.json#/properties/data#/properties/company
+ * source: company/responses/company-carriage-direction-response.json#/properties/data#/properties/company
  *
  * @property string $id
  * @property CarriageDirection $carriageDirection

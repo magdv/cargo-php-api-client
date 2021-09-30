@@ -37,23 +37,4 @@ class FixPriceGet extends AbstractRequest
             $this->headers
         );
     }
-
-    /**
-     * Цена на фронте в момент отправки запроса
-     *
-     * @var null|string $value
-     *
-     * @return self
-     */
-    public function qPrice(?string $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['price']);
-        } else {
-            $c->query['price'] = $value;
-        }
-
-        return $c;
-    }
 }

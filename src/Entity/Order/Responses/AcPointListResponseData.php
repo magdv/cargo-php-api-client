@@ -14,15 +14,15 @@ use Cargomart\ApiClient\Entity\Order\Objects\AcPointContact;
 /**
  * source: order/responses/ac-point-list-response.json#/properties/data
  *
- * @property \stdClass $isNext
+ * @property bool $isNext
  * @property AcPointContact[] $list
  */
 final class AcPointListResponseData extends AbstractEntity
 {
     protected static $types = [
-        'isNext' => ['\stdClass'],
+        'isNext' => ['bool'],
         'list' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\AcPointContact'],
     ];
 
-    protected static $nullables = ['isNext' => true, 'list' => false];
+    protected static $nullables = ['isNext' => false, 'list' => false];
 }

@@ -8,12 +8,13 @@ declare(strict_types=1);
 
 namespace Cargomart\ApiClient\Entity\Partner\Response;
 
+use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
 use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Ответ с сообщением о партнерстве
- * source: partner/response/partner-message.json
+ * source: partner/response/partner-message-response.json
  *
  * @property MessageV2[] $message
  * @property PartnerMessageData $data

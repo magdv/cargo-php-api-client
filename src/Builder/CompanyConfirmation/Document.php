@@ -19,7 +19,7 @@ final class Document extends AbstractBuilder
 {
     protected const URL = '/api/v2/company-confirmation/document';
 
-    public function id(string $id): Id
+    public function id(int $id): Id
     {
         $params = $this->params;
         $params['id'] = $id;

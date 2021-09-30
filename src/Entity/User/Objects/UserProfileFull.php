@@ -39,6 +39,8 @@ use Cargomart\ApiClient\Entity\DigitalSignature\Objects\IssueCertificate;
  * @property int $roleId
  * @property bool $isBlocked
  * @property bool $lockedProfile
+ * @property bool $isPhoneVerified
+ * @property string $verifiedPhone
  * @property bool $isValidated
  * @property int $legalStatusId
  * @property bool $isHaveBid
@@ -76,6 +78,8 @@ final class UserProfileFull extends AbstractEntity
         'roleId' => ['int'],
         'isBlocked' => ['bool'],
         'lockedProfile' => ['bool'],
+        'isPhoneVerified' => ['bool'],
+        'verifiedPhone' => ['string'],
         'isValidated' => ['bool'],
         'legalStatusId' => ['int'],
         'isHaveBid' => ['bool'],
@@ -112,6 +116,8 @@ final class UserProfileFull extends AbstractEntity
         'roleId' => false,
         'isBlocked' => false,
         'lockedProfile' => false,
+        'isPhoneVerified' => false,
+        'verifiedPhone' => false,
         'isValidated' => false,
         'legalStatusId' => false,
         'isHaveBid' => false,

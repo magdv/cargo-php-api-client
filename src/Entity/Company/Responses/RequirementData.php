@@ -12,7 +12,7 @@ use Cargomart\ApiClient\AbstractEntity;
 
 /**
  * Common response data
- * source: company/responses/requirement.json#/properties/data
+ * source: company/responses/company-requirement-response.json#/properties/data
  *
  * @property RequirementDataCompany $company
  */

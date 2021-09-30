@@ -16,8 +16,8 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property bool $isInSafe
  * @property bool $isNotDelayed
- * @property string[] $delayPoint
- * @property string $comment
+ * @property \stdClass $delayPoint
+ * @property \stdClass $comment
  * @property int $creatorId
  */
 final class OrderQualityScoreByConsignor extends AbstractEntity
@@ -25,15 +25,15 @@ final class OrderQualityScoreByConsignor extends AbstractEntity
     protected static $types = [
         'isInSafe' => ['bool'],
         'isNotDelayed' => ['bool'],
-        'delayPoint' => ['array', 'string'],
-        'comment' => ['string'],
+        'delayPoint' => ['\stdClass'],
+        'comment' => ['\stdClass'],
         'creatorId' => ['int'],
     ];
 
     protected static $nullables = [
         'isInSafe' => false,
         'isNotDelayed' => false,
-        'delayPoint' => false,
+        'delayPoint' => true,
         'comment' => true,
         'creatorId' => false,
     ];

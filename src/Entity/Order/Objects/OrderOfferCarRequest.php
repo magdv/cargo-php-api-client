@@ -14,11 +14,11 @@ use Cargomart\ApiClient\AbstractEntity;
  * Объект запроса количества машин
  * source: order/objects/order-offer-car-request.json
  *
- * @property int $count
- * @property string $unit
+ * @property \stdClass $count
+ * @property \stdClass $unit
  */
 final class OrderOfferCarRequest extends AbstractEntity
 {
-    protected static $types = ['count' => ['int'], 'unit' => ['string']];
+    protected static $types = ['count' => ['\stdClass'], 'unit' => ['\stdClass']];
     protected static $nullables = ['count' => true, 'unit' => true];
 }

@@ -79,11 +79,11 @@ class LotGet extends AbstractRequest
     /**
      * Фильтрация по наличию предложения
      *
-     * @var null|string $value
+     * @var null|bool $value
      *
      * @return self
      */
-    public function qFilterWithOffer(?string $value): self
+    public function qFilterWithOffer(?bool $value): self
     {
         $c = clone $this;
         if (null === $value) {

@@ -13,7 +13,7 @@ use Cargomart\ApiClient\Entity\Company\Objects\CarriageRegion;
 
 /**
  * Компания перевозчика
- * source: company/responses/carriage-region.json#/properties/data#/properties/company
+ * source: company/responses/company-carriage-region-response.json#/properties/data#/properties/company
  *
  * @property string $id
  * @property CarriageRegion $carriageRegion

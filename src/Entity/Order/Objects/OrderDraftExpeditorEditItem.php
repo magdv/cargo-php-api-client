@@ -29,6 +29,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $truckTypeId
  * @property float $cargoWeight
  * @property int $cargoCapacity
+ * @property float $loadWeight
+ * @property int $loadCapacity
  * @property string $cargoType
  * @property TemperatureRange $temperature
  * @property int[] $loading
@@ -60,6 +62,8 @@ final class OrderDraftExpeditorEditItem extends AbstractEntity
         'truckTypeId' => ['int'],
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],
+        'loadWeight' => ['float'],
+        'loadCapacity' => ['int'],
         'cargoType' => ['string'],
         'temperature' => ['Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange'],
         'loading' => ['array', 'int'],
@@ -90,6 +94,8 @@ final class OrderDraftExpeditorEditItem extends AbstractEntity
         'truckTypeId' => false,
         'cargoWeight' => false,
         'cargoCapacity' => false,
+        'loadWeight' => false,
+        'loadCapacity' => false,
         'cargoType' => false,
         'temperature' => false,
         'loading' => false,

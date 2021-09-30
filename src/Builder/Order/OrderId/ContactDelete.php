@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Requests\IdListRequest;
-use Cargomart\ApiClient\Entity\Base\Responses\MessageResponse;
+use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 
 class ContactDelete extends AbstractRequest
 {
@@ -23,16 +23,16 @@ class ContactDelete extends AbstractRequest
     /**
      * Список контактов на удаление из заказа.
      *
-     * @return MessageResponse
+     * @return EmptyDataResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(IdListRequest $body): MessageResponse
+    public function do(IdListRequest $body): EmptyDataResponse
     {
         return $this->client->doRequest(
             'DELETE',
             $this->url,
-            MessageResponse::class,
+            EmptyDataResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

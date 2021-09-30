@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\File\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\AbstractResponse;
 use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
@@ -18,7 +19,7 @@ use Cargomart\ApiClient\Entity\Base\MessageV2;
  * @property MessageV2[] $message
  * @property FileListData $data
  */
-final class FileList extends AbstractEntity
+final class FileList extends AbstractResponse
 {
     protected static $types = [
         'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
