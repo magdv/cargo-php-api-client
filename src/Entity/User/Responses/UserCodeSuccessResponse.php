@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace Cargomart\ApiClient\Entity\User\Responses;
 
-use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
 
 /**
