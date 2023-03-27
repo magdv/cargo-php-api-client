@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: expeditor/objects/proposal-driver.json
  */
 
 declare(strict_types=1);
@@ -18,13 +19,20 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $name
  * @property string[] $phones
  * @property string $licenseNumber
+ * @property string $licenceIssueDate
+ * @property string $licenceType
+ * @property string $licenseSeries
+ * @property string $inn
+ * @property string $externalId
+ * @property string $passportType
+ * @property string $registrationAddress
  * @property string $passportSeries
  * @property string $passportNumber
  * @property string $passportWhen
  * @property string $passportBy
  * @property string $birthDate
  * @property string $driverAppStatus
- * @property ProposalDriverDriverAppDetail[] $driverAppDetail
+ * @property ProposalDriverDriverAppDetailItems[] $driverAppDetail
  */
 final class ProposalDriver extends AbstractEntity
 {
@@ -33,13 +41,20 @@ final class ProposalDriver extends AbstractEntity
         'name' => ['string'],
         'phones' => ['array', 'string'],
         'licenseNumber' => ['string'],
+        'licenceIssueDate' => ['string'],
+        'licenceType' => ['string'],
+        'licenseSeries' => ['string'],
+        'inn' => ['string'],
+        'externalId' => ['string'],
+        'passportType' => ['string'],
+        'registrationAddress' => ['string'],
         'passportSeries' => ['string'],
         'passportNumber' => ['string'],
         'passportWhen' => ['string'],
         'passportBy' => ['string'],
         'birthDate' => ['string'],
         'driverAppStatus' => ['string'],
-        'driverAppDetail' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalDriverDriverAppDetail'],
+        'driverAppDetail' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalDriverDriverAppDetailItems'],
     ];
 
     protected static $nullables = [
@@ -47,6 +62,13 @@ final class ProposalDriver extends AbstractEntity
         'name' => false,
         'phones' => false,
         'licenseNumber' => false,
+        'licenceIssueDate' => false,
+        'licenceType' => false,
+        'licenseSeries' => false,
+        'inn' => false,
+        'externalId' => false,
+        'passportType' => false,
+        'registrationAddress' => false,
         'passportSeries' => false,
         'passportNumber' => false,
         'passportWhen' => false,

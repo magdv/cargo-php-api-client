@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/{orderId}/tag
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Order\OrderId;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderTagListResponse;
 
-class TagGet extends AbstractRequest
+final class TagGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

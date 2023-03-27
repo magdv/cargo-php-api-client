@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: url:/api/v2/order/{orderId}/moderation-approve
  */
 
 declare(strict_types=1);

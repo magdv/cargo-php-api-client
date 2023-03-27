@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: chat/objects/payload/chat-post-payload-url-change.json
  */
 
 declare(strict_types=1);

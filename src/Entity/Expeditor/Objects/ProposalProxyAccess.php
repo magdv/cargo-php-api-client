@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: expeditor/objects/proposal-proxy-access.json
  */
 
 declare(strict_types=1);
@@ -18,6 +19,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $createProxySign
  * @property bool $createCancellation
  * @property bool $createSignCancellation
+ * @property bool $viewDownloadProxyFile
  */
 final class ProposalProxyAccess extends AbstractEntity
 {
@@ -26,6 +28,7 @@ final class ProposalProxyAccess extends AbstractEntity
         'createProxySign' => ['bool'],
         'createCancellation' => ['bool'],
         'createSignCancellation' => ['bool'],
+        'viewDownloadProxyFile' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -33,5 +36,6 @@ final class ProposalProxyAccess extends AbstractEntity
         'createProxySign' => false,
         'createCancellation' => false,
         'createSignCancellation' => false,
+        'viewDownloadProxyFile' => false,
     ];
 }

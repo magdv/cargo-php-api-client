@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: metric/requests/locality-metric-request.json
  */
 
 declare(strict_types=1);

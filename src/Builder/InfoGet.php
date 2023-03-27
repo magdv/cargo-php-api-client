@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/info
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Advert\Responses\AdItem;
 
-class InfoGet extends AbstractRequest
+final class InfoGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

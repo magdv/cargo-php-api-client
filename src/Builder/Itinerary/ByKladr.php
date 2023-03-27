@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: url:/api/v2/itinerary/by-kladr
  */
 
 declare(strict_types=1);

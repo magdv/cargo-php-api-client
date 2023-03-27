@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: simple-document/objects/simple-document-assignment.json
  */
 
 declare(strict_types=1);
@@ -14,7 +15,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * Детальная информация по просматриваемому документу
  * source: simple-document/objects/simple-document-assignment.json
  *
- * @property int $assignmentNumber
+ * @property string $assignmentNumber
  * @property string $assignmentDate
  * @property string $downloadLink
  * @property string $fileName
@@ -24,7 +25,7 @@ use Cargomart\ApiClient\AbstractEntity;
 final class SimpleDocumentAssignment extends AbstractEntity
 {
     protected static $types = [
-        'assignmentNumber' => ['int'],
+        'assignmentNumber' => ['string'],
         'assignmentDate' => ['string'],
         'downloadLink' => ['string'],
         'fileName' => ['string'],

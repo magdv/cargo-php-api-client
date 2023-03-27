@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: company/responses/communication-contacts-response.json#/properties/data/properties/company
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Company\Objects\CommunicationContactGroup;
 
 /**
- * source: company/responses/communication-contacts-response.json#/properties/data#/properties/company
+ * source: company/responses/communication-contacts-response.json#/properties/data/properties/company
  *
  * @property string $id
  * @property CommunicationContactGroup[] $communicationContactGroups

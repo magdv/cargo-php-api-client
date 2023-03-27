@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: configuration/objects/configuration-permissions.json
  */
 
 declare(strict_types=1);
@@ -90,12 +91,12 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $viewExpeditorProposalArchiveList
  * @property bool $viewExpeditorProposalCorrectionList
  * @property bool $createOrderExpeditorProposal
+ * @property bool $createOrderExpeditorProposalFixedPriceExpress
+ * @property bool $createOrderExpeditorProposalFixedPriceAuction
  * @property bool $importOrders
  * @property bool $exportOrders
  * @property bool $exportOrderOffers
  * @property bool $viewOrderBroker
- * @property bool $viewPreOrderCarrierList
- * @property bool $viewPreOrderGroupCarrierList
  * @property bool $viewTenders
  * @property bool $viewTenderCarrierPriceRequestLotList
  * @property bool $viewTenderCarrierCompletedPriceRequestLotList
@@ -104,16 +105,21 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $viewTenderConsignorCompletedList
  * @property bool $createTenderDraft
  * @property bool $viewAdmin
- * @property bool $viewAdminPreOrderGroupList
- * @property bool $createAdminPreOrderGroup
  * @property bool $viewBookingShowcase
  * @property bool $viewLandingExpress
  * @property bool $viewLandingForCarrier
  * @property bool $viewLandingForConsignor
  * @property bool $createPriceLocal
  * @property bool $viewPriceLocalList
+ * @property bool $createPriceLocalPool
+ * @property bool $viewPriceLocalPoolList
  * @property bool $viewStoragePointEmails
  * @property bool $updateStoragePointEmails
+ * @property bool $updateStoragePointEdmParam
+ * @property bool $viewContractList
+ * @property bool $viewContractConclusion
+ * @property bool $viewMainSearch
+ * @property bool $orderMultiCurrencyParam
  */
 final class ConfigurationPermissions extends AbstractEntity
 {
@@ -194,12 +200,12 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewExpeditorProposalArchiveList' => ['bool'],
         'viewExpeditorProposalCorrectionList' => ['bool'],
         'createOrderExpeditorProposal' => ['bool'],
+        'createOrderExpeditorProposalFixedPriceExpress' => ['bool'],
+        'createOrderExpeditorProposalFixedPriceAuction' => ['bool'],
         'importOrders' => ['bool'],
         'exportOrders' => ['bool'],
         'exportOrderOffers' => ['bool'],
         'viewOrderBroker' => ['bool'],
-        'viewPreOrderCarrierList' => ['bool'],
-        'viewPreOrderGroupCarrierList' => ['bool'],
         'viewTenders' => ['bool'],
         'viewTenderCarrierPriceRequestLotList' => ['bool'],
         'viewTenderCarrierCompletedPriceRequestLotList' => ['bool'],
@@ -208,16 +214,21 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewTenderConsignorCompletedList' => ['bool'],
         'createTenderDraft' => ['bool'],
         'viewAdmin' => ['bool'],
-        'viewAdminPreOrderGroupList' => ['bool'],
-        'createAdminPreOrderGroup' => ['bool'],
         'viewBookingShowcase' => ['bool'],
         'viewLandingExpress' => ['bool'],
         'viewLandingForCarrier' => ['bool'],
         'viewLandingForConsignor' => ['bool'],
         'createPriceLocal' => ['bool'],
         'viewPriceLocalList' => ['bool'],
+        'createPriceLocalPool' => ['bool'],
+        'viewPriceLocalPoolList' => ['bool'],
         'viewStoragePointEmails' => ['bool'],
         'updateStoragePointEmails' => ['bool'],
+        'updateStoragePointEdmParam' => ['bool'],
+        'viewContractList' => ['bool'],
+        'viewContractConclusion' => ['bool'],
+        'viewMainSearch' => ['bool'],
+        'orderMultiCurrencyParam' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -297,12 +308,12 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewExpeditorProposalArchiveList' => false,
         'viewExpeditorProposalCorrectionList' => false,
         'createOrderExpeditorProposal' => false,
+        'createOrderExpeditorProposalFixedPriceExpress' => false,
+        'createOrderExpeditorProposalFixedPriceAuction' => false,
         'importOrders' => false,
         'exportOrders' => false,
         'exportOrderOffers' => false,
         'viewOrderBroker' => false,
-        'viewPreOrderCarrierList' => false,
-        'viewPreOrderGroupCarrierList' => false,
         'viewTenders' => false,
         'viewTenderCarrierPriceRequestLotList' => false,
         'viewTenderCarrierCompletedPriceRequestLotList' => false,
@@ -311,15 +322,20 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewTenderConsignorCompletedList' => false,
         'createTenderDraft' => false,
         'viewAdmin' => false,
-        'viewAdminPreOrderGroupList' => false,
-        'createAdminPreOrderGroup' => false,
         'viewBookingShowcase' => false,
         'viewLandingExpress' => false,
         'viewLandingForCarrier' => false,
         'viewLandingForConsignor' => false,
         'createPriceLocal' => false,
         'viewPriceLocalList' => false,
+        'createPriceLocalPool' => false,
+        'viewPriceLocalPoolList' => false,
         'viewStoragePointEmails' => false,
         'updateStoragePointEmails' => false,
+        'updateStoragePointEdmParam' => false,
+        'viewContractList' => false,
+        'viewContractConclusion' => false,
+        'viewMainSearch' => false,
+        'orderMultiCurrencyParam' => false,
     ];
 }

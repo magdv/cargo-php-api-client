@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/{orderId}/waybill-template
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Order\OrderId;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\FileLinkResponse;
 
-class WaybillTemplateGet extends AbstractRequest
+final class WaybillTemplateGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -36,6 +37,25 @@ class WaybillTemplateGet extends AbstractRequest
             null,
             $this->headers
         );
+    }
+
+    /**
+     * Формат формирования накладной.
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFormat(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['format']);
+        } else {
+            $c->query['format'] = $value;
+        }
+
+        return $c;
     }
 
     /**

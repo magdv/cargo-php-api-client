@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: partner/response/partner-message-response.json#/properties/data
+ */
+
+declare(strict_types=1);
+
+namespace Cargomart\ApiClient\Entity\Partner\Response;
+
+use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Partner\Object\PartnerMessage;
+
+/**
+ * source: partner/response/partner-message-response.json#/properties/data
+ *
+ * @property PartnerMessage $message
+ */
+final class PartnerMessageResponseData extends AbstractEntity
+{
+    protected static $types = ['message' => ['Cargomart\ApiClient\Entity\Partner\Object\PartnerMessage']];
+    protected static $nullables = ['message' => false];
+}

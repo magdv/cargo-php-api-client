@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/locality/nearest
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Locality;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Locality\Responses\LocalityResponse;
 
-class NearestGet extends AbstractRequest
+final class NearestGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

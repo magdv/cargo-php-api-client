@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: url:/api/v2/chat/{chatId}
  */
 
 declare(strict_types=1);
@@ -20,10 +21,5 @@ final class ChatId extends AbstractBuilder
     public function get(): ChatIdGet
     {
         return new ChatIdGet($this->client, $this->getUrl());
-    }
-
-    public function post(): ChatIdPost
-    {
-        return new ChatIdPost($this->client, $this->getUrl());
     }
 }

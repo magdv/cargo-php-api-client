@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/tms/reception
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Tms\Requests\TmsInput;
 use Cargomart\ApiClient\Entity\Tms\Responses\ReceptionResponse;
 
-class ReceptionPost extends AbstractRequest
+final class ReceptionPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

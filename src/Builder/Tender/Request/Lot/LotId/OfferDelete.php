@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/tender/request/lot/{lotId}/offer
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Tender\Request\Lot\LotId;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 
-class OfferDelete extends AbstractRequest
+final class OfferDelete extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

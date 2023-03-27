@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: url:/api/v2/company/{hash}
  */
 
 declare(strict_types=1);
@@ -28,6 +29,7 @@ use Cargomart\ApiClient\Builder\Company\Hash\PartnerReject;
 use Cargomart\ApiClient\Builder\Company\Hash\Requirement;
 use Cargomart\ApiClient\Builder\Company\Hash\Review;
 use Cargomart\ApiClient\Builder\Company\Hash\Settings;
+use Cargomart\ApiClient\Builder\Company\Hash\StoragePoint;
 
 /**
  * url: /api/v2/company/{hash}
@@ -129,6 +131,11 @@ final class Hash extends AbstractBuilder
     public function review(): Review
     {
         return new Review($this->params, $this->client);
+    }
+
+    public function storagePoint(): StoragePoint
+    {
+        return new StoragePoint($this->params, $this->client);
     }
 
     public function get(): HashGet

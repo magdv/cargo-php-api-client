@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/requests/order-document-file-id-request.json
  */
 
 declare(strict_types=1);

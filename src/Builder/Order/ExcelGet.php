@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/excel
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Order;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\FileLinkResponse;
 
-class ExcelGet extends AbstractRequest
+final class ExcelGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['filter[orderType]' => ['auction', 'auctionNoPrice']];
@@ -679,25 +680,6 @@ class ExcelGet extends AbstractRequest
             unset($c->query['filter[isGeneralPartnerDocument]']);
         } else {
             $c->query['filter[isGeneralPartnerDocument]'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
-     * Только заказы, которые надо оценить
-     *
-     * @var null|bool $value
-     *
-     * @return self
-     */
-    public function qFilterCreateQualityScore(?bool $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['filter[createQualityScore]']);
-        } else {
-            $c->query['filter[createQualityScore]'] = $value;
         }
 
         return $c;

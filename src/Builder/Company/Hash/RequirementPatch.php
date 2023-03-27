@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/company/{hash}/requirement
  */
 
 declare(strict_types=1);
@@ -10,9 +11,9 @@ namespace Cargomart\ApiClient\Builder\Company\Hash;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Objects\Requirement;
-use Cargomart\ApiClient\Entity\Company\Responses\Requirement;
+use Cargomart\ApiClient\Entity\Company\Responses\CompanyRequirementResponse;
 
-class RequirementPatch extends AbstractRequest
+final class RequirementPatch extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -23,16 +24,16 @@ class RequirementPatch extends AbstractRequest
     /**
      * Требования отправителя к перевозкам.
      *
-     * @return Requirement
+     * @return CompanyRequirementResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(Requirement $body): Requirement
+    public function do(Requirement $body): CompanyRequirementResponse
     {
         return $this->client->doRequest(
             'PATCH',
             $this->url,
-            Requirement::class,
+            CompanyRequirementResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

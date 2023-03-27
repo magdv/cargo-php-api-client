@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/user/self/ds-phone-verification-code
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\User\Self;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\User\Responses\UserFullResponse;
 
-class DsPhoneVerificationCodePost extends AbstractRequest
+final class DsPhoneVerificationCodePost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -20,7 +21,7 @@ class DsPhoneVerificationCodePost extends AbstractRequest
     public $headers = [];
 
     /**
-     * Выслать код для подтверждения
+     * deprecated! Выслать код для подтверждения
      *
      * @return UserFullResponse
      *

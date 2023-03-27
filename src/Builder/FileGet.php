@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/file
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\File\Responses\FileList;
 
-class FileGet extends AbstractRequest
+final class FileGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['filter[fileType]' => 'document'];

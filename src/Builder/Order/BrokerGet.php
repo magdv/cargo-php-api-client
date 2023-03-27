@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/broker
  */
 
 declare(strict_types=1);
@@ -9,9 +10,9 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\BrokerResponse;
+use Cargomart\ApiClient\Entity\Order\Responses\BrokerListResponse;
 
-class BrokerGet extends AbstractRequest
+final class BrokerGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -22,16 +23,16 @@ class BrokerGet extends AbstractRequest
     /**
      * Получение списка брокеров.
      *
-     * @return BrokerResponse
+     * @return BrokerListResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): BrokerResponse
+    public function do(): BrokerListResponse
     {
         return $this->client->doRequest(
             'GET',
             $this->url,
-            BrokerResponse::class,
+            BrokerListResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: file/objects/document.json
  */
 
 declare(strict_types=1);
@@ -22,7 +23,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $status
  * @property int $size
  * @property int[] $fileId
- * @property File[] $files
+ * @property FileV1[] $files
  * @property string $url
  * @property int $creatorId
  * @property string $createDate
@@ -40,7 +41,7 @@ final class Document extends AbstractEntity
         'status' => ['int'],
         'size' => ['int'],
         'fileId' => ['array', 'int'],
-        'files' => ['array', 'Cargomart\ApiClient\Entity\File\Objects\File'],
+        'files' => ['array', 'Cargomart\ApiClient\Entity\File\Objects\FileV1'],
         'url' => ['string'],
         'creatorId' => ['int'],
         'createDate' => ['string'],

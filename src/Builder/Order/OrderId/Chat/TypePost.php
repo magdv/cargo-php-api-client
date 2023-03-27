@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/{orderId}/chat/{type}
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Order\OrderId\Chat;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Chat\Responses\ChatResponse;
 
-class TypePost extends AbstractRequest
+final class TypePost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

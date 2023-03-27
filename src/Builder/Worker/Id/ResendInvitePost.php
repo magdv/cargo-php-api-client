@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/worker/{id}/resend-invite
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Worker\Id;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Worker\Responses\WorkerResponse;
 
-class ResendInvitePost extends AbstractRequest
+final class ResendInvitePost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

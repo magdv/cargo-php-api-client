@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/storage-point/{id}/contact
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\StoragePoint\Id;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\StoragePoint\Responses\ContactList;
 
-class ContactGet extends AbstractRequest
+final class ContactGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -20,7 +21,7 @@ class ContactGet extends AbstractRequest
     public $headers = [];
 
     /**
-     * Получение списка контактов пункта погрузки/выгрузки
+     * @deprecated. Использовать вместе с редактированием SP. Получение списка контактов пункта погрузки/выгрузки
      *
      * @return ContactList
      *

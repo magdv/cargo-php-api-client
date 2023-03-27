@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/{orderId}/itinerary
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Order\OrderId;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Itinerary\Responses\ItineraryListResponse;
 
-class ItineraryGet extends AbstractRequest
+final class ItineraryGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

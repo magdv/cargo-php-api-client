@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/objects/order-banking.json
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Entity\Order\Objects;
 use Cargomart\ApiClient\AbstractEntity;
 
 /**
- * Банковский реквизиты в заказе
+ * Банковские реквизиты в заказе
  * source: order/objects/order-banking.json
  *
  * @property string $bankName

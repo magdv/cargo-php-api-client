@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/ac/driver-name
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Order\Ac;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\AcDriverNameResponse;
 
-class DriverNameGet extends AbstractRequest
+final class DriverNameGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: message/objects/message.json
  */
 
 declare(strict_types=1);

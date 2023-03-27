@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/{orderId}/sign
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderSignCreateRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderCardResponse;
 
-class SignPost extends AbstractRequest
+final class SignPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

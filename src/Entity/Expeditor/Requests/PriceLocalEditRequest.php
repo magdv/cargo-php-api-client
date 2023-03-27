@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: expeditor/requests/price-local-edit-request.json
  */
 
 declare(strict_types=1);
@@ -14,6 +15,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * Данные для обновления справочника цен
  * source: expeditor/requests/price-local-edit-request.json
  *
+ * @property int $priceLocalPoolId
+ * @property int $truckTypeId
  * @property string $consignorPrice
  * @property string $carrierPrice
  * @property string $carrierPriceTomorrow
@@ -22,6 +25,8 @@ use Cargomart\ApiClient\AbstractEntity;
 final class PriceLocalEditRequest extends AbstractEntity
 {
     protected static $types = [
+        'priceLocalPoolId' => ['int'],
+        'truckTypeId' => ['int'],
         'consignorPrice' => ['string'],
         'carrierPrice' => ['string'],
         'carrierPriceTomorrow' => ['string'],
@@ -29,6 +34,8 @@ final class PriceLocalEditRequest extends AbstractEntity
     ];
 
     protected static $nullables = [
+        'priceLocalPoolId' => false,
+        'truckTypeId' => false,
         'consignorPrice' => false,
         'carrierPrice' => false,
         'carrierPriceTomorrow' => false,

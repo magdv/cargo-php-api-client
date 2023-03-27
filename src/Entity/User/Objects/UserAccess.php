@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: user/objects/user-access.json
  */
 
 declare(strict_types=1);
@@ -15,6 +16,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: user/objects/user-access.json
  *
  * @property bool $update
+ * @property bool $delete
  * @property bool $phoneChange
  * @property bool $emailChange
  * @property bool $phoneChangeCancel
@@ -29,14 +31,12 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $smsCodeSend
  * @property bool $emailCodeSend
  * @property bool $passwordChange
- * @property bool $createVerificationCode
- * @property bool $createIssueCertificateSign
- * @property bool $createIssueCertificateReject
  */
 final class UserAccess extends AbstractEntity
 {
     protected static $types = [
         'update' => ['bool'],
+        'delete' => ['bool'],
         'phoneChange' => ['bool'],
         'emailChange' => ['bool'],
         'phoneChangeCancel' => ['bool'],
@@ -51,13 +51,11 @@ final class UserAccess extends AbstractEntity
         'smsCodeSend' => ['bool'],
         'emailCodeSend' => ['bool'],
         'passwordChange' => ['bool'],
-        'createVerificationCode' => ['bool'],
-        'createIssueCertificateSign' => ['bool'],
-        'createIssueCertificateReject' => ['bool'],
     ];
 
     protected static $nullables = [
         'update' => false,
+        'delete' => false,
         'phoneChange' => false,
         'emailChange' => false,
         'phoneChangeCancel' => false,
@@ -72,8 +70,5 @@ final class UserAccess extends AbstractEntity
         'smsCodeSend' => false,
         'emailCodeSend' => false,
         'passwordChange' => false,
-        'createVerificationCode' => false,
-        'createIssueCertificateSign' => false,
-        'createIssueCertificateReject' => false,
     ];
 }

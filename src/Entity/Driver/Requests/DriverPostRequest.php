@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: driver/requests/driver-post-request.json
  */
 
 declare(strict_types=1);
@@ -26,6 +27,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $registrationAddress
  * @property string $licenceNumber
  * @property string $licenceIssueDate
+ * @property string $licenceType
+ * @property string $licenceSeries
  * @property string $inn
  */
 final class DriverPostRequest extends AbstractEntity
@@ -43,6 +46,8 @@ final class DriverPostRequest extends AbstractEntity
         'registrationAddress' => ['string'],
         'licenceNumber' => ['string'],
         'licenceIssueDate' => ['string'],
+        'licenceType' => ['string'],
+        'licenceSeries' => ['string'],
         'inn' => ['string'],
     ];
 
@@ -59,6 +64,8 @@ final class DriverPostRequest extends AbstractEntity
         'registrationAddress' => false,
         'licenceNumber' => false,
         'licenceIssueDate' => false,
+        'licenceType' => false,
+        'licenceSeries' => false,
         'inn' => false,
     ];
 }

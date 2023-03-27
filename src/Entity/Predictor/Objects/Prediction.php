@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: predictor/objects/prediction.json
  */
 
 declare(strict_types=1);
@@ -18,6 +19,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $departureCode
  * @property string $destinationCode
  * @property string $truckType
+ * @property float $distance
+ * @property float $pricePerKm
  */
 final class Prediction extends AbstractEntity
 {
@@ -26,6 +29,8 @@ final class Prediction extends AbstractEntity
         'departureCode' => ['string'],
         'destinationCode' => ['string'],
         'truckType' => ['string'],
+        'distance' => ['float'],
+        'pricePerKm' => ['float'],
     ];
 
     protected static $nullables = [
@@ -33,5 +38,7 @@ final class Prediction extends AbstractEntity
         'departureCode' => false,
         'destinationCode' => false,
         'truckType' => false,
+        'distance' => false,
+        'pricePerKm' => false,
     ];
 }

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/user/recovery/{id}/confirm
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\User\Requests\UserRecoveryConfirmRequest;
 use Cargomart\ApiClient\Entity\User\Responses\UserRecoveryResponse;
 
-class ConfirmPost extends AbstractRequest
+final class ConfirmPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

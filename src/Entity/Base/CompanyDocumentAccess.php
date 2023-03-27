@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: base/company-document.json#/properties/access
  */
 
 declare(strict_types=1);

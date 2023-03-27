@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/objects/route-point-edit.json
  */
 
 declare(strict_types=1);
@@ -9,6 +10,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
 
 /**
  * Пункт маршрута
@@ -22,13 +24,16 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $localityName
  * @property string $title
  * @property string $legalName
+ * @property int $legalStatus
+ * @property PointShipper $pointShipper
  * @property string $address
  * @property string $house
  * @property string $comment
  * @property string $additionalInfo
- * @property RoutePointContactContact[] $contact
+ * @property RoutePointContactItems[] $contact
  * @property \stdClass $storagePoint
  * @property bool $isLoad
+ * @property bool $isEdm
  * @property bool $isUnload
  * @property int $weight
  * @property int $capacity
@@ -58,13 +63,16 @@ final class RoutePointEdit extends AbstractEntity
         'localityName' => ['string'],
         'title' => ['string'],
         'legalName' => ['string'],
+        'legalStatus' => ['int'],
+        'pointShipper' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper'],
         'address' => ['string'],
         'house' => ['string'],
         'comment' => ['string'],
         'additionalInfo' => ['string'],
-        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointContactContact'],
+        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointContactItems'],
         'storagePoint' => ['\stdClass'],
         'isLoad' => ['bool'],
+        'isEdm' => ['bool'],
         'isUnload' => ['bool'],
         'weight' => ['int'],
         'capacity' => ['int'],
@@ -93,6 +101,8 @@ final class RoutePointEdit extends AbstractEntity
         'localityName' => false,
         'title' => false,
         'legalName' => false,
+        'legalStatus' => false,
+        'pointShipper' => false,
         'address' => false,
         'house' => false,
         'comment' => false,
@@ -100,6 +110,7 @@ final class RoutePointEdit extends AbstractEntity
         'contact' => false,
         'storagePoint' => true,
         'isLoad' => false,
+        'isEdm' => false,
         'isUnload' => false,
         'weight' => false,
         'capacity' => false,

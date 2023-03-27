@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: partner/object/partner-message.json
  */
 
 declare(strict_types=1);

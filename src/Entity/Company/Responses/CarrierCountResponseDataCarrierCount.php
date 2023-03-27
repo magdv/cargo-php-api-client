@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: company/responses/carrier-count-response.json#/properties/data/properties/carrierCount
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractEntity;
 
 /**
  * Данные по количеству перевозчиков
- * source: company/responses/carrier-count-response.json#/properties/data#/properties/carrierCount
+ * source: company/responses/carrier-count-response.json#/properties/data/properties/carrierCount
  *
  * @property int $totalAccessCarrierCount
  * @property int $activeAccessCarrierCount

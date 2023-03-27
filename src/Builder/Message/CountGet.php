@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/message/count
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Message;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Message\Responses\MessageCountResponse;
 
-class CountGet extends AbstractRequest
+final class CountGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

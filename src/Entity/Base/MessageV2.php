@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: base/message-v2.json
  */
 
 declare(strict_types=1);

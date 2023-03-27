@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: user/requests/user-login-request.json
  */
 
 declare(strict_types=1);

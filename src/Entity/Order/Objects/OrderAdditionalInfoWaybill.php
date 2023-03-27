@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/objects/order-additional-info-waybill.json
  */
 
 declare(strict_types=1);

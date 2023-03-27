@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/company/self/carrier-count
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Company\Self;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Responses\CarrierCountResponse;
 
-class CarrierCountGet extends AbstractRequest
+final class CarrierCountGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['relateType' => 'all'];

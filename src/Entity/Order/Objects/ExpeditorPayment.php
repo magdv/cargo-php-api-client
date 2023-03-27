@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/objects/expeditor-payment.json
  */
 
 declare(strict_types=1);
@@ -14,26 +15,23 @@ use Cargomart\ApiClient\AbstractEntity;
  * Данные по оплатам
  * source: order/objects/expeditor-payment.json
  *
- * @property int $orderId
  * @property string $number
  * @property string $date
  * @property string $status
  * @property string $value
- * @property ExpeditorPaymentTransactions[] $payments
+ * @property ExpeditorPaymentTransaction[] $payments
  */
 final class ExpeditorPayment extends AbstractEntity
 {
     protected static $types = [
-        'orderId' => ['int'],
         'number' => ['string'],
         'date' => ['string'],
         'status' => ['string'],
         'value' => ['string'],
-        'payments' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\ExpeditorPaymentTransactions'],
+        'payments' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\ExpeditorPaymentTransaction'],
     ];
 
     protected static $nullables = [
-        'orderId' => false,
         'number' => false,
         'date' => false,
         'status' => false,

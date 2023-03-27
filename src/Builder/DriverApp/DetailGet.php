@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/driver-app/detail
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\DriverApp;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\DriverApp\Responses\DriverAppPhoneListResponse;
 
-class DetailGet extends AbstractRequest
+final class DetailGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

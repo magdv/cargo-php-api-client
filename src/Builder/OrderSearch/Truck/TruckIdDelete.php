@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order-search/truck/{truckId}
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\OrderSearch\Truck;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 
-class TruckIdDelete extends AbstractRequest
+final class TruckIdDelete extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

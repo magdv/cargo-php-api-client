@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: base/coordinate-radius.json
  */
 
 declare(strict_types=1);

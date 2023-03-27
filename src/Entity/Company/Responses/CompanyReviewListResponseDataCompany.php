@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: company/responses/company-review-list-response.json#/properties/data/properties/company
  */
 
 declare(strict_types=1);
@@ -13,7 +14,7 @@ use Cargomart\ApiClient\Entity\Company\Objects\CompanyReview;
 
 /**
  * Компания
- * source: company/responses/company-review-list-response.json#/properties/data#/properties/company
+ * source: company/responses/company-review-list-response.json#/properties/data/properties/company
  *
  * @property string $id
  * @property CompanyReview[] $review

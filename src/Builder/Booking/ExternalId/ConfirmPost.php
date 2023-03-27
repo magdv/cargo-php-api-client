@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/booking/{externalId}/confirm
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Tms\Requests\ConfirmInput;
 use Cargomart\ApiClient\Entity\Tms\Responses\ReceptionResponse;
 
-class ConfirmPost extends AbstractRequest
+final class ConfirmPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

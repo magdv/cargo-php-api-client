@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/objects/order-correction-history-item.json
  */
 
 declare(strict_types=1);
@@ -25,6 +26,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string[] $conditions
  * @property \stdClass $vatRate
  * @property string $currentPrice
+ * @property string $currencyCode
  * @property string $comment
  * @property RoutePointCard[] $point
  * @property int[] $contact
@@ -43,6 +45,7 @@ final class OrderCorrectionHistoryItem extends AbstractEntity
         'conditions' => ['array', 'string'],
         'vatRate' => ['\stdClass'],
         'currentPrice' => ['string'],
+        'currencyCode' => ['string'],
         'comment' => ['string'],
         'point' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointCard'],
         'contact' => ['array', 'int'],
@@ -60,6 +63,7 @@ final class OrderCorrectionHistoryItem extends AbstractEntity
         'conditions' => false,
         'vatRate' => true,
         'currentPrice' => false,
+        'currencyCode' => false,
         'comment' => false,
         'point' => false,
         'contact' => false,

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: company/requests/company-review-request.json
  */
 
 declare(strict_types=1);

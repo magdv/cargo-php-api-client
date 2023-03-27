@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/requests/order-document-reject-package-request.json
  */
 
 declare(strict_types=1);
@@ -15,7 +16,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: order/requests/order-document-reject-package-request.json
  *
  * @property string $rejectReason
- * @property OrderDocumentRejectPackageRequestOrderDocuments[] $orderDocuments
+ * @property OrderDocumentRejectPackageRequestOrderDocumentsItems[] $orderDocuments
  */
 final class OrderDocumentRejectPackageRequest extends AbstractEntity
 {
@@ -23,7 +24,7 @@ final class OrderDocumentRejectPackageRequest extends AbstractEntity
         'rejectReason' => ['string'],
         'orderDocuments' => [
             'array',
-            'Cargomart\ApiClient\Entity\Order\Requests\OrderDocumentRejectPackageRequestOrderDocuments',
+            'Cargomart\ApiClient\Entity\Order\Requests\OrderDocumentRejectPackageRequestOrderDocumentsItems',
         ],
     ];
 

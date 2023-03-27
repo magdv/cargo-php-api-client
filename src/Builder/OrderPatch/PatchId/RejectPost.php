@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order-patch/{patchId}/reject
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderPatchRejectRequest;
 
-class RejectPost extends AbstractRequest
+final class RejectPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

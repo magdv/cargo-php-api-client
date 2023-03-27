@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: base/price-value.json
+ */
+
+declare(strict_types=1);
+
+namespace Cargomart\ApiClient\Entity\Base;
+
+use Cargomart\ApiClient\AbstractEntity;
+
+/**
+ * Объект цены
+ * source: base/price-value.json
+ *
+ * @property string $value
+ * @property \stdClass $vatRate
+ * @property string $vat
+ * @property string $currencyCode
+ */
+final class PriceValue extends AbstractEntity
+{
+    protected static $types = [
+        'value' => ['string'],
+        'vatRate' => ['\stdClass'],
+        'vat' => ['string'],
+        'currencyCode' => ['string'],
+    ];
+
+    protected static $nullables = ['value' => false, 'vatRate' => true, 'vat' => false, 'currencyCode' => false];
+}

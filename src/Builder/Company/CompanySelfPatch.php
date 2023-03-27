@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/company/self
  */
 
 declare(strict_types=1);
@@ -9,10 +10,10 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Company;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Company\Requests\CompanyPatch;
+use Cargomart\ApiClient\Entity\Company\Requests\CompanyPatchRequest;
 use Cargomart\ApiClient\Entity\Company\Responses\CompanyInfoResponse;
 
-class CompanySelfPatch extends AbstractRequest
+final class CompanySelfPatch extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -27,7 +28,7 @@ class CompanySelfPatch extends AbstractRequest
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(CompanyPatch $body): CompanyInfoResponse
+    public function do(CompanyPatchRequest $body): CompanyInfoResponse
     {
         return $this->client->doRequest(
             'PATCH',

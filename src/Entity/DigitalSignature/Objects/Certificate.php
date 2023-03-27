@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: digital-signature/objects/certificate.json
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Entity\DigitalSignature\Objects;
 use Cargomart\ApiClient\AbstractEntity;
 
 /**
- * Информация по выданному сертификату
+ * @deprecated Информация по выданному сертификату
  * source: digital-signature/objects/certificate.json
  *
  * @property string $certificateId
@@ -23,6 +24,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $createDate
  * @property string $endDate
  * @property string $recallDate
+ * @property string $url
  */
 final class Certificate extends AbstractEntity
 {
@@ -36,6 +38,7 @@ final class Certificate extends AbstractEntity
         'createDate' => ['string'],
         'endDate' => ['string'],
         'recallDate' => ['string'],
+        'url' => ['string'],
     ];
 
     protected static $nullables = [
@@ -48,5 +51,6 @@ final class Certificate extends AbstractEntity
         'createDate' => false,
         'endDate' => false,
         'recallDate' => false,
+        'url' => false,
     ];
 }

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/booking/request/{bookingId}
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Booking\Request;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Tms\Responses\BookingDraftResponse;
 
-class BookingIdGet extends AbstractRequest
+final class BookingIdGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

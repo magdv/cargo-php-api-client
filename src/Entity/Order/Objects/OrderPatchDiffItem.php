@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/objects/order-patch-diff-item.json
  */
 
 declare(strict_types=1);
@@ -15,7 +16,9 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: order/objects/order-patch-diff-item.json
  *
  * @property string $consignorPrice
+ * @property string $consignorPriceVatLess
  * @property string $carrierPrice
+ * @property string $carrierPriceVatLess
  * @property int $truckTypeId
  * @property \stdClass $companyBranchId
  * @property float $cargoWeight
@@ -24,10 +27,11 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $loadCapacity
  * @property string $cargoType
  * @property TemperatureRange $temperature
+ * @property int[] $loading
  * @property string[] $device
  * @property string[] $conditions
  * @property string $comment
- * @property RoutePointCard[] $point
+ * @property OrderPatchRoutePointCard[] $point
  * @property string $externalId
  * @property string[] $tag
  */
@@ -35,7 +39,9 @@ final class OrderPatchDiffItem extends AbstractEntity
 {
     protected static $types = [
         'consignorPrice' => ['string'],
+        'consignorPriceVatLess' => ['string'],
         'carrierPrice' => ['string'],
+        'carrierPriceVatLess' => ['string'],
         'truckTypeId' => ['int'],
         'companyBranchId' => ['\stdClass'],
         'cargoWeight' => ['float'],
@@ -44,17 +50,20 @@ final class OrderPatchDiffItem extends AbstractEntity
         'loadCapacity' => ['int'],
         'cargoType' => ['string'],
         'temperature' => ['Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange'],
+        'loading' => ['array', 'int'],
         'device' => ['array', 'string'],
         'conditions' => ['array', 'string'],
         'comment' => ['string'],
-        'point' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointCard'],
+        'point' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderPatchRoutePointCard'],
         'externalId' => ['string'],
         'tag' => ['array', 'string'],
     ];
 
     protected static $nullables = [
         'consignorPrice' => false,
+        'consignorPriceVatLess' => false,
         'carrierPrice' => false,
+        'carrierPriceVatLess' => false,
         'truckTypeId' => false,
         'companyBranchId' => true,
         'cargoWeight' => false,
@@ -63,6 +72,7 @@ final class OrderPatchDiffItem extends AbstractEntity
         'loadCapacity' => false,
         'cargoType' => false,
         'temperature' => false,
+        'loading' => false,
         'device' => false,
         'conditions' => false,
         'comment' => false,

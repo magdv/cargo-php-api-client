@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: user/responses/user-count-active.json
  */
 
 declare(strict_types=1);

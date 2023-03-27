@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: storage-point/responses/contact-list.json
  */
 
 declare(strict_types=1);

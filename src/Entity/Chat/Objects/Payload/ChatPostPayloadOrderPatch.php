@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: chat/objects/payload/chat-post-payload-order-patch.json
  */
 
 declare(strict_types=1);
@@ -19,6 +20,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $comment
  * @property string $commentForConsignor
  * @property string $commentForCarrier
+ * @property \stdClass $newValues
  */
 final class ChatPostPayloadOrderPatch extends AbstractEntity
 {
@@ -28,6 +30,7 @@ final class ChatPostPayloadOrderPatch extends AbstractEntity
         'comment' => ['string'],
         'commentForConsignor' => ['string'],
         'commentForCarrier' => ['string'],
+        'newValues' => ['\stdClass'],
     ];
 
     protected static $nullables = [
@@ -36,5 +39,6 @@ final class ChatPostPayloadOrderPatch extends AbstractEntity
         'comment' => false,
         'commentForConsignor' => false,
         'commentForCarrier' => false,
+        'newValues' => true,
     ];
 }

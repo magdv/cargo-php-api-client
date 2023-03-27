@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: expeditor/responses/proposal-card-response.json
  */
 
 declare(strict_types=1);

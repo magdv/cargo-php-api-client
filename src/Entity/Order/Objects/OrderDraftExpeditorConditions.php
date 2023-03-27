@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/objects/order-draft-expeditor-conditions.json
  */
 
 declare(strict_types=1);
@@ -9,29 +10,33 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\ExpeditorCarrierContract\Objects\ContractItem;
 
 /**
- * Условия по направлению
+ * Условия перевозки по направлению и companyBranchId
  * source: order/objects/order-draft-expeditor-conditions.json
  *
- * @property string $price
  * @property float $vatRate
- * @property string $vatlessPrice
  * @property string $paymentDetails
+ * @property string $currencyCode
+ * @property ContractItem $expeditorContract
+ * @property ExpeditorContractConclusionSettings $expeditorContractConclusion
  */
 final class OrderDraftExpeditorConditions extends AbstractEntity
 {
     protected static $types = [
-        'price' => ['string'],
         'vatRate' => ['float'],
-        'vatlessPrice' => ['string'],
         'paymentDetails' => ['string'],
+        'currencyCode' => ['string'],
+        'expeditorContract' => ['Cargomart\ApiClient\Entity\ExpeditorCarrierContract\Objects\ContractItem'],
+        'expeditorContractConclusion' => ['Cargomart\ApiClient\Entity\Order\Objects\ExpeditorContractConclusionSettings'],
     ];
 
     protected static $nullables = [
-        'price' => false,
         'vatRate' => false,
-        'vatlessPrice' => false,
         'paymentDetails' => false,
+        'currencyCode' => false,
+        'expeditorContract' => false,
+        'expeditorContractConclusion' => false,
     ];
 }

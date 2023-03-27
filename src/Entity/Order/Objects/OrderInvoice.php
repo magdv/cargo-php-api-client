@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/objects/order-invoice.json
  */
 
 declare(strict_types=1);
@@ -14,7 +15,6 @@ use Cargomart\ApiClient\AbstractEntity;
  * Данные счета
  * source: order/objects/order-invoice.json
  *
- * @property int $orderId
  * @property string $number
  * @property string $date
  * @property string $status
@@ -24,7 +24,6 @@ use Cargomart\ApiClient\AbstractEntity;
 final class OrderInvoice extends AbstractEntity
 {
     protected static $types = [
-        'orderId' => ['int'],
         'number' => ['string'],
         'date' => ['string'],
         'status' => ['string'],
@@ -33,7 +32,6 @@ final class OrderInvoice extends AbstractEntity
     ];
 
     protected static $nullables = [
-        'orderId' => false,
         'number' => false,
         'date' => false,
         'status' => false,

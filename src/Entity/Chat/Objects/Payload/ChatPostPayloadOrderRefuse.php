@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: chat/objects/payload/chat-post-payload-order-refuse.json
  */
 
 declare(strict_types=1);

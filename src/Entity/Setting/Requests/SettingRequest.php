@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: setting/requests/setting-request.json
  */
 
 declare(strict_types=1);

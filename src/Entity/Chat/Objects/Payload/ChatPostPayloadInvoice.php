@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: chat/objects/payload/chat-post-payload-invoice.json
  */
 
 declare(strict_types=1);
@@ -18,7 +19,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $date
  * @property string $value
  * @property string $currencyCode
- * @property ChatPostPayloadInvoicePayments[] $payments
+ * @property ChatPostPayloadInvoicePaymentsItems[] $payments
  */
 final class ChatPostPayloadInvoice extends AbstractEntity
 {
@@ -27,7 +28,7 @@ final class ChatPostPayloadInvoice extends AbstractEntity
         'date' => ['string'],
         'value' => ['string'],
         'currencyCode' => ['string'],
-        'payments' => ['array', 'Cargomart\ApiClient\Entity\Chat\Objects\Payload\ChatPostPayloadInvoicePayments'],
+        'payments' => ['array', 'Cargomart\ApiClient\Entity\Chat\Objects\Payload\ChatPostPayloadInvoicePaymentsItems'],
     ];
 
     protected static $nullables = [

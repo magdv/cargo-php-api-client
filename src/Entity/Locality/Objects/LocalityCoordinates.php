@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: locality/objects/locality.json#/properties/coordinates
  */
 
 declare(strict_types=1);

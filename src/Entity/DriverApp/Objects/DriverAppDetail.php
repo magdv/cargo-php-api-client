@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: driver-app/objects/driver-app-detail.json
  */
 
 declare(strict_types=1);

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/requests/order-patch-request.json
  */
 
 declare(strict_types=1);
@@ -26,7 +27,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string[] $device
  * @property string[] $conditions
  * @property \stdClass $comment
- * @property OrderPatchPatchRequest[] $points
+ * @property OrderPatchPointRequest[] $points
  * @property string $externalId
  * @property string[] $tag
  * @property string $commentForConsignor
@@ -47,7 +48,7 @@ final class OrderPatchRequest extends AbstractEntity
         'device' => ['array', 'string'],
         'conditions' => ['array', 'string'],
         'comment' => ['\stdClass'],
-        'points' => ['array', 'Cargomart\ApiClient\Entity\Order\Requests\OrderPatchPatchRequest'],
+        'points' => ['array', 'Cargomart\ApiClient\Entity\Order\Requests\OrderPatchPointRequest'],
         'externalId' => ['string'],
         'tag' => ['array', 'string'],
         'commentForConsignor' => ['string'],

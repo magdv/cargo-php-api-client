@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/registration
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Registration\Requests\RegistrationBaseRequest;
 use Cargomart\ApiClient\Entity\Registration\Responses\Reg;
 
-class RegistrationPost extends AbstractRequest
+final class RegistrationPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

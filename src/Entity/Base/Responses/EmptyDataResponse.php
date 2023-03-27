@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: base/responses/empty-data-response.json
  */
 
 declare(strict_types=1);

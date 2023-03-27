@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/{orderId}/correction/{correctionId}/history
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Order\OrderId\Correction\CorrectionId;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderCorrectionHistoryResponse;
 
-class HistoryGet extends AbstractRequest
+final class HistoryGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

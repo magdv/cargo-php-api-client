@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/user/self/contact-email-confirm
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\User\Requests\UserContactEmailConfirmRequest;
 use Cargomart\ApiClient\Entity\User\Responses\UserFullResponse;
 
-class ContactEmailConfirmPost extends AbstractRequest
+final class ContactEmailConfirmPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

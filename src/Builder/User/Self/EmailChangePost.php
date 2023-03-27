@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/user/self/email-change
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\User\Requests\UserEmailChangeRequest;
 use Cargomart\ApiClient\Entity\User\Responses\UserFullResponse;
 
-class EmailChangePost extends AbstractRequest
+final class EmailChangePost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

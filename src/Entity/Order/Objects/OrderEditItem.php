@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/objects/order-edit-item.json
  */
 
 declare(strict_types=1);
@@ -23,6 +24,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property float $cargoWeight
  * @property int $cargoCapacity
  * @property string $cargoType
+ * @property float $loadWeight
+ * @property int $loadCapacity
  * @property TemperatureRange $temperature
  * @property int[] $loading
  * @property string[] $device
@@ -30,6 +33,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $paymentTypeId
  * @property string $paymentDetail
  * @property string $currencyCode
+ * @property bool $isMultiCurrency
  * @property float $vatRate
  * @property string $openPrice
  * @property string $stepBid
@@ -57,7 +61,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $companyBranchId
  * @property OrderOfferCarRequest $carRequest
  * @property string $recommendedPrice
- * @property ProgressItemListProgress[] $progress
+ * @property ProgressItem[] $progress
  * @property OrderEditParams $params
  * @property OrderAccess $access
  */
@@ -73,6 +77,8 @@ final class OrderEditItem extends AbstractEntity
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],
         'cargoType' => ['string'],
+        'loadWeight' => ['float'],
+        'loadCapacity' => ['int'],
         'temperature' => ['Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange'],
         'loading' => ['array', 'int'],
         'device' => ['array', 'string'],
@@ -80,6 +86,7 @@ final class OrderEditItem extends AbstractEntity
         'paymentTypeId' => ['int'],
         'paymentDetail' => ['string'],
         'currencyCode' => ['string'],
+        'isMultiCurrency' => ['bool'],
         'vatRate' => ['float'],
         'openPrice' => ['string'],
         'stepBid' => ['string'],
@@ -107,7 +114,7 @@ final class OrderEditItem extends AbstractEntity
         'companyBranchId' => ['int'],
         'carRequest' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCarRequest'],
         'recommendedPrice' => ['string'],
-        'progress' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\ProgressItemListProgress'],
+        'progress' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\ProgressItem'],
         'params' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderEditParams'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderAccess'],
     ];
@@ -122,6 +129,8 @@ final class OrderEditItem extends AbstractEntity
         'cargoWeight' => false,
         'cargoCapacity' => false,
         'cargoType' => false,
+        'loadWeight' => false,
+        'loadCapacity' => false,
         'temperature' => false,
         'loading' => false,
         'device' => false,
@@ -129,6 +138,7 @@ final class OrderEditItem extends AbstractEntity
         'paymentTypeId' => false,
         'paymentDetail' => false,
         'currencyCode' => false,
+        'isMultiCurrency' => false,
         'vatRate' => false,
         'openPrice' => false,
         'stepBid' => false,

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/{orderId}/offer
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OfferPushRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderCardResponse;
 
-class OfferPost extends AbstractRequest
+final class OfferPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

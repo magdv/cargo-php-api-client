@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: expeditor/objects/price-local-access.json
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Entity\Expeditor\Objects;
 use Cargomart\ApiClient\AbstractEntity;
 
 /**
- * Описание доступов к заказу экспедитора
+ * Описание доступов к элементу справочника цен'
  * source: expeditor/objects/price-local-access.json
  *
  * @property bool $update

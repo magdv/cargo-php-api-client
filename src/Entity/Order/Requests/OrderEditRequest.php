@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/requests/order-edit-request.json
  */
 
 declare(strict_types=1);
@@ -29,6 +30,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange;
  * @property int $paymentTypeId
  * @property string $paymentDetail
  * @property string $currencyCode
+ * @property bool $isMultiCurrency
  * @property float $vatRate
  * @property string $openPrice
  * @property string $stepBid
@@ -63,6 +65,7 @@ final class OrderEditRequest extends AbstractEntity
         'paymentTypeId' => ['int'],
         'paymentDetail' => ['string'],
         'currencyCode' => ['string'],
+        'isMultiCurrency' => ['bool'],
         'vatRate' => ['float'],
         'openPrice' => ['string'],
         'stepBid' => ['string'],
@@ -96,6 +99,7 @@ final class OrderEditRequest extends AbstractEntity
         'paymentTypeId' => false,
         'paymentDetail' => false,
         'currencyCode' => false,
+        'isMultiCurrency' => false,
         'vatRate' => false,
         'openPrice' => false,
         'stepBid' => false,

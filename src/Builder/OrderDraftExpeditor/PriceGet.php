@@ -1,0 +1,174 @@
+<?php
+
+/**
+ * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order-draft-expeditor/price
+ */
+
+declare(strict_types=1);
+
+namespace Cargomart\ApiClient\Builder\OrderDraftExpeditor;
+
+use Cargomart\ApiClient\AbstractRequest;
+use Cargomart\ApiClient\Entity\Order\Responses\OrderDraftExpeditorPriceResponse;
+
+final class PriceGet extends AbstractRequest
+{
+    /** @var string[][] */
+    public $query = [];
+
+    /** @var string[] */
+    public $headers = [];
+
+    /**
+     * Получить цену по маршруту
+     *
+     * @return OrderDraftExpeditorPriceResponse
+     *
+     * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
+     */
+    public function do(): OrderDraftExpeditorPriceResponse
+    {
+        return $this->client->doRequest(
+            'GET',
+            $this->url,
+            OrderDraftExpeditorPriceResponse::class,
+            http_build_query($this->query),
+            null,
+            $this->headers
+        );
+    }
+
+    /**
+     * Список КЛАДР кодов пунктов
+     *
+     * @var null|string[] $value
+     *
+     * @return self
+     */
+    public function qRoutePoints(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['routePoints']);
+        } else {
+            $c->query['routePoints'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Список идентификаторов пунктов погрузки
+     *
+     * @var null|int[] $value
+     *
+     * @return self
+     */
+    public function qStoragePointIds(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['storagePointIds']);
+        } else {
+            $c->query['storagePointIds'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Идентификатор дочерней компании
+     *
+     * @var null|int $value
+     *
+     * @return self
+     */
+    public function qCompanyBranchId(?int $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['companyBranchId']);
+        } else {
+            $c->query['companyBranchId'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Тип грузовика
+     *
+     * @var null|int $value
+     *
+     * @return self
+     */
+    public function qTruckTypeId(?int $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['truckTypeId']);
+        } else {
+            $c->query['truckTypeId'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Вес груза(в тоннах)
+     *
+     * @var null|float $value
+     *
+     * @return self
+     */
+    public function qLoadWeight(?float $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['loadWeight']);
+        } else {
+            $c->query['loadWeight'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Объём груза(в м3)
+     *
+     * @var null|int $value
+     *
+     * @return self
+     */
+    public function qLoadCapacity(?int $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['loadCapacity']);
+        } else {
+            $c->query['loadCapacity'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Ставка НДС
+     *
+     * @var null|float $value
+     *
+     * @return self
+     */
+    public function qVatRate(?float $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['vatRate']);
+        } else {
+            $c->query['vatRate'] = $value;
+        }
+
+        return $c;
+    }
+}

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: url:/api/v2/order-document-package/{packageId}
  */
 
 declare(strict_types=1);
@@ -13,6 +14,7 @@ use Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId\Accept;
 use Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId\Document;
 use Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId\Moderation;
 use Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId\Reject;
+use Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId\Update;
 
 /**
  * url: /api/v2/order-document-package/{packageId}
@@ -24,6 +26,11 @@ final class PackageId extends AbstractBuilder
     public function document(): Document
     {
         return new Document($this->params, $this->client);
+    }
+
+    public function update(): Update
+    {
+        return new Update($this->params, $this->client);
     }
 
     public function moderation(): Moderation

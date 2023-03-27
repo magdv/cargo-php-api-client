@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/{orderId}/tag
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderEditTagRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderTagListResponse;
 
-class TagPut extends AbstractRequest
+final class TagPut extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

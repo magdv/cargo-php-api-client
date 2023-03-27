@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: driver/responses/driver-response.json
  */
 
 declare(strict_types=1);

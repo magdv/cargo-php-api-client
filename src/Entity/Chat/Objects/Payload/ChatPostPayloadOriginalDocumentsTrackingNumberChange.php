@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: chat/objects/payload/chat-post-payload-original-documents-tracking-number-change.json
  */
 
 declare(strict_types=1);

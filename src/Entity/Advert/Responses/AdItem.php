@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: advert/responses/ad-item.json
  */
 
 declare(strict_types=1);

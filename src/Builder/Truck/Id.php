@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: url:/api/v2/truck/{id}
  */
 
 declare(strict_types=1);
@@ -9,6 +10,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Truck;
 
 use Cargomart\ApiClient\AbstractBuilder;
+use Cargomart\ApiClient\Builder\Truck\Id\Activation;
 
 /**
  * url: /api/v2/truck/{id}
@@ -16,6 +18,11 @@ use Cargomart\ApiClient\AbstractBuilder;
 final class Id extends AbstractBuilder
 {
     protected const URL = '/api/v2/truck/{id}';
+
+    public function activation(): Activation
+    {
+        return new Activation($this->params, $this->client);
+    }
 
     public function delete(): IdDelete
     {

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: company/responses/company-document-item.json
  */
 
 declare(strict_types=1);

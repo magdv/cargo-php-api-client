@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: url:/api/v2/user/self
  */
 
 declare(strict_types=1);
@@ -9,6 +10,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\User;
 
 use Cargomart\ApiClient\AbstractBuilder;
+use Cargomart\ApiClient\Builder\User\Self\Certificate;
 use Cargomart\ApiClient\Builder\User\Self\ContactEmail;
 use Cargomart\ApiClient\Builder\User\Self\ContactEmailConfirm;
 use Cargomart\ApiClient\Builder\User\Self\ContactEmailResend;
@@ -16,13 +18,12 @@ use Cargomart\ApiClient\Builder\User\Self\DsPhoneVerificationCode;
 use Cargomart\ApiClient\Builder\User\Self\EmailChange;
 use Cargomart\ApiClient\Builder\User\Self\EmailCodeConfirm;
 use Cargomart\ApiClient\Builder\User\Self\EmailCodeSend;
-use Cargomart\ApiClient\Builder\User\Self\IssueCertificateReject;
-use Cargomart\ApiClient\Builder\User\Self\IssueCertificateSign;
 use Cargomart\ApiClient\Builder\User\Self\PasswordChange;
 use Cargomart\ApiClient\Builder\User\Self\PhoneChange;
 use Cargomart\ApiClient\Builder\User\Self\SmsCodeConfirm;
 use Cargomart\ApiClient\Builder\User\Self\SmsCodeSend;
 use Cargomart\ApiClient\Builder\User\Self\Token;
+use Cargomart\ApiClient\Builder\User\Self\UsedeskToken;
 
 /**
  * url: /api/v2/user/self
@@ -34,6 +35,11 @@ final class UserSelf extends AbstractBuilder
     public function passwordChange(): PasswordChange
     {
         return new PasswordChange($this->params, $this->client);
+    }
+
+    public function usedeskToken(): UsedeskToken
+    {
+        return new UsedeskToken($this->params, $this->client);
     }
 
     public function smsCodeConfirm(): SmsCodeConfirm
@@ -91,14 +97,9 @@ final class UserSelf extends AbstractBuilder
         return new DsPhoneVerificationCode($this->params, $this->client);
     }
 
-    public function issueCertificateSign(): IssueCertificateSign
+    public function certificate(): Certificate
     {
-        return new IssueCertificateSign($this->params, $this->client);
-    }
-
-    public function issueCertificateReject(): IssueCertificateReject
-    {
-        return new IssueCertificateReject($this->params, $this->client);
+        return new Certificate($this->params, $this->client);
     }
 
     public function get(): UserSelfGet
@@ -109,5 +110,10 @@ final class UserSelf extends AbstractBuilder
     public function put(): UserSelfPut
     {
         return new UserSelfPut($this->client, $this->getUrl());
+    }
+
+    public function delete(): UserSelfDelete
+    {
+        return new UserSelfDelete($this->client, $this->getUrl());
     }
 }

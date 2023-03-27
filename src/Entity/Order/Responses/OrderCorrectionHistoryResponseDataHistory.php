@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/responses/order-correction-history-response.json#/properties/data/properties/history
  */
 
 declare(strict_types=1);
@@ -13,7 +14,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderCorrectionHistoryItem;
 
 /**
  * История изменений по заявке
- * source: order/responses/order-correction-history-response.json#/properties/data#/properties/history
+ * source: order/responses/order-correction-history-response.json#/properties/data/properties/history
  *
  * @property int $correctionId
  * @property OrderCorrectionHistoryItem $oldValues

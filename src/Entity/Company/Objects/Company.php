@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: company/objects/company.json
  */
 
 declare(strict_types=1);
@@ -14,7 +15,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * Модель данных ЮЛ или ИП
  * source: company/objects/company.json
  *
- * @property \stdClass $id
+ * @property string $id
  * @property int $clientId
  * @property \stdClass $logo
  * @property string $shortName
@@ -45,7 +46,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property \stdClass $activityTypeId
  * @property \stdClass $activityTypeName
  * @property \stdClass $activityTypeAlias
- * @property \stdClass $partnerStatus
+ * @property int $partnerStatus
  * @property PartnerShortItem[] $partners
  * @property DisabledFull $disabled
  * @property bool $isCooperatingGeneralPartner
@@ -60,11 +61,12 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $isValidated
  * @property int $legalStatusId
  * @property bool $hasCompanyContactGroups
+ * @property string $countryCode
  */
 final class Company extends AbstractEntity
 {
     protected static $types = [
-        'id' => ['\stdClass'],
+        'id' => ['string'],
         'clientId' => ['int'],
         'logo' => ['\stdClass'],
         'shortName' => ['string'],
@@ -95,7 +97,7 @@ final class Company extends AbstractEntity
         'activityTypeId' => ['\stdClass'],
         'activityTypeName' => ['\stdClass'],
         'activityTypeAlias' => ['\stdClass'],
-        'partnerStatus' => ['\stdClass'],
+        'partnerStatus' => ['int'],
         'partners' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\PartnerShortItem'],
         'disabled' => ['Cargomart\ApiClient\Entity\Company\Objects\DisabledFull'],
         'isCooperatingGeneralPartner' => ['bool'],
@@ -110,10 +112,11 @@ final class Company extends AbstractEntity
         'isValidated' => ['bool'],
         'legalStatusId' => ['int'],
         'hasCompanyContactGroups' => ['bool'],
+        'countryCode' => ['string'],
     ];
 
     protected static $nullables = [
-        'id' => true,
+        'id' => false,
         'clientId' => false,
         'logo' => true,
         'shortName' => false,
@@ -144,7 +147,7 @@ final class Company extends AbstractEntity
         'activityTypeId' => true,
         'activityTypeName' => true,
         'activityTypeAlias' => true,
-        'partnerStatus' => true,
+        'partnerStatus' => false,
         'partners' => false,
         'disabled' => false,
         'isCooperatingGeneralPartner' => false,
@@ -159,5 +162,6 @@ final class Company extends AbstractEntity
         'isValidated' => false,
         'legalStatusId' => false,
         'hasCompanyContactGroups' => false,
+        'countryCode' => false,
     ];
 }

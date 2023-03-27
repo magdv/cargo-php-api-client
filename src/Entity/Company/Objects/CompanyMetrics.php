@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: company/objects/company-metrics.json
  */
 
 declare(strict_types=1);

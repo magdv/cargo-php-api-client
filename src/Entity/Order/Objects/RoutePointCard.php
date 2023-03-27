@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/objects/route-point-card.json
  */
 
 declare(strict_types=1);
@@ -9,6 +10,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
 
 /**
  * Пункт маршрута
@@ -18,15 +20,15 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $storagePointId
  * @property string $code
  * @property int $serialId
- * @property int $orderId
  * @property string $localityName
  * @property string $title
  * @property string $address
  * @property string $house
  * @property string $comment
  * @property string $additionalInfo
- * @property RoutePointContactContact[] $contact
+ * @property RoutePointContactItems[] $contact
  * @property bool $isLoad
+ * @property bool $isEdm
  * @property bool $isUnload
  * @property int $loadingTypeId
  * @property string $cargoType
@@ -41,6 +43,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property float $latitude
  * @property int $legalStatus
  * @property string $legalName
+ * @property PointShipper $pointShipper
+ * @property int[] $fileIds
  * @property int $status
  */
 final class RoutePointCard extends AbstractEntity
@@ -50,15 +54,15 @@ final class RoutePointCard extends AbstractEntity
         'storagePointId' => ['int'],
         'code' => ['string'],
         'serialId' => ['int'],
-        'orderId' => ['int'],
         'localityName' => ['string'],
         'title' => ['string'],
         'address' => ['string'],
         'house' => ['string'],
         'comment' => ['string'],
         'additionalInfo' => ['string'],
-        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointContactContact'],
+        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointContactItems'],
         'isLoad' => ['bool'],
+        'isEdm' => ['bool'],
         'isUnload' => ['bool'],
         'loadingTypeId' => ['int'],
         'cargoType' => ['string'],
@@ -73,6 +77,8 @@ final class RoutePointCard extends AbstractEntity
         'latitude' => ['float'],
         'legalStatus' => ['int'],
         'legalName' => ['string'],
+        'pointShipper' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper'],
+        'fileIds' => ['array', 'int'],
         'status' => ['int'],
     ];
 
@@ -81,7 +87,6 @@ final class RoutePointCard extends AbstractEntity
         'storagePointId' => false,
         'code' => false,
         'serialId' => false,
-        'orderId' => false,
         'localityName' => false,
         'title' => false,
         'address' => false,
@@ -90,6 +95,7 @@ final class RoutePointCard extends AbstractEntity
         'additionalInfo' => false,
         'contact' => false,
         'isLoad' => false,
+        'isEdm' => false,
         'isUnload' => false,
         'loadingTypeId' => false,
         'cargoType' => false,
@@ -104,6 +110,8 @@ final class RoutePointCard extends AbstractEntity
         'latitude' => false,
         'legalStatus' => false,
         'legalName' => false,
+        'pointShipper' => false,
+        'fileIds' => false,
         'status' => false,
     ];
 }

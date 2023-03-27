@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: driver/models/driver-old.json
  */
 
 declare(strict_types=1);
@@ -9,6 +10,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Driver\Models;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Driver\Objects\DriverAccess;
 
 /**
  * Старая модель. Пришла из v1. deprecated.
@@ -19,13 +21,14 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $phone
  * @property string[] $phones
  * @property string $licenseNumber
+ * @property string $licenceIssueDate
  * @property string $passportSeries
  * @property string $passportNumber
  * @property string $passportWhen
  * @property string $passportBy
  * @property string $birthDate
- * @property DriverOldDriverLicense[] $driverLicense
- * @property DriverOldAccess $access
+ * @property DriverOldDriverLicenseItems[] $driverLicense
+ * @property DriverAccess $access
  */
 final class DriverOld extends AbstractEntity
 {
@@ -35,13 +38,14 @@ final class DriverOld extends AbstractEntity
         'phone' => ['string'],
         'phones' => ['array', 'string'],
         'licenseNumber' => ['string'],
+        'licenceIssueDate' => ['string'],
         'passportSeries' => ['string'],
         'passportNumber' => ['string'],
         'passportWhen' => ['string'],
         'passportBy' => ['string'],
         'birthDate' => ['string'],
-        'driverLicense' => ['array', 'Cargomart\ApiClient\Entity\Driver\Models\DriverOldDriverLicense'],
-        'access' => ['Cargomart\ApiClient\Entity\Driver\Models\DriverOldAccess'],
+        'driverLicense' => ['array', 'Cargomart\ApiClient\Entity\Driver\Models\DriverOldDriverLicenseItems'],
+        'access' => ['Cargomart\ApiClient\Entity\Driver\Objects\DriverAccess'],
     ];
 
     protected static $nullables = [
@@ -50,6 +54,7 @@ final class DriverOld extends AbstractEntity
         'phone' => false,
         'phones' => false,
         'licenseNumber' => false,
+        'licenceIssueDate' => false,
         'passportSeries' => false,
         'passportNumber' => false,
         'passportWhen' => false,

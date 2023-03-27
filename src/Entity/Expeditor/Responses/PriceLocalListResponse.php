@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: expeditor/responses/price-local-list-response.json
  */
 
 declare(strict_types=1);
@@ -13,7 +14,7 @@ use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Список справочника цен
- * source: expeditor/responses/price-local-list.json
+ * source: expeditor/responses/price-local-list-response.json
  *
  * @property MessageV2[] $message
  * @property PriceLocalListResponseData $data

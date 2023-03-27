@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: tender/objects/tender-request-lot-stats.json
  */
 
 declare(strict_types=1);

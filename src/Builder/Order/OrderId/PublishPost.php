@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/{orderId}/publish
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderPublishRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderCardResponse;
 
-class PublishPost extends AbstractRequest
+final class PublishPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

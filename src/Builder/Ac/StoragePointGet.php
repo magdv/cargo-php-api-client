@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/ac/storage-point
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Ac;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\StoragePoint\Responses\StoragePointList;
 
-class StoragePointGet extends AbstractRequest
+final class StoragePointGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

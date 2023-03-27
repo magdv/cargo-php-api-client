@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order-draft-expeditor/{draftId}
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\OrderDraftExpeditor;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderDraftExpeditorCruResponse;
 
-class DraftIdGet extends AbstractRequest
+final class DraftIdGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

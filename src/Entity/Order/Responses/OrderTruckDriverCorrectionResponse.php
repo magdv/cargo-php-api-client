@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/responses/order-truck-driver-correction-response.json
  */
 
 declare(strict_types=1);

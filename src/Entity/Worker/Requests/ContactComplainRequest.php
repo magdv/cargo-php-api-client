@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: worker/requests/contact-complain-request.json
  */
 
 declare(strict_types=1);

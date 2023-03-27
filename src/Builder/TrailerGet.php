@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/trailer
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Trailer\Responses\TrailerListResponse;
 
-class TrailerGet extends AbstractRequest
+final class TrailerGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['filter[type]' => 'all'];

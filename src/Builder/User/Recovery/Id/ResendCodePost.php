@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/user/recovery/{id}/resend-code
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\User\Recovery\Id;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\User\Responses\UserRecoveryResponse;
 
-class ResendCodePost extends AbstractRequest
+final class ResendCodePost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

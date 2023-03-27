@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order-draft-ftl/validate
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderDraftFtlRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderDraftFtlValidateResponse;
 
-class ValidatePost extends AbstractRequest
+final class ValidatePost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

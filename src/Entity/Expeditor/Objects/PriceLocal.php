@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: expeditor/objects/price-local.json
  */
 
 declare(strict_types=1);
@@ -15,8 +16,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: expeditor/objects/price-local.json
  *
  * @property int $id
- * @property string $departureCode
- * @property string $destinationCode
+ * @property int $poolId
  * @property int $truckTypeId
  * @property string $consignorPrice
  * @property string $carrierPrice
@@ -28,8 +28,7 @@ final class PriceLocal extends AbstractEntity
 {
     protected static $types = [
         'id' => ['int'],
-        'departureCode' => ['string'],
-        'destinationCode' => ['string'],
+        'poolId' => ['int'],
         'truckTypeId' => ['int'],
         'consignorPrice' => ['string'],
         'carrierPrice' => ['string'],
@@ -40,8 +39,7 @@ final class PriceLocal extends AbstractEntity
 
     protected static $nullables = [
         'id' => false,
-        'departureCode' => false,
-        'destinationCode' => false,
+        'poolId' => false,
         'truckTypeId' => false,
         'consignorPrice' => false,
         'carrierPrice' => false,

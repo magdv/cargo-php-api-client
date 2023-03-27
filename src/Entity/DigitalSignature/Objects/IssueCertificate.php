@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: digital-signature/objects/issue-certificate.json
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Entity\DigitalSignature\Objects;
 use Cargomart\ApiClient\AbstractEntity;
 
 /**
- * Информация по выдаче сертификата сотруднику
+ * deprecated. Информация по выдаче сертификата сотруднику
  * source: digital-signature/objects/issue-certificate.json
  *
  * @property string $issueCertificateId

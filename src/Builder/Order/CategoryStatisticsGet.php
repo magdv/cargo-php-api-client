@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/category-statistics
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Order;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderCategoryStatisticsResponse;
 
-class CategoryStatisticsGet extends AbstractRequest
+final class CategoryStatisticsGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

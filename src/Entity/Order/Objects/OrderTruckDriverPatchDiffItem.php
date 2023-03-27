@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/objects/order-truck-driver-patch-diff-item.json
  */
 
 declare(strict_types=1);

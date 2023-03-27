@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: url:/api/v2/expeditor-proposal
  */
 
 declare(strict_types=1);
@@ -9,6 +10,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder;
 
 use Cargomart\ApiClient\AbstractBuilder;
+use Cargomart\ApiClient\Builder\ExpeditorProposal\Exists;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Ids;
 
@@ -29,6 +31,11 @@ final class ExpeditorProposal extends AbstractBuilder
     public function ids(): Ids
     {
         return new Ids($this->params, $this->client);
+    }
+
+    public function exists(): Exists
+    {
+        return new Exists($this->params, $this->client);
     }
 
     public function get(): ExpeditorProposalGet

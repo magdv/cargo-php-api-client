@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order-draft-ftl/{draftId}
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\OrderDraftFtl;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 
-class DraftIdDelete extends AbstractRequest
+final class DraftIdDelete extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

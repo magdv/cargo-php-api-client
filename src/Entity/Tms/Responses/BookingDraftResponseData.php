@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: tms/responses/booking-draft-response.json#/properties/data
  */
 
 declare(strict_types=1);

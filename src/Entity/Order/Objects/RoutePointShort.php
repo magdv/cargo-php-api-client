@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/objects/route-point-short.json
  */
 
 declare(strict_types=1);
@@ -15,6 +16,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: order/objects/route-point-short.json
  *
  * @property int $id
+ * @property string $title
  * @property int $serialId
  * @property string $localityName
  * @property string $code
@@ -28,6 +30,7 @@ final class RoutePointShort extends AbstractEntity
 {
     protected static $types = [
         'id' => ['int'],
+        'title' => ['string'],
         'serialId' => ['int'],
         'localityName' => ['string'],
         'code' => ['string'],
@@ -40,6 +43,7 @@ final class RoutePointShort extends AbstractEntity
 
     protected static $nullables = [
         'id' => false,
+        'title' => false,
         'serialId' => false,
         'localityName' => false,
         'code' => false,

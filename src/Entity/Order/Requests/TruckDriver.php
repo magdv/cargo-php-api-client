@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/requests/truck-driver.json
  */
 
 declare(strict_types=1);
@@ -16,9 +17,10 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property int $driverId
  * @property int[] $truckIds
+ * @property int $truckId
  */
 final class TruckDriver extends AbstractEntity
 {
-    protected static $types = ['driverId' => ['int'], 'truckIds' => ['array', 'int']];
-    protected static $nullables = ['driverId' => false, 'truckIds' => false];
+    protected static $types = ['driverId' => ['int'], 'truckIds' => ['array', 'int'], 'truckId' => ['int']];
+    protected static $nullables = ['driverId' => false, 'truckIds' => false, 'truckId' => false];
 }

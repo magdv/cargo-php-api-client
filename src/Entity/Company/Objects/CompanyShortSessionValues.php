@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: company/objects/company-short.json#/properties/sessionValues
  */
 
 declare(strict_types=1);

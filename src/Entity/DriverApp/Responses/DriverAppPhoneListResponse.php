@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: driver-app/responses/driver-app-phone-list-response.json
  */
 
 declare(strict_types=1);

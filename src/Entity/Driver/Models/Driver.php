@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: driver/models/driver.json
  */
 
 declare(strict_types=1);
@@ -28,10 +29,12 @@ use Cargomart\ApiClient\Entity\Driver\Objects\DriverAccess;
  * @property string $registrationAddress
  * @property string $licenceNumber
  * @property string $licenceIssueDate
+ * @property string $licenceType
+ * @property string $licenceSeries
  * @property string $inn
  * @property int $validationStatus
  * @property string $driverAppStatus
- * @property DriverDriverAppDetail[] $driverAppDetail
+ * @property DriverDriverAppDetailItems[] $driverAppDetail
  * @property DriverAccess $access
  */
 final class Driver extends AbstractEntity
@@ -50,10 +53,12 @@ final class Driver extends AbstractEntity
         'registrationAddress' => ['string'],
         'licenceNumber' => ['string'],
         'licenceIssueDate' => ['string'],
+        'licenceType' => ['string'],
+        'licenceSeries' => ['string'],
         'inn' => ['string'],
         'validationStatus' => ['int'],
         'driverAppStatus' => ['string'],
-        'driverAppDetail' => ['array', 'Cargomart\ApiClient\Entity\Driver\Models\DriverDriverAppDetail'],
+        'driverAppDetail' => ['array', 'Cargomart\ApiClient\Entity\Driver\Models\DriverDriverAppDetailItems'],
         'access' => ['Cargomart\ApiClient\Entity\Driver\Objects\DriverAccess'],
     ];
 
@@ -71,6 +76,8 @@ final class Driver extends AbstractEntity
         'registrationAddress' => false,
         'licenceNumber' => false,
         'licenceIssueDate' => false,
+        'licenceType' => false,
+        'licenceSeries' => false,
         'inn' => false,
         'validationStatus' => false,
         'driverAppStatus' => false,

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/objects/order-correction-item.json
  */
 
 declare(strict_types=1);
@@ -27,6 +28,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string[] $conditions
  * @property \stdClass $vatRate
  * @property string $currentPrice
+ * @property string $currencyCode
  * @property RoutePointCard[] $point
  * @property int[] $contact
  * @property string $commentForConsignor
@@ -49,6 +51,7 @@ final class OrderCorrectionItem extends AbstractEntity
         'conditions' => ['array', 'string'],
         'vatRate' => ['\stdClass'],
         'currentPrice' => ['string'],
+        'currencyCode' => ['string'],
         'point' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointCard'],
         'contact' => ['array', 'int'],
         'commentForConsignor' => ['string'],
@@ -70,6 +73,7 @@ final class OrderCorrectionItem extends AbstractEntity
         'conditions' => false,
         'vatRate' => true,
         'currentPrice' => false,
+        'currencyCode' => false,
         'point' => false,
         'contact' => false,
         'commentForConsignor' => false,

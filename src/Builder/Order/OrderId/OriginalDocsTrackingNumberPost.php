@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/{orderId}/original-docs-tracking-number
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\TrackingNumberRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderCardResponse;
 
-class OriginalDocsTrackingNumberPost extends AbstractRequest
+final class OriginalDocsTrackingNumberPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

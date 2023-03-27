@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: expeditor/responses/proposal-list-ids-response.json#/properties/data
  */
 
 declare(strict_types=1);

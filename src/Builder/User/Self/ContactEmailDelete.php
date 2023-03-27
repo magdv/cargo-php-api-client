@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/user/self/contact-email
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\User\Self;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\User\Responses\UserFullResponse;
 
-class ContactEmailDelete extends AbstractRequest
+final class ContactEmailDelete extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

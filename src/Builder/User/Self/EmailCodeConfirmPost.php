@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/user/self/email-code-confirm
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\User\Requests\UserConfirmEmailRequest;
 use Cargomart\ApiClient\Entity\User\Responses\UserFullResponse;
 
-class EmailCodeConfirmPost extends AbstractRequest
+final class EmailCodeConfirmPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

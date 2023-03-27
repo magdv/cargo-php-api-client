@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/{orderId}/broker
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\BrokerPutRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\BrokerResponse;
 
-class BrokerPut extends AbstractRequest
+final class BrokerPut extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

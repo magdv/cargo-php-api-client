@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/driver-app/invite
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\DriverApp\Requests\DriverAppInvitePostRequest;
 use Cargomart\ApiClient\Entity\DriverApp\Responses\DriverAppPhoneItemResponse;
 
-class InvitePost extends AbstractRequest
+final class InvitePost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

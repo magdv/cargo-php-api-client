@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/{orderId}/pin
  */
 
 declare(strict_types=1);
@@ -9,9 +10,9 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
+use Cargomart\ApiClient\Entity\Order\Responses\OrderPinResponse;
 
-class PinDelete extends AbstractRequest
+final class PinDelete extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -22,16 +23,16 @@ class PinDelete extends AbstractRequest
     /**
      * Удаление заказа из списка закрепленных.
      *
-     * @return EmptyDataResponse
+     * @return OrderPinResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): EmptyDataResponse
+    public function do(): OrderPinResponse
     {
         return $this->client->doRequest(
             'DELETE',
             $this->url,
-            EmptyDataResponse::class,
+            OrderPinResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

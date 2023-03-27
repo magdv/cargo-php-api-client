@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/company-confirmation/validation
  */
 
 declare(strict_types=1);
@@ -9,9 +10,9 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\CompanyConfirmation;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\CompanyConfirmation\Responses\Status;
+use Cargomart\ApiClient\Entity\CompanyConfirmation\Responses\StatusResponse;
 
-class ValidationGet extends AbstractRequest
+final class ValidationGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -22,16 +23,16 @@ class ValidationGet extends AbstractRequest
     /**
      * Получение текущего статуса валидации.
      *
-     * @return Status
+     * @return StatusResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): Status
+    public function do(): StatusResponse
     {
         return $this->client->doRequest(
             'GET',
             $this->url,
-            Status::class,
+            StatusResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

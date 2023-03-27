@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/objects/order-draft-expeditor-edit-item.json
  */
 
 declare(strict_types=1);
@@ -42,6 +43,9 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $price
  * @property float $vatRate
  * @property string[] $tag
+ * @property string $priceStrategyType
+ * @property string $biddingType
+ * @property OrderDraftExpeditorBidding $bidding
  * @property OrderDraftFtlAccess $access
  */
 final class OrderDraftExpeditorEditItem extends AbstractEntity
@@ -75,6 +79,9 @@ final class OrderDraftExpeditorEditItem extends AbstractEntity
         'price' => ['string'],
         'vatRate' => ['float'],
         'tag' => ['array', 'string'],
+        'priceStrategyType' => ['string'],
+        'biddingType' => ['string'],
+        'bidding' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorBidding'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderDraftFtlAccess'],
     ];
 
@@ -107,6 +114,9 @@ final class OrderDraftExpeditorEditItem extends AbstractEntity
         'price' => false,
         'vatRate' => false,
         'tag' => false,
+        'priceStrategyType' => false,
+        'biddingType' => false,
+        'bidding' => false,
         'access' => false,
     ];
 }

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/{id}/patch
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderPatchRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderPatchResponse;
 
-class PatchPost extends AbstractRequest
+final class PatchPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -21,7 +22,7 @@ class PatchPost extends AbstractRequest
     public $headers = [];
 
     /**
-     * Создание запроса на изменение заказа.
+     * @deprecated использовать /api/v2/expeditor-proposal/{id}/patch
      *
      * @return OrderPatchResponse
      *

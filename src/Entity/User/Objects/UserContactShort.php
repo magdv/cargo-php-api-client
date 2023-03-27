@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: user/objects/user-contact-short.json
  */
 
 declare(strict_types=1);

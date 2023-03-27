@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order-draft-expeditor/conditions
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\OrderDraftExpeditor;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderDraftExpeditorConditionsResponse;
 
-class ConditionsGet extends AbstractRequest
+final class ConditionsGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -20,7 +21,7 @@ class ConditionsGet extends AbstractRequest
     public $headers = [];
 
     /**
-     * Получить цену по маршруту и условия оплаты
+     * Получить условия перевозки
      *
      * @return OrderDraftExpeditorConditionsResponse
      *
@@ -71,25 +72,6 @@ class ConditionsGet extends AbstractRequest
             unset($c->query['companyBranchId']);
         } else {
             $c->query['companyBranchId'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
-     * Тип грузовика
-     *
-     * @var null|int $value
-     *
-     * @return self
-     */
-    public function qTruckTypeId(?int $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['truckTypeId']);
-        } else {
-            $c->query['truckTypeId'] = $value;
         }
 
         return $c;

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/ac/worker
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Order\Ac;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\AcWorkerResponse;
 
-class WorkerGet extends AbstractRequest
+final class WorkerGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

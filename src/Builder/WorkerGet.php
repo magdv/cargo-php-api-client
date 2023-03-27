@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/worker
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Worker\Responses\WorkerListResponse;
 
-class WorkerGet extends AbstractRequest
+final class WorkerGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['filter[blockedStatus]' => 'active', 'page' => 1, 'perPage' => 20];

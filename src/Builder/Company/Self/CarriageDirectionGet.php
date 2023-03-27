@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/company/self/carriage-direction
  */
 
 declare(strict_types=1);
@@ -9,9 +10,9 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Company\Self;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Company\Responses\CarriageDirection;
+use Cargomart\ApiClient\Entity\Company\Responses\CompanyCarriageDirectionResponse;
 
-class CarriageDirectionGet extends AbstractRequest
+final class CarriageDirectionGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -22,16 +23,16 @@ class CarriageDirectionGet extends AbstractRequest
     /**
      * Направления своих перевозок.
      *
-     * @return CarriageDirection
+     * @return CompanyCarriageDirectionResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): CarriageDirection
+    public function do(): CompanyCarriageDirectionResponse
     {
         return $this->client->doRequest(
             'GET',
             $this->url,
-            CarriageDirection::class,
+            CompanyCarriageDirectionResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/setting
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Setting\Responses\SettingList;
 
-class SettingGet extends AbstractRequest
+final class SettingGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: company/objects/partner-short-item.json
  */
 
 declare(strict_types=1);

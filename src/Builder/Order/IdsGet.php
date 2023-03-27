@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/ids
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Order;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderIdsResponse;
 
-class IdsGet extends AbstractRequest
+final class IdsGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['filter[orderType]' => ['auction', 'auctionNoPrice'], 'page' => 1, 'perPage' => 20];
@@ -457,7 +458,7 @@ class IdsGet extends AbstractRequest
     }
 
     /**
-     * Массив id cтатусов заказов. 100 - нет ставок, 250 - не подтвержден, 240 - подтвержден, 110 - отказ перевозчика, 120 - отказ отправителя, 6 - в рейсе, 7 - исполнен, 21 - на модерации, 22 - отклонен с модерации.
+     * Массив id статусов заказов. 100 - нет ставок, 250 - не подтвержден, 240 - подтвержден, 110 - отказ перевозчика, 120 - отказ отправителя, 6 - в рейсе, 7 - исполнен, 21 - на модерации, 22 - отклонен с модерации.
      *
      * @var null|int[] $value
      *
@@ -704,25 +705,6 @@ class IdsGet extends AbstractRequest
     }
 
     /**
-     * Только заказы, которые надо оценить
-     *
-     * @var null|bool $value
-     *
-     * @return self
-     */
-    public function qFilterCreateQualityScore(?bool $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['filter[createQualityScore]']);
-        } else {
-            $c->query['filter[createQualityScore]'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
      * Статус архивации заказа
      *
      * @var null|string $value
@@ -736,6 +718,63 @@ class IdsGet extends AbstractRequest
             unset($c->query['filter[archiveStatus]']);
         } else {
             $c->query['filter[archiveStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Заказы дочерней компании
+     *
+     * @var null|int $value
+     *
+     * @return self
+     */
+    public function qFilterBranchId(?int $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[branchId]']);
+        } else {
+            $c->query['filter[branchId]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Хэш компании, который передается вместе с branchId если нужно включить заказы дочерних компаний (весь холдинг)
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterConsignorParent(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[consignorParent]']);
+        } else {
+            $c->query['filter[consignorParent]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Фильтр подписей.
+     *
+     * @var null|string[] $value
+     *
+     * @return self
+     */
+    public function qFilterSignStatus(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[signStatus]']);
+        } else {
+            $c->query['filter[signStatus]'] = $value;
         }
 
         return $c;

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: dictionary/responses/dictionary-list.json#/properties/data
  */
 
 declare(strict_types=1);
@@ -11,6 +12,7 @@ namespace Cargomart\ApiClient\Entity\Dictionary\Responses;
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\ActivityType;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\CarPerPeriod;
+use Cargomart\ApiClient\Entity\Dictionary\Objects\CountryItem;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\Currency;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\DocumentType;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\DriverLicense;
@@ -54,6 +56,7 @@ use Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleType;
  * @property LegalStatus[] $legalStatus
  * @property OrderDocumentType[] $orderDocumentType
  * @property SimpleDocumentTitleType[] $simpleDocumentTitleType
+ * @property CountryItem[] $country
  */
 final class DictionaryListData extends AbstractEntity
 {
@@ -78,6 +81,7 @@ final class DictionaryListData extends AbstractEntity
         'legalStatus' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\LegalStatus'],
         'orderDocumentType' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDocumentType'],
         'simpleDocumentTitleType' => ['array', 'Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleType'],
+        'country' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\CountryItem'],
     ];
 
     protected static $nullables = [
@@ -101,5 +105,6 @@ final class DictionaryListData extends AbstractEntity
         'legalStatus' => false,
         'orderDocumentType' => false,
         'simpleDocumentTitleType' => false,
+        'country' => false,
     ];
 }

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/booking/request
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Tms\Requests\BookingCreateRequest;
 use Cargomart\ApiClient\Entity\Tms\Responses\BookingDraftResponse;
 
-class RequestPost extends AbstractRequest
+final class RequestPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/worker/{id}
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Worker\Requests\WorkerChangeRequest;
 use Cargomart\ApiClient\Entity\Worker\Responses\WorkerResponse;
 
-class IdPut extends AbstractRequest
+final class IdPut extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

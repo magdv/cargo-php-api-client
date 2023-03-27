@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: registration/objects/object-reg.json
  */
 
 declare(strict_types=1);

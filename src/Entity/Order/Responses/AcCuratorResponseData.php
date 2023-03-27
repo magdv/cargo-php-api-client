@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/responses/ac-curator-response.json#/properties/data
  */
 
 declare(strict_types=1);
@@ -14,13 +15,13 @@ use Cargomart\ApiClient\Entity\Base\Pagination;
 /**
  * source: order/responses/ac-curator-response.json#/properties/data
  *
- * @property AcCuratorResponseDataCurator[] $curator
+ * @property AcCuratorResponseDataCuratorItems[] $curator
  * @property Pagination $pagination
  */
 final class AcCuratorResponseData extends AbstractEntity
 {
     protected static $types = [
-        'curator' => ['array', 'Cargomart\ApiClient\Entity\Order\Responses\AcCuratorResponseDataCurator'],
+        'curator' => ['array', 'Cargomart\ApiClient\Entity\Order\Responses\AcCuratorResponseDataCuratorItems'],
         'pagination' => ['Cargomart\ApiClient\Entity\Base\Pagination'],
     ];
 

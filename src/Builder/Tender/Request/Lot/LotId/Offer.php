@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: url:/api/v2/tender/request/lot/{lotId}/offer
  */
 
 declare(strict_types=1);

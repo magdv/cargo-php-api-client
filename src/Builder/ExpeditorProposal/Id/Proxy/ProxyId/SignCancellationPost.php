@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/expeditor-proposal/{id}/proxy/{proxyId}/sign-cancellation
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Requests\ProposalProxySignRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Responses\ProposalCardResponse;
 
-class SignCancellationPost extends AbstractRequest
+final class SignCancellationPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

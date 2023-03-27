@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: storage-point/requests/sp-point.json
  */
 
 declare(strict_types=1);
@@ -10,6 +11,7 @@ namespace Cargomart\ApiClient\Entity\StoragePoint\Requests;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointEmailContact;
+use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
 
 /**
  * Структура тела запроса на добавление/редактирование пункта погрузки
@@ -18,16 +20,19 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointEmailContact;
  * @property string $title
  * @property string $code
  * @property string $address
+ * @property \stdClass $addressObject
  * @property string $house
  * @property string $comment
  * @property float $latitude
  * @property float $longitude
  * @property int[] $fileIds
  * @property SpContact[] $contact
- * @property float $legalStatus
+ * @property int $legalStatus
  * @property string $legalName
  * @property string $externalId
  * @property PointEmailContact[] $emailList
+ * @property bool $isEdm
+ * @property PointShipper $pointShipper
  */
 final class SpPoint extends AbstractEntity
 {
@@ -35,22 +40,26 @@ final class SpPoint extends AbstractEntity
         'title' => ['string'],
         'code' => ['string'],
         'address' => ['string'],
+        'addressObject' => ['\stdClass'],
         'house' => ['string'],
         'comment' => ['string'],
         'latitude' => ['float'],
         'longitude' => ['float'],
         'fileIds' => ['array', 'int'],
         'contact' => ['array', 'Cargomart\ApiClient\Entity\StoragePoint\Requests\SpContact'],
-        'legalStatus' => ['float'],
+        'legalStatus' => ['int'],
         'legalName' => ['string'],
         'externalId' => ['string'],
         'emailList' => ['array', 'Cargomart\ApiClient\Entity\StoragePoint\Objects\PointEmailContact'],
+        'isEdm' => ['bool'],
+        'pointShipper' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper'],
     ];
 
     protected static $nullables = [
         'title' => false,
         'code' => false,
         'address' => false,
+        'addressObject' => true,
         'house' => false,
         'comment' => false,
         'latitude' => false,
@@ -61,5 +70,7 @@ final class SpPoint extends AbstractEntity
         'legalName' => false,
         'externalId' => false,
         'emailList' => false,
+        'isEdm' => false,
+        'pointShipper' => false,
     ];
 }

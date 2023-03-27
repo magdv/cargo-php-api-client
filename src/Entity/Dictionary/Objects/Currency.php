@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: dictionary/objects/currency.json
  */
 
 declare(strict_types=1);

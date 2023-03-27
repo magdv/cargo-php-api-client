@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: tms/objects/booking-draft.json
  */
 
 declare(strict_types=1);

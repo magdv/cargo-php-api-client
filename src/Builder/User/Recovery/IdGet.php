@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/user/recovery/{id}
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\User\Recovery;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\User\Responses\UserRecoveryResponse;
 
-class IdGet extends AbstractRequest
+final class IdGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

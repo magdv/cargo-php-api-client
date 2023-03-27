@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: storage-point/objects/point-email-contact.json
  */
 
 declare(strict_types=1);

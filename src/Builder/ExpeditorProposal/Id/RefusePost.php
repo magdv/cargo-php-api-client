@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/expeditor-proposal/{id}/refuse
  */
 
 declare(strict_types=1);
@@ -12,7 +13,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Requests\ProposalRefuseRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Responses\ProposalCardResponse;
 
-class RefusePost extends AbstractRequest
+final class RefusePost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

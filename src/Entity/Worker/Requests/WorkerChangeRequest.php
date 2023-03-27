@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: worker/requests/worker-change-request.json
  */
 
 declare(strict_types=1);

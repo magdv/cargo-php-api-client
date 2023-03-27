@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: expeditor/responses/proposal-card-response.json#/properties/data
  */
 
 declare(strict_types=1);
@@ -9,6 +10,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Expeditor\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Company\Objects\CompanyBranch;
 use Cargomart\ApiClient\Entity\Company\Objects\CompanyShort;
 use Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalCardFull;
 use Cargomart\ApiClient\Entity\Locality\Objects\Locality;
@@ -21,6 +23,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
  * @property ProposalCardFull $proposal
  * @property Locality[] $locality
  * @property CompanyShort[] $company
+ * @property CompanyBranch[] $companyBranch
  * @property UserContactShort[] $contact
  */
 final class ProposalCardResponseData extends AbstractEntity
@@ -29,8 +32,15 @@ final class ProposalCardResponseData extends AbstractEntity
         'proposal' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalCardFull'],
         'locality' => ['array', 'Cargomart\ApiClient\Entity\Locality\Objects\Locality'],
         'company' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CompanyShort'],
+        'companyBranch' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CompanyBranch'],
         'contact' => ['array', 'Cargomart\ApiClient\Entity\User\Objects\UserContactShort'],
     ];
 
-    protected static $nullables = ['proposal' => false, 'locality' => false, 'company' => false, 'contact' => false];
+    protected static $nullables = [
+        'proposal' => false,
+        'locality' => false,
+        'company' => false,
+        'companyBranch' => false,
+        'contact' => false,
+    ];
 }

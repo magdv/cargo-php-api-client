@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/company/{hash}/branch
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Company\Hash;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Responses\CompanyBranchResponse;
 
-class BranchGet extends AbstractRequest
+final class BranchGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -52,6 +53,25 @@ class BranchGet extends AbstractRequest
             unset($c->query['filter[hasActiveGpContract]']);
         } else {
             $c->query['filter[hasActiveGpContract]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Является ли компания головной
+     *
+     * @var null|bool $value
+     *
+     * @return self
+     */
+    public function qFilterIsMain(?bool $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[isMain]']);
+        } else {
+            $c->query['filter[isMain]'] = $value;
         }
 
         return $c;

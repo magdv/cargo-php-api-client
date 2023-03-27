@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: candidate/responses/candidate-response.json
  */
 
 declare(strict_types=1);

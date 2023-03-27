@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: company/responses/company-locality-response.json#/properties/data
  */
 
 declare(strict_types=1);

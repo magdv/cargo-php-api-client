@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/user/self/email-code-send
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\User\Self;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\User\Responses\UserFullResponse;
 
-class EmailCodeSendPost extends AbstractRequest
+final class EmailCodeSendPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -20,7 +21,7 @@ class EmailCodeSendPost extends AbstractRequest
     public $headers = [];
 
     /**
-     * Посылает повторные еmail с кодом подтверждения.
+     * Посылает повторные email с кодом подтверждения.
      *
      * @return UserFullResponse
      *

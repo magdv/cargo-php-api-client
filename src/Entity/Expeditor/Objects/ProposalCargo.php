@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: expeditor/objects/proposal-cargo.json
  */
 
 declare(strict_types=1);
@@ -9,7 +10,6 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Expeditor\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\Base\TemperatureRange;
 
 /**
  * Объект с ценами
@@ -22,7 +22,7 @@ use Cargomart\ApiClient\Entity\Base\TemperatureRange;
  * @property string[] $conditions
  * @property string[] $devices
  * @property int $truckType
- * @property TemperatureRange $temperature
+ * @property \stdClass $temperature
  * @property int[] $loading
  * @property string $description
  */
@@ -36,7 +36,7 @@ final class ProposalCargo extends AbstractEntity
         'conditions' => ['array', 'string'],
         'devices' => ['array', 'string'],
         'truckType' => ['int'],
-        'temperature' => ['Cargomart\ApiClient\Entity\Base\TemperatureRange'],
+        'temperature' => ['\stdClass'],
         'loading' => ['array', 'int'],
         'description' => ['string'],
     ];
@@ -49,7 +49,7 @@ final class ProposalCargo extends AbstractEntity
         'conditions' => false,
         'devices' => false,
         'truckType' => false,
-        'temperature' => false,
+        'temperature' => true,
         'loading' => false,
         'description' => false,
     ];

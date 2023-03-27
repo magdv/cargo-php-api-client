@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: simple-document/objects/simple-document-title.json
  */
 
 declare(strict_types=1);
@@ -17,6 +18,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $id
  * @property string $type
  * @property SimpleDocumentTitleSigner[] $signer
+ * @property SimpleDocumentTitleResolution $resolution
  */
 final class SimpleDocumentTitle extends AbstractEntity
 {
@@ -24,7 +26,8 @@ final class SimpleDocumentTitle extends AbstractEntity
         'id' => ['string'],
         'type' => ['string'],
         'signer' => ['array', 'Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleSigner'],
+        'resolution' => ['Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleResolution'],
     ];
 
-    protected static $nullables = ['id' => false, 'type' => false, 'signer' => false];
+    protected static $nullables = ['id' => false, 'type' => false, 'signer' => false, 'resolution' => false];
 }

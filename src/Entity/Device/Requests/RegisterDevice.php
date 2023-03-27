@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: device/requests/register-device.json
  */
 
 declare(strict_types=1);

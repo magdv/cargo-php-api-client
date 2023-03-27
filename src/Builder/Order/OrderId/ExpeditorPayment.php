@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: url:/api/v2/order/{orderId}/expeditor-payment
  */
 
 declare(strict_types=1);
@@ -20,10 +21,5 @@ final class ExpeditorPayment extends AbstractBuilder
     public function get(): ExpeditorPaymentGet
     {
         return new ExpeditorPaymentGet($this->client, $this->getUrl());
-    }
-
-    public function put(): ExpeditorPaymentPut
-    {
-        return new ExpeditorPaymentPut($this->client, $this->getUrl());
     }
 }

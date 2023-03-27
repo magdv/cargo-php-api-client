@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/order/{orderId}/fix-price
  */
 
 declare(strict_types=1);
@@ -9,9 +10,9 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderFixedPriceResponse;
+use Cargomart\ApiClient\Entity\Order\Responses\OrderFixPriceResponse;
 
-class FixPriceGet extends AbstractRequest
+final class FixPriceGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -22,16 +23,16 @@ class FixPriceGet extends AbstractRequest
     /**
      * Зафиксировать цену заказа
      *
-     * @return OrderFixedPriceResponse
+     * @return OrderFixPriceResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): OrderFixedPriceResponse
+    public function do(): OrderFixPriceResponse
     {
         return $this->client->doRequest(
             'GET',
             $this->url,
-            OrderFixedPriceResponse::class,
+            OrderFixPriceResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

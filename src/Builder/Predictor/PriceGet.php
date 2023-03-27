@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/predictor/price
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\Predictor;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Predictor\Responses\PricePredictorResponse;
 
-class PriceGet extends AbstractRequest
+final class PriceGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -71,6 +72,25 @@ class PriceGet extends AbstractRequest
             unset($c->query['destinationCode']);
         } else {
             $c->query['destinationCode'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Коды городов маршрута
+     *
+     * @var null|string[] $value
+     *
+     * @return self
+     */
+    public function qPoints(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['points']);
+        } else {
+            $c->query['points'] = $value;
         }
 
         return $c;

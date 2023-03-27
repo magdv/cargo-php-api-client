@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/expeditor-proposal/ids
  */
 
 declare(strict_types=1);
@@ -11,7 +12,7 @@ namespace Cargomart\ApiClient\Builder\ExpeditorProposal;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Responses\ProposalListIdsResponse;
 
-class IdsGet extends AbstractRequest
+final class IdsGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['page' => 1, 'perPage' => 20];
@@ -134,7 +135,7 @@ class IdsGet extends AbstractRequest
     }
 
     /**
-     * Массив id cтатусов заказов.
+     * Массив id статусов заказов.
      *
      * @var null|int[] $value
      *
@@ -242,6 +243,44 @@ class IdsGet extends AbstractRequest
             unset($c->query['filter[consignor]']);
         } else {
             $c->query['filter[consignor]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Заказы дочерней компании
+     *
+     * @var null|int $value
+     *
+     * @return self
+     */
+    public function qFilterBranchId(?int $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[branchId]']);
+        } else {
+            $c->query['filter[branchId]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Хэш компании, который передается вместе с branchId если нужно включить заказы дочерних компаний (весь холдинг)
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterConsignorParent(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[consignorParent]']);
+        } else {
+            $c->query['filter[consignorParent]'] = $value;
         }
 
         return $c;
@@ -356,6 +395,196 @@ class IdsGet extends AbstractRequest
             unset($c->query['filter[documentOriginalsStatus]']);
         } else {
             $c->query['filter[documentOriginalsStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Фильтр по наличию перевозчика.
+     *
+     * @var null|bool $value
+     *
+     * @return self
+     */
+    public function qFilterHasCarrier(?bool $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[hasCarrier]']);
+        } else {
+            $c->query['filter[hasCarrier]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Наличие отказа для заказа по его типу
+     *
+     * @var null|string[] $value
+     *
+     * @return self
+     */
+    public function qFilterExpeditorOrderRefuseType(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[expeditorOrderRefuseType]']);
+        } else {
+            $c->query['filter[expeditorOrderRefuseType]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Выборка по статусу назначения водителей
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterDriverStatus(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[driverStatus]']);
+        } else {
+            $c->query['filter[driverStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Список статусов запроса на изменение заказа. 1 - ожидает подтверждение от отправителя, 2 - ожидает подтверждения от перевозчика, 3 - принят ввсеми сторонами, 4 - отозван экспедитором до согласования с перевозчиком, 5 - отклонен отправителем, 6 - отклонен перевозчиком, 7 - отозвано экспедитором до согласования с заказчиком
+     *
+     * @var null|int[] $value
+     *
+     * @return self
+     */
+    public function qFilterPatchStatus(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[patchStatus]']);
+        } else {
+            $c->query['filter[patchStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Статус проверки пакетов документов (сканов)
+     *
+     * @var null|string[] $value
+     *
+     * @return self
+     */
+    public function qFilterDocumentPackageStatus(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[documentPackageStatus]']);
+        } else {
+            $c->query['filter[documentPackageStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Выборка по статусу оплат перевозчику
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterCarrierPaidStatus(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[carrierPaidStatus]']);
+        } else {
+            $c->query['filter[carrierPaidStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Фильтр подписей.
+     *
+     * @var null|string[] $value
+     *
+     * @return self
+     */
+    public function qFilterSignStatus(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[signStatus]']);
+        } else {
+            $c->query['filter[signStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Идентификатор куратора со стороны заказчика.
+     *
+     * @var null|int $value
+     *
+     * @return self
+     */
+    public function qFilterConsignorCurator(?int $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[consignorCurator]']);
+        } else {
+            $c->query['filter[consignorCurator]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Фильтр наличия предложений (в том числе ставок перевозчика).
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterHasExpeditorOffers(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[hasExpeditorOffers]']);
+        } else {
+            $c->query['filter[hasExpeditorOffers]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Фильтр по типу согласования цены.
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterExpeditorPriceType(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[expeditorPriceType]']);
+        } else {
+            $c->query['filter[expeditorPriceType]'] = $value;
         }
 
         return $c;

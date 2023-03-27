@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: req:/api/v2/company/self/carriage-region
  */
 
 declare(strict_types=1);
@@ -10,9 +11,9 @@ namespace Cargomart\ApiClient\Builder\Company\Self;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Objects\CarriageRegion;
-use Cargomart\ApiClient\Entity\Company\Responses\CarriageRegion;
+use Cargomart\ApiClient\Entity\Company\Responses\CompanyCarriageRegionResponse;
 
-class CarriageRegionPatch extends AbstractRequest
+final class CarriageRegionPatch extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -23,16 +24,16 @@ class CarriageRegionPatch extends AbstractRequest
     /**
      * Области перевозок.
      *
-     * @return CarriageRegion
+     * @return CompanyCarriageRegionResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(CarriageRegion $body): CarriageRegion
+    public function do(CarriageRegion $body): CompanyCarriageRegionResponse
     {
         return $this->client->doRequest(
             'PATCH',
             $this->url,
-            CarriageRegion::class,
+            CompanyCarriageRegionResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

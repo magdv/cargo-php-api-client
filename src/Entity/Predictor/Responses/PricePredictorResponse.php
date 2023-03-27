@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: predictor/responses/price-predictor-response.json
  */
 
 declare(strict_types=1);

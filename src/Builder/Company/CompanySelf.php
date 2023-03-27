@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: url:/api/v2/company/self
  */
 
 declare(strict_types=1);
@@ -14,6 +15,7 @@ use Cargomart\ApiClient\Builder\Company\Self\CarriageDirection;
 use Cargomart\ApiClient\Builder\Company\Self\CarriageRegion;
 use Cargomart\ApiClient\Builder\Company\Self\CarrierCount;
 use Cargomart\ApiClient\Builder\Company\Self\CommunicationContacts;
+use Cargomart\ApiClient\Builder\Company\Self\ExpeditorContract;
 use Cargomart\ApiClient\Builder\Company\Self\Logo;
 use Cargomart\ApiClient\Builder\Company\Self\PartnerConditions;
 use Cargomart\ApiClient\Builder\Company\Self\Requirement;
@@ -69,6 +71,11 @@ final class CompanySelf extends AbstractBuilder
     public function carPark(): CarPark
     {
         return new CarPark($this->params, $this->client);
+    }
+
+    public function expeditorContract(): ExpeditorContract
+    {
+        return new ExpeditorContract($this->params, $this->client);
     }
 
     public function get(): CompanySelfGet

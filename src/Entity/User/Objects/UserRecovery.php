@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: user/objects/user-recovery.json
  */
 
 declare(strict_types=1);

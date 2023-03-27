@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: tms/objects/booking-draft-order-point.json
  */
 
 declare(strict_types=1);

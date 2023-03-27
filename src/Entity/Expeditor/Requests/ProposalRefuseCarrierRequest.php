@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: expeditor/requests/proposal-refuse-carrier-request.json
  */
 
 declare(strict_types=1);

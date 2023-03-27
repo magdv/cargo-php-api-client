@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: order/requests/order-draft-expeditor-update-request.json
  */
 
 declare(strict_types=1);
@@ -9,6 +10,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Requests;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorBidding;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftFtlPoint;
 use Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange;
 
@@ -32,10 +34,15 @@ use Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange;
  * @property int[] $loading
  * @property string[] $device
  * @property string[] $conditions
+ * @property int $paymentTypeId
  * @property string $paymentDetail
+ * @property string $currencyCode
  * @property int $companyBranchId
  * @property int[] $contact
  * @property string[] $tag
+ * @property string $priceStrategyType
+ * @property string $biddingType
+ * @property OrderDraftExpeditorBidding $bidding
  */
 final class OrderDraftExpeditorUpdateRequest extends AbstractEntity
 {
@@ -56,10 +63,15 @@ final class OrderDraftExpeditorUpdateRequest extends AbstractEntity
         'loading' => ['array', 'int'],
         'device' => ['array', 'string'],
         'conditions' => ['array', 'string'],
+        'paymentTypeId' => ['int'],
         'paymentDetail' => ['string'],
+        'currencyCode' => ['string'],
         'companyBranchId' => ['int'],
         'contact' => ['array', 'int'],
         'tag' => ['array', 'string'],
+        'priceStrategyType' => ['string'],
+        'biddingType' => ['string'],
+        'bidding' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorBidding'],
     ];
 
     protected static $nullables = [
@@ -79,9 +91,14 @@ final class OrderDraftExpeditorUpdateRequest extends AbstractEntity
         'loading' => false,
         'device' => false,
         'conditions' => false,
+        'paymentTypeId' => false,
         'paymentDetail' => false,
+        'currencyCode' => false,
         'companyBranchId' => false,
         'contact' => false,
         'tag' => false,
+        'priceStrategyType' => false,
+        'biddingType' => false,
+        'bidding' => false,
     ];
 }

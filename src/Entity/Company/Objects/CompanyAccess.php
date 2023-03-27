@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: company/objects/company-access.json
  */
 
 declare(strict_types=1);
@@ -18,6 +19,10 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $update
  * @property bool $truckList
  * @property bool $documentView
+ * @property bool $createContractType
+ * @property bool $updateContractType
+ * @property bool $listContractType
+ * @property bool $viewContractType
  * @property bool $partnerSend
  * @property bool $partnerAccept
  * @property bool $partnerReject
@@ -52,6 +57,10 @@ final class CompanyAccess extends AbstractEntity
         'update' => ['bool'],
         'truckList' => ['bool'],
         'documentView' => ['bool'],
+        'createContractType' => ['bool'],
+        'updateContractType' => ['bool'],
+        'listContractType' => ['bool'],
+        'viewContractType' => ['bool'],
         'partnerSend' => ['bool'],
         'partnerAccept' => ['bool'],
         'partnerReject' => ['bool'],
@@ -85,6 +94,10 @@ final class CompanyAccess extends AbstractEntity
         'update' => false,
         'truckList' => false,
         'documentView' => false,
+        'createContractType' => false,
+        'updateContractType' => false,
+        'listContractType' => false,
+        'viewContractType' => false,
         'partnerSend' => false,
         'partnerAccept' => false,
         'partnerReject' => false,

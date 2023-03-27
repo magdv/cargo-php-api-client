@@ -2,6 +2,7 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ * src: url:/api/v2/order
  */
 
 declare(strict_types=1);
@@ -14,6 +15,7 @@ use Cargomart\ApiClient\Builder\Order\Broker;
 use Cargomart\ApiClient\Builder\Order\CategoryStatistics;
 use Cargomart\ApiClient\Builder\Order\Count;
 use Cargomart\ApiClient\Builder\Order\Excel;
+use Cargomart\ApiClient\Builder\Order\Exists;
 use Cargomart\ApiClient\Builder\Order\Id;
 use Cargomart\ApiClient\Builder\Order\Ids;
 use Cargomart\ApiClient\Builder\Order\Import;
@@ -26,36 +28,11 @@ final class Order extends AbstractBuilder
 {
     protected const URL = '/api/v2/order';
 
-    public function excel(): Excel
-    {
-        return new Excel($this->params, $this->client);
-    }
-
-    public function import(): Import
-    {
-        return new Import($this->params, $this->client);
-    }
-
     public function orderId(string $orderId): OrderId
     {
         $params = $this->params;
         $params['orderId'] = $orderId;
         return new OrderId($params, $this->client);
-    }
-
-    public function broker(): Broker
-    {
-        return new Broker($this->params, $this->client);
-    }
-
-    public function ids(): Ids
-    {
-        return new Ids($this->params, $this->client);
-    }
-
-    public function count(): Count
-    {
-        return new Count($this->params, $this->client);
     }
 
     public function categoryStatistics(): CategoryStatistics
@@ -73,6 +50,36 @@ final class Order extends AbstractBuilder
     public function ac(): Ac
     {
         return new Ac($this->params, $this->client);
+    }
+
+    public function excel(): Excel
+    {
+        return new Excel($this->params, $this->client);
+    }
+
+    public function import(): Import
+    {
+        return new Import($this->params, $this->client);
+    }
+
+    public function broker(): Broker
+    {
+        return new Broker($this->params, $this->client);
+    }
+
+    public function ids(): Ids
+    {
+        return new Ids($this->params, $this->client);
+    }
+
+    public function exists(): Exists
+    {
+        return new Exists($this->params, $this->client);
+    }
+
+    public function count(): Count
+    {
+        return new Count($this->params, $this->client);
     }
 
     public function get(): OrderGet
