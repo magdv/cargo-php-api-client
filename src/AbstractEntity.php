@@ -41,6 +41,7 @@ abstract class AbstractEntity implements \JsonSerializable
         unset($this->loadedValues[$attr], $this->values[$attr]);
     }
 
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return $this->values;
