@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: storage-point/responses/point-list.json#/properties/data
  */
 
 declare(strict_types=1);

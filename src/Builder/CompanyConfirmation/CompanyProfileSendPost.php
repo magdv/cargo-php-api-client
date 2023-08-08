@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/company-confirmation/company-profile-send
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\CompanyConfirmation\Requests\CompanyProfileRequest;
 use Cargomart\ApiClient\Entity\CompanyConfirmation\Responses\StatusResponse;
 
-final class CompanyProfileSendPost extends AbstractRequest
+class CompanyProfileSendPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

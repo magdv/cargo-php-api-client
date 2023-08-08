@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/{orderId}/moderation-reject
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\MessageRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderCardResponse;
 
-final class ModerationRejectPost extends AbstractRequest
+class ModerationRejectPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

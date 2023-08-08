@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/{orderId}/monitoring
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\MonitoringRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderCardResponse;
 
-final class MonitoringPost extends AbstractRequest
+class MonitoringPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

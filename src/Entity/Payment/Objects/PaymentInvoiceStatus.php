@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: payment/objects/payment-invoice-status.json
  */
 
 declare(strict_types=1);
@@ -17,9 +16,10 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property string $type
  * @property string $status
+ * @property string $date
  */
 final class PaymentInvoiceStatus extends AbstractEntity
 {
-    protected static $types = ['type' => ['string'], 'status' => ['string']];
-    protected static $nullables = ['type' => false, 'status' => false];
+    protected static $types = ['type' => ['string'], 'status' => ['string'], 'date' => ['string']];
+    protected static $nullables = ['type' => false, 'status' => false, 'date' => false];
 }

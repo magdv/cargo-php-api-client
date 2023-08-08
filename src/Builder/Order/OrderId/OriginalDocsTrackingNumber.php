@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: url:/api/v2/order/{orderId}/original-docs-tracking-number
  */
 
 declare(strict_types=1);

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: dictionary/objects/document-type.json
  */
 
 declare(strict_types=1);

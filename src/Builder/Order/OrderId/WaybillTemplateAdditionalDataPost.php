@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/{orderId}/waybill-template-additional-data
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Objects\WaybillAdditionalData;
 use Cargomart\ApiClient\Entity\Order\Responses\WaybillAdditionalDataResponse;
 
-final class WaybillTemplateAdditionalDataPost extends AbstractRequest
+class WaybillTemplateAdditionalDataPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

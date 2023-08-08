@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/contract-type/{id}
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\ContractType;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\ContractType\Responses\ContractTypeItem;
 
-final class IdGet extends AbstractRequest
+class IdGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

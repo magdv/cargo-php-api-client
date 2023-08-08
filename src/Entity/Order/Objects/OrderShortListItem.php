@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/objects/order-short-list-item.json
  */
 
 declare(strict_types=1);
@@ -94,7 +93,7 @@ use Cargomart\ApiClient\Entity\Payment\Objects\PaymentInvoiceStatus;
  * @property OrderPatchLastItem $truckDriverPatch
  * @property bool $isTruckDriverChanged
  * @property bool $isDocChanged
- * @property ProgressItem[] $progress
+ * @property ProgressItemListProgress[] $progress
  * @property int $distance
  * @property OrderOfferCurrent $currentOffer
  * @property CarrierAskCurrent $currentCarrierAsk
@@ -193,7 +192,7 @@ final class OrderShortListItem extends AbstractEntity
         'truckDriverPatch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
         'isTruckDriverChanged' => ['bool'],
         'isDocChanged' => ['bool'],
-        'progress' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\ProgressItem'],
+        'progress' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\ProgressItemListProgress'],
         'distance' => ['int'],
         'currentOffer' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCurrent'],
         'currentCarrierAsk' => ['Cargomart\ApiClient\Entity\Order\Objects\CarrierAskCurrent'],

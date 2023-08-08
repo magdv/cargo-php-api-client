@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: storage-point/objects/point-shipper.json
  */
 
 declare(strict_types=1);
@@ -27,6 +26,9 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $documentType
  * @property string $documentNumber
  * @property string $documentDate
+ * @property string $phone
+ * @property bool $isThirdPartyCompany
+ * @property int $branchId
  */
 final class PointShipper extends AbstractEntity
 {
@@ -43,6 +45,9 @@ final class PointShipper extends AbstractEntity
         'documentType' => ['string'],
         'documentNumber' => ['string'],
         'documentDate' => ['string'],
+        'phone' => ['string'],
+        'isThirdPartyCompany' => ['bool'],
+        'branchId' => ['int'],
     ];
 
     protected static $nullables = [
@@ -58,5 +63,8 @@ final class PointShipper extends AbstractEntity
         'documentType' => false,
         'documentNumber' => false,
         'documentDate' => false,
+        'phone' => false,
+        'isThirdPartyCompany' => false,
+        'branchId' => false,
     ];
 }

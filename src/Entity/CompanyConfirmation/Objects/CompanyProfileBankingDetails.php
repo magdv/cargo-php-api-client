@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: company-confirmation/objects/company-profile.json#/properties/bankingDetails
  */
 
 declare(strict_types=1);

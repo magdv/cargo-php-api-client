@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: chat/objects/payload/chat-post-payload-document-change.json
  */
 
 declare(strict_types=1);
@@ -16,6 +15,7 @@ use Cargomart\ApiClient\Entity\File\Objects\FileV1;
  * Данные вложения - смена документов
  * source: chat/objects/payload/chat-post-payload-document-change.json
  *
+ * @property string $type
  * @property string $operation
  * @property int $documentId
  * @property string $url
@@ -24,11 +24,18 @@ use Cargomart\ApiClient\Entity\File\Objects\FileV1;
 final class ChatPostPayloadDocumentChange extends AbstractEntity
 {
     protected static $types = [
+        'type' => ['string'],
         'operation' => ['string'],
         'documentId' => ['int'],
         'url' => ['string'],
         'files' => ['array', 'Cargomart\ApiClient\Entity\File\Objects\FileV1'],
     ];
 
-    protected static $nullables = ['operation' => false, 'documentId' => false, 'url' => false, 'files' => false];
+    protected static $nullables = [
+        'type' => false,
+        'operation' => false,
+        'documentId' => false,
+        'url' => false,
+        'files' => false,
+    ];
 }

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/company/{hash}/partner-conditions
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Requests\PartnerConditionsRequest;
 use Cargomart\ApiClient\Entity\Company\Responses\PartnerConditionsResponse;
 
-final class PartnerConditionsPatch extends AbstractRequest
+class PartnerConditionsPatch extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

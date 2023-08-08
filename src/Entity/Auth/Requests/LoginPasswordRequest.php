@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: auth/requests/login-password-request.json
  */
 
 declare(strict_types=1);

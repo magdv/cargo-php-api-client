@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: chat/objects/payload/chat-post-payload-issue-certificate.json
  */
 
 declare(strict_types=1);
@@ -15,10 +14,11 @@ use Cargomart\ApiClient\AbstractEntity;
  * Процесс выдачи сертификата сотруднику
  * source: chat/objects/payload/chat-post-payload-issue-certificate.json
  *
+ * @property string $type
  * @property string $certId
  */
 final class ChatPostPayloadIssueCertificate extends AbstractEntity
 {
-    protected static $types = ['certId' => ['string']];
-    protected static $nullables = ['certId' => false];
+    protected static $types = ['type' => ['string'], 'certId' => ['string']];
+    protected static $nullables = ['type' => false, 'certId' => false];
 }

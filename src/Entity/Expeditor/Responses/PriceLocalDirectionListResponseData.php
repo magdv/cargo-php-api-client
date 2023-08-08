@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: expeditor/responses/price-local-direction-list-response.json#/properties/data
  */
 
 declare(strict_types=1);

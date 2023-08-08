@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/tender/request/{tenderId}/company-stats
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Tender\Request\TenderId;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Tender\Responses\TenderCompanyStatListResponse;
 
-final class CompanyStatsGet extends AbstractRequest
+class CompanyStatsGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['page' => 1, 'perPage' => 20];

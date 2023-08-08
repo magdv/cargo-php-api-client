@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/truck/{id}/activation
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Truck\Id;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Truck\Responses\TruckItem;
 
-final class ActivationDelete extends AbstractRequest
+class ActivationDelete extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

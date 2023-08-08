@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/{orderId}/original-docs-reject
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\RejectDocumentRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderCardResponse;
 
-final class OriginalDocsRejectPost extends AbstractRequest
+class OriginalDocsRejectPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

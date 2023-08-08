@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/itinerary/by-kladr
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Itinerary;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Itinerary\Responses\ItineraryListResponse;
 
-final class ByKladrGet extends AbstractRequest
+class ByKladrGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

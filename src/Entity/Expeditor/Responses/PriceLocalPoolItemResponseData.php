@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: expeditor/responses/price-local-pool-item-response.json#/properties/data
  */
 
 declare(strict_types=1);

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: url:/api/v2/company/self
  */
 
 declare(strict_types=1);
@@ -10,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Company;
 
 use Cargomart\ApiClient\AbstractBuilder;
+use Cargomart\ApiClient\Builder\Company\Self\Branch;
 use Cargomart\ApiClient\Builder\Company\Self\CarPark;
 use Cargomart\ApiClient\Builder\Company\Self\CarriageDirection;
 use Cargomart\ApiClient\Builder\Company\Self\CarriageRegion;
@@ -36,6 +36,11 @@ final class CompanySelf extends AbstractBuilder
     public function communicationContacts(): CommunicationContacts
     {
         return new CommunicationContacts($this->params, $this->client);
+    }
+
+    public function branch(): Branch
+    {
+        return new Branch($this->params, $this->client);
     }
 
     public function carrierCount(): CarrierCount

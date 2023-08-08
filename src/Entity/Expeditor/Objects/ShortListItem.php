@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: expeditor/objects/short-list-item.json
  */
 
 declare(strict_types=1);

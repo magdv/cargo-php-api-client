@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/expeditor/price-local/pool/{poolId}/direction
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Requests\PriceLocalDirectionCreateRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Responses\PriceLocalDirectionItemResponse;
 
-final class DirectionPost extends AbstractRequest
+class DirectionPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

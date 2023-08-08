@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: chat/objects/payload/chat-post-payload-contact-change.json#/properties/create
  */
 
 declare(strict_types=1);
@@ -15,16 +14,13 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: chat/objects/payload/chat-post-payload-contact-change.json#/properties/create
  *
  * @property string $operation
- * @property ChatPostPayloadContactChangeCreateUsersItems[] $users
+ * @property ChatPostPayloadContactChangeCreateUsers[] $users
  */
 final class ChatPostPayloadContactChangeCreate extends AbstractEntity
 {
     protected static $types = [
         'operation' => ['string'],
-        'users' => [
-            'array',
-            'Cargomart\ApiClient\Entity\Chat\Objects\Payload\ChatPostPayloadContactChangeCreateUsersItems',
-        ],
+        'users' => ['array', 'Cargomart\ApiClient\Entity\Chat\Objects\Payload\ChatPostPayloadContactChangeCreateUsers'],
     ];
 
     protected static $nullables = ['operation' => false, 'users' => false];

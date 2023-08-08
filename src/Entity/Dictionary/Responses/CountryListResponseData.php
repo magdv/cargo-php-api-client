@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: dictionary/responses/country-list-response.json#/properties/data
  */
 
 declare(strict_types=1);

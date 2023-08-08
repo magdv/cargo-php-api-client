@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: user/responses/user-one-time-token-response.json#/properties/data/properties/oneTimeToken
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractEntity;
 
 /**
  * Модель одноразового токена
- * source: user/responses/user-one-time-token-response.json#/properties/data/properties/oneTimeToken
+ * source: user/responses/user-one-time-token-response.json#/properties/data#/properties/oneTimeToken
  *
  * @property string $token
  */

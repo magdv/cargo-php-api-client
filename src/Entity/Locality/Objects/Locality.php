@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: locality/objects/locality.json
  */
 
 declare(strict_types=1);
@@ -24,6 +23,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $fullName
  * @property string $shortName
  * @property string $country
+ * @property string $countryCode
  * @property string $region
  * @property bool $isDisabled
  * @property string $sectionId
@@ -41,6 +41,7 @@ final class Locality extends AbstractEntity
         'fullName' => ['string'],
         'shortName' => ['string'],
         'country' => ['string'],
+        'countryCode' => ['string'],
         'region' => ['string'],
         'isDisabled' => ['bool'],
         'sectionId' => ['string'],
@@ -57,6 +58,7 @@ final class Locality extends AbstractEntity
         'fullName' => false,
         'shortName' => false,
         'country' => false,
+        'countryCode' => false,
         'region' => false,
         'isDisabled' => false,
         'sectionId' => false,

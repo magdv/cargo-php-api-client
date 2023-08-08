@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/expeditor/annex-to-contract/{contractUuid}/banking-details/approve
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Expeditor\AnnexToContract\ContractUuid\Ban
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 
-final class ApprovePost extends AbstractRequest
+class ApprovePost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

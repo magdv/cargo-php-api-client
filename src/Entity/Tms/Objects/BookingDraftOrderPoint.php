@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: tms/objects/booking-draft-order-point.json
  */
 
 declare(strict_types=1);
@@ -22,6 +21,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItem;
  * @property string $fromDate
  * @property string $fromTime
  * @property string $toTime
+ * @property bool $isAccordingToWorkSchedule
  * @property string $onTime
  */
 final class BookingDraftOrderPoint extends AbstractEntity
@@ -33,6 +33,7 @@ final class BookingDraftOrderPoint extends AbstractEntity
         'fromDate' => ['string'],
         'fromTime' => ['string'],
         'toTime' => ['string'],
+        'isAccordingToWorkSchedule' => ['bool'],
         'onTime' => ['string'],
     ];
 
@@ -43,6 +44,7 @@ final class BookingDraftOrderPoint extends AbstractEntity
         'fromDate' => false,
         'fromTime' => false,
         'toTime' => false,
+        'isAccordingToWorkSchedule' => false,
         'onTime' => false,
     ];
 }

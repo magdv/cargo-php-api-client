@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order-ecn/{id}/cancel
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\OrderEcn\Id;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderEcnResponse;
 
-final class CancelPost extends AbstractRequest
+class CancelPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

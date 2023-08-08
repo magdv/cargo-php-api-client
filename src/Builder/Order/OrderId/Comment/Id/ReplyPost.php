@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/{orderId}/comment/{id}/reply
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderCommentReplyRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\CommentResponse;
 
-final class ReplyPost extends AbstractRequest
+class ReplyPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

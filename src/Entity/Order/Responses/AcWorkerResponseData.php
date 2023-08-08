@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/responses/ac-worker-response.json#/properties/data
  */
 
 declare(strict_types=1);
@@ -15,13 +14,13 @@ use Cargomart\ApiClient\Entity\Base\Pagination;
 /**
  * source: order/responses/ac-worker-response.json#/properties/data
  *
- * @property AcWorkerResponseDataWorkerItems[] $worker
+ * @property AcWorkerResponseDataWorker[] $worker
  * @property Pagination $pagination
  */
 final class AcWorkerResponseData extends AbstractEntity
 {
     protected static $types = [
-        'worker' => ['array', 'Cargomart\ApiClient\Entity\Order\Responses\AcWorkerResponseDataWorkerItems'],
+        'worker' => ['array', 'Cargomart\ApiClient\Entity\Order\Responses\AcWorkerResponseDataWorker'],
         'pagination' => ['Cargomart\ApiClient\Entity\Base\Pagination'],
     ];
 

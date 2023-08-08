@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: dictionary/objects/timezone.json
  */
 
 declare(strict_types=1);

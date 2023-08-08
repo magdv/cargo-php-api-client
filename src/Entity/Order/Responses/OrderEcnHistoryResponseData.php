@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/responses/order-ecn-history-response.json#/properties/data
  */
 
 declare(strict_types=1);

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/expeditor-ecn/{id}/history
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\ExpeditorEcn\Id;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderEcnHistoryResponse;
 
-final class HistoryGet extends AbstractRequest
+class HistoryGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

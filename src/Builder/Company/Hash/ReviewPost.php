@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/company/{hash}/review
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Requests\CompanyReviewRequest;
 use Cargomart\ApiClient\Entity\Company\Responses\CompanyReviewListResponse;
 
-final class ReviewPost extends AbstractRequest
+class ReviewPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

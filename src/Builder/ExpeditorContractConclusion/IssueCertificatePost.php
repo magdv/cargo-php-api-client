@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/expeditor-contract-conclusion/issue-certificate
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\ExpeditorContractConclusion\Requests\ExpeditorContractConclusionIssueCertificateRequest;
 use Cargomart\ApiClient\Entity\ExpeditorContractConclusion\Responses\ExpeditorContractConclusionResponse;
 
-final class IssueCertificatePost extends AbstractRequest
+class IssueCertificatePost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

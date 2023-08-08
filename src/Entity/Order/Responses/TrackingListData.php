@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/responses/tracking-list.json#/properties/data
  */
 
 declare(strict_types=1);

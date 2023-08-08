@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/{orderId}/carrier-ask/{carrierAskId}/accept
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\EmptyObject;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderCardResponse;
 
-final class AcceptPost extends AbstractRequest
+class AcceptPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

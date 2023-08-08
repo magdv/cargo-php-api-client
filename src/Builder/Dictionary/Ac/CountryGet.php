@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/dictionary/ac/country
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Dictionary\Ac;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Dictionary\Responses\CountryListResponse;
 
-final class CountryGet extends AbstractRequest
+class CountryGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

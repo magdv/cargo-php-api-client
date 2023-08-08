@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/driver/{id}
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Driver;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Driver\Responses\DriverResponse;
 
-final class IdGet extends AbstractRequest
+class IdGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

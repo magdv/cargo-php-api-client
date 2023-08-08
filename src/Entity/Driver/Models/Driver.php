@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: driver/models/driver.json
  */
 
 declare(strict_types=1);
@@ -34,7 +33,7 @@ use Cargomart\ApiClient\Entity\Driver\Objects\DriverAccess;
  * @property string $inn
  * @property int $validationStatus
  * @property string $driverAppStatus
- * @property DriverDriverAppDetailItems[] $driverAppDetail
+ * @property DriverDriverAppDetail[] $driverAppDetail
  * @property DriverAccess $access
  */
 final class Driver extends AbstractEntity
@@ -58,7 +57,7 @@ final class Driver extends AbstractEntity
         'inn' => ['string'],
         'validationStatus' => ['int'],
         'driverAppStatus' => ['string'],
-        'driverAppDetail' => ['array', 'Cargomart\ApiClient\Entity\Driver\Models\DriverDriverAppDetailItems'],
+        'driverAppDetail' => ['array', 'Cargomart\ApiClient\Entity\Driver\Models\DriverDriverAppDetail'],
         'access' => ['Cargomart\ApiClient\Entity\Driver\Objects\DriverAccess'],
     ];
 

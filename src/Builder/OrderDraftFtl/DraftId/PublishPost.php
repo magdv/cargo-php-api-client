@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order-draft-ftl/{draftId}/publish
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderDraftFtlRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderDraftFtlResponse;
 
-final class PublishPost extends AbstractRequest
+class PublishPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

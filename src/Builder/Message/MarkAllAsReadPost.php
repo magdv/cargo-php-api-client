@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/message/mark-all-as-read
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Message;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 
-final class MarkAllAsReadPost extends AbstractRequest
+class MarkAllAsReadPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

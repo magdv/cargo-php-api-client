@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: expeditor/objects/proposal-driver.json
  */
 
 declare(strict_types=1);
@@ -32,7 +31,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $passportBy
  * @property string $birthDate
  * @property string $driverAppStatus
- * @property ProposalDriverDriverAppDetailItems[] $driverAppDetail
+ * @property ProposalDriverDriverAppDetail[] $driverAppDetail
  */
 final class ProposalDriver extends AbstractEntity
 {
@@ -54,7 +53,7 @@ final class ProposalDriver extends AbstractEntity
         'passportBy' => ['string'],
         'birthDate' => ['string'],
         'driverAppStatus' => ['string'],
-        'driverAppDetail' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalDriverDriverAppDetailItems'],
+        'driverAppDetail' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalDriverDriverAppDetail'],
     ];
 
     protected static $nullables = [

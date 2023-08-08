@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: user/responses/user-count-active.json#/properties/data/properties/user
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractEntity;
 
 /**
  * Результирующий объект.
- * source: user/responses/user-count-active.json#/properties/data/properties/user
+ * source: user/responses/user-count-active.json#/properties/data#/properties/user
  *
  * @property int $count
  */

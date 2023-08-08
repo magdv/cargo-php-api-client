@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: digital-signature/objects/user-certificate.json
  */
 
 declare(strict_types=1);
@@ -20,6 +19,7 @@ use Cargomart\ApiClient\Entity\File\Objects\FileUrl;
  * @property string $status
  * @property int $serialId
  * @property string $companyName
+ * @property string $branchId
  * @property string $systemCompanyName
  * @property string $contractNumber
  * @property string $contractDate
@@ -42,6 +42,7 @@ final class UserCertificate extends AbstractEntity
         'status' => ['string'],
         'serialId' => ['int'],
         'companyName' => ['string'],
+        'branchId' => ['string'],
         'systemCompanyName' => ['string'],
         'contractNumber' => ['string'],
         'contractDate' => ['string'],
@@ -63,6 +64,7 @@ final class UserCertificate extends AbstractEntity
         'status' => false,
         'serialId' => false,
         'companyName' => false,
+        'branchId' => false,
         'systemCompanyName' => false,
         'contractNumber' => false,
         'contractDate' => false,

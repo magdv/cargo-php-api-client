@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/enums/order-truck-driver-correction-status.json
  */
 
 declare(strict_types=1);

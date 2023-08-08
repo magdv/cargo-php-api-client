@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/objects/route-point-edit.json
  */
 
 declare(strict_types=1);
@@ -10,6 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\Address;
+use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
 
 /**
@@ -18,6 +19,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  *
  * @property int $id
  * @property int $storagePointId
+ * @property Address $addressObject
  * @property string $code
  * @property int $serialId
  * @property int $orderId
@@ -30,8 +32,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  * @property string $house
  * @property string $comment
  * @property string $additionalInfo
- * @property RoutePointContactItems[] $contact
- * @property \stdClass $storagePoint
+ * @property RoutePointContactContact[] $contact
  * @property bool $isLoad
  * @property bool $isEdm
  * @property bool $isUnload
@@ -43,6 +44,8 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  * @property string $toDate
  * @property string $fromTime
  * @property string $toTime
+ * @property bool $isAccordingToWorkSchedule
+ * @property WorkSchedule $workSchedule
  * @property int $lastUpdate
  * @property string $contactName
  * @property string $contactPhone
@@ -50,6 +53,8 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  * @property float $longitude
  * @property float $latitude
  * @property int $status
+ * @property string $storageType
+ * @property PointShipper $owner
  * @property OrderPointAccess $access
  */
 final class RoutePointEdit extends AbstractEntity
@@ -57,6 +62,7 @@ final class RoutePointEdit extends AbstractEntity
     protected static $types = [
         'id' => ['int'],
         'storagePointId' => ['int'],
+        'addressObject' => ['Cargomart\ApiClient\Entity\Base\Address'],
         'code' => ['string'],
         'serialId' => ['int'],
         'orderId' => ['int'],
@@ -69,8 +75,7 @@ final class RoutePointEdit extends AbstractEntity
         'house' => ['string'],
         'comment' => ['string'],
         'additionalInfo' => ['string'],
-        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointContactItems'],
-        'storagePoint' => ['\stdClass'],
+        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointContactContact'],
         'isLoad' => ['bool'],
         'isEdm' => ['bool'],
         'isUnload' => ['bool'],
@@ -82,6 +87,8 @@ final class RoutePointEdit extends AbstractEntity
         'toDate' => ['string'],
         'fromTime' => ['string'],
         'toTime' => ['string'],
+        'isAccordingToWorkSchedule' => ['bool'],
+        'workSchedule' => ['Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule'],
         'lastUpdate' => ['int'],
         'contactName' => ['string'],
         'contactPhone' => ['string'],
@@ -89,12 +96,15 @@ final class RoutePointEdit extends AbstractEntity
         'longitude' => ['float'],
         'latitude' => ['float'],
         'status' => ['int'],
+        'storageType' => ['string'],
+        'owner' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPointAccess'],
     ];
 
     protected static $nullables = [
         'id' => false,
         'storagePointId' => false,
+        'addressObject' => false,
         'code' => false,
         'serialId' => false,
         'orderId' => false,
@@ -108,7 +118,6 @@ final class RoutePointEdit extends AbstractEntity
         'comment' => false,
         'additionalInfo' => false,
         'contact' => false,
-        'storagePoint' => true,
         'isLoad' => false,
         'isEdm' => false,
         'isUnload' => false,
@@ -120,6 +129,8 @@ final class RoutePointEdit extends AbstractEntity
         'toDate' => false,
         'fromTime' => false,
         'toTime' => false,
+        'isAccordingToWorkSchedule' => false,
+        'workSchedule' => false,
         'lastUpdate' => false,
         'contactName' => false,
         'contactPhone' => false,
@@ -127,6 +138,8 @@ final class RoutePointEdit extends AbstractEntity
         'longitude' => false,
         'latitude' => false,
         'status' => false,
+        'storageType' => false,
+        'owner' => false,
         'access' => false,
     ];
 }

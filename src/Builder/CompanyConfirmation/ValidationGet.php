@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/company-confirmation/validation
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\CompanyConfirmation;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\CompanyConfirmation\Responses\StatusResponse;
 
-final class ValidationGet extends AbstractRequest
+class ValidationGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

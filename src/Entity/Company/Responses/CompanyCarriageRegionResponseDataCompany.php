@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: company/responses/company-carriage-region-response.json#/properties/data/properties/company
  */
 
 declare(strict_types=1);
@@ -14,7 +13,7 @@ use Cargomart\ApiClient\Entity\Company\Objects\CarriageRegion;
 
 /**
  * Компания перевозчика
- * source: company/responses/company-carriage-region-response.json#/properties/data/properties/company
+ * source: company/responses/company-carriage-region-response.json#/properties/data#/properties/company
  *
  * @property string $id
  * @property CarriageRegion $carriageRegion

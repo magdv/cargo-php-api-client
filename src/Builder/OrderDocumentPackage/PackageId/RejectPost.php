@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order-document-package/{packageId}/reject
  */
 
 declare(strict_types=1);
@@ -10,10 +9,10 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderDocumentRejectPackageRequest;
+use Cargomart\ApiClient\Entity\Order\Responses\OrderDocumentPackageResponse;
 
-final class RejectPost extends AbstractRequest
+class RejectPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -24,16 +23,16 @@ final class RejectPost extends AbstractRequest
     /**
      * Отклонение пакета сканов документов перевозчика
      *
-     * @return EmptyDataResponse
+     * @return OrderDocumentPackageResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(OrderDocumentRejectPackageRequest $body): EmptyDataResponse
+    public function do(OrderDocumentRejectPackageRequest $body): OrderDocumentPackageResponse
     {
         return $this->client->doRequest(
             'POST',
             $this->url,
-            EmptyDataResponse::class,
+            OrderDocumentPackageResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

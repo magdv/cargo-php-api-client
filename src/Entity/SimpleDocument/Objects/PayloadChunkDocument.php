@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: simple-document/objects/payload-chunk-document.json
  */
 
 declare(strict_types=1);

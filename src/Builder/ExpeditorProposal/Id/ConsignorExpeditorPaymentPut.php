@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/expeditor-proposal/{id}/consignor-expeditor-payment
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Requests\ExpeditorProposalConsignorExpeditorPaymentRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Responses\ExpeditorProposalPaymentResponse;
 
-final class ConsignorExpeditorPaymentPut extends AbstractRequest
+class ConsignorExpeditorPaymentPut extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

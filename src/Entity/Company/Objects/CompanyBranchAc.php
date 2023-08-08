@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: company/objects/company-branch-ac.json
  */
 
 declare(strict_types=1);

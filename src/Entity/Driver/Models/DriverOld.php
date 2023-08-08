@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: driver/models/driver-old.json
  */
 
 declare(strict_types=1);
@@ -27,7 +26,7 @@ use Cargomart\ApiClient\Entity\Driver\Objects\DriverAccess;
  * @property string $passportWhen
  * @property string $passportBy
  * @property string $birthDate
- * @property DriverOldDriverLicenseItems[] $driverLicense
+ * @property DriverOldDriverLicense[] $driverLicense
  * @property DriverAccess $access
  */
 final class DriverOld extends AbstractEntity
@@ -44,7 +43,7 @@ final class DriverOld extends AbstractEntity
         'passportWhen' => ['string'],
         'passportBy' => ['string'],
         'birthDate' => ['string'],
-        'driverLicense' => ['array', 'Cargomart\ApiClient\Entity\Driver\Models\DriverOldDriverLicenseItems'],
+        'driverLicense' => ['array', 'Cargomart\ApiClient\Entity\Driver\Models\DriverOldDriverLicense'],
         'access' => ['Cargomart\ApiClient\Entity\Driver\Objects\DriverAccess'],
     ];
 

@@ -2,13 +2,13 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: expeditor-carrier-contract/responses/expeditor-carrier-contract-list.json
  */
 
 declare(strict_types=1);
 
 namespace Cargomart\ApiClient\Entity\ExpeditorCarrierContract\Responses;
 
+use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
 use Cargomart\ApiClient\Entity\Base\MessageV2;
 

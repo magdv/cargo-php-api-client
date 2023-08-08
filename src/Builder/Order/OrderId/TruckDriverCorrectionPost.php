@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/{orderId}/truck-driver-correction
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderTruckDriverCorrectionRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderTruckDriverCorrectionResponse;
 
-final class TruckDriverCorrectionPost extends AbstractRequest
+class TruckDriverCorrectionPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

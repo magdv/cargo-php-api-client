@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/storage-point/{id}/contact/{contactId}
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\StoragePoint\Id\Contact;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 
-final class ContactIdDelete extends AbstractRequest
+class ContactIdDelete extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

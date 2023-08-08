@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order-document/{documentId}
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\OrderDocument;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 
-final class DocumentIdDelete extends AbstractRequest
+class DocumentIdDelete extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

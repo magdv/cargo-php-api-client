@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/objects/order-access.json
  */
 
 declare(strict_types=1);
@@ -119,6 +118,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $createCarrierSign
  * @property bool $createOrderReuse
  * @property bool $viewConsignorExpeditorPayment
+ * @property bool $viewActNonDeliveryCar
  */
 final class OrderAccess extends AbstractEntity
 {
@@ -227,6 +227,7 @@ final class OrderAccess extends AbstractEntity
         'createCarrierSign' => ['bool'],
         'createOrderReuse' => ['bool'],
         'viewConsignorExpeditorPayment' => ['bool'],
+        'viewActNonDeliveryCar' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -334,5 +335,6 @@ final class OrderAccess extends AbstractEntity
         'createCarrierSign' => false,
         'createOrderReuse' => false,
         'viewConsignorExpeditorPayment' => false,
+        'viewActNonDeliveryCar' => false,
     ];
 }

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order-document-package/{packageId}/document
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderDocumentUpdateRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderDocumentResponse;
 
-final class DocumentPost extends AbstractRequest
+class DocumentPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

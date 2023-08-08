@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: file/objects/file-v1.json
  */
 
 declare(strict_types=1);

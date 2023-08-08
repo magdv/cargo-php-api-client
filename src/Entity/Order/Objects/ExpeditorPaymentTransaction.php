@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/objects/expeditor-payment-transaction.json
  */
 
 declare(strict_types=1);

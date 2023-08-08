@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/ids
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Order;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderIdsResponse;
 
-final class IdsGet extends AbstractRequest
+class IdsGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['filter[orderType]' => ['auction', 'auctionNoPrice'], 'page' => 1, 'perPage' => 20];

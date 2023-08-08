@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: digital-signature/requests/user-certificate-issue-reject-request.json
  */
 
 declare(strict_types=1);

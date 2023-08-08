@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/tender/request/lot/{lotId}/proposal
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Tender\Request\Lot\LotId;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Tender\Responses\TenderRequestLotProposalListResponse;
 
-final class ProposalGet extends AbstractRequest
+class ProposalGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

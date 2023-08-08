@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/objects/route-point-card.json
  */
 
 declare(strict_types=1);
@@ -10,6 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\Address;
+use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
 
 /**
@@ -18,6 +19,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  *
  * @property int $id
  * @property int $storagePointId
+ * @property Address $addressObject
  * @property string $code
  * @property int $serialId
  * @property string $localityName
@@ -26,7 +28,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  * @property string $house
  * @property string $comment
  * @property string $additionalInfo
- * @property RoutePointContactItems[] $contact
+ * @property RoutePointContactContact[] $contact
  * @property bool $isLoad
  * @property bool $isEdm
  * @property bool $isUnload
@@ -36,6 +38,8 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  * @property string $toDate
  * @property string $fromTime
  * @property string $toTime
+ * @property bool $isAccordingToWorkSchedule
+ * @property WorkSchedule $workSchedule
  * @property string $contactName
  * @property string $contactPhone
  * @property string $contactExt
@@ -44,6 +48,8 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  * @property int $legalStatus
  * @property string $legalName
  * @property PointShipper $pointShipper
+ * @property string $storageType
+ * @property PointShipper $owner
  * @property int[] $fileIds
  * @property int $status
  */
@@ -52,6 +58,7 @@ final class RoutePointCard extends AbstractEntity
     protected static $types = [
         'id' => ['int'],
         'storagePointId' => ['int'],
+        'addressObject' => ['Cargomart\ApiClient\Entity\Base\Address'],
         'code' => ['string'],
         'serialId' => ['int'],
         'localityName' => ['string'],
@@ -60,7 +67,7 @@ final class RoutePointCard extends AbstractEntity
         'house' => ['string'],
         'comment' => ['string'],
         'additionalInfo' => ['string'],
-        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointContactItems'],
+        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointContactContact'],
         'isLoad' => ['bool'],
         'isEdm' => ['bool'],
         'isUnload' => ['bool'],
@@ -70,6 +77,8 @@ final class RoutePointCard extends AbstractEntity
         'toDate' => ['string'],
         'fromTime' => ['string'],
         'toTime' => ['string'],
+        'isAccordingToWorkSchedule' => ['bool'],
+        'workSchedule' => ['Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule'],
         'contactName' => ['string'],
         'contactPhone' => ['string'],
         'contactExt' => ['string'],
@@ -78,6 +87,8 @@ final class RoutePointCard extends AbstractEntity
         'legalStatus' => ['int'],
         'legalName' => ['string'],
         'pointShipper' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper'],
+        'storageType' => ['string'],
+        'owner' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper'],
         'fileIds' => ['array', 'int'],
         'status' => ['int'],
     ];
@@ -85,6 +96,7 @@ final class RoutePointCard extends AbstractEntity
     protected static $nullables = [
         'id' => false,
         'storagePointId' => false,
+        'addressObject' => false,
         'code' => false,
         'serialId' => false,
         'localityName' => false,
@@ -103,6 +115,8 @@ final class RoutePointCard extends AbstractEntity
         'toDate' => false,
         'fromTime' => false,
         'toTime' => false,
+        'isAccordingToWorkSchedule' => false,
+        'workSchedule' => false,
         'contactName' => false,
         'contactPhone' => false,
         'contactExt' => false,
@@ -111,6 +125,8 @@ final class RoutePointCard extends AbstractEntity
         'legalStatus' => false,
         'legalName' => false,
         'pointShipper' => false,
+        'storageType' => false,
+        'owner' => false,
         'fileIds' => false,
         'status' => false,
     ];

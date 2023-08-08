@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: general-partner/objects/general-partner-contract.json
  */
 
 declare(strict_types=1);

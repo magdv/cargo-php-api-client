@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/ac/driver
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Order\Ac;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\AcDriverResponse;
 
-final class DriverGet extends AbstractRequest
+class DriverGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -61,11 +60,11 @@ final class DriverGet extends AbstractRequest
     /**
      * Отсортировать водителя под идентификатору(на первое место)
      *
-     * @var null|string $value
+     * @var null|int $value
      *
      * @return self
      */
-    public function qSelectedId(?string $value): self
+    public function qSelectedId(?int $value): self
     {
         $c = clone $this;
         if (null === $value) {

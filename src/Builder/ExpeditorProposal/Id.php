@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: url:/api/v2/expeditor-proposal/{id}
  */
 
 declare(strict_types=1);
@@ -27,6 +26,7 @@ use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\RefuseCarrier;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\Roadmap;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\RoutePath;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\SimpleDocument;
+use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\SimpleDocuments;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\Visitor;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\WaybillTemplate;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\WaybillTemplateAdditionalData;
@@ -38,19 +38,9 @@ final class Id extends AbstractBuilder
 {
     protected const URL = '/api/v2/expeditor-proposal/{id}';
 
-    public function chat(): Chat
-    {
-        return new Chat($this->params, $this->client);
-    }
-
     public function patch(): Patch
     {
         return new Patch($this->params, $this->client);
-    }
-
-    public function proxy(): Proxy
-    {
-        return new Proxy($this->params, $this->client);
     }
 
     public function refuseCarrier(): RefuseCarrier
@@ -63,34 +53,14 @@ final class Id extends AbstractBuilder
         return new Refuse($this->params, $this->client);
     }
 
-    public function simpleDocument(): SimpleDocument
-    {
-        return new SimpleDocument($this->params, $this->client);
-    }
-
-    public function carrierAsk(): CarrierAsk
-    {
-        return new CarrierAsk($this->params, $this->client);
-    }
-
-    public function carrierPayment(): CarrierPayment
-    {
-        return new CarrierPayment($this->params, $this->client);
-    }
-
-    public function payment(): Payment
-    {
-        return new Payment($this->params, $this->client);
-    }
-
-    public function consignorExpeditorPayment(): ConsignorExpeditorPayment
-    {
-        return new ConsignorExpeditorPayment($this->params, $this->client);
-    }
-
     public function routePath(): RoutePath
     {
         return new RoutePath($this->params, $this->client);
+    }
+
+    public function simpleDocuments(): SimpleDocuments
+    {
+        return new SimpleDocuments($this->params, $this->client);
     }
 
     public function visitor(): Visitor
@@ -136,6 +106,41 @@ final class Id extends AbstractBuilder
     public function roadmap(): Roadmap
     {
         return new Roadmap($this->params, $this->client);
+    }
+
+    public function chat(): Chat
+    {
+        return new Chat($this->params, $this->client);
+    }
+
+    public function proxy(): Proxy
+    {
+        return new Proxy($this->params, $this->client);
+    }
+
+    public function carrierPayment(): CarrierPayment
+    {
+        return new CarrierPayment($this->params, $this->client);
+    }
+
+    public function payment(): Payment
+    {
+        return new Payment($this->params, $this->client);
+    }
+
+    public function consignorExpeditorPayment(): ConsignorExpeditorPayment
+    {
+        return new ConsignorExpeditorPayment($this->params, $this->client);
+    }
+
+    public function carrierAsk(): CarrierAsk
+    {
+        return new CarrierAsk($this->params, $this->client);
+    }
+
+    public function simpleDocument(): SimpleDocument
+    {
+        return new SimpleDocument($this->params, $this->client);
     }
 
     public function get(): IdGet

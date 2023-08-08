@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/company/self/car-park
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Company\Self;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Responses\CarParkResponse;
 
-final class CarParkGet extends AbstractRequest
+class CarParkGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

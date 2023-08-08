@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: simple-document/objects/payload-chunk-cancellation.json
  */
 
 declare(strict_types=1);

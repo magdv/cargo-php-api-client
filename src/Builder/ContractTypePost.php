@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/contract-type
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\ContractType\Requests\ContractTypeRequest;
 use Cargomart\ApiClient\Entity\ContractType\Responses\ContractTypeItem;
 
-final class ContractTypePost extends AbstractRequest
+class ContractTypePost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

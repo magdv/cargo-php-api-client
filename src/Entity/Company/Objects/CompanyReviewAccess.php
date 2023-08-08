@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: company/objects/company-review.json#/properties/access
  */
 
 declare(strict_types=1);

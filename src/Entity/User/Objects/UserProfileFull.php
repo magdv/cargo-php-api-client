@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: user/objects/user-profile-full.json
  */
 
 declare(strict_types=1);

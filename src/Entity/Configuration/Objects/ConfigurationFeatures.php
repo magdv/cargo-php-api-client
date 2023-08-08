@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: configuration/objects/configuration-features.json
  */
 
 declare(strict_types=1);

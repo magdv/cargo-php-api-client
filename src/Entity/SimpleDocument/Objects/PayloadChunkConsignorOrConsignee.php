@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: simple-document/objects/payload-chunk-consignor-or-consignee.json
  */
 
 declare(strict_types=1);

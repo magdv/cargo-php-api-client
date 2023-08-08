@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/user-certificate/{certificateId}/reject
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\DigitalSignature\Requests\UserCertificateIssueRejectRequest;
 use Cargomart\ApiClient\Entity\DigitalSignature\Responses\UserCertificateResponse;
 
-final class RejectPost extends AbstractRequest
+class RejectPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

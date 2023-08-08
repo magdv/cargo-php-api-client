@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/ac/curator
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Order\Ac;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\AcCuratorResponse;
 
-final class CuratorGet extends AbstractRequest
+class CuratorGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

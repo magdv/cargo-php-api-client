@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: company/objects/company-car-park.json
  */
 
 declare(strict_types=1);

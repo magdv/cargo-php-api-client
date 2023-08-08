@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: url:/api/v2/company-confirmation
  */
 
 declare(strict_types=1);
@@ -52,5 +51,10 @@ final class CompanyConfirmation extends AbstractBuilder
     public function companyProfileSend(): CompanyProfileSend
     {
         return new CompanyProfileSend($this->params, $this->client);
+    }
+
+    public function get(): CompanyConfirmationGet
+    {
+        return new CompanyConfirmationGet($this->client, $this->getUrl());
     }
 }

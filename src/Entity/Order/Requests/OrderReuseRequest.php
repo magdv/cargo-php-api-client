@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/requests/order-reuse-request.json
  */
 
 declare(strict_types=1);
@@ -18,6 +17,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderReusePoint;
  * source: order/requests/order-reuse-request.json
  *
  * @property OrderReusePoint[] $routePoint
+ * @property int $companyBranchId
  * @property int $truckTypeId
  * @property \stdClass $temperature
  * @property string[] $device
@@ -40,6 +40,7 @@ final class OrderReuseRequest extends AbstractEntity
 {
     protected static $types = [
         'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderReusePoint'],
+        'companyBranchId' => ['int'],
         'truckTypeId' => ['int'],
         'temperature' => ['\stdClass'],
         'device' => ['array', 'string'],
@@ -61,6 +62,7 @@ final class OrderReuseRequest extends AbstractEntity
 
     protected static $nullables = [
         'routePoint' => false,
+        'companyBranchId' => false,
         'truckTypeId' => false,
         'temperature' => true,
         'device' => false,

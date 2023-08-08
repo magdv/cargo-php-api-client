@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/objects/ecn-additional-data.json
  */
 
 declare(strict_types=1);
@@ -16,6 +15,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: order/objects/ecn-additional-data.json
  *
  * @property string $type
+ * @property string $externalNumber
+ * @property string $operator
  * @property int $pointIndexFrom
  * @property int $pointIndexTo
  * @property string $cargoCondition
@@ -34,6 +35,8 @@ final class EcnAdditionalData extends AbstractEntity
 {
     protected static $types = [
         'type' => ['string'],
+        'externalNumber' => ['string'],
+        'operator' => ['string'],
         'pointIndexFrom' => ['int'],
         'pointIndexTo' => ['int'],
         'cargoCondition' => ['string'],
@@ -51,6 +54,8 @@ final class EcnAdditionalData extends AbstractEntity
 
     protected static $nullables = [
         'type' => false,
+        'externalNumber' => false,
+        'operator' => false,
         'pointIndexFrom' => false,
         'pointIndexTo' => false,
         'cargoCondition' => false,

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/company/{hash}/disabled
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Requests\DisabledRequest;
 use Cargomart\ApiClient\Entity\Company\Responses\CompanyInfoResponse;
 
-final class DisabledPost extends AbstractRequest
+class DisabledPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

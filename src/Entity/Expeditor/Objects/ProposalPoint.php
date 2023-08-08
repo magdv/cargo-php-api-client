@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: expeditor/objects/proposal-point.json
  */
 
 declare(strict_types=1);
@@ -24,6 +23,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItem;
  * @property string $fromDate
  * @property string $fromTime
  * @property string $toTime
+ * @property bool $isAccordingToWorkSchedule
  */
 final class ProposalPoint extends AbstractEntity
 {
@@ -36,6 +36,7 @@ final class ProposalPoint extends AbstractEntity
         'fromDate' => ['string'],
         'fromTime' => ['string'],
         'toTime' => ['string'],
+        'isAccordingToWorkSchedule' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -47,5 +48,6 @@ final class ProposalPoint extends AbstractEntity
         'fromDate' => false,
         'fromTime' => false,
         'toTime' => false,
+        'isAccordingToWorkSchedule' => false,
     ];
 }

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/{orderId}/invoice-gp-carrier
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderInvoiceRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderInvoiceResponse;
 
-final class InvoiceGpCarrierPut extends AbstractRequest
+class InvoiceGpCarrierPut extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

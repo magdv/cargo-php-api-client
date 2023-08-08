@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: expeditor/objects/price.json
  */
 
 declare(strict_types=1);
@@ -18,7 +17,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $currencyCode
  * @property string $total
  * @property string $vat
- * @property string $vatRate
+ * @property \stdClass $vatRate
  * @property string $value
  */
 final class Price extends AbstractEntity
@@ -27,7 +26,7 @@ final class Price extends AbstractEntity
         'currencyCode' => ['string'],
         'total' => ['string'],
         'vat' => ['string'],
-        'vatRate' => ['string'],
+        'vatRate' => ['\stdClass'],
         'value' => ['string'],
     ];
 
@@ -35,7 +34,7 @@ final class Price extends AbstractEntity
         'currencyCode' => false,
         'total' => false,
         'vat' => false,
-        'vatRate' => false,
+        'vatRate' => true,
         'value' => false,
     ];
 }

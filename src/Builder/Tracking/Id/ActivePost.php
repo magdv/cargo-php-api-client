@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/tracking/{id}/active
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Tracking\Id;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\TrackingItem;
 
-final class ActivePost extends AbstractRequest
+class ActivePost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

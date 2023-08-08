@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/{orderId}/client-access
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Requests\HashListRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 
-final class ClientAccessPatch extends AbstractRequest
+class ClientAccessPatch extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

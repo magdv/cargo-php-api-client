@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: tms/requests/booking-create-request.json
  */
 
 declare(strict_types=1);

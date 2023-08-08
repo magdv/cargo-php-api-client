@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/expeditor/price-local/price/{priceId}
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Requests\PriceLocalEditRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Responses\PriceLocalItemResponse;
 
-final class PriceIdPut extends AbstractRequest
+class PriceIdPut extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

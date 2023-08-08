@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/objects/order-draft-ftl-point.json
  */
 
 declare(strict_types=1);
@@ -10,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItem;
 
 /**
@@ -22,6 +22,8 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItem;
  * @property string $fromDate
  * @property string $fromTime
  * @property string $toTime
+ * @property bool $isAccordingToWorkSchedule
+ * @property WorkSchedule $workSchedule
  */
 final class OrderDraftFtlPoint extends AbstractEntity
 {
@@ -32,6 +34,8 @@ final class OrderDraftFtlPoint extends AbstractEntity
         'fromDate' => ['string'],
         'fromTime' => ['string'],
         'toTime' => ['string'],
+        'isAccordingToWorkSchedule' => ['bool'],
+        'workSchedule' => ['Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule'],
     ];
 
     protected static $nullables = [
@@ -41,5 +45,7 @@ final class OrderDraftFtlPoint extends AbstractEntity
         'fromDate' => false,
         'fromTime' => false,
         'toTime' => false,
+        'isAccordingToWorkSchedule' => false,
+        'workSchedule' => false,
     ];
 }

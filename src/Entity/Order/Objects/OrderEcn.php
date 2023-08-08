@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/objects/order-ecn.json
  */
 
 declare(strict_types=1);
@@ -20,22 +19,23 @@ use Cargomart\ApiClient\Entity\File\Objects\FileUrl;
  * @property string $orderId
  * @property int $serialId
  * @property string $departureName
+ * @property string $departureLegalName
  * @property string $destinationName
+ * @property string $destinationLegalName
  * @property string $type
  * @property string $number
+ * @property string $externalNumber
  * @property int $version
  * @property int $pointIndexFrom
  * @property int $pointIndexTo
  * @property string $status
- * @property string $logisticsStatus
+ * @property \stdClass $edmOperatorStatus
  * @property string $statusGroup
  * @property string $updateDate
  * @property EcnAdditionalData $additionalData
  * @property FileUrl $pdf
  * @property FileUrl $xls
  * @property FileUrl $xml
- * @property FileUrl $pdfDiadoc
- * @property FileUrl $logisticsPdf
  * @property OrderEcnAccess $access
  */
 final class OrderEcn extends AbstractEntity
@@ -45,22 +45,23 @@ final class OrderEcn extends AbstractEntity
         'orderId' => ['string'],
         'serialId' => ['int'],
         'departureName' => ['string'],
+        'departureLegalName' => ['string'],
         'destinationName' => ['string'],
+        'destinationLegalName' => ['string'],
         'type' => ['string'],
         'number' => ['string'],
+        'externalNumber' => ['string'],
         'version' => ['int'],
         'pointIndexFrom' => ['int'],
         'pointIndexTo' => ['int'],
         'status' => ['string'],
-        'logisticsStatus' => ['string'],
+        'edmOperatorStatus' => ['\stdClass'],
         'statusGroup' => ['string'],
         'updateDate' => ['string'],
         'additionalData' => ['Cargomart\ApiClient\Entity\Order\Objects\EcnAdditionalData'],
         'pdf' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
         'xls' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
         'xml' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
-        'pdfDiadoc' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
-        'logisticsPdf' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderEcnAccess'],
     ];
 
@@ -69,22 +70,23 @@ final class OrderEcn extends AbstractEntity
         'orderId' => false,
         'serialId' => false,
         'departureName' => false,
+        'departureLegalName' => false,
         'destinationName' => false,
+        'destinationLegalName' => false,
         'type' => false,
         'number' => false,
+        'externalNumber' => false,
         'version' => false,
         'pointIndexFrom' => false,
         'pointIndexTo' => false,
         'status' => false,
-        'logisticsStatus' => false,
+        'edmOperatorStatus' => true,
         'statusGroup' => false,
         'updateDate' => false,
         'additionalData' => false,
         'pdf' => false,
         'xls' => false,
         'xml' => false,
-        'pdfDiadoc' => false,
-        'logisticsPdf' => false,
         'access' => false,
     ];
 }

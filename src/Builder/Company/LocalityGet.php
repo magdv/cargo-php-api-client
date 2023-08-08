@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/company/locality
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Company;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Responses\CompanyLocalityResponse;
 
-final class LocalityGet extends AbstractRequest
+class LocalityGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

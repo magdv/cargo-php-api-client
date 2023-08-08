@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: company-confirmation/requests/company-create-request.json
  */
 
 declare(strict_types=1);
@@ -18,7 +17,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $inn
  * @property string $countryCode
  * @property string $companyName
- * @property string $activityTypeId
+ * @property int $activityTypeId
  */
 final class CompanyCreateRequest extends AbstractEntity
 {
@@ -26,7 +25,7 @@ final class CompanyCreateRequest extends AbstractEntity
         'inn' => ['string'],
         'countryCode' => ['string'],
         'companyName' => ['string'],
-        'activityTypeId' => ['string'],
+        'activityTypeId' => ['int'],
     ];
 
     protected static $nullables = [

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: simple-document/objects/payload-chunk-titleClient.json
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractEntity;
 
 /**
  * Информация о заказчике, грузоотправителе и грузополучателе из титула отправителя
- * source: simple-document/objects/payload-chunk-titleClient.json
+ * source: simple-document/objects/payload-chunk-title-client.json
  *
  * @property PayloadChunkClient $client
  * @property PayloadChunkConsignorOrConsignee[] $consignor

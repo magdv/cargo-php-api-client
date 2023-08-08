@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/dictionary/expeditor-branch
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Dictionary;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Dictionary\Responses\BranchList;
 
-final class ExpeditorBranchGet extends AbstractRequest
+class ExpeditorBranchGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

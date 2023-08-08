@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/{orderId}/proxy-consignor-email
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderProxyEmailRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderProxyEmailResponse;
 
-final class ProxyConsignorEmailPost extends AbstractRequest
+class ProxyConsignorEmailPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

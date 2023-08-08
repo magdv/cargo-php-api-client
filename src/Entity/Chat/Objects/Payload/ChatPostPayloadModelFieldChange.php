@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: chat/objects/payload/chat-post-payload-model-field-change.json
  */
 
 declare(strict_types=1);
@@ -15,18 +14,17 @@ use Cargomart\ApiClient\AbstractEntity;
  * Данные вложения - изменение полей объека
  * source: chat/objects/payload/chat-post-payload-model-field-change.json
  *
+ * @property string $type
  * @property string $message
- * @property ChatPostPayloadModelFieldChangeChangesItems[] $changes
+ * @property ChatPostPayloadModelFieldChangeChanges[] $changes
  */
 final class ChatPostPayloadModelFieldChange extends AbstractEntity
 {
     protected static $types = [
+        'type' => ['string'],
         'message' => ['string'],
-        'changes' => [
-            'array',
-            'Cargomart\ApiClient\Entity\Chat\Objects\Payload\ChatPostPayloadModelFieldChangeChangesItems',
-        ],
+        'changes' => ['array', 'Cargomart\ApiClient\Entity\Chat\Objects\Payload\ChatPostPayloadModelFieldChangeChanges'],
     ];
 
-    protected static $nullables = ['message' => false, 'changes' => false];
+    protected static $nullables = ['type' => false, 'message' => false, 'changes' => false];
 }

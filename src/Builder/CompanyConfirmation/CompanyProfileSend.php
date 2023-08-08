@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: url:/api/v2/company-confirmation/company-profile-send
  */
 
 declare(strict_types=1);

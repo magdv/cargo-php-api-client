@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: base/responses/file-link-response.json#/properties/data
  */
 
 declare(strict_types=1);

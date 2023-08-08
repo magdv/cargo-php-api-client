@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/company/{hash}/logo
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Company\Hash;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Responses\CompanyResponse;
 
-final class LogoDelete extends AbstractRequest
+class LogoDelete extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/dictionary
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Dictionary\Responses\DictionaryList;
 
-final class DictionaryGet extends AbstractRequest
+class DictionaryGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -21,7 +20,7 @@ final class DictionaryGet extends AbstractRequest
     public $headers = [];
 
     /**
-     * Метод возращает список словарей
+     * Метод возвращает список словарей
      *
      * @return DictionaryList
      *

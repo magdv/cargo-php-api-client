@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: chat/objects/payload/chat-post-payload-order-patch.json
  */
 
 declare(strict_types=1);
@@ -15,6 +14,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * Данные вложения - идентификаторы заказа и запроса на изменение заказа
  * source: chat/objects/payload/chat-post-payload-order-patch.json
  *
+ * @property string $type
  * @property string $orderHash
  * @property string $orderPatchId
  * @property string $comment
@@ -25,6 +25,7 @@ use Cargomart\ApiClient\AbstractEntity;
 final class ChatPostPayloadOrderPatch extends AbstractEntity
 {
     protected static $types = [
+        'type' => ['string'],
         'orderHash' => ['string'],
         'orderPatchId' => ['string'],
         'comment' => ['string'],
@@ -34,6 +35,7 @@ final class ChatPostPayloadOrderPatch extends AbstractEntity
     ];
 
     protected static $nullables = [
+        'type' => false,
         'orderHash' => false,
         'orderPatchId' => false,
         'comment' => false,

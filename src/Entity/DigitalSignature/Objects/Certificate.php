@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: digital-signature/objects/certificate.json
  */
 
 declare(strict_types=1);

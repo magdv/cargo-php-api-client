@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order-ecn/{id}
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\OrderEcn;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderEcnResponse;
 
-final class IdGet extends AbstractRequest
+class IdGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

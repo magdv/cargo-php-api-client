@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/expeditor-ecn
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderEcnListResponse;
 
-final class ExpeditorEcnGet extends AbstractRequest
+class ExpeditorEcnGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['page' => 1, 'perPage' => 20];

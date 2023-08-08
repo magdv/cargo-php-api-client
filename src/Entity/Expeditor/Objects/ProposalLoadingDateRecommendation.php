@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: expeditor/objects/proposal-loading-date-recommendation.json
  */
 
 declare(strict_types=1);

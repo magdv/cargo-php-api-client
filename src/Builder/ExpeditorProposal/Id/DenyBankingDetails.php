@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: url:/api/v2/expeditor-proposal/{id}/deny-banking-details
  */
 
 declare(strict_types=1);

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/excel
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Order;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\FileLinkResponse;
 
-final class ExcelGet extends AbstractRequest
+class ExcelGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['filter[orderType]' => ['auction', 'auctionNoPrice']];

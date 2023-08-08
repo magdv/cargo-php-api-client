@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/responses/order-truck-driver-correction-response.json#/properties/data/properties/correction
  */
 
 declare(strict_types=1);
@@ -15,7 +14,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderTruck;
 
 /**
  * Запрос на изменение машины или водителя
- * source: order/responses/order-truck-driver-correction-response.json#/properties/data/properties/correction
+ * source: order/responses/order-truck-driver-correction-response.json#/properties/data#/properties/correction
  *
  * @property OrderTruck $truck
  * @property OrderDriver $driver

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/responses/order-import.json#/properties/data
  */
 
 declare(strict_types=1);

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: worker/responses/worker-response.json#/properties/data
  */
 
 declare(strict_types=1);

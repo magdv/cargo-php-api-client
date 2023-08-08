@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: company-confirmation/objects/file-on-validation.json#/properties/access
  */
 
 declare(strict_types=1);

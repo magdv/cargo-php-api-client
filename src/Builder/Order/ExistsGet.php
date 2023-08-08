@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/exists
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Order;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\ExistsResponse;
 
-final class ExistsGet extends AbstractRequest
+class ExistsGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['filter[orderType]' => ['auction', 'auctionNoPrice'], 'page' => 1, 'perPage' => 20];

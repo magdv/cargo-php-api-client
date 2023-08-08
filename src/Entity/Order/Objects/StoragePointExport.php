@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/objects/storage-point-export.json
  */
 
 declare(strict_types=1);
@@ -10,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\Address;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
 
 /**
@@ -17,6 +17,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  * source: order/objects/storage-point-export.json
  *
  * @property int $id
+ * @property Address $addressObject
  * @property string $code
  * @property string $title
  * @property string $address
@@ -29,11 +30,14 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  * @property string $comment
  * @property float $latitude
  * @property float $longitude
+ * @property string $storageType
+ * @property PointShipper $owner
  */
 final class StoragePointExport extends AbstractEntity
 {
     protected static $types = [
         'id' => ['int'],
+        'addressObject' => ['Cargomart\ApiClient\Entity\Base\Address'],
         'code' => ['string'],
         'title' => ['string'],
         'address' => ['string'],
@@ -46,10 +50,13 @@ final class StoragePointExport extends AbstractEntity
         'comment' => ['string'],
         'latitude' => ['float'],
         'longitude' => ['float'],
+        'storageType' => ['string'],
+        'owner' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper'],
     ];
 
     protected static $nullables = [
         'id' => false,
+        'addressObject' => false,
         'code' => false,
         'title' => false,
         'address' => false,
@@ -62,5 +69,7 @@ final class StoragePointExport extends AbstractEntity
         'comment' => false,
         'latitude' => false,
         'longitude' => false,
+        'storageType' => false,
+        'owner' => false,
     ];
 }

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: chat/objects/payload/chat-post-payload-order-ecn-cancel.json
  */
 
 declare(strict_types=1);
@@ -16,6 +15,7 @@ use Cargomart\ApiClient\Entity\File\Objects\FileUrl;
  * Отмена ТРН
  * source: chat/objects/payload/chat-post-payload-order-ecn-cancel.json
  *
+ * @property string $type
  * @property string $creatorFio
  * @property string $eventDate
  * @property string $ecnType
@@ -30,6 +30,7 @@ use Cargomart\ApiClient\Entity\File\Objects\FileUrl;
 final class ChatPostPayloadOrderEcnCancel extends AbstractEntity
 {
     protected static $types = [
+        'type' => ['string'],
         'creatorFio' => ['string'],
         'eventDate' => ['string'],
         'ecnType' => ['string'],
@@ -43,6 +44,7 @@ final class ChatPostPayloadOrderEcnCancel extends AbstractEntity
     ];
 
     protected static $nullables = [
+        'type' => false,
         'creatorFio' => false,
         'eventDate' => false,
         'ecnType' => false,

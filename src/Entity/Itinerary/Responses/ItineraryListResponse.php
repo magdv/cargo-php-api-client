@@ -2,13 +2,13 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: itinerary/responses/itinerary-list-response.json
  */
 
 declare(strict_types=1);
 
 namespace Cargomart\ApiClient\Entity\Itinerary\Responses;
 
+use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
 use Cargomart\ApiClient\Entity\Base\MessageV2;
 

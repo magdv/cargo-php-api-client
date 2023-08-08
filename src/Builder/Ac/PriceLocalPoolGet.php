@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/ac/price-local-pool
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Ac;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Responses\PriceLocalPoolListResponse;
 
-final class PriceLocalPoolGet extends AbstractRequest
+class PriceLocalPoolGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

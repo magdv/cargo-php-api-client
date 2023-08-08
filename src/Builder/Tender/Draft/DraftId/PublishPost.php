@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/tender/draft/{draftId}/publish
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Tender\Draft\DraftId;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Tender\Responses\TenderDraftRequestResponse;
 
-final class PublishPost extends AbstractRequest
+class PublishPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

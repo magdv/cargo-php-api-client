@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/tender/request/lot
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Tender\Request;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Tender\Responses\TenderRequestLotListResponse;
 
-final class LotGet extends AbstractRequest
+class LotGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['filter[withOffer]' => false, 'page' => 1, 'perPage' => 20];

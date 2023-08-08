@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: dictionary/responses/dictionary-list.json#/properties/data
  */
 
 declare(strict_types=1);
@@ -22,6 +21,7 @@ use Cargomart\ApiClient\Entity\Dictionary\Objects\PaymentType;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\Section;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TenderCarriage;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\Timezone;
+use Cargomart\ApiClient\Entity\Dictionary\Objects\TrailerType;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckDevice;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckMode;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckType;
@@ -48,6 +48,7 @@ use Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleType;
  * @property Timezone[] $timezone
  * @property TruckMode[] $truckMode
  * @property TruckType[] $truckType
+ * @property TrailerType[] $trailerType
  * @property TruckDevice[] $truckDevice
  * @property Vat[] $vat
  * @property Section[] $section
@@ -73,6 +74,7 @@ final class DictionaryListData extends AbstractEntity
         'timezone' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\Timezone'],
         'truckMode' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TruckMode'],
         'truckType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TruckType'],
+        'trailerType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TrailerType'],
         'truckDevice' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TruckDevice'],
         'vat' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\Vat'],
         'section' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\Section'],
@@ -97,6 +99,7 @@ final class DictionaryListData extends AbstractEntity
         'timezone' => false,
         'truckMode' => false,
         'truckType' => false,
+        'trailerType' => false,
         'truckDevice' => false,
         'vat' => false,
         'section' => false,

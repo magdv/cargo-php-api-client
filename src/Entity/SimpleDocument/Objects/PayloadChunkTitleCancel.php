@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: simple-document/objects/payload-chunk-titleCancel.json
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractEntity;
 
 /**
  * Информация об отказе из титула отказа/отмены
- * source: simple-document/objects/payload-chunk-titleCancel.json
+ * source: simple-document/objects/payload-chunk-title-cancel.json
  *
  * @property PayloadChunkESign $expeditorSign
  * @property PayloadChunkESign $clientSign

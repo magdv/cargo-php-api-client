@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: user/requests/user-contact-email-confirm-request.json
  */
 
 declare(strict_types=1);

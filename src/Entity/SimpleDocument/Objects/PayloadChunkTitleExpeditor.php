@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: simple-document/objects/payload-chunk-titleExpeditor.json
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractEntity;
 
 /**
  * Информация о экспедиторе из титула экспедитора
- * source: simple-document/objects/payload-chunk-titleExpeditor.json
+ * source: simple-document/objects/payload-chunk-title-expeditor.json
  *
  * @property PayloadChunkClient $expeditor
  * @property PayloadChunkESign $sign

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/expeditor/price-local/price
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Expeditor\PriceLocal;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Responses\PriceLocalListResponse;
 
-final class PriceGet extends AbstractRequest
+class PriceGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

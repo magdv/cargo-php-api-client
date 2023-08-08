@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/predictor/price
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Predictor;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Predictor\Responses\PricePredictorResponse;
 
-final class PriceGet extends AbstractRequest
+class PriceGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

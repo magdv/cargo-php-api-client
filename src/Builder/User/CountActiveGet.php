@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/user/count-active
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\User;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\User\Responses\UserCountActive;
 
-final class CountActiveGet extends AbstractRequest
+class CountActiveGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

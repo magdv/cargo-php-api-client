@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: url:/api/v2/order/{orderId}
  */
 
 declare(strict_types=1);
@@ -10,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order;
 
 use Cargomart\ApiClient\AbstractBuilder;
+use Cargomart\ApiClient\Builder\Order\OrderId\ActNonDeliveryCar;
 use Cargomart\ApiClient\Builder\Order\OrderId\AfeerExpress;
 use Cargomart\ApiClient\Builder\Order\OrderId\Archive;
 use Cargomart\ApiClient\Builder\Order\OrderId\Bid;
@@ -83,6 +83,7 @@ use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriver;
 use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriverCorrection;
 use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriverPatch;
 use Cargomart\ApiClient\Builder\Order\OrderId\Validate;
+use Cargomart\ApiClient\Builder\Order\OrderId\ValidateEcnData;
 use Cargomart\ApiClient\Builder\Order\OrderId\Visitor;
 use Cargomart\ApiClient\Builder\Order\OrderId\WaybillAdditionalInfo;
 use Cargomart\ApiClient\Builder\Order\OrderId\WaybillTemplate;
@@ -97,11 +98,6 @@ final class OrderId extends AbstractBuilder
 {
     protected const URL = '/api/v2/order/{orderId}';
 
-    public function expeditorPayment(): ExpeditorPayment
-    {
-        return new ExpeditorPayment($this->params, $this->client);
-    }
-
     public function chat(): Chat
     {
         return new Chat($this->params, $this->client);
@@ -112,119 +108,9 @@ final class OrderId extends AbstractBuilder
         return new Comment($this->params, $this->client);
     }
 
-    public function correction(): Correction
-    {
-        return new Correction($this->params, $this->client);
-    }
-
-    public function xClone(): XClone
-    {
-        return new XClone($this->params, $this->client);
-    }
-
-    public function save(): Save
-    {
-        return new Save($this->params, $this->client);
-    }
-
-    public function edit(): Edit
-    {
-        return new Edit($this->params, $this->client);
-    }
-
-    public function point(): Point
-    {
-        return new Point($this->params, $this->client);
-    }
-
-    public function clientAccess(): ClientAccess
-    {
-        return new ClientAccess($this->params, $this->client);
-    }
-
-    public function contact(): Contact
-    {
-        return new Contact($this->params, $this->client);
-    }
-
-    public function tag(): Tag
-    {
-        return new Tag($this->params, $this->client);
-    }
-
-    public function validate(): Validate
-    {
-        return new Validate($this->params, $this->client);
-    }
-
-    public function publish(): Publish
-    {
-        return new Publish($this->params, $this->client);
-    }
-
-    public function moderation(): Moderation
-    {
-        return new Moderation($this->params, $this->client);
-    }
-
-    public function moderationReject(): ModerationReject
-    {
-        return new ModerationReject($this->params, $this->client);
-    }
-
-    public function moderationApprove(): ModerationApprove
-    {
-        return new ModerationApprove($this->params, $this->client);
-    }
-
-    public function fixPrice(): FixPrice
-    {
-        return new FixPrice($this->params, $this->client);
-    }
-
-    public function sign(): Sign
-    {
-        return new Sign($this->params, $this->client);
-    }
-
-    public function carrierSign(): CarrierSign
-    {
-        return new CarrierSign($this->params, $this->client);
-    }
-
-    public function customerPatch(): CustomerPatch
-    {
-        return new CustomerPatch($this->params, $this->client);
-    }
-
-    public function refuseRevertPatch(): RefuseRevertPatch
-    {
-        return new RefuseRevertPatch($this->params, $this->client);
-    }
-
-    public function truckDriverPatch(): TruckDriverPatch
-    {
-        return new TruckDriverPatch($this->params, $this->client);
-    }
-
     public function expeditorOffer(): ExpeditorOffer
     {
         return new ExpeditorOffer($this->params, $this->client);
-    }
-
-    public function roadmap(): Roadmap
-    {
-        return new Roadmap($this->params, $this->client);
-    }
-
-    public function carrierAsk(): CarrierAsk
-    {
-        return new CarrierAsk($this->params, $this->client);
-    }
-
-    public function carrierAskStat(): CarrierAskStat
-    {
-        return new CarrierAskStat($this->params, $this->client);
     }
 
     public function payment(): Payment
@@ -232,9 +118,94 @@ final class OrderId extends AbstractBuilder
         return new Payment($this->params, $this->client);
     }
 
+    public function itinerary(): Itinerary
+    {
+        return new Itinerary($this->params, $this->client);
+    }
+
+    public function cancel(): Cancel
+    {
+        return new Cancel($this->params, $this->client);
+    }
+
+    public function pin(): Pin
+    {
+        return new Pin($this->params, $this->client);
+    }
+
+    public function bid(): Bid
+    {
+        return new Bid($this->params, $this->client);
+    }
+
+    public function broker(): Broker
+    {
+        return new Broker($this->params, $this->client);
+    }
+
+    public function afeerExpress(): AfeerExpress
+    {
+        return new AfeerExpress($this->params, $this->client);
+    }
+
+    public function visitor(): Visitor
+    {
+        return new Visitor($this->params, $this->client);
+    }
+
+    public function archive(): Archive
+    {
+        return new Archive($this->params, $this->client);
+    }
+
     public function offer(): Offer
     {
         return new Offer($this->params, $this->client);
+    }
+
+    public function originalDocsTrackingNumber(): OriginalDocsTrackingNumber
+    {
+        return new OriginalDocsTrackingNumber($this->params, $this->client);
+    }
+
+    public function originalDocsAccept(): OriginalDocsAccept
+    {
+        return new OriginalDocsAccept($this->params, $this->client);
+    }
+
+    public function originalDocsReject(): OriginalDocsReject
+    {
+        return new OriginalDocsReject($this->params, $this->client);
+    }
+
+    public function simpleDocument(): SimpleDocument
+    {
+        return new SimpleDocument($this->params, $this->client);
+    }
+
+    public function actNonDeliveryCar(): ActNonDeliveryCar
+    {
+        return new ActNonDeliveryCar($this->params, $this->client);
+    }
+
+    public function checkDigitalEcnAccess(): CheckDigitalEcnAccess
+    {
+        return new CheckDigitalEcnAccess($this->params, $this->client);
+    }
+
+    public function validateEcnData(): ValidateEcnData
+    {
+        return new ValidateEcnData($this->params, $this->client);
+    }
+
+    public function ecn(): Ecn
+    {
+        return new Ecn($this->params, $this->client);
+    }
+
+    public function negotiate(): Negotiate
+    {
+        return new Negotiate($this->params, $this->client);
     }
 
     public function carrierRefuse(): CarrierRefuse
@@ -417,79 +388,119 @@ final class OrderId extends AbstractBuilder
         return new ExpeditorAssignment($this->params, $this->client);
     }
 
-    public function itinerary(): Itinerary
+    public function correction(): Correction
     {
-        return new Itinerary($this->params, $this->client);
+        return new Correction($this->params, $this->client);
     }
 
-    public function cancel(): Cancel
+    public function customerPatch(): CustomerPatch
     {
-        return new Cancel($this->params, $this->client);
+        return new CustomerPatch($this->params, $this->client);
     }
 
-    public function pin(): Pin
+    public function refuseRevertPatch(): RefuseRevertPatch
     {
-        return new Pin($this->params, $this->client);
+        return new RefuseRevertPatch($this->params, $this->client);
     }
 
-    public function bid(): Bid
+    public function truckDriverPatch(): TruckDriverPatch
     {
-        return new Bid($this->params, $this->client);
+        return new TruckDriverPatch($this->params, $this->client);
     }
 
-    public function broker(): Broker
+    public function expeditorPayment(): ExpeditorPayment
     {
-        return new Broker($this->params, $this->client);
+        return new ExpeditorPayment($this->params, $this->client);
     }
 
-    public function afeerExpress(): AfeerExpress
+    public function fixPrice(): FixPrice
     {
-        return new AfeerExpress($this->params, $this->client);
+        return new FixPrice($this->params, $this->client);
     }
 
-    public function visitor(): Visitor
+    public function sign(): Sign
     {
-        return new Visitor($this->params, $this->client);
+        return new Sign($this->params, $this->client);
     }
 
-    public function archive(): Archive
+    public function carrierSign(): CarrierSign
     {
-        return new Archive($this->params, $this->client);
+        return new CarrierSign($this->params, $this->client);
     }
 
-    public function originalDocsTrackingNumber(): OriginalDocsTrackingNumber
+    public function roadmap(): Roadmap
     {
-        return new OriginalDocsTrackingNumber($this->params, $this->client);
+        return new Roadmap($this->params, $this->client);
     }
 
-    public function originalDocsAccept(): OriginalDocsAccept
+    public function carrierAsk(): CarrierAsk
     {
-        return new OriginalDocsAccept($this->params, $this->client);
+        return new CarrierAsk($this->params, $this->client);
     }
 
-    public function originalDocsReject(): OriginalDocsReject
+    public function carrierAskStat(): CarrierAskStat
     {
-        return new OriginalDocsReject($this->params, $this->client);
+        return new CarrierAskStat($this->params, $this->client);
     }
 
-    public function simpleDocument(): SimpleDocument
+    public function xClone(): XClone
     {
-        return new SimpleDocument($this->params, $this->client);
+        return new XClone($this->params, $this->client);
     }
 
-    public function checkDigitalEcnAccess(): CheckDigitalEcnAccess
+    public function save(): Save
     {
-        return new CheckDigitalEcnAccess($this->params, $this->client);
+        return new Save($this->params, $this->client);
     }
 
-    public function ecn(): Ecn
+    public function edit(): Edit
     {
-        return new Ecn($this->params, $this->client);
+        return new Edit($this->params, $this->client);
     }
 
-    public function negotiate(): Negotiate
+    public function point(): Point
     {
-        return new Negotiate($this->params, $this->client);
+        return new Point($this->params, $this->client);
+    }
+
+    public function clientAccess(): ClientAccess
+    {
+        return new ClientAccess($this->params, $this->client);
+    }
+
+    public function contact(): Contact
+    {
+        return new Contact($this->params, $this->client);
+    }
+
+    public function tag(): Tag
+    {
+        return new Tag($this->params, $this->client);
+    }
+
+    public function validate(): Validate
+    {
+        return new Validate($this->params, $this->client);
+    }
+
+    public function publish(): Publish
+    {
+        return new Publish($this->params, $this->client);
+    }
+
+    public function moderation(): Moderation
+    {
+        return new Moderation($this->params, $this->client);
+    }
+
+    public function moderationReject(): ModerationReject
+    {
+        return new ModerationReject($this->params, $this->client);
+    }
+
+    public function moderationApprove(): ModerationApprove
+    {
+        return new ModerationApprove($this->params, $this->client);
     }
 
     public function get(): OrderIdGet

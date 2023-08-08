@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/candidate/count
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Candidate;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Candidate\Responses\CandidateCountResponse;
 
-final class CountGet extends AbstractRequest
+class CountGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

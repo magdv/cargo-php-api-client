@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/company/branch/ac
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Company\Branch;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Responses\CompanyBranchListAcResponse;
 
-final class AcGet extends AbstractRequest
+class AcGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

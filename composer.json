@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Cargomart.ru API client",
     "require": {
-        "php": ">=7.4",
+        "php": "^8.2",
         "ext-json": "*",
         "ext-mbstring": "*",
         "guzzlehttp/guzzle": "^7.0"

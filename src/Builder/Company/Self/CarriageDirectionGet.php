@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/company/self/carriage-direction
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Company\Self;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Responses\CompanyCarriageDirectionResponse;
 
-final class CarriageDirectionGet extends AbstractRequest
+class CarriageDirectionGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

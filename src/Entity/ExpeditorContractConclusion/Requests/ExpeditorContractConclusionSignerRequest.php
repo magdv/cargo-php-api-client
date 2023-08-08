@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: expeditor-contract-conclusion/requests/expeditor-contract-conclusion-signer-request.json
  */
 
 declare(strict_types=1);

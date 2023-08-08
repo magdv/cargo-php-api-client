@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/company/self/partner-conditions
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Company\Self;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Responses\PartnerConditionsResponse;
 
-final class PartnerConditionsGet extends AbstractRequest
+class PartnerConditionsGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

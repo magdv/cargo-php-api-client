@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: truck/objects/truck-old.json
  */
 
 declare(strict_types=1);

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order-search/truck
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\OrderSearch;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderSearchCriteriaListResponse;
 
-final class TruckGet extends AbstractRequest
+class TruckGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: expeditor-carrier-contract/responses/expeditor-carrier-contract-list.json#/properties/data
  */
 
 declare(strict_types=1);

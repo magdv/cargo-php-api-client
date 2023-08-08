@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: chat/objects/payload/chat-post-payload-original-documents-reject.json
  */
 
 declare(strict_types=1);
@@ -15,10 +14,11 @@ use Cargomart\ApiClient\AbstractEntity;
  * Документы были отклонены
  * source: chat/objects/payload/chat-post-payload-original-documents-reject.json
  *
+ * @property string $type
  * @property string $reason
  */
 final class ChatPostPayloadOriginalDocumentsReject extends AbstractEntity
 {
-    protected static $types = ['reason' => ['string']];
-    protected static $nullables = ['reason' => false];
+    protected static $types = ['type' => ['string'], 'reason' => ['string']];
+    protected static $nullables = ['type' => false, 'reason' => false];
 }

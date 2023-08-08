@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: expeditor/objects/route-point-short.json
  */
 
 declare(strict_types=1);
@@ -10,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Expeditor\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
 
 /**
  * Пункт маршрута
@@ -23,6 +23,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $fromDate
  * @property string $fromTime
  * @property string $toTime
+ * @property bool $isAccordingToWorkSchedule
+ * @property WorkSchedule $workSchedule
  */
 final class RoutePointShort extends AbstractEntity
 {
@@ -35,6 +37,8 @@ final class RoutePointShort extends AbstractEntity
         'fromDate' => ['string'],
         'fromTime' => ['string'],
         'toTime' => ['string'],
+        'isAccordingToWorkSchedule' => ['bool'],
+        'workSchedule' => ['Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule'],
     ];
 
     protected static $nullables = [
@@ -46,5 +50,7 @@ final class RoutePointShort extends AbstractEntity
         'fromDate' => false,
         'fromTime' => false,
         'toTime' => false,
+        'isAccordingToWorkSchedule' => false,
+        'workSchedule' => false,
     ];
 }

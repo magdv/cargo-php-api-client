@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: base/pagination-no-total.json
  */
 
 declare(strict_types=1);

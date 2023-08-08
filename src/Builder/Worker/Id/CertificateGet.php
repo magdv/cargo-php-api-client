@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/worker/{id}/certificate
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Worker\Id;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\DigitalSignature\Responses\UserCertificateListResponse;
 
-final class CertificateGet extends AbstractRequest
+class CertificateGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

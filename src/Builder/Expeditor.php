@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: url:/api/v2/expeditor
  */
 
 declare(strict_types=1);
@@ -21,11 +20,6 @@ final class Expeditor extends AbstractBuilder
 {
     protected const URL = '/api/v2/expeditor';
 
-    public function annexToContract(): AnnexToContract
-    {
-        return new AnnexToContract($this->params, $this->client);
-    }
-
     public function ac(): Ac
     {
         return new Ac($this->params, $this->client);
@@ -34,5 +28,10 @@ final class Expeditor extends AbstractBuilder
     public function priceLocal(): PriceLocal
     {
         return new PriceLocal($this->params, $this->client);
+    }
+
+    public function annexToContract(): AnnexToContract
+    {
+        return new AnnexToContract($this->params, $this->client);
     }
 }

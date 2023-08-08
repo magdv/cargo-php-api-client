@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: search/objects/payloads/order-payload.json
  */
 
 declare(strict_types=1);

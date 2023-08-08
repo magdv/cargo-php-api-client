@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/device
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 use Cargomart\ApiClient\Entity\Device\Requests\RegisterDevice;
 
-final class DevicePost extends AbstractRequest
+class DevicePost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

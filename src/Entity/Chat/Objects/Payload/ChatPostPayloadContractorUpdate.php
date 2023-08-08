@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: chat/objects/payload/chat-post-payload-contractor-update.json
  */
 
 declare(strict_types=1);
@@ -15,10 +14,11 @@ use Cargomart\ApiClient\AbstractEntity;
  * Обновление контрагента
  * source: chat/objects/payload/chat-post-payload-contractor-update.json
  *
+ * @property string $type
  * @property int $historyId
  */
 final class ChatPostPayloadContractorUpdate extends AbstractEntity
 {
-    protected static $types = ['historyId' => ['int']];
-    protected static $nullables = ['historyId' => false];
+    protected static $types = ['type' => ['string'], 'historyId' => ['int']];
+    protected static $nullables = ['type' => false, 'historyId' => false];
 }

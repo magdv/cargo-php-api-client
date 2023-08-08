@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/metrics/locality
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 use Cargomart\ApiClient\Entity\Metric\Requests\LocalityMetricRequest;
 
-final class LocalityPost extends AbstractRequest
+class LocalityPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

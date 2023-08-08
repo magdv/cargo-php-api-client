@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/simple-document/{rootId}
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\SimpleDocument;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\SimpleDocument\Responses\SimpleDocumentResponse;
 
-final class RootIdGet extends AbstractRequest
+class RootIdGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

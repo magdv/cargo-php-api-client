@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/objects/ecn-additional-data.json#/properties/documents
  */
 
 declare(strict_types=1);

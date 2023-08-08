@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/user/self/usedesk-token
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\User\Requests\UsedeskTokenRequest;
 use Cargomart\ApiClient\Entity\User\Responses\UseDeskTokenResponse;
 
-final class UsedeskTokenPut extends AbstractRequest
+class UsedeskTokenPut extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

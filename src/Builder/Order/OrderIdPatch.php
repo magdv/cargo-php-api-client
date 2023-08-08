@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/{orderId}
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderEditRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderEditResponse;
 
-final class OrderIdPatch extends AbstractRequest
+class OrderIdPatch extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

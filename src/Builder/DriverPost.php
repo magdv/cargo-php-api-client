@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/driver
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Driver\Requests\DriverPostRequest;
 use Cargomart\ApiClient\Entity\Driver\Responses\DriverResponse;
 
-final class DriverPost extends AbstractRequest
+class DriverPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

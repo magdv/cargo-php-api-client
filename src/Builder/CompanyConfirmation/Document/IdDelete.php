@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/company-confirmation/document/{id}
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\CompanyConfirmation\Document;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\CompanyConfirmation\Responses\StatusResponse;
 
-final class IdDelete extends AbstractRequest
+class IdDelete extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

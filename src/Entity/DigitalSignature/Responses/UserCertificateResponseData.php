@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: digital-signature/responses/user-certificate-response.json#/properties/data
  */
 
 declare(strict_types=1);

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/responses/ac-driver-response.json#/properties/data
  */
 
 declare(strict_types=1);
@@ -15,13 +14,13 @@ use Cargomart\ApiClient\Entity\Base\Pagination;
 /**
  * source: order/responses/ac-driver-response.json#/properties/data
  *
- * @property AcDriverResponseDataDriverItems[] $driver
+ * @property AcDriverResponseDataDriver[] $driver
  * @property Pagination $pagination
  */
 final class AcDriverResponseData extends AbstractEntity
 {
     protected static $types = [
-        'driver' => ['array', 'Cargomart\ApiClient\Entity\Order\Responses\AcDriverResponseDataDriverItems'],
+        'driver' => ['array', 'Cargomart\ApiClient\Entity\Order\Responses\AcDriverResponseDataDriver'],
         'pagination' => ['Cargomart\ApiClient\Entity\Base\Pagination'],
     ];
 

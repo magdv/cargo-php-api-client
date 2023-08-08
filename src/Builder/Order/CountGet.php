@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/count
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Order;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderCountResponse;
 
-final class CountGet extends AbstractRequest
+class CountGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['filter[orderType]' => ['auction', 'auctionNoPrice']];

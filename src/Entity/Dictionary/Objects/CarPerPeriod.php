@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: dictionary/objects/car-per-period.json
  */
 
 declare(strict_types=1);

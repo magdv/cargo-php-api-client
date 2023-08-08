@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: dictionary/objects/branch-item.json
  */
 
 declare(strict_types=1);
@@ -22,7 +21,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string[] $emails
  * @property float $latitude
  * @property float $longitude
- * @property BranchItemScheduleItems[] $schedule
+ * @property BranchItemSchedule[] $schedule
  */
 final class BranchItem extends AbstractEntity
 {
@@ -34,7 +33,7 @@ final class BranchItem extends AbstractEntity
         'emails' => ['array', 'string'],
         'latitude' => ['float'],
         'longitude' => ['float'],
-        'schedule' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\BranchItemScheduleItems'],
+        'schedule' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\BranchItemSchedule'],
     ];
 
     protected static $nullables = [

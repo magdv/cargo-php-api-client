@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/storage-point/{id}/contact/{contactId}
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\StoragePoint\Requests\SpContact;
 use Cargomart\ApiClient\Entity\StoragePoint\Responses\ContactList;
 
-final class ContactIdPut extends AbstractRequest
+class ContactIdPut extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

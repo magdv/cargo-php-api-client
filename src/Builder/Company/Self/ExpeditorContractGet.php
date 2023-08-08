@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/company/self/expeditor-contract
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Company\Self;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Responses\CompanyExpeditorContractResponse;
 
-final class ExpeditorContractGet extends AbstractRequest
+class ExpeditorContractGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['proxyType' => 'all'];

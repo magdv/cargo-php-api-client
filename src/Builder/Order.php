@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: url:/api/v2/order
  */
 
 declare(strict_types=1);
@@ -35,33 +34,6 @@ final class Order extends AbstractBuilder
         return new OrderId($params, $this->client);
     }
 
-    public function categoryStatistics(): CategoryStatistics
-    {
-        return new CategoryStatistics($this->params, $this->client);
-    }
-
-    public function id(string $id): Id
-    {
-        $params = $this->params;
-        $params['id'] = $id;
-        return new Id($params, $this->client);
-    }
-
-    public function ac(): Ac
-    {
-        return new Ac($this->params, $this->client);
-    }
-
-    public function excel(): Excel
-    {
-        return new Excel($this->params, $this->client);
-    }
-
-    public function import(): Import
-    {
-        return new Import($this->params, $this->client);
-    }
-
     public function broker(): Broker
     {
         return new Broker($this->params, $this->client);
@@ -80,6 +52,33 @@ final class Order extends AbstractBuilder
     public function count(): Count
     {
         return new Count($this->params, $this->client);
+    }
+
+    public function categoryStatistics(): CategoryStatistics
+    {
+        return new CategoryStatistics($this->params, $this->client);
+    }
+
+    public function id(string $id): Id
+    {
+        $params = $this->params;
+        $params['id'] = $id;
+        return new Id($params, $this->client);
+    }
+
+    public function excel(): Excel
+    {
+        return new Excel($this->params, $this->client);
+    }
+
+    public function import(): Import
+    {
+        return new Import($this->params, $this->client);
+    }
+
+    public function ac(): Ac
+    {
+        return new Ac($this->params, $this->client);
     }
 
     public function get(): OrderGet

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/tender/request/{tenderId}
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Tender\Request;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Tender\Responses\TenderRequestItemResponse;
 
-final class TenderIdGet extends AbstractRequest
+class TenderIdGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: company/requests/partner-contract-request.json
  */
 
 declare(strict_types=1);

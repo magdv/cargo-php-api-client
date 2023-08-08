@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/user/self
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\User;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\User\Responses\UserFullResponse;
 
-final class UserSelfGet extends AbstractRequest
+class UserSelfGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

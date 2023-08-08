@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/objects/order-card-full.json
  */
 
 declare(strict_types=1);
@@ -129,7 +128,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property bool $isTruckDriverChanged
  * @property bool $isDocChanged
  * @property OrderDetails[] $details
- * @property ProgressItem[] $progress
+ * @property ProgressItemListProgress[] $progress
  * @property OrderOfferCurrent $currentOffer
  * @property OrderOfferCarRequest $carRequest
  * @property OrderPayments[] $payments
@@ -264,7 +263,7 @@ final class OrderCardFull extends AbstractEntity
         'isTruckDriverChanged' => ['bool'],
         'isDocChanged' => ['bool'],
         'details' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDetails'],
-        'progress' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\ProgressItem'],
+        'progress' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\ProgressItemListProgress'],
         'currentOffer' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCurrent'],
         'carRequest' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCarRequest'],
         'payments' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderPayments'],

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: user/objects/value-with-code-verification.json
  */
 
 declare(strict_types=1);

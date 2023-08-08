@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/booking/availability
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Booking;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Tms\Responses\AvailabilityListResponse;
 
-final class AvailabilityGet extends AbstractRequest
+class AvailabilityGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

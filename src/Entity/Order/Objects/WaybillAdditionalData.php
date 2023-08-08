@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/objects/waybill-additional-data.json
  */
 
 declare(strict_types=1);
@@ -16,6 +15,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: order/objects/waybill-additional-data.json
  *
  * @property string $type
+ * @property string $externalNumber
  * @property int $pointIdFrom
  * @property int $pointIdTo
  * @property string $cargoCondition
@@ -34,6 +34,7 @@ final class WaybillAdditionalData extends AbstractEntity
 {
     protected static $types = [
         'type' => ['string'],
+        'externalNumber' => ['string'],
         'pointIdFrom' => ['int'],
         'pointIdTo' => ['int'],
         'cargoCondition' => ['string'],
@@ -51,6 +52,7 @@ final class WaybillAdditionalData extends AbstractEntity
 
     protected static $nullables = [
         'type' => false,
+        'externalNumber' => false,
         'pointIdFrom' => false,
         'pointIdTo' => false,
         'cargoCondition' => false,

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/objects/expeditor-contract-conclusion-settings.json
  */
 
 declare(strict_types=1);

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/auth/refresh-token
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Auth\Requests\RefreshTokenRequest;
 use Cargomart\ApiClient\Entity\Auth\Responses\AuthTokenResponse;
 
-final class RefreshTokenPost extends AbstractRequest
+class RefreshTokenPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

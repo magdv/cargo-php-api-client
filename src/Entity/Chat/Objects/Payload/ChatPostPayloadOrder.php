@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: chat/objects/payload/chat-post-payload-order.json
  */
 
 declare(strict_types=1);
@@ -15,17 +14,19 @@ use Cargomart\ApiClient\AbstractEntity;
  * Данные вложения - заказ
  * source: chat/objects/payload/chat-post-payload-order.json
  *
+ * @property string $type
  * @property string $id
  * @property int $serialId
- * @property ChatPostPayloadOrderPointItems[] $point
+ * @property ChatPostPayloadOrderPoint[] $point
  */
 final class ChatPostPayloadOrder extends AbstractEntity
 {
     protected static $types = [
+        'type' => ['string'],
         'id' => ['string'],
         'serialId' => ['int'],
-        'point' => ['array', 'Cargomart\ApiClient\Entity\Chat\Objects\Payload\ChatPostPayloadOrderPointItems'],
+        'point' => ['array', 'Cargomart\ApiClient\Entity\Chat\Objects\Payload\ChatPostPayloadOrderPoint'],
     ];
 
-    protected static $nullables = ['id' => false, 'serialId' => false, 'point' => false];
+    protected static $nullables = ['type' => false, 'id' => false, 'serialId' => false, 'point' => false];
 }

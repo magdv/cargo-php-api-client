@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/company/{hash}/communication-contacts
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Requests\CommunicationContactsRequest;
 use Cargomart\ApiClient\Entity\Company\Responses\CommunicationContactsResponse;
 
-final class CommunicationContactsPut extends AbstractRequest
+class CommunicationContactsPut extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

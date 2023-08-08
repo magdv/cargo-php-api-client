@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/trailer
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Trailer\Responses\TrailerListResponse;
 
-final class TrailerGet extends AbstractRequest
+class TrailerGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['filter[type]' => 'all'];
@@ -99,11 +98,11 @@ final class TrailerGet extends AbstractRequest
     /**
      * лимит выдачи.
      *
-     * @var null|string $value
+     * @var null|int $value
      *
      * @return self
      */
-    public function qPerPage(?string $value): self
+    public function qPerPage(?int $value): self
     {
         $c = clone $this;
         if (null === $value) {

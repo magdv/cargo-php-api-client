@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/search
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Search\Responses\SearchResponse;
 
-final class SearchGet extends AbstractRequest
+class SearchGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/order/{orderId}/proxy-consignor-carrier-additional-info
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Requests\OrderAdditionalInfoRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderAdditionalInfoResponse;
 
-final class ProxyConsignorCarrierAdditionalInfoPatch extends AbstractRequest
+class ProxyConsignorCarrierAdditionalInfoPatch extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

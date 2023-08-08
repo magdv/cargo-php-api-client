@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: order/requests/order-customer-patch-request.json
  */
 
 declare(strict_types=1);
@@ -16,6 +15,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: order/requests/order-customer-patch-request.json
  *
  * @property string $consignorPrice
+ * @property int $companyBranchId
+ * @property int $truckTypeId
  * @property string $cargoType
  * @property float $cargoWeight
  * @property int $cargoCapacity
@@ -35,6 +36,8 @@ final class OrderCustomerPatchRequest extends AbstractEntity
 {
     protected static $types = [
         'consignorPrice' => ['string'],
+        'companyBranchId' => ['int'],
+        'truckTypeId' => ['int'],
         'cargoType' => ['string'],
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],
@@ -53,6 +56,8 @@ final class OrderCustomerPatchRequest extends AbstractEntity
 
     protected static $nullables = [
         'consignorPrice' => false,
+        'companyBranchId' => false,
+        'truckTypeId' => false,
         'cargoType' => false,
         'cargoWeight' => false,
         'cargoCapacity' => false,

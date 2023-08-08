@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/landing/send-email
  */
 
 declare(strict_types=1);
@@ -13,7 +12,7 @@ use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Landing\Requests\SendEmailRequest;
 use Cargomart\ApiClient\Entity\Landing\Responses\LandingMessage;
 
-final class SendEmailPost extends AbstractRequest
+class SendEmailPost extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];

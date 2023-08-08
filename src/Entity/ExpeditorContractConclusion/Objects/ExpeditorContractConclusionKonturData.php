@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: expeditor-contract-conclusion/objects/expeditor-contract-conclusion-kontur-data.json
  */
 
 declare(strict_types=1);
@@ -24,7 +23,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $ogrn
  * @property int $legalStatusId
  * @property string $registrationDate
- * @property ExpeditorContractConclusionKonturDataSignersItems[] $signers
+ * @property ExpeditorContractConclusionKonturDataSigners[] $signers
  */
 final class ExpeditorContractConclusionKonturData extends AbstractEntity
 {
@@ -40,7 +39,7 @@ final class ExpeditorContractConclusionKonturData extends AbstractEntity
         'registrationDate' => ['string'],
         'signers' => [
             'array',
-            'Cargomart\ApiClient\Entity\ExpeditorContractConclusion\Objects\ExpeditorContractConclusionKonturDataSignersItems',
+            'Cargomart\ApiClient\Entity\ExpeditorContractConclusion\Objects\ExpeditorContractConclusionKonturDataSigners',
         ],
     ];
 

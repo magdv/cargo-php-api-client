@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/expeditor-proposal
  */
 
 declare(strict_types=1);
@@ -12,10 +11,10 @@ namespace Cargomart\ApiClient\Builder;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Expeditor\Responses\ProposalListResponse;
 
-final class ExpeditorProposalGet extends AbstractRequest
+class ExpeditorProposalGet extends AbstractRequest
 {
     /** @var string[][] */
-    public $query = ['page' => 1, 'perPage' => 20];
+    public $query = ['filter[hasWithoutTruckDriver]' => false, 'page' => 1, 'perPage' => 20];
 
     /** @var string[] */
     public $headers = [];
@@ -528,6 +527,25 @@ final class ExpeditorProposalGet extends AbstractRequest
             unset($c->query['filter[signStatus]']);
         } else {
             $c->query['filter[signStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Фильтр отстутсвия машины и водителя.
+     *
+     * @var null|bool $value
+     *
+     * @return self
+     */
+    public function qFilterHasWithoutTruckDriver(?bool $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[hasWithoutTruckDriver]']);
+        } else {
+            $c->query['filter[hasWithoutTruckDriver]'] = $value;
         }
 
         return $c;

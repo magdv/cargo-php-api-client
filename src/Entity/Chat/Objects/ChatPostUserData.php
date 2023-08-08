@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: chat/objects/chat-post-user-data.json
  */
 
 declare(strict_types=1);

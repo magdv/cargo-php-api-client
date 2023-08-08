@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/tender/request
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder\Tender;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Tender\Responses\TenderRequestListResponse;
 
-final class RequestGet extends AbstractRequest
+class RequestGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = ['page' => 1, 'perPage' => 20];

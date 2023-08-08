@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: tender/requests/lot-offer-push-request.json
  */
 
 declare(strict_types=1);

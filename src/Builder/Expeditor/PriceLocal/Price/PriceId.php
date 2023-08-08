@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: url:/api/v2/expeditor/price-local/price/{priceId}
  */
 
 declare(strict_types=1);
@@ -26,5 +25,10 @@ final class PriceId extends AbstractBuilder
     public function put(): PriceIdPut
     {
         return new PriceIdPut($this->client, $this->getUrl());
+    }
+
+    public function delete(): PriceIdDelete
+    {
+        return new PriceIdDelete($this->client, $this->getUrl());
     }
 }

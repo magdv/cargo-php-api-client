@@ -2,7 +2,6 @@
 
 /**
  * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
- * src: req:/api/v2/price-type
  */
 
 declare(strict_types=1);
@@ -12,7 +11,7 @@ namespace Cargomart\ApiClient\Builder;
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderPriceTypeResponse;
 
-final class PriceTypeGet extends AbstractRequest
+class PriceTypeGet extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
