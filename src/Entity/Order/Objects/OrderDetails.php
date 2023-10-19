@@ -17,9 +17,24 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $type
  * @property string $title
  * @property string $content
+ * @property string $extContent
+ * @property string $highlight
  */
 final class OrderDetails extends AbstractEntity
 {
-    protected static $types = ['type' => ['string'], 'title' => ['string'], 'content' => ['string']];
-    protected static $nullables = ['type' => false, 'title' => false, 'content' => false];
+    protected static $types = [
+        'type' => ['string'],
+        'title' => ['string'],
+        'content' => ['string'],
+        'extContent' => ['string'],
+        'highlight' => ['string'],
+    ];
+
+    protected static $nullables = [
+        'type' => false,
+        'title' => false,
+        'content' => false,
+        'extContent' => false,
+        'highlight' => false,
+    ];
 }

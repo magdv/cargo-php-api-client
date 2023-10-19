@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderAdditionalInfo;
+use Cargomart\ApiClient\Entity\Order\Requests\OrderAdditionalInfoRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderAdditionalInfoResponse;
 
 class ProxyConsignorCarrierAdditionalInfoPatch extends AbstractRequest
@@ -27,7 +27,7 @@ class ProxyConsignorCarrierAdditionalInfoPatch extends AbstractRequest
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(OrderAdditionalInfo $body): OrderAdditionalInfoResponse
+    public function do(OrderAdditionalInfoRequest $body): OrderAdditionalInfoResponse
     {
         return $this->client->doRequest(
             'PATCH',

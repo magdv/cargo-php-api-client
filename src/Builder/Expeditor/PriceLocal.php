@@ -9,7 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Expeditor;
 
 use Cargomart\ApiClient\AbstractBuilder;
-use Cargomart\ApiClient\Builder\Expeditor\PriceLocal\Id;
+use Cargomart\ApiClient\Builder\Expeditor\PriceLocal\Pool;
+use Cargomart\ApiClient\Builder\Expeditor\PriceLocal\Price;
 
 /**
  * url: /api/v2/expeditor/price-local
@@ -18,20 +19,13 @@ final class PriceLocal extends AbstractBuilder
 {
     protected const URL = '/api/v2/expeditor/price-local';
 
-    public function id(int $id): Id
+    public function pool(): Pool
     {
-        $params = $this->params;
-        $params['id'] = $id;
-        return new Id($params, $this->client);
+        return new Pool($this->params, $this->client);
     }
 
-    public function get(): PriceLocalGet
+    public function price(): Price
     {
-        return new PriceLocalGet($this->client, $this->getUrl());
-    }
-
-    public function post(): PriceLocalPost
-    {
-        return new PriceLocalPost($this->client, $this->getUrl());
+        return new Price($this->params, $this->client);
     }
 }

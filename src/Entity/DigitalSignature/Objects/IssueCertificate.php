@@ -11,7 +11,7 @@ namespace Cargomart\ApiClient\Entity\DigitalSignature\Objects;
 use Cargomart\ApiClient\AbstractEntity;
 
 /**
- * Информация по выдаче сертификата сотруднику
+ * deprecated. Информация по выдаче сертификата сотруднику
  * source: digital-signature/objects/issue-certificate.json
  *
  * @property string $issueCertificateId

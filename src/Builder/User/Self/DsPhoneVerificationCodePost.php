@@ -20,7 +20,7 @@ class DsPhoneVerificationCodePost extends AbstractRequest
     public $headers = [];
 
     /**
-     * Выслать код для подтверждения
+     * deprecated! Выслать код для подтверждения
      *
      * @return UserFullResponse
      *

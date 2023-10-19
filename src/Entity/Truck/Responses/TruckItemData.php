@@ -11,7 +11,7 @@ namespace Cargomart\ApiClient\Entity\Truck\Responses;
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckMode;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckType;
-use Cargomart\ApiClient\Entity\File\Objects\File;
+use Cargomart\ApiClient\Entity\File\Objects\FileV1;
 
 /**
  * ТС
@@ -20,7 +20,7 @@ use Cargomart\ApiClient\Entity\File\Objects\File;
  * @property \stdClass $truck
  * @property TruckType[] $truckType
  * @property TruckMode[] $truckMode
- * @property File[] $file
+ * @property FileV1[] $file
  */
 final class TruckItemData extends AbstractEntity
 {
@@ -28,7 +28,7 @@ final class TruckItemData extends AbstractEntity
         'truck' => ['\stdClass'],
         'truckType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TruckType'],
         'truckMode' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TruckMode'],
-        'file' => ['array', 'Cargomart\ApiClient\Entity\File\Objects\File'],
+        'file' => ['array', 'Cargomart\ApiClient\Entity\File\Objects\FileV1'],
     ];
 
     protected static $nullables = ['truck' => true, 'truckType' => false, 'truckMode' => false, 'file' => false];

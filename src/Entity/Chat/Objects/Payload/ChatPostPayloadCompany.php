@@ -14,12 +14,13 @@ use Cargomart\ApiClient\AbstractEntity;
  * Данные вложения - компания
  * source: chat/objects/payload/chat-post-payload-company.json
  *
+ * @property string $type
  * @property string $id
  * @property string $shortName
  * @property string $logo
  */
 final class ChatPostPayloadCompany extends AbstractEntity
 {
-    protected static $types = ['id' => ['string'], 'shortName' => ['string'], 'logo' => ['string']];
-    protected static $nullables = ['id' => false, 'shortName' => false, 'logo' => false];
+    protected static $types = ['type' => ['string'], 'id' => ['string'], 'shortName' => ['string'], 'logo' => ['string']];
+    protected static $nullables = ['type' => false, 'id' => false, 'shortName' => false, 'logo' => false];
 }

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Company\Hash;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Company\Responses\Requirement;
+use Cargomart\ApiClient\Entity\Company\Responses\CompanyRequirementResponse;
 
 class RequirementGet extends AbstractRequest
 {
@@ -22,16 +22,16 @@ class RequirementGet extends AbstractRequest
     /**
      * Требования отправителя к перевозкам.
      *
-     * @return Requirement
+     * @return CompanyRequirementResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): Requirement
+    public function do(): CompanyRequirementResponse
     {
         return $this->client->doRequest(
             'GET',
             $this->url,
-            Requirement::class,
+            CompanyRequirementResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

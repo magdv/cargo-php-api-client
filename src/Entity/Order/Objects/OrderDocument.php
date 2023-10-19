@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\File\Objects\File;
+use Cargomart\ApiClient\Entity\File\Objects\FileV2;
 
 /**
  * Объект документа заказа
@@ -22,7 +22,7 @@ use Cargomart\ApiClient\Entity\File\Objects\File;
  * @property string $type
  * @property string $status
  * @property string $rejectReason
- * @property File[] $files
+ * @property FileV2[] $files
  * @property int $version
  * @property OrderDocumentAccess $access
  */
@@ -36,7 +36,7 @@ final class OrderDocument extends AbstractEntity
         'type' => ['string'],
         'status' => ['string'],
         'rejectReason' => ['string'],
-        'files' => ['array', 'Cargomart\ApiClient\Entity\File\Objects\File'],
+        'files' => ['array', 'Cargomart\ApiClient\Entity\File\Objects\FileV2'],
         'version' => ['int'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderDocumentAccess'],
     ];

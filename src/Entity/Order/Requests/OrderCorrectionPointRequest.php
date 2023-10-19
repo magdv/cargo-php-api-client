@@ -20,9 +20,10 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItem;
  * @property int $storagePointId
  * @property bool $isLoad
  * @property bool $isUnload
- * @property string $fromDate
- * @property string $fromTime
+ * @property \stdClass $fromDate
+ * @property \stdClass $fromTime
  * @property string $toTime
+ * @property bool $isAccordingToWorkSchedule
  * @property string $additionalInfo
  */
 final class OrderCorrectionPointRequest extends AbstractEntity
@@ -33,9 +34,10 @@ final class OrderCorrectionPointRequest extends AbstractEntity
         'storagePointId' => ['int'],
         'isLoad' => ['bool'],
         'isUnload' => ['bool'],
-        'fromDate' => ['string'],
-        'fromTime' => ['string'],
+        'fromDate' => ['\stdClass'],
+        'fromTime' => ['\stdClass'],
         'toTime' => ['string'],
+        'isAccordingToWorkSchedule' => ['bool'],
         'additionalInfo' => ['string'],
     ];
 
@@ -45,9 +47,10 @@ final class OrderCorrectionPointRequest extends AbstractEntity
         'storagePointId' => false,
         'isLoad' => false,
         'isUnload' => false,
-        'fromDate' => false,
-        'fromTime' => false,
+        'fromDate' => true,
+        'fromTime' => true,
         'toTime' => false,
+        'isAccordingToWorkSchedule' => false,
         'additionalInfo' => false,
     ];
 }

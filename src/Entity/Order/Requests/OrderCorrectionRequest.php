@@ -14,7 +14,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * Данные для создания запроса на изменение заказа
  * source: order/requests/order-correction-request.json
  *
- * @property int $companyBranchId
+ * @property \stdClass $companyBranchId
  * @property \stdClass $comment
  * @property int $truckTypeId
  * @property float $cargoWeight
@@ -26,6 +26,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string[] $conditions
  * @property \stdClass $vatRate
  * @property string $currentPrice
+ * @property string $currencyCode
  * @property OrderCorrectionPointRequest[] $points
  * @property int[] $contacts
  * @property string $commentForConsignor
@@ -34,7 +35,7 @@ use Cargomart\ApiClient\AbstractEntity;
 final class OrderCorrectionRequest extends AbstractEntity
 {
     protected static $types = [
-        'companyBranchId' => ['int'],
+        'companyBranchId' => ['\stdClass'],
         'comment' => ['\stdClass'],
         'truckTypeId' => ['int'],
         'cargoWeight' => ['float'],
@@ -46,6 +47,7 @@ final class OrderCorrectionRequest extends AbstractEntity
         'conditions' => ['array', 'string'],
         'vatRate' => ['\stdClass'],
         'currentPrice' => ['string'],
+        'currencyCode' => ['string'],
         'points' => ['array', 'Cargomart\ApiClient\Entity\Order\Requests\OrderCorrectionPointRequest'],
         'contacts' => ['array', 'int'],
         'commentForConsignor' => ['string'],
@@ -53,7 +55,7 @@ final class OrderCorrectionRequest extends AbstractEntity
     ];
 
     protected static $nullables = [
-        'companyBranchId' => false,
+        'companyBranchId' => true,
         'comment' => true,
         'truckTypeId' => false,
         'cargoWeight' => false,
@@ -65,6 +67,7 @@ final class OrderCorrectionRequest extends AbstractEntity
         'conditions' => false,
         'vatRate' => true,
         'currentPrice' => false,
+        'currencyCode' => false,
         'points' => false,
         'contacts' => false,
         'commentForConsignor' => false,

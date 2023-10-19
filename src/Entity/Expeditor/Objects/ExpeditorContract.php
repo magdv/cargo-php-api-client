@@ -18,9 +18,26 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $date
  * @property string $number
  * @property string $title
+ * @property string $endBlockingDate
+ * @property string $clientComment
  */
 final class ExpeditorContract extends AbstractEntity
 {
-    protected static $types = ['id' => ['string'], 'date' => ['string'], 'number' => ['string'], 'title' => ['string']];
-    protected static $nullables = ['id' => false, 'date' => false, 'number' => false, 'title' => false];
+    protected static $types = [
+        'id' => ['string'],
+        'date' => ['string'],
+        'number' => ['string'],
+        'title' => ['string'],
+        'endBlockingDate' => ['string'],
+        'clientComment' => ['string'],
+    ];
+
+    protected static $nullables = [
+        'id' => false,
+        'date' => false,
+        'number' => false,
+        'title' => false,
+        'endBlockingDate' => false,
+        'clientComment' => false,
+    ];
 }

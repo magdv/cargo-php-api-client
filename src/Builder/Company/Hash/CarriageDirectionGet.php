@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Company\Hash;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Company\Responses\CarriageDirection;
+use Cargomart\ApiClient\Entity\Company\Responses\CompanyCarriageDirectionResponse;
 
 class CarriageDirectionGet extends AbstractRequest
 {
@@ -22,16 +22,16 @@ class CarriageDirectionGet extends AbstractRequest
     /**
      * Направления перевозок отправителя.
      *
-     * @return CarriageDirection
+     * @return CompanyCarriageDirectionResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): CarriageDirection
+    public function do(): CompanyCarriageDirectionResponse
     {
         return $this->client->doRequest(
             'GET',
             $this->url,
-            CarriageDirection::class,
+            CompanyCarriageDirectionResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

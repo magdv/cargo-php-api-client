@@ -17,9 +17,10 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $confirm
  * @property string $login
  * @property string $role
+ * @property string $captcha
  */
 final class RegistrationBaseRequest extends AbstractEntity
 {
-    protected static $types = ['confirm' => ['bool'], 'login' => ['string'], 'role' => ['string']];
-    protected static $nullables = ['confirm' => false, 'login' => false, 'role' => false];
+    protected static $types = ['confirm' => ['bool'], 'login' => ['string'], 'role' => ['string'], 'captcha' => ['string']];
+    protected static $nullables = ['confirm' => false, 'login' => false, 'role' => false, 'captcha' => false];
 }

@@ -9,12 +9,14 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Expeditor\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Truck\Objects\ActualCarrier;
+use Cargomart\ApiClient\Entity\Truck\Objects\TractorVehicle;
+use Cargomart\ApiClient\Entity\Truck\Objects\Vehicle;
 
 /**
  * Данные транспортного средства в заказе
  * source: expeditor/objects/proposal-truck.json
  *
- * @property int $modeId
  * @property string $manufacturer
  * @property string $number
  * @property string $manufacturerTrailer
@@ -22,17 +24,21 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property float $carryingCapacity
  * @property float $cubicCapacity
  * @property int $typeId
+ * @property int $modeId
  * @property string $ownershipType
  * @property string $affiliationType
  * @property string $companyOwnerInn
  * @property string $companyOwnerName
  * @property string $companyOwnerAddress
  * @property string[] $phones
+ * @property TractorVehicle $tractor
+ * @property Vehicle $trailer
+ * @property Vehicle $van
+ * @property ActualCarrier $actualCarrier
  */
 final class ProposalTruck extends AbstractEntity
 {
     protected static $types = [
-        'modeId' => ['int'],
         'manufacturer' => ['string'],
         'number' => ['string'],
         'manufacturerTrailer' => ['string'],
@@ -40,16 +46,20 @@ final class ProposalTruck extends AbstractEntity
         'carryingCapacity' => ['float'],
         'cubicCapacity' => ['float'],
         'typeId' => ['int'],
+        'modeId' => ['int'],
         'ownershipType' => ['string'],
         'affiliationType' => ['string'],
         'companyOwnerInn' => ['string'],
         'companyOwnerName' => ['string'],
         'companyOwnerAddress' => ['string'],
         'phones' => ['array', 'string'],
+        'tractor' => ['Cargomart\ApiClient\Entity\Truck\Objects\TractorVehicle'],
+        'trailer' => ['Cargomart\ApiClient\Entity\Truck\Objects\Vehicle'],
+        'van' => ['Cargomart\ApiClient\Entity\Truck\Objects\Vehicle'],
+        'actualCarrier' => ['Cargomart\ApiClient\Entity\Truck\Objects\ActualCarrier'],
     ];
 
     protected static $nullables = [
-        'modeId' => false,
         'manufacturer' => false,
         'number' => false,
         'manufacturerTrailer' => false,
@@ -57,11 +67,16 @@ final class ProposalTruck extends AbstractEntity
         'carryingCapacity' => false,
         'cubicCapacity' => false,
         'typeId' => false,
+        'modeId' => false,
         'ownershipType' => false,
         'affiliationType' => false,
         'companyOwnerInn' => false,
         'companyOwnerName' => false,
         'companyOwnerAddress' => false,
         'phones' => false,
+        'tractor' => false,
+        'trailer' => false,
+        'van' => false,
+        'actualCarrier' => false,
     ];
 }

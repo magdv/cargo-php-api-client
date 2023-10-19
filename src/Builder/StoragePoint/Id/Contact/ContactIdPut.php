@@ -21,7 +21,7 @@ class ContactIdPut extends AbstractRequest
     public $headers = [];
 
     /**
-     * Редактирование контакта пункта погрузки/выгрузки
+     * @deprecated. Использовать вместе с редактированием SP. Редактирование контакта пункта погрузки/выгрузки
      *
      * @return ContactList
      *

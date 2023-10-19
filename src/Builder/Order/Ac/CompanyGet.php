@@ -14,13 +14,13 @@ use Cargomart\ApiClient\Entity\Order\Responses\OrderClientAccessListResponse;
 class CompanyGet extends AbstractRequest
 {
     /** @var string[][] */
-    public $query = ['filter[isBlocked]' => false, 'filter[isPartner]' => false];
+    public $query = ['filter[isBlocked]' => 0, 'filter[isPartner]' => 0];
 
     /** @var string[] */
     public $headers = [];
 
     /**
-     * Поиск по данным контактов точек маршурта текущего клиента.
+     * Поиск по данным контактов точек маршрута текущего клиента.
      *
      * @return OrderClientAccessListResponse
      *
@@ -79,11 +79,11 @@ class CompanyGet extends AbstractRequest
     /**
      * Искать в том числе и среди заблокированных
      *
-     * @var null|bool $value
+     * @var null|int $value
      *
      * @return self
      */
-    public function qFilterIsBlocked(?bool $value): self
+    public function qFilterIsBlocked(?int $value): self
     {
         $c = clone $this;
         if (null === $value) {
@@ -98,11 +98,11 @@ class CompanyGet extends AbstractRequest
     /**
      * Искать только среди партнеров
      *
-     * @var null|bool $value
+     * @var null|int $value
      *
      * @return self
      */
-    public function qFilterIsPartner(?bool $value): self
+    public function qFilterIsPartner(?int $value): self
     {
         $c = clone $this;
         if (null === $value) {

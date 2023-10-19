@@ -20,7 +20,7 @@ class ConditionsGet extends AbstractRequest
     public $headers = [];
 
     /**
-     * Получить цену по маршруту и условия оплаты
+     * Получить условия перевозки
      *
      * @return OrderDraftExpeditorConditionsResponse
      *
@@ -71,25 +71,6 @@ class ConditionsGet extends AbstractRequest
             unset($c->query['companyBranchId']);
         } else {
             $c->query['companyBranchId'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
-     * Тип грузовика
-     *
-     * @var null|int $value
-     *
-     * @return self
-     */
-    public function qTruckTypeId(?int $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['truckTypeId']);
-        } else {
-            $c->query['truckTypeId'] = $value;
         }
 
         return $c;

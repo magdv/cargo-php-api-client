@@ -26,6 +26,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $capacityTo
  * @property string $consignor
  * @property int[] $truckType
+ * @property bool $trackTenderLots
+ * @property bool $trackOrders
  */
 final class TrackingEdit extends AbstractEntity
 {
@@ -42,6 +44,8 @@ final class TrackingEdit extends AbstractEntity
         'capacityTo' => ['int'],
         'consignor' => ['string'],
         'truckType' => ['array', 'int'],
+        'trackTenderLots' => ['bool'],
+        'trackOrders' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -57,5 +61,7 @@ final class TrackingEdit extends AbstractEntity
         'capacityTo' => false,
         'consignor' => false,
         'truckType' => false,
+        'trackTenderLots' => false,
+        'trackOrders' => false,
     ];
 }

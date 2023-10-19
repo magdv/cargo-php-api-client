@@ -56,4 +56,23 @@ class BranchGet extends AbstractRequest
 
         return $c;
     }
+
+    /**
+     * Является ли компания головной
+     *
+     * @var null|bool $value
+     *
+     * @return self
+     */
+    public function qFilterIsMain(?bool $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[isMain]']);
+        } else {
+            $c->query['filter[isMain]'] = $value;
+        }
+
+        return $c;
+    }
 }

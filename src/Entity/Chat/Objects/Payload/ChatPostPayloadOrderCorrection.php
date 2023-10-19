@@ -14,6 +14,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * Данные вложения - идентификаторы заказа и запроса на изменение заказа
  * source: chat/objects/payload/chat-post-payload-order-correction.json
  *
+ * @property string $type
  * @property int $orderId
  * @property int $correctionId
  * @property string $comment
@@ -23,6 +24,7 @@ use Cargomart\ApiClient\AbstractEntity;
 final class ChatPostPayloadOrderCorrection extends AbstractEntity
 {
     protected static $types = [
+        'type' => ['string'],
         'orderId' => ['int'],
         'correctionId' => ['int'],
         'comment' => ['string'],
@@ -31,6 +33,7 @@ final class ChatPostPayloadOrderCorrection extends AbstractEntity
     ];
 
     protected static $nullables = [
+        'type' => false,
         'orderId' => false,
         'correctionId' => false,
         'comment' => false,

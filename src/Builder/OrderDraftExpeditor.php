@@ -11,6 +11,9 @@ namespace Cargomart\ApiClient\Builder;
 use Cargomart\ApiClient\AbstractBuilder;
 use Cargomart\ApiClient\Builder\OrderDraftExpeditor\Conditions;
 use Cargomart\ApiClient\Builder\OrderDraftExpeditor\DraftId;
+use Cargomart\ApiClient\Builder\OrderDraftExpeditor\Price;
+use Cargomart\ApiClient\Builder\OrderDraftExpeditor\PriceV2;
+use Cargomart\ApiClient\Builder\OrderDraftExpeditor\StepBid;
 use Cargomart\ApiClient\Builder\OrderDraftExpeditor\Validate;
 
 /**
@@ -35,6 +38,21 @@ final class OrderDraftExpeditor extends AbstractBuilder
     public function conditions(): Conditions
     {
         return new Conditions($this->params, $this->client);
+    }
+
+    public function priceV2(): PriceV2
+    {
+        return new PriceV2($this->params, $this->client);
+    }
+
+    public function price(): Price
+    {
+        return new Price($this->params, $this->client);
+    }
+
+    public function stepBid(): StepBid
+    {
+        return new StepBid($this->params, $this->client);
     }
 
     public function post(): OrderDraftExpeditorPost

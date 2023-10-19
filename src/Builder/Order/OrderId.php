@@ -9,15 +9,19 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order;
 
 use Cargomart\ApiClient\AbstractBuilder;
+use Cargomart\ApiClient\Builder\Order\OrderId\ActNonDeliveryCar;
 use Cargomart\ApiClient\Builder\Order\OrderId\AfeerExpress;
-use Cargomart\ApiClient\Builder\Order\OrderId\Alter;
 use Cargomart\ApiClient\Builder\Order\OrderId\Archive;
 use Cargomart\ApiClient\Builder\Order\OrderId\Bid;
 use Cargomart\ApiClient\Builder\Order\OrderId\Broker;
 use Cargomart\ApiClient\Builder\Order\OrderId\Cancel;
+use Cargomart\ApiClient\Builder\Order\OrderId\CarrierAsk;
+use Cargomart\ApiClient\Builder\Order\OrderId\CarrierAskStat;
 use Cargomart\ApiClient\Builder\Order\OrderId\CarrierContact;
 use Cargomart\ApiClient\Builder\Order\OrderId\CarrierRefuse;
+use Cargomart\ApiClient\Builder\Order\OrderId\CarrierSign;
 use Cargomart\ApiClient\Builder\Order\OrderId\Chat;
+use Cargomart\ApiClient\Builder\Order\OrderId\CheckDigitalEcnAccess;
 use Cargomart\ApiClient\Builder\Order\OrderId\ClientAccess;
 use Cargomart\ApiClient\Builder\Order\OrderId\Comment;
 use Cargomart\ApiClient\Builder\Order\OrderId\ConsignorContact;
@@ -25,9 +29,12 @@ use Cargomart\ApiClient\Builder\Order\OrderId\ConsignorDocument;
 use Cargomart\ApiClient\Builder\Order\OrderId\ConsignorRefuse;
 use Cargomart\ApiClient\Builder\Order\OrderId\Contact;
 use Cargomart\ApiClient\Builder\Order\OrderId\Correction;
+use Cargomart\ApiClient\Builder\Order\OrderId\CustomerPatch;
 use Cargomart\ApiClient\Builder\Order\OrderId\Document;
+use Cargomart\ApiClient\Builder\Order\OrderId\Ecn;
 use Cargomart\ApiClient\Builder\Order\OrderId\Edit;
 use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorAssignment;
+use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorOffer;
 use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorPayment;
 use Cargomart\ApiClient\Builder\Order\OrderId\Finish;
 use Cargomart\ApiClient\Builder\Order\OrderId\FixPrice;
@@ -41,26 +48,33 @@ use Cargomart\ApiClient\Builder\Order\OrderId\Moderation;
 use Cargomart\ApiClient\Builder\Order\OrderId\ModerationApprove;
 use Cargomart\ApiClient\Builder\Order\OrderId\ModerationReject;
 use Cargomart\ApiClient\Builder\Order\OrderId\Monitoring;
+use Cargomart\ApiClient\Builder\Order\OrderId\Negotiate;
 use Cargomart\ApiClient\Builder\Order\OrderId\Offer;
 use Cargomart\ApiClient\Builder\Order\OrderId\OriginalDocsAccept;
 use Cargomart\ApiClient\Builder\Order\OrderId\OriginalDocsReject;
 use Cargomart\ApiClient\Builder\Order\OrderId\OriginalDocsTrackingNumber;
+use Cargomart\ApiClient\Builder\Order\OrderId\Payment;
 use Cargomart\ApiClient\Builder\Order\OrderId\Pin;
 use Cargomart\ApiClient\Builder\Order\OrderId\Point;
 use Cargomart\ApiClient\Builder\Order\OrderId\Proposal;
 use Cargomart\ApiClient\Builder\Order\OrderId\Proxy;
+use Cargomart\ApiClient\Builder\Order\OrderId\ProxyConsignorAdditionalInfo;
 use Cargomart\ApiClient\Builder\Order\OrderId\ProxyConsignorCarrier;
 use Cargomart\ApiClient\Builder\Order\OrderId\ProxyConsignorCarrierAdditionalInfo;
+use Cargomart\ApiClient\Builder\Order\OrderId\ProxyConsignorCarrierSend;
 use Cargomart\ApiClient\Builder\Order\OrderId\ProxyConsignorCarrierWithFacsimile;
+use Cargomart\ApiClient\Builder\Order\OrderId\ProxyConsignorEmail;
 use Cargomart\ApiClient\Builder\Order\OrderId\ProxyTemplate;
 use Cargomart\ApiClient\Builder\Order\OrderId\Publish;
-use Cargomart\ApiClient\Builder\Order\OrderId\QualityScore;
 use Cargomart\ApiClient\Builder\Order\OrderId\RefreshDriver;
 use Cargomart\ApiClient\Builder\Order\OrderId\RefreshTruck;
 use Cargomart\ApiClient\Builder\Order\OrderId\Refuse;
 use Cargomart\ApiClient\Builder\Order\OrderId\RefuseAppeal;
 use Cargomart\ApiClient\Builder\Order\OrderId\RefuseCancel;
+use Cargomart\ApiClient\Builder\Order\OrderId\RefuseRevertPatch;
 use Cargomart\ApiClient\Builder\Order\OrderId\Repeat;
+use Cargomart\ApiClient\Builder\Order\OrderId\Reuse;
+use Cargomart\ApiClient\Builder\Order\OrderId\Roadmap;
 use Cargomart\ApiClient\Builder\Order\OrderId\Save;
 use Cargomart\ApiClient\Builder\Order\OrderId\Sign;
 use Cargomart\ApiClient\Builder\Order\OrderId\SimpleDocument;
@@ -69,9 +83,11 @@ use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriver;
 use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriverCorrection;
 use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriverPatch;
 use Cargomart\ApiClient\Builder\Order\OrderId\Validate;
+use Cargomart\ApiClient\Builder\Order\OrderId\ValidateEcnData;
 use Cargomart\ApiClient\Builder\Order\OrderId\Visitor;
 use Cargomart\ApiClient\Builder\Order\OrderId\WaybillAdditionalInfo;
 use Cargomart\ApiClient\Builder\Order\OrderId\WaybillTemplate;
+use Cargomart\ApiClient\Builder\Order\OrderId\WaybillTemplateAdditionalData;
 use Cargomart\ApiClient\Builder\Order\OrderId\WaybillTemplateGp;
 use Cargomart\ApiClient\Builder\Order\OrderId\XClone;
 
@@ -82,89 +98,114 @@ final class OrderId extends AbstractBuilder
 {
     protected const URL = '/api/v2/order/{orderId}';
 
-    public function offer(): Offer
-    {
-        return new Offer($this->params, $this->client);
-    }
-
-    public function expeditorPayment(): ExpeditorPayment
-    {
-        return new ExpeditorPayment($this->params, $this->client);
-    }
-
-    public function fixPrice(): FixPrice
-    {
-        return new FixPrice($this->params, $this->client);
-    }
-
     public function chat(): Chat
     {
         return new Chat($this->params, $this->client);
     }
 
-    public function xClone(): XClone
-    {
-        return new XClone($this->params, $this->client);
-    }
-
-    public function save(): Save
-    {
-        return new Save($this->params, $this->client);
-    }
-
-    public function edit(): Edit
-    {
-        return new Edit($this->params, $this->client);
-    }
-
-    public function point(): Point
-    {
-        return new Point($this->params, $this->client);
-    }
-
-    public function clientAccess(): ClientAccess
-    {
-        return new ClientAccess($this->params, $this->client);
-    }
-
-    public function contact(): Contact
-    {
-        return new Contact($this->params, $this->client);
-    }
-
-    public function tag(): Tag
-    {
-        return new Tag($this->params, $this->client);
-    }
-
-    public function validate(): Validate
-    {
-        return new Validate($this->params, $this->client);
-    }
-
-    public function publish(): Publish
-    {
-        return new Publish($this->params, $this->client);
-    }
-
-    public function moderation(): Moderation
-    {
-        return new Moderation($this->params, $this->client);
-    }
-
-    public function moderationReject(): ModerationReject
-    {
-        return new ModerationReject($this->params, $this->client);
-    }
-
-    public function moderationApprove(): ModerationApprove
-    {
-        return new ModerationApprove($this->params, $this->client);
-    }
-
     public function comment(): Comment
     {
         return new Comment($this->params, $this->client);
+    }
+
+    public function expeditorOffer(): ExpeditorOffer
+    {
+        return new ExpeditorOffer($this->params, $this->client);
+    }
+
+    public function payment(): Payment
+    {
+        return new Payment($this->params, $this->client);
+    }
+
+    public function itinerary(): Itinerary
+    {
+        return new Itinerary($this->params, $this->client);
+    }
+
+    public function cancel(): Cancel
+    {
+        return new Cancel($this->params, $this->client);
+    }
+
+    public function pin(): Pin
+    {
+        return new Pin($this->params, $this->client);
+    }
+
+    public function bid(): Bid
+    {
+        return new Bid($this->params, $this->client);
+    }
+
+    public function broker(): Broker
+    {
+        return new Broker($this->params, $this->client);
+    }
+
+    public function afeerExpress(): AfeerExpress
+    {
+        return new AfeerExpress($this->params, $this->client);
+    }
+
+    public function visitor(): Visitor
+    {
+        return new Visitor($this->params, $this->client);
+    }
+
+    public function archive(): Archive
+    {
+        return new Archive($this->params, $this->client);
+    }
+
+    public function offer(): Offer
+    {
+        return new Offer($this->params, $this->client);
+    }
+
+    public function originalDocsTrackingNumber(): OriginalDocsTrackingNumber
+    {
+        return new OriginalDocsTrackingNumber($this->params, $this->client);
+    }
+
+    public function originalDocsAccept(): OriginalDocsAccept
+    {
+        return new OriginalDocsAccept($this->params, $this->client);
+    }
+
+    public function originalDocsReject(): OriginalDocsReject
+    {
+        return new OriginalDocsReject($this->params, $this->client);
+    }
+
+    public function simpleDocument(): SimpleDocument
+    {
+        return new SimpleDocument($this->params, $this->client);
+    }
+
+    public function actNonDeliveryCar(): ActNonDeliveryCar
+    {
+        return new ActNonDeliveryCar($this->params, $this->client);
+    }
+
+    public function checkDigitalEcnAccess(): CheckDigitalEcnAccess
+    {
+        return new CheckDigitalEcnAccess($this->params, $this->client);
+    }
+
+    public function validateEcnData(): ValidateEcnData
+    {
+        return new ValidateEcnData($this->params, $this->client);
+    }
+
+    public function ecn(): Ecn
+    {
+        return new Ecn($this->params, $this->client);
+    }
+
+    public function negotiate(): Negotiate
+    {
+        return new Negotiate($this->params, $this->client);
     }
 
     public function carrierRefuse(): CarrierRefuse
@@ -237,6 +278,11 @@ final class OrderId extends AbstractBuilder
         return new ProxyConsignorCarrier($this->params, $this->client);
     }
 
+    public function proxyConsignorCarrierSend(): ProxyConsignorCarrierSend
+    {
+        return new ProxyConsignorCarrierSend($this->params, $this->client);
+    }
+
     public function proxyConsignorCarrierWithFacsimile(): ProxyConsignorCarrierWithFacsimile
     {
         return new ProxyConsignorCarrierWithFacsimile($this->params, $this->client);
@@ -247,9 +293,24 @@ final class OrderId extends AbstractBuilder
         return new ProxyConsignorCarrierAdditionalInfo($this->params, $this->client);
     }
 
+    public function proxyConsignorAdditionalInfo(): ProxyConsignorAdditionalInfo
+    {
+        return new ProxyConsignorAdditionalInfo($this->params, $this->client);
+    }
+
+    public function proxyConsignorEmail(): ProxyConsignorEmail
+    {
+        return new ProxyConsignorEmail($this->params, $this->client);
+    }
+
     public function proxyTemplate(): ProxyTemplate
     {
         return new ProxyTemplate($this->params, $this->client);
+    }
+
+    public function waybillTemplateAdditionalData(): WaybillTemplateAdditionalData
+    {
+        return new WaybillTemplateAdditionalData($this->params, $this->client);
     }
 
     public function waybillTemplate(): WaybillTemplate
@@ -292,14 +353,14 @@ final class OrderId extends AbstractBuilder
         return new Repeat($this->params, $this->client);
     }
 
+    public function reuse(): Reuse
+    {
+        return new Reuse($this->params, $this->client);
+    }
+
     public function monitoring(): Monitoring
     {
         return new Monitoring($this->params, $this->client);
-    }
-
-    public function qualityScore(): QualityScore
-    {
-        return new QualityScore($this->params, $this->client);
     }
 
     public function finish(): Finish
@@ -327,9 +388,19 @@ final class OrderId extends AbstractBuilder
         return new ExpeditorAssignment($this->params, $this->client);
     }
 
-    public function sign(): Sign
+    public function correction(): Correction
     {
-        return new Sign($this->params, $this->client);
+        return new Correction($this->params, $this->client);
+    }
+
+    public function customerPatch(): CustomerPatch
+    {
+        return new CustomerPatch($this->params, $this->client);
+    }
+
+    public function refuseRevertPatch(): RefuseRevertPatch
+    {
+        return new RefuseRevertPatch($this->params, $this->client);
     }
 
     public function truckDriverPatch(): TruckDriverPatch
@@ -337,74 +408,99 @@ final class OrderId extends AbstractBuilder
         return new TruckDriverPatch($this->params, $this->client);
     }
 
-    public function correction(): Correction
+    public function expeditorPayment(): ExpeditorPayment
     {
-        return new Correction($this->params, $this->client);
+        return new ExpeditorPayment($this->params, $this->client);
     }
 
-    public function itinerary(): Itinerary
+    public function fixPrice(): FixPrice
     {
-        return new Itinerary($this->params, $this->client);
+        return new FixPrice($this->params, $this->client);
     }
 
-    public function cancel(): Cancel
+    public function sign(): Sign
     {
-        return new Cancel($this->params, $this->client);
+        return new Sign($this->params, $this->client);
     }
 
-    public function pin(): Pin
+    public function carrierSign(): CarrierSign
     {
-        return new Pin($this->params, $this->client);
+        return new CarrierSign($this->params, $this->client);
     }
 
-    public function bid(): Bid
+    public function roadmap(): Roadmap
     {
-        return new Bid($this->params, $this->client);
+        return new Roadmap($this->params, $this->client);
     }
 
-    public function broker(): Broker
+    public function carrierAsk(): CarrierAsk
     {
-        return new Broker($this->params, $this->client);
+        return new CarrierAsk($this->params, $this->client);
     }
 
-    public function afeerExpress(): AfeerExpress
+    public function carrierAskStat(): CarrierAskStat
     {
-        return new AfeerExpress($this->params, $this->client);
+        return new CarrierAskStat($this->params, $this->client);
     }
 
-    public function visitor(): Visitor
+    public function xClone(): XClone
     {
-        return new Visitor($this->params, $this->client);
+        return new XClone($this->params, $this->client);
     }
 
-    public function alter(): Alter
+    public function save(): Save
     {
-        return new Alter($this->params, $this->client);
+        return new Save($this->params, $this->client);
     }
 
-    public function archive(): Archive
+    public function edit(): Edit
     {
-        return new Archive($this->params, $this->client);
+        return new Edit($this->params, $this->client);
     }
 
-    public function originalDocsTrackingNumber(): OriginalDocsTrackingNumber
+    public function point(): Point
     {
-        return new OriginalDocsTrackingNumber($this->params, $this->client);
+        return new Point($this->params, $this->client);
     }
 
-    public function originalDocsAccept(): OriginalDocsAccept
+    public function clientAccess(): ClientAccess
     {
-        return new OriginalDocsAccept($this->params, $this->client);
+        return new ClientAccess($this->params, $this->client);
     }
 
-    public function originalDocsReject(): OriginalDocsReject
+    public function contact(): Contact
     {
-        return new OriginalDocsReject($this->params, $this->client);
+        return new Contact($this->params, $this->client);
     }
 
-    public function simpleDocument(): SimpleDocument
+    public function tag(): Tag
     {
-        return new SimpleDocument($this->params, $this->client);
+        return new Tag($this->params, $this->client);
+    }
+
+    public function validate(): Validate
+    {
+        return new Validate($this->params, $this->client);
+    }
+
+    public function publish(): Publish
+    {
+        return new Publish($this->params, $this->client);
+    }
+
+    public function moderation(): Moderation
+    {
+        return new Moderation($this->params, $this->client);
+    }
+
+    public function moderationReject(): ModerationReject
+    {
+        return new ModerationReject($this->params, $this->client);
+    }
+
+    public function moderationApprove(): ModerationApprove
+    {
+        return new ModerationApprove($this->params, $this->client);
     }
 
     public function get(): OrderIdGet

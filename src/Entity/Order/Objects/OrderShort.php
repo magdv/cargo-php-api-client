@@ -19,6 +19,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $currencyCode
  * @property float $vatRate
  * @property bool $isConsignorVat
+ * @property bool $isCarrierVat
  * @property int $distance
  * @property int $statusId
  * @property int $extStatusId
@@ -32,6 +33,7 @@ final class OrderShort extends AbstractEntity
         'currencyCode' => ['string'],
         'vatRate' => ['float'],
         'isConsignorVat' => ['bool'],
+        'isCarrierVat' => ['bool'],
         'distance' => ['int'],
         'statusId' => ['int'],
         'extStatusId' => ['int'],
@@ -44,6 +46,7 @@ final class OrderShort extends AbstractEntity
         'currencyCode' => false,
         'vatRate' => false,
         'isConsignorVat' => false,
+        'isCarrierVat' => false,
         'distance' => false,
         'statusId' => false,
         'extStatusId' => false,

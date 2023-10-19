@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\TruckOrderSearch;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\TruckOrderListSearchResponse;
+use Cargomart\ApiClient\Entity\Order\Responses\OrderListResponse;
 
 class TruckIdGet extends AbstractRequest
 {
@@ -22,16 +22,16 @@ class TruckIdGet extends AbstractRequest
     /**
      * Найти заказы подходящие для выбранной машины по ранее созданным криитериям
      *
-     * @return TruckOrderListSearchResponse
+     * @return OrderListResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): TruckOrderListSearchResponse
+    public function do(): OrderListResponse
     {
         return $this->client->doRequest(
             'GET',
             $this->url,
-            TruckOrderListSearchResponse::class,
+            OrderListResponse::class,
             http_build_query($this->query),
             null,
             $this->headers
@@ -52,6 +52,25 @@ class TruckIdGet extends AbstractRequest
             unset($c->query['filter[kind]']);
         } else {
             $c->query['filter[kind]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Массив id заказов
+     *
+     * @var null|string[] $value
+     *
+     * @return self
+     */
+    public function qFilterOrder(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[order]']);
+        } else {
+            $c->query['filter[order]'] = $value;
         }
 
         return $c;

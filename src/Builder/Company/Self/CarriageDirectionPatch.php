@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\Company\Self;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Objects\CarriageDirection;
-use Cargomart\ApiClient\Entity\Company\Responses\CarriageDirection;
+use Cargomart\ApiClient\Entity\Company\Responses\CompanyCarriageDirectionResponse;
 
 class CarriageDirectionPatch extends AbstractRequest
 {
@@ -23,16 +23,16 @@ class CarriageDirectionPatch extends AbstractRequest
     /**
      * Направления перевозок отправителя.
      *
-     * @return CarriageDirection
+     * @return CompanyCarriageDirectionResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(CarriageDirection $body): CarriageDirection
+    public function do(CarriageDirection $body): CompanyCarriageDirectionResponse
     {
         return $this->client->doRequest(
             'PATCH',
             $this->url,
-            CarriageDirection::class,
+            CompanyCarriageDirectionResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

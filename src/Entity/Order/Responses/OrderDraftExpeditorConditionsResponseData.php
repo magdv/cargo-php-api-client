@@ -12,16 +12,13 @@ use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorConditions;
 
 /**
- * Стоимость маршрута и условия оплаты
+ * Данные условий перевозки
  * source: order/responses/order-draft-expeditor-conditions-response.json#/properties/data
  *
- * @property OrderDraftExpeditorConditions $expeditorConditions
+ * @property OrderDraftExpeditorConditions $conditions
  */
 final class OrderDraftExpeditorConditionsResponseData extends AbstractEntity
 {
-    protected static $types = [
-        'expeditorConditions' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorConditions'],
-    ];
-
-    protected static $nullables = ['expeditorConditions' => false];
+    protected static $types = ['conditions' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorConditions']];
+    protected static $nullables = ['conditions' => false];
 }

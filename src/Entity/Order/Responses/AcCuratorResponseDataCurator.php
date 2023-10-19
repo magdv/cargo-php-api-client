@@ -16,10 +16,10 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property int $id
  * @property string $name
- * @property string $company
+ * @property string $companyName
  */
 final class AcCuratorResponseDataCurator extends AbstractEntity
 {
-    protected static $types = ['id' => ['int'], 'name' => ['string'], 'company' => ['string']];
-    protected static $nullables = ['id' => false, 'name' => false, 'company' => false];
+    protected static $types = ['id' => ['int'], 'name' => ['string'], 'companyName' => ['string']];
+    protected static $nullables = ['id' => false, 'name' => false, 'companyName' => false];
 }

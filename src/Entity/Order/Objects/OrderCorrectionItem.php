@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\TemperatureRange;
 
 /**
  * Полная информация по запросу на изменение заказа
@@ -27,6 +28,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string[] $conditions
  * @property \stdClass $vatRate
  * @property string $currentPrice
+ * @property string $currencyCode
  * @property RoutePointCard[] $point
  * @property int[] $contact
  * @property string $commentForConsignor
@@ -43,12 +45,13 @@ final class OrderCorrectionItem extends AbstractEntity
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],
         'cargoType' => ['string'],
-        'temperature' => ['Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange'],
+        'temperature' => ['Cargomart\ApiClient\Entity\Base\TemperatureRange'],
         'loading' => ['array', 'int'],
         'device' => ['array', 'string'],
         'conditions' => ['array', 'string'],
         'vatRate' => ['\stdClass'],
         'currentPrice' => ['string'],
+        'currencyCode' => ['string'],
         'point' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointCard'],
         'contact' => ['array', 'int'],
         'commentForConsignor' => ['string'],
@@ -70,6 +73,7 @@ final class OrderCorrectionItem extends AbstractEntity
         'conditions' => false,
         'vatRate' => true,
         'currentPrice' => false,
+        'currencyCode' => false,
         'point' => false,
         'contact' => false,
         'commentForConsignor' => false,

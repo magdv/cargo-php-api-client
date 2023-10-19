@@ -60,11 +60,11 @@ class DriverGet extends AbstractRequest
     /**
      * Отсортировать водителя под идентификатору(на первое место)
      *
-     * @var null|string $value
+     * @var null|int $value
      *
      * @return self
      */
-    public function qSelectedId(?string $value): self
+    public function qSelectedId(?int $value): self
     {
         $c = clone $this;
         if (null === $value) {

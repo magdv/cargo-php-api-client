@@ -39,6 +39,25 @@ class WaybillTemplateGet extends AbstractRequest
     }
 
     /**
+     * Формат формирования накладной.
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFormat(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['format']);
+        } else {
+            $c->query['format'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
      * Индексы точек погрузки, которые указать в ТН, 2-шт
      *
      * @var null|int[] $value

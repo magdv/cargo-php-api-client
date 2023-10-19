@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Entity\Chat\Models;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Chat\Objects\ChatPostAccess;
-use Cargomart\ApiClient\Entity\Chat\Objects\ChatPostAttachment;
+use Cargomart\ApiClient\Entity\Chat\Objects\ChatPostPayload;
 use Cargomart\ApiClient\Entity\Chat\Objects\ChatPostUserData;
 
 /**
@@ -22,10 +22,9 @@ use Cargomart\ApiClient\Entity\Chat\Objects\ChatPostUserData;
  * @property int $creatorId
  * @property string $kind
  * @property string $type
- * @property \stdClass $payload
+ * @property ChatPostPayload $payload
  * @property string $message
  * @property string $createDate
- * @property ChatPostAttachment[] $attachment
  * @property ChatPostUserData $userData
  * @property ChatPostAccess $access
  */
@@ -37,10 +36,9 @@ final class ChatPost extends AbstractEntity
         'creatorId' => ['int'],
         'kind' => ['string'],
         'type' => ['string'],
-        'payload' => ['\stdClass'],
+        'payload' => ['Cargomart\ApiClient\Entity\Chat\Objects\ChatPostPayload'],
         'message' => ['string'],
         'createDate' => ['string'],
-        'attachment' => ['array', 'Cargomart\ApiClient\Entity\Chat\Objects\ChatPostAttachment'],
         'userData' => ['Cargomart\ApiClient\Entity\Chat\Objects\ChatPostUserData'],
         'access' => ['Cargomart\ApiClient\Entity\Chat\Objects\ChatPostAccess'],
     ];
@@ -51,10 +49,9 @@ final class ChatPost extends AbstractEntity
         'creatorId' => false,
         'kind' => false,
         'type' => false,
-        'payload' => true,
+        'payload' => false,
         'message' => false,
         'createDate' => false,
-        'attachment' => false,
         'userData' => false,
         'access' => false,
     ];

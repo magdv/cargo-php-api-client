@@ -21,7 +21,7 @@ class PatchPost extends AbstractRequest
     public $headers = [];
 
     /**
-     * Создание запроса на изменение заказа.
+     * @deprecated использовать /api/v2/expeditor-proposal/{id}/patch
      *
      * @return OrderPatchResponse
      *

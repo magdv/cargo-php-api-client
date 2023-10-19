@@ -20,7 +20,7 @@ class ContactGet extends AbstractRequest
     public $headers = [];
 
     /**
-     * Получение списка контактов пункта погрузки/выгрузки
+     * @deprecated. Использовать вместе с редактированием SP. Получение списка контактов пункта погрузки/выгрузки
      *
      * @return ContactList
      *

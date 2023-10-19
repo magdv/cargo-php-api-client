@@ -20,7 +20,7 @@ class ContactIdDelete extends AbstractRequest
     public $headers = [];
 
     /**
-     * Удаление одного контакта пункта погрузки/выгрузки
+     * @deprecated. Использовать вместе с редактированием SP. Удаление одного контакта пункта погрузки/выгрузки
      *
      * @return EmptyDataResponse
      *

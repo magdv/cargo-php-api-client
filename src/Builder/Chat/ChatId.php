@@ -21,9 +21,4 @@ final class ChatId extends AbstractBuilder
     {
         return new ChatIdGet($this->client, $this->getUrl());
     }
-
-    public function post(): ChatIdPost
-    {
-        return new ChatIdPost($this->client, $this->getUrl());
-    }
 }

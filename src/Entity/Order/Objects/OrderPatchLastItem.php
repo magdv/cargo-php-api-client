@@ -15,6 +15,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: order/objects/order-patch-last-item.json
  *
  * @property string $id
+ * @property string $type
  * @property int $statusId
  * @property string $reason
  * @property string $commentForConsignor
@@ -28,6 +29,7 @@ final class OrderPatchLastItem extends AbstractEntity
 {
     protected static $types = [
         'id' => ['string'],
+        'type' => ['string'],
         'statusId' => ['int'],
         'reason' => ['string'],
         'commentForConsignor' => ['string'],
@@ -40,6 +42,7 @@ final class OrderPatchLastItem extends AbstractEntity
 
     protected static $nullables = [
         'id' => false,
+        'type' => false,
         'statusId' => false,
         'reason' => false,
         'commentForConsignor' => false,

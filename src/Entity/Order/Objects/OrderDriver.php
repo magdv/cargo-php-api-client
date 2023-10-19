@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\DriverApp\Objects\DriverAppDetail;
 
 /**
  * Данные водителя в заказе
@@ -18,14 +19,20 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $name
  * @property string[] $phones
  * @property string $licenseNumber
+ * @property string $licenseSeries
+ * @property string $licenseType
+ * @property string $licenceIssueDate
  * @property string $inn
+ * @property string $externalId
+ * @property string $passportType
+ * @property string $registrationAddress
  * @property string $passportSeries
  * @property string $passportNumber
  * @property string $passportWhen
  * @property string $passportBy
  * @property string $birthDate
  * @property string $driverAppStatus
- * @property OrderDriverDriverAppDetail[] $driverAppDetail
+ * @property DriverAppDetail[] $driverAppDetail
  */
 final class OrderDriver extends AbstractEntity
 {
@@ -34,14 +41,20 @@ final class OrderDriver extends AbstractEntity
         'name' => ['string'],
         'phones' => ['array', 'string'],
         'licenseNumber' => ['string'],
+        'licenseSeries' => ['string'],
+        'licenseType' => ['string'],
+        'licenceIssueDate' => ['string'],
         'inn' => ['string'],
+        'externalId' => ['string'],
+        'passportType' => ['string'],
+        'registrationAddress' => ['string'],
         'passportSeries' => ['string'],
         'passportNumber' => ['string'],
         'passportWhen' => ['string'],
         'passportBy' => ['string'],
         'birthDate' => ['string'],
         'driverAppStatus' => ['string'],
-        'driverAppDetail' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDriverDriverAppDetail'],
+        'driverAppDetail' => ['array', 'Cargomart\ApiClient\Entity\DriverApp\Objects\DriverAppDetail'],
     ];
 
     protected static $nullables = [
@@ -49,7 +62,13 @@ final class OrderDriver extends AbstractEntity
         'name' => false,
         'phones' => false,
         'licenseNumber' => false,
+        'licenseSeries' => false,
+        'licenseType' => false,
+        'licenceIssueDate' => false,
         'inn' => false,
+        'externalId' => false,
+        'passportType' => false,
+        'registrationAddress' => false,
         'passportSeries' => false,
         'passportNumber' => false,
         'passportWhen' => false,

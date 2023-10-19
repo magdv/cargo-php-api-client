@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\CompanyConfirmation;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\CompanyConfirmation\Requests\CompanyUpdate;
-use Cargomart\ApiClient\Entity\CompanyConfirmation\Responses\Status;
+use Cargomart\ApiClient\Entity\CompanyConfirmation\Requests\CompanyUpdateRequest;
+use Cargomart\ApiClient\Entity\CompanyConfirmation\Responses\StatusResponse;
 
 class CompanyPut extends AbstractRequest
 {
@@ -23,16 +23,16 @@ class CompanyPut extends AbstractRequest
     /**
      * Доработка данных компании (СНО, флаг декларации).
      *
-     * @return Status
+     * @return StatusResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(CompanyUpdate $body): Status
+    public function do(CompanyUpdateRequest $body): StatusResponse
     {
         return $this->client->doRequest(
             'PUT',
             $this->url,
-            Status::class,
+            StatusResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

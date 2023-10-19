@@ -15,6 +15,7 @@ use Cargomart\ApiClient\Entity\File\Objects\FileShort;
  * Запрос на редактирование/создание документа заказа
  * source: order/requests/order-document-update-request.json
  *
+ * @property string $id
  * @property string $name
  * @property string $number
  * @property string $date
@@ -24,6 +25,7 @@ use Cargomart\ApiClient\Entity\File\Objects\FileShort;
 final class OrderDocumentUpdateRequest extends AbstractEntity
 {
     protected static $types = [
+        'id' => ['string'],
         'name' => ['string'],
         'number' => ['string'],
         'date' => ['string'],
@@ -31,5 +33,12 @@ final class OrderDocumentUpdateRequest extends AbstractEntity
         'files' => ['array', 'Cargomart\ApiClient\Entity\File\Objects\FileShort'],
     ];
 
-    protected static $nullables = ['name' => false, 'number' => false, 'date' => false, 'type' => false, 'files' => false];
+    protected static $nullables = [
+        'id' => false,
+        'name' => false,
+        'number' => false,
+        'date' => false,
+        'type' => false,
+        'files' => false,
+    ];
 }

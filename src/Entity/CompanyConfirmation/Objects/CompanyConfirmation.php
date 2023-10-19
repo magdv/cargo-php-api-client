@@ -25,6 +25,7 @@ use Cargomart\ApiClient\Entity\Candidate\Objects\Candidate;
  * @property int[] $file
  * @property CompanyProfile $companyProfile
  * @property bool $allowEasyValidation
+ * @property int $consignorContractIteration
  * @property CompanyConfirmationAccess $access
  */
 final class CompanyConfirmation extends AbstractEntity
@@ -40,6 +41,7 @@ final class CompanyConfirmation extends AbstractEntity
         'file' => ['array', 'int'],
         'companyProfile' => ['Cargomart\ApiClient\Entity\CompanyConfirmation\Objects\CompanyProfile'],
         'allowEasyValidation' => ['bool'],
+        'consignorContractIteration' => ['int'],
         'access' => ['Cargomart\ApiClient\Entity\CompanyConfirmation\Objects\CompanyConfirmationAccess'],
     ];
 
@@ -54,6 +56,7 @@ final class CompanyConfirmation extends AbstractEntity
         'file' => false,
         'companyProfile' => false,
         'allowEasyValidation' => false,
+        'consignorContractIteration' => false,
         'access' => false,
     ];
 }

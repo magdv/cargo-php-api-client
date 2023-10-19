@@ -20,7 +20,7 @@ class DictionaryGet extends AbstractRequest
     public $headers = [];
 
     /**
-     * Метод возращает список словарей
+     * Метод возвращает список словарей
      *
      * @return DictionaryList
      *

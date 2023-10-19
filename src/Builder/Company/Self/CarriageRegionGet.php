@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Company\Self;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Company\Responses\CarriageRegion;
+use Cargomart\ApiClient\Entity\Company\Responses\CompanyCarriageRegionResponse;
 
 class CarriageRegionGet extends AbstractRequest
 {
@@ -22,16 +22,16 @@ class CarriageRegionGet extends AbstractRequest
     /**
      * Области своих перевозок.
      *
-     * @return CarriageRegion
+     * @return CompanyCarriageRegionResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): CarriageRegion
+    public function do(): CompanyCarriageRegionResponse
     {
         return $this->client->doRequest(
             'GET',
             $this->url,
-            CarriageRegion::class,
+            CompanyCarriageRegionResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

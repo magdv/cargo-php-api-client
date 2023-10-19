@@ -85,9 +85,9 @@ class EntityTest extends TestCase
         self::assertEquals(789, $ultra->iList[1]);
 
         self::assertNotNull($ultra->obj);
-        self::assertObjectHasAttribute('property', $ultra->obj);
+        self::assertTrue(property_exists($ultra->obj, 'property'));
         self::assertNull($ultra->obj->property);
-        self::assertObjectHasAttribute('value', $ultra->obj);
+        self::assertTrue(property_exists($ultra->obj, 'value'));
         self::assertEquals(321, $ultra->obj->value);
 
         self::assertCount(2, $ultra->ch);

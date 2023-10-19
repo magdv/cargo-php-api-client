@@ -685,25 +685,6 @@ class ExcelGet extends AbstractRequest
     }
 
     /**
-     * Только заказы, которые надо оценить
-     *
-     * @var null|bool $value
-     *
-     * @return self
-     */
-    public function qFilterCreateQualityScore(?bool $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['filter[createQualityScore]']);
-        } else {
-            $c->query['filter[createQualityScore]'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
      * Заказы дочерней компании
      *
      * @var null|int $value

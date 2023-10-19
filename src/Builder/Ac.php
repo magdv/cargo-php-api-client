@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder;
 
 use Cargomart\ApiClient\AbstractBuilder;
+use Cargomart\ApiClient\Builder\Ac\PriceLocalPool;
 use Cargomart\ApiClient\Builder\Ac\StoragePoint;
 
 /**
@@ -21,5 +22,10 @@ final class Ac extends AbstractBuilder
     public function storagePoint(): StoragePoint
     {
         return new StoragePoint($this->params, $this->client);
+    }
+
+    public function priceLocalPool(): PriceLocalPool
+    {
+        return new PriceLocalPool($this->params, $this->client);
     }
 }

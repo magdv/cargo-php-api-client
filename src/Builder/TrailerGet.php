@@ -98,11 +98,11 @@ class TrailerGet extends AbstractRequest
     /**
      * лимит выдачи.
      *
-     * @var null|string $value
+     * @var null|int $value
      *
      * @return self
      */
-    public function qPerPage(?string $value): self
+    public function qPerPage(?int $value): self
     {
         $c = clone $this;
         if (null === $value) {

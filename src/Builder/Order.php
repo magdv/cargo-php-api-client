@@ -14,6 +14,7 @@ use Cargomart\ApiClient\Builder\Order\Broker;
 use Cargomart\ApiClient\Builder\Order\CategoryStatistics;
 use Cargomart\ApiClient\Builder\Order\Count;
 use Cargomart\ApiClient\Builder\Order\Excel;
+use Cargomart\ApiClient\Builder\Order\Exists;
 use Cargomart\ApiClient\Builder\Order\Id;
 use Cargomart\ApiClient\Builder\Order\Ids;
 use Cargomart\ApiClient\Builder\Order\Import;
@@ -25,16 +26,6 @@ use Cargomart\ApiClient\Builder\Order\OrderId;
 final class Order extends AbstractBuilder
 {
     protected const URL = '/api/v2/order';
-
-    public function excel(): Excel
-    {
-        return new Excel($this->params, $this->client);
-    }
-
-    public function import(): Import
-    {
-        return new Import($this->params, $this->client);
-    }
 
     public function orderId(string $orderId): OrderId
     {
@@ -53,6 +44,11 @@ final class Order extends AbstractBuilder
         return new Ids($this->params, $this->client);
     }
 
+    public function exists(): Exists
+    {
+        return new Exists($this->params, $this->client);
+    }
+
     public function count(): Count
     {
         return new Count($this->params, $this->client);
@@ -68,6 +64,16 @@ final class Order extends AbstractBuilder
         $params = $this->params;
         $params['id'] = $id;
         return new Id($params, $this->client);
+    }
+
+    public function excel(): Excel
+    {
+        return new Excel($this->params, $this->client);
+    }
+
+    public function import(): Import
+    {
+        return new Import($this->params, $this->client);
     }
 
     public function ac(): Ac

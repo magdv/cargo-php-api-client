@@ -21,7 +21,7 @@ class ContactPost extends AbstractRequest
     public $headers = [];
 
     /**
-     * Создание контакта пункта погрузки выгрузки
+     * @deprecated. Использовать вместе с редактированием SP. Создание контакта пункта погрузки выгрузки
      *
      * @return ContactList
      *

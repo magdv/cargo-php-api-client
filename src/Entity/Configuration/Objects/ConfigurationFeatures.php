@@ -20,6 +20,10 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $newOrderEditForm
  * @property bool $pricePrediction
  * @property bool $expeditorCustomer
+ * @property bool $consignorExpeditorOrders
+ * @property bool $expeditorCarrierDocuments
+ * @property bool $newOrderEcnForm
+ * @property bool $orderRoadmap
  */
 final class ConfigurationFeatures extends AbstractEntity
 {
@@ -30,6 +34,10 @@ final class ConfigurationFeatures extends AbstractEntity
         'newOrderEditForm' => ['bool'],
         'pricePrediction' => ['bool'],
         'expeditorCustomer' => ['bool'],
+        'consignorExpeditorOrders' => ['bool'],
+        'expeditorCarrierDocuments' => ['bool'],
+        'newOrderEcnForm' => ['bool'],
+        'orderRoadmap' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -39,5 +47,9 @@ final class ConfigurationFeatures extends AbstractEntity
         'newOrderEditForm' => false,
         'pricePrediction' => false,
         'expeditorCustomer' => false,
+        'consignorExpeditorOrders' => false,
+        'expeditorCarrierDocuments' => false,
+        'newOrderEcnForm' => false,
+        'orderRoadmap' => false,
     ];
 }

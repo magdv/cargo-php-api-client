@@ -9,21 +9,22 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Chat\Objects\Payload;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\Truck\Objects\TruckOld;
 
 /**
  * Данные вложения - смена транспорта
  * source: chat/objects/payload/chat-post-payload-truck-change.json
  *
+ * @property string $type
  * @property string $operation
- * @property TruckOld[] $truck
+ * @property ChatPostPayloadTruckChangeTruck $truck
  */
 final class ChatPostPayloadTruckChange extends AbstractEntity
 {
     protected static $types = [
+        'type' => ['string'],
         'operation' => ['string'],
-        'truck' => ['array', 'Cargomart\ApiClient\Entity\Truck\Objects\TruckOld'],
+        'truck' => ['Cargomart\ApiClient\Entity\Chat\Objects\Payload\ChatPostPayloadTruckChangeTruck'],
     ];
 
-    protected static $nullables = ['operation' => false, 'truck' => false];
+    protected static $nullables = ['type' => false, 'operation' => false, 'truck' => false];
 }

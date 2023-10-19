@@ -23,6 +23,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $ogrn
  * @property string $kpp
  * @property Settings $settings
+ * @property int $statusId
  * @property CompanyShortSessionValues $sessionValues
  */
 final class CompanyShort extends AbstractEntity
@@ -37,6 +38,7 @@ final class CompanyShort extends AbstractEntity
         'ogrn' => ['string'],
         'kpp' => ['string'],
         'settings' => ['Cargomart\ApiClient\Entity\Company\Objects\Settings'],
+        'statusId' => ['int'],
         'sessionValues' => ['Cargomart\ApiClient\Entity\Company\Objects\CompanyShortSessionValues'],
     ];
 
@@ -50,6 +52,7 @@ final class CompanyShort extends AbstractEntity
         'ogrn' => false,
         'kpp' => false,
         'settings' => false,
+        'statusId' => false,
         'sessionValues' => false,
     ];
 }

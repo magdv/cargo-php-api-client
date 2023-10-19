@@ -14,22 +14,24 @@ use Cargomart\ApiClient\AbstractEntity;
  * Детальная информация по просматриваемому документу
  * source: simple-document/objects/simple-document-assignment.json
  *
- * @property int $assignmentNumber
+ * @property string $assignmentNumber
  * @property string $assignmentDate
  * @property string $downloadLink
  * @property string $fileName
  * @property string $type
  * @property SimpleDocumentTitle[] $title
+ * @property string $createDate
  */
 final class SimpleDocumentAssignment extends AbstractEntity
 {
     protected static $types = [
-        'assignmentNumber' => ['int'],
+        'assignmentNumber' => ['string'],
         'assignmentDate' => ['string'],
         'downloadLink' => ['string'],
         'fileName' => ['string'],
         'type' => ['string'],
         'title' => ['array', 'Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitle'],
+        'createDate' => ['string'],
     ];
 
     protected static $nullables = [
@@ -39,5 +41,6 @@ final class SimpleDocumentAssignment extends AbstractEntity
         'fileName' => false,
         'type' => false,
         'title' => false,
+        'createDate' => false,
     ];
 }

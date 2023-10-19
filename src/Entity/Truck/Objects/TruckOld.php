@@ -24,10 +24,15 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property float $cubicCapacityValue
  * @property int $truckTypeId
  * @property string $ownershipType
+ * @property TractorVehicle $tractor
+ * @property Vehicle $trailer
+ * @property Vehicle $van
+ * @property int $validationStatus
  * @property string $affiliationType
  * @property string $companyOwnerInn
  * @property string $companyOwnerName
  * @property string $companyOwnerAddress
+ * @property ActualCarrier $actualCarrier
  * @property int $truckModeId
  * @property \stdClass $photo
  * @property string[] $phones
@@ -49,10 +54,15 @@ final class TruckOld extends AbstractEntity
         'cubicCapacityValue' => ['float'],
         'truckTypeId' => ['int'],
         'ownershipType' => ['string'],
+        'tractor' => ['Cargomart\ApiClient\Entity\Truck\Objects\TractorVehicle'],
+        'trailer' => ['Cargomart\ApiClient\Entity\Truck\Objects\Vehicle'],
+        'van' => ['Cargomart\ApiClient\Entity\Truck\Objects\Vehicle'],
+        'validationStatus' => ['int'],
         'affiliationType' => ['string'],
         'companyOwnerInn' => ['string'],
         'companyOwnerName' => ['string'],
         'companyOwnerAddress' => ['string'],
+        'actualCarrier' => ['Cargomart\ApiClient\Entity\Truck\Objects\ActualCarrier'],
         'truckModeId' => ['int'],
         'photo' => ['\stdClass'],
         'phones' => ['array', 'string'],
@@ -73,10 +83,15 @@ final class TruckOld extends AbstractEntity
         'cubicCapacityValue' => false,
         'truckTypeId' => false,
         'ownershipType' => false,
+        'tractor' => false,
+        'trailer' => false,
+        'van' => false,
+        'validationStatus' => false,
         'affiliationType' => false,
         'companyOwnerInn' => false,
         'companyOwnerName' => false,
         'companyOwnerAddress' => false,
+        'actualCarrier' => false,
         'truckModeId' => false,
         'photo' => true,
         'phones' => false,

@@ -47,6 +47,8 @@ use Cargomart\ApiClient\Entity\DigitalSignature\Objects\IssueCertificate;
  * @property bool $isHaveGeneralPartner
  * @property int $delaySendSms
  * @property int $delaySendEmail
+ * @property string $availableResendEmailCodeDate
+ * @property string $availableResendSmsCodeDate
  * @property CompanyInfo $company
  * @property UserAccess $access
  * @property PersonalManager[] $personalManager
@@ -86,6 +88,8 @@ final class UserProfileFull extends AbstractEntity
         'isHaveGeneralPartner' => ['bool'],
         'delaySendSms' => ['int'],
         'delaySendEmail' => ['int'],
+        'availableResendEmailCodeDate' => ['string'],
+        'availableResendSmsCodeDate' => ['string'],
         'company' => ['Cargomart\ApiClient\Entity\Company\Objects\CompanyInfo'],
         'access' => ['Cargomart\ApiClient\Entity\User\Objects\UserAccess'],
         'personalManager' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\PersonalManager'],
@@ -124,6 +128,8 @@ final class UserProfileFull extends AbstractEntity
         'isHaveGeneralPartner' => false,
         'delaySendSms' => false,
         'delaySendEmail' => false,
+        'availableResendEmailCodeDate' => false,
+        'availableResendSmsCodeDate' => false,
         'company' => false,
         'access' => false,
         'personalManager' => false,

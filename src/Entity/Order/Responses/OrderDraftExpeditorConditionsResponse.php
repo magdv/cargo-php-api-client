@@ -8,11 +8,12 @@ declare(strict_types=1);
 
 namespace Cargomart\ApiClient\Entity\Order\Responses;
 
+use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
 use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
- * Ответ на запрос цены маршрута
+ * Ответ на запрос условий перевозки
  * source: order/responses/order-draft-expeditor-conditions-response.json
  *
  * @property MessageV2[] $message

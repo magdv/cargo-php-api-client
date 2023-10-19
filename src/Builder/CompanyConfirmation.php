@@ -52,4 +52,9 @@ final class CompanyConfirmation extends AbstractBuilder
     {
         return new CompanyProfileSend($this->params, $this->client);
     }
+
+    public function get(): CompanyConfirmationGet
+    {
+        return new CompanyConfirmationGet($this->client, $this->getUrl());
+    }
 }

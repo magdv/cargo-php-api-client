@@ -77,6 +77,25 @@ class PriceGet extends AbstractRequest
     }
 
     /**
+     * Коды городов маршрута
+     *
+     * @var null|string[] $value
+     *
+     * @return self
+     */
+    public function qPoints(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['points']);
+        } else {
+            $c->query['points'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
      * Код типа кузова (допустимы пока только тент, реф и изотерм)
      *
      * @var null|int $value

@@ -28,6 +28,8 @@ use Cargomart\ApiClient\Entity\Driver\Objects\DriverAccess;
  * @property string $registrationAddress
  * @property string $licenceNumber
  * @property string $licenceIssueDate
+ * @property string $licenceType
+ * @property string $licenceSeries
  * @property string $inn
  * @property int $validationStatus
  * @property string $driverAppStatus
@@ -50,6 +52,8 @@ final class Driver extends AbstractEntity
         'registrationAddress' => ['string'],
         'licenceNumber' => ['string'],
         'licenceIssueDate' => ['string'],
+        'licenceType' => ['string'],
+        'licenceSeries' => ['string'],
         'inn' => ['string'],
         'validationStatus' => ['int'],
         'driverAppStatus' => ['string'],
@@ -71,6 +75,8 @@ final class Driver extends AbstractEntity
         'registrationAddress' => false,
         'licenceNumber' => false,
         'licenceIssueDate' => false,
+        'licenceType' => false,
+        'licenceSeries' => false,
         'inn' => false,
         'validationStatus' => false,
         'driverAppStatus' => false,

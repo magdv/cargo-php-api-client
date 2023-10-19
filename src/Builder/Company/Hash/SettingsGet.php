@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Company\Hash;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Company\Responses\CompanySettings;
+use Cargomart\ApiClient\Entity\Company\Responses\CompanySettingsResponse;
 
 class SettingsGet extends AbstractRequest
 {
@@ -22,16 +22,16 @@ class SettingsGet extends AbstractRequest
     /**
      * Получение настроек компании.
      *
-     * @return CompanySettings
+     * @return CompanySettingsResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): CompanySettings
+    public function do(): CompanySettingsResponse
     {
         return $this->client->doRequest(
             'GET',
             $this->url,
-            CompanySettings::class,
+            CompanySettingsResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

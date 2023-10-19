@@ -11,6 +11,7 @@ namespace Cargomart\ApiClient\Entity\Dictionary\Responses;
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\ActivityType;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\CarPerPeriod;
+use Cargomart\ApiClient\Entity\Dictionary\Objects\CountryItem;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\Currency;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\DocumentType;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\DriverLicense;
@@ -20,6 +21,7 @@ use Cargomart\ApiClient\Entity\Dictionary\Objects\PaymentType;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\Section;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TenderCarriage;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\Timezone;
+use Cargomart\ApiClient\Entity\Dictionary\Objects\TrailerType;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckDevice;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckMode;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckType;
@@ -46,6 +48,7 @@ use Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleType;
  * @property Timezone[] $timezone
  * @property TruckMode[] $truckMode
  * @property TruckType[] $truckType
+ * @property TrailerType[] $trailerType
  * @property TruckDevice[] $truckDevice
  * @property Vat[] $vat
  * @property Section[] $section
@@ -54,6 +57,7 @@ use Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleType;
  * @property LegalStatus[] $legalStatus
  * @property OrderDocumentType[] $orderDocumentType
  * @property SimpleDocumentTitleType[] $simpleDocumentTitleType
+ * @property CountryItem[] $country
  */
 final class DictionaryListData extends AbstractEntity
 {
@@ -70,6 +74,7 @@ final class DictionaryListData extends AbstractEntity
         'timezone' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\Timezone'],
         'truckMode' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TruckMode'],
         'truckType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TruckType'],
+        'trailerType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TrailerType'],
         'truckDevice' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TruckDevice'],
         'vat' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\Vat'],
         'section' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\Section'],
@@ -78,6 +83,7 @@ final class DictionaryListData extends AbstractEntity
         'legalStatus' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\LegalStatus'],
         'orderDocumentType' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDocumentType'],
         'simpleDocumentTitleType' => ['array', 'Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleType'],
+        'country' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\CountryItem'],
     ];
 
     protected static $nullables = [
@@ -93,6 +99,7 @@ final class DictionaryListData extends AbstractEntity
         'timezone' => false,
         'truckMode' => false,
         'truckType' => false,
+        'trailerType' => false,
         'truckDevice' => false,
         'vat' => false,
         'section' => false,
@@ -101,5 +108,6 @@ final class DictionaryListData extends AbstractEntity
         'legalStatus' => false,
         'orderDocumentType' => false,
         'simpleDocumentTitleType' => false,
+        'country' => false,
     ];
 }

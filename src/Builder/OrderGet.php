@@ -457,7 +457,7 @@ class OrderGet extends AbstractRequest
     }
 
     /**
-     * Массив id cтатусов заказов. 100 - нет ставок, 250 - не подтвержден, 240 - подтвержден, 110 - отказ перевозчика, 120 - отказ отправителя, 6 - в рейсе, 7 - исполнен, 21 - на модерации, 22 - отклонен с модерации.
+     * Массив id статусов заказов. 100 - нет ставок, 250 - не подтвержден, 240 - подтвержден, 110 - отказ перевозчика, 120 - отказ отправителя, 6 - в рейсе, 7 - исполнен, 21 - на модерации, 22 - отклонен с модерации.
      *
      * @var null|int[] $value
      *
@@ -742,25 +742,6 @@ class OrderGet extends AbstractRequest
     }
 
     /**
-     * Только заказы, которые надо оценить
-     *
-     * @var null|bool $value
-     *
-     * @return self
-     */
-    public function qFilterCreateQualityScore(?bool $value): self
-    {
-        $c = clone $this;
-        if (null === $value) {
-            unset($c->query['filter[createQualityScore]']);
-        } else {
-            $c->query['filter[createQualityScore]'] = $value;
-        }
-
-        return $c;
-    }
-
-    /**
      * Статус архивации заказа
      *
      * @var null|string $value
@@ -793,6 +774,196 @@ class OrderGet extends AbstractRequest
             unset($c->query['filter[branchId]']);
         } else {
             $c->query['filter[branchId]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Хэш компании, который передается вместе с branchId если нужно включить заказы дочерних компаний (весь холдинг)
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterConsignorParent(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[consignorParent]']);
+        } else {
+            $c->query['filter[consignorParent]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Список статусов доверенности.
+     *
+     * @var null|string[] $value
+     *
+     * @return self
+     */
+    public function qFilterProxyStatus(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[proxyStatus]']);
+        } else {
+            $c->query['filter[proxyStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Трек номер
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterTrackingNumber(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[trackingNumber]']);
+        } else {
+            $c->query['filter[trackingNumber]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Статус проверки оригиналов документов
+     *
+     * @var null|string[] $value
+     *
+     * @return self
+     */
+    public function qFilterDocumentOriginalsStatus(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[documentOriginalsStatus]']);
+        } else {
+            $c->query['filter[documentOriginalsStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Статус проверки пакетов документов (сканов)
+     *
+     * @var null|string[] $value
+     *
+     * @return self
+     */
+    public function qFilterDocumentPackageStatus(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[documentPackageStatus]']);
+        } else {
+            $c->query['filter[documentPackageStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Статус последнего патча заказа
+     *
+     * @var null|int[] $value
+     *
+     * @return self
+     */
+    public function qFilterPatchStatus(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[patchStatus]']);
+        } else {
+            $c->query['filter[patchStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Наличие отказа для заказа по его типу
+     *
+     * @var null|string[] $value
+     *
+     * @return self
+     */
+    public function qFilterExpeditorOrderRefuseType(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[expeditorOrderRefuseType]']);
+        } else {
+            $c->query['filter[expeditorOrderRefuseType]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Выборка по статусу назначения водителей
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterDriverStatus(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[driverStatus]']);
+        } else {
+            $c->query['filter[driverStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Выборка по статусу оплат перевозчику
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterCarrierPaidStatus(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[carrierPaidStatus]']);
+        } else {
+            $c->query['filter[carrierPaidStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Фильтр подписей.
+     *
+     * @var null|string[] $value
+     *
+     * @return self
+     */
+    public function qFilterSignStatus(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[signStatus]']);
+        } else {
+            $c->query['filter[signStatus]'] = $value;
         }
 
         return $c;

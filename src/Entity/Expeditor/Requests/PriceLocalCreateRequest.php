@@ -14,30 +14,30 @@ use Cargomart\ApiClient\AbstractEntity;
  * Данные для создания элемента справочника цен
  * source: expeditor/requests/price-local-create-request.json
  *
- * @property string $departureCode
- * @property string $destinationCode
- * @property string $truckTypeId
+ * @property int $poolId
+ * @property int $truckTypeId
  * @property string $consignorPrice
  * @property string $carrierPrice
  * @property string $carrierPriceTomorrow
+ * @property bool $isActive
  */
 final class PriceLocalCreateRequest extends AbstractEntity
 {
     protected static $types = [
-        'departureCode' => ['string'],
-        'destinationCode' => ['string'],
-        'truckTypeId' => ['string'],
+        'poolId' => ['int'],
+        'truckTypeId' => ['int'],
         'consignorPrice' => ['string'],
         'carrierPrice' => ['string'],
         'carrierPriceTomorrow' => ['string'],
+        'isActive' => ['bool'],
     ];
 
     protected static $nullables = [
-        'departureCode' => false,
-        'destinationCode' => false,
+        'poolId' => false,
         'truckTypeId' => false,
         'consignorPrice' => false,
         'carrierPrice' => false,
         'carrierPriceTomorrow' => false,
+        'isActive' => false,
     ];
 }

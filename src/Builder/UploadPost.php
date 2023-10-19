@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\File\Responses\FileItem;
+use Cargomart\ApiClient\Entity\File\Responses\FileV2Item;
 
 class UploadPost extends AbstractRequest
 {
@@ -22,16 +22,16 @@ class UploadPost extends AbstractRequest
     /**
      * Файл помечается как временный и привязывается к тому, кто его загрузил. При успешной загрузке возвращает доступное имя для документа.
      *
-     * @return FileItem
+     * @return FileV2Item
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): FileItem
+    public function do(): FileV2Item
     {
         return $this->client->doRequest(
             'POST',
             $this->url,
-            FileItem::class,
+            FileV2Item::class,
             http_build_query($this->query),
             null,
             $this->headers

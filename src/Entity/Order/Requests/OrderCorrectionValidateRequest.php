@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Requests;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\Base\Requests\IdListRequest;
 
 /**
  * Данные на валидацию для создания запроса на изменение заказа
@@ -25,7 +24,8 @@ use Cargomart\ApiClient\Entity\Base\Requests\IdListRequest;
  * @property string[] $conditions
  * @property string $currentPrice
  * @property OrderCorrectionPointRequest[] $points
- * @property IdListRequest[] $contacts
+ * @property int[] $contacts
+ * @property int $companyBranchId
  */
 final class OrderCorrectionValidateRequest extends AbstractEntity
 {
@@ -40,7 +40,8 @@ final class OrderCorrectionValidateRequest extends AbstractEntity
         'conditions' => ['array', 'string'],
         'currentPrice' => ['string'],
         'points' => ['array', 'Cargomart\ApiClient\Entity\Order\Requests\OrderCorrectionPointRequest'],
-        'contacts' => ['array', 'Cargomart\ApiClient\Entity\Base\Requests\IdListRequest'],
+        'contacts' => ['array', 'int'],
+        'companyBranchId' => ['int'],
     ];
 
     protected static $nullables = [
@@ -55,5 +56,6 @@ final class OrderCorrectionValidateRequest extends AbstractEntity
         'currentPrice' => false,
         'points' => false,
         'contacts' => false,
+        'companyBranchId' => false,
     ];
 }

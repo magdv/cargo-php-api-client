@@ -14,15 +14,17 @@ use Cargomart\ApiClient\AbstractEntity;
  * Данные вложения - изменение полей объека
  * source: chat/objects/payload/chat-post-payload-model-field-change.json
  *
+ * @property string $type
  * @property string $message
  * @property ChatPostPayloadModelFieldChangeChanges[] $changes
  */
 final class ChatPostPayloadModelFieldChange extends AbstractEntity
 {
     protected static $types = [
+        'type' => ['string'],
         'message' => ['string'],
         'changes' => ['array', 'Cargomart\ApiClient\Entity\Chat\Objects\Payload\ChatPostPayloadModelFieldChangeChanges'],
     ];
 
-    protected static $nullables = ['message' => false, 'changes' => false];
+    protected static $nullables = ['type' => false, 'message' => false, 'changes' => false];
 }

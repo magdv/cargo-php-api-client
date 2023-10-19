@@ -15,7 +15,6 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: order/objects/order-access.json
  *
  * @property bool $clone
- * @property bool $template
  * @property bool $edit
  * @property bool $update
  * @property bool $delete
@@ -33,8 +32,6 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $publish
  * @property bool $view
  * @property bool $createArchive
- * @property bool $createFavorite
- * @property bool $deleteFavorite
  * @property bool $createPin
  * @property bool $deletePin
  * @property bool $bidLast
@@ -55,8 +52,6 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $viewDocument
  * @property bool $updateCarrierDocumentTrackingNumber
  * @property bool $viewCarrierDocumentTrackingNumber
- * @property bool $viewRate
- * @property bool $updateRate
  * @property bool $cancel
  * @property bool $useBroker
  * @property bool $updateTruckDriver
@@ -75,14 +70,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $viewVisitor
  * @property bool $viewMonitoring
  * @property bool $createMonitoring
- * @property bool $createChatConsignor
- * @property bool $createChatWinner
  * @property bool $viewChat
- * @property bool $viewQualityScore
- * @property bool $createQualityScore
- * @property bool $createQualityScorePotential
- * @property bool $viewAlter
- * @property bool $updateAlter
  * @property bool $viewOffer
  * @property bool $createOffer
  * @property bool $viewOfferExcel
@@ -107,19 +95,35 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $viewClientList
  * @property bool $waybillView
  * @property bool $waybillGpView
+ * @property bool $waybillEdit
+ * @property bool $viewEcn
+ * @property bool $viewEcnList
+ * @property bool $createEcn
  * @property bool $updateProxyConsignorCarrierAdditionalInfo
  * @property bool $viewProxyConsignorCarrierAdditionalInfo
  * @property bool $viewDownloadExpeditorAssignment
+ * @property bool $viewDownloadRequestAssignment
  * @property bool $viewExpeditorPayment
  * @property bool $updateExpeditorPayment
  * @property bool $viewSimpleDocument
+ * @property bool $createCustomerPatch
  * @property bool $createTruckDriverPatch
+ * @property bool $createRefuseRevertPatch
+ * @property bool $viewExpeditorOffers
+ * @property bool $createExpeditorOffer
+ * @property bool $createCarrierAsk
+ * @property bool $viewExpeditorRecommendations
+ * @property bool $createExpeditorOfferNegotiate
+ * @property bool $createExpeditorOrderNegotiate
+ * @property bool $createCarrierSign
+ * @property bool $createOrderReuse
+ * @property bool $viewConsignorExpeditorPayment
+ * @property bool $viewActNonDeliveryCar
  */
 final class OrderAccess extends AbstractEntity
 {
     protected static $types = [
         'clone' => ['bool'],
-        'template' => ['bool'],
         'edit' => ['bool'],
         'update' => ['bool'],
         'delete' => ['bool'],
@@ -137,8 +141,6 @@ final class OrderAccess extends AbstractEntity
         'publish' => ['bool'],
         'view' => ['bool'],
         'createArchive' => ['bool'],
-        'createFavorite' => ['bool'],
-        'deleteFavorite' => ['bool'],
         'createPin' => ['bool'],
         'deletePin' => ['bool'],
         'bidLast' => ['bool'],
@@ -159,8 +161,6 @@ final class OrderAccess extends AbstractEntity
         'viewDocument' => ['bool'],
         'updateCarrierDocumentTrackingNumber' => ['bool'],
         'viewCarrierDocumentTrackingNumber' => ['bool'],
-        'viewRate' => ['bool'],
-        'updateRate' => ['bool'],
         'cancel' => ['bool'],
         'useBroker' => ['bool'],
         'updateTruckDriver' => ['bool'],
@@ -179,14 +179,7 @@ final class OrderAccess extends AbstractEntity
         'viewVisitor' => ['bool'],
         'viewMonitoring' => ['bool'],
         'createMonitoring' => ['bool'],
-        'createChatConsignor' => ['bool'],
-        'createChatWinner' => ['bool'],
         'viewChat' => ['bool'],
-        'viewQualityScore' => ['bool'],
-        'createQualityScore' => ['bool'],
-        'createQualityScorePotential' => ['bool'],
-        'viewAlter' => ['bool'],
-        'updateAlter' => ['bool'],
         'viewOffer' => ['bool'],
         'createOffer' => ['bool'],
         'viewOfferExcel' => ['bool'],
@@ -211,18 +204,34 @@ final class OrderAccess extends AbstractEntity
         'viewClientList' => ['bool'],
         'waybillView' => ['bool'],
         'waybillGpView' => ['bool'],
+        'waybillEdit' => ['bool'],
+        'viewEcn' => ['bool'],
+        'viewEcnList' => ['bool'],
+        'createEcn' => ['bool'],
         'updateProxyConsignorCarrierAdditionalInfo' => ['bool'],
         'viewProxyConsignorCarrierAdditionalInfo' => ['bool'],
         'viewDownloadExpeditorAssignment' => ['bool'],
+        'viewDownloadRequestAssignment' => ['bool'],
         'viewExpeditorPayment' => ['bool'],
         'updateExpeditorPayment' => ['bool'],
         'viewSimpleDocument' => ['bool'],
+        'createCustomerPatch' => ['bool'],
         'createTruckDriverPatch' => ['bool'],
+        'createRefuseRevertPatch' => ['bool'],
+        'viewExpeditorOffers' => ['bool'],
+        'createExpeditorOffer' => ['bool'],
+        'createCarrierAsk' => ['bool'],
+        'viewExpeditorRecommendations' => ['bool'],
+        'createExpeditorOfferNegotiate' => ['bool'],
+        'createExpeditorOrderNegotiate' => ['bool'],
+        'createCarrierSign' => ['bool'],
+        'createOrderReuse' => ['bool'],
+        'viewConsignorExpeditorPayment' => ['bool'],
+        'viewActNonDeliveryCar' => ['bool'],
     ];
 
     protected static $nullables = [
         'clone' => false,
-        'template' => false,
         'edit' => false,
         'update' => false,
         'delete' => false,
@@ -240,8 +249,6 @@ final class OrderAccess extends AbstractEntity
         'publish' => false,
         'view' => false,
         'createArchive' => false,
-        'createFavorite' => false,
-        'deleteFavorite' => false,
         'createPin' => false,
         'deletePin' => false,
         'bidLast' => false,
@@ -262,8 +269,6 @@ final class OrderAccess extends AbstractEntity
         'viewDocument' => false,
         'updateCarrierDocumentTrackingNumber' => false,
         'viewCarrierDocumentTrackingNumber' => false,
-        'viewRate' => false,
-        'updateRate' => false,
         'cancel' => false,
         'useBroker' => false,
         'updateTruckDriver' => false,
@@ -282,14 +287,7 @@ final class OrderAccess extends AbstractEntity
         'viewVisitor' => false,
         'viewMonitoring' => false,
         'createMonitoring' => false,
-        'createChatConsignor' => false,
-        'createChatWinner' => false,
         'viewChat' => false,
-        'viewQualityScore' => false,
-        'createQualityScore' => false,
-        'createQualityScorePotential' => false,
-        'viewAlter' => false,
-        'updateAlter' => false,
         'viewOffer' => false,
         'createOffer' => false,
         'viewOfferExcel' => false,
@@ -314,12 +312,29 @@ final class OrderAccess extends AbstractEntity
         'viewClientList' => false,
         'waybillView' => false,
         'waybillGpView' => false,
+        'waybillEdit' => false,
+        'viewEcn' => false,
+        'viewEcnList' => false,
+        'createEcn' => false,
         'updateProxyConsignorCarrierAdditionalInfo' => false,
         'viewProxyConsignorCarrierAdditionalInfo' => false,
         'viewDownloadExpeditorAssignment' => false,
+        'viewDownloadRequestAssignment' => false,
         'viewExpeditorPayment' => false,
         'updateExpeditorPayment' => false,
         'viewSimpleDocument' => false,
+        'createCustomerPatch' => false,
         'createTruckDriverPatch' => false,
+        'createRefuseRevertPatch' => false,
+        'viewExpeditorOffers' => false,
+        'createExpeditorOffer' => false,
+        'createCarrierAsk' => false,
+        'viewExpeditorRecommendations' => false,
+        'createExpeditorOfferNegotiate' => false,
+        'createExpeditorOrderNegotiate' => false,
+        'createCarrierSign' => false,
+        'createOrderReuse' => false,
+        'viewConsignorExpeditorPayment' => false,
+        'viewActNonDeliveryCar' => false,
     ];
 }

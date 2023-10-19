@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\CompanyConfirmation\Company;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\CompanyConfirmation\Responses\Status;
+use Cargomart\ApiClient\Entity\CompanyConfirmation\Responses\StatusResponse;
 
 class ConfirmDelete extends AbstractRequest
 {
@@ -22,16 +22,16 @@ class ConfirmDelete extends AbstractRequest
     /**
      * Отказ от данных компании.
      *
-     * @return Status
+     * @return StatusResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): Status
+    public function do(): StatusResponse
     {
         return $this->client->doRequest(
             'DELETE',
             $this->url,
-            Status::class,
+            StatusResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

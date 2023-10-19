@@ -14,6 +14,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * Данные вложения - заказ
  * source: chat/objects/payload/chat-post-payload-order.json
  *
+ * @property string $type
  * @property string $id
  * @property int $serialId
  * @property ChatPostPayloadOrderPoint[] $point
@@ -21,10 +22,11 @@ use Cargomart\ApiClient\AbstractEntity;
 final class ChatPostPayloadOrder extends AbstractEntity
 {
     protected static $types = [
+        'type' => ['string'],
         'id' => ['string'],
         'serialId' => ['int'],
         'point' => ['array', 'Cargomart\ApiClient\Entity\Chat\Objects\Payload\ChatPostPayloadOrderPoint'],
     ];
 
-    protected static $nullables = ['id' => false, 'serialId' => false, 'point' => false];
+    protected static $nullables = ['type' => false, 'id' => false, 'serialId' => false, 'point' => false];
 }

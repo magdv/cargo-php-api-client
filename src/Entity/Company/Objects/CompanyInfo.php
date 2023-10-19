@@ -20,6 +20,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property \stdClass $logo
  * @property \stdClass $actualAddress
  * @property string $phone
+ * @property string $countryCode
  * @property \stdClass $headName
  * @property \stdClass $description
  * @property \stdClass $activityType
@@ -52,6 +53,14 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $status
  * @property PartnerContract $contract
  * @property PartnerContractWithType[] $partnerContract
+ * @property bool $isValidated
+ * @property string $legalAddress
+ * @property int $legalStatusId
+ * @property \stdClass $legalName
+ * @property \stdClass $ogrn
+ * @property \stdClass $okpo
+ * @property \stdClass $kpp
+ * @property \stdClass $url
  * @property bool $hasCompanyContactGroups
  * @property CompanyAccess $access
  */
@@ -64,6 +73,7 @@ final class CompanyInfo extends AbstractEntity
         'logo' => ['\stdClass'],
         'actualAddress' => ['\stdClass'],
         'phone' => ['string'],
+        'countryCode' => ['string'],
         'headName' => ['\stdClass'],
         'description' => ['\stdClass'],
         'activityType' => ['\stdClass'],
@@ -96,6 +106,14 @@ final class CompanyInfo extends AbstractEntity
         'status' => ['int'],
         'contract' => ['Cargomart\ApiClient\Entity\Company\Objects\PartnerContract'],
         'partnerContract' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\PartnerContractWithType'],
+        'isValidated' => ['bool'],
+        'legalAddress' => ['string'],
+        'legalStatusId' => ['int'],
+        'legalName' => ['\stdClass'],
+        'ogrn' => ['\stdClass'],
+        'okpo' => ['\stdClass'],
+        'kpp' => ['\stdClass'],
+        'url' => ['\stdClass'],
         'hasCompanyContactGroups' => ['bool'],
         'access' => ['Cargomart\ApiClient\Entity\Company\Objects\CompanyAccess'],
     ];
@@ -107,6 +125,7 @@ final class CompanyInfo extends AbstractEntity
         'logo' => true,
         'actualAddress' => true,
         'phone' => false,
+        'countryCode' => false,
         'headName' => true,
         'description' => true,
         'activityType' => true,
@@ -139,6 +158,14 @@ final class CompanyInfo extends AbstractEntity
         'status' => false,
         'contract' => false,
         'partnerContract' => false,
+        'isValidated' => false,
+        'legalAddress' => false,
+        'legalStatusId' => false,
+        'legalName' => true,
+        'ogrn' => true,
+        'okpo' => true,
+        'kpp' => true,
+        'url' => true,
         'hasCompanyContactGroups' => false,
         'access' => false,
     ];

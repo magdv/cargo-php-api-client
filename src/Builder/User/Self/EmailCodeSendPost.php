@@ -20,7 +20,7 @@ class EmailCodeSendPost extends AbstractRequest
     public $headers = [];
 
     /**
-     * Посылает повторные еmail с кодом подтверждения.
+     * Посылает повторные email с кодом подтверждения.
      *
      * @return UserFullResponse
      *

@@ -15,26 +15,32 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: company/objects/settings.json
  *
  * @property bool $isUseOrderExternalId
+ * @property bool $isHideRouteAddresses
  * @property string $orderExternalIdLabel
  * @property string $orderPriceCheckRate
  * @property bool $needApproveDriverTruckChanges
+ * @property string $statusUsingEcn
  * @property SettingsAccess $access
  */
 final class Settings extends AbstractEntity
 {
     protected static $types = [
         'isUseOrderExternalId' => ['bool'],
+        'isHideRouteAddresses' => ['bool'],
         'orderExternalIdLabel' => ['string'],
         'orderPriceCheckRate' => ['string'],
         'needApproveDriverTruckChanges' => ['bool'],
+        'statusUsingEcn' => ['string'],
         'access' => ['Cargomart\ApiClient\Entity\Company\Objects\SettingsAccess'],
     ];
 
     protected static $nullables = [
         'isUseOrderExternalId' => false,
+        'isHideRouteAddresses' => false,
         'orderExternalIdLabel' => false,
         'orderPriceCheckRate' => false,
         'needApproveDriverTruckChanges' => false,
+        'statusUsingEcn' => false,
         'access' => false,
     ];
 }

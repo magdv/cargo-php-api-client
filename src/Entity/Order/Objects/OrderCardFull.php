@@ -9,7 +9,13 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\TemperatureRange;
+use Cargomart\ApiClient\Entity\Expeditor\Objects\ExpeditorContract;
 use Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalProxy;
+use Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalRecommendation;
+use Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalRefuse;
+use Cargomart\ApiClient\Entity\GeneralPartner\Objects\GeneralPartnerContract;
+use Cargomart\ApiClient\Entity\Order\Enums\OrderTruckDriverCorrectionStatus;
 use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
 
 /**
@@ -24,9 +30,11 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property int $duration
  * @property string $createDate
  * @property string $currencyCode
+ * @property bool $isMultiCurrency
  * @property string $openPrice
  * @property string $paymentDetail
  * @property string $currentPrice
+ * @property string $currentPriceWithFee
  * @property string $recommendedPrice
  * @property string $stepBid
  * @property bool $isNoPrice
@@ -40,10 +48,10 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property int $proxyDocId
  * @property ProposalProxy $proposalProxy
  * @property int $carrierDocId
- * @property OrderCardFullPrevCarrierDoc $prevCarrierDoc
+ * @property OrderPrevDoc $prevCarrierDoc
  * @property string $vat
  * @property string $vatLessPrice
- * @property OrderCardFullPrevGeneralPartnerDoc $prevGeneralPartnerDoc
+ * @property OrderPrevDoc $prevGeneralPartnerDoc
  * @property int $consignorDocId
  * @property string $comment
  * @property TemperatureRange $temperature
@@ -61,6 +69,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property int $loadCapacity
  * @property string[] $conditions
  * @property int[] $contact
+ * @property OrderRoutePoint[] $routePoint
  * @property RoutePointCard[] $point
  * @property string $accessTypeId
  * @property int $contractTypeId
@@ -77,7 +86,9 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property bool $isCarrierRefuse
  * @property bool $isConsignorRefuse
  * @property bool $isRefuseCancel
+ * @property bool $isHideRouteAddresses
  * @property int[] $protectedBidReason
+ * @property ProtectedBidReasonComment[] $protectedBidReasonComment
  * @property string $disabledDeadline
  * @property string $refuseReasonCode
  * @property string $refuseReasonComment
@@ -96,8 +107,14 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property string $periodToDate
  * @property int $bidCreatorId
  * @property int[] $carrierContactIds
+ * @property int[] $consignorContactIds
  * @property string $expeditorId
  * @property string $truckSearchTimeEnd
+ * @property ProposalRefuse[] $refuses
+ * @property ProposalRecommendation[] $recommendations
+ * @property ExpeditorOfferCarrierCurrent $currentExpeditorCarrierOffer
+ * @property CarrierAskCurrent $currentCarrierAsk
+ * @property CarrierAskCurrent $winningCarrierAsk
  * @property int[] $generalPartnerContact
  * @property int $generalPartnerDocId
  * @property bool $isGeneralPartner
@@ -111,20 +128,16 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property bool $isProxyDateEnd
  * @property int $distance
  * @property bool $isInternational
- * @property string $qualityScoreStatusByConsignor
- * @property string $qualityScoreStatusByCarrier
- * @property bool $isQualityScoreManager
  * @property bool $isTruckDriverChanged
  * @property bool $isDocChanged
  * @property OrderDetails[] $details
  * @property ProgressItemListProgress[] $progress
- * @property OrderOffer $currentOffer
+ * @property OrderOfferCurrent $currentOffer
  * @property OrderOfferCarRequest $carRequest
  * @property OrderPayments[] $payments
  * @property OrderCorrectionStatus $correctionStatus
  * @property OrderTruckDriverCorrectionStatus $truckDriverCorrectionStatus
  * @property OrderAccess $access
- * @property OrderPreOrder $preOrder
  * @property string $paidInvoiceDate
  * @property string $paidExpeditorPaymentDate
  * @property string $carrierPackageId
@@ -132,8 +145,16 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property string $carrierPaymentType
  * @property OrderBanking $bankingDetails
  * @property OriginalDocument $originalDocument
+ * @property OrderPatchLastItem $patch
  * @property OrderPatchLastItem $lastPatch
  * @property OrderPatchLastItem $truckDriverPatch
+ * @property ExpeditorContract $expeditorConsignorContract
+ * @property ExpeditorContract $expeditorCarrierContract
+ * @property GeneralPartnerContract $gpCarrierContract
+ * @property string $priceStrategyType
+ * @property string $biddingType
+ * @property OrderDraftExpeditorBidding $bidding
+ * @property bool $hasCarrierSign
  */
 final class OrderCardFull extends AbstractEntity
 {
@@ -146,9 +167,11 @@ final class OrderCardFull extends AbstractEntity
         'duration' => ['int'],
         'createDate' => ['string'],
         'currencyCode' => ['string'],
+        'isMultiCurrency' => ['bool'],
         'openPrice' => ['string'],
         'paymentDetail' => ['string'],
         'currentPrice' => ['string'],
+        'currentPriceWithFee' => ['string'],
         'recommendedPrice' => ['string'],
         'stepBid' => ['string'],
         'isNoPrice' => ['bool'],
@@ -162,13 +185,13 @@ final class OrderCardFull extends AbstractEntity
         'proxyDocId' => ['int'],
         'proposalProxy' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalProxy'],
         'carrierDocId' => ['int'],
-        'prevCarrierDoc' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderCardFullPrevCarrierDoc'],
+        'prevCarrierDoc' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPrevDoc'],
         'vat' => ['string'],
         'vatLessPrice' => ['string'],
-        'prevGeneralPartnerDoc' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderCardFullPrevGeneralPartnerDoc'],
+        'prevGeneralPartnerDoc' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPrevDoc'],
         'consignorDocId' => ['int'],
         'comment' => ['string'],
-        'temperature' => ['Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange'],
+        'temperature' => ['Cargomart\ApiClient\Entity\Base\TemperatureRange'],
         'loading' => ['array', 'int'],
         'device' => ['array', 'string'],
         'cargoType' => ['string'],
@@ -183,6 +206,7 @@ final class OrderCardFull extends AbstractEntity
         'loadCapacity' => ['int'],
         'conditions' => ['array', 'string'],
         'contact' => ['array', 'int'],
+        'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderRoutePoint'],
         'point' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointCard'],
         'accessTypeId' => ['string'],
         'contractTypeId' => ['int'],
@@ -199,7 +223,9 @@ final class OrderCardFull extends AbstractEntity
         'isCarrierRefuse' => ['bool'],
         'isConsignorRefuse' => ['bool'],
         'isRefuseCancel' => ['bool'],
+        'isHideRouteAddresses' => ['bool'],
         'protectedBidReason' => ['array', 'int'],
+        'protectedBidReasonComment' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\ProtectedBidReasonComment'],
         'disabledDeadline' => ['string'],
         'refuseReasonCode' => ['string'],
         'refuseReasonComment' => ['string'],
@@ -218,8 +244,14 @@ final class OrderCardFull extends AbstractEntity
         'periodToDate' => ['string'],
         'bidCreatorId' => ['int'],
         'carrierContactIds' => ['array', 'int'],
+        'consignorContactIds' => ['array', 'int'],
         'expeditorId' => ['string'],
         'truckSearchTimeEnd' => ['string'],
+        'refuses' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalRefuse'],
+        'recommendations' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalRecommendation'],
+        'currentExpeditorCarrierOffer' => ['Cargomart\ApiClient\Entity\Order\Objects\ExpeditorOfferCarrierCurrent'],
+        'currentCarrierAsk' => ['Cargomart\ApiClient\Entity\Order\Objects\CarrierAskCurrent'],
+        'winningCarrierAsk' => ['Cargomart\ApiClient\Entity\Order\Objects\CarrierAskCurrent'],
         'generalPartnerContact' => ['array', 'int'],
         'generalPartnerDocId' => ['int'],
         'isGeneralPartner' => ['bool'],
@@ -233,20 +265,16 @@ final class OrderCardFull extends AbstractEntity
         'isProxyDateEnd' => ['bool'],
         'distance' => ['int'],
         'isInternational' => ['bool'],
-        'qualityScoreStatusByConsignor' => ['string'],
-        'qualityScoreStatusByCarrier' => ['string'],
-        'isQualityScoreManager' => ['bool'],
         'isTruckDriverChanged' => ['bool'],
         'isDocChanged' => ['bool'],
         'details' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDetails'],
         'progress' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\ProgressItemListProgress'],
-        'currentOffer' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderOffer'],
+        'currentOffer' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCurrent'],
         'carRequest' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCarRequest'],
         'payments' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderPayments'],
         'correctionStatus' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderCorrectionStatus'],
-        'truckDriverCorrectionStatus' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderTruckDriverCorrectionStatus'],
+        'truckDriverCorrectionStatus' => ['Cargomart\ApiClient\Entity\Order\Enums\OrderTruckDriverCorrectionStatus'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderAccess'],
-        'preOrder' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPreOrder'],
         'paidInvoiceDate' => ['string'],
         'paidExpeditorPaymentDate' => ['string'],
         'carrierPackageId' => ['string'],
@@ -254,8 +282,16 @@ final class OrderCardFull extends AbstractEntity
         'carrierPaymentType' => ['string'],
         'bankingDetails' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderBanking'],
         'originalDocument' => ['Cargomart\ApiClient\Entity\Order\Objects\OriginalDocument'],
+        'patch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
         'lastPatch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
         'truckDriverPatch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
+        'expeditorConsignorContract' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ExpeditorContract'],
+        'expeditorCarrierContract' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ExpeditorContract'],
+        'gpCarrierContract' => ['Cargomart\ApiClient\Entity\GeneralPartner\Objects\GeneralPartnerContract'],
+        'priceStrategyType' => ['string'],
+        'biddingType' => ['string'],
+        'bidding' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorBidding'],
+        'hasCarrierSign' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -267,9 +303,11 @@ final class OrderCardFull extends AbstractEntity
         'duration' => false,
         'createDate' => false,
         'currencyCode' => false,
+        'isMultiCurrency' => false,
         'openPrice' => false,
         'paymentDetail' => false,
         'currentPrice' => false,
+        'currentPriceWithFee' => false,
         'recommendedPrice' => false,
         'stepBid' => false,
         'isNoPrice' => false,
@@ -304,6 +342,7 @@ final class OrderCardFull extends AbstractEntity
         'loadCapacity' => false,
         'conditions' => false,
         'contact' => false,
+        'routePoint' => false,
         'point' => false,
         'accessTypeId' => false,
         'contractTypeId' => false,
@@ -320,7 +359,9 @@ final class OrderCardFull extends AbstractEntity
         'isCarrierRefuse' => false,
         'isConsignorRefuse' => false,
         'isRefuseCancel' => false,
+        'isHideRouteAddresses' => false,
         'protectedBidReason' => false,
+        'protectedBidReasonComment' => false,
         'disabledDeadline' => false,
         'refuseReasonCode' => false,
         'refuseReasonComment' => false,
@@ -339,8 +380,14 @@ final class OrderCardFull extends AbstractEntity
         'periodToDate' => false,
         'bidCreatorId' => false,
         'carrierContactIds' => false,
+        'consignorContactIds' => false,
         'expeditorId' => false,
         'truckSearchTimeEnd' => false,
+        'refuses' => false,
+        'recommendations' => false,
+        'currentExpeditorCarrierOffer' => false,
+        'currentCarrierAsk' => false,
+        'winningCarrierAsk' => false,
         'generalPartnerContact' => false,
         'generalPartnerDocId' => false,
         'isGeneralPartner' => false,
@@ -354,9 +401,6 @@ final class OrderCardFull extends AbstractEntity
         'isProxyDateEnd' => false,
         'distance' => false,
         'isInternational' => false,
-        'qualityScoreStatusByConsignor' => false,
-        'qualityScoreStatusByCarrier' => false,
-        'isQualityScoreManager' => false,
         'isTruckDriverChanged' => false,
         'isDocChanged' => false,
         'details' => false,
@@ -367,7 +411,6 @@ final class OrderCardFull extends AbstractEntity
         'correctionStatus' => false,
         'truckDriverCorrectionStatus' => false,
         'access' => false,
-        'preOrder' => false,
         'paidInvoiceDate' => false,
         'paidExpeditorPaymentDate' => false,
         'carrierPackageId' => false,
@@ -375,7 +418,15 @@ final class OrderCardFull extends AbstractEntity
         'carrierPaymentType' => false,
         'bankingDetails' => false,
         'originalDocument' => false,
+        'patch' => false,
         'lastPatch' => false,
         'truckDriverPatch' => false,
+        'expeditorConsignorContract' => false,
+        'expeditorCarrierContract' => false,
+        'gpCarrierContract' => false,
+        'priceStrategyType' => false,
+        'biddingType' => false,
+        'bidding' => false,
+        'hasCarrierSign' => false,
     ];
 }

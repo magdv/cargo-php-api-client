@@ -24,10 +24,12 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderDocumentPackage;
  * @property BankingDetails $bankingDetails
  * @property OriginalDocument $originalDocument
  * @property ProposalDriver $driver
+ * @property string $attachedTruckDate
  * @property ProposalTruck $truck
  * @property OrderDocumentPackage $documentPackage
  * @property string $paymentType
  * @property ExpeditorContract $expeditorContract
+ * @property string $paidExpeditorPaymentDate
  */
 final class ProposalCarrier extends AbstractEntity
 {
@@ -41,10 +43,12 @@ final class ProposalCarrier extends AbstractEntity
         'bankingDetails' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\BankingDetails'],
         'originalDocument' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\OriginalDocument'],
         'driver' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalDriver'],
+        'attachedTruckDate' => ['string'],
         'truck' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalTruck'],
         'documentPackage' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderDocumentPackage'],
         'paymentType' => ['string'],
         'expeditorContract' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ExpeditorContract'],
+        'paidExpeditorPaymentDate' => ['string'],
     ];
 
     protected static $nullables = [
@@ -57,9 +61,11 @@ final class ProposalCarrier extends AbstractEntity
         'bankingDetails' => false,
         'originalDocument' => false,
         'driver' => false,
+        'attachedTruckDate' => false,
         'truck' => false,
         'documentPackage' => false,
         'paymentType' => false,
         'expeditorContract' => false,
+        'paidExpeditorPaymentDate' => false,
     ];
 }

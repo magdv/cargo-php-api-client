@@ -8,42 +8,23 @@ declare(strict_types=1);
 
 namespace Cargomart\ApiClient\Entity\User\Responses;
 
+use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
+use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Успешно подтвержден код
  * source: user/responses/user-code-success-response.json
  *
- * @property string $id
- * @property string $type
- * @property string $login
- * @property int $delay
- * @property string $password
- * @property string $token
- * @property string $expirationDate
- * @property bool $isInvited
+ * @property MessageV2[] $message
+ * @property UserCodeSuccessResponseData $data
  */
 final class UserCodeSuccessResponse extends AbstractResponse
 {
     protected static $types = [
-        'id' => ['string'],
-        'type' => ['string'],
-        'login' => ['string'],
-        'delay' => ['int'],
-        'password' => ['string'],
-        'token' => ['string'],
-        'expirationDate' => ['string'],
-        'isInvited' => ['bool'],
+        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
+        'data' => ['Cargomart\ApiClient\Entity\User\Responses\UserCodeSuccessResponseData'],
     ];
 
-    protected static $nullables = [
-        'id' => false,
-        'type' => false,
-        'login' => false,
-        'delay' => false,
-        'password' => false,
-        'token' => false,
-        'expirationDate' => false,
-        'isInvited' => false,
-    ];
+    protected static $nullables = ['message' => false, 'data' => false];
 }

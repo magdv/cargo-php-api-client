@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\CompanyConfirmation\Document;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\CompanyConfirmation\Responses\Status;
+use Cargomart\ApiClient\Entity\CompanyConfirmation\Responses\StatusResponse;
 
 class SendPost extends AbstractRequest
 {
@@ -22,16 +22,16 @@ class SendPost extends AbstractRequest
     /**
      * Отправка документа на проверку.
      *
-     * @return Status
+     * @return StatusResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): Status
+    public function do(): StatusResponse
     {
         return $this->client->doRequest(
             'POST',
             $this->url,
-            Status::class,
+            StatusResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

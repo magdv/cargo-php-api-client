@@ -14,11 +14,27 @@ use Cargomart\ApiClient\AbstractEntity;
  * Описание доступов к ТС
  * source: truck/objects/truck-access.json
  *
+ * @property bool $view
  * @property bool $update
  * @property bool $delete
+ * @property bool $createActivation
+ * @property bool $deleteActivation
  */
 final class TruckAccess extends AbstractEntity
 {
-    protected static $types = ['update' => ['bool'], 'delete' => ['bool']];
-    protected static $nullables = ['update' => false, 'delete' => false];
+    protected static $types = [
+        'view' => ['bool'],
+        'update' => ['bool'],
+        'delete' => ['bool'],
+        'createActivation' => ['bool'],
+        'deleteActivation' => ['bool'],
+    ];
+
+    protected static $nullables = [
+        'view' => false,
+        'update' => false,
+        'delete' => false,
+        'createActivation' => false,
+        'deleteActivation' => false,
+    ];
 }

@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\Company\Self;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Company\Objects\Requirement;
-use Cargomart\ApiClient\Entity\Company\Responses\Requirement;
+use Cargomart\ApiClient\Entity\Company\Responses\CompanyRequirementResponse;
 
 class RequirementPatch extends AbstractRequest
 {
@@ -23,16 +23,16 @@ class RequirementPatch extends AbstractRequest
     /**
      * Требования отправителя к перевозкам.
      *
-     * @return Requirement
+     * @return CompanyRequirementResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(Requirement $body): Requirement
+    public function do(Requirement $body): CompanyRequirementResponse
     {
         return $this->client->doRequest(
             'PATCH',
             $this->url,
-            Requirement::class,
+            CompanyRequirementResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers

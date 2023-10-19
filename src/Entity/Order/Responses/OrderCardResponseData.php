@@ -48,6 +48,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
  * @property Locality[] $locality
  * @property OrderStatus[] $status
  * @property Currency[] $currency
+ * @property bool $isMultiCurrency
  * @property string $serverTime
  * @property Document[] $proxy
  * @property Document[] $document
@@ -75,6 +76,7 @@ final class OrderCardResponseData extends AbstractEntity
         'locality' => ['array', 'Cargomart\ApiClient\Entity\Locality\Objects\Locality'],
         'status' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderStatus'],
         'currency' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\Currency'],
+        'isMultiCurrency' => ['bool'],
         'serverTime' => ['string'],
         'proxy' => ['array', 'Cargomart\ApiClient\Entity\File\Objects\Document'],
         'document' => ['array', 'Cargomart\ApiClient\Entity\File\Objects\Document'],
@@ -101,6 +103,7 @@ final class OrderCardResponseData extends AbstractEntity
         'locality' => false,
         'status' => false,
         'currency' => false,
+        'isMultiCurrency' => false,
         'serverTime' => false,
         'proxy' => false,
         'document' => false,

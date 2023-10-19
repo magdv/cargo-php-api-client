@@ -21,9 +21,4 @@ final class ExpeditorPayment extends AbstractBuilder
     {
         return new ExpeditorPaymentGet($this->client, $this->getUrl());
     }
-
-    public function put(): ExpeditorPaymentPut
-    {
-        return new ExpeditorPaymentPut($this->client, $this->getUrl());
-    }
 }

@@ -14,6 +14,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * Данные вложения - информация о платеже
  * source: chat/objects/payload/chat-post-payload-invoice.json
  *
+ * @property string $type
  * @property string $number
  * @property string $date
  * @property string $value
@@ -23,6 +24,7 @@ use Cargomart\ApiClient\AbstractEntity;
 final class ChatPostPayloadInvoice extends AbstractEntity
 {
     protected static $types = [
+        'type' => ['string'],
         'number' => ['string'],
         'date' => ['string'],
         'value' => ['string'],
@@ -31,6 +33,7 @@ final class ChatPostPayloadInvoice extends AbstractEntity
     ];
 
     protected static $nullables = [
+        'type' => false,
         'number' => false,
         'date' => false,
         'value' => false,

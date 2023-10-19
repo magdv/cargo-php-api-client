@@ -22,6 +22,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $toDate
  * @property string $fromTime
  * @property string $toTime
+ * @property bool $isAccordingToWorkSchedule
  * @property string $additionalInfo
  */
 final class OrderPointEditRequest extends AbstractEntity
@@ -35,6 +36,7 @@ final class OrderPointEditRequest extends AbstractEntity
         'toDate' => ['string'],
         'fromTime' => ['string'],
         'toTime' => ['string'],
+        'isAccordingToWorkSchedule' => ['bool'],
         'additionalInfo' => ['string'],
     ];
 
@@ -47,6 +49,7 @@ final class OrderPointEditRequest extends AbstractEntity
         'toDate' => false,
         'fromTime' => false,
         'toTime' => false,
+        'isAccordingToWorkSchedule' => false,
         'additionalInfo' => false,
     ];
 }

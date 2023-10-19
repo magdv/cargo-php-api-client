@@ -11,7 +11,7 @@ namespace Cargomart\ApiClient\Entity\Company\Objects;
 use Cargomart\ApiClient\AbstractEntity;
 
 /**
- * Свойства засимые от текущего пользователя
+ * Свойства зависимые от текущего пользователя
  * source: company/objects/company-short.json#/properties/sessionValues
  *
  * @property bool $isPartner

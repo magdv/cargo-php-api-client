@@ -21,6 +21,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItem;
  * @property string $fromDate
  * @property string $fromTime
  * @property string $toTime
+ * @property bool $isAccordingToWorkSchedule
  */
 final class OrderDraftFtlPoint extends AbstractEntity
 {
@@ -31,6 +32,7 @@ final class OrderDraftFtlPoint extends AbstractEntity
         'fromDate' => ['string'],
         'fromTime' => ['string'],
         'toTime' => ['string'],
+        'isAccordingToWorkSchedule' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -40,5 +42,6 @@ final class OrderDraftFtlPoint extends AbstractEntity
         'fromDate' => false,
         'fromTime' => false,
         'toTime' => false,
+        'isAccordingToWorkSchedule' => false,
     ];
 }

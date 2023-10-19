@@ -9,9 +9,9 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Requests;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\TemperatureRange;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderEditParams;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCarRequest;
-use Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange;
 
 /**
  * Данные для редактирования объекта заказа
@@ -29,6 +29,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange;
  * @property int $paymentTypeId
  * @property string $paymentDetail
  * @property string $currencyCode
+ * @property bool $isMultiCurrency
  * @property float $vatRate
  * @property string $openPrice
  * @property string $stepBid
@@ -56,13 +57,14 @@ final class OrderEditRequest extends AbstractEntity
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],
         'cargoType' => ['string'],
-        'temperature' => ['Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange'],
+        'temperature' => ['Cargomart\ApiClient\Entity\Base\TemperatureRange'],
         'loading' => ['array', 'int'],
         'device' => ['array', 'string'],
         'conditions' => ['array', 'string'],
         'paymentTypeId' => ['int'],
         'paymentDetail' => ['string'],
         'currencyCode' => ['string'],
+        'isMultiCurrency' => ['bool'],
         'vatRate' => ['float'],
         'openPrice' => ['string'],
         'stepBid' => ['string'],
@@ -96,6 +98,7 @@ final class OrderEditRequest extends AbstractEntity
         'paymentTypeId' => false,
         'paymentDetail' => false,
         'currencyCode' => false,
+        'isMultiCurrency' => false,
         'vatRate' => false,
         'openPrice' => false,
         'stepBid' => false,

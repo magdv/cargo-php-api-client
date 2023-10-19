@@ -15,9 +15,10 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: user/requests/user-recovery-create-request.json
  *
  * @property string $login
+ * @property string $captcha
  */
 final class UserRecoveryCreateRequest extends AbstractEntity
 {
-    protected static $types = ['login' => ['string']];
-    protected static $nullables = ['login' => false];
+    protected static $types = ['login' => ['string'], 'captcha' => ['string']];
+    protected static $nullables = ['login' => false, 'captcha' => false];
 }

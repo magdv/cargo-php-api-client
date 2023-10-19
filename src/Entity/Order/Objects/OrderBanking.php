@@ -11,7 +11,7 @@ namespace Cargomart\ApiClient\Entity\Order\Objects;
 use Cargomart\ApiClient\AbstractEntity;
 
 /**
- * Банковский реквизиты в заказе
+ * Банковские реквизиты в заказе
  * source: order/objects/order-banking.json
  *
  * @property string $bankName

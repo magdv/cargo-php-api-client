@@ -10,6 +10,7 @@ namespace Cargomart\ApiClient\Entity\Worker\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\DigitalSignature\Objects\IssueCertificate;
+use Cargomart\ApiClient\Entity\DigitalSignature\Objects\UserCertificateShort;
 use Cargomart\ApiClient\Entity\User\Objects\ValueWithCodeVerification;
 
 /**
@@ -33,6 +34,7 @@ use Cargomart\ApiClient\Entity\User\Objects\ValueWithCodeVerification;
  * @property string $inviteStatus
  * @property IssueCertificate $issueCertificate
  * @property ValueWithCodeVerification $simpleSignaturePhoneVerification
+ * @property UserCertificateShort[] $certificate
  * @property string $inviteExpireDate
  * @property bool $lockedProfile
  * @property WorkerAccess $access
@@ -57,6 +59,7 @@ final class Worker extends AbstractEntity
         'inviteStatus' => ['string'],
         'issueCertificate' => ['Cargomart\ApiClient\Entity\DigitalSignature\Objects\IssueCertificate'],
         'simpleSignaturePhoneVerification' => ['Cargomart\ApiClient\Entity\User\Objects\ValueWithCodeVerification'],
+        'certificate' => ['array', 'Cargomart\ApiClient\Entity\DigitalSignature\Objects\UserCertificateShort'],
         'inviteExpireDate' => ['string'],
         'lockedProfile' => ['bool'],
         'access' => ['Cargomart\ApiClient\Entity\Worker\Objects\WorkerAccess'],
@@ -80,6 +83,7 @@ final class Worker extends AbstractEntity
         'inviteStatus' => false,
         'issueCertificate' => false,
         'simpleSignaturePhoneVerification' => false,
+        'certificate' => false,
         'inviteExpireDate' => false,
         'lockedProfile' => false,
         'access' => false,

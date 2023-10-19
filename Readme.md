@@ -50,6 +50,15 @@ var_export($rsp->status);
 var_export($rsp->message[0]->title);
 ```
 
+## Разработка
+
+Перед коммитом:
+```
+vendor/bin/php-cs-fixer fix .
+vendor/bin/psalm
+vendor/bin/phpunit
+```
+
 ## TODO
 
 - [ ] Запросы multipart/form-data для отправки файлов

@@ -9,9 +9,9 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Worker;
 
 use Cargomart\ApiClient\AbstractBuilder;
+use Cargomart\ApiClient\Builder\Worker\Id\Certificate;
 use Cargomart\ApiClient\Builder\Worker\Id\Chat;
 use Cargomart\ApiClient\Builder\Worker\Id\ContactComplain;
-use Cargomart\ApiClient\Builder\Worker\Id\IssueCertificate;
 use Cargomart\ApiClient\Builder\Worker\Id\ResendInvite;
 
 /**
@@ -31,9 +31,9 @@ final class Id extends AbstractBuilder
         return new ResendInvite($this->params, $this->client);
     }
 
-    public function issueCertificate(): IssueCertificate
+    public function certificate(): Certificate
     {
-        return new IssueCertificate($this->params, $this->client);
+        return new Certificate($this->params, $this->client);
     }
 
     public function chat(): Chat

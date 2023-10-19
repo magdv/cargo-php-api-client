@@ -18,6 +18,13 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $name
  * @property string[] $phones
  * @property string $licenseNumber
+ * @property string $licenceIssueDate
+ * @property string $licenceType
+ * @property string $licenseSeries
+ * @property string $inn
+ * @property string $externalId
+ * @property string $passportType
+ * @property string $registrationAddress
  * @property string $passportSeries
  * @property string $passportNumber
  * @property string $passportWhen
@@ -33,6 +40,13 @@ final class ProposalDriver extends AbstractEntity
         'name' => ['string'],
         'phones' => ['array', 'string'],
         'licenseNumber' => ['string'],
+        'licenceIssueDate' => ['string'],
+        'licenceType' => ['string'],
+        'licenseSeries' => ['string'],
+        'inn' => ['string'],
+        'externalId' => ['string'],
+        'passportType' => ['string'],
+        'registrationAddress' => ['string'],
         'passportSeries' => ['string'],
         'passportNumber' => ['string'],
         'passportWhen' => ['string'],
@@ -47,6 +61,13 @@ final class ProposalDriver extends AbstractEntity
         'name' => false,
         'phones' => false,
         'licenseNumber' => false,
+        'licenceIssueDate' => false,
+        'licenceType' => false,
+        'licenseSeries' => false,
+        'inn' => false,
+        'externalId' => false,
+        'passportType' => false,
+        'registrationAddress' => false,
         'passportSeries' => false,
         'passportNumber' => false,
         'passportWhen' => false,

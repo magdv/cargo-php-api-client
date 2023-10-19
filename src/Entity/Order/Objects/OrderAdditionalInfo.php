@@ -16,13 +16,28 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property string $wealthBy
  * @property WealthItem[] $items
+ * @property int[] $pointIndex
+ * @property bool $isWithFacsimile
+ * @property bool $isGenerateLink
+ * @property OrderPublicLink $publicLink
  */
 final class OrderAdditionalInfo extends AbstractEntity
 {
     protected static $types = [
         'wealthBy' => ['string'],
         'items' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\WealthItem'],
+        'pointIndex' => ['array', 'int'],
+        'isWithFacsimile' => ['bool'],
+        'isGenerateLink' => ['bool'],
+        'publicLink' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPublicLink'],
     ];
 
-    protected static $nullables = ['wealthBy' => false, 'items' => false];
+    protected static $nullables = [
+        'wealthBy' => false,
+        'items' => false,
+        'pointIndex' => false,
+        'isWithFacsimile' => false,
+        'isGenerateLink' => false,
+        'publicLink' => false,
+    ];
 }

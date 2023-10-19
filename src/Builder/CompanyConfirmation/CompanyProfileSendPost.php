@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\CompanyConfirmation;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\CompanyConfirmation\Requests\CompanyProfileRequest;
-use Cargomart\ApiClient\Entity\CompanyConfirmation\Responses\Status;
+use Cargomart\ApiClient\Entity\CompanyConfirmation\Responses\StatusResponse;
 
 class CompanyProfileSendPost extends AbstractRequest
 {
@@ -23,16 +23,16 @@ class CompanyProfileSendPost extends AbstractRequest
     /**
      * Отправить анкету, перейти к следующему шагу
      *
-     * @return Status
+     * @return StatusResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(CompanyProfileRequest $body): Status
+    public function do(CompanyProfileRequest $body): StatusResponse
     {
         return $this->client->doRequest(
             'POST',
             $this->url,
-            Status::class,
+            StatusResponse::class,
             http_build_query($this->query),
             $body,
             $this->headers
