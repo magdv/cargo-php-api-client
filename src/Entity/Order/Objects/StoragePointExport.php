@@ -10,6 +10,7 @@ namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\Address;
+use Cargomart\ApiClient\Entity\Base\AddressInfo;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
 
 /**
@@ -17,6 +18,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  * source: order/objects/storage-point-export.json
  *
  * @property int $id
+ * @property AddressInfo $addressInfo
  * @property Address $addressObject
  * @property string $code
  * @property string $title
@@ -37,6 +39,7 @@ final class StoragePointExport extends AbstractEntity
 {
     protected static $types = [
         'id' => ['int'],
+        'addressInfo' => ['Cargomart\ApiClient\Entity\Base\AddressInfo'],
         'addressObject' => ['Cargomart\ApiClient\Entity\Base\Address'],
         'code' => ['string'],
         'title' => ['string'],
@@ -56,6 +59,7 @@ final class StoragePointExport extends AbstractEntity
 
     protected static $nullables = [
         'id' => false,
+        'addressInfo' => false,
         'addressObject' => false,
         'code' => false,
         'title' => false,

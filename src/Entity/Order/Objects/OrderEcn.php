@@ -36,6 +36,7 @@ use Cargomart\ApiClient\Entity\File\Objects\FileUrl;
  * @property FileUrl $pdf
  * @property FileUrl $xls
  * @property FileUrl $xml
+ * @property NotifyParamItem[] $notifyParams
  * @property OrderEcnAccess $access
  */
 final class OrderEcn extends AbstractEntity
@@ -62,6 +63,7 @@ final class OrderEcn extends AbstractEntity
         'pdf' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
         'xls' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
         'xml' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
+        'notifyParams' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\NotifyParamItem'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderEcnAccess'],
     ];
 
@@ -87,6 +89,7 @@ final class OrderEcn extends AbstractEntity
         'pdf' => false,
         'xls' => false,
         'xml' => false,
+        'notifyParams' => false,
         'access' => false,
     ];
 }

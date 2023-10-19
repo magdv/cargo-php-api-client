@@ -10,6 +10,7 @@ namespace Cargomart\ApiClient\Entity\StoragePoint\Requests;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\Address;
+use Cargomart\ApiClient\Entity\Base\AddressInfo;
 use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointEmailContact;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
@@ -21,6 +22,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  * @property string $title
  * @property string $code
  * @property string $address
+ * @property AddressInfo $addressInfo
  * @property Address $addressObject
  * @property WorkSchedule $workSchedule
  * @property string $house
@@ -47,6 +49,7 @@ final class SpPoint extends AbstractEntity
         'title' => ['string'],
         'code' => ['string'],
         'address' => ['string'],
+        'addressInfo' => ['Cargomart\ApiClient\Entity\Base\AddressInfo'],
         'addressObject' => ['Cargomart\ApiClient\Entity\Base\Address'],
         'workSchedule' => ['Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule'],
         'house' => ['string'],
@@ -72,6 +75,7 @@ final class SpPoint extends AbstractEntity
         'title' => false,
         'code' => false,
         'address' => false,
+        'addressInfo' => false,
         'addressObject' => false,
         'workSchedule' => false,
         'house' => false,

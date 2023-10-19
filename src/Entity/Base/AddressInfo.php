@@ -11,55 +11,61 @@ namespace Cargomart\ApiClient\Entity\Base;
 use Cargomart\ApiClient\AbstractEntity;
 
 /**
- * source: base/address.json
+ * source: base/address-info.json
  *
  * @property string $countryCode
  * @property string $code
- * @property AddressItems $items
  * @property string $garGuid
  * @property string $osmId
  * @property string $standardizedAddress
  * @property Coordinate $coordinate
  * @property string $postalCode
- * @property string $region
- * @property string $city
- * @property string $settlement
- * @property string $street
- * @property string $house
- * @property string $block
+ * @property AddressItem $region
+ * @property AddressItem $area
+ * @property AddressItem $city
+ * @property AddressItem $cityDistrict
+ * @property AddressItem $settlement
+ * @property AddressItem $street
+ * @property AddressItem $stead
+ * @property AddressItem $house
+ * @property AddressItem $block
  */
-final class Address extends AbstractEntity
+final class AddressInfo extends AbstractEntity
 {
     protected static $types = [
         'countryCode' => ['string'],
         'code' => ['string'],
-        'items' => ['Cargomart\ApiClient\Entity\Base\AddressItems'],
         'garGuid' => ['string'],
         'osmId' => ['string'],
         'standardizedAddress' => ['string'],
         'coordinate' => ['Cargomart\ApiClient\Entity\Base\Coordinate'],
         'postalCode' => ['string'],
-        'region' => ['string'],
-        'city' => ['string'],
-        'settlement' => ['string'],
-        'street' => ['string'],
-        'house' => ['string'],
-        'block' => ['string'],
+        'region' => ['Cargomart\ApiClient\Entity\Base\AddressItem'],
+        'area' => ['Cargomart\ApiClient\Entity\Base\AddressItem'],
+        'city' => ['Cargomart\ApiClient\Entity\Base\AddressItem'],
+        'cityDistrict' => ['Cargomart\ApiClient\Entity\Base\AddressItem'],
+        'settlement' => ['Cargomart\ApiClient\Entity\Base\AddressItem'],
+        'street' => ['Cargomart\ApiClient\Entity\Base\AddressItem'],
+        'stead' => ['Cargomart\ApiClient\Entity\Base\AddressItem'],
+        'house' => ['Cargomart\ApiClient\Entity\Base\AddressItem'],
+        'block' => ['Cargomart\ApiClient\Entity\Base\AddressItem'],
     ];
 
     protected static $nullables = [
         'countryCode' => false,
         'code' => false,
-        'items' => false,
         'garGuid' => false,
         'osmId' => false,
         'standardizedAddress' => false,
         'coordinate' => false,
         'postalCode' => false,
         'region' => false,
+        'area' => false,
         'city' => false,
+        'cityDistrict' => false,
         'settlement' => false,
         'street' => false,
+        'stead' => false,
         'house' => false,
         'block' => false,
     ];

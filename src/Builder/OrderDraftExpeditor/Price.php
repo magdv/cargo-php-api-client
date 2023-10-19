@@ -17,6 +17,11 @@ final class Price extends AbstractBuilder
 {
     protected const URL = '/api/v2/order-draft-expeditor/price';
 
+    public function description(): PriceDescription
+    {
+        return new PriceDescription($this->client, $this->getUrl());
+    }
+
     public function get(): PriceGet
     {
         return new PriceGet($this->client, $this->getUrl());

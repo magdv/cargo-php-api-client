@@ -6,14 +6,14 @@
 
 declare(strict_types=1);
 
-namespace Cargomart\ApiClient\Entity\Expeditor\Objects;
+namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItem;
 
 /**
  * Данные маршрутного пункта
- * source: expeditor/objects/proposal-point.json
+ * source: order/objects/order-route-point.json
  *
  * @property int $id
  * @property StoragePointItem $storage
@@ -24,7 +24,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItem;
  * @property string $toTime
  * @property bool $isAccordingToWorkSchedule
  */
-final class ProposalPoint extends AbstractEntity
+final class OrderRoutePoint extends AbstractEntity
 {
     protected static $types = [
         'id' => ['int'],

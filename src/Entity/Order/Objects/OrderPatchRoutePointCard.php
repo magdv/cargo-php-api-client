@@ -10,6 +10,7 @@ namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\Address;
+use Cargomart\ApiClient\Entity\Base\AddressInfo;
 use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
 
@@ -23,6 +24,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  * @property int $serialId
  * @property string $localityName
  * @property string $title
+ * @property AddressInfo $addressInfo
  * @property Address $addressObject
  * @property string $address
  * @property string $house
@@ -62,6 +64,7 @@ final class OrderPatchRoutePointCard extends AbstractEntity
         'serialId' => ['int'],
         'localityName' => ['string'],
         'title' => ['string'],
+        'addressInfo' => ['Cargomart\ApiClient\Entity\Base\AddressInfo'],
         'addressObject' => ['Cargomart\ApiClient\Entity\Base\Address'],
         'address' => ['string'],
         'house' => ['string'],
@@ -100,6 +103,7 @@ final class OrderPatchRoutePointCard extends AbstractEntity
         'serialId' => false,
         'localityName' => false,
         'title' => false,
+        'addressInfo' => false,
         'addressObject' => false,
         'address' => false,
         'house' => false,

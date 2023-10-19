@@ -9,9 +9,9 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Requests;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\TemperatureRange;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderEditParams;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCarRequest;
-use Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange;
 
 /**
  * Данные для редактирования объекта заказа
@@ -57,7 +57,7 @@ final class OrderEditRequest extends AbstractEntity
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],
         'cargoType' => ['string'],
-        'temperature' => ['Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange'],
+        'temperature' => ['Cargomart\ApiClient\Entity\Base\TemperatureRange'],
         'loading' => ['array', 'int'],
         'device' => ['array', 'string'],
         'conditions' => ['array', 'string'],

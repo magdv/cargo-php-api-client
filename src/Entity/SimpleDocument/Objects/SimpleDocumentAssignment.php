@@ -20,6 +20,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $fileName
  * @property string $type
  * @property SimpleDocumentTitle[] $title
+ * @property string $createDate
  */
 final class SimpleDocumentAssignment extends AbstractEntity
 {
@@ -30,6 +31,7 @@ final class SimpleDocumentAssignment extends AbstractEntity
         'fileName' => ['string'],
         'type' => ['string'],
         'title' => ['array', 'Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitle'],
+        'createDate' => ['string'],
     ];
 
     protected static $nullables = [
@@ -39,5 +41,6 @@ final class SimpleDocumentAssignment extends AbstractEntity
         'fileName' => false,
         'type' => false,
         'title' => false,
+        'createDate' => false,
     ];
 }

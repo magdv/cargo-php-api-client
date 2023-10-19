@@ -35,7 +35,6 @@ use Cargomart\ApiClient\Entity\File\Objects\FileUrl;
  * @property FileUrl $pdf
  * @property FileUrl $xls
  * @property FileUrl $xml
- * @property FileUrl $edmOperatorPdf
  * @property OrderEcnAccess $access
  */
 final class OrderEcnItem extends AbstractEntity
@@ -61,7 +60,6 @@ final class OrderEcnItem extends AbstractEntity
         'pdf' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
         'xls' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
         'xml' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
-        'edmOperatorPdf' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderEcnAccess'],
     ];
 
@@ -86,7 +84,6 @@ final class OrderEcnItem extends AbstractEntity
         'pdf' => false,
         'xls' => false,
         'xml' => false,
-        'edmOperatorPdf' => false,
         'access' => false,
     ];
 }

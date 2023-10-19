@@ -15,6 +15,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: predictor/objects/prediction.json
  *
  * @property string $price
+ * @property string $expeditorPriceStrategyType
  * @property string $departureCode
  * @property string $destinationCode
  * @property string $truckType
@@ -25,6 +26,7 @@ final class Prediction extends AbstractEntity
 {
     protected static $types = [
         'price' => ['string'],
+        'expeditorPriceStrategyType' => ['string'],
         'departureCode' => ['string'],
         'destinationCode' => ['string'],
         'truckType' => ['string'],
@@ -34,6 +36,7 @@ final class Prediction extends AbstractEntity
 
     protected static $nullables = [
         'price' => false,
+        'expeditorPriceStrategyType' => false,
         'departureCode' => false,
         'destinationCode' => false,
         'truckType' => false,

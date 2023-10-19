@@ -10,6 +10,7 @@ namespace Cargomart\ApiClient\Entity\StoragePoint\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\Address;
+use Cargomart\ApiClient\Entity\Base\AddressInfo;
 use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
 
 /**
@@ -20,6 +21,7 @@ use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
  * @property string $title
  * @property string $code
  * @property string $address
+ * @property AddressInfo $addressInfo
  * @property Address $addressObject
  * @property WorkSchedule $workSchedule
  * @property string $localityName
@@ -50,6 +52,7 @@ final class PointItem extends AbstractEntity
         'title' => ['string'],
         'code' => ['string'],
         'address' => ['string'],
+        'addressInfo' => ['Cargomart\ApiClient\Entity\Base\AddressInfo'],
         'addressObject' => ['Cargomart\ApiClient\Entity\Base\Address'],
         'workSchedule' => ['Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule'],
         'localityName' => ['string'],
@@ -79,6 +82,7 @@ final class PointItem extends AbstractEntity
         'title' => false,
         'code' => false,
         'address' => false,
+        'addressInfo' => false,
         'addressObject' => false,
         'workSchedule' => false,
         'localityName' => false,

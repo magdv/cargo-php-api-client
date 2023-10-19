@@ -9,9 +9,9 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderDraftExpeditor;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderDraftExpeditorPriceResponse;
+use Cargomart\ApiClient\Entity\Order\Responses\OrderDraftExpeditorPriceV2Response;
 
-class PriceGet extends AbstractRequest
+class PriceV2Get extends AbstractRequest
 {
     /** @var string[][] */
     public $query = [];
@@ -22,16 +22,16 @@ class PriceGet extends AbstractRequest
     /**
      * Получить цену по маршруту
      *
-     * @return OrderDraftExpeditorPriceResponse
+     * @return OrderDraftExpeditorPriceV2Response
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): OrderDraftExpeditorPriceResponse
+    public function do(): OrderDraftExpeditorPriceV2Response
     {
         return $this->client->doRequest(
             'GET',
             $this->url,
-            OrderDraftExpeditorPriceResponse::class,
+            OrderDraftExpeditorPriceV2Response::class,
             http_build_query($this->query),
             null,
             $this->headers

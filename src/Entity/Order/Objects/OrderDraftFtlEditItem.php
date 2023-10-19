@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\TemperatureRange;
 
 /**
  * Полная информация по черновику заказа FTL
@@ -16,6 +17,7 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property string $id
  * @property string $orderId
+ * @property string $repeatedOrderId
  * @property int $serialId
  * @property int $statusId
  * @property int $extStatusId
@@ -39,6 +41,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $paymentTypeId
  * @property string $paymentDetail
  * @property string $currencyCode
+ * @property bool $isMultiCurrency
  * @property float $vatRate
  * @property string $priceType
  * @property string $openPrice
@@ -58,6 +61,7 @@ final class OrderDraftFtlEditItem extends AbstractEntity
     protected static $types = [
         'id' => ['string'],
         'orderId' => ['string'],
+        'repeatedOrderId' => ['string'],
         'serialId' => ['int'],
         'statusId' => ['int'],
         'extStatusId' => ['int'],
@@ -74,13 +78,14 @@ final class OrderDraftFtlEditItem extends AbstractEntity
         'loadWeight' => ['float'],
         'loadCapacity' => ['int'],
         'cargoType' => ['string'],
-        'temperature' => ['Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange'],
+        'temperature' => ['Cargomart\ApiClient\Entity\Base\TemperatureRange'],
         'loading' => ['array', 'int'],
         'device' => ['array', 'string'],
         'conditions' => ['array', 'string'],
         'paymentTypeId' => ['int'],
         'paymentDetail' => ['string'],
         'currencyCode' => ['string'],
+        'isMultiCurrency' => ['bool'],
         'vatRate' => ['float'],
         'priceType' => ['string'],
         'openPrice' => ['string'],
@@ -99,6 +104,7 @@ final class OrderDraftFtlEditItem extends AbstractEntity
     protected static $nullables = [
         'id' => false,
         'orderId' => false,
+        'repeatedOrderId' => false,
         'serialId' => false,
         'statusId' => false,
         'extStatusId' => false,
@@ -122,6 +128,7 @@ final class OrderDraftFtlEditItem extends AbstractEntity
         'paymentTypeId' => false,
         'paymentDetail' => false,
         'currencyCode' => false,
+        'isMultiCurrency' => false,
         'vatRate' => false,
         'priceType' => false,
         'openPrice' => false,

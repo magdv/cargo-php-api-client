@@ -30,6 +30,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property EcnAdditionalDataLoaderPerson $loaderPerson
  * @property string $consignorMark
  * @property string $markComment
+ * @property NotifyParamItem[] $notifyParams
  */
 final class EcnAdditionalData extends AbstractEntity
 {
@@ -50,6 +51,7 @@ final class EcnAdditionalData extends AbstractEntity
         'loaderPerson' => ['Cargomart\ApiClient\Entity\Order\Objects\EcnAdditionalDataLoaderPerson'],
         'consignorMark' => ['string'],
         'markComment' => ['string'],
+        'notifyParams' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\NotifyParamItem'],
     ];
 
     protected static $nullables = [
@@ -69,5 +71,6 @@ final class EcnAdditionalData extends AbstractEntity
         'loaderPerson' => false,
         'consignorMark' => false,
         'markComment' => false,
+        'notifyParams' => false,
     ];
 }

@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\TemperatureRange;
 use Cargomart\ApiClient\Entity\Expeditor\Objects\ExpeditorContract;
 use Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalProxy;
 use Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalRecommendation;
@@ -33,6 +34,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property string $openPrice
  * @property string $paymentDetail
  * @property string $currentPrice
+ * @property string $currentPriceWithFee
  * @property string $recommendedPrice
  * @property string $stepBid
  * @property bool $isNoPrice
@@ -67,6 +69,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property int $loadCapacity
  * @property string[] $conditions
  * @property int[] $contact
+ * @property OrderRoutePoint[] $routePoint
  * @property RoutePointCard[] $point
  * @property string $accessTypeId
  * @property int $contractTypeId
@@ -168,6 +171,7 @@ final class OrderCardFull extends AbstractEntity
         'openPrice' => ['string'],
         'paymentDetail' => ['string'],
         'currentPrice' => ['string'],
+        'currentPriceWithFee' => ['string'],
         'recommendedPrice' => ['string'],
         'stepBid' => ['string'],
         'isNoPrice' => ['bool'],
@@ -187,7 +191,7 @@ final class OrderCardFull extends AbstractEntity
         'prevGeneralPartnerDoc' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPrevDoc'],
         'consignorDocId' => ['int'],
         'comment' => ['string'],
-        'temperature' => ['Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange'],
+        'temperature' => ['Cargomart\ApiClient\Entity\Base\TemperatureRange'],
         'loading' => ['array', 'int'],
         'device' => ['array', 'string'],
         'cargoType' => ['string'],
@@ -202,6 +206,7 @@ final class OrderCardFull extends AbstractEntity
         'loadCapacity' => ['int'],
         'conditions' => ['array', 'string'],
         'contact' => ['array', 'int'],
+        'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderRoutePoint'],
         'point' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointCard'],
         'accessTypeId' => ['string'],
         'contractTypeId' => ['int'],
@@ -302,6 +307,7 @@ final class OrderCardFull extends AbstractEntity
         'openPrice' => false,
         'paymentDetail' => false,
         'currentPrice' => false,
+        'currentPriceWithFee' => false,
         'recommendedPrice' => false,
         'stepBid' => false,
         'isNoPrice' => false,
@@ -336,6 +342,7 @@ final class OrderCardFull extends AbstractEntity
         'loadCapacity' => false,
         'conditions' => false,
         'contact' => false,
+        'routePoint' => false,
         'point' => false,
         'accessTypeId' => false,
         'contractTypeId' => false,

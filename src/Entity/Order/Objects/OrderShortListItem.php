@@ -38,6 +38,7 @@ use Cargomart\ApiClient\Entity\Payment\Objects\PaymentInvoiceStatus;
  * @property bool $isMultiCurrency
  * @property string $openPrice
  * @property string $currentPrice
+ * @property string $currentPriceWithFee
  * @property bool $isNoPrice
  * @property float $vatRate
  * @property bool $isConsignorVat
@@ -137,6 +138,7 @@ final class OrderShortListItem extends AbstractEntity
         'isMultiCurrency' => ['bool'],
         'openPrice' => ['string'],
         'currentPrice' => ['string'],
+        'currentPriceWithFee' => ['string'],
         'isNoPrice' => ['bool'],
         'vatRate' => ['float'],
         'isConsignorVat' => ['bool'],
@@ -235,6 +237,7 @@ final class OrderShortListItem extends AbstractEntity
         'isMultiCurrency' => false,
         'openPrice' => false,
         'currentPrice' => false,
+        'currentPriceWithFee' => false,
         'isNoPrice' => false,
         'vatRate' => false,
         'isConsignorVat' => false,

@@ -9,10 +9,12 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Expeditor\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\DateRange;
 use Cargomart\ApiClient\Entity\Base\DateTimeRange;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderDetails;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorBidding;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem;
+use Cargomart\ApiClient\Entity\Payment\Objects\PaymentInvoiceStatus;
 
 /**
  * Полная информация по заказу Экспедитора
@@ -31,6 +33,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem;
  * @property Price $winnerPrice
  * @property int $status
  * @property DateTimeRange $searchRange
+ * @property DateRange $periodRange
  * @property ProposalCargo $cargo
  * @property ProposalCarrier $carrier
  * @property ProposalPoint[] $route
@@ -56,6 +59,8 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem;
  * @property int $bidCount
  * @property int $carrierAsksCount
  * @property bool $hasCarrierSign
+ * @property PaymentInvoiceStatus[] $paymentInvoiceStatus
+ * @property int $roadmapEventsCount
  */
 final class ProposalCardFull extends AbstractEntity
 {
@@ -73,6 +78,7 @@ final class ProposalCardFull extends AbstractEntity
         'winnerPrice' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\Price'],
         'status' => ['int'],
         'searchRange' => ['Cargomart\ApiClient\Entity\Base\DateTimeRange'],
+        'periodRange' => ['Cargomart\ApiClient\Entity\Base\DateRange'],
         'cargo' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalCargo'],
         'carrier' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalCarrier'],
         'route' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalPoint'],
@@ -98,6 +104,8 @@ final class ProposalCardFull extends AbstractEntity
         'bidCount' => ['int'],
         'carrierAsksCount' => ['int'],
         'hasCarrierSign' => ['bool'],
+        'paymentInvoiceStatus' => ['array', 'Cargomart\ApiClient\Entity\Payment\Objects\PaymentInvoiceStatus'],
+        'roadmapEventsCount' => ['int'],
     ];
 
     protected static $nullables = [
@@ -114,6 +122,7 @@ final class ProposalCardFull extends AbstractEntity
         'winnerPrice' => false,
         'status' => false,
         'searchRange' => false,
+        'periodRange' => false,
         'cargo' => false,
         'carrier' => false,
         'route' => false,
@@ -139,5 +148,7 @@ final class ProposalCardFull extends AbstractEntity
         'bidCount' => false,
         'carrierAsksCount' => false,
         'hasCarrierSign' => false,
+        'paymentInvoiceStatus' => false,
+        'roadmapEventsCount' => false,
     ];
 }

@@ -10,7 +10,9 @@ namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\Address;
+use Cargomart\ApiClient\Entity\Base\AddressInfo;
 use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
+use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointEmailContact;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
 
 /**
@@ -19,6 +21,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  *
  * @property int $id
  * @property int $storagePointId
+ * @property AddressInfo $addressInfo
  * @property Address $addressObject
  * @property string $code
  * @property int $serialId
@@ -52,12 +55,14 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  * @property PointShipper $owner
  * @property int[] $fileIds
  * @property int $status
+ * @property PointEmailContact[] $emailList
  */
 final class RoutePointCard extends AbstractEntity
 {
     protected static $types = [
         'id' => ['int'],
         'storagePointId' => ['int'],
+        'addressInfo' => ['Cargomart\ApiClient\Entity\Base\AddressInfo'],
         'addressObject' => ['Cargomart\ApiClient\Entity\Base\Address'],
         'code' => ['string'],
         'serialId' => ['int'],
@@ -91,11 +96,13 @@ final class RoutePointCard extends AbstractEntity
         'owner' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper'],
         'fileIds' => ['array', 'int'],
         'status' => ['int'],
+        'emailList' => ['array', 'Cargomart\ApiClient\Entity\StoragePoint\Objects\PointEmailContact'],
     ];
 
     protected static $nullables = [
         'id' => false,
         'storagePointId' => false,
+        'addressInfo' => false,
         'addressObject' => false,
         'code' => false,
         'serialId' => false,
@@ -129,5 +136,6 @@ final class RoutePointCard extends AbstractEntity
         'owner' => false,
         'fileIds' => false,
         'status' => false,
+        'emailList' => false,
     ];
 }

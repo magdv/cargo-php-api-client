@@ -10,6 +10,7 @@ namespace Cargomart\ApiClient\Builder;
 
 use Cargomart\ApiClient\AbstractBuilder;
 use Cargomart\ApiClient\Builder\OrderDraftFtl\DraftId;
+use Cargomart\ApiClient\Builder\OrderDraftFtl\StepBid;
 use Cargomart\ApiClient\Builder\OrderDraftFtl\Validate;
 
 /**
@@ -29,6 +30,11 @@ final class OrderDraftFtl extends AbstractBuilder
     public function validate(): Validate
     {
         return new Validate($this->params, $this->client);
+    }
+
+    public function stepBid(): StepBid
+    {
+        return new StepBid($this->params, $this->client);
     }
 
     public function post(): OrderDraftFtlPost

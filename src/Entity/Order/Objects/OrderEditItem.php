@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\TemperatureRange;
 
 /**
  * Полная информация по заказу, карточка заказа
@@ -39,6 +40,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $vatLessPrice
  * @property string $openPrice
  * @property string $currentPrice
+ * @property string $currentPriceWithFee
  * @property string $stepBid
  * @property bool $isNoPrice
  * @property bool $isRound
@@ -58,6 +60,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $endDate
  * @property int $duration
  * @property string $name
+ * @property OrderRoutePoint[] $routePoint
  * @property RoutePointEdit[] $point
  * @property int[] $contact
  * @property string $externalId
@@ -97,7 +100,7 @@ final class OrderEditItem extends AbstractEntity
         'cargoType' => ['string'],
         'loadWeight' => ['float'],
         'loadCapacity' => ['int'],
-        'temperature' => ['Cargomart\ApiClient\Entity\Order\Objects\TemperatureRange'],
+        'temperature' => ['Cargomart\ApiClient\Entity\Base\TemperatureRange'],
         'loading' => ['array', 'int'],
         'device' => ['array', 'string'],
         'conditions' => ['array', 'string'],
@@ -110,6 +113,7 @@ final class OrderEditItem extends AbstractEntity
         'vatLessPrice' => ['string'],
         'openPrice' => ['string'],
         'currentPrice' => ['string'],
+        'currentPriceWithFee' => ['string'],
         'stepBid' => ['string'],
         'isNoPrice' => ['bool'],
         'isRound' => ['bool'],
@@ -129,6 +133,7 @@ final class OrderEditItem extends AbstractEntity
         'endDate' => ['string'],
         'duration' => ['int'],
         'name' => ['string'],
+        'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderRoutePoint'],
         'point' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointEdit'],
         'contact' => ['array', 'int'],
         'externalId' => ['string'],
@@ -180,6 +185,7 @@ final class OrderEditItem extends AbstractEntity
         'vatLessPrice' => false,
         'openPrice' => false,
         'currentPrice' => false,
+        'currentPriceWithFee' => false,
         'stepBid' => false,
         'isNoPrice' => false,
         'isRound' => false,
@@ -199,6 +205,7 @@ final class OrderEditItem extends AbstractEntity
         'endDate' => false,
         'duration' => false,
         'name' => false,
+        'routePoint' => false,
         'point' => false,
         'contact' => false,
         'externalId' => false,

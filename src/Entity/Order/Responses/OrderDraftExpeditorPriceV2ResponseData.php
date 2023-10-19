@@ -10,19 +10,19 @@ namespace Cargomart\ApiClient\Entity\Order\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\PriceValue;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorPriceValue;
+use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorPriceValueV2;
 
 /**
  * Цены по направлению
- * source: order/responses/order-draft-expeditor-price-response.json#/properties/data
+ * source: order/responses/order-draft-expeditor-price-v2-response.json#/properties/data
  *
- * @property OrderDraftExpeditorPriceValue $consignorPrice
+ * @property OrderDraftExpeditorPriceValueV2 $consignorPrice
  * @property PriceValue $carrierPrice
  */
-final class OrderDraftExpeditorPriceResponseData extends AbstractEntity
+final class OrderDraftExpeditorPriceV2ResponseData extends AbstractEntity
 {
     protected static $types = [
-        'consignorPrice' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorPriceValue'],
+        'consignorPrice' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorPriceValueV2'],
         'carrierPrice' => ['Cargomart\ApiClient\Entity\Base\PriceValue'],
     ];
 

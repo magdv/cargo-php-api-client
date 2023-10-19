@@ -10,6 +10,7 @@ namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\Address;
+use Cargomart\ApiClient\Entity\Base\AddressInfo;
 use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
 
@@ -19,6 +20,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  *
  * @property int $id
  * @property int $storagePointId
+ * @property AddressInfo $addressInfo
  * @property Address $addressObject
  * @property string $code
  * @property int $serialId
@@ -62,6 +64,7 @@ final class RoutePointEdit extends AbstractEntity
     protected static $types = [
         'id' => ['int'],
         'storagePointId' => ['int'],
+        'addressInfo' => ['Cargomart\ApiClient\Entity\Base\AddressInfo'],
         'addressObject' => ['Cargomart\ApiClient\Entity\Base\Address'],
         'code' => ['string'],
         'serialId' => ['int'],
@@ -104,6 +107,7 @@ final class RoutePointEdit extends AbstractEntity
     protected static $nullables = [
         'id' => false,
         'storagePointId' => false,
+        'addressInfo' => false,
         'addressObject' => false,
         'code' => false,
         'serialId' => false,

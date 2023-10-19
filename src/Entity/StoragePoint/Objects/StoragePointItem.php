@@ -10,6 +10,7 @@ namespace Cargomart\ApiClient\Entity\StoragePoint\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\Address;
+use Cargomart\ApiClient\Entity\Base\AddressInfo;
 use Cargomart\ApiClient\Entity\Base\Coordinate;
 use Cargomart\ApiClient\Entity\Base\CustomContactContact;
 use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
@@ -23,6 +24,7 @@ use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
  * @property string $title
  * @property string $localityName
  * @property string $address
+ * @property AddressInfo $addressInfo
  * @property Address $addressObject
  * @property WorkSchedule $workSchedule
  * @property string $house
@@ -40,6 +42,7 @@ use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
  * @property string $storageType
  * @property bool $isOwnerPointShipper
  * @property PointShipper $owner
+ * @property PointEmailContact[] $emailList
  */
 final class StoragePointItem extends AbstractEntity
 {
@@ -49,6 +52,7 @@ final class StoragePointItem extends AbstractEntity
         'title' => ['string'],
         'localityName' => ['string'],
         'address' => ['string'],
+        'addressInfo' => ['Cargomart\ApiClient\Entity\Base\AddressInfo'],
         'addressObject' => ['Cargomart\ApiClient\Entity\Base\Address'],
         'workSchedule' => ['Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule'],
         'house' => ['string'],
@@ -66,6 +70,7 @@ final class StoragePointItem extends AbstractEntity
         'storageType' => ['string'],
         'isOwnerPointShipper' => ['bool'],
         'owner' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper'],
+        'emailList' => ['array', 'Cargomart\ApiClient\Entity\StoragePoint\Objects\PointEmailContact'],
     ];
 
     protected static $nullables = [
@@ -74,6 +79,7 @@ final class StoragePointItem extends AbstractEntity
         'title' => false,
         'localityName' => false,
         'address' => false,
+        'addressInfo' => false,
         'addressObject' => false,
         'workSchedule' => false,
         'house' => false,
@@ -91,5 +97,6 @@ final class StoragePointItem extends AbstractEntity
         'storageType' => false,
         'isOwnerPointShipper' => false,
         'owner' => false,
+        'emailList' => false,
     ];
 }
