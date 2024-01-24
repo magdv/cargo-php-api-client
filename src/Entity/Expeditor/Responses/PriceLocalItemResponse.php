@@ -10,15 +10,21 @@ namespace Cargomart\ApiClient\Entity\Expeditor\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
+use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Элемент справочника цен
  * source: expeditor/responses/price-local-item-response.json
  *
  * @property PriceLocalItemResponseData $data
+ * @property MessageV2[] $message
  */
 final class PriceLocalItemResponse extends AbstractResponse
 {
-    protected static $types = ['data' => ['Cargomart\ApiClient\Entity\Expeditor\Responses\PriceLocalItemResponseData']];
-    protected static $nullables = ['data' => false];
+    protected static $types = [
+        'data' => ['Cargomart\ApiClient\Entity\Expeditor\Responses\PriceLocalItemResponseData'],
+        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
+    ];
+
+    protected static $nullables = ['data' => false, 'message' => false];
 }

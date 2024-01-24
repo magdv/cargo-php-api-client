@@ -10,18 +10,21 @@ namespace Cargomart\ApiClient\Entity\Order\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
+use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Успешный ответ
  * source: order/responses/order-category-statistics-response.json
  *
  * @property OrderCategoryStatisticsResponseData $data
+ * @property MessageV2[] $message
  */
 final class OrderCategoryStatisticsResponse extends AbstractResponse
 {
     protected static $types = [
         'data' => ['Cargomart\ApiClient\Entity\Order\Responses\OrderCategoryStatisticsResponseData'],
+        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
     ];
 
-    protected static $nullables = ['data' => false];
+    protected static $nullables = ['data' => false, 'message' => false];
 }

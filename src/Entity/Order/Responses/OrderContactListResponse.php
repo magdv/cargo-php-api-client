@@ -10,15 +10,21 @@ namespace Cargomart\ApiClient\Entity\Order\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
+use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Список клиентов из списка доступа
  * source: order/responses/order-contact-list-response.json
  *
  * @property OrderContactListResponseData $data
+ * @property MessageV2[] $message
  */
 final class OrderContactListResponse extends AbstractResponse
 {
-    protected static $types = ['data' => ['Cargomart\ApiClient\Entity\Order\Responses\OrderContactListResponseData']];
-    protected static $nullables = ['data' => false];
+    protected static $types = [
+        'data' => ['Cargomart\ApiClient\Entity\Order\Responses\OrderContactListResponseData'],
+        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
+    ];
+
+    protected static $nullables = ['data' => false, 'message' => false];
 }

@@ -10,15 +10,21 @@ namespace Cargomart\ApiClient\Entity\Order\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
+use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Список отслеживания
  * source: order/responses/tracking-list.json
  *
  * @property TrackingListData $data
+ * @property MessageV2[] $message
  */
 final class TrackingList extends AbstractResponse
 {
-    protected static $types = ['data' => ['Cargomart\ApiClient\Entity\Order\Responses\TrackingListData']];
-    protected static $nullables = ['data' => false];
+    protected static $types = [
+        'data' => ['Cargomart\ApiClient\Entity\Order\Responses\TrackingListData'],
+        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
+    ];
+
+    protected static $nullables = ['data' => false, 'message' => false];
 }

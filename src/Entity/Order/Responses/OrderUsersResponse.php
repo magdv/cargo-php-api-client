@@ -10,15 +10,21 @@ namespace Cargomart\ApiClient\Entity\Order\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
+use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Список пользователей и компаний для ответа
  * source: order/responses/order-users-response.json
  *
  * @property OrderUsersResponseData $data
+ * @property MessageV2[] $message
  */
 final class OrderUsersResponse extends AbstractResponse
 {
-    protected static $types = ['data' => ['Cargomart\ApiClient\Entity\Order\Responses\OrderUsersResponseData']];
-    protected static $nullables = ['data' => false];
+    protected static $types = [
+        'data' => ['Cargomart\ApiClient\Entity\Order\Responses\OrderUsersResponseData'],
+        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
+    ];
+
+    protected static $nullables = ['data' => false, 'message' => false];
 }

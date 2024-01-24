@@ -29,7 +29,8 @@ class IssueCertificatePhoneConfirmPost extends AbstractRequest
      */
     public function do(
         ExpeditorContractConclusionIssueCertificateConfirmRequest $body,
-    ): ExpeditorContractConclusionResponse {
+    ): ExpeditorContractConclusionResponse
+    {
         return $this->client->doRequest(
             'POST',
             $this->url,

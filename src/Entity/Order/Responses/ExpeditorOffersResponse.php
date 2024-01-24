@@ -10,15 +10,21 @@ namespace Cargomart\ApiClient\Entity\Order\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
+use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Объект предложений текущих цен перевозчиков
  * source: order/responses/expeditor-offers-response.json
  *
  * @property ExpeditorOffersResponseData $data
+ * @property MessageV2[] $message
  */
 final class ExpeditorOffersResponse extends AbstractResponse
 {
-    protected static $types = ['data' => ['Cargomart\ApiClient\Entity\Order\Responses\ExpeditorOffersResponseData']];
-    protected static $nullables = ['data' => false];
+    protected static $types = [
+        'data' => ['Cargomart\ApiClient\Entity\Order\Responses\ExpeditorOffersResponseData'],
+        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
+    ];
+
+    protected static $nullables = ['data' => false, 'message' => false];
 }
