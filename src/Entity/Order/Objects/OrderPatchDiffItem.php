@@ -20,6 +20,7 @@ use Cargomart\ApiClient\Entity\Base\TemperatureRange;
  * @property string $consignorPriceVatLess
  * @property string $carrierPrice
  * @property string $carrierPriceVatLess
+ * @property string $currencyCode
  * @property int $truckTypeId
  * @property \stdClass $companyBranchId
  * @property float $cargoWeight
@@ -44,6 +45,7 @@ final class OrderPatchDiffItem extends AbstractEntity
         'consignorPriceVatLess' => ['string'],
         'carrierPrice' => ['string'],
         'carrierPriceVatLess' => ['string'],
+        'currencyCode' => ['string'],
         'truckTypeId' => ['int'],
         'companyBranchId' => ['\stdClass'],
         'cargoWeight' => ['float'],
@@ -67,6 +69,7 @@ final class OrderPatchDiffItem extends AbstractEntity
         'consignorPriceVatLess' => false,
         'carrierPrice' => false,
         'carrierPriceVatLess' => false,
+        'currencyCode' => false,
         'truckTypeId' => false,
         'companyBranchId' => true,
         'cargoWeight' => false,

@@ -10,21 +10,15 @@ namespace Cargomart\ApiClient\Entity\Expeditor\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
-use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Ответ данных для подсказки имен кураторов в поиске по заказам
  * source: expeditor/responses/ac-curator-response.json
  *
- * @property MessageV2[] $message
  * @property AcCuratorResponseData $data
  */
 final class AcCuratorResponse extends AbstractResponse
 {
-    protected static $types = [
-        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
-        'data' => ['Cargomart\ApiClient\Entity\Expeditor\Responses\AcCuratorResponseData'],
-    ];
-
-    protected static $nullables = ['message' => false, 'data' => false];
+    protected static $types = ['data' => ['Cargomart\ApiClient\Entity\Expeditor\Responses\AcCuratorResponseData']];
+    protected static $nullables = ['data' => false];
 }

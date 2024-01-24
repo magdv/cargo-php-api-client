@@ -119,6 +119,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $createOrderReuse
  * @property bool $viewConsignorExpeditorPayment
  * @property bool $viewActNonDeliveryCar
+ * @property bool $createCustomerDocsTracking
  */
 final class OrderAccess extends AbstractEntity
 {
@@ -228,6 +229,7 @@ final class OrderAccess extends AbstractEntity
         'createOrderReuse' => ['bool'],
         'viewConsignorExpeditorPayment' => ['bool'],
         'viewActNonDeliveryCar' => ['bool'],
+        'createCustomerDocsTracking' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -336,5 +338,6 @@ final class OrderAccess extends AbstractEntity
         'createOrderReuse' => false,
         'viewConsignorExpeditorPayment' => false,
         'viewActNonDeliveryCar' => false,
+        'createCustomerDocsTracking' => false,
     ];
 }

@@ -27,8 +27,9 @@ class IssueCertificatePhoneConfirmPost extends AbstractRequest
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(ExpeditorContractConclusionIssueCertificateConfirmRequest $body): ExpeditorContractConclusionResponse
-    {
+    public function do(
+        ExpeditorContractConclusionIssueCertificateConfirmRequest $body,
+    ): ExpeditorContractConclusionResponse {
         return $this->client->doRequest(
             'POST',
             $this->url,

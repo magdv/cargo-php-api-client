@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder;
 
 use Cargomart\ApiClient\AbstractBuilder;
+use Cargomart\ApiClient\Builder\OrderDraftFtl\Conditions;
 use Cargomart\ApiClient\Builder\OrderDraftFtl\DraftId;
 use Cargomart\ApiClient\Builder\OrderDraftFtl\StepBid;
 use Cargomart\ApiClient\Builder\OrderDraftFtl\Validate;
@@ -25,6 +26,11 @@ final class OrderDraftFtl extends AbstractBuilder
         $params = $this->params;
         $params['draftId'] = $draftId;
         return new DraftId($params, $this->client);
+    }
+
+    public function conditions(): Conditions
+    {
+        return new Conditions($this->params, $this->client);
     }
 
     public function validate(): Validate

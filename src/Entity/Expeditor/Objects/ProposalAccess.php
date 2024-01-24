@@ -36,6 +36,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $viewBidList
  * @property bool $viewConsignorExpeditorPayment
  * @property bool $updateConsignorExpeditorPayment
+ * @property bool $createCustomerDocsTracking
  */
 final class ProposalAccess extends AbstractEntity
 {
@@ -62,6 +63,7 @@ final class ProposalAccess extends AbstractEntity
         'viewBidList' => ['bool'],
         'viewConsignorExpeditorPayment' => ['bool'],
         'updateConsignorExpeditorPayment' => ['bool'],
+        'createCustomerDocsTracking' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -87,5 +89,6 @@ final class ProposalAccess extends AbstractEntity
         'viewBidList' => false,
         'viewConsignorExpeditorPayment' => false,
         'updateConsignorExpeditorPayment' => false,
+        'createCustomerDocsTracking' => false,
     ];
 }

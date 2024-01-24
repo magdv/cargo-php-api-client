@@ -27,7 +27,7 @@ use Cargomart\ApiClient\Entity\Base\TemperatureRange;
  * @property int $companyBranchId
  * @property int[] $contact
  * @property string $externalId
- * @property OrderDraftFtlPoint[] $routePoint
+ * @property OrderDraftRoutePoint[] $routePoint
  * @property int $truckTypeId
  * @property float $cargoWeight
  * @property int $cargoCapacity
@@ -71,7 +71,7 @@ final class OrderDraftFtlEditItem extends AbstractEntity
         'companyBranchId' => ['int'],
         'contact' => ['array', 'int'],
         'externalId' => ['string'],
-        'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDraftFtlPoint'],
+        'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDraftRoutePoint'],
         'truckTypeId' => ['int'],
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],

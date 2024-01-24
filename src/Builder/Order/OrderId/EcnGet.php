@@ -96,6 +96,44 @@ class EcnGet extends AbstractRequest
     }
 
     /**
+     * Обобщенный статус ТРН.
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterStatusGroup(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[statusGroup]']);
+        } else {
+            $c->query['filter[statusGroup]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Статус ТРН.
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterStatus(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[status]']);
+        } else {
+            $c->query['filter[status]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
      * Выбрать только активные.
      *
      * @var null|bool $value

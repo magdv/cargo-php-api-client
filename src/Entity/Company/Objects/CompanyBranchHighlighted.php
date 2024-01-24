@@ -17,7 +17,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property CompanyOtherShort $company
  * @property int $companyBranchId
  * @property CompanyBranchConsignorBranchParamAdvertiseSettings $advertiseSettings
- * @property CarriageDirection[] $directions
+ * @property CarriageDirection $directions
  * @property int[] $truckTypeIds
  */
 final class CompanyBranchHighlighted extends AbstractEntity
@@ -28,7 +28,7 @@ final class CompanyBranchHighlighted extends AbstractEntity
         'advertiseSettings' => [
             'Cargomart\ApiClient\Entity\Company\Objects\CompanyBranchConsignorBranchParamAdvertiseSettings',
         ],
-        'directions' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CarriageDirection'],
+        'directions' => ['Cargomart\ApiClient\Entity\Company\Objects\CarriageDirection'],
         'truckTypeIds' => ['array', 'int'],
     ];
 

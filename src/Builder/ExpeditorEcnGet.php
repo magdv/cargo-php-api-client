@@ -96,6 +96,25 @@ class ExpeditorEcnGet extends AbstractRequest
     }
 
     /**
+     * Обобщенный статус ТРН.
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterStatusGroup(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[statusGroup]']);
+        } else {
+            $c->query['filter[statusGroup]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
      * Статус ТРН.
      *
      * @var null|string $value

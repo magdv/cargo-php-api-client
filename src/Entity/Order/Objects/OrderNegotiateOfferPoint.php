@@ -21,6 +21,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItemPenaltyCalcu
  * @property \stdClass $fromTime
  * @property \stdClass $toDate
  * @property \stdClass $toTime
+ * @property bool $isAccordingToWorkSchedule
  */
 final class OrderNegotiateOfferPoint extends AbstractEntity
 {
@@ -31,6 +32,7 @@ final class OrderNegotiateOfferPoint extends AbstractEntity
         'fromTime' => ['\stdClass'],
         'toDate' => ['\stdClass'],
         'toTime' => ['\stdClass'],
+        'isAccordingToWorkSchedule' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -40,5 +42,6 @@ final class OrderNegotiateOfferPoint extends AbstractEntity
         'fromTime' => true,
         'toDate' => true,
         'toTime' => true,
+        'isAccordingToWorkSchedule' => false,
     ];
 }

@@ -10,21 +10,15 @@ namespace Cargomart\ApiClient\Entity\Worker\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
-use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Получение списка сотрудников
  * source: worker/responses/worker-list-response.json
  *
- * @property MessageV2[] $message
  * @property WorkerListResponseData $data
  */
 final class WorkerListResponse extends AbstractResponse
 {
-    protected static $types = [
-        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
-        'data' => ['Cargomart\ApiClient\Entity\Worker\Responses\WorkerListResponseData'],
-    ];
-
-    protected static $nullables = ['message' => false, 'data' => false];
+    protected static $types = ['data' => ['Cargomart\ApiClient\Entity\Worker\Responses\WorkerListResponseData']];
+    protected static $nullables = ['data' => false];
 }
