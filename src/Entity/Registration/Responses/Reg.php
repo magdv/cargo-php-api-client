@@ -10,15 +10,21 @@ namespace Cargomart\ApiClient\Entity\Registration\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
+use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Ответ с информацией о процессе регистрации
  * source: registration/responses/reg.json
  *
  * @property RegData $data
+ * @property MessageV2[] $message
  */
 final class Reg extends AbstractResponse
 {
-    protected static $types = ['data' => ['Cargomart\ApiClient\Entity\Registration\Responses\RegData']];
-    protected static $nullables = ['data' => false];
+    protected static $types = [
+        'data' => ['Cargomart\ApiClient\Entity\Registration\Responses\RegData'],
+        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
+    ];
+
+    protected static $nullables = ['data' => false, 'message' => false];
 }

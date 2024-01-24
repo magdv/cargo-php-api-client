@@ -10,15 +10,21 @@ namespace Cargomart\ApiClient\Entity\Setting\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
+use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Структура ответа при запросе списка настроек пользователя
  * source: setting/responses/setting-list.json
  *
  * @property SettingListData $data
+ * @property MessageV2[] $message
  */
 final class SettingList extends AbstractResponse
 {
-    protected static $types = ['data' => ['Cargomart\ApiClient\Entity\Setting\Responses\SettingListData']];
-    protected static $nullables = ['data' => false];
+    protected static $types = [
+        'data' => ['Cargomart\ApiClient\Entity\Setting\Responses\SettingListData'],
+        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
+    ];
+
+    protected static $nullables = ['data' => false, 'message' => false];
 }

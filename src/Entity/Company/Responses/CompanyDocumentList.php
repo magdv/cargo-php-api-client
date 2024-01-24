@@ -10,14 +10,20 @@ namespace Cargomart\ApiClient\Entity\Company\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
+use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * source: company/responses/company-document-list.json
  *
  * @property CompanyDocumentListData $data
+ * @property MessageV2[] $message
  */
 final class CompanyDocumentList extends AbstractResponse
 {
-    protected static $types = ['data' => ['Cargomart\ApiClient\Entity\Company\Responses\CompanyDocumentListData']];
-    protected static $nullables = ['data' => false];
+    protected static $types = [
+        'data' => ['Cargomart\ApiClient\Entity\Company\Responses\CompanyDocumentListData'],
+        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
+    ];
+
+    protected static $nullables = ['data' => false, 'message' => false];
 }
