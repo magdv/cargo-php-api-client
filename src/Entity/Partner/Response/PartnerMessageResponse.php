@@ -10,21 +10,15 @@ namespace Cargomart\ApiClient\Entity\Partner\Response;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
-use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Ответ с сообщением о партнерстве
  * source: partner/response/partner-message-response.json
  *
- * @property MessageV2[] $message
  * @property PartnerMessageResponseData $data
  */
 final class PartnerMessageResponse extends AbstractResponse
 {
-    protected static $types = [
-        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
-        'data' => ['Cargomart\ApiClient\Entity\Partner\Response\PartnerMessageResponseData'],
-    ];
-
-    protected static $nullables = ['message' => false, 'data' => false];
+    protected static $types = ['data' => ['Cargomart\ApiClient\Entity\Partner\Response\PartnerMessageResponseData']];
+    protected static $nullables = ['data' => false];
 }

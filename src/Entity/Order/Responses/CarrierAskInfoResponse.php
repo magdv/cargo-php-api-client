@@ -10,21 +10,15 @@ namespace Cargomart\ApiClient\Entity\Order\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
-use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Информация о минимальной ставке
  * source: order/responses/carrier-ask-info-response.json
  *
- * @property MessageV2[] $message
  * @property CarrierAskInfoResponseData $data
  */
 final class CarrierAskInfoResponse extends AbstractResponse
 {
-    protected static $types = [
-        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
-        'data' => ['Cargomart\ApiClient\Entity\Order\Responses\CarrierAskInfoResponseData'],
-    ];
-
-    protected static $nullables = ['message' => false, 'data' => false];
+    protected static $types = ['data' => ['Cargomart\ApiClient\Entity\Order\Responses\CarrierAskInfoResponseData']];
+    protected static $nullables = ['data' => false];
 }

@@ -11,7 +11,7 @@ namespace Cargomart\ApiClient\Entity\Order\Requests;
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\TemperatureRange;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorBidding;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftFtlPoint;
+use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftRoutePoint;
 
 /**
  * Данные для редактирования объекта заказа
@@ -20,7 +20,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftFtlPoint;
  * @property int $version
  * @property string $carriageDetail
  * @property string $externalId
- * @property OrderDraftFtlPoint[] $routePoint
+ * @property OrderDraftRoutePoint[] $routePoint
  * @property int $truckTypeId
  * @property float $cargoWeight
  * @property int $cargoCapacity
@@ -49,7 +49,7 @@ final class OrderDraftExpeditorUpdateRequest extends AbstractEntity
         'version' => ['int'],
         'carriageDetail' => ['string'],
         'externalId' => ['string'],
-        'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDraftFtlPoint'],
+        'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDraftRoutePoint'],
         'truckTypeId' => ['int'],
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],

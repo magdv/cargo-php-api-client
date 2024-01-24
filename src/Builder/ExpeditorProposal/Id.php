@@ -14,6 +14,7 @@ use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\CarrierAsk;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\CarrierPayment;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\Chat;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\ConsignorExpeditorPayment;
+use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\CustomerDocsTracking;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\DenyBankingDetails;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\Ecn;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\ExpeditorOffer;
@@ -51,6 +52,11 @@ final class Id extends AbstractBuilder
     public function refuse(): Refuse
     {
         return new Refuse($this->params, $this->client);
+    }
+
+    public function customerDocsTracking(): CustomerDocsTracking
+    {
+        return new CustomerDocsTracking($this->params, $this->client);
     }
 
     public function routePath(): RoutePath

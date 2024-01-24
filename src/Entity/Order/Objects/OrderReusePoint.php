@@ -17,10 +17,10 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItemPenaltyCalcu
  *
  * @property StoragePointItemPenaltyCalculable $storage
  * @property string $type
- * @property \stdClass $fromDate
- * @property \stdClass $fromTime
- * @property \stdClass $toDate
- * @property \stdClass $toTime
+ * @property string $fromDate
+ * @property string $fromTime
+ * @property string $toDate
+ * @property string $toTime
  * @property bool $isAccordingToWorkSchedule
  * @property string $additionalInfo
  */
@@ -29,10 +29,10 @@ final class OrderReusePoint extends AbstractEntity
     protected static $types = [
         'storage' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\StoragePointItemPenaltyCalculable'],
         'type' => ['string'],
-        'fromDate' => ['\stdClass'],
-        'fromTime' => ['\stdClass'],
-        'toDate' => ['\stdClass'],
-        'toTime' => ['\stdClass'],
+        'fromDate' => ['string'],
+        'fromTime' => ['string'],
+        'toDate' => ['string'],
+        'toTime' => ['string'],
         'isAccordingToWorkSchedule' => ['bool'],
         'additionalInfo' => ['string'],
     ];
@@ -40,10 +40,10 @@ final class OrderReusePoint extends AbstractEntity
     protected static $nullables = [
         'storage' => false,
         'type' => false,
-        'fromDate' => true,
-        'fromTime' => true,
-        'toDate' => true,
-        'toTime' => true,
+        'fromDate' => false,
+        'fromTime' => false,
+        'toDate' => false,
+        'toTime' => false,
         'isAccordingToWorkSchedule' => false,
         'additionalInfo' => false,
     ];

@@ -115,6 +115,13 @@ use Cargomart\ApiClient\Entity\Payment\Objects\PaymentInvoiceStatus;
  * @property bool $hasCarrierSign
  * @property int $roadmapEventsCount
  * @property PaymentInvoiceStatus[] $paymentInvoiceStatus
+ * @property bool $isInternational
+ * @property OrderDetails[] $details
+ * @property string[] $conditions
+ * @property int[] $loading
+ * @property string[] $device
+ * @property string $cargoType
+ * @property int $contractTypeId
  */
 final class OrderShortListItem extends AbstractEntity
 {
@@ -215,6 +222,13 @@ final class OrderShortListItem extends AbstractEntity
         'hasCarrierSign' => ['bool'],
         'roadmapEventsCount' => ['int'],
         'paymentInvoiceStatus' => ['array', 'Cargomart\ApiClient\Entity\Payment\Objects\PaymentInvoiceStatus'],
+        'isInternational' => ['bool'],
+        'details' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDetails'],
+        'conditions' => ['array', 'string'],
+        'loading' => ['array', 'int'],
+        'device' => ['array', 'string'],
+        'cargoType' => ['string'],
+        'contractTypeId' => ['int'],
     ];
 
     protected static $nullables = [
@@ -314,5 +328,12 @@ final class OrderShortListItem extends AbstractEntity
         'hasCarrierSign' => false,
         'roadmapEventsCount' => false,
         'paymentInvoiceStatus' => false,
+        'isInternational' => false,
+        'details' => false,
+        'conditions' => false,
+        'loading' => false,
+        'device' => false,
+        'cargoType' => false,
+        'contractTypeId' => false,
     ];
 }

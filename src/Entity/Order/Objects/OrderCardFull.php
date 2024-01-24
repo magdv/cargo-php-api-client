@@ -72,6 +72,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property OrderRoutePoint[] $routePoint
  * @property RoutePointCard[] $point
  * @property string $accessTypeId
+ * @property string[] $accessClient
  * @property int $contractTypeId
  * @property UserRefuseProfile $refuseProfile
  * @property UserRefuseProfile $refuseAppealProfile
@@ -209,6 +210,7 @@ final class OrderCardFull extends AbstractEntity
         'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderRoutePoint'],
         'point' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointCard'],
         'accessTypeId' => ['string'],
+        'accessClient' => ['array', 'string'],
         'contractTypeId' => ['int'],
         'refuseProfile' => ['Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile'],
         'refuseAppealProfile' => ['Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile'],
@@ -345,6 +347,7 @@ final class OrderCardFull extends AbstractEntity
         'routePoint' => false,
         'point' => false,
         'accessTypeId' => false,
+        'accessClient' => false,
         'contractTypeId' => false,
         'refuseProfile' => false,
         'refuseAppealProfile' => false,

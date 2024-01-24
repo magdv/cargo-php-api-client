@@ -102,6 +102,11 @@ final class ApiV2 extends AbstractBuilder
         return new Driver($this->params, $this->client);
     }
 
+    public function stats(): Stats
+    {
+        return new Stats($this->params, $this->client);
+    }
+
     public function message(): Message
     {
         return new Message($this->params, $this->client);
@@ -250,16 +255,6 @@ final class ApiV2 extends AbstractBuilder
     public function company(): Company
     {
         return new Company($this->params, $this->client);
-    }
-
-    public function tms(): Tms
-    {
-        return new Tms($this->params, $this->client);
-    }
-
-    public function booking(): Booking
-    {
-        return new Booking($this->params, $this->client);
     }
 
     public function productionCalendar(): ProductionCalendar

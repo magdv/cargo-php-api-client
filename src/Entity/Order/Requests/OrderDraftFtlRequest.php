@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Entity\Order\Requests;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\TemperatureRange;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftFtlPoint;
+use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftRoutePoint;
 
 /**
  * Данные для редактирования объекта заказа FTL
@@ -20,11 +20,13 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftFtlPoint;
  * @property string $carriageDetail
  * @property int $companyBranchId
  * @property string $externalId
- * @property OrderDraftFtlPoint[] $routePoint
+ * @property OrderDraftRoutePoint[] $routePoint
  * @property int $truckTypeId
  * @property float $cargoWeight
  * @property int $cargoCapacity
  * @property string $cargoType
+ * @property float $loadWeight
+ * @property int $loadCapacity
  * @property TemperatureRange $temperature
  * @property int[] $loading
  * @property string[] $device
@@ -54,11 +56,13 @@ final class OrderDraftFtlRequest extends AbstractEntity
         'carriageDetail' => ['string'],
         'companyBranchId' => ['int'],
         'externalId' => ['string'],
-        'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDraftFtlPoint'],
+        'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDraftRoutePoint'],
         'truckTypeId' => ['int'],
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],
         'cargoType' => ['string'],
+        'loadWeight' => ['float'],
+        'loadCapacity' => ['int'],
         'temperature' => ['Cargomart\ApiClient\Entity\Base\TemperatureRange'],
         'loading' => ['array', 'int'],
         'device' => ['array', 'string'],
@@ -92,6 +96,8 @@ final class OrderDraftFtlRequest extends AbstractEntity
         'cargoWeight' => false,
         'cargoCapacity' => false,
         'cargoType' => false,
+        'loadWeight' => false,
+        'loadCapacity' => false,
         'temperature' => false,
         'loading' => false,
         'device' => false,

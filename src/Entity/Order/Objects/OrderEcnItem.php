@@ -10,6 +10,7 @@ namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\File\Objects\FileUrl;
+use Cargomart\ApiClient\Entity\File\Objects\FileV2;
 
 /**
  * Объект ЭТрН заказа для списка
@@ -32,6 +33,7 @@ use Cargomart\ApiClient\Entity\File\Objects\FileUrl;
  * @property string $statusGroup
  * @property string $updateDate
  * @property EcnAdditionalData $additionalData
+ * @property FileV2 $ecnFile
  * @property FileUrl $pdf
  * @property FileUrl $xls
  * @property FileUrl $xml
@@ -57,6 +59,7 @@ final class OrderEcnItem extends AbstractEntity
         'statusGroup' => ['string'],
         'updateDate' => ['string'],
         'additionalData' => ['Cargomart\ApiClient\Entity\Order\Objects\EcnAdditionalData'],
+        'ecnFile' => ['Cargomart\ApiClient\Entity\File\Objects\FileV2'],
         'pdf' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
         'xls' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
         'xml' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
@@ -81,6 +84,7 @@ final class OrderEcnItem extends AbstractEntity
         'statusGroup' => false,
         'updateDate' => false,
         'additionalData' => false,
+        'ecnFile' => false,
         'pdf' => false,
         'xls' => false,
         'xml' => false,

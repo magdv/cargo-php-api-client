@@ -24,6 +24,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int[] $fileId
  * @property FileV1[] $files
  * @property string $url
+ * @property string $publicUrl
  * @property int $creatorId
  * @property string $createDate
  * @property bool $isShared
@@ -42,6 +43,7 @@ final class Document extends AbstractEntity
         'fileId' => ['array', 'int'],
         'files' => ['array', 'Cargomart\ApiClient\Entity\File\Objects\FileV1'],
         'url' => ['string'],
+        'publicUrl' => ['string'],
         'creatorId' => ['int'],
         'createDate' => ['string'],
         'isShared' => ['bool'],
@@ -59,6 +61,7 @@ final class Document extends AbstractEntity
         'fileId' => false,
         'files' => false,
         'url' => false,
+        'publicUrl' => false,
         'creatorId' => false,
         'createDate' => false,
         'isShared' => false,

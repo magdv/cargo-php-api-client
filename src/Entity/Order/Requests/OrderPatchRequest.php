@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Requests;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftRoutePoint;
 
 /**
  * Данные для создания запроса на изменение заказа
@@ -16,6 +17,7 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property string $consignorPrice
  * @property string $carrierPrice
+ * @property string $currencyCode
  * @property int $companyBranchId
  * @property string $cargoType
  * @property float $cargoWeight
@@ -26,7 +28,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string[] $device
  * @property string[] $conditions
  * @property \stdClass $comment
- * @property OrderPatchPointRequest[] $points
+ * @property OrderDraftRoutePoint[] $points
  * @property string $externalId
  * @property string[] $tag
  * @property string $commentForConsignor
@@ -37,6 +39,7 @@ final class OrderPatchRequest extends AbstractEntity
     protected static $types = [
         'consignorPrice' => ['string'],
         'carrierPrice' => ['string'],
+        'currencyCode' => ['string'],
         'companyBranchId' => ['int'],
         'cargoType' => ['string'],
         'cargoWeight' => ['float'],
@@ -47,7 +50,7 @@ final class OrderPatchRequest extends AbstractEntity
         'device' => ['array', 'string'],
         'conditions' => ['array', 'string'],
         'comment' => ['\stdClass'],
-        'points' => ['array', 'Cargomart\ApiClient\Entity\Order\Requests\OrderPatchPointRequest'],
+        'points' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDraftRoutePoint'],
         'externalId' => ['string'],
         'tag' => ['array', 'string'],
         'commentForConsignor' => ['string'],
@@ -57,6 +60,7 @@ final class OrderPatchRequest extends AbstractEntity
     protected static $nullables = [
         'consignorPrice' => false,
         'carrierPrice' => false,
+        'currencyCode' => false,
         'companyBranchId' => false,
         'cargoType' => false,
         'cargoWeight' => false,

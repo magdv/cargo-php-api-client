@@ -10,21 +10,18 @@ namespace Cargomart\ApiClient\Entity\Company\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
-use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Контакты для связи
  * source: company/responses/communication-contacts-response.json
  *
- * @property MessageV2[] $message
  * @property CommunicationContactsResponseData $data
  */
 final class CommunicationContactsResponse extends AbstractResponse
 {
     protected static $types = [
-        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
         'data' => ['Cargomart\ApiClient\Entity\Company\Responses\CommunicationContactsResponseData'],
     ];
 
-    protected static $nullables = ['message' => false, 'data' => false];
+    protected static $nullables = ['data' => false];
 }

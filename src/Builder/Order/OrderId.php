@@ -56,6 +56,7 @@ use Cargomart\ApiClient\Builder\Order\OrderId\OriginalDocsTrackingNumber;
 use Cargomart\ApiClient\Builder\Order\OrderId\Payment;
 use Cargomart\ApiClient\Builder\Order\OrderId\Pin;
 use Cargomart\ApiClient\Builder\Order\OrderId\Point;
+use Cargomart\ApiClient\Builder\Order\OrderId\PointDiff;
 use Cargomart\ApiClient\Builder\Order\OrderId\Proposal;
 use Cargomart\ApiClient\Builder\Order\OrderId\Proxy;
 use Cargomart\ApiClient\Builder\Order\OrderId\ProxyConsignorAdditionalInfo;
@@ -386,6 +387,11 @@ final class OrderId extends AbstractBuilder
     public function expeditorAssignment(): ExpeditorAssignment
     {
         return new ExpeditorAssignment($this->params, $this->client);
+    }
+
+    public function pointDiff(): PointDiff
+    {
+        return new PointDiff($this->params, $this->client);
     }
 
     public function correction(): Correction

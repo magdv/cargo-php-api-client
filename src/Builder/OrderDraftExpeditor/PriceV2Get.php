@@ -191,6 +191,44 @@ class PriceV2Get extends AbstractRequest
     }
 
     /**
+     * Тоннаж авто из условий заказа(в тоннах)
+     *
+     * @var null|float $value
+     *
+     * @return self
+     */
+    public function qCargoWeight(?float $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['cargoWeight']);
+        } else {
+            $c->query['cargoWeight'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Кубатура авто из условий заказа(в м3)
+     *
+     * @var null|int $value
+     *
+     * @return self
+     */
+    public function qCargoCapacity(?int $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['cargoCapacity']);
+        } else {
+            $c->query['cargoCapacity'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
      * Вес груза(в тоннах)
      *
      * @var null|float $value

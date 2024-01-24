@@ -10,21 +10,18 @@ namespace Cargomart\ApiClient\Entity\DigitalSignature\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\AbstractResponse;
-use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Подробный ответ о сертификате ПЭП
  * source: digital-signature/responses/user-certificate-response.json
  *
- * @property MessageV2[] $message
  * @property UserCertificateResponseData $data
  */
 final class UserCertificateResponse extends AbstractResponse
 {
     protected static $types = [
-        'message' => ['array', 'Cargomart\ApiClient\Entity\Base\MessageV2'],
         'data' => ['Cargomart\ApiClient\Entity\DigitalSignature\Responses\UserCertificateResponseData'],
     ];
 
-    protected static $nullables = ['message' => false, 'data' => false];
+    protected static $nullables = ['data' => false];
 }

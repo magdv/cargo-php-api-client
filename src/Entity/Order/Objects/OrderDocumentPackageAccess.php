@@ -15,6 +15,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: order/objects/order-document-package-access.json
  *
  * @property bool $view
+ * @property bool $update
  * @property bool $createDocument
  * @property bool $createModeration
  * @property bool $createAccept
@@ -24,6 +25,7 @@ final class OrderDocumentPackageAccess extends AbstractEntity
 {
     protected static $types = [
         'view' => ['bool'],
+        'update' => ['bool'],
         'createDocument' => ['bool'],
         'createModeration' => ['bool'],
         'createAccept' => ['bool'],
@@ -32,6 +34,7 @@ final class OrderDocumentPackageAccess extends AbstractEntity
 
     protected static $nullables = [
         'view' => false,
+        'update' => false,
         'createDocument' => false,
         'createModeration' => false,
         'createAccept' => false,
