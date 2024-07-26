@@ -9,9 +9,10 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Expeditor\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\DateRange;
 use Cargomart\ApiClient\Entity\Base\DateTimeRange;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorBidding;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem;
+use Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchLastItem;
 use Cargomart\ApiClient\Entity\Payment\Objects\PaymentInvoiceStatus;
 
 /**
@@ -19,42 +20,26 @@ use Cargomart\ApiClient\Entity\Payment\Objects\PaymentInvoiceStatus;
  * source: expeditor/objects/short-list-item.json
  *
  * @property string $id
- * @property bool $hasExpeditorSign
  * @property int $serialId
  * @property int $status
- * @property string $consignorId
- * @property string $carrierId
- * @property int $truckId
- * @property ProposalTruck $truck
- * @property int $driverId
- * @property ProposalDriver $driver
+ * @property string $customerId
  * @property DateTimeRange $searchRange
- * @property string $currencyCode
- * @property string $consignorPrice
- * @property string $carrierPrice
+ * @property int[] $curators
+ * @property Price $price
+ * @property Price $carrierPrice
  * @property Price $winnerPrice
- * @property int $truckTypeId
- * @property RoutePointShort[] $route
- * @property float $weight
- * @property int $capacity
- * @property float $loadWeight
- * @property int $loadCapacity
+ * @property ProposalPoint[] $route
+ * @property ProposalCargo $cargo
  * @property string $externalId
- * @property string $vat
- * @property string $periodFromDate
- * @property string $periodToDate
+ * @property DateRange $periodRange
  * @property int $distance
  * @property string $truckSearchTimeEnd
- * @property OriginalDocument $originalDocument
- * @property string $carrierPackageStatus
+ * @property ProposalCarrier $carrier
  * @property ProposalProxy $proxy
  * @property ProposalRefuse[] $refuses
  * @property OrderPatchLastItem $patch
- * @property OrderPatchLastItem $lastPatch
- * @property OrderPatchLastItem $truckDriverPatch
  * @property ProposalAccess $access
  * @property string $paidExpeditorPaymentDate
- * @property ProposalBankingDetails $carrierBankingDetails
  * @property string $priceStrategyType
  * @property string $biddingType
  * @property OrderDraftExpeditorBidding $bidding
@@ -68,42 +53,26 @@ final class ShortListItem extends AbstractEntity
 {
     protected static $types = [
         'id' => ['string'],
-        'hasExpeditorSign' => ['bool'],
         'serialId' => ['int'],
         'status' => ['int'],
-        'consignorId' => ['string'],
-        'carrierId' => ['string'],
-        'truckId' => ['int'],
-        'truck' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalTruck'],
-        'driverId' => ['int'],
-        'driver' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalDriver'],
+        'customerId' => ['string'],
         'searchRange' => ['Cargomart\ApiClient\Entity\Base\DateTimeRange'],
-        'currencyCode' => ['string'],
-        'consignorPrice' => ['string'],
-        'carrierPrice' => ['string'],
+        'curators' => ['array', 'int'],
+        'price' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\Price'],
+        'carrierPrice' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\Price'],
         'winnerPrice' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\Price'],
-        'truckTypeId' => ['int'],
-        'route' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\RoutePointShort'],
-        'weight' => ['float'],
-        'capacity' => ['int'],
-        'loadWeight' => ['float'],
-        'loadCapacity' => ['int'],
+        'route' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalPoint'],
+        'cargo' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalCargo'],
         'externalId' => ['string'],
-        'vat' => ['string'],
-        'periodFromDate' => ['string'],
-        'periodToDate' => ['string'],
+        'periodRange' => ['Cargomart\ApiClient\Entity\Base\DateRange'],
         'distance' => ['int'],
         'truckSearchTimeEnd' => ['string'],
-        'originalDocument' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\OriginalDocument'],
-        'carrierPackageStatus' => ['string'],
+        'carrier' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalCarrier'],
         'proxy' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalProxy'],
         'refuses' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalRefuse'],
-        'patch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
-        'lastPatch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
-        'truckDriverPatch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
+        'patch' => ['Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchLastItem'],
         'access' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalAccess'],
         'paidExpeditorPaymentDate' => ['string'],
-        'carrierBankingDetails' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalBankingDetails'],
         'priceStrategyType' => ['string'],
         'biddingType' => ['string'],
         'bidding' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorBidding'],
@@ -116,42 +85,26 @@ final class ShortListItem extends AbstractEntity
 
     protected static $nullables = [
         'id' => false,
-        'hasExpeditorSign' => false,
         'serialId' => false,
         'status' => false,
-        'consignorId' => false,
-        'carrierId' => false,
-        'truckId' => false,
-        'truck' => false,
-        'driverId' => false,
-        'driver' => false,
+        'customerId' => false,
         'searchRange' => false,
-        'currencyCode' => false,
-        'consignorPrice' => false,
+        'curators' => false,
+        'price' => false,
         'carrierPrice' => false,
         'winnerPrice' => false,
-        'truckTypeId' => false,
         'route' => false,
-        'weight' => false,
-        'capacity' => false,
-        'loadWeight' => false,
-        'loadCapacity' => false,
+        'cargo' => false,
         'externalId' => false,
-        'vat' => false,
-        'periodFromDate' => false,
-        'periodToDate' => false,
+        'periodRange' => false,
         'distance' => false,
         'truckSearchTimeEnd' => false,
-        'originalDocument' => false,
-        'carrierPackageStatus' => false,
+        'carrier' => false,
         'proxy' => false,
         'refuses' => false,
         'patch' => false,
-        'lastPatch' => false,
-        'truckDriverPatch' => false,
         'access' => false,
         'paidExpeditorPaymentDate' => false,
-        'carrierBankingDetails' => false,
         'priceStrategyType' => false,
         'biddingType' => false,
         'bidding' => false,

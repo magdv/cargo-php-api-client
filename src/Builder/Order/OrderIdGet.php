@@ -20,7 +20,7 @@ class OrderIdGet extends AbstractRequest
     public $headers = [];
 
     /**
-     * Получение иформации для карточки заказа.
+     * Получение информации для карточки заказа.
      *
      * @return OrderCardResponse
      *

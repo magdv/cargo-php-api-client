@@ -19,6 +19,7 @@ use Cargomart\ApiClient\Builder\Order\Id;
 use Cargomart\ApiClient\Builder\Order\Ids;
 use Cargomart\ApiClient\Builder\Order\Import;
 use Cargomart\ApiClient\Builder\Order\OrderId;
+use Cargomart\ApiClient\Builder\Order\Publish;
 
 /**
  * url: /api/v2/order
@@ -32,6 +33,11 @@ final class Order extends AbstractBuilder
         $params = $this->params;
         $params['orderId'] = $orderId;
         return new OrderId($params, $this->client);
+    }
+
+    public function publish(): Publish
+    {
+        return new Publish($this->params, $this->client);
     }
 
     public function broker(): Broker
@@ -54,16 +60,16 @@ final class Order extends AbstractBuilder
         return new Count($this->params, $this->client);
     }
 
-    public function categoryStatistics(): CategoryStatistics
-    {
-        return new CategoryStatistics($this->params, $this->client);
-    }
-
     public function id(string $id): Id
     {
         $params = $this->params;
         $params['id'] = $id;
         return new Id($params, $this->client);
+    }
+
+    public function categoryStatistics(): CategoryStatistics
+    {
+        return new CategoryStatistics($this->params, $this->client);
     }
 
     public function excel(): Excel

@@ -12,6 +12,7 @@ use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\Address;
 use Cargomart\ApiClient\Entity\Base\AddressInfo;
 use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
+use Cargomart\ApiClient\Entity\Edm\Objects\DiadocBoxIdData;
 
 /**
  * Модель склада
@@ -34,6 +35,7 @@ use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
  * @property int $status
  * @property PointEmailContact[] $emailList
  * @property bool $isEdm
+ * @property DiadocBoxIdData $pointShipperDiadocBoxData
  * @property int $legalStatus
  * @property string $legalName
  * @property PointShipper $pointShipper
@@ -65,6 +67,7 @@ final class PointItem extends AbstractEntity
         'status' => ['int'],
         'emailList' => ['array', 'Cargomart\ApiClient\Entity\StoragePoint\Objects\PointEmailContact'],
         'isEdm' => ['bool'],
+        'pointShipperDiadocBoxData' => ['Cargomart\ApiClient\Entity\Edm\Objects\DiadocBoxIdData'],
         'legalStatus' => ['int'],
         'legalName' => ['string'],
         'pointShipper' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper'],
@@ -95,6 +98,7 @@ final class PointItem extends AbstractEntity
         'status' => false,
         'emailList' => false,
         'isEdm' => false,
+        'pointShipperDiadocBoxData' => false,
         'legalStatus' => false,
         'legalName' => false,
         'pointShipper' => false,

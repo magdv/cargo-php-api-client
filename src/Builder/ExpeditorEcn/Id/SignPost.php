@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\ExpeditorEcn\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Requests\ExpeditorEcnSignRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderEcnResponse;
+use Cargomart\ApiClient\Entity\Expeditor\Ecn\Requests\ExpeditorEcnSignRequest;
+use Cargomart\ApiClient\Entity\Order\OrderEcn\Responses\OrderEcnResponse;
 
 class SignPost extends AbstractRequest
 {

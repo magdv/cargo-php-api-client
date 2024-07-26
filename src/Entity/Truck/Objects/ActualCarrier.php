@@ -15,11 +15,12 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: truck/objects/actual-carrier.json
  *
  * @property string $inn
+ * @property string $kpp
  * @property string $name
  * @property string $address
  */
 final class ActualCarrier extends AbstractEntity
 {
-    protected static $types = ['inn' => ['string'], 'name' => ['string'], 'address' => ['string']];
-    protected static $nullables = ['inn' => false, 'name' => false, 'address' => false];
+    protected static $types = ['inn' => ['string'], 'kpp' => ['string'], 'name' => ['string'], 'address' => ['string']];
+    protected static $nullables = ['inn' => false, 'kpp' => false, 'name' => false, 'address' => false];
 }

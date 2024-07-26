@@ -42,6 +42,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftRoutePoint;
  * @property string $priceStrategyType
  * @property string $biddingType
  * @property OrderDraftExpeditorBidding $bidding
+ * @property string $copiedOrderId
  */
 final class OrderDraftExpeditorUpdateRequest extends AbstractEntity
 {
@@ -71,6 +72,7 @@ final class OrderDraftExpeditorUpdateRequest extends AbstractEntity
         'priceStrategyType' => ['string'],
         'biddingType' => ['string'],
         'bidding' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorBidding'],
+        'copiedOrderId' => ['string'],
     ];
 
     protected static $nullables = [
@@ -99,5 +101,6 @@ final class OrderDraftExpeditorUpdateRequest extends AbstractEntity
         'priceStrategyType' => false,
         'biddingType' => false,
         'bidding' => false,
+        'copiedOrderId' => false,
     ];
 }

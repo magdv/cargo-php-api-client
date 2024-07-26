@@ -9,8 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\ExpeditorProposal\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Requests\ProposalPaymentRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Responses\ProposalPaymentResponse;
+use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 
 class CarrierPaymentPut extends AbstractRequest
 {
@@ -23,18 +22,18 @@ class CarrierPaymentPut extends AbstractRequest
     /**
      * Создание или обновление информации о платеже перевозчику.
      *
-     * @return ProposalPaymentResponse
+     * @return EmptyDataResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(ProposalPaymentRequest $body): ProposalPaymentResponse
+    public function do(): EmptyDataResponse
     {
         return $this->client->doRequest(
             'PUT',
             $this->url,
-            ProposalPaymentResponse::class,
+            EmptyDataResponse::class,
             http_build_query($this->query),
-            $body,
+            null,
             $this->headers
         );
     }

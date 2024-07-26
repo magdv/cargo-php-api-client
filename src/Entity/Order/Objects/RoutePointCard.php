@@ -12,6 +12,7 @@ use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\Address;
 use Cargomart\ApiClient\Entity\Base\AddressInfo;
 use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
+use Cargomart\ApiClient\Entity\Edm\Objects\DiadocBoxIdData;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointEmailContact;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
 
@@ -34,6 +35,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  * @property RoutePointContactContact[] $contact
  * @property bool $isLoad
  * @property bool $isEdm
+ * @property DiadocBoxIdData $pointShipperDiadocBoxData
  * @property bool $isUnload
  * @property int $loadingTypeId
  * @property string $cargoType
@@ -75,6 +77,7 @@ final class RoutePointCard extends AbstractEntity
         'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointContactContact'],
         'isLoad' => ['bool'],
         'isEdm' => ['bool'],
+        'pointShipperDiadocBoxData' => ['Cargomart\ApiClient\Entity\Edm\Objects\DiadocBoxIdData'],
         'isUnload' => ['bool'],
         'loadingTypeId' => ['int'],
         'cargoType' => ['string'],
@@ -115,6 +118,7 @@ final class RoutePointCard extends AbstractEntity
         'contact' => false,
         'isLoad' => false,
         'isEdm' => false,
+        'pointShipperDiadocBoxData' => false,
         'isUnload' => false,
         'loadingTypeId' => false,
         'cargoType' => false,

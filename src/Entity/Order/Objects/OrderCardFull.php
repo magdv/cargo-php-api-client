@@ -15,7 +15,12 @@ use Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalProxy;
 use Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalRecommendation;
 use Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalRefuse;
 use Cargomart\ApiClient\Entity\GeneralPartner\Objects\GeneralPartnerContract;
-use Cargomart\ApiClient\Entity\Order\Enums\OrderTruckDriverCorrectionStatus;
+use Cargomart\ApiClient\Entity\Order\ExpeditorOffer\Objects\ExpeditorOfferCarrierCurrent;
+use Cargomart\ApiClient\Entity\Order\OrderCarrierAsk\Objects\CarrierAskCurrent;
+use Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OriginalDocument;
+use Cargomart\ApiClient\Entity\Order\OrderDowntimeClaim\Objects\OrderDowntimeClaim;
+use Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchLastItem;
+use Cargomart\ApiClient\Entity\Order\OrderPayment\Objects\OrderPayment;
 use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
 
 /**
@@ -135,9 +140,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property ProgressItemListProgress[] $progress
  * @property OrderOfferCurrent $currentOffer
  * @property OrderOfferCarRequest $carRequest
- * @property OrderPayments[] $payments
- * @property OrderCorrectionStatus $correctionStatus
- * @property OrderTruckDriverCorrectionStatus $truckDriverCorrectionStatus
+ * @property OrderPayment[] $payments
  * @property OrderAccess $access
  * @property string $paidInvoiceDate
  * @property string $paidExpeditorPaymentDate
@@ -149,6 +152,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserRefuseProfile;
  * @property OrderPatchLastItem $patch
  * @property OrderPatchLastItem $lastPatch
  * @property OrderPatchLastItem $truckDriverPatch
+ * @property OrderDowntimeClaim $carrierDowntimeClaim
  * @property ExpeditorContract $expeditorConsignorContract
  * @property ExpeditorContract $expeditorCarrierContract
  * @property GeneralPartnerContract $gpCarrierContract
@@ -251,9 +255,11 @@ final class OrderCardFull extends AbstractEntity
         'truckSearchTimeEnd' => ['string'],
         'refuses' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalRefuse'],
         'recommendations' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalRecommendation'],
-        'currentExpeditorCarrierOffer' => ['Cargomart\ApiClient\Entity\Order\Objects\ExpeditorOfferCarrierCurrent'],
-        'currentCarrierAsk' => ['Cargomart\ApiClient\Entity\Order\Objects\CarrierAskCurrent'],
-        'winningCarrierAsk' => ['Cargomart\ApiClient\Entity\Order\Objects\CarrierAskCurrent'],
+        'currentExpeditorCarrierOffer' => [
+            'Cargomart\ApiClient\Entity\Order\ExpeditorOffer\Objects\ExpeditorOfferCarrierCurrent',
+        ],
+        'currentCarrierAsk' => ['Cargomart\ApiClient\Entity\Order\OrderCarrierAsk\Objects\CarrierAskCurrent'],
+        'winningCarrierAsk' => ['Cargomart\ApiClient\Entity\Order\OrderCarrierAsk\Objects\CarrierAskCurrent'],
         'generalPartnerContact' => ['array', 'int'],
         'generalPartnerDocId' => ['int'],
         'isGeneralPartner' => ['bool'],
@@ -273,9 +279,7 @@ final class OrderCardFull extends AbstractEntity
         'progress' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\ProgressItemListProgress'],
         'currentOffer' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCurrent'],
         'carRequest' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCarRequest'],
-        'payments' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderPayments'],
-        'correctionStatus' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderCorrectionStatus'],
-        'truckDriverCorrectionStatus' => ['Cargomart\ApiClient\Entity\Order\Enums\OrderTruckDriverCorrectionStatus'],
+        'payments' => ['array', 'Cargomart\ApiClient\Entity\Order\OrderPayment\Objects\OrderPayment'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderAccess'],
         'paidInvoiceDate' => ['string'],
         'paidExpeditorPaymentDate' => ['string'],
@@ -283,10 +287,11 @@ final class OrderCardFull extends AbstractEntity
         'carrierPackageStatus' => ['string'],
         'carrierPaymentType' => ['string'],
         'bankingDetails' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderBanking'],
-        'originalDocument' => ['Cargomart\ApiClient\Entity\Order\Objects\OriginalDocument'],
-        'patch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
-        'lastPatch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
-        'truckDriverPatch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
+        'originalDocument' => ['Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OriginalDocument'],
+        'patch' => ['Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchLastItem'],
+        'lastPatch' => ['Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchLastItem'],
+        'truckDriverPatch' => ['Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchLastItem'],
+        'carrierDowntimeClaim' => ['Cargomart\ApiClient\Entity\Order\OrderDowntimeClaim\Objects\OrderDowntimeClaim'],
         'expeditorConsignorContract' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ExpeditorContract'],
         'expeditorCarrierContract' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ExpeditorContract'],
         'gpCarrierContract' => ['Cargomart\ApiClient\Entity\GeneralPartner\Objects\GeneralPartnerContract'],
@@ -411,8 +416,6 @@ final class OrderCardFull extends AbstractEntity
         'currentOffer' => false,
         'carRequest' => false,
         'payments' => false,
-        'correctionStatus' => false,
-        'truckDriverCorrectionStatus' => false,
         'access' => false,
         'paidInvoiceDate' => false,
         'paidExpeditorPaymentDate' => false,
@@ -424,6 +427,7 @@ final class OrderCardFull extends AbstractEntity
         'patch' => false,
         'lastPatch' => false,
         'truckDriverPatch' => false,
+        'carrierDowntimeClaim' => false,
         'expeditorConsignorContract' => false,
         'expeditorCarrierContract' => false,
         'gpCarrierContract' => false,

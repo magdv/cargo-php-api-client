@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\ExpeditorOfferRequest;
+use Cargomart\ApiClient\Entity\Order\ExpeditorOffer\Requests\ExpeditorOfferRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderCardResponse;
 
 class ExpeditorOfferPost extends AbstractRequest

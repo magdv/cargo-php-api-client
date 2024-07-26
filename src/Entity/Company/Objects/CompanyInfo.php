@@ -18,7 +18,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $shortName
  * @property string $type
  * @property \stdClass $logo
- * @property \stdClass $actualAddress
+ * @property string $actualAddress
  * @property string $phone
  * @property string $countryCode
  * @property \stdClass $headName
@@ -71,7 +71,7 @@ final class CompanyInfo extends AbstractEntity
         'shortName' => ['string'],
         'type' => ['string'],
         'logo' => ['\stdClass'],
-        'actualAddress' => ['\stdClass'],
+        'actualAddress' => ['string'],
         'phone' => ['string'],
         'countryCode' => ['string'],
         'headName' => ['\stdClass'],
@@ -123,7 +123,7 @@ final class CompanyInfo extends AbstractEntity
         'shortName' => false,
         'type' => false,
         'logo' => true,
-        'actualAddress' => true,
+        'actualAddress' => false,
         'phone' => false,
         'countryCode' => false,
         'headName' => true,

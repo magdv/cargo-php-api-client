@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Expeditor\PriceLocal\Pool;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Requests\PriceLocalPoolEditRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Responses\PriceLocalPoolItemResponse;
+use Cargomart\ApiClient\Entity\Expeditor\PriceLocal\Requests\PriceLocalPoolEditRequest;
+use Cargomart\ApiClient\Entity\Expeditor\PriceLocal\Responses\PriceLocalPoolItemResponse;
 
 class PoolIdPatch extends AbstractRequest
 {

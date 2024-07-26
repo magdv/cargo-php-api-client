@@ -134,7 +134,7 @@ class OrderGet extends AbstractRequest
     }
 
     /**
-     * Код кладр пункта отправления.
+     * Deprecated в пользу departureArea. Код кладр пункта отправления.
      *
      * @var null|string $value
      *
@@ -153,7 +153,7 @@ class OrderGet extends AbstractRequest
     }
 
     /**
-     * Радиус точки отправления.
+     * Deprecated в пользу departureArea. Радиус точки отправления.
      *
      * @var null|int $value
      *
@@ -172,7 +172,7 @@ class OrderGet extends AbstractRequest
     }
 
     /**
-     * Код кладр пункта назначения.
+     * Deprecated в пользу destinationArea. Код кладр пункта назначения.
      *
      * @var null|string $value
      *
@@ -191,7 +191,7 @@ class OrderGet extends AbstractRequest
     }
 
     /**
-     * Радиус точки назначения.
+     * Deprecated в пользу destinationArea. Радиус точки назначения.
      *
      * @var null|int $value
      *
@@ -204,6 +204,158 @@ class OrderGet extends AbstractRequest
             unset($c->query['filter[destinationRadius]']);
         } else {
             $c->query['filter[destinationRadius]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Широта точки отправления.
+     *
+     * @var null|float $value
+     *
+     * @return self
+     */
+    public function qFilterDepartureAreaLatitude(?float $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[departureArea][latitude]']);
+        } else {
+            $c->query['filter[departureArea][latitude]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Долгота точки отправления.
+     *
+     * @var null|float $value
+     *
+     * @return self
+     */
+    public function qFilterDepartureAreaLongitude(?float $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[departureArea][longitude]']);
+        } else {
+            $c->query['filter[departureArea][longitude]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Радиус точки отправления в километрах.
+     *
+     * @var null|int $value
+     *
+     * @return self
+     */
+    public function qFilterDepartureAreaRadius(?int $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[departureArea][radius]']);
+        } else {
+            $c->query['filter[departureArea][radius]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Код страны отправления в формате alpha2.
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterDepartureAreaCountryCode(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[departureArea][countryCode]']);
+        } else {
+            $c->query['filter[departureArea][countryCode]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Широта точки назначения.
+     *
+     * @var null|float $value
+     *
+     * @return self
+     */
+    public function qFilterDestinationAreaLatitude(?float $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[destinationArea][latitude]']);
+        } else {
+            $c->query['filter[destinationArea][latitude]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Долгота точки назначения.
+     *
+     * @var null|float $value
+     *
+     * @return self
+     */
+    public function qFilterDestinationAreaLongitude(?float $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[destinationArea][longitude]']);
+        } else {
+            $c->query['filter[destinationArea][longitude]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Радиус точки назначения в километрах.
+     *
+     * @var null|int $value
+     *
+     * @return self
+     */
+    public function qFilterDestinationAreaRadius(?int $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[destinationArea][radius]']);
+        } else {
+            $c->query['filter[destinationArea][radius]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Код страны назначения в формате alpha2.
+     *
+     * @var null|string $value
+     *
+     * @return self
+     */
+    public function qFilterDestinationAreaCountryCode(?string $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[destinationArea][countryCode]']);
+        } else {
+            $c->query['filter[destinationArea][countryCode]'] = $value;
         }
 
         return $c;
@@ -964,6 +1116,44 @@ class OrderGet extends AbstractRequest
             unset($c->query['filter[signStatus]']);
         } else {
             $c->query['filter[signStatus]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Массив id точек погрузки
+     *
+     * @var null|int[] $value
+     *
+     * @return self
+     */
+    public function qFilterStoragePointLoadingIds(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[storagePointLoadingIds]']);
+        } else {
+            $c->query['filter[storagePointLoadingIds]'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Массив id точек выгрузки
+     *
+     * @var null|int[] $value
+     *
+     * @return self
+     */
+    public function qFilterStoragePointUnloadingIds(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[storagePointUnloadingIds]']);
+        } else {
+            $c->query['filter[storagePointUnloadingIds]'] = $value;
         }
 
         return $c;

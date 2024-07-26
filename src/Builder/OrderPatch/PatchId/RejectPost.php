@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\OrderPatch\PatchId;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
-use Cargomart\ApiClient\Entity\Order\Requests\OrderPatchRejectRequest;
+use Cargomart\ApiClient\Entity\Order\OrderPatch\Requests\OrderPatchRejectRequest;
 
 class RejectPost extends AbstractRequest
 {

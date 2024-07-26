@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\DriverApp\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\DriverApp\Objects\DriverAppDetail;
+use Cargomart\ApiClient\Entity\Base\Objects\DriverAppDetail;
 
 /**
  * source: driver-app/responses/driver-app-phone-item-response.json#/properties/data
@@ -18,6 +18,6 @@ use Cargomart\ApiClient\Entity\DriverApp\Objects\DriverAppDetail;
  */
 final class DriverAppPhoneItemResponseData extends AbstractEntity
 {
-    protected static $types = ['driverAppDetail' => ['Cargomart\ApiClient\Entity\DriverApp\Objects\DriverAppDetail']];
+    protected static $types = ['driverAppDetail' => ['Cargomart\ApiClient\Entity\Base\Objects\DriverAppDetail']];
     protected static $nullables = ['driverAppDetail' => false];
 }

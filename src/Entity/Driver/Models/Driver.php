@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Driver\Models;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\Objects\DriverAppDetail;
 use Cargomart\ApiClient\Entity\Driver\Objects\DriverAccess;
 
 /**
@@ -33,7 +34,7 @@ use Cargomart\ApiClient\Entity\Driver\Objects\DriverAccess;
  * @property string $inn
  * @property int $validationStatus
  * @property string $driverAppStatus
- * @property DriverDriverAppDetail[] $driverAppDetail
+ * @property DriverAppDetail[] $driverAppDetail
  * @property DriverAccess $access
  */
 final class Driver extends AbstractEntity
@@ -57,7 +58,7 @@ final class Driver extends AbstractEntity
         'inn' => ['string'],
         'validationStatus' => ['int'],
         'driverAppStatus' => ['string'],
-        'driverAppDetail' => ['array', 'Cargomart\ApiClient\Entity\Driver\Models\DriverDriverAppDetail'],
+        'driverAppDetail' => ['array', 'Cargomart\ApiClient\Entity\Base\Objects\DriverAppDetail'],
         'access' => ['Cargomart\ApiClient\Entity\Driver\Objects\DriverAccess'],
     ];
 

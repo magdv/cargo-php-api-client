@@ -12,6 +12,7 @@ use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\Address;
 use Cargomart\ApiClient\Entity\Base\AddressInfo;
 use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
+use Cargomart\ApiClient\Entity\Edm\Objects\DiadocBoxIdData;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointEmailContact;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
 
@@ -36,6 +37,7 @@ use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
  * @property string $externalId
  * @property PointEmailContact[] $emailList
  * @property bool $isEdm
+ * @property DiadocBoxIdData $pointShipperDiadocBoxData
  * @property PointShipper $pointShipper
  * @property string $contractNumber
  * @property string $contractDate
@@ -63,6 +65,7 @@ final class SpPoint extends AbstractEntity
         'externalId' => ['string'],
         'emailList' => ['array', 'Cargomart\ApiClient\Entity\StoragePoint\Objects\PointEmailContact'],
         'isEdm' => ['bool'],
+        'pointShipperDiadocBoxData' => ['Cargomart\ApiClient\Entity\Edm\Objects\DiadocBoxIdData'],
         'pointShipper' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper'],
         'contractNumber' => ['string'],
         'contractDate' => ['string'],
@@ -89,6 +92,7 @@ final class SpPoint extends AbstractEntity
         'externalId' => false,
         'emailList' => false,
         'isEdm' => false,
+        'pointShipperDiadocBoxData' => false,
         'pointShipper' => false,
         'contractNumber' => false,
         'contractDate' => false,

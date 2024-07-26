@@ -13,7 +13,8 @@ use Cargomart\ApiClient\Entity\Base\DateRange;
 use Cargomart\ApiClient\Entity\Base\DateTimeRange;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderDetails;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftExpeditorBidding;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem;
+use Cargomart\ApiClient\Entity\Order\OrderDowntimeClaim\Objects\OrderDowntimeClaim;
+use Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchLastItem;
 use Cargomart\ApiClient\Entity\Payment\Objects\PaymentInvoiceStatus;
 
 /**
@@ -41,6 +42,7 @@ use Cargomart\ApiClient\Entity\Payment\Objects\PaymentInvoiceStatus;
  * @property OrderPatchLastItem $patch
  * @property OrderPatchLastItem $lastPatch
  * @property OrderPatchLastItem $truckDriverPatch
+ * @property OrderDowntimeClaim $carrierDowntimeClaim
  * @property string $externalId
  * @property int $customerBranchId
  * @property int $distance
@@ -83,9 +85,10 @@ final class ProposalCardFull extends AbstractEntity
         'carrier' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalCarrier'],
         'route' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalPoint'],
         'expeditorContract' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ExpeditorContract'],
-        'patch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
-        'lastPatch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
-        'truckDriverPatch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
+        'patch' => ['Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchLastItem'],
+        'lastPatch' => ['Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchLastItem'],
+        'truckDriverPatch' => ['Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchLastItem'],
+        'carrierDowntimeClaim' => ['Cargomart\ApiClient\Entity\Order\OrderDowntimeClaim\Objects\OrderDowntimeClaim'],
         'externalId' => ['string'],
         'customerBranchId' => ['int'],
         'distance' => ['int'],
@@ -130,6 +133,7 @@ final class ProposalCardFull extends AbstractEntity
         'patch' => false,
         'lastPatch' => false,
         'truckDriverPatch' => false,
+        'carrierDowntimeClaim' => false,
         'externalId' => false,
         'customerBranchId' => false,
         'distance' => false,

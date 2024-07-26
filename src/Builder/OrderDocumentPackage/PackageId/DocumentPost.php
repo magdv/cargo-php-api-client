@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\OrderDocumentUpdateRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderDocumentResponse;
+use Cargomart\ApiClient\Entity\Order\OrderDocument\Requests\OrderDocumentUpdateRequest;
+use Cargomart\ApiClient\Entity\Order\OrderDocument\Responses\OrderDocumentResponse;
 
 class DocumentPost extends AbstractRequest
 {

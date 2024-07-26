@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderEcnCheckAccessResponse;
+use Cargomart\ApiClient\Entity\Order\OrderEcn\Responses\OrderEcnCheckAccessResponse;
 
 class CheckDigitalEcnAccessGet extends AbstractRequest
 {

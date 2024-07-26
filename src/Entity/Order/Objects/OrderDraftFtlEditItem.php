@@ -18,6 +18,7 @@ use Cargomart\ApiClient\Entity\Base\TemperatureRange;
  * @property string $id
  * @property string $orderId
  * @property string $repeatedOrderId
+ * @property string $copiedOrderId
  * @property int $serialId
  * @property int $statusId
  * @property int $extStatusId
@@ -62,6 +63,7 @@ final class OrderDraftFtlEditItem extends AbstractEntity
         'id' => ['string'],
         'orderId' => ['string'],
         'repeatedOrderId' => ['string'],
+        'copiedOrderId' => ['string'],
         'serialId' => ['int'],
         'statusId' => ['int'],
         'extStatusId' => ['int'],
@@ -105,6 +107,7 @@ final class OrderDraftFtlEditItem extends AbstractEntity
         'id' => false,
         'orderId' => false,
         'repeatedOrderId' => false,
+        'copiedOrderId' => false,
         'serialId' => false,
         'statusId' => false,
         'extStatusId' => false,

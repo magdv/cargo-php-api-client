@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\DriverApp;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\DriverApp\Requests\DriverAppInvitePostRequest;
 use Cargomart\ApiClient\Entity\DriverApp\Responses\DriverAppPhoneItemResponse;
+use Cargomart\ApiClient\Entity\Driver\Requests\DriverAppInvitePostRequest;
 
 class InvitePost extends AbstractRequest
 {

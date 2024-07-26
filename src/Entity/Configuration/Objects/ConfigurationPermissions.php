@@ -15,6 +15,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * source: configuration/objects/configuration-permissions.json
  *
  * @property bool $viewMessages
+ * @property bool $viewCompanySelfBranch
  * @property bool $viewCompanyConfirmation
  * @property bool $viewUserSelfProfile
  * @property bool $viewUserSelfSettings
@@ -115,6 +116,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $viewStoragePointEmails
  * @property bool $updateStoragePointEmails
  * @property bool $updateStoragePointEdmParam
+ * @property bool $viewDiadocBoxIdList
  * @property bool $viewContractList
  * @property bool $viewContractConclusion
  * @property bool $viewMainSearch
@@ -124,6 +126,7 @@ final class ConfigurationPermissions extends AbstractEntity
 {
     protected static $types = [
         'viewMessages' => ['bool'],
+        'viewCompanySelfBranch' => ['bool'],
         'viewCompanyConfirmation' => ['bool'],
         'viewUserSelfProfile' => ['bool'],
         'viewUserSelfSettings' => ['bool'],
@@ -224,6 +227,7 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewStoragePointEmails' => ['bool'],
         'updateStoragePointEmails' => ['bool'],
         'updateStoragePointEdmParam' => ['bool'],
+        'viewDiadocBoxIdList' => ['bool'],
         'viewContractList' => ['bool'],
         'viewContractConclusion' => ['bool'],
         'viewMainSearch' => ['bool'],
@@ -232,6 +236,7 @@ final class ConfigurationPermissions extends AbstractEntity
 
     protected static $nullables = [
         'viewMessages' => false,
+        'viewCompanySelfBranch' => false,
         'viewCompanyConfirmation' => false,
         'viewUserSelfProfile' => false,
         'viewUserSelfSettings' => false,
@@ -332,6 +337,7 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewStoragePointEmails' => false,
         'updateStoragePointEmails' => false,
         'updateStoragePointEdmParam' => false,
+        'viewDiadocBoxIdList' => false,
         'viewContractList' => false,
         'viewContractConclusion' => false,
         'viewMainSearch' => false,

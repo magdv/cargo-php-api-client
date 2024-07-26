@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\ExpeditorProposal\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderRoadmapListResponse;
+use Cargomart\ApiClient\Entity\Order\OrderRoadmap\Responses\OrderRoadmapListResponse;
 
 class RoadmapGet extends AbstractRequest
 {

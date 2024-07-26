@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\Expeditor\PriceLocal\Price;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\EmptyObject;
-use Cargomart\ApiClient\Entity\Expeditor\Responses\PriceLocalItemResponse;
+use Cargomart\ApiClient\Entity\Expeditor\PriceLocal\Responses\PriceLocalItemResponse;
 
 class PriceIdDelete extends AbstractRequest
 {

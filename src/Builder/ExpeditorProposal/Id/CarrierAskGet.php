@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\ExpeditorProposal\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Responses\ProposalCarrierAsksResponse;
+use Cargomart\ApiClient\Entity\Expeditor\ProposalCarrierAsk\Responses\ProposalCarrierAsksResponse;
 
 class CarrierAskGet extends AbstractRequest
 {

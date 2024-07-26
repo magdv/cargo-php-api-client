@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Objects\EcnAdditionalData;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderValidateEcnResponse;
+use Cargomart\ApiClient\Entity\Order\OrderEcn\Objects\EcnAdditionalData;
+use Cargomart\ApiClient\Entity\Order\OrderEcn\Responses\OrderValidateEcnResponse;
 
 class ValidateEcnDataPost extends AbstractRequest
 {

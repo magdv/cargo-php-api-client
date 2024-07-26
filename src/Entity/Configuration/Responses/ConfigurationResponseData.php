@@ -10,7 +10,9 @@ namespace Cargomart\ApiClient\Entity\Configuration\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Company\Objects\CompanyShort;
+use Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationConsignorContractManager;
 use Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationFeatures;
+use Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationFiles;
 use Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationMobileApp;
 use Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationPermissions;
 use Cargomart\ApiClient\Entity\Expeditor\Objects\ExpeditorContract;
@@ -32,10 +34,14 @@ use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
  * @property GeneralPartnerContract[] $generalPartnerConsignorContract
  * @property string $simpleSignatureStatus
  * @property string $addressForOriginals
+ * @property int $routeGeoPointSearchRadiusForOrder
+ * @property int $enableRouteGeoPointSearchForOrder
  * @property string $useDeskToken
  * @property string $reCaptchaKey
  * @property ConfigurationMobileApp $mobileApp
  * @property \stdClass $extraValues
+ * @property ConfigurationFiles $files
+ * @property ConfigurationConsignorContractManager $consignorContractManager
  */
 final class ConfigurationResponseData extends AbstractEntity
 {
@@ -55,10 +61,16 @@ final class ConfigurationResponseData extends AbstractEntity
         ],
         'simpleSignatureStatus' => ['string'],
         'addressForOriginals' => ['string'],
+        'routeGeoPointSearchRadiusForOrder' => ['int'],
+        'enableRouteGeoPointSearchForOrder' => ['int'],
         'useDeskToken' => ['string'],
         'reCaptchaKey' => ['string'],
         'mobileApp' => ['Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationMobileApp'],
         'extraValues' => ['\stdClass'],
+        'files' => ['Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationFiles'],
+        'consignorContractManager' => [
+            'Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationConsignorContractManager',
+        ],
     ];
 
     protected static $nullables = [
@@ -74,9 +86,13 @@ final class ConfigurationResponseData extends AbstractEntity
         'generalPartnerConsignorContract' => false,
         'simpleSignatureStatus' => false,
         'addressForOriginals' => false,
+        'routeGeoPointSearchRadiusForOrder' => false,
+        'enableRouteGeoPointSearchForOrder' => false,
         'useDeskToken' => false,
         'reCaptchaKey' => false,
         'mobileApp' => false,
         'extraValues' => true,
+        'files' => false,
+        'consignorContractManager' => false,
     ];
 }

@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\OrderDocumentRejectPackageRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderDocumentPackageResponse;
+use Cargomart\ApiClient\Entity\Order\OrderDocument\Requests\OrderDocumentRejectPackageRequest;
+use Cargomart\ApiClient\Entity\Order\OrderDocument\Responses\OrderDocumentPackageResponse;
 
 class RejectPost extends AbstractRequest
 {

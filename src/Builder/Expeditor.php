@@ -20,14 +20,14 @@ final class Expeditor extends AbstractBuilder
 {
     protected const URL = '/api/v2/expeditor';
 
-    public function ac(): Ac
-    {
-        return new Ac($this->params, $this->client);
-    }
-
     public function priceLocal(): PriceLocal
     {
         return new PriceLocal($this->params, $this->client);
+    }
+
+    public function ac(): Ac
+    {
+        return new Ac($this->params, $this->client);
     }
 
     public function annexToContract(): AnnexToContract

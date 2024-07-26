@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\ExpeditorProposal\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderEcnListResponse;
+use Cargomart\ApiClient\Entity\Order\OrderEcn\Responses\OrderEcnListResponse;
 
 class EcnGet extends AbstractRequest
 {
