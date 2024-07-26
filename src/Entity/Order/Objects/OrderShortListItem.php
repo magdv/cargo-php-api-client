@@ -9,10 +9,14 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\Base\TemperatureRange;
 use Cargomart\ApiClient\Entity\Expeditor\Objects\ExpeditorContract;
 use Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalProxy;
 use Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalRefuse;
-use Cargomart\ApiClient\Entity\Order\Enums\OrderTruckDriverCorrectionStatus;
+use Cargomart\ApiClient\Entity\Order\OrderCarrierAsk\Objects\CarrierAskCurrent;
+use Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OriginalDocument;
+use Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchLastItem;
+use Cargomart\ApiClient\Entity\Order\OrderPayment\Objects\OrderPayment;
 use Cargomart\ApiClient\Entity\Payment\Objects\PaymentInvoiceStatus;
 
 /**
@@ -100,9 +104,7 @@ use Cargomart\ApiClient\Entity\Payment\Objects\PaymentInvoiceStatus;
  * @property CarrierAskCurrent $currentCarrierAsk
  * @property CarrierAskCurrent $winningCarrierAsk
  * @property OrderOfferCarRequest $carRequest
- * @property OrderPayments[] $payments
- * @property OrderCorrectionStatus $correctionStatus
- * @property OrderTruckDriverCorrectionStatus $truckDriverCorrectionStatus
+ * @property OrderPayment[] $payments
  * @property string $paidInvoiceDate
  * @property string $paidExpeditorPaymentDate
  * @property OrderAccess $access
@@ -122,6 +124,7 @@ use Cargomart\ApiClient\Entity\Payment\Objects\PaymentInvoiceStatus;
  * @property string[] $device
  * @property string $cargoType
  * @property int $contractTypeId
+ * @property TemperatureRange $temperature
  */
 final class OrderShortListItem extends AbstractEntity
 {
@@ -196,24 +199,22 @@ final class OrderShortListItem extends AbstractEntity
         'companyBranchId' => ['int'],
         'monitoringIds' => ['array', 'int'],
         'isProxyDateEnd' => ['bool'],
-        'patch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
-        'lastPatch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
-        'truckDriverPatch' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderPatchLastItem'],
+        'patch' => ['Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchLastItem'],
+        'lastPatch' => ['Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchLastItem'],
+        'truckDriverPatch' => ['Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchLastItem'],
         'isTruckDriverChanged' => ['bool'],
         'isDocChanged' => ['bool'],
         'progress' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\ProgressItemListProgress'],
         'distance' => ['int'],
         'currentOffer' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCurrent'],
-        'currentCarrierAsk' => ['Cargomart\ApiClient\Entity\Order\Objects\CarrierAskCurrent'],
-        'winningCarrierAsk' => ['Cargomart\ApiClient\Entity\Order\Objects\CarrierAskCurrent'],
+        'currentCarrierAsk' => ['Cargomart\ApiClient\Entity\Order\OrderCarrierAsk\Objects\CarrierAskCurrent'],
+        'winningCarrierAsk' => ['Cargomart\ApiClient\Entity\Order\OrderCarrierAsk\Objects\CarrierAskCurrent'],
         'carRequest' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderOfferCarRequest'],
-        'payments' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderPayments'],
-        'correctionStatus' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderCorrectionStatus'],
-        'truckDriverCorrectionStatus' => ['Cargomart\ApiClient\Entity\Order\Enums\OrderTruckDriverCorrectionStatus'],
+        'payments' => ['array', 'Cargomart\ApiClient\Entity\Order\OrderPayment\Objects\OrderPayment'],
         'paidInvoiceDate' => ['string'],
         'paidExpeditorPaymentDate' => ['string'],
         'access' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderAccess'],
-        'originalDocument' => ['Cargomart\ApiClient\Entity\Order\Objects\OriginalDocument'],
+        'originalDocument' => ['Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OriginalDocument'],
         'carrierPackageStatus' => ['string'],
         'priceStrategyType' => ['string'],
         'biddingType' => ['string'],
@@ -229,6 +230,7 @@ final class OrderShortListItem extends AbstractEntity
         'device' => ['array', 'string'],
         'cargoType' => ['string'],
         'contractTypeId' => ['int'],
+        'temperature' => ['Cargomart\ApiClient\Entity\Base\TemperatureRange'],
     ];
 
     protected static $nullables = [
@@ -314,8 +316,6 @@ final class OrderShortListItem extends AbstractEntity
         'winningCarrierAsk' => false,
         'carRequest' => false,
         'payments' => false,
-        'correctionStatus' => false,
-        'truckDriverCorrectionStatus' => false,
         'paidInvoiceDate' => false,
         'paidExpeditorPaymentDate' => false,
         'access' => false,
@@ -335,5 +335,6 @@ final class OrderShortListItem extends AbstractEntity
         'device' => false,
         'cargoType' => false,
         'contractTypeId' => false,
+        'temperature' => false,
     ];
 }

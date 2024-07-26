@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\ExpeditorProposal\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\OrderPatchRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderPatchResponse;
+use Cargomart\ApiClient\Entity\Order\OrderPatch\Requests\OrderPatchRequest;
+use Cargomart\ApiClient\Entity\Order\OrderPatch\Responses\OrderPatchResponse;
 
 class PatchPost extends AbstractRequest
 {

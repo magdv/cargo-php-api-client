@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\ExpeditorProposal\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Responses\ExpeditorProposalPaymentResponse;
+use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
 
 class PaymentGet extends AbstractRequest
 {
@@ -22,16 +22,16 @@ class PaymentGet extends AbstractRequest
     /**
      * Список оплат по счёту
      *
-     * @return ExpeditorProposalPaymentResponse
+     * @return EmptyDataResponse
      *
      * @throws \Cargomart\ApiClient\Exceptions\CargomartClientException
      */
-    public function do(): ExpeditorProposalPaymentResponse
+    public function do(): EmptyDataResponse
     {
         return $this->client->doRequest(
             'GET',
             $this->url,
-            ExpeditorProposalPaymentResponse::class,
+            EmptyDataResponse::class,
             http_build_query($this->query),
             null,
             $this->headers

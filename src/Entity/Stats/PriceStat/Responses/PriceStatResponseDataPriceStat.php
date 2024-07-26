@@ -9,17 +9,16 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Stats\PriceStat\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\Base\IdIntName;
 
 /**
  * source: stats/price-stat/responses/price-stat-response.json#/properties/data#/properties/priceStat
  *
  * @property string $routeKladr
  * @property string $routeName
- * @property IdIntName[] $routePoints
  * @property int $truckTypeId
  * @property float $truckWeight
  * @property int $truckCapacity
+ * @property string $precision
  * @property int $count
  * @property string $minPrice
  * @property string $maxPrice
@@ -31,10 +30,10 @@ final class PriceStatResponseDataPriceStat extends AbstractEntity
     protected static $types = [
         'routeKladr' => ['string'],
         'routeName' => ['string'],
-        'routePoints' => ['array', 'Cargomart\ApiClient\Entity\Base\IdIntName'],
         'truckTypeId' => ['int'],
         'truckWeight' => ['float'],
         'truckCapacity' => ['int'],
+        'precision' => ['string'],
         'count' => ['int'],
         'minPrice' => ['string'],
         'maxPrice' => ['string'],
@@ -45,10 +44,10 @@ final class PriceStatResponseDataPriceStat extends AbstractEntity
     protected static $nullables = [
         'routeKladr' => false,
         'routeName' => false,
-        'routePoints' => false,
         'truckTypeId' => false,
         'truckWeight' => false,
         'truckCapacity' => false,
+        'precision' => false,
         'count' => false,
         'minPrice' => false,
         'maxPrice' => false,

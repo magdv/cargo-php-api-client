@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderEcn\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderEcnResponse;
+use Cargomart\ApiClient\Entity\Order\OrderEcn\Responses\OrderEcnResponse;
 
 class CancelPost extends AbstractRequest
 {

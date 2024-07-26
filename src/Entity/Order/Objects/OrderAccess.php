@@ -32,6 +32,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $publish
  * @property bool $view
  * @property bool $createArchive
+ * @property bool $createUnarchive
  * @property bool $createPin
  * @property bool $deletePin
  * @property bool $bidLast
@@ -74,20 +75,8 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $viewOffer
  * @property bool $createOffer
  * @property bool $viewOfferExcel
- * @property bool $createCorrectionValidate
- * @property bool $createCorrection
- * @property bool $viewCorrection
- * @property bool $deleteCorrection
- * @property bool $createCorrectionReject
- * @property bool $createCorrectionApprove
- * @property bool $viewCorrectionHistory
  * @property bool $createConsignorDocument
  * @property bool $viewConsignorDocument
- * @property bool $createTruckDriverCorrection
- * @property bool $viewTruckDriverCorrection
- * @property bool $deleteTruckDriverCorrection
- * @property bool $createTruckDriverCorrectionReject
- * @property bool $createTruckDriverCorrectionApprove
  * @property bool $updateCarrierContacts
  * @property bool $createFinishing
  * @property bool $updateInvoiceGpCarrier
@@ -116,6 +105,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $createExpeditorOfferNegotiate
  * @property bool $createExpeditorOrderNegotiate
  * @property bool $createCarrierSign
+ * @property bool $createDowntimeClaim
  * @property bool $createOrderReuse
  * @property bool $viewConsignorExpeditorPayment
  * @property bool $viewActNonDeliveryCar
@@ -142,6 +132,7 @@ final class OrderAccess extends AbstractEntity
         'publish' => ['bool'],
         'view' => ['bool'],
         'createArchive' => ['bool'],
+        'createUnarchive' => ['bool'],
         'createPin' => ['bool'],
         'deletePin' => ['bool'],
         'bidLast' => ['bool'],
@@ -184,20 +175,8 @@ final class OrderAccess extends AbstractEntity
         'viewOffer' => ['bool'],
         'createOffer' => ['bool'],
         'viewOfferExcel' => ['bool'],
-        'createCorrectionValidate' => ['bool'],
-        'createCorrection' => ['bool'],
-        'viewCorrection' => ['bool'],
-        'deleteCorrection' => ['bool'],
-        'createCorrectionReject' => ['bool'],
-        'createCorrectionApprove' => ['bool'],
-        'viewCorrectionHistory' => ['bool'],
         'createConsignorDocument' => ['bool'],
         'viewConsignorDocument' => ['bool'],
-        'createTruckDriverCorrection' => ['bool'],
-        'viewTruckDriverCorrection' => ['bool'],
-        'deleteTruckDriverCorrection' => ['bool'],
-        'createTruckDriverCorrectionReject' => ['bool'],
-        'createTruckDriverCorrectionApprove' => ['bool'],
         'updateCarrierContacts' => ['bool'],
         'createFinishing' => ['bool'],
         'updateInvoiceGpCarrier' => ['bool'],
@@ -226,6 +205,7 @@ final class OrderAccess extends AbstractEntity
         'createExpeditorOfferNegotiate' => ['bool'],
         'createExpeditorOrderNegotiate' => ['bool'],
         'createCarrierSign' => ['bool'],
+        'createDowntimeClaim' => ['bool'],
         'createOrderReuse' => ['bool'],
         'viewConsignorExpeditorPayment' => ['bool'],
         'viewActNonDeliveryCar' => ['bool'],
@@ -251,6 +231,7 @@ final class OrderAccess extends AbstractEntity
         'publish' => false,
         'view' => false,
         'createArchive' => false,
+        'createUnarchive' => false,
         'createPin' => false,
         'deletePin' => false,
         'bidLast' => false,
@@ -293,20 +274,8 @@ final class OrderAccess extends AbstractEntity
         'viewOffer' => false,
         'createOffer' => false,
         'viewOfferExcel' => false,
-        'createCorrectionValidate' => false,
-        'createCorrection' => false,
-        'viewCorrection' => false,
-        'deleteCorrection' => false,
-        'createCorrectionReject' => false,
-        'createCorrectionApprove' => false,
-        'viewCorrectionHistory' => false,
         'createConsignorDocument' => false,
         'viewConsignorDocument' => false,
-        'createTruckDriverCorrection' => false,
-        'viewTruckDriverCorrection' => false,
-        'deleteTruckDriverCorrection' => false,
-        'createTruckDriverCorrectionReject' => false,
-        'createTruckDriverCorrectionApprove' => false,
         'updateCarrierContacts' => false,
         'createFinishing' => false,
         'updateInvoiceGpCarrier' => false,
@@ -335,6 +304,7 @@ final class OrderAccess extends AbstractEntity
         'createExpeditorOfferNegotiate' => false,
         'createExpeditorOrderNegotiate' => false,
         'createCarrierSign' => false,
+        'createDowntimeClaim' => false,
         'createOrderReuse' => false,
         'viewConsignorExpeditorPayment' => false,
         'viewActNonDeliveryCar' => false,

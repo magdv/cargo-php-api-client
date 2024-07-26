@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\DriverApp\Objects\DriverAppDetail;
+use Cargomart\ApiClient\Entity\Base\Objects\DriverAppDetail;
 
 /**
  * Данные водителя в заказе
@@ -54,7 +54,7 @@ final class OrderDriver extends AbstractEntity
         'passportBy' => ['string'],
         'birthDate' => ['string'],
         'driverAppStatus' => ['string'],
-        'driverAppDetail' => ['array', 'Cargomart\ApiClient\Entity\DriverApp\Objects\DriverAppDetail'],
+        'driverAppDetail' => ['array', 'Cargomart\ApiClient\Entity\Base\Objects\DriverAppDetail'],
     ];
 
     protected static $nullables = [

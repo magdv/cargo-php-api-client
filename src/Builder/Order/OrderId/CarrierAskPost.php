@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\OrderCarrierAskRequest;
+use Cargomart\ApiClient\Entity\Order\OrderCarrierAsk\Requests\OrderCarrierAskRequest;
 use Cargomart\ApiClient\Entity\Order\Responses\OrderCardResponse;
 
 class CarrierAskPost extends AbstractRequest

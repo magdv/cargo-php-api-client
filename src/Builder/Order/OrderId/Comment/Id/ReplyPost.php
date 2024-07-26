@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId\Comment\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\OrderCommentReplyRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\CommentResponse;
+use Cargomart\ApiClient\Entity\Order\OrderComment\Requests\OrderCommentReplyRequest;
+use Cargomart\ApiClient\Entity\Order\OrderComment\Responses\CommentResponse;
 
 class ReplyPost extends AbstractRequest
 {

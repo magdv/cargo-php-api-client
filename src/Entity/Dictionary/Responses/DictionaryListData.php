@@ -15,6 +15,7 @@ use Cargomart\ApiClient\Entity\Dictionary\Objects\CountryItem;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\Currency;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\DocumentType;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\DriverLicense;
+use Cargomart\ApiClient\Entity\Dictionary\Objects\ExpeditorTaskType;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\LegalStatus;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\LoadingType;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\PaymentType;
@@ -27,9 +28,9 @@ use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckMode;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckType;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\Vat;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderCondition;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderDocumentType;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderPriceTypeItem;
 use Cargomart\ApiClient\Entity\Order\Objects\OrderRefuseReasonItem;
+use Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentType;
 use Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleType;
 
 /**
@@ -58,6 +59,7 @@ use Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleType;
  * @property OrderDocumentType[] $orderDocumentType
  * @property SimpleDocumentTitleType[] $simpleDocumentTitleType
  * @property CountryItem[] $country
+ * @property ExpeditorTaskType[] $expeditorTaskType
  */
 final class DictionaryListData extends AbstractEntity
 {
@@ -81,9 +83,10 @@ final class DictionaryListData extends AbstractEntity
         'carPerPeriod' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\CarPerPeriod'],
         'tenderCarriage' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TenderCarriage'],
         'legalStatus' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\LegalStatus'],
-        'orderDocumentType' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDocumentType'],
+        'orderDocumentType' => ['array', 'Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentType'],
         'simpleDocumentTitleType' => ['array', 'Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleType'],
         'country' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\CountryItem'],
+        'expeditorTaskType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\ExpeditorTaskType'],
     ];
 
     protected static $nullables = [
@@ -109,5 +112,6 @@ final class DictionaryListData extends AbstractEntity
         'orderDocumentType' => false,
         'simpleDocumentTitleType' => false,
         'country' => false,
+        'expeditorTaskType' => false,
     ];
 }

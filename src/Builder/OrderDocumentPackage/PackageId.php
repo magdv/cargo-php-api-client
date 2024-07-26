@@ -13,6 +13,7 @@ use Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId\Accept;
 use Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId\Document;
 use Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId\Moderation;
 use Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId\Reject;
+use Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId\ShowToCustomer;
 use Cargomart\ApiClient\Builder\OrderDocumentPackage\PackageId\Update;
 
 /**
@@ -45,6 +46,11 @@ final class PackageId extends AbstractBuilder
     public function reject(): Reject
     {
         return new Reject($this->params, $this->client);
+    }
+
+    public function showToCustomer(): ShowToCustomer
+    {
+        return new ShowToCustomer($this->params, $this->client);
     }
 
     public function get(): PackageIdGet

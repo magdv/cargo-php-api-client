@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\Roadmap\RoadmapId;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\EmptyObject;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderRoadmapListResponse;
+use Cargomart\ApiClient\Entity\Order\OrderRoadmap\Responses\OrderRoadmapListResponse;
 
 class HidePost extends AbstractRequest
 {

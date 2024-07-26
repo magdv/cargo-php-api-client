@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\OrderRefuseRevertPatchRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderPatchResponse;
+use Cargomart\ApiClient\Entity\Order\OrderPatch\Requests\OrderRefuseRevertPatchRequest;
+use Cargomart\ApiClient\Entity\Order\OrderPatch\Responses\OrderPatchResponse;
 
 class RefuseRevertPatchPost extends AbstractRequest
 {

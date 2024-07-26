@@ -39,6 +39,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property \stdClass $pts
  * @property int $status
  * @property string $rejectionReason
+ * @property string $companyOwnerCountryCode
  * @property TruckAccess $access
  */
 final class TruckOld extends AbstractEntity
@@ -69,6 +70,7 @@ final class TruckOld extends AbstractEntity
         'pts' => ['\stdClass'],
         'status' => ['int'],
         'rejectionReason' => ['string'],
+        'companyOwnerCountryCode' => ['string'],
         'access' => ['Cargomart\ApiClient\Entity\Truck\Objects\TruckAccess'],
     ];
 
@@ -98,6 +100,7 @@ final class TruckOld extends AbstractEntity
         'pts' => true,
         'status' => false,
         'rejectionReason' => false,
+        'companyOwnerCountryCode' => false,
         'access' => false,
     ];
 }

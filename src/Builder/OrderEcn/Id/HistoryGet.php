@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderEcn\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderEcnHistoryResponse;
+use Cargomart\ApiClient\Entity\Order\OrderEcn\Responses\OrderEcnHistoryResponse;
 
 class HistoryGet extends AbstractRequest
 {

@@ -17,6 +17,11 @@ final class Ecn extends AbstractBuilder
 {
     protected const URL = '/api/v2/expeditor-proposal/{id}/ecn';
 
+    public function post(): EcnPost
+    {
+        return new EcnPost($this->client, $this->getUrl());
+    }
+
     public function get(): EcnGet
     {
         return new EcnGet($this->client, $this->getUrl());

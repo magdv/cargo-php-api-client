@@ -11,7 +11,7 @@ namespace Cargomart\ApiClient\Entity\Expeditor\Responses;
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\Pagination;
 use Cargomart\ApiClient\Entity\Company\Objects\CompanyShort;
-use Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalCardFull;
+use Cargomart\ApiClient\Entity\Expeditor\Objects\ShortListItem;
 use Cargomart\ApiClient\Entity\Locality\Objects\Locality;
 use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 
@@ -19,7 +19,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
  * Proposal list response data
  * source: expeditor/responses/proposal-list-response.json#/properties/data
  *
- * @property ProposalCardFull[] $proposal
+ * @property ShortListItem[] $proposal
  * @property Locality[] $locality
  * @property CompanyShort[] $company
  * @property Pagination $pagination
@@ -28,7 +28,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 final class ProposalListResponseData extends AbstractEntity
 {
     protected static $types = [
-        'proposal' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalCardFull'],
+        'proposal' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ShortListItem'],
         'locality' => ['array', 'Cargomart\ApiClient\Entity\Locality\Objects\Locality'],
         'company' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CompanyShort'],
         'pagination' => ['Cargomart\ApiClient\Entity\Base\Pagination'],

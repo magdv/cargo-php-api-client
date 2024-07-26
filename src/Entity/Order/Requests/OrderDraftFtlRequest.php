@@ -48,6 +48,7 @@ use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftRoutePoint;
  * @property int $contractTypeId
  * @property string[] $tag
  * @property string $repeatedOrderId
+ * @property string $copiedOrderId
  */
 final class OrderDraftFtlRequest extends AbstractEntity
 {
@@ -84,6 +85,7 @@ final class OrderDraftFtlRequest extends AbstractEntity
         'contractTypeId' => ['int'],
         'tag' => ['array', 'string'],
         'repeatedOrderId' => ['string'],
+        'copiedOrderId' => ['string'],
     ];
 
     protected static $nullables = [
@@ -119,5 +121,6 @@ final class OrderDraftFtlRequest extends AbstractEntity
         'contractTypeId' => false,
         'tag' => false,
         'repeatedOrderId' => false,
+        'copiedOrderId' => false,
     ];
 }

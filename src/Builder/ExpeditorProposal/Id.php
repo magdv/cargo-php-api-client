@@ -11,6 +11,10 @@ namespace Cargomart\ApiClient\Builder\ExpeditorProposal;
 use Cargomart\ApiClient\AbstractBuilder;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\Bid;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\CarrierAsk;
+use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\CarrierDowntimeClaim;
+use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\CarrierDowntimeClaimApprove;
+use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\CarrierDowntimeClaimPayment;
+use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\CarrierDowntimeClaimReject;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\CarrierPayment;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\Chat;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id\ConsignorExpeditorPayment;
@@ -39,9 +43,9 @@ final class Id extends AbstractBuilder
 {
     protected const URL = '/api/v2/expeditor-proposal/{id}';
 
-    public function patch(): Patch
+    public function carrierAsk(): CarrierAsk
     {
-        return new Patch($this->params, $this->client);
+        return new CarrierAsk($this->params, $this->client);
     }
 
     public function refuseCarrier(): RefuseCarrier
@@ -52,6 +56,21 @@ final class Id extends AbstractBuilder
     public function refuse(): Refuse
     {
         return new Refuse($this->params, $this->client);
+    }
+
+    public function ecn(): Ecn
+    {
+        return new Ecn($this->params, $this->client);
+    }
+
+    public function roadmap(): Roadmap
+    {
+        return new Roadmap($this->params, $this->client);
+    }
+
+    public function patch(): Patch
+    {
+        return new Patch($this->params, $this->client);
     }
 
     public function customerDocsTracking(): CustomerDocsTracking
@@ -84,11 +103,6 @@ final class Id extends AbstractBuilder
         return new DenyBankingDetails($this->params, $this->client);
     }
 
-    public function expeditorOffer(): ExpeditorOffer
-    {
-        return new ExpeditorOffer($this->params, $this->client);
-    }
-
     public function bid(): Bid
     {
         return new Bid($this->params, $this->client);
@@ -99,29 +113,9 @@ final class Id extends AbstractBuilder
         return new WaybillTemplateAdditionalData($this->params, $this->client);
     }
 
-    public function ecn(): Ecn
-    {
-        return new Ecn($this->params, $this->client);
-    }
-
     public function waybillTemplate(): WaybillTemplate
     {
         return new WaybillTemplate($this->params, $this->client);
-    }
-
-    public function roadmap(): Roadmap
-    {
-        return new Roadmap($this->params, $this->client);
-    }
-
-    public function chat(): Chat
-    {
-        return new Chat($this->params, $this->client);
-    }
-
-    public function proxy(): Proxy
-    {
-        return new Proxy($this->params, $this->client);
     }
 
     public function carrierPayment(): CarrierPayment
@@ -139,9 +133,39 @@ final class Id extends AbstractBuilder
         return new ConsignorExpeditorPayment($this->params, $this->client);
     }
 
-    public function carrierAsk(): CarrierAsk
+    public function expeditorOffer(): ExpeditorOffer
     {
-        return new CarrierAsk($this->params, $this->client);
+        return new ExpeditorOffer($this->params, $this->client);
+    }
+
+    public function proxy(): Proxy
+    {
+        return new Proxy($this->params, $this->client);
+    }
+
+    public function chat(): Chat
+    {
+        return new Chat($this->params, $this->client);
+    }
+
+    public function carrierDowntimeClaim(): CarrierDowntimeClaim
+    {
+        return new CarrierDowntimeClaim($this->params, $this->client);
+    }
+
+    public function carrierDowntimeClaimReject(): CarrierDowntimeClaimReject
+    {
+        return new CarrierDowntimeClaimReject($this->params, $this->client);
+    }
+
+    public function carrierDowntimeClaimApprove(): CarrierDowntimeClaimApprove
+    {
+        return new CarrierDowntimeClaimApprove($this->params, $this->client);
+    }
+
+    public function carrierDowntimeClaimPayment(): CarrierDowntimeClaimPayment
+    {
+        return new CarrierDowntimeClaimPayment($this->params, $this->client);
     }
 
     public function simpleDocument(): SimpleDocument

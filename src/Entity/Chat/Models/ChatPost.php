@@ -10,6 +10,7 @@ namespace Cargomart\ApiClient\Entity\Chat\Models;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Chat\Objects\ChatPostAccess;
+use Cargomart\ApiClient\Entity\Chat\Objects\ChatPostCreator;
 use Cargomart\ApiClient\Entity\Chat\Objects\ChatPostPayload;
 use Cargomart\ApiClient\Entity\Chat\Objects\ChatPostUserData;
 
@@ -20,6 +21,7 @@ use Cargomart\ApiClient\Entity\Chat\Objects\ChatPostUserData;
  * @property int $id
  * @property string $companyId
  * @property int $creatorId
+ * @property ChatPostCreator $creator
  * @property string $kind
  * @property string $type
  * @property ChatPostPayload $payload
@@ -34,6 +36,7 @@ final class ChatPost extends AbstractEntity
         'id' => ['int'],
         'companyId' => ['string'],
         'creatorId' => ['int'],
+        'creator' => ['Cargomart\ApiClient\Entity\Chat\Objects\ChatPostCreator'],
         'kind' => ['string'],
         'type' => ['string'],
         'payload' => ['Cargomart\ApiClient\Entity\Chat\Objects\ChatPostPayload'],
@@ -47,6 +50,7 @@ final class ChatPost extends AbstractEntity
         'id' => false,
         'companyId' => false,
         'creatorId' => false,
+        'creator' => false,
         'kind' => false,
         'type' => false,
         'payload' => false,

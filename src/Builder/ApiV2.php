@@ -32,9 +32,9 @@ final class ApiV2 extends AbstractBuilder
         return new Order($this->params, $this->client);
     }
 
-    public function orderEcn(): OrderEcn
+    public function orderPatch(): OrderPatch
     {
-        return new OrderEcn($this->params, $this->client);
+        return new OrderPatch($this->params, $this->client);
     }
 
     public function orderSearch(): OrderSearch
@@ -52,19 +52,9 @@ final class ApiV2 extends AbstractBuilder
         return new TruckOrderQueue($this->params, $this->client);
     }
 
-    public function orderPatch(): OrderPatch
-    {
-        return new OrderPatch($this->params, $this->client);
-    }
-
     public function tracking(): Tracking
     {
         return new Tracking($this->params, $this->client);
-    }
-
-    public function roadmap(): Roadmap
-    {
-        return new Roadmap($this->params, $this->client);
     }
 
     public function orderDocumentPackage(): OrderDocumentPackage
@@ -75,6 +65,16 @@ final class ApiV2 extends AbstractBuilder
     public function orderDocument(): OrderDocument
     {
         return new OrderDocument($this->params, $this->client);
+    }
+
+    public function orderEcn(): OrderEcn
+    {
+        return new OrderEcn($this->params, $this->client);
+    }
+
+    public function roadmap(): Roadmap
+    {
+        return new Roadmap($this->params, $this->client);
     }
 
     public function orderDraftFtl(): OrderDraftFtl
@@ -105,6 +105,11 @@ final class ApiV2 extends AbstractBuilder
     public function stats(): Stats
     {
         return new Stats($this->params, $this->client);
+    }
+
+    public function orderStepBid(): OrderStepBid
+    {
+        return new OrderStepBid($this->params, $this->client);
     }
 
     public function message(): Message
@@ -162,6 +167,11 @@ final class ApiV2 extends AbstractBuilder
         return new ExpeditorCarrierContract($this->params, $this->client);
     }
 
+    public function edm(): Edm
+    {
+        return new Edm($this->params, $this->client);
+    }
+
     public function userCertificate(): UserCertificate
     {
         return new UserCertificate($this->params, $this->client);
@@ -197,14 +207,19 @@ final class ApiV2 extends AbstractBuilder
         return new Dictionary($this->params, $this->client);
     }
 
-    public function expeditorProposal(): ExpeditorProposal
-    {
-        return new ExpeditorProposal($this->params, $this->client);
-    }
-
     public function expeditor(): Expeditor
     {
         return new Expeditor($this->params, $this->client);
+    }
+
+    public function expeditorTask(): ExpeditorTask
+    {
+        return new ExpeditorTask($this->params, $this->client);
+    }
+
+    public function expeditorProposal(): ExpeditorProposal
+    {
+        return new ExpeditorProposal($this->params, $this->client);
     }
 
     public function expeditorEcn(): ExpeditorEcn
@@ -232,6 +247,11 @@ final class ApiV2 extends AbstractBuilder
         return new Trailer($this->params, $this->client);
     }
 
+    public function orderDraft(): OrderDraft
+    {
+        return new OrderDraft($this->params, $this->client);
+    }
+
     public function predictor(): Predictor
     {
         return new Predictor($this->params, $this->client);
@@ -255,6 +275,11 @@ final class ApiV2 extends AbstractBuilder
     public function company(): Company
     {
         return new Company($this->params, $this->client);
+    }
+
+    public function orderConditions(): OrderConditions
+    {
+        return new OrderConditions($this->params, $this->client);
     }
 
     public function productionCalendar(): ProductionCalendar

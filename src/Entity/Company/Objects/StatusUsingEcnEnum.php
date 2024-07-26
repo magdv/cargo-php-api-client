@@ -11,7 +11,7 @@ namespace Cargomart\ApiClient\Entity\Company\Objects;
 use Cargomart\ApiClient\AbstractEntity;
 
 /**
- * Участвует в обмене ЭТрН, on - включен, off - выключен, in_process - в процессе подключения
+ * Участвует в обмене ЭТрН, on - включен, off - выключен
  * source: company/objects/status-using-ecn-enum.json
  */
 final class StatusUsingEcnEnum extends AbstractEntity

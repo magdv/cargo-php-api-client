@@ -9,7 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Expeditor\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderDocumentPackage;
+use Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentPackage;
+use Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OriginalDocument;
 
 /**
  * Перевозчик
@@ -41,11 +42,11 @@ final class ProposalCarrier extends AbstractEntity
         'kpp' => ['string'],
         'curators' => ['array', 'int'],
         'bankingDetails' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\BankingDetails'],
-        'originalDocument' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\OriginalDocument'],
+        'originalDocument' => ['Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OriginalDocument'],
         'driver' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalDriver'],
         'attachedTruckDate' => ['string'],
         'truck' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalTruck'],
-        'documentPackage' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderDocumentPackage'],
+        'documentPackage' => ['Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentPackage'],
         'paymentType' => ['string'],
         'expeditorContract' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ExpeditorContract'],
         'paidExpeditorPaymentDate' => ['string'],

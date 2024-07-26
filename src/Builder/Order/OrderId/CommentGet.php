@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\CommentListResponse;
+use Cargomart\ApiClient\Entity\Order\OrderComment\Responses\CommentListResponse;
 
 class CommentGet extends AbstractRequest
 {
