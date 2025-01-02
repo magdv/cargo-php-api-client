@@ -13,7 +13,7 @@ use Cargomart\ApiClient\Entity\Base\MessageV2;
 
 /**
  * Ответ с простоем по заявке
- * source: order/OrderDowntimeClaim/responses/order-downtime-response.json
+ * source: order/OrderDowntimeClaim/responses/OrderDowntimeResponse.json
  *
  * @property OrderDowntimeResponseData $data
  * @property MessageV2[] $message

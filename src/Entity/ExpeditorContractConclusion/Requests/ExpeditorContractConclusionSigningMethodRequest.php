@@ -20,11 +20,6 @@ use Cargomart\ApiClient\AbstractEntity;
  */
 final class ExpeditorContractConclusionSigningMethodRequest extends AbstractEntity
 {
-    protected static $types = [
-        'signingMethod' => ['string'],
-        'signingEdmName' => ['string'],
-        'refuseMessage' => ['string'],
-    ];
-
+    protected static $types = ['signingMethod' => ['string'], 'signingEdmName' => ['string'], 'refuseMessage' => ['string']];
     protected static $nullables = ['signingMethod' => false, 'signingEdmName' => false, 'refuseMessage' => false];
 }

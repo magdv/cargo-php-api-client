@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderDraftExpeditor;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderDraftExpeditorConditionsResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderDraftExpeditorConditionsResponse;
 
 class ConditionsGet extends AbstractRequest
 {
@@ -52,6 +52,25 @@ class ConditionsGet extends AbstractRequest
             unset($c->query['routePoints']);
         } else {
             $c->query['routePoints'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * Список id пунктов погрузки
+     *
+     * @var null|int[] $value
+     *
+     * @return self
+     */
+    public function qStoragePointIds(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['storagePointIds']);
+        } else {
+            $c->query['storagePointIds'] = $value;
         }
 
         return $c;

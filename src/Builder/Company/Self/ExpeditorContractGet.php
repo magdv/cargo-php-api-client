@@ -14,7 +14,7 @@ use Cargomart\ApiClient\Entity\Company\Responses\CompanyExpeditorContractRespons
 class ExpeditorContractGet extends AbstractRequest
 {
     /** @var string[][] */
-    public $query = ['proxyType' => 'all'];
+    public $query = [];
 
     /** @var string[] */
     public $headers = [];

@@ -9,12 +9,12 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\Ac;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderClientAccessListResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderClientAccessListResponse;
 
 class CompanyGet extends AbstractRequest
 {
     /** @var string[][] */
-    public $query = ['filter[isBlocked]' => 0, 'filter[isPartner]' => 0];
+    public $query = [];
 
     /** @var string[] */
     public $headers = [];
@@ -79,11 +79,11 @@ class CompanyGet extends AbstractRequest
     /**
      * Искать в том числе и среди заблокированных
      *
-     * @var null|int $value
+     * @var null|string $value
      *
      * @return self
      */
-    public function qFilterIsBlocked(?int $value): self
+    public function qFilterIsBlocked(?string $value): self
     {
         $c = clone $this;
         if (null === $value) {
@@ -98,11 +98,11 @@ class CompanyGet extends AbstractRequest
     /**
      * Искать только среди партнеров
      *
-     * @var null|int $value
+     * @var null|string $value
      *
      * @return self
      */
-    public function qFilterIsPartner(?int $value): self
+    public function qFilterIsPartner(?string $value): self
     {
         $c = clone $this;
         if (null === $value) {

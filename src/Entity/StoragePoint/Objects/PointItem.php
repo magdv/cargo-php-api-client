@@ -40,6 +40,7 @@ use Cargomart\ApiClient\Entity\Edm\Objects\DiadocBoxIdData;
  * @property string $legalName
  * @property PointShipper $pointShipper
  * @property ContactItem[] $contact
+ * @property string $url
  * @property string $contractNumber
  * @property string $contractDate
  * @property string $storageType
@@ -72,6 +73,7 @@ final class PointItem extends AbstractEntity
         'legalName' => ['string'],
         'pointShipper' => ['Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper'],
         'contact' => ['array', 'Cargomart\ApiClient\Entity\StoragePoint\Objects\ContactItem'],
+        'url' => ['string'],
         'contractNumber' => ['string'],
         'contractDate' => ['string'],
         'storageType' => ['string'],
@@ -103,6 +105,7 @@ final class PointItem extends AbstractEntity
         'legalName' => false,
         'pointShipper' => false,
         'contact' => false,
+        'url' => false,
         'contractNumber' => false,
         'contractDate' => false,
         'storageType' => false,

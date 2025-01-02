@@ -14,7 +14,7 @@ use Cargomart\ApiClient\Entity\Trailer\Responses\TrailerListResponse;
 class TrailerGet extends AbstractRequest
 {
     /** @var string[][] */
-    public $query = ['filter[type]' => 'all'];
+    public $query = [];
 
     /** @var string[] */
     public $headers = [];

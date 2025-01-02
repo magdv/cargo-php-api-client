@@ -12,10 +12,11 @@ use Cargomart\ApiClient\AbstractEntity;
 
 /**
  * Объект простоя по конкретному пункту погрузки/выгрузки заявки
- * source: order/OrderDowntimeClaim/objects/order-downtime-claim-point.json
+ * source: order/OrderDowntimeClaim/objects/OrderDowntimeClaimPoint.json
  *
  * @property Downtime $downtime
  * @property \stdClass $id
+ * @property \stdClass $orderPointId
  * @property OrderDowntimeClaimPointFieldsData $data
  */
 final class OrderDowntimeClaimPoint extends AbstractEntity
@@ -23,8 +24,9 @@ final class OrderDowntimeClaimPoint extends AbstractEntity
     protected static $types = [
         'downtime' => ['Cargomart\ApiClient\Entity\Order\OrderDowntimeClaim\Objects\Downtime'],
         'id' => ['\stdClass'],
+        'orderPointId' => ['\stdClass'],
         'data' => ['Cargomart\ApiClient\Entity\Order\OrderDowntimeClaim\Objects\OrderDowntimeClaimPointFieldsData'],
     ];
 
-    protected static $nullables = ['downtime' => false, 'id' => true, 'data' => false];
+    protected static $nullables = ['downtime' => false, 'id' => true, 'orderPointId' => true, 'data' => false];
 }

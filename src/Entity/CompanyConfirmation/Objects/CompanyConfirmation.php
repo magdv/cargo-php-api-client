@@ -16,7 +16,7 @@ use Cargomart\ApiClient\Entity\Candidate\Objects\Candidate;
  * source: company-confirmation/objects/company-confirmation.json
  *
  * @property string $status
- * @property Message $message
+ * @property CompanyConfirmationMessage $message
  * @property Owner $owner
  * @property Contact[] $contacts
  * @property Candidate $candidate
@@ -32,7 +32,7 @@ final class CompanyConfirmation extends AbstractEntity
 {
     protected static $types = [
         'status' => ['string'],
-        'message' => ['Cargomart\ApiClient\Entity\CompanyConfirmation\Objects\Message'],
+        'message' => ['Cargomart\ApiClient\Entity\CompanyConfirmation\Objects\CompanyConfirmationMessage'],
         'owner' => ['Cargomart\ApiClient\Entity\CompanyConfirmation\Objects\Owner'],
         'contacts' => ['array', 'Cargomart\ApiClient\Entity\CompanyConfirmation\Objects\Contact'],
         'candidate' => ['Cargomart\ApiClient\Entity\Candidate\Objects\Candidate'],

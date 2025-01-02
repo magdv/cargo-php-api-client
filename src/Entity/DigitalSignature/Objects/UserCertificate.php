@@ -23,6 +23,8 @@ use Cargomart\ApiClient\Entity\File\Objects\FileUrl;
  * @property string $systemCompanyName
  * @property string $contractNumber
  * @property string $contractDate
+ * @property string $startDate
+ * @property string $endDate
  * @property int $receiverId
  * @property string $receiverPhone
  * @property string $receiverLastName
@@ -32,7 +34,7 @@ use Cargomart\ApiClient\Entity\File\Objects\FileUrl;
  * @property FileUrl $certificateFile
  * @property UserCertificateIssue $issue
  * @property UserCertificateRevoke $revoke
- * @property UserCertificateContract $contract
+ * @property CertificateContract $contract
  * @property UserCertificateAccess $access
  */
 final class UserCertificate extends AbstractEntity
@@ -46,6 +48,8 @@ final class UserCertificate extends AbstractEntity
         'systemCompanyName' => ['string'],
         'contractNumber' => ['string'],
         'contractDate' => ['string'],
+        'startDate' => ['string'],
+        'endDate' => ['string'],
         'receiverId' => ['int'],
         'receiverPhone' => ['string'],
         'receiverLastName' => ['string'],
@@ -55,7 +59,7 @@ final class UserCertificate extends AbstractEntity
         'certificateFile' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
         'issue' => ['Cargomart\ApiClient\Entity\DigitalSignature\Objects\UserCertificateIssue'],
         'revoke' => ['Cargomart\ApiClient\Entity\DigitalSignature\Objects\UserCertificateRevoke'],
-        'contract' => ['Cargomart\ApiClient\Entity\DigitalSignature\Objects\UserCertificateContract'],
+        'contract' => ['Cargomart\ApiClient\Entity\DigitalSignature\Objects\CertificateContract'],
         'access' => ['Cargomart\ApiClient\Entity\DigitalSignature\Objects\UserCertificateAccess'],
     ];
 
@@ -68,6 +72,8 @@ final class UserCertificate extends AbstractEntity
         'systemCompanyName' => false,
         'contractNumber' => false,
         'contractDate' => false,
+        'startDate' => false,
+        'endDate' => false,
         'receiverId' => false,
         'receiverPhone' => false,
         'receiverLastName' => false,

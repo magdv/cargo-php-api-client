@@ -12,17 +12,19 @@ use Cargomart\ApiClient\AbstractEntity;
 
 /**
  * Претензия о простое по конкретному пункту погрузки/выгрузки заявки
- * source: order/OrderDowntimeClaim/objects/order-downtime-claim-point-fields.json
+ * source: order/OrderDowntimeClaim/objects/OrderDowntimeClaimPointFields.json
  *
  * @property \stdClass $id
+ * @property \stdClass $orderPointId
  * @property OrderDowntimeClaimPointFieldsData $data
  */
 final class OrderDowntimeClaimPointFields extends AbstractEntity
 {
     protected static $types = [
         'id' => ['\stdClass'],
+        'orderPointId' => ['\stdClass'],
         'data' => ['Cargomart\ApiClient\Entity\Order\OrderDowntimeClaim\Objects\OrderDowntimeClaimPointFieldsData'],
     ];
 
-    protected static $nullables = ['id' => true, 'data' => false];
+    protected static $nullables = ['id' => true, 'orderPointId' => true, 'data' => false];
 }

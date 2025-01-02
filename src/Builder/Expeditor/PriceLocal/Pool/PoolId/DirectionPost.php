@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Expeditor\PriceLocal\Pool\PoolId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Expeditor\PriceLocal\Requests\PriceLocalDirectionCreateRequest;
-use Cargomart\ApiClient\Entity\Expeditor\PriceLocal\Responses\PriceLocalDirectionItemResponse;
+use Cargomart\ApiClient\Entity\PriceLocal\Requests\PriceLocalDirectionCreateRequest;
+use Cargomart\ApiClient\Entity\PriceLocal\Responses\PriceLocalDirectionItemResponse;
 
 class DirectionPost extends AbstractRequest
 {

@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\ExpeditorProposal\Id\Proxy\ProxyId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Requests\ProposalProxySignRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Responses\ProposalCardResponse;
+use Cargomart\ApiClient\Entity\Expeditor\Common\Requests\ProposalProxySignRequest;
+use Cargomart\ApiClient\Entity\Expeditor\Common\Responses\ProposalCardResponse;
 
 class SignCancellationPost extends AbstractRequest
 {

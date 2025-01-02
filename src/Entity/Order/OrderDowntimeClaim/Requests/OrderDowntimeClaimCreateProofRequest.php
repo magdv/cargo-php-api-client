@@ -11,7 +11,7 @@ namespace Cargomart\ApiClient\Entity\Order\OrderDowntimeClaim\Requests;
 use Cargomart\ApiClient\AbstractEntity;
 
 /**
- * source: order/OrderDowntimeClaim/requests/order-downtime-claim-create-proof-request.json
+ * source: order/OrderDowntimeClaim/requests/OrderDowntimeClaimCreateProofRequest.json
  *
  * @property OrderDowntimeClaimCreateProofRequestTrnItem[] $trn
  * @property OrderDowntimeClaimCreateProofRequestCustomItem[] $custom

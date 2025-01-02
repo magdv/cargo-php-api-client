@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\ExpeditorProposal\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
-use Cargomart\ApiClient\Entity\Expeditor\Requests\DenyBankingDetailsRequest;
+use Cargomart\ApiClient\Entity\Expeditor\Common\Requests\DenyBankingDetailsRequest;
 
 class DenyBankingDetailsPost extends AbstractRequest
 {

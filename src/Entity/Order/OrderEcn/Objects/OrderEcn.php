@@ -11,7 +11,7 @@ namespace Cargomart\ApiClient\Entity\Order\OrderEcn\Objects;
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\File\Objects\FileUrl;
 use Cargomart\ApiClient\Entity\File\Objects\FileV2;
-use Cargomart\ApiClient\Entity\Order\Objects\NotifyParamItem;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\NotifyParamItem;
 
 /**
  * Объект ЭТрН заказа
@@ -67,7 +67,7 @@ final class OrderEcn extends AbstractEntity
         'pdf' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
         'xls' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
         'xml' => ['Cargomart\ApiClient\Entity\File\Objects\FileUrl'],
-        'notifyParams' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\NotifyParamItem'],
+        'notifyParams' => ['array', 'Cargomart\ApiClient\Entity\Order\Common\Objects\NotifyParamItem'],
         'access' => ['Cargomart\ApiClient\Entity\Order\OrderEcn\Objects\OrderEcnAccess'],
     ];
 

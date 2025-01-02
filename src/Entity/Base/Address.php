@@ -27,6 +27,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $street
  * @property string $house
  * @property string $block
+ * @property string $localityGarGuid
  */
 final class Address extends AbstractEntity
 {
@@ -45,6 +46,7 @@ final class Address extends AbstractEntity
         'street' => ['string'],
         'house' => ['string'],
         'block' => ['string'],
+        'localityGarGuid' => ['string'],
     ];
 
     protected static $nullables = [
@@ -62,5 +64,6 @@ final class Address extends AbstractEntity
         'street' => false,
         'house' => false,
         'block' => false,
+        'localityGarGuid' => false,
     ];
 }

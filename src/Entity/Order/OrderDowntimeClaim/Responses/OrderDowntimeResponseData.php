@@ -12,7 +12,7 @@ use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Order\OrderDowntimeClaim\Objects\OrderDowntime;
 
 /**
- * source: order/OrderDowntimeClaim/responses/order-downtime-response.json#/properties/data
+ * source: order/OrderDowntimeClaim/responses/OrderDowntimeResponse.json#/properties/data
  *
  * @property OrderDowntime $orderDowntime
  */

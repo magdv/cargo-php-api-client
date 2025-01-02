@@ -12,6 +12,7 @@ use Cargomart\ApiClient\AbstractBuilder;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Exists;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Id;
 use Cargomart\ApiClient\Builder\ExpeditorProposal\Ids;
+use Cargomart\ApiClient\Builder\ExpeditorProposal\Uuid;
 
 /**
  * url: /api/v2/expeditor-proposal
@@ -25,6 +26,13 @@ final class ExpeditorProposal extends AbstractBuilder
         $params = $this->params;
         $params['id'] = $id;
         return new Id($params, $this->client);
+    }
+
+    public function uuid(string $uuid): Uuid
+    {
+        $params = $this->params;
+        $params['uuid'] = $uuid;
+        return new Uuid($params, $this->client);
     }
 
     public function ids(): Ids

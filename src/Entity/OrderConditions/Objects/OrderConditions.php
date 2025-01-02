@@ -14,15 +14,17 @@ use Cargomart\ApiClient\AbstractEntity;
  * Условия перевозки по направлению
  * source: order-conditions/objects/order-conditions.json
  *
+ * @property bool $needEcn
  * @property float $vatRate
  * @property OrderConditionsExpeditor $expeditorConditions
  */
 final class OrderConditions extends AbstractEntity
 {
     protected static $types = [
+        'needEcn' => ['bool'],
         'vatRate' => ['float'],
         'expeditorConditions' => ['Cargomart\ApiClient\Entity\OrderConditions\Objects\OrderConditionsExpeditor'],
     ];
 
-    protected static $nullables = ['vatRate' => false, 'expeditorConditions' => false];
+    protected static $nullables = ['needEcn' => false, 'vatRate' => false, 'expeditorConditions' => false];
 }

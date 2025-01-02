@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderUsersResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderUsersResponse;
 
 class VisitorGet extends AbstractRequest
 {

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\BrokerListResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\BrokerListResponse;
 
 class BrokerGet extends AbstractRequest
 {

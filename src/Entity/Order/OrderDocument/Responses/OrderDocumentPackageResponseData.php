@@ -11,21 +11,21 @@ namespace Cargomart\ApiClient\Entity\Order\OrderDocument\Responses;
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocument;
 use Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentPackage;
-use Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentType;
+use Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentTypeOption;
 
 /**
  * source: order/OrderDocument/responses/order-document-package-response.json#/properties/data
  *
  * @property OrderDocumentPackage $documentPackage
  * @property OrderDocument[] $orderDocuments
- * @property OrderDocumentType[] $orderDocumentType
+ * @property OrderDocumentTypeOption[] $orderDocumentType
  */
 final class OrderDocumentPackageResponseData extends AbstractEntity
 {
     protected static $types = [
         'documentPackage' => ['Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentPackage'],
         'orderDocuments' => ['array', 'Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocument'],
-        'orderDocumentType' => ['array', 'Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentType'],
+        'orderDocumentType' => ['array', 'Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentTypeOption'],
     ];
 
     protected static $nullables = ['documentPackage' => false, 'orderDocuments' => false, 'orderDocumentType' => false];

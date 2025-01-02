@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\OrderSignCreateRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderCardResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Requests\OrderSignCreateRequest;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderCardResponse;
 
 class SignPost extends AbstractRequest
 {

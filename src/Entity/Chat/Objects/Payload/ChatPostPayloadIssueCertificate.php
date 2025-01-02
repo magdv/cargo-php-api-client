@@ -16,9 +16,10 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property string $type
  * @property string $certId
+ * @property int $serialId
  */
 final class ChatPostPayloadIssueCertificate extends AbstractEntity
 {
-    protected static $types = ['type' => ['string'], 'certId' => ['string']];
-    protected static $nullables = ['type' => false, 'certId' => false];
+    protected static $types = ['type' => ['string'], 'certId' => ['string'], 'serialId' => ['int']];
+    protected static $nullables = ['type' => false, 'certId' => false, 'serialId' => false];
 }

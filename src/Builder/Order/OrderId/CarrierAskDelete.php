@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\EmptyObject;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderCardResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderCardResponse;
 
 class CarrierAskDelete extends AbstractRequest
 {

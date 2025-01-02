@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\OrderPointCreateRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderPointEditResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Requests\OrderPointCreateRequest;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderPointEditResponse;
 
 class PointPost extends AbstractRequest
 {

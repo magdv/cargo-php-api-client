@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderDraftExpeditor;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderDraftExpeditorPriceResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderDraftExpeditorPriceResponse;
 
 class PriceGet extends AbstractRequest
 {

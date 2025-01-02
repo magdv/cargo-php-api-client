@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\ExpeditorProposal;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Responses\ProposalCardResponse;
+use Cargomart\ApiClient\Entity\Expeditor\Common\Responses\ProposalCardResponse;
 
 class IdGet extends AbstractRequest
 {
@@ -20,7 +20,7 @@ class IdGet extends AbstractRequest
     public $headers = [];
 
     /**
-     * Получение иформации для карточки заказа Экспедитора.
+     * Получение информации для карточки заказа Экспедитора.
      *
      * @return ProposalCardResponse
      *

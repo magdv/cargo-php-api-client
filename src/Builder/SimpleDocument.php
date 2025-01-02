@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder;
 
 use Cargomart\ApiClient\AbstractBuilder;
+use Cargomart\ApiClient\Builder\SimpleDocument\Preview;
 use Cargomart\ApiClient\Builder\SimpleDocument\RootId;
 
 /**
@@ -23,5 +24,10 @@ final class SimpleDocument extends AbstractBuilder
         $params = $this->params;
         $params['rootId'] = $rootId;
         return new RootId($params, $this->client);
+    }
+
+    public function preview(): Preview
+    {
+        return new Preview($this->params, $this->client);
     }
 }

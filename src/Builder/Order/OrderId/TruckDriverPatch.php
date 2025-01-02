@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
-use Cargomart\ApiClient\Entity\Order\Requests\TruckDriver;
+use Cargomart\ApiClient\Entity\Order\Common\Requests\TruckDriver;
 
 class TruckDriverPatch extends AbstractRequest
 {

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Responses\ProposalListResponse;
+use Cargomart\ApiClient\Entity\Expeditor\Common\Responses\ProposalListResponse;
 
 class ExpeditorProposalGet extends AbstractRequest
 {
@@ -136,7 +136,7 @@ class ExpeditorProposalGet extends AbstractRequest
     /**
      * Массив id статусов заказов.
      *
-     * @var null|int[] $value
+     * @var null|string[] $value
      *
      * @return self
      */
@@ -421,7 +421,7 @@ class ExpeditorProposalGet extends AbstractRequest
     /**
      * Список статусов запроса на изменение заказа. 1 - ожидает подтверждение от отправителя, 2 - ожидает подтверждения от перевозчика, 3 - принят ввсеми сторонами, 4 - отозван экспедитором до согласования с перевозчиком, 5 - отклонен отправителем, 6 - отклонен перевозчиком, 7 - отозвано экспедитором до согласования с заказчиком
      *
-     * @var null|int[] $value
+     * @var null|string[] $value
      *
      * @return self
      */
@@ -533,7 +533,7 @@ class ExpeditorProposalGet extends AbstractRequest
     }
 
     /**
-     * Фильтр отстутсвия машины и водителя.
+     * Фильтр отсутствия машины и водителя.
      *
      * @var null|bool $value
      *

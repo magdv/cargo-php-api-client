@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Tracking;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\TrackingCountResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\TrackingCountResponse;
 
 class CountGet extends AbstractRequest
 {

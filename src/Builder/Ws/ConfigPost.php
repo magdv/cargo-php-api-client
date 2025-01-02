@@ -20,7 +20,7 @@ class ConfigPost extends AbstractRequest
     public $headers = [];
 
     /**
-     * Возвращает конфигурацияю для WS.
+     * Возвращает конфигурацию для WS.
      *
      * @return WsConfigResponse
      *

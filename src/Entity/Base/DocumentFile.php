@@ -30,11 +30,5 @@ final class DocumentFile extends AbstractEntity
         'url' => ['string'],
     ];
 
-    protected static $nullables = [
-        'title' => false,
-        'mime' => false,
-        'extension' => false,
-        'size' => false,
-        'url' => false,
-    ];
+    protected static $nullables = ['title' => false, 'mime' => false, 'extension' => false, 'size' => false, 'url' => false];
 }

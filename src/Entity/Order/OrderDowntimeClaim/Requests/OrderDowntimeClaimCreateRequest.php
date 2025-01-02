@@ -12,7 +12,8 @@ use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Order\OrderDowntimeClaim\Objects\OrderDowntimeClaimPointFields;
 
 /**
- * source: order/OrderDowntimeClaim/requests/order-downtime-claim-create-request.json
+ * Данные для создания требования
+ * source: order/OrderDowntimeClaim/requests/OrderDowntimeClaimCreateRequest.json
  *
  * @property OrderDowntimeClaimPointFields[] $points
  */

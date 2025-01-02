@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order;
 
 use Cargomart\ApiClient\AbstractBuilder;
-use Cargomart\ApiClient\Builder\Order\OrderId\ActNonDeliveryCar;
 use Cargomart\ApiClient\Builder\Order\OrderId\AfeerExpress;
 use Cargomart\ApiClient\Builder\Order\OrderId\Archive;
 use Cargomart\ApiClient\Builder\Order\OrderId\Bid;
@@ -22,6 +21,7 @@ use Cargomart\ApiClient\Builder\Order\OrderId\CarrierRefuse;
 use Cargomart\ApiClient\Builder\Order\OrderId\CarrierSign;
 use Cargomart\ApiClient\Builder\Order\OrderId\Chat;
 use Cargomart\ApiClient\Builder\Order\OrderId\CheckDigitalEcnAccess;
+use Cargomart\ApiClient\Builder\Order\OrderId\Claim;
 use Cargomart\ApiClient\Builder\Order\OrderId\ClientAccess;
 use Cargomart\ApiClient\Builder\Order\OrderId\Comment;
 use Cargomart\ApiClient\Builder\Order\OrderId\ConsignorContact;
@@ -31,16 +31,20 @@ use Cargomart\ApiClient\Builder\Order\OrderId\Contact;
 use Cargomart\ApiClient\Builder\Order\OrderId\CustomerPatch;
 use Cargomart\ApiClient\Builder\Order\OrderId\Document;
 use Cargomart\ApiClient\Builder\Order\OrderId\DowntimeClaim;
-use Cargomart\ApiClient\Builder\Order\OrderId\DowntimeClaimApprove;
 use Cargomart\ApiClient\Builder\Order\OrderId\DowntimeClaimCalculate;
 use Cargomart\ApiClient\Builder\Order\OrderId\DowntimeClaimCancel;
-use Cargomart\ApiClient\Builder\Order\OrderId\DowntimeClaimPreview;
+use Cargomart\ApiClient\Builder\Order\OrderId\DowntimeClaimPdf;
 use Cargomart\ApiClient\Builder\Order\OrderId\DowntimeClaimProof;
-use Cargomart\ApiClient\Builder\Order\OrderId\DowntimeClaimRefuse;
 use Cargomart\ApiClient\Builder\Order\OrderId\DowntimeClaimSign;
 use Cargomart\ApiClient\Builder\Order\OrderId\Ecn;
+use Cargomart\ApiClient\Builder\Order\OrderId\EcnTemplate;
 use Cargomart\ApiClient\Builder\Order\OrderId\Edit;
 use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorAssignment;
+use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorDowntimeClaimApprove;
+use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorDowntimeClaimApprovePdf;
+use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorDowntimeClaimReject;
+use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorDowntimeClaimRejectPdf;
+use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorDowntimeClaimRejectPreview;
 use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorOffer;
 use Cargomart\ApiClient\Builder\Order\OrderId\ExpeditorPayment;
 use Cargomart\ApiClient\Builder\Order\OrderId\Finish;
@@ -63,7 +67,6 @@ use Cargomart\ApiClient\Builder\Order\OrderId\OriginalDocsTrackingNumber;
 use Cargomart\ApiClient\Builder\Order\OrderId\Payment;
 use Cargomart\ApiClient\Builder\Order\OrderId\Pin;
 use Cargomart\ApiClient\Builder\Order\OrderId\Point;
-use Cargomart\ApiClient\Builder\Order\OrderId\PointDiff;
 use Cargomart\ApiClient\Builder\Order\OrderId\Proposal;
 use Cargomart\ApiClient\Builder\Order\OrderId\Proxy;
 use Cargomart\ApiClient\Builder\Order\OrderId\ProxyConsignorAdditionalInfo;
@@ -85,6 +88,7 @@ use Cargomart\ApiClient\Builder\Order\OrderId\Reuse;
 use Cargomart\ApiClient\Builder\Order\OrderId\Roadmap;
 use Cargomart\ApiClient\Builder\Order\OrderId\Save;
 use Cargomart\ApiClient\Builder\Order\OrderId\Sign;
+use Cargomart\ApiClient\Builder\Order\OrderId\SignedDocument;
 use Cargomart\ApiClient\Builder\Order\OrderId\SimpleDocument;
 use Cargomart\ApiClient\Builder\Order\OrderId\Tag;
 use Cargomart\ApiClient\Builder\Order\OrderId\TruckDriver;
@@ -93,10 +97,6 @@ use Cargomart\ApiClient\Builder\Order\OrderId\Unarchive;
 use Cargomart\ApiClient\Builder\Order\OrderId\Validate;
 use Cargomart\ApiClient\Builder\Order\OrderId\ValidateEcnData;
 use Cargomart\ApiClient\Builder\Order\OrderId\Visitor;
-use Cargomart\ApiClient\Builder\Order\OrderId\WaybillAdditionalInfo;
-use Cargomart\ApiClient\Builder\Order\OrderId\WaybillTemplate;
-use Cargomart\ApiClient\Builder\Order\OrderId\WaybillTemplateAdditionalData;
-use Cargomart\ApiClient\Builder\Order\OrderId\WaybillTemplateGp;
 use Cargomart\ApiClient\Builder\Order\OrderId\XClone;
 
 /**
@@ -111,14 +111,29 @@ final class OrderId extends AbstractBuilder
         return new ExpeditorPayment($this->params, $this->client);
     }
 
+    public function ecnTemplate(): EcnTemplate
+    {
+        return new EcnTemplate($this->params, $this->client);
+    }
+
+    public function checkDigitalEcnAccess(): CheckDigitalEcnAccess
+    {
+        return new CheckDigitalEcnAccess($this->params, $this->client);
+    }
+
+    public function validateEcnData(): ValidateEcnData
+    {
+        return new ValidateEcnData($this->params, $this->client);
+    }
+
+    public function ecn(): Ecn
+    {
+        return new Ecn($this->params, $this->client);
+    }
+
     public function expeditorOffer(): ExpeditorOffer
     {
         return new ExpeditorOffer($this->params, $this->client);
-    }
-
-    public function payment(): Payment
-    {
-        return new Payment($this->params, $this->client);
     }
 
     public function itinerary(): Itinerary
@@ -186,14 +201,14 @@ final class OrderId extends AbstractBuilder
         return new OriginalDocsReject($this->params, $this->client);
     }
 
+    public function signedDocument(): SignedDocument
+    {
+        return new SignedDocument($this->params, $this->client);
+    }
+
     public function simpleDocument(): SimpleDocument
     {
         return new SimpleDocument($this->params, $this->client);
-    }
-
-    public function actNonDeliveryCar(): ActNonDeliveryCar
-    {
-        return new ActNonDeliveryCar($this->params, $this->client);
     }
 
     public function negotiate(): Negotiate
@@ -214,6 +229,81 @@ final class OrderId extends AbstractBuilder
     public function truckDriverPatch(): TruckDriverPatch
     {
         return new TruckDriverPatch($this->params, $this->client);
+    }
+
+    public function claim(): Claim
+    {
+        return new Claim($this->params, $this->client);
+    }
+
+    public function downtimeClaimCalculate(): DowntimeClaimCalculate
+    {
+        return new DowntimeClaimCalculate($this->params, $this->client);
+    }
+
+    public function downtimeClaim(): DowntimeClaim
+    {
+        return new DowntimeClaim($this->params, $this->client);
+    }
+
+    public function downtimeClaimProof(): DowntimeClaimProof
+    {
+        return new DowntimeClaimProof($this->params, $this->client);
+    }
+
+    public function downtimeClaimPdf(): DowntimeClaimPdf
+    {
+        return new DowntimeClaimPdf($this->params, $this->client);
+    }
+
+    public function downtimeClaimSign(): DowntimeClaimSign
+    {
+        return new DowntimeClaimSign($this->params, $this->client);
+    }
+
+    public function downtimeClaimCancel(): DowntimeClaimCancel
+    {
+        return new DowntimeClaimCancel($this->params, $this->client);
+    }
+
+    public function expeditorDowntimeClaimRejectPreview(): ExpeditorDowntimeClaimRejectPreview
+    {
+        return new ExpeditorDowntimeClaimRejectPreview($this->params, $this->client);
+    }
+
+    public function expeditorDowntimeClaimRejectPdf(): ExpeditorDowntimeClaimRejectPdf
+    {
+        return new ExpeditorDowntimeClaimRejectPdf($this->params, $this->client);
+    }
+
+    public function expeditorDowntimeClaimReject(): ExpeditorDowntimeClaimReject
+    {
+        return new ExpeditorDowntimeClaimReject($this->params, $this->client);
+    }
+
+    public function expeditorDowntimeClaimApprovePdf(): ExpeditorDowntimeClaimApprovePdf
+    {
+        return new ExpeditorDowntimeClaimApprovePdf($this->params, $this->client);
+    }
+
+    public function expeditorDowntimeClaimApprove(): ExpeditorDowntimeClaimApprove
+    {
+        return new ExpeditorDowntimeClaimApprove($this->params, $this->client);
+    }
+
+    public function roadmap(): Roadmap
+    {
+        return new Roadmap($this->params, $this->client);
+    }
+
+    public function chat(): Chat
+    {
+        return new Chat($this->params, $this->client);
+    }
+
+    public function payment(): Payment
+    {
+        return new Payment($this->params, $this->client);
     }
 
     public function carrierRefuse(): CarrierRefuse
@@ -311,26 +401,6 @@ final class OrderId extends AbstractBuilder
         return new ProxyTemplate($this->params, $this->client);
     }
 
-    public function waybillTemplateAdditionalData(): WaybillTemplateAdditionalData
-    {
-        return new WaybillTemplateAdditionalData($this->params, $this->client);
-    }
-
-    public function waybillTemplate(): WaybillTemplate
-    {
-        return new WaybillTemplate($this->params, $this->client);
-    }
-
-    public function waybillAdditionalInfo(): WaybillAdditionalInfo
-    {
-        return new WaybillAdditionalInfo($this->params, $this->client);
-    }
-
-    public function waybillTemplateGp(): WaybillTemplateGp
-    {
-        return new WaybillTemplateGp($this->params, $this->client);
-    }
-
     public function generalPartnerDocument(): GeneralPartnerDocument
     {
         return new GeneralPartnerDocument($this->params, $this->client);
@@ -391,89 +461,9 @@ final class OrderId extends AbstractBuilder
         return new ExpeditorAssignment($this->params, $this->client);
     }
 
-    public function pointDiff(): PointDiff
+    public function comment(): Comment
     {
-        return new PointDiff($this->params, $this->client);
-    }
-
-    public function downtimeClaimCalculate(): DowntimeClaimCalculate
-    {
-        return new DowntimeClaimCalculate($this->params, $this->client);
-    }
-
-    public function downtimeClaim(): DowntimeClaim
-    {
-        return new DowntimeClaim($this->params, $this->client);
-    }
-
-    public function downtimeClaimProof(): DowntimeClaimProof
-    {
-        return new DowntimeClaimProof($this->params, $this->client);
-    }
-
-    public function downtimeClaimPreview(): DowntimeClaimPreview
-    {
-        return new DowntimeClaimPreview($this->params, $this->client);
-    }
-
-    public function downtimeClaimSign(): DowntimeClaimSign
-    {
-        return new DowntimeClaimSign($this->params, $this->client);
-    }
-
-    public function downtimeClaimCancel(): DowntimeClaimCancel
-    {
-        return new DowntimeClaimCancel($this->params, $this->client);
-    }
-
-    public function downtimeClaimRefuse(): DowntimeClaimRefuse
-    {
-        return new DowntimeClaimRefuse($this->params, $this->client);
-    }
-
-    public function downtimeClaimApprove(): DowntimeClaimApprove
-    {
-        return new DowntimeClaimApprove($this->params, $this->client);
-    }
-
-    public function carrierAsk(): CarrierAsk
-    {
-        return new CarrierAsk($this->params, $this->client);
-    }
-
-    public function carrierAskStat(): CarrierAskStat
-    {
-        return new CarrierAskStat($this->params, $this->client);
-    }
-
-    public function fixPrice(): FixPrice
-    {
-        return new FixPrice($this->params, $this->client);
-    }
-
-    public function sign(): Sign
-    {
-        return new Sign($this->params, $this->client);
-    }
-
-    public function carrierSign(): CarrierSign
-    {
-        return new CarrierSign($this->params, $this->client);
-    }
-
-    public function checkDigitalEcnAccess(): CheckDigitalEcnAccess
-    {
-        return new CheckDigitalEcnAccess($this->params, $this->client);
-    }
-
-    public function validateEcnData(): ValidateEcnData
-    {
-        return new ValidateEcnData($this->params, $this->client);
-    }
-
-    public function ecn(): Ecn
-    {
-        return new Ecn($this->params, $this->client);
+        return new Comment($this->params, $this->client);
     }
 
     public function xClone(): XClone
@@ -536,19 +526,29 @@ final class OrderId extends AbstractBuilder
         return new ModerationApprove($this->params, $this->client);
     }
 
-    public function roadmap(): Roadmap
+    public function fixPrice(): FixPrice
     {
-        return new Roadmap($this->params, $this->client);
+        return new FixPrice($this->params, $this->client);
     }
 
-    public function chat(): Chat
+    public function sign(): Sign
     {
-        return new Chat($this->params, $this->client);
+        return new Sign($this->params, $this->client);
     }
 
-    public function comment(): Comment
+    public function carrierSign(): CarrierSign
     {
-        return new Comment($this->params, $this->client);
+        return new CarrierSign($this->params, $this->client);
+    }
+
+    public function carrierAsk(): CarrierAsk
+    {
+        return new CarrierAsk($this->params, $this->client);
+    }
+
+    public function carrierAskStat(): CarrierAskStat
+    {
+        return new CarrierAskStat($this->params, $this->client);
     }
 
     public function get(): OrderIdGet

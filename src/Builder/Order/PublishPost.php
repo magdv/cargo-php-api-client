@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order;
 
 use Cargomart\ApiClient\AbstractRequest;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderCardResponse;
 use Cargomart\ApiClient\Entity\Order\OrderPublish\Requests\OrderPublishRequestData;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderCardResponse;
 
 class PublishPost extends AbstractRequest
 {

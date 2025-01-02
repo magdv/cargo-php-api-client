@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\OrderInvoiceRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderInvoiceResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Requests\OrderInvoiceRequest;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderInvoiceResponse;
 
 class InvoiceGpCarrierPut extends AbstractRequest
 {

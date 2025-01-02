@@ -10,12 +10,13 @@ namespace Cargomart\ApiClient\Entity\Configuration\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Company\Objects\CompanyShort;
+use Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationCommercialConditions;
 use Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationConsignorContractManager;
 use Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationFeatures;
 use Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationFiles;
 use Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationMobileApp;
 use Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationPermissions;
-use Cargomart\ApiClient\Entity\Expeditor\Objects\ExpeditorContract;
+use Cargomart\ApiClient\Entity\Expeditor\Common\Objects\ExpeditorContract;
 use Cargomart\ApiClient\Entity\GeneralPartner\Objects\GeneralPartnerContract;
 use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 
@@ -42,6 +43,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
  * @property \stdClass $extraValues
  * @property ConfigurationFiles $files
  * @property ConfigurationConsignorContractManager $consignorContractManager
+ * @property ConfigurationCommercialConditions $commercialConditions
  */
 final class ConfigurationResponseData extends AbstractEntity
 {
@@ -53,8 +55,8 @@ final class ConfigurationResponseData extends AbstractEntity
         'expeditorCurators' => ['array', 'Cargomart\ApiClient\Entity\User\Objects\UserContactShort'],
         'expeditorContractStatus' => ['string'],
         'expeditorContractComment' => ['string'],
-        'expeditorConsignorContract' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ExpeditorContract'],
-        'expeditorCarrierContract' => ['Cargomart\ApiClient\Entity\Expeditor\Objects\ExpeditorContract'],
+        'expeditorConsignorContract' => ['Cargomart\ApiClient\Entity\Expeditor\Common\Objects\ExpeditorContract'],
+        'expeditorCarrierContract' => ['Cargomart\ApiClient\Entity\Expeditor\Common\Objects\ExpeditorContract'],
         'generalPartnerConsignorContract' => [
             'array',
             'Cargomart\ApiClient\Entity\GeneralPartner\Objects\GeneralPartnerContract',
@@ -71,6 +73,7 @@ final class ConfigurationResponseData extends AbstractEntity
         'consignorContractManager' => [
             'Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationConsignorContractManager',
         ],
+        'commercialConditions' => ['Cargomart\ApiClient\Entity\Configuration\Objects\ConfigurationCommercialConditions'],
     ];
 
     protected static $nullables = [
@@ -94,5 +97,6 @@ final class ConfigurationResponseData extends AbstractEntity
         'extraValues' => true,
         'files' => false,
         'consignorContractManager' => false,
+        'commercialConditions' => false,
     ];
 }

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Expeditor\Ac;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Responses\AcCuratorResponse;
+use Cargomart\ApiClient\Entity\Curator\Responses\AcCuratorResponse;
 
 class CuratorGet extends AbstractRequest
 {

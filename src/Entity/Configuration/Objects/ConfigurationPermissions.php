@@ -121,6 +121,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $viewContractConclusion
  * @property bool $viewMainSearch
  * @property bool $orderMultiCurrencyParam
+ * @property bool $viewClaimList
  */
 final class ConfigurationPermissions extends AbstractEntity
 {
@@ -232,6 +233,7 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewContractConclusion' => ['bool'],
         'viewMainSearch' => ['bool'],
         'orderMultiCurrencyParam' => ['bool'],
+        'viewClaimList' => ['bool'],
     ];
 
     protected static $nullables = [
@@ -342,5 +344,6 @@ final class ConfigurationPermissions extends AbstractEntity
         'viewContractConclusion' => false,
         'viewMainSearch' => false,
         'orderMultiCurrencyParam' => false,
+        'viewClaimList' => false,
     ];
 }

@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\OrderEditRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderEditResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Requests\OrderEditRequest;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderEditResponse;
 
 class OrderIdPatch extends AbstractRequest
 {

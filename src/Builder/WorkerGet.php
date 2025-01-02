@@ -14,7 +14,7 @@ use Cargomart\ApiClient\Entity\Worker\Responses\WorkerListResponse;
 class WorkerGet extends AbstractRequest
 {
     /** @var string[][] */
-    public $query = ['filter[blockedStatus]' => 'active', 'page' => 1, 'perPage' => 20];
+    public $query = ['page' => 1, 'perPage' => 20];
 
     /** @var string[] */
     public $headers = [];

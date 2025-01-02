@@ -27,6 +27,7 @@ use Cargomart\ApiClient\Entity\Truck\Objects\Vehicle;
  * @property string[] $phones
  * @property int[] $ptsFileIds
  * @property bool $isTrackingAllowed
+ * @property string $ownerCountryCode
  */
 final class TruckItemInV2 extends AbstractEntity
 {
@@ -41,6 +42,7 @@ final class TruckItemInV2 extends AbstractEntity
         'phones' => ['array', 'string'],
         'ptsFileIds' => ['array', 'int'],
         'isTrackingAllowed' => ['bool'],
+        'ownerCountryCode' => ['string'],
     ];
 
     protected static $nullables = [
@@ -54,5 +56,6 @@ final class TruckItemInV2 extends AbstractEntity
         'phones' => false,
         'ptsFileIds' => false,
         'isTrackingAllowed' => false,
+        'ownerCountryCode' => false,
     ];
 }

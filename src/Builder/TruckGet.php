@@ -98,11 +98,11 @@ class TruckGet extends AbstractRequest
     /**
      * Фильтрация по Статусу. 0 - без ПТС, 1 - на модерации, 2 - одобрено, 3 - отклонено.
      *
-     * @var null|int $value
+     * @var null|string $value
      *
      * @return self
      */
-    public function qFilterStatus(?int $value): self
+    public function qFilterStatus(?string $value): self
     {
         $c = clone $this;
         if (null === $value) {

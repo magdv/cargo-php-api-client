@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\ExpeditorProposal\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Requests\ProposalRefuseCarrierRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Responses\ProposalCardResponse;
+use Cargomart\ApiClient\Entity\Expeditor\Common\Requests\ProposalRefuseCarrierRequest;
+use Cargomart\ApiClient\Entity\Expeditor\Common\Responses\ProposalCardResponse;
 
 class RefuseCarrierPost extends AbstractRequest
 {

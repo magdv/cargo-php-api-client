@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\OrderEcn\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\Order\Objects\CheckItem;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\CheckItem;
 
 /**
  * Данные
@@ -19,6 +19,6 @@ use Cargomart\ApiClient\Entity\Order\Objects\CheckItem;
  */
 final class OrderEcnCheckAccessResponseData extends AbstractEntity
 {
-    protected static $types = ['check' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\CheckItem']];
+    protected static $types = ['check' => ['array', 'Cargomart\ApiClient\Entity\Order\Common\Objects\CheckItem']];
     protected static $nullables = ['check' => false];
 }

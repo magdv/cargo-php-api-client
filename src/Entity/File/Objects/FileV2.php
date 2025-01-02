@@ -20,6 +20,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $mime
  * @property int $size
  * @property string $url
+ * @property string $sha1
  */
 final class FileV2 extends AbstractEntity
 {
@@ -30,6 +31,7 @@ final class FileV2 extends AbstractEntity
         'mime' => ['string'],
         'size' => ['int'],
         'url' => ['string'],
+        'sha1' => ['string'],
     ];
 
     protected static $nullables = [
@@ -39,5 +41,6 @@ final class FileV2 extends AbstractEntity
         'mime' => false,
         'size' => false,
         'url' => false,
+        'sha1' => false,
     ];
 }

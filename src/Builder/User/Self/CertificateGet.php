@@ -14,7 +14,7 @@ use Cargomart\ApiClient\Entity\DigitalSignature\Responses\UserCertificateListRes
 class CertificateGet extends AbstractRequest
 {
     /** @var string[][] */
-    public $query = ['filter[proxyType]' => 'user'];
+    public $query = [];
 
     /** @var string[] */
     public $headers = [];

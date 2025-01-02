@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderDraftFtl;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderDraftFtlConditionsResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderDraftFtlConditionsResponse;
 
 class ConditionsGet extends AbstractRequest
 {

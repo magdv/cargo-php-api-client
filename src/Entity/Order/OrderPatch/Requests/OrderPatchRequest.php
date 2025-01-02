@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\OrderPatch\Requests;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftRoutePoint;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\OrderDraftRoutePoint;
 
 /**
  * Данные для создания запроса на изменение заказа
@@ -50,7 +50,7 @@ final class OrderPatchRequest extends AbstractEntity
         'device' => ['array', 'string'],
         'conditions' => ['array', 'string'],
         'comment' => ['\stdClass'],
-        'points' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDraftRoutePoint'],
+        'points' => ['array', 'Cargomart\ApiClient\Entity\Order\Common\Objects\OrderDraftRoutePoint'],
         'externalId' => ['string'],
         'tag' => ['array', 'string'],
         'commentForConsignor' => ['string'],

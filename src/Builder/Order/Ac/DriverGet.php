@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\Ac;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\AcDriverResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\AcDriverResponse;
 
 class DriverGet extends AbstractRequest
 {

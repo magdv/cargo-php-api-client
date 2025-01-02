@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\BidPushRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\BidLastResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Requests\BidPushRequest;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\BidLastResponse;
 
 class BidPost extends AbstractRequest
 {

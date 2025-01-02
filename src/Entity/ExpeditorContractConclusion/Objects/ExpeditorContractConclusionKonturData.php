@@ -22,6 +22,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $inn
  * @property string $ogrn
  * @property string $okpo
+ * @property string $kpp
  * @property int $legalStatusId
  * @property string $registrationDate
  * @property ExpeditorContractConclusionKonturDataSigners[] $signers
@@ -37,6 +38,7 @@ final class ExpeditorContractConclusionKonturData extends AbstractEntity
         'inn' => ['string'],
         'ogrn' => ['string'],
         'okpo' => ['string'],
+        'kpp' => ['string'],
         'legalStatusId' => ['int'],
         'registrationDate' => ['string'],
         'signers' => [
@@ -54,6 +56,7 @@ final class ExpeditorContractConclusionKonturData extends AbstractEntity
         'inn' => false,
         'ogrn' => false,
         'okpo' => false,
+        'kpp' => false,
         'legalStatusId' => false,
         'registrationDate' => false,
         'signers' => false,

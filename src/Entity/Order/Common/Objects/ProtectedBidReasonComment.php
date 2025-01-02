@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file Внимание! Файл сгенерирован автоматически. Не вносить правки.
+ */
+
+declare(strict_types=1);
+
+namespace Cargomart\ApiClient\Entity\Order\Common\Objects;
+
+use Cargomart\ApiClient\AbstractEntity;
+
+/**
+ * Пункт маршрута
+ * source: order/Common/objects/protected-bid-reason-comment.json
+ *
+ * @property int $type
+ * @property string $comment
+ */
+final class ProtectedBidReasonComment extends AbstractEntity
+{
+    protected static $types = ['type' => ['int'], 'comment' => ['string']];
+    protected static $nullables = ['type' => false, 'comment' => false];
+}

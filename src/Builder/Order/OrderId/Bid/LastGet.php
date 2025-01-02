@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId\Bid;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\BidLastResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\BidLastResponse;
 
 class LastGet extends AbstractRequest
 {

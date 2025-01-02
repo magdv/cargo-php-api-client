@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Entity\OrderDraft\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Base\TemperatureRange;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderDraftRoutePoint;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\OrderDraftRoutePoint;
 
 /**
  * Набор полей объекта ftl заказа
@@ -65,7 +65,7 @@ final class OrderDraftFtlFields extends AbstractEntity
         'companyBranchId' => ['int'],
         'contact' => ['array', 'int'],
         'externalId' => ['string'],
-        'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderDraftRoutePoint'],
+        'routePoint' => ['array', 'Cargomart\ApiClient\Entity\Order\Common\Objects\OrderDraftRoutePoint'],
         'truckTypeId' => ['int'],
         'cargoWeight' => ['float'],
         'cargoCapacity' => ['int'],

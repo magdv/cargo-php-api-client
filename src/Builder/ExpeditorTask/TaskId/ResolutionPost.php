@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\ExpeditorTask\TaskId;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
-use Cargomart\ApiClient\Entity\Expeditor\ExpeditorTask\Requests\ExpeditorTaskResolutionRequest;
+use Cargomart\ApiClient\Entity\ExpeditorTask\Requests\ExpeditorTaskResolutionRequest;
 
 class ResolutionPost extends AbstractRequest
 {

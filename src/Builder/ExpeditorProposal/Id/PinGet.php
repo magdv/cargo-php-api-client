@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\ExpeditorProposal\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Expeditor\Responses\ProposalUsersListResponse;
+use Cargomart\ApiClient\Entity\Expeditor\Common\Responses\ProposalUsersListResponse;
 
 class PinGet extends AbstractRequest
 {

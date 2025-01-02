@@ -12,7 +12,7 @@ use Cargomart\ApiClient\AbstractEntity;
 
 /**
  * Объект простоя по конкретному пункту погрузки/выгрузки заявки
- * source: order/OrderDowntimeClaim/objects/order-downtime-point.json
+ * source: order/OrderDowntimeClaim/objects/OrderDowntimePoint.json
  *
  * @property \stdClass $id
  * @property Downtime $downtime

@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Entity\OrderConditions\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\ExpeditorCarrierContract\Objects\ContractItem;
-use Cargomart\ApiClient\Entity\Order\Objects\ExpeditorContractConclusionSettings;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\ExpeditorContractConclusionSettings;
 
 /**
  * Условия перевозки для работы с экспедитором
@@ -27,7 +27,9 @@ final class OrderConditionsExpeditor extends AbstractEntity
         'paymentDetails' => ['string'],
         'currencyCode' => ['string'],
         'expeditorContract' => ['Cargomart\ApiClient\Entity\ExpeditorCarrierContract\Objects\ContractItem'],
-        'expeditorContractConclusion' => ['Cargomart\ApiClient\Entity\Order\Objects\ExpeditorContractConclusionSettings'],
+        'expeditorContractConclusion' => [
+            'Cargomart\ApiClient\Entity\Order\Common\Objects\ExpeditorContractConclusionSettings',
+        ],
     ];
 
     protected static $nullables = [

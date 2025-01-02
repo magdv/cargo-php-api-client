@@ -13,6 +13,7 @@ use Cargomart\ApiClient\Builder\OrderDraftExpeditor\Conditions;
 use Cargomart\ApiClient\Builder\OrderDraftExpeditor\DraftId;
 use Cargomart\ApiClient\Builder\OrderDraftExpeditor\Price;
 use Cargomart\ApiClient\Builder\OrderDraftExpeditor\PriceV2;
+use Cargomart\ApiClient\Builder\OrderDraftExpeditor\RecommendedPrice;
 use Cargomart\ApiClient\Builder\OrderDraftExpeditor\StepBid;
 use Cargomart\ApiClient\Builder\OrderDraftExpeditor\Validate;
 
@@ -38,6 +39,11 @@ final class OrderDraftExpeditor extends AbstractBuilder
     public function conditions(): Conditions
     {
         return new Conditions($this->params, $this->client);
+    }
+
+    public function recommendedPrice(): RecommendedPrice
+    {
+        return new RecommendedPrice($this->params, $this->client);
     }
 
     public function priceV2(): PriceV2

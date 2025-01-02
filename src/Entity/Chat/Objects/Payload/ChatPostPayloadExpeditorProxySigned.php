@@ -19,6 +19,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $signDate
  * @property string $fileUrl
  * @property string $signFileUrl
+ * @property string $proxyPackUrl
  */
 final class ChatPostPayloadExpeditorProxySigned extends AbstractEntity
 {
@@ -28,6 +29,7 @@ final class ChatPostPayloadExpeditorProxySigned extends AbstractEntity
         'signDate' => ['string'],
         'fileUrl' => ['string'],
         'signFileUrl' => ['string'],
+        'proxyPackUrl' => ['string'],
     ];
 
     protected static $nullables = [
@@ -36,5 +38,6 @@ final class ChatPostPayloadExpeditorProxySigned extends AbstractEntity
         'signDate' => false,
         'fileUrl' => false,
         'signFileUrl' => false,
+        'proxyPackUrl' => false,
     ];
 }
