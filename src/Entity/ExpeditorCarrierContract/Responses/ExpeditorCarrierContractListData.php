@@ -17,14 +17,18 @@ use Cargomart\ApiClient\Entity\ExpeditorCarrierContract\Objects\ContractItem;
  * source: expeditor-carrier-contract/responses/expeditor-carrier-contract-list.json#/properties/data
  *
  * @property ContractItem[] $contracts
+ * @property ExpeditorCarrierContractListDataCommercialConditions $commercialConditions
  * @property Pagination $pagination
  */
 final class ExpeditorCarrierContractListData extends AbstractEntity
 {
     protected static $types = [
         'contracts' => ['array', 'Cargomart\ApiClient\Entity\ExpeditorCarrierContract\Objects\ContractItem'],
+        'commercialConditions' => [
+            'Cargomart\ApiClient\Entity\ExpeditorCarrierContract\Responses\ExpeditorCarrierContractListDataCommercialConditions',
+        ],
         'pagination' => ['Cargomart\ApiClient\Entity\Base\Pagination'],
     ];
 
-    protected static $nullables = ['contracts' => false, 'pagination' => false];
+    protected static $nullables = ['contracts' => false, 'commercialConditions' => false, 'pagination' => false];
 }

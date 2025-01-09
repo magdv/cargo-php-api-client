@@ -13,7 +13,7 @@ use Cargomart\ApiClient\Entity\Base\DateTimeSeparateRequired;
 
 /**
  * Данные претензии о простое по конкретной точке
- * source: order/OrderDowntimeClaim/objects/order-downtime-claim-point-fields.json#/properties/data
+ * source: order/OrderDowntimeClaim/objects/OrderDowntimeClaimPointFields.json#/properties/data
  *
  * @property DateTimeSeparateRequired $actualArrival
  * @property DateTimeSeparateRequired $actualDeparture

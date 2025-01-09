@@ -12,7 +12,7 @@ use Cargomart\ApiClient\AbstractEntity;
 
 /**
  * Ответ с созданной претензией о простое по заявке
- * source: order/OrderDowntimeClaim/responses/order-downtime-claim-response.json
+ * source: order/OrderDowntimeClaim/responses/OrderDowntimeClaimResponse.json
  *
  * @property OrderDowntimeClaimResponseData $data
  */

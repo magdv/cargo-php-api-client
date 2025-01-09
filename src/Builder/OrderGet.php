@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderListResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderListResponse;
 
 class OrderGet extends AbstractRequest
 {
@@ -52,6 +52,25 @@ class OrderGet extends AbstractRequest
             unset($c->headers['X-Modify-From-Event']);
         } else {
             $c->headers['X-Modify-From-Event'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
+     * От дочерних компаний true, от головной компании false
+     *
+     * @var null|bool $value
+     *
+     * @return self
+     */
+    public function qFilterCompanyBranch(?bool $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['filter[companyBranch]']);
+        } else {
+            $c->query['filter[companyBranch]'] = $value;
         }
 
         return $c;
@@ -611,7 +630,7 @@ class OrderGet extends AbstractRequest
     /**
      * Массив id статусов заказов. 100 - нет ставок, 250 - не подтвержден, 240 - подтвержден, 110 - отказ перевозчика, 120 - отказ отправителя, 6 - в рейсе, 7 - исполнен, 21 - на модерации, 22 - отклонен с модерации.
      *
-     * @var null|int[] $value
+     * @var null|string[] $value
      *
      * @return self
      */
@@ -1029,7 +1048,7 @@ class OrderGet extends AbstractRequest
     /**
      * Статус последнего патча заказа
      *
-     * @var null|int[] $value
+     * @var null|string[] $value
      *
      * @return self
      */

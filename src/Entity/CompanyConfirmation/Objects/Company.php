@@ -12,7 +12,7 @@ use Cargomart\ApiClient\AbstractEntity;
 
 /**
  * Экспортная информация по компании для заказ
- * source: company-confirmation/objects/company.json
+ * source: company-confirmation/objects/company-confirmation-company.json
  *
  * @property string $role
  * @property string $shortName

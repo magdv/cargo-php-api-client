@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderEditResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderEditResponse;
 
 class XClonePost extends AbstractRequest
 {

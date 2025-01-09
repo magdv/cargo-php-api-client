@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\Ac;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\AcTagResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\AcTagResponse;
 
 class TagGet extends AbstractRequest
 {

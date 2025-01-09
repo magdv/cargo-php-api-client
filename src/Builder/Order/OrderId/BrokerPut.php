@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\BrokerPutRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\BrokerResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Requests\BrokerPutRequest;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\BrokerResponse;
 
 class BrokerPut extends AbstractRequest
 {

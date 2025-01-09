@@ -15,8 +15,8 @@ use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckDevice;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckMode;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckType;
 use Cargomart\ApiClient\Entity\Locality\Objects\Locality;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderCondition;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderShort;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\OrderCondition;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\OrderShort;
 use Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchItem;
 use Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchStatusType;
 
@@ -42,9 +42,9 @@ final class OrderPatchResponseData extends AbstractEntity
         'truckMode' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TruckMode'],
         'loadingType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\LoadingType'],
         'device' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TruckDevice'],
-        'condition' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderCondition'],
+        'condition' => ['array', 'Cargomart\ApiClient\Entity\Order\Common\Objects\OrderCondition'],
         'locality' => ['array', 'Cargomart\ApiClient\Entity\Locality\Objects\Locality'],
-        'order' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderShort'],
+        'order' => ['Cargomart\ApiClient\Entity\Order\Common\Objects\OrderShort'],
         'orderPatchStatuses' => ['array', 'Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchStatusType'],
         'orderPatch' => ['Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchItem'],
     ];

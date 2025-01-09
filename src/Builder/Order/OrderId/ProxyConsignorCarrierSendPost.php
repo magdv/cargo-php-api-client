@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
-use Cargomart\ApiClient\Entity\Order\Requests\ProxyPublicLinkDataRequest;
+use Cargomart\ApiClient\Entity\Order\Common\Requests\ProxyPublicLinkDataRequest;
 
 class ProxyConsignorCarrierSendPost extends AbstractRequest
 {

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Tracking\Id;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\TrackingItem;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\TrackingItem;
 
 class ActivePost extends AbstractRequest
 {

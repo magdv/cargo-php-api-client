@@ -35,6 +35,7 @@ use Cargomart\ApiClient\Entity\Truck\Objects\Vehicle;
  * @property string $companyOwnerAddress
  * @property ActualCarrier $actualCarrier
  * @property string $companyOwnerCountryCode
+ * @property string $ownerCountryCode
  * @property string[] $phones
  * @property int[] $truckIds
  */
@@ -60,6 +61,7 @@ final class ChatPostPayloadTruckChangeV2Truck extends AbstractEntity
         'companyOwnerAddress' => ['string'],
         'actualCarrier' => ['Cargomart\ApiClient\Entity\Truck\Objects\ActualCarrier'],
         'companyOwnerCountryCode' => ['string'],
+        'ownerCountryCode' => ['string'],
         'phones' => ['array', 'string'],
         'truckIds' => ['array', 'int'],
     ];
@@ -84,6 +86,7 @@ final class ChatPostPayloadTruckChangeV2Truck extends AbstractEntity
         'companyOwnerAddress' => false,
         'actualCarrier' => false,
         'companyOwnerCountryCode' => false,
+        'ownerCountryCode' => false,
         'phones' => false,
         'truckIds' => false,
     ];

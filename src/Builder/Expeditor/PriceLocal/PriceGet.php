@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Expeditor\PriceLocal;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Expeditor\PriceLocal\Responses\PriceLocalListResponse;
+use Cargomart\ApiClient\Entity\PriceLocal\Responses\PriceLocalListResponse;
 
 class PriceGet extends AbstractRequest
 {

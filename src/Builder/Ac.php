@@ -19,13 +19,13 @@ final class Ac extends AbstractBuilder
 {
     protected const URL = '/api/v2/ac';
 
-    public function storagePoint(): StoragePoint
-    {
-        return new StoragePoint($this->params, $this->client);
-    }
-
     public function priceLocalPool(): PriceLocalPool
     {
         return new PriceLocalPool($this->params, $this->client);
+    }
+
+    public function storagePoint(): StoragePoint
+    {
+        return new StoragePoint($this->params, $this->client);
     }
 }

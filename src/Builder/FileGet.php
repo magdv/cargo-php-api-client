@@ -14,7 +14,7 @@ use Cargomart\ApiClient\Entity\File\Responses\FileList;
 class FileGet extends AbstractRequest
 {
     /** @var string[][] */
-    public $query = ['filter[fileType]' => 'document'];
+    public $query = [];
 
     /** @var string[] */
     public $headers = [];

@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Expeditor\PriceLocal\Price;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Expeditor\PriceLocal\Requests\PriceLocalEditRequest;
-use Cargomart\ApiClient\Entity\Expeditor\PriceLocal\Responses\PriceLocalItemResponse;
+use Cargomart\ApiClient\Entity\PriceLocal\Requests\PriceLocalEditRequest;
+use Cargomart\ApiClient\Entity\PriceLocal\Responses\PriceLocalItemResponse;
 
 class PriceIdPut extends AbstractRequest
 {

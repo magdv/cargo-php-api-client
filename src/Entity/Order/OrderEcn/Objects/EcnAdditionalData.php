@@ -9,9 +9,9 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\OrderEcn\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\Order\Objects\NotifyParamItem;
-use Cargomart\ApiClient\Entity\Order\Objects\WaybillDate;
-use Cargomart\ApiClient\Entity\Order\Objects\WaybillWeight;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\NotifyParamItem;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\WaybillDate;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\WaybillWeight;
 
 /**
  * Данные для генерации накладной
@@ -47,14 +47,14 @@ final class EcnAdditionalData extends AbstractEntity
         'packingMethod' => ['string'],
         'containerType' => ['string'],
         'packagesNumber' => ['int'],
-        'weight' => ['Cargomart\ApiClient\Entity\Order\Objects\WaybillWeight'],
-        'arrival' => ['Cargomart\ApiClient\Entity\Order\Objects\WaybillDate'],
-        'departure' => ['Cargomart\ApiClient\Entity\Order\Objects\WaybillDate'],
+        'weight' => ['Cargomart\ApiClient\Entity\Order\Common\Objects\WaybillWeight'],
+        'arrival' => ['Cargomart\ApiClient\Entity\Order\Common\Objects\WaybillDate'],
+        'departure' => ['Cargomart\ApiClient\Entity\Order\Common\Objects\WaybillDate'],
         'documents' => ['Cargomart\ApiClient\Entity\Order\OrderEcn\Objects\EcnAdditionalDataDocuments'],
         'loaderPerson' => ['Cargomart\ApiClient\Entity\Order\OrderEcn\Objects\EcnAdditionalDataLoaderPerson'],
         'consignorMark' => ['string'],
         'markComment' => ['string'],
-        'notifyParams' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\NotifyParamItem'],
+        'notifyParams' => ['array', 'Cargomart\ApiClient\Entity\Order\Common\Objects\NotifyParamItem'],
     ];
 
     protected static $nullables = [

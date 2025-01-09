@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\OrderProxyEmailRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderProxyEmailResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Requests\OrderProxyEmailRequest;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderProxyEmailResponse;
 
 class ProxyConsignorEmailPost extends AbstractRequest
 {

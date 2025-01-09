@@ -13,7 +13,7 @@ use Cargomart\ApiClient\Entity\Base\Address;
 use Cargomart\ApiClient\Entity\Base\AddressInfo;
 use Cargomart\ApiClient\Entity\Base\WorkSchedule\WorkSchedule;
 use Cargomart\ApiClient\Entity\Edm\Objects\DiadocBoxIdData;
-use Cargomart\ApiClient\Entity\Order\Objects\RoutePointContactContact;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\RoutePointContactContact;
 use Cargomart\ApiClient\Entity\StoragePoint\Objects\PointShipper;
 
 /**
@@ -73,7 +73,7 @@ final class OrderPatchRoutePointCard extends AbstractEntity
         'house' => ['string'],
         'comment' => ['string'],
         'additionalInfo' => ['string'],
-        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\RoutePointContactContact'],
+        'contact' => ['array', 'Cargomart\ApiClient\Entity\Order\Common\Objects\RoutePointContactContact'],
         'isLoad' => ['bool'],
         'isEdm' => ['bool'],
         'pointShipperDiadocBoxData' => ['Cargomart\ApiClient\Entity\Edm\Objects\DiadocBoxIdData'],

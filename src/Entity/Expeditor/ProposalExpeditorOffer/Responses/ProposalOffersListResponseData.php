@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Entity\Expeditor\ProposalExpeditorOffer\Responses;
 
 use Cargomart\ApiClient\AbstractEntity;
 use Cargomart\ApiClient\Entity\Company\Objects\CompanyShort;
-use Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalExpeditorOffer;
+use Cargomart\ApiClient\Entity\Expeditor\Common\Objects\ProposalExpeditorOffer;
 use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 
 /**
@@ -23,7 +23,7 @@ use Cargomart\ApiClient\Entity\User\Objects\UserContactShort;
 final class ProposalOffersListResponseData extends AbstractEntity
 {
     protected static $types = [
-        'expeditorOffers' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Objects\ProposalExpeditorOffer'],
+        'expeditorOffers' => ['array', 'Cargomart\ApiClient\Entity\Expeditor\Common\Objects\ProposalExpeditorOffer'],
         'contact' => ['array', 'Cargomart\ApiClient\Entity\User\Objects\UserContactShort'],
         'company' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CompanyShort'],
     ];

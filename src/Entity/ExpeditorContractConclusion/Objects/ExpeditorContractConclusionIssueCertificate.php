@@ -19,6 +19,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $lastName
  * @property string $secondName
  * @property string $phone
+ * @property string $availableResendSmsCodeDate
  * @property bool $isPhoneConfirmed
  */
 final class ExpeditorContractConclusionIssueCertificate extends AbstractEntity
@@ -29,6 +30,7 @@ final class ExpeditorContractConclusionIssueCertificate extends AbstractEntity
         'lastName' => ['string'],
         'secondName' => ['string'],
         'phone' => ['string'],
+        'availableResendSmsCodeDate' => ['string'],
         'isPhoneConfirmed' => ['bool'],
     ];
 
@@ -38,6 +40,7 @@ final class ExpeditorContractConclusionIssueCertificate extends AbstractEntity
         'lastName' => false,
         'secondName' => false,
         'phone' => false,
+        'availableResendSmsCodeDate' => false,
         'isPhoneConfirmed' => false,
     ];
 }

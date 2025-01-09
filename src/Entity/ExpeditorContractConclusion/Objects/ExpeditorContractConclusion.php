@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\ExpeditorContractConclusion\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
+use Cargomart\ApiClient\Entity\ExpeditorContractUpdates\Objects\ExpeditorContractUpdatesCommercialCondition;
 
 /**
  * Объект состояния заключения договора
@@ -32,6 +33,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $creatorId
  * @property string $comment
  * @property ExpeditorContractConclusionAccess $access
+ * @property ExpeditorContractUpdatesCommercialCondition[] $commercialConditions
  */
 final class ExpeditorContractConclusion extends AbstractEntity
 {
@@ -62,6 +64,10 @@ final class ExpeditorContractConclusion extends AbstractEntity
         'creatorId' => ['int'],
         'comment' => ['string'],
         'access' => ['Cargomart\ApiClient\Entity\ExpeditorContractConclusion\Objects\ExpeditorContractConclusionAccess'],
+        'commercialConditions' => [
+            'array',
+            'Cargomart\ApiClient\Entity\ExpeditorContractUpdates\Objects\ExpeditorContractUpdatesCommercialCondition',
+        ],
     ];
 
     protected static $nullables = [
@@ -83,5 +89,6 @@ final class ExpeditorContractConclusion extends AbstractEntity
         'creatorId' => false,
         'comment' => false,
         'access' => false,
+        'commercialConditions' => false,
     ];
 }

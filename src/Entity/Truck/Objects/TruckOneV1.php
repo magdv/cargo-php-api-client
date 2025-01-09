@@ -33,6 +33,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $companyOwnerName
  * @property string $companyOwnerAddress
  * @property string $companyOwnerCountryCode
+ * @property string $ownerCountryCode
  * @property string $holderInn
  * @property int $truckModeId
  * @property string[] $phones
@@ -65,6 +66,7 @@ final class TruckOneV1 extends AbstractEntity
         'companyOwnerName' => ['string'],
         'companyOwnerAddress' => ['string'],
         'companyOwnerCountryCode' => ['string'],
+        'ownerCountryCode' => ['string'],
         'holderInn' => ['string'],
         'truckModeId' => ['int'],
         'phones' => ['array', 'string'],
@@ -96,6 +98,7 @@ final class TruckOneV1 extends AbstractEntity
         'companyOwnerName' => false,
         'companyOwnerAddress' => false,
         'companyOwnerCountryCode' => false,
+        'ownerCountryCode' => false,
         'holderInn' => false,
         'truckModeId' => false,
         'phones' => false,

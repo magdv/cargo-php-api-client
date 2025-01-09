@@ -12,6 +12,7 @@ use Cargomart\ApiClient\AbstractBuilder;
 use Cargomart\ApiClient\Builder\Order\Ac;
 use Cargomart\ApiClient\Builder\Order\Broker;
 use Cargomart\ApiClient\Builder\Order\CategoryStatistics;
+use Cargomart\ApiClient\Builder\Order\CmUuid;
 use Cargomart\ApiClient\Builder\Order\Count;
 use Cargomart\ApiClient\Builder\Order\Excel;
 use Cargomart\ApiClient\Builder\Order\Exists;
@@ -28,6 +29,11 @@ final class Order extends AbstractBuilder
 {
     protected const URL = '/api/v2/order';
 
+    public function categoryStatistics(): CategoryStatistics
+    {
+        return new CategoryStatistics($this->params, $this->client);
+    }
+
     public function orderId(string $orderId): OrderId
     {
         $params = $this->params;
@@ -35,9 +41,16 @@ final class Order extends AbstractBuilder
         return new OrderId($params, $this->client);
     }
 
-    public function publish(): Publish
+    public function ac(): Ac
     {
-        return new Publish($this->params, $this->client);
+        return new Ac($this->params, $this->client);
+    }
+
+    public function id(string $id): Id
+    {
+        $params = $this->params;
+        $params['id'] = $id;
+        return new Id($params, $this->client);
     }
 
     public function broker(): Broker
@@ -60,16 +73,16 @@ final class Order extends AbstractBuilder
         return new Count($this->params, $this->client);
     }
 
-    public function id(string $id): Id
+    public function publish(): Publish
     {
-        $params = $this->params;
-        $params['id'] = $id;
-        return new Id($params, $this->client);
+        return new Publish($this->params, $this->client);
     }
 
-    public function categoryStatistics(): CategoryStatistics
+    public function cmUuid(string $cmUuid): CmUuid
     {
-        return new CategoryStatistics($this->params, $this->client);
+        $params = $this->params;
+        $params['cmUuid'] = $cmUuid;
+        return new CmUuid($params, $this->client);
     }
 
     public function excel(): Excel
@@ -80,11 +93,6 @@ final class Order extends AbstractBuilder
     public function import(): Import
     {
         return new Import($this->params, $this->client);
-    }
-
-    public function ac(): Ac
-    {
-        return new Ac($this->params, $this->client);
     }
 
     public function get(): OrderGet

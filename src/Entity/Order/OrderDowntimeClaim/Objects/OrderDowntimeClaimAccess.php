@@ -11,12 +11,13 @@ namespace Cargomart\ApiClient\Entity\Order\OrderDowntimeClaim\Objects;
 use Cargomart\ApiClient\AbstractEntity;
 
 /**
- * source: order/OrderDowntimeClaim/objects/order-downtime-claim.json#/properties/access
+ * source: order/OrderDowntimeClaim/objects/OrderDowntimeClaim.json#/properties/access
  *
  * @property bool $createCancel
  * @property bool $createPreview
  * @property bool $createSign
  * @property bool $createReject
+ * @property bool $createDirectToThirdParty
  * @property bool $createApprove
  */
 final class OrderDowntimeClaimAccess extends AbstractEntity
@@ -26,6 +27,7 @@ final class OrderDowntimeClaimAccess extends AbstractEntity
         'createPreview' => ['bool'],
         'createSign' => ['bool'],
         'createReject' => ['bool'],
+        'createDirectToThirdParty' => ['bool'],
         'createApprove' => ['bool'],
     ];
 
@@ -34,6 +36,7 @@ final class OrderDowntimeClaimAccess extends AbstractEntity
         'createPreview' => false,
         'createSign' => false,
         'createReject' => false,
+        'createDirectToThirdParty' => false,
         'createApprove' => false,
     ];
 }

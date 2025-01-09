@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderDraftExpeditor;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderDraftStepBidResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderDraftStepBidResponse;
 
 class StepBidGet extends AbstractRequest
 {

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Expeditor\ProposalPayment\Requests;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\Order\ExpeditorPayment\Objects\ExpeditorPaymentTransaction;
+use Cargomart\ApiClient\Entity\Order\OrderExpeditorPayment\Objects\ExpeditorPaymentTransaction;
 
 /**
  * Данные для добавления платежей
@@ -28,7 +28,10 @@ final class ProposalPaymentRequest extends AbstractEntity
         'date' => ['string'],
         'status' => ['string'],
         'value' => ['string'],
-        'payments' => ['array', 'Cargomart\ApiClient\Entity\Order\ExpeditorPayment\Objects\ExpeditorPaymentTransaction'],
+        'payments' => [
+            'array',
+            'Cargomart\ApiClient\Entity\Order\OrderExpeditorPayment\Objects\ExpeditorPaymentTransaction',
+        ],
     ];
 
     protected static $nullables = [

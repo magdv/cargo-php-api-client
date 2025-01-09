@@ -19,7 +19,7 @@ use Cargomart\ApiClient\Entity\Base\IdName;
  * @property string $shortName
  * @property string $inn
  * @property string $role
- * @property float $statusId
+ * @property int $statusId
  * @property bool $isMain
  * @property CompanyBranchChild[] $branch
  * @property IdName $parent
@@ -31,7 +31,7 @@ final class CompanyBranchAc extends AbstractEntity
         'shortName' => ['string'],
         'inn' => ['string'],
         'role' => ['string'],
-        'statusId' => ['float'],
+        'statusId' => ['int'],
         'isMain' => ['bool'],
         'branch' => ['array', 'Cargomart\ApiClient\Entity\Company\Objects\CompanyBranchChild'],
         'parent' => ['Cargomart\ApiClient\Entity\Base\IdName'],

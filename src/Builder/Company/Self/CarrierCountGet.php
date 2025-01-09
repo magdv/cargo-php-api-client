@@ -14,7 +14,7 @@ use Cargomart\ApiClient\Entity\Company\Responses\CarrierCountResponse;
 class CarrierCountGet extends AbstractRequest
 {
     /** @var string[][] */
-    public $query = ['relateType' => 'all'];
+    public $query = [];
 
     /** @var string[] */
     public $headers = [];

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\Ac;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\AcPointListResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\AcPointListResponse;
 
 class PointContactsGet extends AbstractRequest
 {

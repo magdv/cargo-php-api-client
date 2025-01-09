@@ -29,6 +29,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property int $validationStatus
  * @property string $affiliationType
  * @property string $companyOwnerCountryCode
+ * @property string $ownerCountryCode
  * @property string $companyOwnerInn
  * @property string $companyOwnerName
  * @property string $companyOwnerAddress
@@ -54,6 +55,7 @@ final class TruckItemInV1 extends AbstractEntity
         'validationStatus' => ['int'],
         'affiliationType' => ['string'],
         'companyOwnerCountryCode' => ['string'],
+        'ownerCountryCode' => ['string'],
         'companyOwnerInn' => ['string'],
         'companyOwnerName' => ['string'],
         'companyOwnerAddress' => ['string'],
@@ -78,6 +80,7 @@ final class TruckItemInV1 extends AbstractEntity
         'validationStatus' => false,
         'affiliationType' => false,
         'companyOwnerCountryCode' => false,
+        'ownerCountryCode' => false,
         'companyOwnerInn' => false,
         'companyOwnerName' => false,
         'companyOwnerAddress' => false,

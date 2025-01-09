@@ -27,10 +27,10 @@ use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckDevice;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckMode;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\TruckType;
 use Cargomart\ApiClient\Entity\Dictionary\Objects\Vat;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderCondition;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderPriceTypeItem;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderRefuseReasonItem;
-use Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentType;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\OrderCondition;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\OrderPriceTypeItem;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\OrderRefuseReasonItem;
+use Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentTypeOption;
 use Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleType;
 
 /**
@@ -56,7 +56,7 @@ use Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleType;
  * @property CarPerPeriod[] $carPerPeriod
  * @property TenderCarriage[] $tenderCarriage
  * @property LegalStatus[] $legalStatus
- * @property OrderDocumentType[] $orderDocumentType
+ * @property OrderDocumentTypeOption[] $orderDocumentType
  * @property SimpleDocumentTitleType[] $simpleDocumentTitleType
  * @property CountryItem[] $country
  * @property ExpeditorTaskType[] $expeditorTaskType
@@ -69,10 +69,10 @@ final class DictionaryListData extends AbstractEntity
         'documentType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\DocumentType'],
         'driverLicense' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\DriverLicense'],
         'loadingType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\LoadingType'],
-        'orderCondition' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderCondition'],
+        'orderCondition' => ['array', 'Cargomart\ApiClient\Entity\Order\Common\Objects\OrderCondition'],
         'paymentType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\PaymentType'],
-        'priceType' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderPriceTypeItem'],
-        'refuseReason' => ['array', 'Cargomart\ApiClient\Entity\Order\Objects\OrderRefuseReasonItem'],
+        'priceType' => ['array', 'Cargomart\ApiClient\Entity\Order\Common\Objects\OrderPriceTypeItem'],
+        'refuseReason' => ['array', 'Cargomart\ApiClient\Entity\Order\Common\Objects\OrderRefuseReasonItem'],
         'timezone' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\Timezone'],
         'truckMode' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TruckMode'],
         'truckType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TruckType'],
@@ -83,7 +83,7 @@ final class DictionaryListData extends AbstractEntity
         'carPerPeriod' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\CarPerPeriod'],
         'tenderCarriage' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\TenderCarriage'],
         'legalStatus' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\LegalStatus'],
-        'orderDocumentType' => ['array', 'Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentType'],
+        'orderDocumentType' => ['array', 'Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentTypeOption'],
         'simpleDocumentTitleType' => ['array', 'Cargomart\ApiClient\Entity\SimpleDocument\Objects\SimpleDocumentTitleType'],
         'country' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\CountryItem'],
         'expeditorTaskType' => ['array', 'Cargomart\ApiClient\Entity\Dictionary\Objects\ExpeditorTaskType'],

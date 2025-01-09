@@ -26,9 +26,5 @@ final class CompanyBranchConsignorBranchParamAdvertiseSettings extends AbstractE
         'advertiseUntilDate' => ['string'],
     ];
 
-    protected static $nullables = [
-        'advertiseStatus' => false,
-        'advertiseSinceDate' => false,
-        'advertiseUntilDate' => false,
-    ];
+    protected static $nullables = ['advertiseStatus' => false, 'advertiseSinceDate' => false, 'advertiseUntilDate' => false];
 }

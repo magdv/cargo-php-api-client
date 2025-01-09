@@ -136,7 +136,7 @@ class ExistsGet extends AbstractRequest
     /**
      * Массив id статусов заказов.
      *
-     * @var null|int[] $value
+     * @var null|string[] $value
      *
      * @return self
      */

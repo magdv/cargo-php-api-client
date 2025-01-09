@@ -17,9 +17,9 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property bool $consignorExpeditorOrders
  * @property bool $expeditorCarrierDocuments
  * @property bool $expeditorCustomer
- * @property bool $newOrderEcnForm
  * @property bool $newOrderEditForm
  * @property bool $commonDraft
+ * @property bool $oneOrderList
  * @property bool $orderDowntimeClaim
  * @property bool $orderFilterNew
  * @property bool $orderRoadmap
@@ -33,9 +33,9 @@ final class ConfigurationFeatures extends AbstractEntity
         'consignorExpeditorOrders' => ['bool'],
         'expeditorCarrierDocuments' => ['bool'],
         'expeditorCustomer' => ['bool'],
-        'newOrderEcnForm' => ['bool'],
         'newOrderEditForm' => ['bool'],
         'commonDraft' => ['bool'],
+        'oneOrderList' => ['bool'],
         'orderDowntimeClaim' => ['bool'],
         'orderFilterNew' => ['bool'],
         'orderRoadmap' => ['bool'],
@@ -48,9 +48,9 @@ final class ConfigurationFeatures extends AbstractEntity
         'consignorExpeditorOrders' => false,
         'expeditorCarrierDocuments' => false,
         'expeditorCustomer' => false,
-        'newOrderEcnForm' => false,
         'newOrderEditForm' => false,
         'commonDraft' => false,
+        'oneOrderList' => false,
         'orderDowntimeClaim' => false,
         'orderFilterNew' => false,
         'orderRoadmap' => false,

@@ -16,6 +16,7 @@ use Cargomart\ApiClient\AbstractEntity;
  *
  * @property ExpeditorContractConclusionValidation[] $validation
  * @property ExpeditorContractConclusionFileGenerateInfo[] $fileGenerateInfo
+ * @property int $konturRequestAttempt
  */
 final class ExpeditorContractConclusionHistory extends AbstractEntity
 {
@@ -28,7 +29,8 @@ final class ExpeditorContractConclusionHistory extends AbstractEntity
             'array',
             'Cargomart\ApiClient\Entity\ExpeditorContractConclusion\Objects\ExpeditorContractConclusionFileGenerateInfo',
         ],
+        'konturRequestAttempt' => ['int'],
     ];
 
-    protected static $nullables = ['validation' => false, 'fileGenerateInfo' => false];
+    protected static $nullables = ['validation' => false, 'fileGenerateInfo' => false, 'konturRequestAttempt' => false];
 }

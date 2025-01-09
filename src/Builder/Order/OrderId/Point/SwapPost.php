@@ -10,7 +10,7 @@ namespace Cargomart\ApiClient\Builder\Order\OrderId\Point;
 
 use Cargomart\ApiClient\AbstractRequest;
 use Cargomart\ApiClient\Entity\Base\Responses\EmptyDataResponse;
-use Cargomart\ApiClient\Entity\Order\Requests\OrderPointEditSwapRequest;
+use Cargomart\ApiClient\Entity\Order\Common\Requests\OrderPointEditSwapRequest;
 
 class SwapPost extends AbstractRequest
 {

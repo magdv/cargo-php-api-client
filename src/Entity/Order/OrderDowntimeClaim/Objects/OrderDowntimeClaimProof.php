@@ -14,7 +14,7 @@ use Cargomart\ApiClient\Entity\Order\OrderDocument\Objects\OrderDocumentPackageA
 
 /**
  * Подтверждение факта простоя для претензии о простое по заявке
- * source: order/OrderDowntimeClaim/objects/order-downtime-claim.json#/properties/proof
+ * source: order/OrderDowntimeClaim/objects/OrderDowntimeClaim.json#/properties/proof
  *
  * @property OrderDocument[] $orderDocuments
  * @property string $id

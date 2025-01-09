@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\OrderSearch;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderSearchCriteriaListResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderSearchCriteriaListResponse;
 
 class TruckGet extends AbstractRequest
 {

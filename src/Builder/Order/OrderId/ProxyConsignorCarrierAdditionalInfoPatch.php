@@ -9,8 +9,8 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order\OrderId;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Requests\OrderAdditionalInfoRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderAdditionalInfoResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Requests\OrderAdditionalInfoRequest;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderAdditionalInfoResponse;
 
 class ProxyConsignorCarrierAdditionalInfoPatch extends AbstractRequest
 {

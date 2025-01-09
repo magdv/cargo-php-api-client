@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderCategoryStatisticsResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderCategoryStatisticsResponse;
 
 class CategoryStatisticsGet extends AbstractRequest
 {

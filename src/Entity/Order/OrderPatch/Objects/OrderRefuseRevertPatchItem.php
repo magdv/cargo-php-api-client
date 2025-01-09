@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Entity\Order\OrderPatch\Objects;
 
 use Cargomart\ApiClient\AbstractEntity;
-use Cargomart\ApiClient\Entity\Order\Objects\OrderRefuseRevertPatchDiffItem;
+use Cargomart\ApiClient\Entity\Order\Common\Objects\OrderRefuseRevertPatchDiffItem;
 
 /**
  * Данные запроса на изменение заказа
@@ -42,8 +42,8 @@ final class OrderRefuseRevertPatchItem extends AbstractEntity
         'creatorId' => ['int'],
         'updateDate' => ['string'],
         'orderId' => ['string'],
-        'oldValues' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderRefuseRevertPatchDiffItem'],
-        'newValues' => ['Cargomart\ApiClient\Entity\Order\Objects\OrderRefuseRevertPatchDiffItem'],
+        'oldValues' => ['Cargomart\ApiClient\Entity\Order\Common\Objects\OrderRefuseRevertPatchDiffItem'],
+        'newValues' => ['Cargomart\ApiClient\Entity\Order\Common\Objects\OrderRefuseRevertPatchDiffItem'],
         'access' => ['Cargomart\ApiClient\Entity\Order\OrderPatch\Objects\OrderPatchAccess'],
     ];
 

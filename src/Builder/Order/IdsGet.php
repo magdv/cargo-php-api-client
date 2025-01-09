@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Cargomart\ApiClient\Builder\Order;
 
 use Cargomart\ApiClient\AbstractRequest;
-use Cargomart\ApiClient\Entity\Order\Responses\OrderIdsResponse;
+use Cargomart\ApiClient\Entity\Order\Common\Responses\OrderIdsResponse;
 
 class IdsGet extends AbstractRequest
 {

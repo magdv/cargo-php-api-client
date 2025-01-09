@@ -14,7 +14,7 @@ use Cargomart\ApiClient\Entity\Base\PriceValue;
 
 /**
  * Объект простоя
- * source: order/OrderDowntimeClaim/objects/downtime.json
+ * source: order/OrderDowntimeClaim/objects/Downtime.json
  *
  * @property PriceValue $fullHourCost
  * @property DateTimeInterval $interval

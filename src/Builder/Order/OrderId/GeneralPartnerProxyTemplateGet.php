@@ -14,7 +14,7 @@ use Cargomart\ApiClient\Entity\Base\Responses\FileLinkResponse;
 class GeneralPartnerProxyTemplateGet extends AbstractRequest
 {
     /** @var string[][] */
-    public $query = ['removeFacsimile' => false];
+    public $query = [];
 
     /** @var string[] */
     public $headers = [];

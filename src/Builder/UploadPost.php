@@ -14,7 +14,7 @@ use Cargomart\ApiClient\Entity\File\Responses\FileV2Item;
 class UploadPost extends AbstractRequest
 {
     /** @var string[][] */
-    public $query = ['type' => 'document'];
+    public $query = [];
 
     /** @var string[] */
     public $headers = [];

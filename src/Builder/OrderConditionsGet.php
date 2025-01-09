@@ -58,6 +58,25 @@ class OrderConditionsGet extends AbstractRequest
     }
 
     /**
+     * Список id пунктов погрузки
+     *
+     * @var null|int[] $value
+     *
+     * @return self
+     */
+    public function qStoragePointIds(?array $value): self
+    {
+        $c = clone $this;
+        if (null === $value) {
+            unset($c->query['storagePointIds']);
+        } else {
+            $c->query['storagePointIds'] = $value;
+        }
+
+        return $c;
+    }
+
+    /**
      * Идентификатор дочерней компании
      *
      * @var null|int $value

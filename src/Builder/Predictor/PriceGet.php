@@ -98,11 +98,11 @@ class PriceGet extends AbstractRequest
     /**
      * Код типа кузова (допустимы пока только тент, реф и изотерм)
      *
-     * @var null|int $value
+     * @var null|string $value
      *
      * @return self
      */
-    public function qTruckType(?int $value): self
+    public function qTruckType(?string $value): self
     {
         $c = clone $this;
         if (null === $value) {

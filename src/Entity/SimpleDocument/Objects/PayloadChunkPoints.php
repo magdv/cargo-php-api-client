@@ -18,6 +18,7 @@ use Cargomart\ApiClient\AbstractEntity;
  * @property string $type
  * @property string $fromDate
  * @property string $fromTime
+ * @property bool $isAccordingToWorkSchedule
  * @property string $toDate
  * @property string $toTime
  * @property string $address
@@ -49,6 +50,7 @@ final class PayloadChunkPoints extends AbstractEntity
         'type' => ['string'],
         'fromDate' => ['string'],
         'fromTime' => ['string'],
+        'isAccordingToWorkSchedule' => ['bool'],
         'toDate' => ['string'],
         'toTime' => ['string'],
         'address' => ['string'],
@@ -79,6 +81,7 @@ final class PayloadChunkPoints extends AbstractEntity
         'type' => false,
         'fromDate' => false,
         'fromTime' => false,
+        'isAccordingToWorkSchedule' => false,
         'toDate' => false,
         'toTime' => false,
         'address' => false,
