@@ -1,0 +1,10 @@
+# # OrderDowntimeClaimCreateProofRequest
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**trn** | [**\MagDv\Cargomart\Dto\OrderDowntimeClaimCreateProofRequestTrnItem[]**](OrderDowntimeClaimCreateProofRequestTrnItem.md) |  |
+**custom** | [**\MagDv\Cargomart\Dto\OrderDowntimeClaimCreateProofRequestCustomItem[]**](OrderDowntimeClaimCreateProofRequestCustomItem.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
