@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderDowntimeClaimPoint
+ * OrderDowntimeClaimPointData
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * OrderDowntimeClaimPoint Class Doc Comment
+ * OrderDowntimeClaimPointData Class Doc Comment
  *
  * @category Class
- * @description Претензия о простое по конкретному пункту погрузки/выгрузки заявки
+ * @description Данные претензии о простое по конкретной точке
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSerializable
+class OrderDowntimeClaimPointData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'OrderDowntimeClaimPoint';
+    protected static $openAPIModelName = 'OrderDowntimeClaimPoint_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +59,10 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int',
-        'order_point_id' => 'int',
-        'data' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimPointData'
+        'actual_arrival' => '\MagDv\Cargomart\Dto\DateTimeSeparate',
+        'actual_departure' => '\MagDv\Cargomart\Dto\DateTimeSeparate',
+        'reason' => 'string',
+        'downtime' => '\MagDv\Cargomart\Dto\Downtime'
     ];
 
     /**
@@ -72,9 +73,10 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'order_point_id' => null,
-        'data' => null
+        'actual_arrival' => null,
+        'actual_departure' => null,
+        'reason' => null,
+        'downtime' => null
     ];
 
     /**
@@ -83,9 +85,10 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-        'order_point_id' => false,
-        'data' => false
+        'actual_arrival' => false,
+        'actual_departure' => false,
+        'reason' => false,
+        'downtime' => false
     ];
 
     /**
@@ -174,9 +177,10 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'order_point_id' => 'orderPointId',
-        'data' => 'data'
+        'actual_arrival' => 'actualArrival',
+        'actual_departure' => 'actualDeparture',
+        'reason' => 'reason',
+        'downtime' => 'downtime'
     ];
 
     /**
@@ -185,9 +189,10 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'order_point_id' => 'setOrderPointId',
-        'data' => 'setData'
+        'actual_arrival' => 'setActualArrival',
+        'actual_departure' => 'setActualDeparture',
+        'reason' => 'setReason',
+        'downtime' => 'setDowntime'
     ];
 
     /**
@@ -196,9 +201,10 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'order_point_id' => 'getOrderPointId',
-        'data' => 'getData'
+        'actual_arrival' => 'getActualArrival',
+        'actual_departure' => 'getActualDeparture',
+        'reason' => 'getReason',
+        'downtime' => 'getDowntime'
     ];
 
     /**
@@ -258,9 +264,10 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('order_point_id', $data ?? [], null);
-        $this->setIfExists('data', $data ?? [], null);
+        $this->setIfExists('actual_arrival', $data ?? [], null);
+        $this->setIfExists('actual_departure', $data ?? [], null);
+        $this->setIfExists('reason', $data ?? [], null);
+        $this->setIfExists('downtime', $data ?? [], null);
     }
 
     /**
@@ -290,17 +297,19 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
+        if ($this->container['actual_arrival'] === null) {
+            $invalidProperties[] = "'actual_arrival' can't be null";
         }
-        if (($this->container['id'] < 0)) {
-            $invalidProperties[] = "invalid value for 'id', must be bigger than or equal to 0.";
+        if ($this->container['actual_departure'] === null) {
+            $invalidProperties[] = "'actual_departure' can't be null";
+        }
+        if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) > 2000)) {
+            $invalidProperties[] = "invalid value for 'reason', the character length must be smaller than or equal to 2000.";
         }
 
-        if (!is_null($this->container['order_point_id']) && ($this->container['order_point_id'] < 0)) {
-            $invalidProperties[] = "invalid value for 'order_point_id', must be bigger than or equal to 0.";
+        if ($this->container['downtime'] === null) {
+            $invalidProperties[] = "'downtime' can't be null";
         }
-
         return $invalidProperties;
     }
 
@@ -317,92 +326,113 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets id
+     * Gets actual_arrival
      *
-     * @return int
+     * @return \MagDv\Cargomart\Dto\DateTimeSeparate
      */
-    public function getId()
+    public function getActualArrival()
     {
-        return $this->container['id'];
+        return $this->container['actual_arrival'];
     }
 
     /**
-     * Sets id
+     * Sets actual_arrival
      *
-     * @param int $id Числовой идентификатор объекта
+     * @param \MagDv\Cargomart\Dto\DateTimeSeparate $actual_arrival Объект разделенной передачи даты и времени
      *
      * @return self
      */
-    public function setId($id)
+    public function setActualArrival($actual_arrival)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($actual_arrival)) {
+            throw new \InvalidArgumentException('non-nullable actual_arrival cannot be null');
         }
-
-        if (($id < 0)) {
-            throw new \InvalidArgumentException('invalid value for $id when calling OrderDowntimeClaimPoint., must be bigger than or equal to 0.');
-        }
-
-        $this->container['id'] = $id;
+        $this->container['actual_arrival'] = $actual_arrival;
 
         return $this;
     }
 
     /**
-     * Gets order_point_id
+     * Gets actual_departure
      *
-     * @return int|null
+     * @return \MagDv\Cargomart\Dto\DateTimeSeparate
      */
-    public function getOrderPointId()
+    public function getActualDeparture()
     {
-        return $this->container['order_point_id'];
+        return $this->container['actual_departure'];
     }
 
     /**
-     * Sets order_point_id
+     * Sets actual_departure
      *
-     * @param int|null $order_point_id Числовой идентификатор объекта
+     * @param \MagDv\Cargomart\Dto\DateTimeSeparate $actual_departure Объект разделенной передачи даты и времени
      *
      * @return self
      */
-    public function setOrderPointId($order_point_id)
+    public function setActualDeparture($actual_departure)
     {
-        if (is_null($order_point_id)) {
-            throw new \InvalidArgumentException('non-nullable order_point_id cannot be null');
+        if (is_null($actual_departure)) {
+            throw new \InvalidArgumentException('non-nullable actual_departure cannot be null');
         }
-
-        if (($order_point_id < 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_point_id when calling OrderDowntimeClaimPoint., must be bigger than or equal to 0.');
-        }
-
-        $this->container['order_point_id'] = $order_point_id;
+        $this->container['actual_departure'] = $actual_departure;
 
         return $this;
     }
 
     /**
-     * Gets data
+     * Gets reason
      *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimPointData|null
+     * @return string|null
      */
-    public function getData()
+    public function getReason()
     {
-        return $this->container['data'];
+        return $this->container['reason'];
     }
 
     /**
-     * Sets data
+     * Sets reason
      *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaimPointData|null $data data
+     * @param string|null $reason Среднее текстовое сообщение
      *
      * @return self
      */
-    public function setData($data)
+    public function setReason($reason)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($reason)) {
+            throw new \InvalidArgumentException('non-nullable reason cannot be null');
         }
-        $this->container['data'] = $data;
+        if ((mb_strlen($reason) > 2000)) {
+            throw new \InvalidArgumentException('invalid length for $reason when calling OrderDowntimeClaimPointData., must be smaller than or equal to 2000.');
+        }
+
+        $this->container['reason'] = $reason;
+
+        return $this;
+    }
+
+    /**
+     * Gets downtime
+     *
+     * @return \MagDv\Cargomart\Dto\Downtime
+     */
+    public function getDowntime()
+    {
+        return $this->container['downtime'];
+    }
+
+    /**
+     * Sets downtime
+     *
+     * @param \MagDv\Cargomart\Dto\Downtime $downtime Простой по точке погрузки/выгрузки заявки
+     *
+     * @return self
+     */
+    public function setDowntime($downtime)
+    {
+        if (is_null($downtime)) {
+            throw new \InvalidArgumentException('non-nullable downtime cannot be null');
+        }
+        $this->container['downtime'] = $downtime;
 
         return $this;
     }

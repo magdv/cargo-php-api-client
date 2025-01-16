@@ -408,6 +408,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -662,6 +672,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -916,6 +936,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -1170,6 +1200,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -1461,6 +1501,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -1670,6 +1720,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -1924,6 +1984,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -2215,6 +2285,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -2469,6 +2549,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -2723,6 +2813,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -3041,6 +3141,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -3423,6 +3533,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -3694,6 +3814,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -3987,6 +4117,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -4241,6 +4381,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -4495,6 +4645,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -5036,6 +5196,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -5290,6 +5460,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -5581,6 +5761,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -5855,6 +6045,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -6146,6 +6346,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -6437,6 +6647,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -6691,6 +6911,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -6945,6 +7175,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -7199,6 +7439,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -7470,6 +7720,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -7724,6 +7984,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -7978,6 +8248,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -8232,6 +8512,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -8503,6 +8793,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -8757,6 +9057,16 @@ class OrderItemApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {

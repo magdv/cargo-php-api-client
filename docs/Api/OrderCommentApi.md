@@ -24,11 +24,22 @@ apiV2OrderOrderIdCommentGet($order_id, $page, $per_page): \MagDv\Cargomart\Dto\C
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: CookieTokenAuth
+$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+
+// Configure API key authorization: HeaderAuthorizationAuth
+$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 
 $apiInstance = new MagDv\Cargomart\Api\OrderCommentApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $order_id = 'order_id_example'; // string | Идентификатор заказа
 $page = 56; // int | Пагинация списка документов.
@@ -56,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
 
 ### HTTP request headers
 
@@ -82,11 +93,22 @@ apiV2OrderOrderIdCommentIdReplyPost($order_id, $id, $order_comment_reply_request
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: CookieTokenAuth
+$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+
+// Configure API key authorization: HeaderAuthorizationAuth
+$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 
 $apiInstance = new MagDv\Cargomart\Api\OrderCommentApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $order_id = 'order_id_example'; // string | Идентификатор заказа
 $id = 'id_example'; // string | Идентификатор комментария
@@ -114,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
 
 ### HTTP request headers
 
@@ -140,11 +162,22 @@ apiV2OrderOrderIdCommentPost($order_id, $order_comment_request): \MagDv\Cargomar
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: CookieTokenAuth
+$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+
+// Configure API key authorization: HeaderAuthorizationAuth
+$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 
 $apiInstance = new MagDv\Cargomart\Api\OrderCommentApi(
     // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
     // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $order_id = 'order_id_example'; // string | Идентификатор заказа
 $order_comment_request = new \MagDv\Cargomart\Dto\OrderCommentRequest(); // \MagDv\Cargomart\Dto\OrderCommentRequest
@@ -170,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
 
 ### HTTP request headers
 

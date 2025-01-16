@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | [**\MagDv\Cargomart\Dto\ExpeditorContractUpdatesStatus**](ExpeditorContractUpdatesStatus.md) |  |
 **status_updated_at** | **mixed** |  | [optional]
-**additional_agreement** | **mixed** |  | [optional]
+**additional_agreement** | [**\MagDv\Cargomart\Dto\ExpeditorContractUpdatesAdditionalAgreement**](ExpeditorContractUpdatesAdditionalAgreement.md) |  | [optional]
 **commercial_conditions** | [**\MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionFull[]**](ExpeditorContractUpdatesCommercialConditionFull.md) | Коммерческие условия | [optional]
 **selected_commercial_conditions** | [**\MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType[]**](ExpeditorContractUpdatesCommercialConditionType.md) |  | [optional]
 **signer** | [**\MagDv\Cargomart\Dto\ExpeditorContractUpdatesSigner**](ExpeditorContractUpdatesSigner.md) |  | [optional]

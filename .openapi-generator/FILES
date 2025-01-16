@@ -434,6 +434,7 @@ docs/Model/ExpeditorContractConclusionStatus.md
 docs/Model/ExpeditorContractConclusionStatusRequest.md
 docs/Model/ExpeditorContractConclusionValidation.md
 docs/Model/ExpeditorContractStatus.md
+docs/Model/ExpeditorContractUpdatesAdditionalAgreement.md
 docs/Model/ExpeditorContractUpdatesCommercialCondition.md
 docs/Model/ExpeditorContractUpdatesCommercialConditionFull.md
 docs/Model/ExpeditorContractUpdatesCommercialConditionFullContentFile.md
@@ -597,6 +598,7 @@ docs/Model/OrderDowntimeClaimCreateProofRequestTrnItem.md
 docs/Model/OrderDowntimeClaimCreateRequest.md
 docs/Model/OrderDowntimeClaimCreateRequestV2.md
 docs/Model/OrderDowntimeClaimPoint.md
+docs/Model/OrderDowntimeClaimPointData.md
 docs/Model/OrderDowntimeClaimPointFields.md
 docs/Model/OrderDowntimeClaimPointFieldsData.md
 docs/Model/OrderDowntimeClaimProof.md
@@ -1543,6 +1545,7 @@ lib/Dto/ExpeditorContractConclusionStatus.php
 lib/Dto/ExpeditorContractConclusionStatusRequest.php
 lib/Dto/ExpeditorContractConclusionValidation.php
 lib/Dto/ExpeditorContractStatus.php
+lib/Dto/ExpeditorContractUpdatesAdditionalAgreement.php
 lib/Dto/ExpeditorContractUpdatesCommercialCondition.php
 lib/Dto/ExpeditorContractUpdatesCommercialConditionFull.php
 lib/Dto/ExpeditorContractUpdatesCommercialConditionFullContentFile.php
@@ -1707,6 +1710,7 @@ lib/Dto/OrderDowntimeClaimCreateProofRequestTrnItem.php
 lib/Dto/OrderDowntimeClaimCreateRequest.php
 lib/Dto/OrderDowntimeClaimCreateRequestV2.php
 lib/Dto/OrderDowntimeClaimPoint.php
+lib/Dto/OrderDowntimeClaimPointData.php
 lib/Dto/OrderDowntimeClaimPointFields.php
 lib/Dto/OrderDowntimeClaimPointFieldsData.php
 lib/Dto/OrderDowntimeClaimProof.php
@@ -2652,6 +2656,7 @@ test/Model/ExpeditorContractConclusionTest.php
 test/Model/ExpeditorContractConclusionValidationTest.php
 test/Model/ExpeditorContractStatusTest.php
 test/Model/ExpeditorContractTest.php
+test/Model/ExpeditorContractUpdatesAdditionalAgreementTest.php
 test/Model/ExpeditorContractUpdatesCommercialConditionFullContentFileTest.php
 test/Model/ExpeditorContractUpdatesCommercialConditionFullSignFileTest.php
 test/Model/ExpeditorContractUpdatesCommercialConditionFullTest.php
@@ -2812,6 +2817,7 @@ test/Model/OrderDowntimeClaimCreateProofRequestTest.php
 test/Model/OrderDowntimeClaimCreateProofRequestTrnItemTest.php
 test/Model/OrderDowntimeClaimCreateRequestTest.php
 test/Model/OrderDowntimeClaimCreateRequestV2Test.php
+test/Model/OrderDowntimeClaimPointDataTest.php
 test/Model/OrderDowntimeClaimPointFieldsDataTest.php
 test/Model/OrderDowntimeClaimPointFieldsTest.php
 test/Model/OrderDowntimeClaimPointTest.php

@@ -60,9 +60,10 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
       */
     protected static $openAPITypes = [
         'order_id' => 'string',
-        'points' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimPoint[]',
-        'downtime' => '\MagDv\Cargomart\Dto\Downtime',
         'type' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimTypeEnum',
+        'points' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimPoint[]',
+        'proof' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimCreateProofRequest',
+        'downtime' => '\MagDv\Cargomart\Dto\Downtime',
         'date' => '\DateTime',
         'number' => 'string'
     ];
@@ -76,9 +77,10 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
       */
     protected static $openAPIFormats = [
         'order_id' => 'cm-uuid',
-        'points' => null,
-        'downtime' => null,
         'type' => null,
+        'points' => null,
+        'proof' => null,
+        'downtime' => null,
         'date' => 'date',
         'number' => null
     ];
@@ -90,9 +92,10 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
       */
     protected static array $openAPINullables = [
         'order_id' => false,
-        'points' => false,
-        'downtime' => false,
         'type' => false,
+        'points' => false,
+        'proof' => false,
+        'downtime' => false,
         'date' => false,
         'number' => false
     ];
@@ -184,9 +187,10 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
      */
     protected static $attributeMap = [
         'order_id' => 'orderId',
-        'points' => 'points',
-        'downtime' => 'downtime',
         'type' => 'type',
+        'points' => 'points',
+        'proof' => 'proof',
+        'downtime' => 'downtime',
         'date' => 'date',
         'number' => 'number'
     ];
@@ -198,9 +202,10 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
      */
     protected static $setters = [
         'order_id' => 'setOrderId',
-        'points' => 'setPoints',
-        'downtime' => 'setDowntime',
         'type' => 'setType',
+        'points' => 'setPoints',
+        'proof' => 'setProof',
+        'downtime' => 'setDowntime',
         'date' => 'setDate',
         'number' => 'setNumber'
     ];
@@ -212,9 +217,10 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
      */
     protected static $getters = [
         'order_id' => 'getOrderId',
-        'points' => 'getPoints',
-        'downtime' => 'getDowntime',
         'type' => 'getType',
+        'points' => 'getPoints',
+        'proof' => 'getProof',
+        'downtime' => 'getDowntime',
         'date' => 'getDate',
         'number' => 'getNumber'
     ];
@@ -277,9 +283,10 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
     public function __construct(?array $data = null)
     {
         $this->setIfExists('order_id', $data ?? [], null);
-        $this->setIfExists('points', $data ?? [], null);
-        $this->setIfExists('downtime', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('points', $data ?? [], null);
+        $this->setIfExists('proof', $data ?? [], null);
+        $this->setIfExists('downtime', $data ?? [], null);
         $this->setIfExists('date', $data ?? [], null);
         $this->setIfExists('number', $data ?? [], null);
     }
@@ -314,14 +321,17 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
         if ($this->container['order_id'] === null) {
             $invalidProperties[] = "'order_id' can't be null";
         }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         if ($this->container['points'] === null) {
             $invalidProperties[] = "'points' can't be null";
         }
+        if ($this->container['proof'] === null) {
+            $invalidProperties[] = "'proof' can't be null";
+        }
         if ($this->container['downtime'] === null) {
             $invalidProperties[] = "'downtime' can't be null";
-        }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
         }
         if ($this->container['date'] === null) {
             $invalidProperties[] = "'date' can't be null";
@@ -372,6 +382,33 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
     }
 
     /**
+     * Gets type
+     *
+     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimTypeEnum
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaimTypeEnum $type Тип претензии о простое
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
      * Gets points
      *
      * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimPoint[]
@@ -399,6 +436,33 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
     }
 
     /**
+     * Gets proof
+     *
+     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateProofRequest
+     */
+    public function getProof()
+    {
+        return $this->container['proof'];
+    }
+
+    /**
+     * Sets proof
+     *
+     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateProofRequest $proof proof
+     *
+     * @return self
+     */
+    public function setProof($proof)
+    {
+        if (is_null($proof)) {
+            throw new \InvalidArgumentException('non-nullable proof cannot be null');
+        }
+        $this->container['proof'] = $proof;
+
+        return $this;
+    }
+
+    /**
      * Gets downtime
      *
      * @return \MagDv\Cargomart\Dto\Downtime
@@ -421,33 +485,6 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
             throw new \InvalidArgumentException('non-nullable downtime cannot be null');
         }
         $this->container['downtime'] = $downtime;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimTypeEnum
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaimTypeEnum $type Тип претензии о простое
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
 
         return $this;
     }

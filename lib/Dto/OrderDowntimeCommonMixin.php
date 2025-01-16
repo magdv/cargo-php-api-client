@@ -60,9 +60,10 @@ class OrderDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPITypes = [
         'order_id' => 'string',
+        'type' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimTypeEnum',
         'points' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimPoint[]',
-        'downtime' => '\MagDv\Cargomart\Dto\Downtime',
-        'type' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimTypeEnum'
+        'proof' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimCreateProofRequest',
+        'downtime' => '\MagDv\Cargomart\Dto\Downtime'
     ];
 
     /**
@@ -74,9 +75,10 @@ class OrderDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPIFormats = [
         'order_id' => 'cm-uuid',
+        'type' => null,
         'points' => null,
-        'downtime' => null,
-        'type' => null
+        'proof' => null,
+        'downtime' => null
     ];
 
     /**
@@ -86,9 +88,10 @@ class OrderDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static array $openAPINullables = [
         'order_id' => false,
+        'type' => false,
         'points' => false,
-        'downtime' => false,
-        'type' => false
+        'proof' => false,
+        'downtime' => false
     ];
 
     /**
@@ -178,9 +181,10 @@ class OrderDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static $attributeMap = [
         'order_id' => 'orderId',
+        'type' => 'type',
         'points' => 'points',
-        'downtime' => 'downtime',
-        'type' => 'type'
+        'proof' => 'proof',
+        'downtime' => 'downtime'
     ];
 
     /**
@@ -190,9 +194,10 @@ class OrderDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static $setters = [
         'order_id' => 'setOrderId',
+        'type' => 'setType',
         'points' => 'setPoints',
-        'downtime' => 'setDowntime',
-        'type' => 'setType'
+        'proof' => 'setProof',
+        'downtime' => 'setDowntime'
     ];
 
     /**
@@ -202,9 +207,10 @@ class OrderDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
      */
     protected static $getters = [
         'order_id' => 'getOrderId',
+        'type' => 'getType',
         'points' => 'getPoints',
-        'downtime' => 'getDowntime',
-        'type' => 'getType'
+        'proof' => 'getProof',
+        'downtime' => 'getDowntime'
     ];
 
     /**
@@ -265,9 +271,10 @@ class OrderDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
     public function __construct(?array $data = null)
     {
         $this->setIfExists('order_id', $data ?? [], null);
-        $this->setIfExists('points', $data ?? [], null);
-        $this->setIfExists('downtime', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('points', $data ?? [], null);
+        $this->setIfExists('proof', $data ?? [], null);
+        $this->setIfExists('downtime', $data ?? [], null);
     }
 
     /**
@@ -300,14 +307,17 @@ class OrderDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
         if ($this->container['order_id'] === null) {
             $invalidProperties[] = "'order_id' can't be null";
         }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         if ($this->container['points'] === null) {
             $invalidProperties[] = "'points' can't be null";
         }
+        if ($this->container['proof'] === null) {
+            $invalidProperties[] = "'proof' can't be null";
+        }
         if ($this->container['downtime'] === null) {
             $invalidProperties[] = "'downtime' can't be null";
-        }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
         }
         return $invalidProperties;
     }
@@ -352,6 +362,33 @@ class OrderDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
     }
 
     /**
+     * Gets type
+     *
+     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimTypeEnum
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaimTypeEnum $type Тип претензии о простое
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
      * Gets points
      *
      * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimPoint[]
@@ -379,6 +416,33 @@ class OrderDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
     }
 
     /**
+     * Gets proof
+     *
+     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateProofRequest
+     */
+    public function getProof()
+    {
+        return $this->container['proof'];
+    }
+
+    /**
+     * Sets proof
+     *
+     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateProofRequest $proof proof
+     *
+     * @return self
+     */
+    public function setProof($proof)
+    {
+        if (is_null($proof)) {
+            throw new \InvalidArgumentException('non-nullable proof cannot be null');
+        }
+        $this->container['proof'] = $proof;
+
+        return $this;
+    }
+
+    /**
      * Gets downtime
      *
      * @return \MagDv\Cargomart\Dto\Downtime
@@ -401,33 +465,6 @@ class OrderDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable downtime cannot be null');
         }
         $this->container['downtime'] = $downtime;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimTypeEnum
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaimTypeEnum $type Тип претензии о простое
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
 
         return $this;
     }
