@@ -86,11 +86,19 @@ class SignedDocumentTitleTypeEnum
 
     public const CLAIM_DOWNTIME_CARRIER_EXPEDITOR_CLAIMANT_TITLE = 'claimDowntimeCarrierExpeditor.claimantTitle';
 
+    public const CLAIM_DOWNTIME_CARRIER_EXPEDITOR_CANCEL_TITLE = 'claimDowntimeCarrierExpeditor.cancelTitle';
+
     public const CLAIM_DOWNTIME_EXPEDITOR_CONSIGNOR_CLAIMANT_TITLE = 'claimDowntimeExpeditorConsignor.claimantTitle';
+
+    public const CLAIM_DOWNTIME_EXPEDITOR_CONSIGNOR_CANCEL_TITLE = 'claimDowntimeExpeditorConsignor.cancelTitle';
 
     public const CLAIM_RESPONSE_DOWNTIME_CARRIER_EXPEDITOR_RESPONDENT_TITLE = 'claimResponseDowntimeCarrierExpeditor.respondentTitle';
 
     public const CLAIM_RESPONSE_DOWNTIME_EXPEDITOR_CONSIGNOR_RESPONDENT_TITLE = 'claimResponseDowntimeExpeditorConsignor.respondentTitle';
+
+    public const ADDITIONAL_AGREEMENT_CARRIER_TITLE = 'additionalAgreement.carrierTitle';
+
+    public const ADDITIONAL_AGREEMENT_EXPEDITOR_TITLE = 'additionalAgreement.expeditorTitle';
 
     /**
      * Gets allowable values of the enum
@@ -120,9 +128,13 @@ class SignedDocumentTitleTypeEnum
             self::CERTIFICATE_ISSUE_TITLE,
             self::CERTIFICATE_REVOKE_TITLE,
             self::CLAIM_DOWNTIME_CARRIER_EXPEDITOR_CLAIMANT_TITLE,
+            self::CLAIM_DOWNTIME_CARRIER_EXPEDITOR_CANCEL_TITLE,
             self::CLAIM_DOWNTIME_EXPEDITOR_CONSIGNOR_CLAIMANT_TITLE,
+            self::CLAIM_DOWNTIME_EXPEDITOR_CONSIGNOR_CANCEL_TITLE,
             self::CLAIM_RESPONSE_DOWNTIME_CARRIER_EXPEDITOR_RESPONDENT_TITLE,
-            self::CLAIM_RESPONSE_DOWNTIME_EXPEDITOR_CONSIGNOR_RESPONDENT_TITLE
+            self::CLAIM_RESPONSE_DOWNTIME_EXPEDITOR_CONSIGNOR_RESPONDENT_TITLE,
+            self::ADDITIONAL_AGREEMENT_CARRIER_TITLE,
+            self::ADDITIONAL_AGREEMENT_EXPEDITOR_TITLE
         ];
     }
 }

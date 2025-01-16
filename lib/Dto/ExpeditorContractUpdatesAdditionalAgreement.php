@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderDowntimeClaimPoint
+ * ExpeditorContractUpdatesAdditionalAgreement
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * OrderDowntimeClaimPoint Class Doc Comment
+ * ExpeditorContractUpdatesAdditionalAgreement Class Doc Comment
  *
  * @category Class
- * @description Претензия о простое по конкретному пункту погрузки/выгрузки заявки
+ * @description Дополнительное соглашение
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSerializable
+class ExpeditorContractUpdatesAdditionalAgreement implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'OrderDowntimeClaimPoint';
+    protected static $openAPIModelName = 'expeditor-contract-updates-additional-agreement';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +59,8 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int',
-        'order_point_id' => 'int',
-        'data' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimPointData'
+        'number' => 'int',
+        'date' => '\DateTime'
     ];
 
     /**
@@ -72,9 +71,8 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'order_point_id' => null,
-        'data' => null
+        'number' => null,
+        'date' => 'date'
     ];
 
     /**
@@ -83,9 +81,8 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-        'order_point_id' => false,
-        'data' => false
+        'number' => false,
+        'date' => false
     ];
 
     /**
@@ -174,9 +171,8 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'order_point_id' => 'orderPointId',
-        'data' => 'data'
+        'number' => 'number',
+        'date' => 'date'
     ];
 
     /**
@@ -185,9 +181,8 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'order_point_id' => 'setOrderPointId',
-        'data' => 'setData'
+        'number' => 'setNumber',
+        'date' => 'setDate'
     ];
 
     /**
@@ -196,9 +191,8 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'order_point_id' => 'getOrderPointId',
-        'data' => 'getData'
+        'number' => 'getNumber',
+        'date' => 'getDate'
     ];
 
     /**
@@ -258,9 +252,8 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('order_point_id', $data ?? [], null);
-        $this->setIfExists('data', $data ?? [], null);
+        $this->setIfExists('number', $data ?? [], null);
+        $this->setIfExists('date', $data ?? [], null);
     }
 
     /**
@@ -290,17 +283,12 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
+        if ($this->container['number'] === null) {
+            $invalidProperties[] = "'number' can't be null";
         }
-        if (($this->container['id'] < 0)) {
-            $invalidProperties[] = "invalid value for 'id', must be bigger than or equal to 0.";
+        if ($this->container['date'] === null) {
+            $invalidProperties[] = "'date' can't be null";
         }
-
-        if (!is_null($this->container['order_point_id']) && ($this->container['order_point_id'] < 0)) {
-            $invalidProperties[] = "invalid value for 'order_point_id', must be bigger than or equal to 0.";
-        }
-
         return $invalidProperties;
     }
 
@@ -317,92 +305,55 @@ class OrderDowntimeClaimPoint implements ModelInterface, ArrayAccess, \JsonSeria
 
 
     /**
-     * Gets id
+     * Gets number
      *
      * @return int
      */
-    public function getId()
+    public function getNumber()
     {
-        return $this->container['id'];
+        return $this->container['number'];
     }
 
     /**
-     * Sets id
+     * Sets number
      *
-     * @param int $id Числовой идентификатор объекта
+     * @param int $number number
      *
      * @return self
      */
-    public function setId($id)
+    public function setNumber($number)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($number)) {
+            throw new \InvalidArgumentException('non-nullable number cannot be null');
         }
-
-        if (($id < 0)) {
-            throw new \InvalidArgumentException('invalid value for $id when calling OrderDowntimeClaimPoint., must be bigger than or equal to 0.');
-        }
-
-        $this->container['id'] = $id;
+        $this->container['number'] = $number;
 
         return $this;
     }
 
     /**
-     * Gets order_point_id
+     * Gets date
      *
-     * @return int|null
+     * @return \DateTime
      */
-    public function getOrderPointId()
+    public function getDate()
     {
-        return $this->container['order_point_id'];
+        return $this->container['date'];
     }
 
     /**
-     * Sets order_point_id
+     * Sets date
      *
-     * @param int|null $order_point_id Числовой идентификатор объекта
+     * @param \DateTime $date date
      *
      * @return self
      */
-    public function setOrderPointId($order_point_id)
+    public function setDate($date)
     {
-        if (is_null($order_point_id)) {
-            throw new \InvalidArgumentException('non-nullable order_point_id cannot be null');
+        if (is_null($date)) {
+            throw new \InvalidArgumentException('non-nullable date cannot be null');
         }
-
-        if (($order_point_id < 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_point_id when calling OrderDowntimeClaimPoint., must be bigger than or equal to 0.');
-        }
-
-        $this->container['order_point_id'] = $order_point_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimPointData|null
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaimPointData|null $data data
-     *
-     * @return self
-     */
-    public function setData($data)
-    {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
-        }
-        $this->container['data'] = $data;
+        $this->container['date'] = $date;
 
         return $this;
     }

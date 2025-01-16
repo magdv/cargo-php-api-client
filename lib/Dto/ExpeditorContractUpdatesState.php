@@ -61,7 +61,7 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
     protected static $openAPITypes = [
         'status' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesStatus',
         'status_updated_at' => 'mixed',
-        'additional_agreement' => 'mixed',
+        'additional_agreement' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesAdditionalAgreement',
         'commercial_conditions' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionFull[]',
         'selected_commercial_conditions' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType[]',
         'signer' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesSigner',
@@ -93,7 +93,7 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
     protected static array $openAPINullables = [
         'status' => false,
         'status_updated_at' => true,
-        'additional_agreement' => true,
+        'additional_agreement' => false,
         'commercial_conditions' => false,
         'selected_commercial_conditions' => false,
         'signer' => false,
@@ -400,7 +400,7 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets additional_agreement
      *
-     * @return mixed|null
+     * @return \MagDv\Cargomart\Dto\ExpeditorContractUpdatesAdditionalAgreement|null
      */
     public function getAdditionalAgreement()
     {
@@ -410,21 +410,14 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets additional_agreement
      *
-     * @param mixed|null $additional_agreement additional_agreement
+     * @param \MagDv\Cargomart\Dto\ExpeditorContractUpdatesAdditionalAgreement|null $additional_agreement additional_agreement
      *
      * @return self
      */
     public function setAdditionalAgreement($additional_agreement)
     {
         if (is_null($additional_agreement)) {
-            array_push($this->openAPINullablesSetToNull, 'additional_agreement');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('additional_agreement', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable additional_agreement cannot be null');
         }
         $this->container['additional_agreement'] = $additional_agreement;
 
