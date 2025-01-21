@@ -51,7 +51,7 @@ class ChatPostPayloadExpeditorTask implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-expeditor-task';
+    protected static $openAPIModelName = 'ChatPostPayloadExpeditorTask';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

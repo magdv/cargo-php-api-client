@@ -51,7 +51,7 @@ class UserLoginRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-login-request';
+    protected static $openAPIModelName = 'UserLoginRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

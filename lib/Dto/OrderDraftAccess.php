@@ -51,7 +51,7 @@ class OrderDraftAccess implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-access';
+    protected static $openAPIModelName = 'OrderDraftAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

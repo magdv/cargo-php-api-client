@@ -51,7 +51,7 @@ class ProposalOffersListResponse implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-offers-list-response';
+    protected static $openAPIModelName = 'ProposalOffersListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

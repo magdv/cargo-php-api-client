@@ -51,7 +51,7 @@ class ExpeditorAssignmentPayload implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-assignment-payload';
+    protected static $openAPIModelName = 'ExpeditorAssignmentPayload';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

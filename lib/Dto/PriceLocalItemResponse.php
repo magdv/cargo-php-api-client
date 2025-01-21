@@ -51,7 +51,7 @@ class PriceLocalItemResponse implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-local-item-response';
+    protected static $openAPIModelName = 'PriceLocalItemResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

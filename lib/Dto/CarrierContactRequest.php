@@ -51,7 +51,7 @@ class CarrierContactRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'carrier-contact-request';
+    protected static $openAPIModelName = 'CarrierContactRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

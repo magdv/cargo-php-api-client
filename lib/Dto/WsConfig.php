@@ -51,7 +51,7 @@ class WsConfig implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ws-config';
+    protected static $openAPIModelName = 'WsConfig';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

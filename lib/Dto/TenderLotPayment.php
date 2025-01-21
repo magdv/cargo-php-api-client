@@ -51,7 +51,7 @@ class TenderLotPayment implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-lot-payment';
+    protected static $openAPIModelName = 'TenderLotPayment';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

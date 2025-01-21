@@ -51,7 +51,7 @@ class TruckOneV1 implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'truck-one-v1';
+    protected static $openAPIModelName = 'TruckOneV1';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

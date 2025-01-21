@@ -51,7 +51,7 @@ class PartnerMessage implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'partner-message';
+    protected static $openAPIModelName = 'PartnerMessage';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

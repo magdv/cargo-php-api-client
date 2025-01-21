@@ -51,7 +51,7 @@ class TractorVehicle implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tractor-vehicle';
+    protected static $openAPIModelName = 'TractorVehicle';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

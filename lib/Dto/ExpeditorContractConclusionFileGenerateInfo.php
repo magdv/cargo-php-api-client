@@ -51,7 +51,7 @@ class ExpeditorContractConclusionFileGenerateInfo implements ModelInterface, Arr
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-conclusion-file-generate-info';
+    protected static $openAPIModelName = 'ExpeditorContractConclusionFileGenerateInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

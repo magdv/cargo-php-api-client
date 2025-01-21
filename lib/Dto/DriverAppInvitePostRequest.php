@@ -51,7 +51,7 @@ class DriverAppInvitePostRequest implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'driver-app-invite-post-request';
+    protected static $openAPIModelName = 'DriverAppInvitePostRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderDraftFtlConditionsResponse implements ModelInterface, ArrayAccess, \J
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-ftl-conditions-response';
+    protected static $openAPIModelName = 'OrderDraftFtlConditionsResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OrderDraftFtlConditionsResponse implements ModelInterface, ArrayAccess, \J
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderDraftFtlConditionsResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class OrderDraftFtlConditionsResponse implements ModelInterface, ArrayAccess, \J
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\OrderDraftFtlConditionsResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class OrderDraftFtlConditionsResponse implements ModelInterface, ArrayAccess, \J
     /**
      * Sets data
      *
-     * @param object $data Данные условий перевозки
+     * @param \MagDv\Cargomart\Dto\OrderDraftFtlConditionsResponseData $data data
      *
      * @return self
      */

@@ -51,7 +51,7 @@ class CandidateCountResponse implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'candidate-count-response';
+    protected static $openAPIModelName = 'CandidateCountResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

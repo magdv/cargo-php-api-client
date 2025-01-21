@@ -51,7 +51,7 @@ class ExpeditorContractUpdatesAdditionalAgreement implements ModelInterface, Arr
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-updates-additional-agreement';
+    protected static $openAPIModelName = 'ExpeditorContractUpdatesAdditionalAgreement';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

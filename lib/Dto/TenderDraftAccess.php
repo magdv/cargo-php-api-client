@@ -51,7 +51,7 @@ class TenderDraftAccess implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-draft-access';
+    protected static $openAPIModelName = 'TenderDraftAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

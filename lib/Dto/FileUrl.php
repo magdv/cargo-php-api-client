@@ -51,7 +51,7 @@ class FileUrl implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'file-url';
+    protected static $openAPIModelName = 'FileUrl';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

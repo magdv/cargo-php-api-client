@@ -51,7 +51,7 @@ class ChatResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-response';
+    protected static $openAPIModelName = 'ChatResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

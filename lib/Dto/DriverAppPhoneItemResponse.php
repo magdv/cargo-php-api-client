@@ -51,7 +51,7 @@ class DriverAppPhoneItemResponse implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'driver-app-phone-item-response';
+    protected static $openAPIModelName = 'DriverAppPhoneItemResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

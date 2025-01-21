@@ -51,7 +51,7 @@ class OrderDocumentPackageResponse implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-document-package-response';
+    protected static $openAPIModelName = 'OrderDocumentPackageResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

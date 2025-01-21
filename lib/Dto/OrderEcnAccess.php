@@ -51,7 +51,7 @@ class OrderEcnAccess implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-ecn-access';
+    protected static $openAPIModelName = 'OrderEcnAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

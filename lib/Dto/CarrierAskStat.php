@@ -51,7 +51,7 @@ class CarrierAskStat implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'carrier-ask-stat';
+    protected static $openAPIModelName = 'CarrierAskStat';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

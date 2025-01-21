@@ -51,7 +51,7 @@ class OrderPatchLastItem implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-patch-last-item';
+    protected static $openAPIModelName = 'OrderPatchLastItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

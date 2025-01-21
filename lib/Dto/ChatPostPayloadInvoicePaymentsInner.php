@@ -50,7 +50,7 @@ class ChatPostPayloadInvoicePaymentsInner implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat_post_payload_invoice_payments_inner';
+    protected static $openAPIModelName = 'ChatPostPayloadInvoice_payments_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

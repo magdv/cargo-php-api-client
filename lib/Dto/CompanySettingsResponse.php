@@ -51,7 +51,7 @@ class CompanySettingsResponse implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-settings-response';
+    protected static $openAPIModelName = 'CompanySettingsResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

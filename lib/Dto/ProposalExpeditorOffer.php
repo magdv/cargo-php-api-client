@@ -51,7 +51,7 @@ class ProposalExpeditorOffer implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-expeditor-offer';
+    protected static $openAPIModelName = 'ProposalExpeditorOffer';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

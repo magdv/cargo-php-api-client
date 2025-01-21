@@ -51,7 +51,7 @@ class ProposalProxySignRequest implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-proxy-sign-request';
+    protected static $openAPIModelName = 'ProposalProxySignRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

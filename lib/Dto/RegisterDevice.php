@@ -51,7 +51,7 @@ class RegisterDevice implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'register-device';
+    protected static $openAPIModelName = 'RegisterDevice';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

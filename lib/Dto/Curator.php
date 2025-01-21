@@ -51,7 +51,7 @@ class Curator implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'curator';
+    protected static $openAPIModelName = 'Curator';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

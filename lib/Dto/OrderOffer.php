@@ -51,7 +51,7 @@ class OrderOffer implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-offer';
+    protected static $openAPIModelName = 'OrderOffer';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

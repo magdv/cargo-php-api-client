@@ -51,7 +51,7 @@ class OrderPinItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-pin-item';
+    protected static $openAPIModelName = 'OrderPinItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

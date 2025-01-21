@@ -51,7 +51,7 @@ class ExpeditorContractConclusionKonturData implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-conclusion-kontur-data';
+    protected static $openAPIModelName = 'ExpeditorContractConclusionKonturData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

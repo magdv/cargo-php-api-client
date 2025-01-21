@@ -51,7 +51,7 @@ class FileList implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'file-list';
+    protected static $openAPIModelName = 'FileList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

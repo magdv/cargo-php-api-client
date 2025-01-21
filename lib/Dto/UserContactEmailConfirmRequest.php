@@ -51,7 +51,7 @@ class UserContactEmailConfirmRequest implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-contact-email-confirm-request';
+    protected static $openAPIModelName = 'UserContactEmailConfirmRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

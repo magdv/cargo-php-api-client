@@ -51,7 +51,7 @@ class PointOne implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'point-one';
+    protected static $openAPIModelName = 'PointOne';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class PointOne implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\PointOneData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class PointOne implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\PointOneData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class PointOne implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets data
      *
-     * @param object $data Common response data
+     * @param \MagDv\Cargomart\Dto\PointOneData $data data
      *
      * @return self
      */

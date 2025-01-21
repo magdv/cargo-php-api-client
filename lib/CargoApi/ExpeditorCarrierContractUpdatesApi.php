@@ -481,7 +481,7 @@ class ExpeditorCarrierContractUpdatesApi
     /**
      * Operation expeditorCarrierContractUpdatesSendSms
      *
-     * Подтверждение подписанта через sms
+     * Отправка sms для подтверждения подписанта
      *
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
@@ -497,7 +497,7 @@ class ExpeditorCarrierContractUpdatesApi
     /**
      * Operation expeditorCarrierContractUpdatesSendSmsWithHttpInfo
      *
-     * Подтверждение подписанта через sms
+     * Отправка sms для подтверждения подписанта
      *
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
@@ -640,7 +640,7 @@ class ExpeditorCarrierContractUpdatesApi
     /**
      * Operation expeditorCarrierContractUpdatesSendSmsAsync
      *
-     * Подтверждение подписанта через sms
+     * Отправка sms для подтверждения подписанта
      *
      *
      * @throws \InvalidArgumentException
@@ -659,7 +659,7 @@ class ExpeditorCarrierContractUpdatesApi
     /**
      * Operation expeditorCarrierContractUpdatesSendSmsAsyncWithHttpInfo
      *
-     * Подтверждение подписанта через sms
+     * Отправка sms для подтверждения подписанта
      *
      *
      * @throws \InvalidArgumentException

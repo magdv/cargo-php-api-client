@@ -51,7 +51,7 @@ class PaginationNoTotal implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'pagination-no-total';
+    protected static $openAPIModelName = 'PaginationNoTotal';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

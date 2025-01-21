@@ -51,7 +51,7 @@ class OrderSignCreateRequest implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-sign-create-request';
+    protected static $openAPIModelName = 'OrderSignCreateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

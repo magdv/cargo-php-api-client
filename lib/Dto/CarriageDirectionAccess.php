@@ -51,7 +51,7 @@ class CarriageDirectionAccess implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'carriage_direction_access';
+    protected static $openAPIModelName = 'CarriageDirection_access';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

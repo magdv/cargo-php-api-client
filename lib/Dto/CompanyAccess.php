@@ -51,7 +51,7 @@ class CompanyAccess implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-access';
+    protected static $openAPIModelName = 'CompanyAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

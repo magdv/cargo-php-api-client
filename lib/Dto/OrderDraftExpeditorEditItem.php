@@ -51,7 +51,7 @@ class OrderDraftExpeditorEditItem implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-expeditor-edit-item';
+    protected static $openAPIModelName = 'OrderDraftExpeditorEditItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

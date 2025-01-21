@@ -51,7 +51,7 @@ class LoginPasswordRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'login-password-request';
+    protected static $openAPIModelName = 'LoginPasswordRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class PersonalManagerContact implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'personal-manager-contact';
+    protected static $openAPIModelName = 'PersonalManagerContact';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

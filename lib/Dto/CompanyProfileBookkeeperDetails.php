@@ -51,7 +51,7 @@ class CompanyProfileBookkeeperDetails implements ModelInterface, ArrayAccess, \J
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company_profile_bookkeeperDetails';
+    protected static $openAPIModelName = 'CompanyProfile_bookkeeperDetails';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

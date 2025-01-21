@@ -51,7 +51,7 @@ class OrderOfferCurrent implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-offer-current';
+    protected static $openAPIModelName = 'OrderOfferCurrent';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

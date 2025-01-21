@@ -51,7 +51,7 @@ class UserConfirmPhoneRequest implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-confirm-phone-request';
+    protected static $openAPIModelName = 'UserConfirmPhoneRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

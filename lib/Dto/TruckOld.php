@@ -51,7 +51,7 @@ class TruckOld implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'truck-old';
+    protected static $openAPIModelName = 'TruckOld';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

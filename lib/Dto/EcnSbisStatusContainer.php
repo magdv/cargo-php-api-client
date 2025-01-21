@@ -51,7 +51,7 @@ class EcnSbisStatusContainer implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ecn-sbis-status-container';
+    protected static $openAPIModelName = 'EcnSbisStatusContainer';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

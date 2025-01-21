@@ -51,7 +51,7 @@ class OrderEditResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-edit-response';
+    protected static $openAPIModelName = 'OrderEditResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OrderEditResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderEditResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -301,7 +301,7 @@ class OrderEditResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets data
      *
-     * @return object|null
+     * @return \MagDv\Cargomart\Dto\OrderEditResponseData|null
      */
     public function getData()
     {
@@ -311,7 +311,7 @@ class OrderEditResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets data
      *
-     * @param object|null $data Common response data
+     * @param \MagDv\Cargomart\Dto\OrderEditResponseData|null $data data
      *
      * @return self
      */

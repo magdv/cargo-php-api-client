@@ -51,7 +51,7 @@ class BidListResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'bid-list-response';
+    protected static $openAPIModelName = 'BidListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

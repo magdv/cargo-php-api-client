@@ -51,7 +51,7 @@ class OrderPatchCancelRequest implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-patch-cancel-request';
+    protected static $openAPIModelName = 'OrderPatchCancelRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

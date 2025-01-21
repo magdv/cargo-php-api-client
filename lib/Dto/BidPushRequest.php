@@ -51,7 +51,7 @@ class BidPushRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'bid-push-request';
+    protected static $openAPIModelName = 'BidPushRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

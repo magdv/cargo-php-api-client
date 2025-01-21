@@ -51,7 +51,7 @@ class SettingGroup implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'setting-group';
+    protected static $openAPIModelName = 'SettingGroup';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

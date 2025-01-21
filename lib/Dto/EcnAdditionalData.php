@@ -51,7 +51,7 @@ class EcnAdditionalData implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ecn-additional-data';
+    protected static $openAPIModelName = 'EcnAdditionalData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class SpContact implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'sp-contact';
+    protected static $openAPIModelName = 'SpContact';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

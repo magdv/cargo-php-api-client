@@ -51,7 +51,7 @@ class UserCertificateIssue implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user_certificate_issue';
+    protected static $openAPIModelName = 'UserCertificate_issue';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

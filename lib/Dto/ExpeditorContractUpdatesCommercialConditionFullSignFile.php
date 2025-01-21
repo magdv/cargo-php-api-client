@@ -50,7 +50,7 @@ class ExpeditorContractUpdatesCommercialConditionFullSignFile implements ModelIn
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor_contract_updates_commercial_condition_full_signFile';
+    protected static $openAPIModelName = 'ExpeditorContractUpdatesCommercialConditionFull_signFile';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

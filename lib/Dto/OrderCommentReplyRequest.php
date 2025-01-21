@@ -51,7 +51,7 @@ class OrderCommentReplyRequest implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-comment-reply-request';
+    protected static $openAPIModelName = 'OrderCommentReplyRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

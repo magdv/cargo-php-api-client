@@ -51,7 +51,7 @@ class ChatPostPayloadIssueCertificate implements ModelInterface, ArrayAccess, \J
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-issue-certificate';
+    protected static $openAPIModelName = 'ChatPostPayloadIssueCertificate';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

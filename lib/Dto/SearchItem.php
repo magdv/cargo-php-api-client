@@ -51,7 +51,7 @@ class SearchItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'search-item';
+    protected static $openAPIModelName = 'SearchItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

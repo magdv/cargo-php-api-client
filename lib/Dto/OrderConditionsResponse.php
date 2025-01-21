@@ -51,7 +51,7 @@ class OrderConditionsResponse implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-conditions-response';
+    protected static $openAPIModelName = 'OrderConditionsResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

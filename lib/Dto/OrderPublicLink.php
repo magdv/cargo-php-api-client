@@ -51,7 +51,7 @@ class OrderPublicLink implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-public-link';
+    protected static $openAPIModelName = 'OrderPublicLink';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

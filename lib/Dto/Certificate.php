@@ -51,7 +51,7 @@ class Certificate implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'certificate';
+    protected static $openAPIModelName = 'Certificate';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

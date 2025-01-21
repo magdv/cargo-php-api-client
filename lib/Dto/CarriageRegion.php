@@ -51,7 +51,7 @@ class CarriageRegion implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'carriage-region';
+    protected static $openAPIModelName = 'CarriageRegion';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

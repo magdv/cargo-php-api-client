@@ -51,7 +51,7 @@ class OrderDraftExpeditorPriceV2Response implements ModelInterface, ArrayAccess,
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-expeditor-price-v2-response';
+    protected static $openAPIModelName = 'OrderDraftExpeditorPriceV2Response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OrderDraftExpeditorPriceV2Response implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderDraftExpeditorPriceV2ResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class OrderDraftExpeditorPriceV2Response implements ModelInterface, ArrayAccess,
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\OrderDraftExpeditorPriceV2ResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class OrderDraftExpeditorPriceV2Response implements ModelInterface, ArrayAccess,
     /**
      * Sets data
      *
-     * @param object $data Цены по направлению
+     * @param \MagDv\Cargomart\Dto\OrderDraftExpeditorPriceV2ResponseData $data data
      *
      * @return self
      */

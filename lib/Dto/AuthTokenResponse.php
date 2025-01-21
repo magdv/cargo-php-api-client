@@ -51,7 +51,7 @@ class AuthTokenResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'auth-token-response';
+    protected static $openAPIModelName = 'AuthTokenResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

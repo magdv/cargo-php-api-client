@@ -51,7 +51,7 @@ class ChatPostPayloadOrderPatchNewValues implements ModelInterface, ArrayAccess,
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat_post_payload_order_patch_newValues';
+    protected static $openAPIModelName = 'ChatPostPayloadOrderPatch_newValues';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

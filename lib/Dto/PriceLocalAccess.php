@@ -51,7 +51,7 @@ class PriceLocalAccess implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-local-access';
+    protected static $openAPIModelName = 'PriceLocalAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

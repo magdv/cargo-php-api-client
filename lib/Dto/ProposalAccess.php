@@ -51,7 +51,7 @@ class ProposalAccess implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-access';
+    protected static $openAPIModelName = 'ProposalAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

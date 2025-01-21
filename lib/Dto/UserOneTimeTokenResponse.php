@@ -51,7 +51,7 @@ class UserOneTimeTokenResponse implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-one-time-token-response';
+    protected static $openAPIModelName = 'UserOneTimeTokenResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

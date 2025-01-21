@@ -51,7 +51,7 @@ class WsConfigResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ws-config-response';
+    protected static $openAPIModelName = 'WsConfigResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

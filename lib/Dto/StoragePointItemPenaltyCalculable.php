@@ -51,7 +51,7 @@ class StoragePointItemPenaltyCalculable implements ModelInterface, ArrayAccess, 
       *
       * @var string
       */
-    protected static $openAPIModelName = 'storage-point-item-penalty-calculable';
+    protected static $openAPIModelName = 'StoragePointItemPenaltyCalculable';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OfferPushRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'offer-push-request';
+    protected static $openAPIModelName = 'OfferPushRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

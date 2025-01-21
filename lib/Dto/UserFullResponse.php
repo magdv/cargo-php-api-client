@@ -51,7 +51,7 @@ class UserFullResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-full-response';
+    protected static $openAPIModelName = 'UserFullResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

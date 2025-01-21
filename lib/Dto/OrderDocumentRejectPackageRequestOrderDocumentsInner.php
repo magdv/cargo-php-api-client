@@ -50,7 +50,7 @@ class OrderDocumentRejectPackageRequestOrderDocumentsInner implements ModelInter
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order_document_reject_package_request_orderDocuments_inner';
+    protected static $openAPIModelName = 'OrderDocumentRejectPackageRequest_orderDocuments_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

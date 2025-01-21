@@ -51,7 +51,7 @@ class Vat implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'vat';
+    protected static $openAPIModelName = 'Vat';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

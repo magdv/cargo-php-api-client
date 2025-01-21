@@ -51,7 +51,7 @@ class OrderReuseRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-reuse-request';
+    protected static $openAPIModelName = 'OrderReuseRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

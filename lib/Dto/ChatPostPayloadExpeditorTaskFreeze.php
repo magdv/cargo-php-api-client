@@ -51,7 +51,7 @@ class ChatPostPayloadExpeditorTaskFreeze implements ModelInterface, ArrayAccess,
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-expeditor-task-freeze';
+    protected static $openAPIModelName = 'ChatPostPayloadExpeditorTaskFreeze';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

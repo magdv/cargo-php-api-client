@@ -51,7 +51,7 @@ class OrderAdditionalInfoResponse implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-additional-info-response';
+    protected static $openAPIModelName = 'OrderAdditionalInfoResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OrderAdditionalInfoResponse implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderAdditionalInfoResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class OrderAdditionalInfoResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\OrderAdditionalInfoResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class OrderAdditionalInfoResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets data
      *
-     * @param object $data Имеющиеся добавочные данные
+     * @param \MagDv\Cargomart\Dto\OrderAdditionalInfoResponseData $data data
      *
      * @return self
      */

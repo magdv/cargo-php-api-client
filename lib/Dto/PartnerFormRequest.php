@@ -51,7 +51,7 @@ class PartnerFormRequest implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'partner-form-request';
+    protected static $openAPIModelName = 'PartnerFormRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

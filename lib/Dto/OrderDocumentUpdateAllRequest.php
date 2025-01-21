@@ -51,7 +51,7 @@ class OrderDocumentUpdateAllRequest implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-document-update-all-request';
+    protected static $openAPIModelName = 'OrderDocumentUpdateAllRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

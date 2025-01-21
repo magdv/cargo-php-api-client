@@ -51,7 +51,7 @@ class OrderDraftExpeditorPriceValueV2 implements ModelInterface, ArrayAccess, \J
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-expeditor-price-value-v2';
+    protected static $openAPIModelName = 'OrderDraftExpeditorPriceValueV2';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class ContractDetails implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contract-details';
+    protected static $openAPIModelName = 'ContractDetails';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

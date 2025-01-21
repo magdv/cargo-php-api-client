@@ -51,7 +51,7 @@ class OrderPublishCommonMixin implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-publish-common-mixin';
+    protected static $openAPIModelName = 'OrderPublishCommonMixin';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class ChatPostDefaultPayload implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-default-payload';
+    protected static $openAPIModelName = 'ChatPostDefaultPayload';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

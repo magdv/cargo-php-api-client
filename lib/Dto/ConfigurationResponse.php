@@ -51,7 +51,7 @@ class ConfigurationResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'configuration-response';
+    protected static $openAPIModelName = 'ConfigurationResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

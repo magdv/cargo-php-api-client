@@ -51,7 +51,7 @@ class DateTimeSeparate implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'date-time-separate';
+    protected static $openAPIModelName = 'DateTimeSeparate';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

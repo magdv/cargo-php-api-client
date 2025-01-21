@@ -51,7 +51,7 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'commercial-condition';
+    protected static $openAPIModelName = 'CommercialCondition';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -314,9 +314,6 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
         if ($this->container['version'] === null) {
             $invalidProperties[] = "'version' can't be null";
         }
-        if ($this->container['start_date'] === null) {
-            $invalidProperties[] = "'start_date' can't be null";
-        }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
@@ -371,7 +368,7 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets start_date
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getStartDate()
     {
@@ -381,7 +378,7 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets start_date
      *
-     * @param \DateTime $start_date Дата начала срока действия
+     * @param \DateTime|null $start_date Дата начала срока действия
      *
      * @return self
      */

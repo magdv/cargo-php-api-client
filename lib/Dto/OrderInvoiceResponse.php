@@ -51,7 +51,7 @@ class OrderInvoiceResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-invoice-response';
+    protected static $openAPIModelName = 'OrderInvoiceResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class Ad implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ad';
+    protected static $openAPIModelName = 'Ad';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

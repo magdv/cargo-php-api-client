@@ -51,7 +51,7 @@ class PaymentInvoiceStatus implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'payment-invoice-status';
+    protected static $openAPIModelName = 'PaymentInvoiceStatus';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

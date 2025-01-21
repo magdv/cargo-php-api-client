@@ -51,7 +51,7 @@ class TenderRequestAccess implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-request-access';
+    protected static $openAPIModelName = 'TenderRequestAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

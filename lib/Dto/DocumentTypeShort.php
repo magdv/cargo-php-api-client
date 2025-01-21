@@ -51,7 +51,7 @@ class DocumentTypeShort implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'document-type-short';
+    protected static $openAPIModelName = 'DocumentTypeShort';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

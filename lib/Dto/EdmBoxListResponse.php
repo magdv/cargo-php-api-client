@@ -51,7 +51,7 @@ class EdmBoxListResponse implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'edm-box-list-response';
+    protected static $openAPIModelName = 'EdmBoxListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

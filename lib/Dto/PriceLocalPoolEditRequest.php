@@ -51,7 +51,7 @@ class PriceLocalPoolEditRequest implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-local-pool-edit-request';
+    protected static $openAPIModelName = 'PriceLocalPoolEditRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

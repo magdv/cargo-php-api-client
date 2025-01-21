@@ -51,7 +51,7 @@ class OrderDocumentShowToCustomerRequest implements ModelInterface, ArrayAccess,
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-document-show-to-customer-request';
+    protected static $openAPIModelName = 'OrderDocumentShowToCustomerRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

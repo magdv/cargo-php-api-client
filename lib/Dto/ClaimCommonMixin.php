@@ -84,7 +84,7 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
         'number' => null,
         'date' => 'date-time',
         'serial_id' => null,
-        'order_id' => null,
+        'order_id' => 'cm-uuid',
         'consignor' => null,
         'carrier' => null,
         'penalty_sum' => null,
@@ -355,6 +355,10 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['date'] === null) {
             $invalidProperties[] = "'date' can't be null";
         }
+        if (!is_null($this->container['serial_id']) && ($this->container['serial_id'] < 0)) {
+            $invalidProperties[] = "invalid value for 'serial_id', must be bigger than or equal to 0.";
+        }
+
         if ($this->container['order_id'] === null) {
             $invalidProperties[] = "'order_id' can't be null";
         }
@@ -479,6 +483,11 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
         if (is_null($serial_id)) {
             throw new \InvalidArgumentException('non-nullable serial_id cannot be null');
         }
+
+        if (($serial_id < 0)) {
+            throw new \InvalidArgumentException('invalid value for $serial_id when calling ClaimCommonMixin., must be bigger than or equal to 0.');
+        }
+
         $this->container['serial_id'] = $serial_id;
 
         return $this;
@@ -497,7 +506,7 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets order_id
      *
-     * @param string $order_id Индентификатор заказа
+     * @param string $order_id UUID или хэш объекта
      *
      * @return self
      */

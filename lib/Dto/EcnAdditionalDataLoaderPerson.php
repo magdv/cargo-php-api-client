@@ -51,7 +51,7 @@ class EcnAdditionalDataLoaderPerson implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ecn_additional_data_loaderPerson';
+    protected static $openAPIModelName = 'EcnAdditionalData_loaderPerson';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

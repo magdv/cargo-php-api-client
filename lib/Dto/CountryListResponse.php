@@ -51,7 +51,7 @@ class CountryListResponse implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'country-list-response';
+    protected static $openAPIModelName = 'CountryListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

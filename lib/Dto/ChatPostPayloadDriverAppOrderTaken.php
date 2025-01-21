@@ -51,7 +51,7 @@ class ChatPostPayloadDriverAppOrderTaken implements ModelInterface, ArrayAccess,
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-driver-app-order-taken';
+    protected static $openAPIModelName = 'ChatPostPayloadDriverAppOrderTaken';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

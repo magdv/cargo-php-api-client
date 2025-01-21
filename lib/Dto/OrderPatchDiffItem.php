@@ -51,7 +51,7 @@ class OrderPatchDiffItem implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-patch-diff-item';
+    protected static $openAPIModelName = 'OrderPatchDiffItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

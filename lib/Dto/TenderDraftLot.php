@@ -51,7 +51,7 @@ class TenderDraftLot implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-draft-lot';
+    protected static $openAPIModelName = 'TenderDraftLot';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

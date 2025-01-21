@@ -51,7 +51,7 @@ class DriverListResponse implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'driver-list-response';
+    protected static $openAPIModelName = 'DriverListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

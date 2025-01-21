@@ -51,7 +51,7 @@ class ExpeditorTaskAccess implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-task-access';
+    protected static $openAPIModelName = 'ExpeditorTaskAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

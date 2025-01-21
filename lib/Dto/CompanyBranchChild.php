@@ -51,7 +51,7 @@ class CompanyBranchChild implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-branch-child';
+    protected static $openAPIModelName = 'CompanyBranchChild';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

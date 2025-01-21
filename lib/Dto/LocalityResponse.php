@@ -51,7 +51,7 @@ class LocalityResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'locality-response';
+    protected static $openAPIModelName = 'LocalityResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

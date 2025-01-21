@@ -51,7 +51,7 @@ class CompanyProfile implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-profile';
+    protected static $openAPIModelName = 'CompanyProfile';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

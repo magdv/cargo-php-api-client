@@ -51,7 +51,7 @@ class ExistsResponseData implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'exists_response_data';
+    protected static $openAPIModelName = 'ExistsResponseData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

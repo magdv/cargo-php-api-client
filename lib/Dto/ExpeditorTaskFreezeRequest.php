@@ -51,7 +51,7 @@ class ExpeditorTaskFreezeRequest implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-task-freeze-request';
+    protected static $openAPIModelName = 'ExpeditorTaskFreezeRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

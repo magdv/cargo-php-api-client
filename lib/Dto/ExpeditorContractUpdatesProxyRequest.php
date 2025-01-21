@@ -51,7 +51,7 @@ class ExpeditorContractUpdatesProxyRequest implements ModelInterface, ArrayAcces
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-updates-proxy-request';
+    protected static $openAPIModelName = 'ExpeditorContractUpdatesProxyRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

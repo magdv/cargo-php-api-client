@@ -51,7 +51,7 @@ class UserRefuseProfile implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-refuse-profile';
+    protected static $openAPIModelName = 'UserRefuseProfile';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

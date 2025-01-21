@@ -51,7 +51,7 @@ class OrderNegotiateRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-negotiate-request';
+    protected static $openAPIModelName = 'OrderNegotiateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

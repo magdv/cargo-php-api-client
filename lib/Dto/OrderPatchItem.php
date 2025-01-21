@@ -51,7 +51,7 @@ class OrderPatchItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-patch-item';
+    protected static $openAPIModelName = 'OrderPatchItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

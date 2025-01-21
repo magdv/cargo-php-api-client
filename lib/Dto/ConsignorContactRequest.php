@@ -51,7 +51,7 @@ class ConsignorContactRequest implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'consignor-contact-request';
+    protected static $openAPIModelName = 'ConsignorContactRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

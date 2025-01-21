@@ -51,7 +51,7 @@ class TenderRequestStats implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-request-stats';
+    protected static $openAPIModelName = 'TenderRequestStats';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

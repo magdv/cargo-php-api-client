@@ -51,7 +51,7 @@ class OrderSearchTruckFilterAccess implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-search-truck-filter-access';
+    protected static $openAPIModelName = 'OrderSearchTruckFilterAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

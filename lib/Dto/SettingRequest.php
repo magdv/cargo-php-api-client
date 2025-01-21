@@ -51,7 +51,7 @@ class SettingRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'setting-request';
+    protected static $openAPIModelName = 'SettingRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

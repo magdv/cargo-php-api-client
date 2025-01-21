@@ -51,7 +51,7 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-updates-state';
+    protected static $openAPIModelName = 'ExpeditorContractUpdatesState';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

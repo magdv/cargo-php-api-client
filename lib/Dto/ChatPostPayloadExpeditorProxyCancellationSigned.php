@@ -51,7 +51,7 @@ class ChatPostPayloadExpeditorProxyCancellationSigned implements ModelInterface,
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-expeditor-proxy-cancellation-signed';
+    protected static $openAPIModelName = 'ChatPostPayloadExpeditorProxyCancellationSigned';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

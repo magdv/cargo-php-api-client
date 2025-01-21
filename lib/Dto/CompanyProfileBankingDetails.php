@@ -51,7 +51,7 @@ class CompanyProfileBankingDetails implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company_profile_bankingDetails';
+    protected static $openAPIModelName = 'CompanyProfile_bankingDetails';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

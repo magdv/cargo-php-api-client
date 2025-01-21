@@ -51,7 +51,7 @@ class ContractTypeList implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contract-type-list';
+    protected static $openAPIModelName = 'ContractTypeList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

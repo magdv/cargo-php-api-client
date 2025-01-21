@@ -51,7 +51,7 @@ class CompanyLocalityResponse implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-locality-response';
+    protected static $openAPIModelName = 'CompanyLocalityResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

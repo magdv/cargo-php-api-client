@@ -51,7 +51,7 @@ class ProposalPriceOrProposalAuctionPriceRecommendation implements ModelInterfac
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-price-or-proposal-auction-price-recommendation';
+    protected static $openAPIModelName = 'ProposalPriceOrProposalAuctionPriceRecommendation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class CarrierAskAccess implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'carrier-ask-access';
+    protected static $openAPIModelName = 'CarrierAskAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

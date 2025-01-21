@@ -51,7 +51,7 @@ class CompanyProfileCarryingOption implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company_profile_carryingOption';
+    protected static $openAPIModelName = 'CompanyProfile_carryingOption';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class CompanyPatchRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-patch-request';
+    protected static $openAPIModelName = 'CompanyPatchRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

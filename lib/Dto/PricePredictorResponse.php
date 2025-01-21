@@ -51,7 +51,7 @@ class PricePredictorResponse implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-predictor-response';
+    protected static $openAPIModelName = 'PricePredictorResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

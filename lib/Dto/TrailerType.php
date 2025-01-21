@@ -51,7 +51,7 @@ class TrailerType implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'trailer-type';
+    protected static $openAPIModelName = 'TrailerType';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

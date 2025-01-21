@@ -51,7 +51,7 @@ class OrderConditionsExpeditor implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-conditions-expeditor';
+    protected static $openAPIModelName = 'OrderConditionsExpeditor';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

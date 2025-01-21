@@ -51,7 +51,7 @@ class SimpleDocumentTitle implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'simple-document-title';
+    protected static $openAPIModelName = 'SimpleDocumentTitle';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

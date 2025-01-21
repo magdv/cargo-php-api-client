@@ -51,7 +51,7 @@ class PriceLocalPoolCreateRequest implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-local-pool-create-request';
+    protected static $openAPIModelName = 'PriceLocalPoolCreateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

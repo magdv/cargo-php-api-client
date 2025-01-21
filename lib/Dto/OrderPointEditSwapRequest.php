@@ -51,7 +51,7 @@ class OrderPointEditSwapRequest implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-point-edit-swap-request';
+    protected static $openAPIModelName = 'OrderPointEditSwapRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class LotOfferPushRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'lot-offer-push-request';
+    protected static $openAPIModelName = 'LotOfferPushRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

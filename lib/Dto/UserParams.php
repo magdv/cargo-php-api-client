@@ -51,7 +51,7 @@ class UserParams implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-params';
+    protected static $openAPIModelName = 'UserParams';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

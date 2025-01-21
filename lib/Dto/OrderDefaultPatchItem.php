@@ -51,7 +51,7 @@ class OrderDefaultPatchItem implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-default-patch-item';
+    protected static $openAPIModelName = 'OrderDefaultPatchItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

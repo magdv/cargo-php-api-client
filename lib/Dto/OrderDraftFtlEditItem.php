@@ -51,7 +51,7 @@ class OrderDraftFtlEditItem implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-ftl-edit-item';
+    protected static $openAPIModelName = 'OrderDraftFtlEditItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderTruckResponse implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-truck-response';
+    protected static $openAPIModelName = 'OrderTruckResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

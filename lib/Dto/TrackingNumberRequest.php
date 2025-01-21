@@ -50,7 +50,7 @@ class TrackingNumberRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tracking-number-request';
+    protected static $openAPIModelName = 'TrackingNumberRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class CompanyDocumentItem implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-document-item';
+    protected static $openAPIModelName = 'CompanyDocumentItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

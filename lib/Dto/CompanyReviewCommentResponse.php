@@ -51,7 +51,7 @@ class CompanyReviewCommentResponse implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-review-comment-response';
+    protected static $openAPIModelName = 'CompanyReviewCommentResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

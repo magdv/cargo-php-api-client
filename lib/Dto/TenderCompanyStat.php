@@ -51,7 +51,7 @@ class TenderCompanyStat implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-company-stat';
+    protected static $openAPIModelName = 'TenderCompanyStat';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

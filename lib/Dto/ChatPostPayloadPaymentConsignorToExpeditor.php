@@ -51,7 +51,7 @@ class ChatPostPayloadPaymentConsignorToExpeditor implements ModelInterface, Arra
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-payment-consignor-to-expeditor';
+    protected static $openAPIModelName = 'ChatPostPayloadPaymentConsignorToExpeditor';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

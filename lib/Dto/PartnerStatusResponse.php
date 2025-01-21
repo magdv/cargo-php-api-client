@@ -51,7 +51,7 @@ class PartnerStatusResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'partner-status-response';
+    protected static $openAPIModelName = 'PartnerStatusResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class SimpleDocument implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'simple-document';
+    protected static $openAPIModelName = 'SimpleDocument';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

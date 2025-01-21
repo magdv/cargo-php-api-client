@@ -58,7 +58,7 @@ class DowntimeClaimResponseData implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'downtime_claim' => '\MagDv\Cargomart\Dto\OrderDowntimeClaim'
+        'downtime_claim' => '\MagDv\Cargomart\Dto\ClaimDowntime'
     ];
 
     /**
@@ -296,7 +296,7 @@ class DowntimeClaimResponseData implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets downtime_claim
      *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaim
+     * @return \MagDv\Cargomart\Dto\ClaimDowntime
      */
     public function getDowntimeClaim()
     {
@@ -306,7 +306,7 @@ class DowntimeClaimResponseData implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets downtime_claim
      *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaim $downtime_claim downtime_claim
+     * @param \MagDv\Cargomart\Dto\ClaimDowntime $downtime_claim downtime_claim
      *
      * @return self
      */

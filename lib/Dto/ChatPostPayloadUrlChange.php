@@ -51,7 +51,7 @@ class ChatPostPayloadUrlChange implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-url-change';
+    protected static $openAPIModelName = 'ChatPostPayloadUrlChange';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class TaxSystem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tax-system';
+    protected static $openAPIModelName = 'TaxSystem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

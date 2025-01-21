@@ -51,7 +51,7 @@ class ChatPostPayloadOriginalDocumentsReject implements ModelInterface, ArrayAcc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-original-documents-reject';
+    protected static $openAPIModelName = 'ChatPostPayloadOriginalDocumentsReject';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

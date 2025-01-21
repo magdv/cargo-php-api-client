@@ -51,7 +51,7 @@ class OrderTruckDriverPatchDiffItem implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-truck-driver-patch-diff-item';
+    protected static $openAPIModelName = 'OrderTruckDriverPatchDiffItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

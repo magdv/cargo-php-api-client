@@ -51,7 +51,7 @@ class ExpeditorContractConclusionKonturDataSignersInner implements ModelInterfac
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor_contract_conclusion_kontur_data_signers_inner';
+    protected static $openAPIModelName = 'ExpeditorContractConclusionKonturData_signers_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

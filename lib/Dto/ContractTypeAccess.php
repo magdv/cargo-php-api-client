@@ -51,7 +51,7 @@ class ContractTypeAccess implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contract-type-access';
+    protected static $openAPIModelName = 'ContractTypeAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class ExpeditorProposalPaymentResponse implements ModelInterface, ArrayAccess, \
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-proposal-payment-response';
+    protected static $openAPIModelName = 'ExpeditorProposalPaymentResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

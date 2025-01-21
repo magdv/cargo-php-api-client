@@ -51,7 +51,7 @@ class OrderDraftFtlResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-ftl-response';
+    protected static $openAPIModelName = 'OrderDraftFtlResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OrderDraftFtlResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderDraftFtlResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class OrderDraftFtlResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\OrderDraftFtlResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class OrderDraftFtlResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets data
      *
-     * @param object $data Common response data
+     * @param \MagDv\Cargomart\Dto\OrderDraftFtlResponseData $data data
      *
      * @return self
      */

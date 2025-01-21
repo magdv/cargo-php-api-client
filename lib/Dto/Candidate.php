@@ -51,7 +51,7 @@ class Candidate implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'candidate';
+    protected static $openAPIModelName = 'Candidate';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

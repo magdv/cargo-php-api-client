@@ -51,7 +51,7 @@ class ItineraryListResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'itinerary-list-response';
+    protected static $openAPIModelName = 'ItineraryListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class BankingDetailsUpdateRequest implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'banking-details-update-request';
+    protected static $openAPIModelName = 'BankingDetailsUpdateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderSearchUpdateCriteriaRequest implements ModelInterface, ArrayAccess, \
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-search-update-criteria-request';
+    protected static $openAPIModelName = 'OrderSearchUpdateCriteriaRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

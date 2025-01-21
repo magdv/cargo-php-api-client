@@ -51,7 +51,7 @@ class WorkerChangeRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'worker-change-request';
+    protected static $openAPIModelName = 'WorkerChangeRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

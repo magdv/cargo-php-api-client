@@ -51,7 +51,7 @@ class OrderDraftExpeditorCruResponse implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-expeditor-cru-response';
+    protected static $openAPIModelName = 'OrderDraftExpeditorCruResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OrderDraftExpeditorCruResponse implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderDraftExpeditorCruResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class OrderDraftExpeditorCruResponse implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\OrderDraftExpeditorCruResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class OrderDraftExpeditorCruResponse implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets data
      *
-     * @param object $data Common response data
+     * @param \MagDv\Cargomart\Dto\OrderDraftExpeditorCruResponseData $data data
      *
      * @return self
      */

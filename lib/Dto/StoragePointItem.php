@@ -51,7 +51,7 @@ class StoragePointItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'storage-point-item';
+    protected static $openAPIModelName = 'StoragePointItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class DateRange implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'date-range';
+    protected static $openAPIModelName = 'DateRange';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

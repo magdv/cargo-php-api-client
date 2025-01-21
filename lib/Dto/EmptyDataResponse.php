@@ -51,7 +51,7 @@ class EmptyDataResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'empty-data-response';
+    protected static $openAPIModelName = 'EmptyDataResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

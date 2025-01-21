@@ -51,7 +51,7 @@ class MessageListResponse implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'message-list-response';
+    protected static $openAPIModelName = 'MessageListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

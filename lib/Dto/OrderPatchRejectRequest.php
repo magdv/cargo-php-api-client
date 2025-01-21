@@ -51,7 +51,7 @@ class OrderPatchRejectRequest implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-patch-reject-request';
+    protected static $openAPIModelName = 'OrderPatchRejectRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

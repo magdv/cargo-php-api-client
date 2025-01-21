@@ -51,7 +51,7 @@ class TenderLotCarriage implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-lot-carriage';
+    protected static $openAPIModelName = 'TenderLotCarriage';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

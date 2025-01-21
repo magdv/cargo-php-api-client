@@ -51,7 +51,7 @@ class OrderPrevDoc implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-prev-doc';
+    protected static $openAPIModelName = 'OrderPrevDoc';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

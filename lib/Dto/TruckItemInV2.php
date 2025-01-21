@@ -51,7 +51,7 @@ class TruckItemInV2 implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'truck-item-in-v2';
+    protected static $openAPIModelName = 'TruckItemInV2';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

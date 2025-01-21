@@ -51,7 +51,7 @@ class CompanyShortSessionValues implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company_short_sessionValues';
+    protected static $openAPIModelName = 'CompanyShort_sessionValues';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class CheckItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'check-item';
+    protected static $openAPIModelName = 'CheckItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

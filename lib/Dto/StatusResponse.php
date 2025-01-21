@@ -51,7 +51,7 @@ class StatusResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'status-response';
+    protected static $openAPIModelName = 'StatusResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

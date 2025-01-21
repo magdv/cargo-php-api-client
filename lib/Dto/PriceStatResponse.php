@@ -51,7 +51,7 @@ class PriceStatResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-stat-response';
+    protected static $openAPIModelName = 'PriceStatResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

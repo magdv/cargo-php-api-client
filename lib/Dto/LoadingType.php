@@ -51,7 +51,7 @@ class LoadingType implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'loading-type';
+    protected static $openAPIModelName = 'LoadingType';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

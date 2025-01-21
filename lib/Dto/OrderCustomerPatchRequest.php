@@ -51,7 +51,7 @@ class OrderCustomerPatchRequest implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-customer-patch-request';
+    protected static $openAPIModelName = 'OrderCustomerPatchRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

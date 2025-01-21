@@ -51,7 +51,7 @@ class PriceLocalDirectionListResponse implements ModelInterface, ArrayAccess, \J
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-local-direction-list-response';
+    protected static $openAPIModelName = 'PriceLocalDirectionListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

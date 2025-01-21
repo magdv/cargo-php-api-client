@@ -51,7 +51,7 @@ class DriverPostRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'driver-post-request';
+    protected static $openAPIModelName = 'DriverPostRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderDocumentFileIdRequest implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-document-file-id-request';
+    protected static $openAPIModelName = 'OrderDocumentFileIdRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

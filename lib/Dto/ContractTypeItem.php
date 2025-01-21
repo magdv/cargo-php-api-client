@@ -51,7 +51,7 @@ class ContractTypeItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contract-type-item';
+    protected static $openAPIModelName = 'ContractTypeItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

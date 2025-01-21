@@ -51,7 +51,7 @@ class BrokerInfoItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'broker-info-item';
+    protected static $openAPIModelName = 'BrokerInfoItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class FileLinkResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'file-link-response';
+    protected static $openAPIModelName = 'FileLinkResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

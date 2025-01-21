@@ -51,7 +51,7 @@ class UserCertificateShortIssue implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user_certificate_short_issue';
+    protected static $openAPIModelName = 'UserCertificateShort_issue';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

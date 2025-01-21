@@ -51,7 +51,7 @@ class OrderDraftFtlFields implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-ftl-fields';
+    protected static $openAPIModelName = 'OrderDraftFtlFields';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

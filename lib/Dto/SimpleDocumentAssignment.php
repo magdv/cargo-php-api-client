@@ -51,7 +51,7 @@ class SimpleDocumentAssignment implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'simple-document-assignment';
+    protected static $openAPIModelName = 'SimpleDocumentAssignment';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderDraftBiddingMixin implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-bidding-mixin';
+    protected static $openAPIModelName = 'OrderDraftBiddingMixin';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

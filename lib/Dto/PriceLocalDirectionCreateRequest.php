@@ -51,7 +51,7 @@ class PriceLocalDirectionCreateRequest implements ModelInterface, ArrayAccess, \
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-local-direction-create-request';
+    protected static $openAPIModelName = 'PriceLocalDirectionCreateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

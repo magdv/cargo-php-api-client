@@ -51,7 +51,7 @@ class OrderRefuseReasonsResponse implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-refuse-reasons-response';
+    protected static $openAPIModelName = 'OrderRefuseReasonsResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

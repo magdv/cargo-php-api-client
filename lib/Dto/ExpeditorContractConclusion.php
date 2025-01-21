@@ -51,7 +51,7 @@ class ExpeditorContractConclusion implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-conclusion';
+    protected static $openAPIModelName = 'ExpeditorContractConclusion';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

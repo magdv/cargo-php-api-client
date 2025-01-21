@@ -51,7 +51,7 @@ class UserCertificateIssueRejectRequest implements ModelInterface, ArrayAccess, 
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-certificate-issue-reject-request';
+    protected static $openAPIModelName = 'UserCertificateIssueRejectRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

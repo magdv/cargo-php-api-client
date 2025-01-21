@@ -51,7 +51,7 @@ class SimpleDocumentTitleSigner implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'simple-document-title-signer';
+    protected static $openAPIModelName = 'SimpleDocumentTitleSigner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

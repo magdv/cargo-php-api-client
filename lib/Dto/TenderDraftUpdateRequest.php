@@ -51,7 +51,7 @@ class TenderDraftUpdateRequest implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-draft-update-request';
+    protected static $openAPIModelName = 'TenderDraftUpdateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

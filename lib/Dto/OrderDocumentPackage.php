@@ -51,7 +51,7 @@ class OrderDocumentPackage implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-document-package';
+    protected static $openAPIModelName = 'OrderDocumentPackage';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

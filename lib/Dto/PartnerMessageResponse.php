@@ -51,7 +51,7 @@ class PartnerMessageResponse implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'partner-message-response';
+    protected static $openAPIModelName = 'PartnerMessageResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

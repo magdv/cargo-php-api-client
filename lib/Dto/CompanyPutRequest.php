@@ -51,7 +51,7 @@ class CompanyPutRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-put-request';
+    protected static $openAPIModelName = 'CompanyPutRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

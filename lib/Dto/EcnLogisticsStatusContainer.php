@@ -51,7 +51,7 @@ class EcnLogisticsStatusContainer implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ecn-logistics-status-container';
+    protected static $openAPIModelName = 'EcnLogisticsStatusContainer';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

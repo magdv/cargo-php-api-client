@@ -51,7 +51,7 @@ class TenderLotCargo implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-lot-cargo';
+    protected static $openAPIModelName = 'TenderLotCargo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

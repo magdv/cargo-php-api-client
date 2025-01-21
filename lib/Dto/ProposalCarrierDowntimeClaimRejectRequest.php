@@ -51,7 +51,7 @@ class ProposalCarrierDowntimeClaimRejectRequest implements ModelInterface, Array
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-carrier-downtime-claim-reject-request';
+    protected static $openAPIModelName = 'ProposalCarrierDowntimeClaimRejectRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

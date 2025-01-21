@@ -50,7 +50,7 @@ class CarPerPeriod implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'car-per-period';
+    protected static $openAPIModelName = 'CarPerPeriod';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class FileLinkResponseData implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'file_link_response_data';
+    protected static $openAPIModelName = 'FileLinkResponse_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

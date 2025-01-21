@@ -51,7 +51,7 @@ class UserLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-login-response';
+    protected static $openAPIModelName = 'UserLoginResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

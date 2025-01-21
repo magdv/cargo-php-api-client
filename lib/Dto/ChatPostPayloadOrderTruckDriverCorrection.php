@@ -51,7 +51,7 @@ class ChatPostPayloadOrderTruckDriverCorrection implements ModelInterface, Array
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-order-truck-driver-correction';
+    protected static $openAPIModelName = 'ChatPostPayloadOrderTruckDriverCorrection';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

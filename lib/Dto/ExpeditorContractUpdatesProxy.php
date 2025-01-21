@@ -51,7 +51,7 @@ class ExpeditorContractUpdatesProxy implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-updates-proxy';
+    protected static $openAPIModelName = 'ExpeditorContractUpdatesProxy';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

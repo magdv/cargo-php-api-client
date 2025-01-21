@@ -51,7 +51,7 @@ class CompanyBranchHighlighted implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-branch-highlighted';
+    protected static $openAPIModelName = 'CompanyBranchHighlighted';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

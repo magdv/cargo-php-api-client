@@ -51,7 +51,7 @@ class OrderDraftProject implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-project';
+    protected static $openAPIModelName = 'OrderDraftProject';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

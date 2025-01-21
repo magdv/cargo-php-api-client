@@ -51,7 +51,7 @@ class ExpeditorOfferCarrierCurrent implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-offer-carrier-current';
+    protected static $openAPIModelName = 'ExpeditorOfferCarrierCurrent';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

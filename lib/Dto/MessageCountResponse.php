@@ -51,7 +51,7 @@ class MessageCountResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'message-count-response';
+    protected static $openAPIModelName = 'MessageCountResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

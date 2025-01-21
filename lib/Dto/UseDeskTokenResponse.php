@@ -51,7 +51,7 @@ class UseDeskTokenResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'use-desk-token-response';
+    protected static $openAPIModelName = 'UseDeskTokenResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

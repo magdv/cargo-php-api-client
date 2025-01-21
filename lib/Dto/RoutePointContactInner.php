@@ -51,7 +51,7 @@ class RoutePointContactInner implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'route_point_contact_inner';
+    protected static $openAPIModelName = 'RoutePointContact_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

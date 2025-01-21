@@ -50,7 +50,7 @@ class ChatPostPayloadContactChangeCreateUsersInner implements ModelInterface, Ar
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat_post_payload_contact_change_create_users_inner';
+    protected static $openAPIModelName = 'ChatPostPayloadContactChange_create_users_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

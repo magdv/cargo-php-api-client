@@ -51,7 +51,7 @@ class WorkingHours implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'working-hours';
+    protected static $openAPIModelName = 'WorkingHours';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

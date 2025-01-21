@@ -51,7 +51,7 @@ class OrderPatchRoutePointCard implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-patch-route-point-card';
+    protected static $openAPIModelName = 'OrderPatchRoutePointCard';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

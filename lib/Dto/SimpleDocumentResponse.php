@@ -51,7 +51,7 @@ class SimpleDocumentResponse implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'simple-document-response';
+    protected static $openAPIModelName = 'SimpleDocumentResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

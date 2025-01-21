@@ -51,7 +51,7 @@ class PayloadChunkTitleExpeditor implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'payload-chunk-title-expeditor';
+    protected static $openAPIModelName = 'PayloadChunkTitleExpeditor';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

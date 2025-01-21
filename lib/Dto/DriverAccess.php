@@ -51,7 +51,7 @@ class DriverAccess implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'driver-access';
+    protected static $openAPIModelName = 'DriverAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

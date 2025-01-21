@@ -51,7 +51,7 @@ class CompanyConfirmationAccess implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-confirmation-access';
+    protected static $openAPIModelName = 'CompanyConfirmationAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

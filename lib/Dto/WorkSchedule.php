@@ -51,7 +51,7 @@ class WorkSchedule implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'work-schedule';
+    protected static $openAPIModelName = 'WorkSchedule';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

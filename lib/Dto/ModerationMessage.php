@@ -51,7 +51,7 @@ class ModerationMessage implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'moderation-message';
+    protected static $openAPIModelName = 'ModerationMessage';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderPublishFtlFields implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-publish-ftl-fields';
+    protected static $openAPIModelName = 'OrderPublishFtlFields';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

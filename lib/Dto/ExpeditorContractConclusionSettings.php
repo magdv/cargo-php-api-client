@@ -51,7 +51,7 @@ class ExpeditorContractConclusionSettings implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-conclusion-settings';
+    protected static $openAPIModelName = 'ExpeditorContractConclusionSettings';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

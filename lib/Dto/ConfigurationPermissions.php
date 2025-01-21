@@ -51,7 +51,7 @@ class ConfigurationPermissions implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'configuration-permissions';
+    protected static $openAPIModelName = 'ConfigurationPermissions';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

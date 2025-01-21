@@ -51,7 +51,7 @@ class CommunicationContactsResponse implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'communication-contacts-response';
+    protected static $openAPIModelName = 'CommunicationContactsResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

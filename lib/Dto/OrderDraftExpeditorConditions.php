@@ -51,7 +51,7 @@ class OrderDraftExpeditorConditions implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-expeditor-conditions';
+    protected static $openAPIModelName = 'OrderDraftExpeditorConditions';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

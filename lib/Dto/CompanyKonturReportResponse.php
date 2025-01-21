@@ -51,7 +51,7 @@ class CompanyKonturReportResponse implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-kontur-report-response';
+    protected static $openAPIModelName = 'CompanyKonturReportResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

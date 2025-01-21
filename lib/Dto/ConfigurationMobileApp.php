@@ -51,7 +51,7 @@ class ConfigurationMobileApp implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'configuration-mobile-app';
+    protected static $openAPIModelName = 'ConfigurationMobileApp';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

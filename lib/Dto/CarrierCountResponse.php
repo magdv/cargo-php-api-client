@@ -51,7 +51,7 @@ class CarrierCountResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'carrier-count-response';
+    protected static $openAPIModelName = 'CarrierCountResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

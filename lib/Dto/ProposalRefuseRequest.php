@@ -51,7 +51,7 @@ class ProposalRefuseRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-refuse-request';
+    protected static $openAPIModelName = 'ProposalRefuseRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

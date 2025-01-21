@@ -51,7 +51,7 @@ class OrderProxyInfoResponse implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-proxy-info-response';
+    protected static $openAPIModelName = 'OrderProxyInfoResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OrderProxyInfoResponse implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderProxyInfoResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class OrderProxyInfoResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\OrderProxyInfoResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class OrderProxyInfoResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets data
      *
-     * @param object $data Имеющиеся добавочные данные
+     * @param \MagDv\Cargomart\Dto\OrderProxyInfoResponseData $data data
      *
      * @return self
      */

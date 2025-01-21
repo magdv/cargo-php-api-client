@@ -51,7 +51,7 @@ class OrderDraftExpeditorBidding implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-expeditor-bidding';
+    protected static $openAPIModelName = 'OrderDraftExpeditorBidding';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderFixPriceResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-fix-price-response';
+    protected static $openAPIModelName = 'OrderFixPriceResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

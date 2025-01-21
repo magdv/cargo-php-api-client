@@ -51,7 +51,7 @@ class OrderDraftExpeditorFields implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-expeditor-fields';
+    protected static $openAPIModelName = 'OrderDraftExpeditorFields';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

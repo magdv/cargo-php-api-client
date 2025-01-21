@@ -51,7 +51,7 @@ class CompanyOtherShort implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-other-short';
+    protected static $openAPIModelName = 'CompanyOtherShort';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

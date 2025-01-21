@@ -51,7 +51,7 @@ class UserRecoveryConfirmRequest implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-recovery-confirm-request';
+    protected static $openAPIModelName = 'UserRecoveryConfirmRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

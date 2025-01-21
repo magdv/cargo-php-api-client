@@ -51,7 +51,7 @@ class UserCertificateShort implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-certificate-short';
+    protected static $openAPIModelName = 'UserCertificateShort';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

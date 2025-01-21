@@ -51,7 +51,7 @@ class OrderRefuseReasonItem implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-refuse-reason-item';
+    protected static $openAPIModelName = 'OrderRefuseReasonItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

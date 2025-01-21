@@ -51,7 +51,7 @@ class ListFilterRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'list-filter-request';
+    protected static $openAPIModelName = 'ListFilterRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

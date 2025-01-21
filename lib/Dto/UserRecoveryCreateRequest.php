@@ -51,7 +51,7 @@ class UserRecoveryCreateRequest implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-recovery-create-request';
+    protected static $openAPIModelName = 'UserRecoveryCreateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

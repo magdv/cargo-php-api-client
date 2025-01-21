@@ -51,7 +51,7 @@ class ProposalCardResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-card-response';
+    protected static $openAPIModelName = 'ProposalCardResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

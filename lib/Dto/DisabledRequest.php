@@ -51,7 +51,7 @@ class DisabledRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'disabled-request';
+    protected static $openAPIModelName = 'DisabledRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

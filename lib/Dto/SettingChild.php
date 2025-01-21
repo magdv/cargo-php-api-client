@@ -51,7 +51,7 @@ class SettingChild implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'setting-child';
+    protected static $openAPIModelName = 'SettingChild';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

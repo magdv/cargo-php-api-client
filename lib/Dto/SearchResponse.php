@@ -51,7 +51,7 @@ class SearchResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'search-response';
+    protected static $openAPIModelName = 'SearchResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

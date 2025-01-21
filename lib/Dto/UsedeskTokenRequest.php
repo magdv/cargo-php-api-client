@@ -51,7 +51,7 @@ class UsedeskTokenRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'usedesk-token-request';
+    protected static $openAPIModelName = 'UsedeskTokenRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

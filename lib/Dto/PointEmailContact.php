@@ -51,7 +51,7 @@ class PointEmailContact implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'point-email-contact';
+    protected static $openAPIModelName = 'PointEmailContact';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

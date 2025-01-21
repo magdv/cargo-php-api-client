@@ -51,7 +51,7 @@ class BidItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'bid-item';
+    protected static $openAPIModelName = 'BidItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

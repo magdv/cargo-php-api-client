@@ -51,7 +51,7 @@ class OrderDocumentUpdateRequest implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-document-update-request';
+    protected static $openAPIModelName = 'OrderDocumentUpdateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

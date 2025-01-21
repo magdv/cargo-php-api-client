@@ -51,7 +51,7 @@ class OrderDraftFtlValidateResponse implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-ftl-validate-response';
+    protected static $openAPIModelName = 'OrderDraftFtlValidateResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

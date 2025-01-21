@@ -51,7 +51,7 @@ class PartnerContractWithType implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'partner-contract-with-type';
+    protected static $openAPIModelName = 'PartnerContractWithType';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

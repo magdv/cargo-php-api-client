@@ -51,7 +51,7 @@ class ContainerTypeList implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'container-type-list';
+    protected static $openAPIModelName = 'ContainerTypeList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

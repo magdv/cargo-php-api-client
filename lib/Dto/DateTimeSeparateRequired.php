@@ -51,7 +51,7 @@ class DateTimeSeparateRequired implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'date-time-separate-required';
+    protected static $openAPIModelName = 'DateTimeSeparateRequired';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

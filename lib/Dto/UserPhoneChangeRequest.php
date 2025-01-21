@@ -51,7 +51,7 @@ class UserPhoneChangeRequest implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-phone-change-request';
+    protected static $openAPIModelName = 'UserPhoneChangeRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

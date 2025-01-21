@@ -51,7 +51,7 @@ class OrderDraftListResponse implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-list-response';
+    protected static $openAPIModelName = 'OrderDraftListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

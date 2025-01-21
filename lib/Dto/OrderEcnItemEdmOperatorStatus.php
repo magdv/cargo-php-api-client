@@ -51,7 +51,7 @@ class OrderEcnItemEdmOperatorStatus implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order_ecn_item_edmOperatorStatus';
+    protected static $openAPIModelName = 'OrderEcnItem_edmOperatorStatus';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

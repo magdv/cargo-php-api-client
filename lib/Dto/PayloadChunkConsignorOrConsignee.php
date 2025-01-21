@@ -51,7 +51,7 @@ class PayloadChunkConsignorOrConsignee implements ModelInterface, ArrayAccess, \
       *
       * @var string
       */
-    protected static $openAPIModelName = 'payload-chunk-consignor-or-consignee';
+    protected static $openAPIModelName = 'PayloadChunkConsignorOrConsignee';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

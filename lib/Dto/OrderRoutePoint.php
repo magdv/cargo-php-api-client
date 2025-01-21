@@ -51,7 +51,7 @@ class OrderRoutePoint implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-route-point';
+    protected static $openAPIModelName = 'OrderRoutePoint';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class ExpeditorOffer implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-offer';
+    protected static $openAPIModelName = 'ExpeditorOffer';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

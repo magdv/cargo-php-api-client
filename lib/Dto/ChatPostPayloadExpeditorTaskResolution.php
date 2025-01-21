@@ -51,7 +51,7 @@ class ChatPostPayloadExpeditorTaskResolution implements ModelInterface, ArrayAcc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-expeditor-task-resolution';
+    protected static $openAPIModelName = 'ChatPostPayloadExpeditorTaskResolution';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

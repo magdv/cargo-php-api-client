@@ -51,7 +51,7 @@ class OrderPublishProjectFields implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-publish-project-fields';
+    protected static $openAPIModelName = 'OrderPublishProjectFields';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

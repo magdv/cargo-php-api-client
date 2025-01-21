@@ -51,7 +51,7 @@ class ConfigurationCommercialConditionsInternal implements ModelInterface, Array
       *
       * @var string
       */
-    protected static $openAPIModelName = 'configuration_commercial_conditions_internal';
+    protected static $openAPIModelName = 'ConfigurationCommercialConditions_internal';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class UserEmailChangeRequest implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-email-change-request';
+    protected static $openAPIModelName = 'UserEmailChangeRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
