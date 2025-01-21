@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderContactListResponse
+ * OrderContactListResponseData
  *
  * PHP version 7.4
  *
@@ -33,16 +33,15 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * OrderContactListResponse Class Doc Comment
+ * OrderContactListResponseData Class Doc Comment
  *
  * @category Class
- * @description Список клиентов из списка доступа
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class OrderContactListResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class OrderContactListResponseData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +50,7 @@ class OrderContactListResponse implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'OrderContactListResponse';
+    protected static $openAPIModelName = 'OrderContactListResponseData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +58,9 @@ class OrderContactListResponse implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\MagDv\Cargomart\Dto\OrderContactListResponseData',
-        'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
+        'contact' => '\MagDv\Cargomart\Dto\UserContactShort[]',
+        'order' => '\MagDv\Cargomart\Dto\OrderEditItem',
+        'progress' => '\MagDv\Cargomart\Dto\ProgressItem[]'
     ];
 
     /**
@@ -71,8 +71,9 @@ class OrderContactListResponse implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'message' => null
+        'contact' => null,
+        'order' => null,
+        'progress' => null
     ];
 
     /**
@@ -81,8 +82,9 @@ class OrderContactListResponse implements ModelInterface, ArrayAccess, \JsonSeri
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-        'message' => false
+        'contact' => false,
+        'order' => false,
+        'progress' => false
     ];
 
     /**
@@ -171,8 +173,9 @@ class OrderContactListResponse implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'message' => 'message'
+        'contact' => 'contact',
+        'order' => 'order',
+        'progress' => 'progress'
     ];
 
     /**
@@ -181,8 +184,9 @@ class OrderContactListResponse implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'message' => 'setMessage'
+        'contact' => 'setContact',
+        'order' => 'setOrder',
+        'progress' => 'setProgress'
     ];
 
     /**
@@ -191,8 +195,9 @@ class OrderContactListResponse implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'message' => 'getMessage'
+        'contact' => 'getContact',
+        'order' => 'getOrder',
+        'progress' => 'getProgress'
     ];
 
     /**
@@ -252,8 +257,9 @@ class OrderContactListResponse implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('message', $data ?? [], null);
+        $this->setIfExists('contact', $data ?? [], null);
+        $this->setIfExists('order', $data ?? [], null);
+        $this->setIfExists('progress', $data ?? [], null);
     }
 
     /**
@@ -283,9 +289,6 @@ class OrderContactListResponse implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -302,55 +305,82 @@ class OrderContactListResponse implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets data
+     * Gets contact
      *
-     * @return \MagDv\Cargomart\Dto\OrderContactListResponseData
+     * @return \MagDv\Cargomart\Dto\UserContactShort[]|null
      */
-    public function getData()
+    public function getContact()
     {
-        return $this->container['data'];
+        return $this->container['contact'];
     }
 
     /**
-     * Sets data
+     * Sets contact
      *
-     * @param \MagDv\Cargomart\Dto\OrderContactListResponseData $data data
+     * @param \MagDv\Cargomart\Dto\UserContactShort[]|null $contact Список контактов заказа
      *
      * @return self
      */
-    public function setData($data)
+    public function setContact($contact)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($contact)) {
+            throw new \InvalidArgumentException('non-nullable contact cannot be null');
         }
-        $this->container['data'] = $data;
+        $this->container['contact'] = $contact;
 
         return $this;
     }
 
     /**
-     * Gets message
+     * Gets order
      *
-     * @return \MagDv\Cargomart\Dto\MessageV2[]|null
+     * @return \MagDv\Cargomart\Dto\OrderEditItem|null
      */
-    public function getMessage()
+    public function getOrder()
     {
-        return $this->container['message'];
+        return $this->container['order'];
     }
 
     /**
-     * Sets message
+     * Sets order
      *
-     * @param \MagDv\Cargomart\Dto\MessageV2[]|null $message message
+     * @param \MagDv\Cargomart\Dto\OrderEditItem|null $order order
      *
      * @return self
      */
-    public function setMessage($message)
+    public function setOrder($order)
     {
-        if (is_null($message)) {
-            throw new \InvalidArgumentException('non-nullable message cannot be null');
+        if (is_null($order)) {
+            throw new \InvalidArgumentException('non-nullable order cannot be null');
         }
-        $this->container['message'] = $message;
+        $this->container['order'] = $order;
+
+        return $this;
+    }
+
+    /**
+     * Gets progress
+     *
+     * @return \MagDv\Cargomart\Dto\ProgressItem[]|null
+     */
+    public function getProgress()
+    {
+        return $this->container['progress'];
+    }
+
+    /**
+     * Sets progress
+     *
+     * @param \MagDv\Cargomart\Dto\ProgressItem[]|null $progress Элемент прогресса
+     *
+     * @return self
+     */
+    public function setProgress($progress)
+    {
+        if (is_null($progress)) {
+            throw new \InvalidArgumentException('non-nullable progress cannot be null');
+        }
+        $this->container['progress'] = $progress;
 
         return $this;
     }

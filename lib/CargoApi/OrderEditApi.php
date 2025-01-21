@@ -1683,11 +1683,12 @@ class OrderEditApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse
      */
     public function apiV2OrderOrderIdContactPatch($order_id, $id_list_request)
     {
-        $this->apiV2OrderOrderIdContactPatchWithHttpInfo($order_id, $id_list_request);
+        list($response) = $this->apiV2OrderOrderIdContactPatchWithHttpInfo($order_id, $id_list_request);
+        return $response;
     }
 
     /**
@@ -1700,7 +1701,7 @@ class OrderEditApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV2OrderOrderIdContactPatchWithHttpInfo($order_id, $id_list_request)
     {
@@ -1732,10 +1733,124 @@ class OrderEditApi
 
             $statusCode = $response->getStatusCode();
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 200:
+                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 403:
+                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
@@ -1775,13 +1890,23 @@ class OrderEditApi
      */
     public function apiV2OrderOrderIdContactPatchAsyncWithHttpInfo($order_id, $id_list_request)
     {
-        $returnType = '';
+        $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
         $request = $this->apiV2OrderOrderIdContactPatchRequest($order_id, $id_list_request);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function (HttpException $exception) {
                     $response = $exception->getResponse();
@@ -1844,7 +1969,7 @@ class OrderEditApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['application/json'],
             'application/json',
             $multipart
         );
