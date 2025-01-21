@@ -51,7 +51,7 @@ class PaymentType implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'payment-type';
+    protected static $openAPIModelName = 'PaymentType';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

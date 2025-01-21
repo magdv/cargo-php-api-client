@@ -51,7 +51,7 @@ class LocalityMetricRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'locality-metric-request';
+    protected static $openAPIModelName = 'LocalityMetricRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

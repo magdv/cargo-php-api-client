@@ -51,7 +51,7 @@ class ConfigurationConsignorContractManager implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $openAPIModelName = 'configuration-consignor-contract-manager';
+    protected static $openAPIModelName = 'ConfigurationConsignorContractManager';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderDocumentType implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-document-type';
+    protected static $openAPIModelName = 'OrderDocumentType';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class CompanyBranch implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-branch';
+    protected static $openAPIModelName = 'CompanyBranch';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

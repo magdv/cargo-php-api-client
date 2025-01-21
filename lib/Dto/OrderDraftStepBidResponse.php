@@ -51,7 +51,7 @@ class OrderDraftStepBidResponse implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-step-bid-response';
+    protected static $openAPIModelName = 'OrderDraftStepBidResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class ExpeditorContractUpdatesCommercialConditionFullContentFile implements Mode
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor_contract_updates_commercial_condition_full_contentFile';
+    protected static $openAPIModelName = 'ExpeditorContractUpdatesCommercialConditionFull_contentFile';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-short-list-item';
+    protected static $openAPIModelName = 'OrderShortListItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

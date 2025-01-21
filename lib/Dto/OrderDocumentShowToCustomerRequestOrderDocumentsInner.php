@@ -50,7 +50,7 @@ class OrderDocumentShowToCustomerRequestOrderDocumentsInner implements ModelInte
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order_document_show_to_customer_request_orderDocuments_inner';
+    protected static $openAPIModelName = 'OrderDocumentShowToCustomerRequest_orderDocuments_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

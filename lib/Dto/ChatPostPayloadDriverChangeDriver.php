@@ -50,7 +50,7 @@ class ChatPostPayloadDriverChangeDriver implements ModelInterface, ArrayAccess, 
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat_post_payload_driver_change_driver';
+    protected static $openAPIModelName = 'ChatPostPayloadDriverChange_driver';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

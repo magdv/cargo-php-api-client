@@ -51,7 +51,7 @@ class OrderDraftFtlConditions implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-ftl-conditions';
+    protected static $openAPIModelName = 'OrderDraftFtlConditions';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

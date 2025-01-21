@@ -51,7 +51,7 @@ class PartnerShortFormRequest implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'partner-short-form-request';
+    protected static $openAPIModelName = 'PartnerShortFormRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

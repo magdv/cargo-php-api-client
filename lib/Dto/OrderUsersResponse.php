@@ -51,7 +51,7 @@ class OrderUsersResponse implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-users-response';
+    protected static $openAPIModelName = 'OrderUsersResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class RoutePointCard implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'route-point-card';
+    protected static $openAPIModelName = 'RoutePointCard';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

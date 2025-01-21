@@ -51,7 +51,7 @@ class AcTagResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ac-tag-response';
+    protected static $openAPIModelName = 'AcTagResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class AcTagResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\AcTagResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class AcTagResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\AcTagResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class AcTagResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets data
      *
-     * @param object $data data
+     * @param \MagDv\Cargomart\Dto\AcTagResponseData $data data
      *
      * @return self
      */

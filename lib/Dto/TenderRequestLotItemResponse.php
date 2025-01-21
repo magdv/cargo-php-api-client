@@ -51,7 +51,7 @@ class TenderRequestLotItemResponse implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-request-lot-item-response';
+    protected static $openAPIModelName = 'TenderRequestLotItemResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class TruckList implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'truck-list';
+    protected static $openAPIModelName = 'TruckList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

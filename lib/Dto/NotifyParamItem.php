@@ -51,7 +51,7 @@ class NotifyParamItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'notify-param-item';
+    protected static $openAPIModelName = 'NotifyParamItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

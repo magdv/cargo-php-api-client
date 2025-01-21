@@ -51,7 +51,7 @@ class UserCertificateResponse implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-certificate-response';
+    protected static $openAPIModelName = 'UserCertificateResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

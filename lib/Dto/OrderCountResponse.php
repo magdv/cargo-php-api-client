@@ -51,7 +51,7 @@ class OrderCountResponse implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-count-response';
+    protected static $openAPIModelName = 'OrderCountResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OrderCountResponse implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderCountResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class OrderCountResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\OrderCountResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class OrderCountResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets data
      *
-     * @param object $data Common response data
+     * @param \MagDv\Cargomart\Dto\OrderCountResponseData $data data
      *
      * @return self
      */

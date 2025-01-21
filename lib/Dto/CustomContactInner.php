@@ -50,7 +50,7 @@ class CustomContactInner implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'custom_contact_inner';
+    protected static $openAPIModelName = 'CustomContact_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

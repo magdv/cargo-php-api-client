@@ -51,7 +51,7 @@ class ChatPostPayloadOrderNegotiatePriceStrategyUpdate implements ModelInterface
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-order-negotiate-price-strategy-update';
+    protected static $openAPIModelName = 'ChatPostPayloadOrderNegotiatePriceStrategyUpdate';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

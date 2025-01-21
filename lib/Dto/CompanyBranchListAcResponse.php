@@ -51,7 +51,7 @@ class CompanyBranchListAcResponse implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-branch-list-ac-response';
+    protected static $openAPIModelName = 'CompanyBranchListAcResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

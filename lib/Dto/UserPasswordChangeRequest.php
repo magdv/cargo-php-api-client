@@ -51,7 +51,7 @@ class UserPasswordChangeRequest implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-password-change-request';
+    protected static $openAPIModelName = 'UserPasswordChangeRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

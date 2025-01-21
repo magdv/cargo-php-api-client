@@ -51,7 +51,7 @@ class CarrierAskCurrent implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'carrier-ask-current';
+    protected static $openAPIModelName = 'CarrierAskCurrent';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

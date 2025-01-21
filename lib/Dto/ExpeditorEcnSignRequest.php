@@ -51,7 +51,7 @@ class ExpeditorEcnSignRequest implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-ecn-sign-request';
+    protected static $openAPIModelName = 'ExpeditorEcnSignRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class PartnerConditionsResponse implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'partner-conditions-response';
+    protected static $openAPIModelName = 'PartnerConditionsResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

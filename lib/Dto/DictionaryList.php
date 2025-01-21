@@ -51,7 +51,7 @@ class DictionaryList implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'dictionary-list';
+    protected static $openAPIModelName = 'DictionaryList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

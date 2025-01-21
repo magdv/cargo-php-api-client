@@ -51,7 +51,7 @@ class ReasonRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'reason-request';
+    protected static $openAPIModelName = 'ReasonRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

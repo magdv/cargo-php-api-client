@@ -51,7 +51,7 @@ class ExpeditorContractConclusionSigningMethodRequest implements ModelInterface,
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-conclusion-signing-method-request';
+    protected static $openAPIModelName = 'ExpeditorContractConclusionSigningMethodRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

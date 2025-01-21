@@ -51,7 +51,7 @@ class PayloadChunkCommunicationContactGroups implements ModelInterface, ArrayAcc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'payload-chunk-communication-contact-groups';
+    protected static $openAPIModelName = 'PayloadChunkCommunicationContactGroups';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

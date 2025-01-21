@@ -51,7 +51,7 @@ class ChatPostPayloadOriginalDocumentsTrackingNumberChange implements ModelInter
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-original-documents-tracking-number-change';
+    protected static $openAPIModelName = 'ChatPostPayloadOriginalDocumentsTrackingNumberChange';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderImport implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-import';
+    protected static $openAPIModelName = 'OrderImport';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

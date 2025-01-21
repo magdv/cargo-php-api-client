@@ -51,7 +51,7 @@ class ChatPostPayloadOrder implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-order';
+    protected static $openAPIModelName = 'ChatPostPayloadOrder';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

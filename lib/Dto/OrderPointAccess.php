@@ -51,7 +51,7 @@ class OrderPointAccess implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-point-access';
+    protected static $openAPIModelName = 'OrderPointAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

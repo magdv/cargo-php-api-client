@@ -51,7 +51,7 @@ class OrderValidateEcnResponse implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-validate-ecn-response';
+    protected static $openAPIModelName = 'OrderValidateEcnResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class UserAccess implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-access';
+    protected static $openAPIModelName = 'UserAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

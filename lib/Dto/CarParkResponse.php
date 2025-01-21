@@ -51,7 +51,7 @@ class CarParkResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'car-park-response';
+    protected static $openAPIModelName = 'CarParkResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderPublishRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-publish-request';
+    protected static $openAPIModelName = 'OrderPublishRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class FileIds implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'file-ids';
+    protected static $openAPIModelName = 'FileIds';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

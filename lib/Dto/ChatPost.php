@@ -51,7 +51,7 @@ class ChatPost implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post';
+    protected static $openAPIModelName = 'ChatPost';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

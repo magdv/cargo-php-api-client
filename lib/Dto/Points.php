@@ -51,7 +51,7 @@ class Points implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'points';
+    protected static $openAPIModelName = 'Points';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

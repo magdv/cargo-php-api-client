@@ -51,7 +51,7 @@ class ChatPostPayloadInvoice implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-invoice';
+    protected static $openAPIModelName = 'ChatPostPayloadInvoice';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

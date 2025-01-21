@@ -51,7 +51,7 @@ class ConfigurationCommercialConditionsInternational implements ModelInterface, 
       *
       * @var string
       */
-    protected static $openAPIModelName = 'configuration_commercial_conditions_international';
+    protected static $openAPIModelName = 'ConfigurationCommercialConditions_international';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

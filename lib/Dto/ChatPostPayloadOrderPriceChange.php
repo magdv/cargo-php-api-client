@@ -51,7 +51,7 @@ class ChatPostPayloadOrderPriceChange implements ModelInterface, ArrayAccess, \J
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-order-price-change';
+    protected static $openAPIModelName = 'ChatPostPayloadOrderPriceChange';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

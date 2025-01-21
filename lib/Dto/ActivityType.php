@@ -51,7 +51,7 @@ class ActivityType implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'activity-type';
+    protected static $openAPIModelName = 'ActivityType';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

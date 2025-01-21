@@ -51,7 +51,7 @@ class TruckType implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'truck-type';
+    protected static $openAPIModelName = 'TruckType';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

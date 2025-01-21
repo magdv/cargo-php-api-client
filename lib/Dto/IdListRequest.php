@@ -51,7 +51,7 @@ class IdListRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'id-list-request';
+    protected static $openAPIModelName = 'IdListRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

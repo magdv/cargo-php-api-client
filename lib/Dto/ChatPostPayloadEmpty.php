@@ -51,7 +51,7 @@ class ChatPostPayloadEmpty implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-empty';
+    protected static $openAPIModelName = 'ChatPostPayloadEmpty';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

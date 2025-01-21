@@ -51,7 +51,7 @@ class ChatPostPayloadOrderPatch implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-order-patch';
+    protected static $openAPIModelName = 'ChatPostPayloadOrderPatch';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

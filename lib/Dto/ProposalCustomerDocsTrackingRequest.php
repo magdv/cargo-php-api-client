@@ -51,7 +51,7 @@ class ProposalCustomerDocsTrackingRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-customer-docs-tracking-request';
+    protected static $openAPIModelName = 'ProposalCustomerDocsTrackingRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

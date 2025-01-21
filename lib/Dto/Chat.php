@@ -51,7 +51,7 @@ class Chat implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat';
+    protected static $openAPIModelName = 'Chat';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

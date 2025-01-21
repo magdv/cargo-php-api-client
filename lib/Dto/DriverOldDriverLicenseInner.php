@@ -51,7 +51,7 @@ class DriverOldDriverLicenseInner implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'driver_old_driverLicense_inner';
+    protected static $openAPIModelName = 'DriverOld_driverLicense_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

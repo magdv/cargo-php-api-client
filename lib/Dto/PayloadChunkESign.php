@@ -51,7 +51,7 @@ class PayloadChunkESign implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'payload-chunk-e-sign';
+    protected static $openAPIModelName = 'PayloadChunkESign';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

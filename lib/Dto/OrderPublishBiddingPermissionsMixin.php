@@ -51,7 +51,7 @@ class OrderPublishBiddingPermissionsMixin implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-publish-bidding-permissions-mixin';
+    protected static $openAPIModelName = 'OrderPublishBiddingPermissionsMixin';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

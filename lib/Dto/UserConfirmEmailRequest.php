@@ -51,7 +51,7 @@ class UserConfirmEmailRequest implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-confirm-email-request';
+    protected static $openAPIModelName = 'UserConfirmEmailRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class WealthItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'wealth-item';
+    protected static $openAPIModelName = 'WealthItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

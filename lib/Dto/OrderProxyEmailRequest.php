@@ -51,7 +51,7 @@ class OrderProxyEmailRequest implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-proxy-email-request';
+    protected static $openAPIModelName = 'OrderProxyEmailRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

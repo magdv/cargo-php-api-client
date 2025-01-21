@@ -51,7 +51,7 @@ class ProposalPaymentResponse implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-payment-response';
+    protected static $openAPIModelName = 'ProposalPaymentResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

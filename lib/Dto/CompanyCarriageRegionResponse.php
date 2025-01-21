@@ -51,7 +51,7 @@ class CompanyCarriageRegionResponse implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-carriage-region-response';
+    protected static $openAPIModelName = 'CompanyCarriageRegionResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

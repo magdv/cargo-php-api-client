@@ -51,7 +51,7 @@ class ChatPostListResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-list-response';
+    protected static $openAPIModelName = 'ChatPostListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

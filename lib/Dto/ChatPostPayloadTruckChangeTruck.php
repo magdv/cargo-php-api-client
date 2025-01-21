@@ -50,7 +50,7 @@ class ChatPostPayloadTruckChangeTruck implements ModelInterface, ArrayAccess, \J
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat_post_payload_truck_change_truck';
+    protected static $openAPIModelName = 'ChatPostPayloadTruckChange_truck';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

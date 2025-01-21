@@ -51,7 +51,7 @@ class TrackingCountResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tracking-count-response';
+    protected static $openAPIModelName = 'TrackingCountResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

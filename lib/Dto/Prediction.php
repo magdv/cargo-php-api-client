@@ -51,7 +51,7 @@ class Prediction implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'prediction';
+    protected static $openAPIModelName = 'Prediction';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

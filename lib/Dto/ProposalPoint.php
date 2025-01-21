@@ -51,7 +51,7 @@ class ProposalPoint implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-point';
+    protected static $openAPIModelName = 'ProposalPoint';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

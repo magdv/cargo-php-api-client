@@ -51,7 +51,7 @@ class PriceLocalCreateRequest implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-local-create-request';
+    protected static $openAPIModelName = 'PriceLocalCreateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderRefuseRevertPatchItem implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-refuse-revert-patch-item';
+    protected static $openAPIModelName = 'OrderRefuseRevertPatchItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

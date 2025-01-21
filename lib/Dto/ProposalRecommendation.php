@@ -51,7 +51,7 @@ class ProposalRecommendation implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-recommendation';
+    protected static $openAPIModelName = 'ProposalRecommendation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

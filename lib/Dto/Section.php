@@ -51,7 +51,7 @@ class Section implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'section';
+    protected static $openAPIModelName = 'Section';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

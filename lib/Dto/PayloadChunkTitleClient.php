@@ -51,7 +51,7 @@ class PayloadChunkTitleClient implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'payload-chunk-title-client';
+    protected static $openAPIModelName = 'PayloadChunkTitleClient';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

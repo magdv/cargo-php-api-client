@@ -51,7 +51,7 @@ class Message implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'message';
+    protected static $openAPIModelName = 'Message';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

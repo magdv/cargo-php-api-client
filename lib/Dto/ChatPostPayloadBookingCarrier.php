@@ -51,7 +51,7 @@ class ChatPostPayloadBookingCarrier implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat_post_payload_booking_carrier';
+    protected static $openAPIModelName = 'ChatPostPayloadBooking_carrier';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderProxyInfoItem implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-proxy-info-item';
+    protected static $openAPIModelName = 'OrderProxyInfoItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

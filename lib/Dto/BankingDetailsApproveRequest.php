@@ -51,7 +51,7 @@ class BankingDetailsApproveRequest implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'banking-details-approve-request';
+    protected static $openAPIModelName = 'BankingDetailsApproveRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class UserRecoveryResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-recovery-response';
+    protected static $openAPIModelName = 'UserRecoveryResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

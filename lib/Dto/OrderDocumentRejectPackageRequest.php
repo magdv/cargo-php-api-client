@@ -51,7 +51,7 @@ class OrderDocumentRejectPackageRequest implements ModelInterface, ArrayAccess, 
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-document-reject-package-request';
+    protected static $openAPIModelName = 'OrderDocumentRejectPackageRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

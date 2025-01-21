@@ -51,7 +51,7 @@ class ChatPostPayloadOrderRefuse implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-order-refuse';
+    protected static $openAPIModelName = 'ChatPostPayloadOrderRefuse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

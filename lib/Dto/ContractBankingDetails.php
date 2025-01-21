@@ -51,7 +51,7 @@ class ContractBankingDetails implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contract-banking-details';
+    protected static $openAPIModelName = 'ContractBankingDetails';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

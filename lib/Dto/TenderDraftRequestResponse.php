@@ -51,7 +51,7 @@ class TenderDraftRequestResponse implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-draft-request-response';
+    protected static $openAPIModelName = 'TenderDraftRequestResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

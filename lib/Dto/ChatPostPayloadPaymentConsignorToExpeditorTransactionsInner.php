@@ -50,7 +50,7 @@ class ChatPostPayloadPaymentConsignorToExpeditorTransactionsInner implements Mod
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat_post_payload_payment_consignor_to_expeditor_transactions_inner';
+    protected static $openAPIModelName = 'ChatPostPayloadPaymentConsignorToExpeditor_transactions_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

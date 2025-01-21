@@ -51,7 +51,7 @@ class DiadocBoxIdData implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'diadoc-box-id-data';
+    protected static $openAPIModelName = 'DiadocBoxIdData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

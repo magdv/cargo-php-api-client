@@ -51,7 +51,7 @@ class BidLastResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'bid-last-response';
+    protected static $openAPIModelName = 'BidLastResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

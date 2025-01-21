@@ -51,7 +51,7 @@ class OrderCarrierAskRequest implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-carrier-ask-request';
+    protected static $openAPIModelName = 'OrderCarrierAskRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

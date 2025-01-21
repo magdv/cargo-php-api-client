@@ -51,7 +51,7 @@ class InfoCarrierCar implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'info-carrier-car';
+    protected static $openAPIModelName = 'InfoCarrierCar';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

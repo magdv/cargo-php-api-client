@@ -51,7 +51,7 @@ class OrderDraftBiddingPermissionsMixin implements ModelInterface, ArrayAccess, 
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-bidding-permissions-mixin';
+    protected static $openAPIModelName = 'OrderDraftBiddingPermissionsMixin';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

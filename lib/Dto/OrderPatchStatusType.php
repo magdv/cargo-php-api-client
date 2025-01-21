@@ -51,7 +51,7 @@ class OrderPatchStatusType implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-patch-status-type';
+    protected static $openAPIModelName = 'OrderPatchStatusType';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

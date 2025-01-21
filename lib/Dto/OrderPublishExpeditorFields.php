@@ -51,7 +51,7 @@ class OrderPublishExpeditorFields implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-publish-expeditor-fields';
+    protected static $openAPIModelName = 'OrderPublishExpeditorFields';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class PriceLocalPoolItemResponse implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-local-pool-item-response';
+    protected static $openAPIModelName = 'PriceLocalPoolItemResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

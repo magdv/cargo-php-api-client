@@ -51,7 +51,7 @@ class IdIntName implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'id-int-name';
+    protected static $openAPIModelName = 'IdIntName';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

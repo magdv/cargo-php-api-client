@@ -51,7 +51,7 @@ class TruckMode implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'truck-mode';
+    protected static $openAPIModelName = 'TruckMode';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

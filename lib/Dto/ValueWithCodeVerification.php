@@ -51,7 +51,7 @@ class ValueWithCodeVerification implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'value-with-code-verification';
+    protected static $openAPIModelName = 'ValueWithCodeVerification';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

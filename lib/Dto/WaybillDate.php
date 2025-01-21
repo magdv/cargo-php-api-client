@@ -51,7 +51,7 @@ class WaybillDate implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'waybill-date';
+    protected static $openAPIModelName = 'WaybillDate';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

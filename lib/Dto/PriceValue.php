@@ -51,7 +51,7 @@ class PriceValue implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-value';
+    protected static $openAPIModelName = 'PriceValue';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderInvoicePayment implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-invoice-payment';
+    protected static $openAPIModelName = 'OrderInvoicePayment';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

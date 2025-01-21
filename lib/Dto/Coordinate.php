@@ -51,7 +51,7 @@ class Coordinate implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'coordinate';
+    protected static $openAPIModelName = 'Coordinate';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

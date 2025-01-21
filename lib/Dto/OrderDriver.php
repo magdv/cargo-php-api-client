@@ -51,7 +51,7 @@ class OrderDriver implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-driver';
+    protected static $openAPIModelName = 'OrderDriver';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

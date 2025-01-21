@@ -51,7 +51,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-card-full';
+    protected static $openAPIModelName = 'OrderCardFull';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

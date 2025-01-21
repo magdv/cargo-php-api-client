@@ -51,7 +51,7 @@ class RefreshTokenRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'refresh-token-request';
+    protected static $openAPIModelName = 'RefreshTokenRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class TenderLotPoint implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-lot-point';
+    protected static $openAPIModelName = 'TenderLotPoint';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class TenderRequestLotProposal implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-request-lot-proposal';
+    protected static $openAPIModelName = 'TenderRequestLotProposal';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class PriceLocalEditRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-local-edit-request';
+    protected static $openAPIModelName = 'PriceLocalEditRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

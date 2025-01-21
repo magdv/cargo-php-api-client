@@ -51,7 +51,7 @@ class TrackingList implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tracking-list';
+    protected static $openAPIModelName = 'TrackingList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

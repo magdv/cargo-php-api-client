@@ -51,7 +51,7 @@ class UserCertificateIssueApproveRequest implements ModelInterface, ArrayAccess,
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-certificate-issue-approve-request';
+    protected static $openAPIModelName = 'UserCertificateIssueApproveRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

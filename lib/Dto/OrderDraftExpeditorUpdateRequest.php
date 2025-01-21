@@ -51,7 +51,7 @@ class OrderDraftExpeditorUpdateRequest implements ModelInterface, ArrayAccess, \
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-expeditor-update-request';
+    protected static $openAPIModelName = 'OrderDraftExpeditorUpdateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

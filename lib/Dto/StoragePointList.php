@@ -51,7 +51,7 @@ class StoragePointList implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'storage-point-list';
+    protected static $openAPIModelName = 'StoragePointList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class StoragePointList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\StoragePointListData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class StoragePointList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\StoragePointListData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class StoragePointList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets data
      *
-     * @param object $data data
+     * @param \MagDv\Cargomart\Dto\StoragePointListData $data data
      *
      * @return self
      */

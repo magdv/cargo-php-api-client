@@ -50,7 +50,7 @@ class CommunicationContactsRequestCommunicationContactGroupsInner implements Mod
       *
       * @var string
       */
-    protected static $openAPIModelName = 'communication_contacts_request_communicationContactGroups_inner';
+    protected static $openAPIModelName = 'CommunicationContactsRequest_communicationContactGroups_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

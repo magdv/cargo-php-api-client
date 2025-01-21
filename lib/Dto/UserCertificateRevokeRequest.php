@@ -51,7 +51,7 @@ class UserCertificateRevokeRequest implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-certificate-revoke-request';
+    protected static $openAPIModelName = 'UserCertificateRevokeRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class SpBatchDeleteRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'sp-batch-delete-request';
+    protected static $openAPIModelName = 'SpBatchDeleteRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

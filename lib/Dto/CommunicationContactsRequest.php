@@ -51,7 +51,7 @@ class CommunicationContactsRequest implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'communication-contacts-request';
+    protected static $openAPIModelName = 'CommunicationContactsRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

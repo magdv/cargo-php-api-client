@@ -51,7 +51,7 @@ class TenderCompanyStatListResponse implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-company-stat-list-response';
+    protected static $openAPIModelName = 'TenderCompanyStatListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

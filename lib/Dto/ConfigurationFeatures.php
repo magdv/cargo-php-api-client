@@ -51,7 +51,7 @@ class ConfigurationFeatures implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'configuration-features';
+    protected static $openAPIModelName = 'ConfigurationFeatures';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class TemperatureRange implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'temperature-range';
+    protected static $openAPIModelName = 'TemperatureRange';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

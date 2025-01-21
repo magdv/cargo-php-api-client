@@ -51,7 +51,7 @@ class ExpeditorTaskListResponse implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-task-list-response';
+    protected static $openAPIModelName = 'ExpeditorTaskListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class UserProfileFull implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-profile-full';
+    protected static $openAPIModelName = 'UserProfileFull';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

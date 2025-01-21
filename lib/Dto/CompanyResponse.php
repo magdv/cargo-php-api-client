@@ -51,7 +51,7 @@ class CompanyResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-response';
+    protected static $openAPIModelName = 'CompanyResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

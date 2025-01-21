@@ -51,7 +51,7 @@ class GeneralPartnerContract implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'general-partner-contract';
+    protected static $openAPIModelName = 'GeneralPartnerContract';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class SendEmailRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'send-email-request';
+    protected static $openAPIModelName = 'SendEmailRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

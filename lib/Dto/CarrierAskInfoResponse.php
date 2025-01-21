@@ -51,7 +51,7 @@ class CarrierAskInfoResponse implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'carrier-ask-info-response';
+    protected static $openAPIModelName = 'CarrierAskInfoResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

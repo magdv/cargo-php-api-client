@@ -50,7 +50,7 @@ class AddressInfo implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'address-info';
+    protected static $openAPIModelName = 'AddressInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

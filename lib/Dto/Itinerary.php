@@ -51,7 +51,7 @@ class Itinerary implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'itinerary';
+    protected static $openAPIModelName = 'Itinerary';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

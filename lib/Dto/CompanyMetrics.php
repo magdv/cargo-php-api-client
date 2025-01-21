@@ -51,7 +51,7 @@ class CompanyMetrics implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-metrics';
+    protected static $openAPIModelName = 'CompanyMetrics';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

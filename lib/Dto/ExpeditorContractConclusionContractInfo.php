@@ -51,7 +51,7 @@ class ExpeditorContractConclusionContractInfo implements ModelInterface, ArrayAc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-conclusion-contract-info';
+    protected static $openAPIModelName = 'ExpeditorContractConclusionContractInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

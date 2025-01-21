@@ -51,7 +51,7 @@ class UserCertificateUpdateRequest implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-certificate-update-request';
+    protected static $openAPIModelName = 'UserCertificateUpdateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

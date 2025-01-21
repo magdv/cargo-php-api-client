@@ -51,7 +51,7 @@ class OrderTruckDriverPatchItem implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-truck-driver-patch-item';
+    protected static $openAPIModelName = 'OrderTruckDriverPatchItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

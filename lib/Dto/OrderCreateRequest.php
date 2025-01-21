@@ -51,7 +51,7 @@ class OrderCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-create-request';
+    protected static $openAPIModelName = 'OrderCreateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

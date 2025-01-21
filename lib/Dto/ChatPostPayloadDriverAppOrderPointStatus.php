@@ -51,7 +51,7 @@ class ChatPostPayloadDriverAppOrderPointStatus implements ModelInterface, ArrayA
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-driver-app-order-point-status';
+    protected static $openAPIModelName = 'ChatPostPayloadDriverAppOrderPointStatus';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

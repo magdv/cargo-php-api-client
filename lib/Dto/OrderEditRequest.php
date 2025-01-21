@@ -51,7 +51,7 @@ class OrderEditRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-edit-request';
+    protected static $openAPIModelName = 'OrderEditRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

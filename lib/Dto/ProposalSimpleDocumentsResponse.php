@@ -51,7 +51,7 @@ class ProposalSimpleDocumentsResponse implements ModelInterface, ArrayAccess, \J
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-simple-documents-response';
+    protected static $openAPIModelName = 'ProposalSimpleDocumentsResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

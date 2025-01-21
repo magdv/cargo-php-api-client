@@ -51,7 +51,7 @@ class FileOnValidation implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'file-on-validation';
+    protected static $openAPIModelName = 'FileOnValidation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderAdditionalInfoRequest implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-additional-info-request';
+    protected static $openAPIModelName = 'OrderAdditionalInfoRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

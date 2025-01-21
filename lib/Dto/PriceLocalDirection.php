@@ -51,7 +51,7 @@ class PriceLocalDirection implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-local-direction';
+    protected static $openAPIModelName = 'PriceLocalDirection';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

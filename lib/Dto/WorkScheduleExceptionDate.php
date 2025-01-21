@@ -51,7 +51,7 @@ class WorkScheduleExceptionDate implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'work-schedule-exception-date';
+    protected static $openAPIModelName = 'WorkScheduleExceptionDate';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

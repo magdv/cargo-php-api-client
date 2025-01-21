@@ -51,7 +51,7 @@ class ChatPostPayloadExpeditorProxySigned implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-expeditor-proxy-signed';
+    protected static $openAPIModelName = 'ChatPostPayloadExpeditorProxySigned';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

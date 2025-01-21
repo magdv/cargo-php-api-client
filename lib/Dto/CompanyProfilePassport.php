@@ -51,7 +51,7 @@ class CompanyProfilePassport implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company_profile_passport';
+    protected static $openAPIModelName = 'CompanyProfile_passport';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

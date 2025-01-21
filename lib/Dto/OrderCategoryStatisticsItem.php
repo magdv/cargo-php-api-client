@@ -51,7 +51,7 @@ class OrderCategoryStatisticsItem implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-category-statistics-item';
+    protected static $openAPIModelName = 'OrderCategoryStatisticsItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class SettingList implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'setting-list';
+    protected static $openAPIModelName = 'SettingList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

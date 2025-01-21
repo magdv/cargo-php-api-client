@@ -51,7 +51,7 @@ class PriceLocalPool implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-local-pool';
+    protected static $openAPIModelName = 'PriceLocalPool';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

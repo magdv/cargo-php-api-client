@@ -51,7 +51,7 @@ class OrderAdditionalInfo implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-additional-info';
+    protected static $openAPIModelName = 'OrderAdditionalInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

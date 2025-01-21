@@ -51,7 +51,7 @@ class OrderPointCreateRequest implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-point-create-request';
+    protected static $openAPIModelName = 'OrderPointCreateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

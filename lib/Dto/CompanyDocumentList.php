@@ -50,7 +50,7 @@ class CompanyDocumentList implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-document-list';
+    protected static $openAPIModelName = 'CompanyDocumentList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

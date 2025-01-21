@@ -51,7 +51,7 @@ class ProposalRefuseCarrierRequest implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-refuse-carrier-request';
+    protected static $openAPIModelName = 'ProposalRefuseCarrierRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

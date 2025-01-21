@@ -51,7 +51,7 @@ class UserContactShort implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-contact-short';
+    protected static $openAPIModelName = 'UserContactShort';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

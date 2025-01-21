@@ -51,7 +51,7 @@ class ExpeditorContractConclusionHistory implements ModelInterface, ArrayAccess,
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-conclusion-history';
+    protected static $openAPIModelName = 'ExpeditorContractConclusionHistory';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class FileV2 implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'file-v2';
+    protected static $openAPIModelName = 'FileV2';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

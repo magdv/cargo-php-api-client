@@ -51,7 +51,7 @@ class CompanyDocument implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-document';
+    protected static $openAPIModelName = 'CompanyDocument';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

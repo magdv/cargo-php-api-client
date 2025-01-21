@@ -51,7 +51,7 @@ class CommunicationContactGroup implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'communication-contact-group';
+    protected static $openAPIModelName = 'CommunicationContactGroup';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderDocumentUpdateRequestCustomMixin implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-document-update-request-custom-mixin';
+    protected static $openAPIModelName = 'OrderDocumentUpdateRequestCustomMixin';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

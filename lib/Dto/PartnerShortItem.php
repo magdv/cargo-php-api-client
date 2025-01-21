@@ -51,7 +51,7 @@ class PartnerShortItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'partner-short-item';
+    protected static $openAPIModelName = 'PartnerShortItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

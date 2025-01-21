@@ -51,7 +51,7 @@ class PartnerContractForm implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'partner-contract-form';
+    protected static $openAPIModelName = 'PartnerContractForm';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

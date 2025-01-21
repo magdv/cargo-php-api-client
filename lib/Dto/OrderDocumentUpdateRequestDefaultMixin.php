@@ -51,7 +51,7 @@ class OrderDocumentUpdateRequestDefaultMixin implements ModelInterface, ArrayAcc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-document-update-request-default-mixin';
+    protected static $openAPIModelName = 'OrderDocumentUpdateRequestDefaultMixin';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

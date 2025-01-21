@@ -51,7 +51,7 @@ class OrderRefuseRevertPatchDiffItem implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-refuse-revert-patch-diff-item';
+    protected static $openAPIModelName = 'OrderRefuseRevertPatchDiffItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

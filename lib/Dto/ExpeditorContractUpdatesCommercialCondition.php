@@ -51,7 +51,7 @@ class ExpeditorContractUpdatesCommercialCondition implements ModelInterface, Arr
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-updates-commercial-condition';
+    protected static $openAPIModelName = 'ExpeditorContractUpdatesCommercialCondition';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

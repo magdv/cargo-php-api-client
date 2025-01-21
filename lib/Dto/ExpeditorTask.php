@@ -51,7 +51,7 @@ class ExpeditorTask implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-task';
+    protected static $openAPIModelName = 'ExpeditorTask';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -601,7 +601,7 @@ class ExpeditorTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets order_id
      *
-     * @param string $order_id Заказ преевозчика
+     * @param string $order_id Заказ перевозчика
      *
      * @return self
      */

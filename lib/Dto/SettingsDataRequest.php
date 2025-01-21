@@ -51,7 +51,7 @@ class SettingsDataRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'settings-data-request';
+    protected static $openAPIModelName = 'SettingsDataRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

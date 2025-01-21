@@ -51,7 +51,7 @@ class CompanyConfirmationCompany implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-confirmation-company';
+    protected static $openAPIModelName = 'CompanyConfirmationCompany';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

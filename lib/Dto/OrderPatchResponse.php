@@ -51,7 +51,7 @@ class OrderPatchResponse implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-patch-response';
+    protected static $openAPIModelName = 'OrderPatchResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OrderPatchResponse implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderPatchResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class OrderPatchResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\OrderPatchResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class OrderPatchResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets data
      *
-     * @param object $data data
+     * @param \MagDv\Cargomart\Dto\OrderPatchResponseData $data data
      *
      * @return self
      */

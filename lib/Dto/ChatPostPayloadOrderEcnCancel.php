@@ -51,7 +51,7 @@ class ChatPostPayloadOrderEcnCancel implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-order-ecn-cancel';
+    protected static $openAPIModelName = 'ChatPostPayloadOrderEcnCancel';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class ExpeditorTaskResolutionRequest implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-task-resolution-request';
+    protected static $openAPIModelName = 'ExpeditorTaskResolutionRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

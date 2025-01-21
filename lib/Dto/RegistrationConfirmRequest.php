@@ -51,7 +51,7 @@ class RegistrationConfirmRequest implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'registration-confirm-request';
+    protected static $openAPIModelName = 'RegistrationConfirmRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

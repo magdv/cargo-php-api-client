@@ -51,7 +51,7 @@ class PayloadChunkPoints implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'payload-chunk-points';
+    protected static $openAPIModelName = 'PayloadChunkPoints';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderEcnCheckAccessResponse implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-ecn-check-access-response';
+    protected static $openAPIModelName = 'OrderEcnCheckAccessResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OrderEcnCheckAccessResponse implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderEcnCheckAccessResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class OrderEcnCheckAccessResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\OrderEcnCheckAccessResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class OrderEcnCheckAccessResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets data
      *
-     * @param object $data Данные
+     * @param \MagDv\Cargomart\Dto\OrderEcnCheckAccessResponseData $data data
      *
      * @return self
      */

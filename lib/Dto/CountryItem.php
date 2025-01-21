@@ -51,7 +51,7 @@ class CountryItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'country-item';
+    protected static $openAPIModelName = 'CountryItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

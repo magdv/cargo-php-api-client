@@ -51,7 +51,7 @@ class MonitoringItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'monitoring-item';
+    protected static $openAPIModelName = 'MonitoringItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

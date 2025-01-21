@@ -51,7 +51,7 @@ class OrderDraftExpeditorConditionsResponse implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-expeditor-conditions-response';
+    protected static $openAPIModelName = 'OrderDraftExpeditorConditionsResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OrderDraftExpeditorConditionsResponse implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderDraftExpeditorConditionsResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class OrderDraftExpeditorConditionsResponse implements ModelInterface, ArrayAcce
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\OrderDraftExpeditorConditionsResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class OrderDraftExpeditorConditionsResponse implements ModelInterface, ArrayAcce
     /**
      * Sets data
      *
-     * @param object $data Данные условий перевозки
+     * @param \MagDv\Cargomart\Dto\OrderDraftExpeditorConditionsResponseData $data data
      *
      * @return self
      */

@@ -51,7 +51,7 @@ class SimpleDocumentTitleResolution implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'simple_document_title_resolution';
+    protected static $openAPIModelName = 'SimpleDocumentTitle_resolution';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

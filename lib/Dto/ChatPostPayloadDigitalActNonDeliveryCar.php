@@ -51,7 +51,7 @@ class ChatPostPayloadDigitalActNonDeliveryCar implements ModelInterface, ArrayAc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-digital-act-non-delivery-car';
+    protected static $openAPIModelName = 'ChatPostPayloadDigitalActNonDeliveryCar';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

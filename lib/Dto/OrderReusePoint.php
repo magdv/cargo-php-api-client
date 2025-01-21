@@ -51,7 +51,7 @@ class OrderReusePoint implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-reuse-point';
+    protected static $openAPIModelName = 'OrderReusePoint';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class OrderCardResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-card-response';
+    protected static $openAPIModelName = 'OrderCardResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OrderCardResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderCardResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -301,7 +301,7 @@ class OrderCardResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets data
      *
-     * @return object|null
+     * @return \MagDv\Cargomart\Dto\OrderCardResponseData|null
      */
     public function getData()
     {
@@ -311,7 +311,7 @@ class OrderCardResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets data
      *
-     * @param object|null $data Common response data
+     * @param \MagDv\Cargomart\Dto\OrderCardResponseData|null $data data
      *
      * @return self
      */

@@ -51,7 +51,7 @@ class ExpeditorProposalConsignorExpeditorPaymentRequest implements ModelInterfac
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-proposal-consignor-expeditor-payment-request';
+    protected static $openAPIModelName = 'ExpeditorProposalConsignorExpeditorPaymentRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

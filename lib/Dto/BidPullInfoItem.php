@@ -51,7 +51,7 @@ class BidPullInfoItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'bid-pull-info-item';
+    protected static $openAPIModelName = 'BidPullInfoItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class StoragePointItemDiff implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'storage-point-item-diff';
+    protected static $openAPIModelName = 'StoragePointItemDiff';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

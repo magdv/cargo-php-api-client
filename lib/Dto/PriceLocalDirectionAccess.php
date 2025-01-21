@@ -51,7 +51,7 @@ class PriceLocalDirectionAccess implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'price-local-direction-access';
+    protected static $openAPIModelName = 'PriceLocalDirectionAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

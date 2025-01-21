@@ -51,7 +51,7 @@ class ExpeditorOfferRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-offer-request';
+    protected static $openAPIModelName = 'ExpeditorOfferRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

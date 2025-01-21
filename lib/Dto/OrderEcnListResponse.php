@@ -51,7 +51,7 @@ class OrderEcnListResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-ecn-list-response';
+    protected static $openAPIModelName = 'OrderEcnListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OrderEcnListResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderEcnListResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class OrderEcnListResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\OrderEcnListResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class OrderEcnListResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets data
      *
-     * @param object $data Данные
+     * @param \MagDv\Cargomart\Dto\OrderEcnListResponseData $data data
      *
      * @return self
      */

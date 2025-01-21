@@ -51,7 +51,7 @@ class ContainerTypeItem implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'container-type-item';
+    protected static $openAPIModelName = 'ContainerTypeItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

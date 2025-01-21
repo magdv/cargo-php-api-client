@@ -51,7 +51,7 @@ class OrderDraftExpeditorValidateResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-expeditor-validate-response';
+    protected static $openAPIModelName = 'OrderDraftExpeditorValidateResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

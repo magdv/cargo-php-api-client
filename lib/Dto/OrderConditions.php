@@ -51,7 +51,7 @@ class OrderConditions implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-conditions';
+    protected static $openAPIModelName = 'OrderConditions';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

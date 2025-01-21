@@ -51,7 +51,7 @@ class DocumentAccess implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'document_access';
+    protected static $openAPIModelName = 'Document_access';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

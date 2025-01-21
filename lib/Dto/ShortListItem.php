@@ -51,7 +51,7 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'short-list-item';
+    protected static $openAPIModelName = 'ShortListItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

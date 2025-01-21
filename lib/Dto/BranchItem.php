@@ -51,7 +51,7 @@ class BranchItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'branch-item';
+    protected static $openAPIModelName = 'BranchItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class FileOnValidationAccess implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'file_on_validation_access';
+    protected static $openAPIModelName = 'FileOnValidation_access';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

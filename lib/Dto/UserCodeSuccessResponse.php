@@ -51,7 +51,7 @@ class UserCodeSuccessResponse implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-code-success-response';
+    protected static $openAPIModelName = 'UserCodeSuccessResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

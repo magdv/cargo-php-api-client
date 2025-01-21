@@ -51,7 +51,7 @@ class ProposalCargo implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-cargo';
+    protected static $openAPIModelName = 'ProposalCargo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

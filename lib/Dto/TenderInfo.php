@@ -51,7 +51,7 @@ class TenderInfo implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-info';
+    protected static $openAPIModelName = 'TenderInfo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

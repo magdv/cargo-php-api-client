@@ -51,7 +51,7 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-updates-commercial-condition-full';
+    protected static $openAPIModelName = 'ExpeditorContractUpdatesCommercialConditionFull';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,6 +61,8 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
     protected static $openAPITypes = [
         'version' => 'string',
         'type' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType',
+        'start_date' => '\DateTime',
+        'end_date' => '\DateTime',
         'content_file' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionFullContentFile',
         'sign_file' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionFullSignFile'
     ];
@@ -75,6 +77,8 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
     protected static $openAPIFormats = [
         'version' => null,
         'type' => null,
+        'start_date' => 'date',
+        'end_date' => 'date',
         'content_file' => null,
         'sign_file' => null
     ];
@@ -87,6 +91,8 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
     protected static array $openAPINullables = [
         'version' => false,
         'type' => false,
+        'start_date' => false,
+        'end_date' => false,
         'content_file' => false,
         'sign_file' => false
     ];
@@ -179,6 +185,8 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
     protected static $attributeMap = [
         'version' => 'version',
         'type' => 'type',
+        'start_date' => 'startDate',
+        'end_date' => 'endDate',
         'content_file' => 'contentFile',
         'sign_file' => 'signFile'
     ];
@@ -191,6 +199,8 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
     protected static $setters = [
         'version' => 'setVersion',
         'type' => 'setType',
+        'start_date' => 'setStartDate',
+        'end_date' => 'setEndDate',
         'content_file' => 'setContentFile',
         'sign_file' => 'setSignFile'
     ];
@@ -203,6 +213,8 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
     protected static $getters = [
         'version' => 'getVersion',
         'type' => 'getType',
+        'start_date' => 'getStartDate',
+        'end_date' => 'getEndDate',
         'content_file' => 'getContentFile',
         'sign_file' => 'getSignFile'
     ];
@@ -266,6 +278,8 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
     {
         $this->setIfExists('version', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('start_date', $data ?? [], null);
+        $this->setIfExists('end_date', $data ?? [], null);
         $this->setIfExists('content_file', $data ?? [], null);
         $this->setIfExists('sign_file', $data ?? [], null);
     }
@@ -374,6 +388,60 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
             throw new \InvalidArgumentException('non-nullable type cannot be null');
         }
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets start_date
+     *
+     * @return \DateTime|null
+     */
+    public function getStartDate()
+    {
+        return $this->container['start_date'];
+    }
+
+    /**
+     * Sets start_date
+     *
+     * @param \DateTime|null $start_date Дата начала действия комм. условий
+     *
+     * @return self
+     */
+    public function setStartDate($start_date)
+    {
+        if (is_null($start_date)) {
+            throw new \InvalidArgumentException('non-nullable start_date cannot be null');
+        }
+        $this->container['start_date'] = $start_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets end_date
+     *
+     * @return \DateTime|null
+     */
+    public function getEndDate()
+    {
+        return $this->container['end_date'];
+    }
+
+    /**
+     * Sets end_date
+     *
+     * @param \DateTime|null $end_date Дата окончания действия комм. условий
+     *
+     * @return self
+     */
+    public function setEndDate($end_date)
+    {
+        if (is_null($end_date)) {
+            throw new \InvalidArgumentException('non-nullable end_date cannot be null');
+        }
+        $this->container['end_date'] = $end_date;
 
         return $this;
     }

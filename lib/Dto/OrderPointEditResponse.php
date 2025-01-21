@@ -51,7 +51,7 @@ class OrderPointEditResponse implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-point-edit-response';
+    protected static $openAPIModelName = 'OrderPointEditResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class OrderPointEditResponse implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderPointEditResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class OrderPointEditResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\OrderPointEditResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class OrderPointEditResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets data
      *
-     * @param object $data Common response data
+     * @param \MagDv\Cargomart\Dto\OrderPointEditResponseData $data data
      *
      * @return self
      */

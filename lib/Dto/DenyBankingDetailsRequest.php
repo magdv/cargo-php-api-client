@@ -51,7 +51,7 @@ class DenyBankingDetailsRequest implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'deny-banking-details-request';
+    protected static $openAPIModelName = 'DenyBankingDetailsRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class CompanyBranchConsignorBranchParamAdvertiseSettings implements ModelInterfa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-branch-consignor-branch-param-advertise-settings';
+    protected static $openAPIModelName = 'CompanyBranchConsignorBranchParamAdvertiseSettings';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

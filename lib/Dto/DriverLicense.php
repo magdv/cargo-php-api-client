@@ -51,7 +51,7 @@ class DriverLicense implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'driver-license';
+    protected static $openAPIModelName = 'DriverLicense';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

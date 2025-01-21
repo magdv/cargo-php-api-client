@@ -50,7 +50,7 @@ class RejectDocumentRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'reject-document-request';
+    protected static $openAPIModelName = 'RejectDocumentRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

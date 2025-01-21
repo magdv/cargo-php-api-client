@@ -51,7 +51,7 @@ class CompanyCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-create-request';
+    protected static $openAPIModelName = 'CompanyCreateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

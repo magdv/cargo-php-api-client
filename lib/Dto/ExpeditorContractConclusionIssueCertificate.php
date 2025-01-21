@@ -51,7 +51,7 @@ class ExpeditorContractConclusionIssueCertificate implements ModelInterface, Arr
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-conclusion-issue-certificate';
+    protected static $openAPIModelName = 'ExpeditorContractConclusionIssueCertificate';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

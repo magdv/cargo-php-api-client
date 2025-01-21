@@ -51,7 +51,7 @@ class ConfigurationFiles implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'configuration-files';
+    protected static $openAPIModelName = 'ConfigurationFiles';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

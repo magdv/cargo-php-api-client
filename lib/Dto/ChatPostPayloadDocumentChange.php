@@ -51,7 +51,7 @@ class ChatPostPayloadDocumentChange implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-document-change';
+    protected static $openAPIModelName = 'ChatPostPayloadDocumentChange';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

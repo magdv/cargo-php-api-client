@@ -51,7 +51,7 @@ class OrderInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-invoice';
+    protected static $openAPIModelName = 'OrderInvoice';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

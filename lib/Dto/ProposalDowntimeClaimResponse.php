@@ -51,7 +51,7 @@ class ProposalDowntimeClaimResponse implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-downtime-claim-response';
+    protected static $openAPIModelName = 'ProposalDowntimeClaimResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

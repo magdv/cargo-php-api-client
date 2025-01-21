@@ -51,7 +51,7 @@ class GeneralPartnerFee implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'general-partner-fee';
+    protected static $openAPIModelName = 'GeneralPartnerFee';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

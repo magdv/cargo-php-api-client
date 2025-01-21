@@ -51,7 +51,7 @@ class OrderDraftCommonMixin implements ModelInterface, ArrayAccess, \JsonSeriali
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-common-mixin';
+    protected static $openAPIModelName = 'OrderDraftCommonMixin';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

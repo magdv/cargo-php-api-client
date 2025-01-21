@@ -51,7 +51,7 @@ class ExpeditorContractUpdatesResponse implements ModelInterface, ArrayAccess, \
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-updates-response';
+    protected static $openAPIModelName = 'ExpeditorContractUpdatesResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

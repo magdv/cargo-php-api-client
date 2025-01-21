@@ -51,7 +51,7 @@ class ProposalLoadingDateRecommendation implements ModelInterface, ArrayAccess, 
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-loading-date-recommendation';
+    protected static $openAPIModelName = 'ProposalLoadingDateRecommendation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

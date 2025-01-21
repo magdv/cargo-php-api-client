@@ -51,7 +51,7 @@ class MonitoringRequest implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'monitoring-request';
+    protected static $openAPIModelName = 'MonitoringRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

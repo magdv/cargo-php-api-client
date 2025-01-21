@@ -51,7 +51,7 @@ class BranchList implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'branch-list';
+    protected static $openAPIModelName = 'BranchList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

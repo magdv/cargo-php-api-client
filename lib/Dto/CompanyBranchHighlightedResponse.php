@@ -51,7 +51,7 @@ class CompanyBranchHighlightedResponse implements ModelInterface, ArrayAccess, \
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-branch-highlighted-response';
+    protected static $openAPIModelName = 'CompanyBranchHighlightedResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class DisabledFull implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'disabled-full';
+    protected static $openAPIModelName = 'DisabledFull';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

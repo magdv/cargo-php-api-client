@@ -51,7 +51,7 @@ class AcWorkerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ac-worker-response';
+    protected static $openAPIModelName = 'AcWorkerResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

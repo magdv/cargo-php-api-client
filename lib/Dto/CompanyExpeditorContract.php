@@ -51,7 +51,7 @@ class CompanyExpeditorContract implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-expeditor-contract';
+    protected static $openAPIModelName = 'CompanyExpeditorContract';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class IncomeRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'income-request';
+    protected static $openAPIModelName = 'IncomeRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

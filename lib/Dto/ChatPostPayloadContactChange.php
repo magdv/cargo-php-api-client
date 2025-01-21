@@ -51,7 +51,7 @@ class ChatPostPayloadContactChange implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-contact-change';
+    protected static $openAPIModelName = 'ChatPostPayloadContactChange';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

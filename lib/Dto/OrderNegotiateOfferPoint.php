@@ -51,7 +51,7 @@ class OrderNegotiateOfferPoint implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-negotiate-offer-point';
+    protected static $openAPIModelName = 'OrderNegotiateOfferPoint';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

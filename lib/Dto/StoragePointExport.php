@@ -51,7 +51,7 @@ class StoragePointExport implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'storage-point-export';
+    protected static $openAPIModelName = 'StoragePointExport';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

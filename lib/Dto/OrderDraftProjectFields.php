@@ -51,7 +51,7 @@ class OrderDraftProjectFields implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-draft-project-fields';
+    protected static $openAPIModelName = 'OrderDraftProjectFields';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

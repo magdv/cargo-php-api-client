@@ -51,7 +51,7 @@ class ChatPostPayloadOrderExpeditorPaymentCarrierUpdate implements ModelInterfac
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-order-expeditor-payment-carrier-update';
+    protected static $openAPIModelName = 'ChatPostPayloadOrderExpeditorPaymentCarrierUpdate';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

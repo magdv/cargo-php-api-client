@@ -51,7 +51,7 @@ class OrderPriceTypeItem implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-price-type-item';
+    protected static $openAPIModelName = 'OrderPriceTypeItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class BrokerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'broker-response';
+    protected static $openAPIModelName = 'BrokerResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

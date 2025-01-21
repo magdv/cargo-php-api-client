@@ -51,7 +51,7 @@ class WorkerCertificateCreateRequest implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'worker-certificate-create-request';
+    protected static $openAPIModelName = 'WorkerCertificateCreateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

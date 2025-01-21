@@ -51,7 +51,7 @@ class CompanyReviewRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-review-request';
+    protected static $openAPIModelName = 'CompanyReviewRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class CompanyCarriageDirectionResponse implements ModelInterface, ArrayAccess, \
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-carriage-direction-response';
+    protected static $openAPIModelName = 'CompanyCarriageDirectionResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

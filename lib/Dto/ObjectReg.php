@@ -51,7 +51,7 @@ class ObjectReg implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'object-reg';
+    protected static $openAPIModelName = 'ObjectReg';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

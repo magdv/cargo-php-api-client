@@ -51,7 +51,7 @@ class Owner implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'owner';
+    protected static $openAPIModelName = 'Owner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

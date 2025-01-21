@@ -51,7 +51,7 @@ class ContractTypeRequest implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contract-type-request';
+    protected static $openAPIModelName = 'ContractTypeRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

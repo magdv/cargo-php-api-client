@@ -51,7 +51,7 @@ class AcDriverResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ac-driver-response';
+    protected static $openAPIModelName = 'AcDriverResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

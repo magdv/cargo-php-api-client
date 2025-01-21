@@ -51,7 +51,7 @@ class AcCuratorResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ac-curator-response';
+    protected static $openAPIModelName = 'AcCuratorResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

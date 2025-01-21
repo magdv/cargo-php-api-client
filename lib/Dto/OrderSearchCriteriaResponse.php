@@ -51,7 +51,7 @@ class OrderSearchCriteriaResponse implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-search-criteria-response';
+    protected static $openAPIModelName = 'OrderSearchCriteriaResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

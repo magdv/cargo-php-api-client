@@ -51,7 +51,7 @@ class ChatPostPayloadModelFieldChangeChangesInnerNew implements ModelInterface, 
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat_post_payload_model_field_change_changes_inner_new';
+    protected static $openAPIModelName = 'ChatPostPayloadModelFieldChange_changes_inner_new';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

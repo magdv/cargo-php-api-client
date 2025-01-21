@@ -51,7 +51,7 @@ class ProposalTruck implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-truck';
+    protected static $openAPIModelName = 'ProposalTruck';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class ProtectedBidReasonComment implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'protected-bid-reason-comment';
+    protected static $openAPIModelName = 'ProtectedBidReasonComment';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

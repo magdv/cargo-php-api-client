@@ -51,7 +51,7 @@ class RoadmapAccess implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'roadmap-access';
+    protected static $openAPIModelName = 'RoadmapAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

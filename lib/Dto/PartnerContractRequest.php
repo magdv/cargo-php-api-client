@@ -51,7 +51,7 @@ class PartnerContractRequest implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'partner-contract-request';
+    protected static $openAPIModelName = 'PartnerContractRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

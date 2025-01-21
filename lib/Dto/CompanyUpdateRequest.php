@@ -51,7 +51,7 @@ class CompanyUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'company-update-request';
+    protected static $openAPIModelName = 'CompanyUpdateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

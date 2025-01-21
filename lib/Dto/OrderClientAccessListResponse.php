@@ -51,7 +51,7 @@ class OrderClientAccessListResponse implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-client-access-list-response';
+    protected static $openAPIModelName = 'OrderClientAccessListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

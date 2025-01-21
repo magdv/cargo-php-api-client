@@ -50,7 +50,7 @@ class AddressItems implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'address_items';
+    protected static $openAPIModelName = 'Address_items';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

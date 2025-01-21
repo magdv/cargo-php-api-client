@@ -51,7 +51,7 @@ class OrderCategoryStatisticsResponse implements ModelInterface, ArrayAccess, \J
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-category-statistics-response';
+    protected static $openAPIModelName = 'OrderCategoryStatisticsResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

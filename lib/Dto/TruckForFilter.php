@@ -51,7 +51,7 @@ class TruckForFilter implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'truck-for-filter';
+    protected static $openAPIModelName = 'TruckForFilter';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

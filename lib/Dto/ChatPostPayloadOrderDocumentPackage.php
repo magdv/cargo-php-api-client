@@ -51,7 +51,7 @@ class ChatPostPayloadOrderDocumentPackage implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-order-document-package';
+    protected static $openAPIModelName = 'ChatPostPayloadOrderDocumentPackage';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

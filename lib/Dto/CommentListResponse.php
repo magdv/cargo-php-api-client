@@ -51,7 +51,7 @@ class CommentListResponse implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'comment-list-response';
+    protected static $openAPIModelName = 'CommentListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

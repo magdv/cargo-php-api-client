@@ -51,7 +51,7 @@ class ProposalDriver implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-driver';
+    protected static $openAPIModelName = 'ProposalDriver';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

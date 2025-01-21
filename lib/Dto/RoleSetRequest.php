@@ -51,7 +51,7 @@ class RoleSetRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'role-set-request';
+    protected static $openAPIModelName = 'RoleSetRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

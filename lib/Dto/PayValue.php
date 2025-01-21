@@ -51,7 +51,7 @@ class PayValue implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'pay-value';
+    protected static $openAPIModelName = 'PayValue';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

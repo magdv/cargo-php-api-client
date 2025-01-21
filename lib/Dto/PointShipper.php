@@ -51,7 +51,7 @@ class PointShipper implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'point-shipper';
+    protected static $openAPIModelName = 'PointShipper';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

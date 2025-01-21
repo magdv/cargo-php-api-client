@@ -51,7 +51,7 @@ class BankingDetailsResponse implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'banking-details-response';
+    protected static $openAPIModelName = 'BankingDetailsResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

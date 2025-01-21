@@ -51,7 +51,7 @@ class AcPointListResponse implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ac-point-list-response';
+    protected static $openAPIModelName = 'AcPointListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

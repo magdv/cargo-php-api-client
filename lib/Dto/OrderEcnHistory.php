@@ -51,7 +51,7 @@ class OrderEcnHistory implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-ecn-history';
+    protected static $openAPIModelName = 'OrderEcnHistory';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

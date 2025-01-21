@@ -51,7 +51,7 @@ class OrderShort implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-short';
+    protected static $openAPIModelName = 'OrderShort';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

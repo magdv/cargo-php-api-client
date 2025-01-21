@@ -51,7 +51,7 @@ class ProposalCarrier implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-carrier';
+    protected static $openAPIModelName = 'ProposalCarrier';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

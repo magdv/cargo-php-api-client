@@ -51,7 +51,7 @@ class FileItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'file-item';
+    protected static $openAPIModelName = 'FileItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

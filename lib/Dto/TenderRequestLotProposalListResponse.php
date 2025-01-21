@@ -51,7 +51,7 @@ class TenderRequestLotProposalListResponse implements ModelInterface, ArrayAcces
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tender-request-lot-proposal-list-response';
+    protected static $openAPIModelName = 'TenderRequestLotProposalListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -50,7 +50,7 @@ class ProposalDriverDriverAppDetailInner implements ModelInterface, ArrayAccess,
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal_driver_driverAppDetail_inner';
+    protected static $openAPIModelName = 'ProposalDriver_driverAppDetail_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

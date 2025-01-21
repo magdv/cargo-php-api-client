@@ -51,7 +51,7 @@ class OrderSimpleDocument implements ModelInterface, ArrayAccess, \JsonSerializa
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-simple-document';
+    protected static $openAPIModelName = 'OrderSimpleDocument';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

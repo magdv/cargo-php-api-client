@@ -51,7 +51,7 @@ class CarParkAccess implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'car_park_access';
+    protected static $openAPIModelName = 'CarPark_access';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

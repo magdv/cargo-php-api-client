@@ -51,7 +51,7 @@ class RoutePointShort implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'route-point-short';
+    protected static $openAPIModelName = 'RoutePointShort';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

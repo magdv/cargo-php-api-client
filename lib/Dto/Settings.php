@@ -51,7 +51,7 @@ class Settings implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'settings';
+    protected static $openAPIModelName = 'Settings';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

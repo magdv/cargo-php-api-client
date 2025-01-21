@@ -51,7 +51,7 @@ class OrderOfferListResponse implements ModelInterface, ArrayAccess, \JsonSerial
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-offer-list-response';
+    protected static $openAPIModelName = 'OrderOfferListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

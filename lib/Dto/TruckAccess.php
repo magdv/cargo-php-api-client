@@ -51,7 +51,7 @@ class TruckAccess implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'truck-access';
+    protected static $openAPIModelName = 'TruckAccess';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

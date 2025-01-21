@@ -51,7 +51,7 @@ class Locality implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'locality';
+    protected static $openAPIModelName = 'Locality';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

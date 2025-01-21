@@ -50,7 +50,7 @@ class ChatPostPayloadOrderPointInner implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat_post_payload_order_point_inner';
+    protected static $openAPIModelName = 'ChatPostPayloadOrder_point_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

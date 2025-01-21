@@ -51,7 +51,7 @@ class TruckDriver implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'truck-driver';
+    protected static $openAPIModelName = 'TruckDriver';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

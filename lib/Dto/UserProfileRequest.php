@@ -51,7 +51,7 @@ class UserProfileRequest implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'user-profile-request';
+    protected static $openAPIModelName = 'UserProfileRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

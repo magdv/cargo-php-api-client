@@ -51,7 +51,7 @@ class ExpeditorContractConclusionValidation implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-contract-conclusion-validation';
+    protected static $openAPIModelName = 'ExpeditorContractConclusionValidation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

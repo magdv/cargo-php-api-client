@@ -51,7 +51,7 @@ class ExpeditorCarrierContractList implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'expeditor-carrier-contract-list';
+    protected static $openAPIModelName = 'ExpeditorCarrierContractList';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

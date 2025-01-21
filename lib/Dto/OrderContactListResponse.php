@@ -51,7 +51,7 @@ class OrderContactListResponse implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-contact-list-response';
+    protected static $openAPIModelName = 'OrderContactListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

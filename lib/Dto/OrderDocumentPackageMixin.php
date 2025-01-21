@@ -51,7 +51,7 @@ class OrderDocumentPackageMixin implements ModelInterface, ArrayAccess, \JsonSer
       *
       * @var string
       */
-    protected static $openAPIModelName = 'order-document-package-mixin';
+    protected static $openAPIModelName = 'OrderDocumentPackageMixin';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

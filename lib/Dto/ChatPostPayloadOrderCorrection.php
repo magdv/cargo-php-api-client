@@ -51,7 +51,7 @@ class ChatPostPayloadOrderCorrection implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-order-correction';
+    protected static $openAPIModelName = 'ChatPostPayloadOrderCorrection';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

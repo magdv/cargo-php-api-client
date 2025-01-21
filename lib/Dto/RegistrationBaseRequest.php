@@ -51,7 +51,7 @@ class RegistrationBaseRequest implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'registration-base-request';
+    protected static $openAPIModelName = 'RegistrationBaseRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

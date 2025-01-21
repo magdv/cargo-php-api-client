@@ -51,7 +51,7 @@ class PayloadChunkCancellation implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'payload-chunk-cancellation';
+    protected static $openAPIModelName = 'PayloadChunkCancellation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

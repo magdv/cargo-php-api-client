@@ -51,7 +51,7 @@ class Vehicle implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'vehicle';
+    protected static $openAPIModelName = 'Vehicle';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

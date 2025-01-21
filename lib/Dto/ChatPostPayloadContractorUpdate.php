@@ -51,7 +51,7 @@ class ChatPostPayloadContractorUpdate implements ModelInterface, ArrayAccess, \J
       *
       * @var string
       */
-    protected static $openAPIModelName = 'chat-post-payload-contractor-update';
+    protected static $openAPIModelName = 'ChatPostPayloadContractorUpdate';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

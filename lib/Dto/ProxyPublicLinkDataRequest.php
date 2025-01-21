@@ -51,7 +51,7 @@ class ProxyPublicLinkDataRequest implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proxy-public-link-data-request';
+    protected static $openAPIModelName = 'ProxyPublicLinkDataRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

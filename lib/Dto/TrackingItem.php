@@ -51,7 +51,7 @@ class TrackingItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'tracking-item';
+    protected static $openAPIModelName = 'TrackingItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

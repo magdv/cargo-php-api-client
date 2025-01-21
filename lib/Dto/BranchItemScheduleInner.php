@@ -50,7 +50,7 @@ class BranchItemScheduleInner implements ModelInterface, ArrayAccess, \JsonSeria
       *
       * @var string
       */
-    protected static $openAPIModelName = 'branch_item_schedule_inner';
+    protected static $openAPIModelName = 'BranchItem_schedule_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

@@ -51,7 +51,7 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'proposal-card-full';
+    protected static $openAPIModelName = 'ProposalCardFull';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
