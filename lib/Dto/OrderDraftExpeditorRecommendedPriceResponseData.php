@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderDraftExpeditorRecommendedPriceResponse
+ * OrderDraftExpeditorRecommendedPriceResponseData
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * OrderDraftExpeditorRecommendedPriceResponse Class Doc Comment
+ * OrderDraftExpeditorRecommendedPriceResponseData Class Doc Comment
  *
  * @category Class
  * @description Ответ на запрос рекомендованной цены маршрута для Экспедиторского заказа
@@ -42,7 +42,7 @@ use \MagDv\Cargomart\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class OrderDraftExpeditorRecommendedPriceResponseData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
       *
       * @var string
       */
-    protected static $openAPIModelName = 'OrderDraftExpeditorRecommendedPriceResponse';
+    protected static $openAPIModelName = 'OrderDraftExpeditorRecommendedPriceResponseData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,7 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\MagDv\Cargomart\Dto\OrderDraftExpeditorRecommendedPriceResponseData',
-        'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
+        'recommended_price' => '\MagDv\Cargomart\Dto\OrderDraftExpeditorRecommendedPriceResponseDataRecommendedPrice'
     ];
 
     /**
@@ -71,8 +70,7 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'message' => null
+        'recommended_price' => null
     ];
 
     /**
@@ -81,8 +79,7 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-        'message' => false
+        'recommended_price' => false
     ];
 
     /**
@@ -171,8 +168,7 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'message' => 'message'
+        'recommended_price' => 'recommendedPrice'
     ];
 
     /**
@@ -181,8 +177,7 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'message' => 'setMessage'
+        'recommended_price' => 'setRecommendedPrice'
     ];
 
     /**
@@ -191,8 +186,7 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'message' => 'getMessage'
+        'recommended_price' => 'getRecommendedPrice'
     ];
 
     /**
@@ -252,8 +246,7 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('message', $data ?? [], null);
+        $this->setIfExists('recommended_price', $data ?? [], null);
     }
 
     /**
@@ -283,8 +276,8 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['recommended_price'] === null) {
+            $invalidProperties[] = "'recommended_price' can't be null";
         }
         return $invalidProperties;
     }
@@ -302,55 +295,28 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
 
 
     /**
-     * Gets data
+     * Gets recommended_price
      *
-     * @return \MagDv\Cargomart\Dto\OrderDraftExpeditorRecommendedPriceResponseData
+     * @return \MagDv\Cargomart\Dto\OrderDraftExpeditorRecommendedPriceResponseDataRecommendedPrice
      */
-    public function getData()
+    public function getRecommendedPrice()
     {
-        return $this->container['data'];
+        return $this->container['recommended_price'];
     }
 
     /**
-     * Sets data
+     * Sets recommended_price
      *
-     * @param \MagDv\Cargomart\Dto\OrderDraftExpeditorRecommendedPriceResponseData $data data
+     * @param \MagDv\Cargomart\Dto\OrderDraftExpeditorRecommendedPriceResponseDataRecommendedPrice $recommended_price recommended_price
      *
      * @return self
      */
-    public function setData($data)
+    public function setRecommendedPrice($recommended_price)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($recommended_price)) {
+            throw new \InvalidArgumentException('non-nullable recommended_price cannot be null');
         }
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
-     *
-     * @return \MagDv\Cargomart\Dto\MessageV2[]|null
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     *
-     * @param \MagDv\Cargomart\Dto\MessageV2[]|null $message message
-     *
-     * @return self
-     */
-    public function setMessage($message)
-    {
-        if (is_null($message)) {
-            throw new \InvalidArgumentException('non-nullable message cannot be null');
-        }
-        $this->container['message'] = $message;
+        $this->container['recommended_price'] = $recommended_price;
 
         return $this;
     }
