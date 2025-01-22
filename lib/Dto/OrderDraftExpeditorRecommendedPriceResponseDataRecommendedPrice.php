@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderDraftExpeditorRecommendedPriceResponse
+ * OrderDraftExpeditorRecommendedPriceResponseDataRecommendedPrice
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * OrderDraftExpeditorRecommendedPriceResponse Class Doc Comment
+ * OrderDraftExpeditorRecommendedPriceResponseDataRecommendedPrice Class Doc Comment
  *
  * @category Class
- * @description Ответ на запрос рекомендованной цены маршрута для Экспедиторского заказа
+ * @description Объект с рекомендованной ценой для заказа
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class OrderDraftExpeditorRecommendedPriceResponseDataRecommendedPrice implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
       *
       * @var string
       */
-    protected static $openAPIModelName = 'OrderDraftExpeditorRecommendedPriceResponse';
+    protected static $openAPIModelName = 'OrderDraftExpeditorRecommendedPriceResponseData_recommendedPrice';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,8 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\MagDv\Cargomart\Dto\OrderDraftExpeditorRecommendedPriceResponseData',
-        'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
+        'consignor_price' => 'string',
+        'carrier_price' => 'string'
     ];
 
     /**
@@ -71,8 +71,8 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'message' => null
+        'consignor_price' => 'cm-price',
+        'carrier_price' => 'cm-price'
     ];
 
     /**
@@ -81,8 +81,8 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-        'message' => false
+        'consignor_price' => false,
+        'carrier_price' => false
     ];
 
     /**
@@ -171,8 +171,8 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'message' => 'message'
+        'consignor_price' => 'consignorPrice',
+        'carrier_price' => 'carrierPrice'
     ];
 
     /**
@@ -181,8 +181,8 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'message' => 'setMessage'
+        'consignor_price' => 'setConsignorPrice',
+        'carrier_price' => 'setCarrierPrice'
     ];
 
     /**
@@ -191,8 +191,8 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'message' => 'getMessage'
+        'consignor_price' => 'getConsignorPrice',
+        'carrier_price' => 'getCarrierPrice'
     ];
 
     /**
@@ -252,8 +252,8 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('message', $data ?? [], null);
+        $this->setIfExists('consignor_price', $data ?? [], null);
+        $this->setIfExists('carrier_price', $data ?? [], null);
     }
 
     /**
@@ -283,9 +283,14 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if (!is_null($this->container['consignor_price']) && !preg_match("/^(0|([1-9]\\d*))([.]\\d{1,4})?$/", $this->container['consignor_price'])) {
+            $invalidProperties[] = "invalid value for 'consignor_price', must be conform to the pattern /^(0|([1-9]\\d*))([.]\\d{1,4})?$/.";
         }
+
+        if (!is_null($this->container['carrier_price']) && !preg_match("/^(0|([1-9]\\d*))([.]\\d{1,4})?$/", $this->container['carrier_price'])) {
+            $invalidProperties[] = "invalid value for 'carrier_price', must be conform to the pattern /^(0|([1-9]\\d*))([.]\\d{1,4})?$/.";
+        }
+
         return $invalidProperties;
     }
 
@@ -302,55 +307,65 @@ class OrderDraftExpeditorRecommendedPriceResponse implements ModelInterface, Arr
 
 
     /**
-     * Gets data
+     * Gets consignor_price
      *
-     * @return \MagDv\Cargomart\Dto\OrderDraftExpeditorRecommendedPriceResponseData
+     * @return string|null
      */
-    public function getData()
+    public function getConsignorPrice()
     {
-        return $this->container['data'];
+        return $this->container['consignor_price'];
     }
 
     /**
-     * Sets data
+     * Sets consignor_price
      *
-     * @param \MagDv\Cargomart\Dto\OrderDraftExpeditorRecommendedPriceResponseData $data data
+     * @param string|null $consignor_price Цена по направлению для отправителя
      *
      * @return self
      */
-    public function setData($data)
+    public function setConsignorPrice($consignor_price)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($consignor_price)) {
+            throw new \InvalidArgumentException('non-nullable consignor_price cannot be null');
         }
-        $this->container['data'] = $data;
+
+        if ((!preg_match("/^(0|([1-9]\\d*))([.]\\d{1,4})?$/", ObjectSerializer::toString($consignor_price)))) {
+            throw new \InvalidArgumentException("invalid value for \$consignor_price when calling OrderDraftExpeditorRecommendedPriceResponseDataRecommendedPrice., must conform to the pattern /^(0|([1-9]\\d*))([.]\\d{1,4})?$/.");
+        }
+
+        $this->container['consignor_price'] = $consignor_price;
 
         return $this;
     }
 
     /**
-     * Gets message
+     * Gets carrier_price
      *
-     * @return \MagDv\Cargomart\Dto\MessageV2[]|null
+     * @return string|null
      */
-    public function getMessage()
+    public function getCarrierPrice()
     {
-        return $this->container['message'];
+        return $this->container['carrier_price'];
     }
 
     /**
-     * Sets message
+     * Sets carrier_price
      *
-     * @param \MagDv\Cargomart\Dto\MessageV2[]|null $message message
+     * @param string|null $carrier_price Цена по направлению для перевозчика
      *
      * @return self
      */
-    public function setMessage($message)
+    public function setCarrierPrice($carrier_price)
     {
-        if (is_null($message)) {
-            throw new \InvalidArgumentException('non-nullable message cannot be null');
+        if (is_null($carrier_price)) {
+            throw new \InvalidArgumentException('non-nullable carrier_price cannot be null');
         }
-        $this->container['message'] = $message;
+
+        if ((!preg_match("/^(0|([1-9]\\d*))([.]\\d{1,4})?$/", ObjectSerializer::toString($carrier_price)))) {
+            throw new \InvalidArgumentException("invalid value for \$carrier_price when calling OrderDraftExpeditorRecommendedPriceResponseDataRecommendedPrice., must conform to the pattern /^(0|([1-9]\\d*))([.]\\d{1,4})?$/.");
+        }
+
+        $this->container['carrier_price'] = $carrier_price;
 
         return $this;
     }
