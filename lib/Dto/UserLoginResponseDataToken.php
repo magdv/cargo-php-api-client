@@ -1,6 +1,6 @@
 <?php
 /**
- * UserLoginResponse
+ * UserLoginResponseDataToken
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * UserLoginResponse Class Doc Comment
+ * UserLoginResponseDataToken Class Doc Comment
  *
  * @category Class
- * @description Авторизация пользователя
+ * @description Модель токена
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class UserLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class UserLoginResponseDataToken implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class UserLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'UserLoginResponse';
+    protected static $openAPIModelName = 'UserLoginResponseData_token';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,7 @@ class UserLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\MagDv\Cargomart\Dto\UserLoginResponseData',
-        'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
+        'token' => 'string'
     ];
 
     /**
@@ -71,8 +70,7 @@ class UserLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'message' => null
+        'token' => null
     ];
 
     /**
@@ -81,8 +79,7 @@ class UserLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-        'message' => false
+        'token' => false
     ];
 
     /**
@@ -171,8 +168,7 @@ class UserLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'message' => 'message'
+        'token' => 'token'
     ];
 
     /**
@@ -181,8 +177,7 @@ class UserLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'message' => 'setMessage'
+        'token' => 'setToken'
     ];
 
     /**
@@ -191,8 +186,7 @@ class UserLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'message' => 'getMessage'
+        'token' => 'getToken'
     ];
 
     /**
@@ -252,8 +246,7 @@ class UserLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('message', $data ?? [], null);
+        $this->setIfExists('token', $data ?? [], null);
     }
 
     /**
@@ -283,8 +276,8 @@ class UserLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['token'] === null) {
+            $invalidProperties[] = "'token' can't be null";
         }
         return $invalidProperties;
     }
@@ -302,55 +295,28 @@ class UserLoginResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets data
+     * Gets token
      *
-     * @return \MagDv\Cargomart\Dto\UserLoginResponseData
+     * @return string
      */
-    public function getData()
+    public function getToken()
     {
-        return $this->container['data'];
+        return $this->container['token'];
     }
 
     /**
-     * Sets data
+     * Sets token
      *
-     * @param \MagDv\Cargomart\Dto\UserLoginResponseData $data data
+     * @param string $token Токен авторизации
      *
      * @return self
      */
-    public function setData($data)
+    public function setToken($token)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($token)) {
+            throw new \InvalidArgumentException('non-nullable token cannot be null');
         }
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
-     *
-     * @return \MagDv\Cargomart\Dto\MessageV2[]|null
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     *
-     * @param \MagDv\Cargomart\Dto\MessageV2[]|null $message message
-     *
-     * @return self
-     */
-    public function setMessage($message)
-    {
-        if (is_null($message)) {
-            throw new \InvalidArgumentException('non-nullable message cannot be null');
-        }
-        $this->container['message'] = $message;
+        $this->container['token'] = $token;
 
         return $this;
     }
