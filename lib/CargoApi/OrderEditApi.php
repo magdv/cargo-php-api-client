@@ -1183,7 +1183,7 @@ class OrderEditApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse
+     * @return \MagDv\Cargomart\Dto\OrderContactListResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse
      */
     public function apiV2OrderOrderIdContactDelete($order_id, $id_list_request)
     {
@@ -1201,7 +1201,7 @@ class OrderEditApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MagDv\Cargomart\Dto\OrderContactListResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV2OrderOrderIdContactDeleteWithHttpInfo($order_id, $id_list_request)
     {
@@ -1235,14 +1235,14 @@ class OrderEditApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\OrderContactListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\OrderContactListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1296,7 +1296,7 @@ class OrderEditApi
                     ];
             }
 
-            $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+            $returnType = '\MagDv\Cargomart\Dto\OrderContactListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1314,7 +1314,7 @@ class OrderEditApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\OrderContactListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1390,7 +1390,7 @@ class OrderEditApi
      */
     public function apiV2OrderOrderIdContactDeleteAsyncWithHttpInfo($order_id, $id_list_request)
     {
-        $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+        $returnType = '\MagDv\Cargomart\Dto\OrderContactListResponse';
         $request = $this->apiV2OrderOrderIdContactDeleteRequest($order_id, $id_list_request);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -1808,7 +1808,7 @@ class OrderEditApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse
+     * @return \MagDv\Cargomart\Dto\OrderContactListResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse
      */
     public function apiV2OrderOrderIdContactPatch($order_id, $id_list_request)
     {
@@ -1826,7 +1826,7 @@ class OrderEditApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MagDv\Cargomart\Dto\OrderContactListResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV2OrderOrderIdContactPatchWithHttpInfo($order_id, $id_list_request)
     {
@@ -1860,14 +1860,14 @@ class OrderEditApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\OrderContactListResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\OrderContactListResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1921,7 +1921,7 @@ class OrderEditApi
                     ];
             }
 
-            $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+            $returnType = '\MagDv\Cargomart\Dto\OrderContactListResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1939,7 +1939,7 @@ class OrderEditApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\OrderContactListResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2015,7 +2015,7 @@ class OrderEditApi
      */
     public function apiV2OrderOrderIdContactPatchAsyncWithHttpInfo($order_id, $id_list_request)
     {
-        $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+        $returnType = '\MagDv\Cargomart\Dto\OrderContactListResponse';
         $request = $this->apiV2OrderOrderIdContactPatchRequest($order_id, $id_list_request);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
