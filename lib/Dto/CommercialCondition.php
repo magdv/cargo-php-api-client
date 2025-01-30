@@ -62,7 +62,7 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
         'version' => 'string',
         'start_date' => '\DateTime',
         'end_date' => '\DateTime',
-        'type' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType',
+        'type' => '\MagDv\Cargomart\Dto\CommercialConditionType',
         'content_file' => '\MagDv\Cargomart\Dto\FileV2',
         'sign_file' => '\MagDv\Cargomart\Dto\FileV2'
     ];
@@ -422,7 +422,7 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets type
      *
-     * @return \MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType
+     * @return \MagDv\Cargomart\Dto\CommercialConditionType
      */
     public function getType()
     {
@@ -432,7 +432,7 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets type
      *
-     * @param \MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType $type type
+     * @param \MagDv\Cargomart\Dto\CommercialConditionType $type type
      *
      * @return self
      */

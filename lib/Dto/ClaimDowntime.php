@@ -61,6 +61,7 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'string',
         'status' => '\MagDv\Cargomart\Dto\ClaimStatus',
+        'type' => '\MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum',
         'signed_documents' => '\MagDv\Cargomart\Dto\SignedDocument[]',
         'reject_reason' => 'string',
         'access' => 'object',
@@ -68,7 +69,6 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         'points' => '\MagDv\Cargomart\Dto\ClaimDowntimePoint[]',
         'downtime' => '\MagDv\Cargomart\Dto\Downtime',
         'proofs' => '\MagDv\Cargomart\Dto\ClaimProofDocument[]',
-        'type' => '\MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum',
         'date' => '\DateTime',
         'number' => 'string'
     ];
@@ -83,6 +83,7 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => 'uuid',
         'status' => null,
+        'type' => null,
         'signed_documents' => null,
         'reject_reason' => null,
         'access' => null,
@@ -90,7 +91,6 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         'points' => null,
         'downtime' => null,
         'proofs' => null,
-        'type' => null,
         'date' => 'date',
         'number' => null
     ];
@@ -103,6 +103,7 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => false,
         'status' => false,
+        'type' => false,
         'signed_documents' => false,
         'reject_reason' => false,
         'access' => false,
@@ -110,7 +111,6 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         'points' => false,
         'downtime' => false,
         'proofs' => false,
-        'type' => false,
         'date' => false,
         'number' => false
     ];
@@ -203,6 +203,7 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'status' => 'status',
+        'type' => 'type',
         'signed_documents' => 'signedDocuments',
         'reject_reason' => 'rejectReason',
         'access' => 'access',
@@ -210,7 +211,6 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         'points' => 'points',
         'downtime' => 'downtime',
         'proofs' => 'proofs',
-        'type' => 'type',
         'date' => 'date',
         'number' => 'number'
     ];
@@ -223,6 +223,7 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'status' => 'setStatus',
+        'type' => 'setType',
         'signed_documents' => 'setSignedDocuments',
         'reject_reason' => 'setRejectReason',
         'access' => 'setAccess',
@@ -230,7 +231,6 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         'points' => 'setPoints',
         'downtime' => 'setDowntime',
         'proofs' => 'setProofs',
-        'type' => 'setType',
         'date' => 'setDate',
         'number' => 'setNumber'
     ];
@@ -243,6 +243,7 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'status' => 'getStatus',
+        'type' => 'getType',
         'signed_documents' => 'getSignedDocuments',
         'reject_reason' => 'getRejectReason',
         'access' => 'getAccess',
@@ -250,7 +251,6 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         'points' => 'getPoints',
         'downtime' => 'getDowntime',
         'proofs' => 'getProofs',
-        'type' => 'getType',
         'date' => 'getDate',
         'number' => 'getNumber'
     ];
@@ -314,6 +314,7 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('signed_documents', $data ?? [], null);
         $this->setIfExists('reject_reason', $data ?? [], null);
         $this->setIfExists('access', $data ?? [], null);
@@ -321,7 +322,6 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('points', $data ?? [], null);
         $this->setIfExists('downtime', $data ?? [], null);
         $this->setIfExists('proofs', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('date', $data ?? [], null);
         $this->setIfExists('number', $data ?? [], null);
     }
@@ -359,8 +359,8 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
-        if ($this->container['signed_documents'] === null) {
-            $invalidProperties[] = "'signed_documents' can't be null";
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
         }
         if (!is_null($this->container['reject_reason']) && (mb_strlen($this->container['reject_reason']) > 2000)) {
             $invalidProperties[] = "invalid value for 'reject_reason', the character length must be smaller than or equal to 2000.";
@@ -383,9 +383,6 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'proofs', number of items must be greater than or equal to 1.";
         }
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         if ($this->container['date'] === null) {
             $invalidProperties[] = "'date' can't be null";
         }
@@ -462,9 +459,36 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets type
+     *
+     * @return \MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param \MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum $type Тип претензии о простое
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
      * Gets signed_documents
      *
-     * @return \MagDv\Cargomart\Dto\SignedDocument[]
+     * @return \MagDv\Cargomart\Dto\SignedDocument[]|null
      */
     public function getSignedDocuments()
     {
@@ -474,7 +498,7 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets signed_documents
      *
-     * @param \MagDv\Cargomart\Dto\SignedDocument[] $signed_documents signed_documents
+     * @param \MagDv\Cargomart\Dto\SignedDocument[]|null $signed_documents signed_documents
      *
      * @return self
      */
@@ -657,33 +681,6 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('invalid length for $proofs when calling ClaimDowntime., number of items must be greater than or equal to 1.');
         }
         $this->container['proofs'] = $proofs;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return \MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum $type Тип претензии о простое
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
 
         return $this;
     }

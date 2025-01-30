@@ -59,13 +59,10 @@ class ClaimDowntimeCreateRequest implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
+        'points' => 'ClaimDowntimePoint[]',
         'order_id' => 'string',
-        'points' => '\MagDv\Cargomart\Dto\ClaimDowntimePoint[]',
         'downtime' => '\MagDv\Cargomart\Dto\Downtime',
-        'proofs' => '\MagDv\Cargomart\Dto\ClaimProofDocument[]',
-        'type' => '\MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum',
-        'date' => '\DateTime',
-        'number' => 'string'
+        'proofs' => '\MagDv\Cargomart\Dto\ClaimProofDocument[]'
     ];
 
     /**
@@ -76,13 +73,10 @@ class ClaimDowntimeCreateRequest implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'order_id' => 'cm-uuid',
         'points' => null,
+        'order_id' => 'cm-uuid',
         'downtime' => null,
-        'proofs' => null,
-        'type' => null,
-        'date' => 'date',
-        'number' => null
+        'proofs' => null
     ];
 
     /**
@@ -91,13 +85,10 @@ class ClaimDowntimeCreateRequest implements ModelInterface, ArrayAccess, \JsonSe
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'order_id' => false,
         'points' => false,
+        'order_id' => false,
         'downtime' => false,
-        'proofs' => false,
-        'type' => false,
-        'date' => false,
-        'number' => false
+        'proofs' => false
     ];
 
     /**
@@ -186,13 +177,10 @@ class ClaimDowntimeCreateRequest implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'order_id' => 'orderId',
         'points' => 'points',
+        'order_id' => 'orderId',
         'downtime' => 'downtime',
-        'proofs' => 'proofs',
-        'type' => 'type',
-        'date' => 'date',
-        'number' => 'number'
+        'proofs' => 'proofs'
     ];
 
     /**
@@ -201,13 +189,10 @@ class ClaimDowntimeCreateRequest implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'order_id' => 'setOrderId',
         'points' => 'setPoints',
+        'order_id' => 'setOrderId',
         'downtime' => 'setDowntime',
-        'proofs' => 'setProofs',
-        'type' => 'setType',
-        'date' => 'setDate',
-        'number' => 'setNumber'
+        'proofs' => 'setProofs'
     ];
 
     /**
@@ -216,13 +201,10 @@ class ClaimDowntimeCreateRequest implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'order_id' => 'getOrderId',
         'points' => 'getPoints',
+        'order_id' => 'getOrderId',
         'downtime' => 'getDowntime',
-        'proofs' => 'getProofs',
-        'type' => 'getType',
-        'date' => 'getDate',
-        'number' => 'getNumber'
+        'proofs' => 'getProofs'
     ];
 
     /**
@@ -282,13 +264,10 @@ class ClaimDowntimeCreateRequest implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('order_id', $data ?? [], null);
         $this->setIfExists('points', $data ?? [], null);
+        $this->setIfExists('order_id', $data ?? [], null);
         $this->setIfExists('downtime', $data ?? [], null);
         $this->setIfExists('proofs', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('date', $data ?? [], null);
-        $this->setIfExists('number', $data ?? [], null);
     }
 
     /**
@@ -321,9 +300,6 @@ class ClaimDowntimeCreateRequest implements ModelInterface, ArrayAccess, \JsonSe
         if ($this->container['order_id'] === null) {
             $invalidProperties[] = "'order_id' can't be null";
         }
-        if ($this->container['points'] === null) {
-            $invalidProperties[] = "'points' can't be null";
-        }
         if ($this->container['downtime'] === null) {
             $invalidProperties[] = "'downtime' can't be null";
         }
@@ -335,15 +311,6 @@ class ClaimDowntimeCreateRequest implements ModelInterface, ArrayAccess, \JsonSe
             $invalidProperties[] = "invalid value for 'proofs', number of items must be greater than or equal to 1.";
         }
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        if ($this->container['date'] === null) {
-            $invalidProperties[] = "'date' can't be null";
-        }
-        if ($this->container['number'] === null) {
-            $invalidProperties[] = "'number' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -358,6 +325,33 @@ class ClaimDowntimeCreateRequest implements ModelInterface, ArrayAccess, \JsonSe
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets points
+     *
+     * @return ClaimDowntimePoint[]|null
+     */
+    public function getPoints()
+    {
+        return $this->container['points'];
+    }
+
+    /**
+     * Sets points
+     *
+     * @param ClaimDowntimePoint[]|null $points points
+     *
+     * @return self
+     */
+    public function setPoints($points)
+    {
+        if (is_null($points)) {
+            throw new \InvalidArgumentException('non-nullable points cannot be null');
+        }
+        $this->container['points'] = $points;
+
+        return $this;
+    }
 
     /**
      * Gets order_id
@@ -382,33 +376,6 @@ class ClaimDowntimeCreateRequest implements ModelInterface, ArrayAccess, \JsonSe
             throw new \InvalidArgumentException('non-nullable order_id cannot be null');
         }
         $this->container['order_id'] = $order_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets points
-     *
-     * @return \MagDv\Cargomart\Dto\ClaimDowntimePoint[]
-     */
-    public function getPoints()
-    {
-        return $this->container['points'];
-    }
-
-    /**
-     * Sets points
-     *
-     * @param \MagDv\Cargomart\Dto\ClaimDowntimePoint[] $points points
-     *
-     * @return self
-     */
-    public function setPoints($points)
-    {
-        if (is_null($points)) {
-            throw new \InvalidArgumentException('non-nullable points cannot be null');
-        }
-        $this->container['points'] = $points;
 
         return $this;
     }
@@ -470,87 +437,6 @@ class ClaimDowntimeCreateRequest implements ModelInterface, ArrayAccess, \JsonSe
             throw new \InvalidArgumentException('invalid length for $proofs when calling ClaimDowntimeCreateRequest., number of items must be greater than or equal to 1.');
         }
         $this->container['proofs'] = $proofs;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return \MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum $type Тип претензии о простое
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->container['date'];
-    }
-
-    /**
-     * Sets date
-     *
-     * @param \DateTime $date Дата документа
-     *
-     * @return self
-     */
-    public function setDate($date)
-    {
-        if (is_null($date)) {
-            throw new \InvalidArgumentException('non-nullable date cannot be null');
-        }
-        $this->container['date'] = $date;
-
-        return $this;
-    }
-
-    /**
-     * Gets number
-     *
-     * @return string
-     */
-    public function getNumber()
-    {
-        return $this->container['number'];
-    }
-
-    /**
-     * Sets number
-     *
-     * @param string $number Номер документа
-     *
-     * @return self
-     */
-    public function setNumber($number)
-    {
-        if (is_null($number)) {
-            throw new \InvalidArgumentException('non-nullable number cannot be null');
-        }
-        $this->container['number'] = $number;
 
         return $this;
     }
