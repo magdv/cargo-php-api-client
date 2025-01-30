@@ -59,7 +59,6 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int',
         'address' => 'string',
         'expected_arrival' => 'string',
         'actual_arrival' => 'string',
@@ -77,7 +76,6 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
         'address' => null,
         'expected_arrival' => null,
         'actual_arrival' => null,
@@ -93,7 +91,6 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
         'address' => false,
         'expected_arrival' => false,
         'actual_arrival' => false,
@@ -189,7 +186,6 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
         'address' => 'address',
         'expected_arrival' => 'expectedArrival',
         'actual_arrival' => 'actualArrival',
@@ -205,7 +201,6 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
         'address' => 'setAddress',
         'expected_arrival' => 'setExpectedArrival',
         'actual_arrival' => 'setActualArrival',
@@ -221,7 +216,6 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
         'address' => 'getAddress',
         'expected_arrival' => 'getExpectedArrival',
         'actual_arrival' => 'getActualArrival',
@@ -288,7 +282,6 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('address', $data ?? [], null);
         $this->setIfExists('expected_arrival', $data ?? [], null);
         $this->setIfExists('actual_arrival', $data ?? [], null);
@@ -325,9 +318,6 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
         if ($this->container['address'] === null) {
             $invalidProperties[] = "'address' can't be null";
         }
@@ -338,29 +328,29 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
         if ($this->container['expected_arrival'] === null) {
             $invalidProperties[] = "'expected_arrival' can't be null";
         }
-        if (!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/", $this->container['expected_arrival'])) {
-            $invalidProperties[] = "invalid value for 'expected_arrival', must be conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/.";
+        if (!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/", $this->container['expected_arrival'])) {
+            $invalidProperties[] = "invalid value for 'expected_arrival', must be conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/.";
         }
 
         if ($this->container['actual_arrival'] === null) {
             $invalidProperties[] = "'actual_arrival' can't be null";
         }
-        if (!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/", $this->container['actual_arrival'])) {
-            $invalidProperties[] = "invalid value for 'actual_arrival', must be conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/.";
+        if (!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/", $this->container['actual_arrival'])) {
+            $invalidProperties[] = "invalid value for 'actual_arrival', must be conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/.";
         }
 
         if ($this->container['expected_departure'] === null) {
             $invalidProperties[] = "'expected_departure' can't be null";
         }
-        if (!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/", $this->container['expected_departure'])) {
-            $invalidProperties[] = "invalid value for 'expected_departure', must be conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/.";
+        if (!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/", $this->container['expected_departure'])) {
+            $invalidProperties[] = "invalid value for 'expected_departure', must be conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/.";
         }
 
         if ($this->container['actual_departure'] === null) {
             $invalidProperties[] = "'actual_departure' can't be null";
         }
-        if (!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/", $this->container['actual_departure'])) {
-            $invalidProperties[] = "invalid value for 'actual_departure', must be conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/.";
+        if (!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/", $this->container['actual_departure'])) {
+            $invalidProperties[] = "invalid value for 'actual_departure', must be conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/.";
         }
 
         if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) > 2000)) {
@@ -384,33 +374,6 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int $id Id точки погрузки в заказе
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
 
     /**
      * Gets address
@@ -456,7 +419,7 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets expected_arrival
      *
-     * @param string $expected_arrival Дата и время в формате ISO 8601 yyyy-MM-ddZHH:mm,
+     * @param string $expected_arrival Дата и время c тайм зоной в формате ISO 8601 yyyy-MM-ddZHH:mmXXX,
      *
      * @return self
      */
@@ -466,8 +429,8 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable expected_arrival cannot be null');
         }
 
-        if ((!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/", ObjectSerializer::toString($expected_arrival)))) {
-            throw new \InvalidArgumentException("invalid value for \$expected_arrival when calling ClaimDowntimePoint., must conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/.");
+        if ((!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/", ObjectSerializer::toString($expected_arrival)))) {
+            throw new \InvalidArgumentException("invalid value for \$expected_arrival when calling ClaimDowntimePoint., must conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/.");
         }
 
         $this->container['expected_arrival'] = $expected_arrival;
@@ -488,7 +451,7 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets actual_arrival
      *
-     * @param string $actual_arrival Дата и время в формате ISO 8601 yyyy-MM-ddZHH:mm,
+     * @param string $actual_arrival Дата и время c тайм зоной в формате ISO 8601 yyyy-MM-ddZHH:mmXXX,
      *
      * @return self
      */
@@ -498,8 +461,8 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable actual_arrival cannot be null');
         }
 
-        if ((!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/", ObjectSerializer::toString($actual_arrival)))) {
-            throw new \InvalidArgumentException("invalid value for \$actual_arrival when calling ClaimDowntimePoint., must conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/.");
+        if ((!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/", ObjectSerializer::toString($actual_arrival)))) {
+            throw new \InvalidArgumentException("invalid value for \$actual_arrival when calling ClaimDowntimePoint., must conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/.");
         }
 
         $this->container['actual_arrival'] = $actual_arrival;
@@ -520,7 +483,7 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets expected_departure
      *
-     * @param string $expected_departure Дата и время в формате ISO 8601 yyyy-MM-ddZHH:mm,
+     * @param string $expected_departure Дата и время c тайм зоной в формате ISO 8601 yyyy-MM-ddZHH:mmXXX,
      *
      * @return self
      */
@@ -530,8 +493,8 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable expected_departure cannot be null');
         }
 
-        if ((!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/", ObjectSerializer::toString($expected_departure)))) {
-            throw new \InvalidArgumentException("invalid value for \$expected_departure when calling ClaimDowntimePoint., must conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/.");
+        if ((!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/", ObjectSerializer::toString($expected_departure)))) {
+            throw new \InvalidArgumentException("invalid value for \$expected_departure when calling ClaimDowntimePoint., must conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/.");
         }
 
         $this->container['expected_departure'] = $expected_departure;
@@ -552,7 +515,7 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets actual_departure
      *
-     * @param string $actual_departure Дата и время в формате ISO 8601 yyyy-MM-ddZHH:mm,
+     * @param string $actual_departure Дата и время c тайм зоной в формате ISO 8601 yyyy-MM-ddZHH:mmXXX,
      *
      * @return self
      */
@@ -562,8 +525,8 @@ class ClaimDowntimePoint implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable actual_departure cannot be null');
         }
 
-        if ((!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/", ObjectSerializer::toString($actual_departure)))) {
-            throw new \InvalidArgumentException("invalid value for \$actual_departure when calling ClaimDowntimePoint., must conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$/.");
+        if ((!preg_match("/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/", ObjectSerializer::toString($actual_departure)))) {
+            throw new \InvalidArgumentException("invalid value for \$actual_departure when calling ClaimDowntimePoint., must conform to the pattern /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}[\\+\\-]\\d{2}(:\\d{2})?$/.");
         }
 
         $this->container['actual_departure'] = $actual_departure;

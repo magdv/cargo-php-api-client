@@ -59,7 +59,7 @@ class CompanyBranchResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\CompanyBranchResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class CompanyBranchResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\CompanyBranchResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class CompanyBranchResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets data
      *
-     * @param object $data data
+     * @param \MagDv\Cargomart\Dto\CompanyBranchResponseData $data data
      *
      * @return self
      */

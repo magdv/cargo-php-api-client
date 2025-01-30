@@ -1,6 +1,6 @@
 <?php
 /**
- * ExpeditorContractUpdatesCommercialConditionFullContentFile
+ * OrderRecommendedPriceResponseData
  *
  * PHP version 7.4
  *
@@ -33,15 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * ExpeditorContractUpdatesCommercialConditionFullContentFile Class Doc Comment
+ * OrderRecommendedPriceResponseData Class Doc Comment
  *
  * @category Class
+ * @description Ответ на запрос рекомендованной цены маршрута
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ExpeditorContractUpdatesCommercialConditionFullContentFile implements ModelInterface, ArrayAccess, \JsonSerializable
+class OrderRecommendedPriceResponseData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +51,7 @@ class ExpeditorContractUpdatesCommercialConditionFullContentFile implements Mode
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ExpeditorContractUpdatesCommercialConditionFull_contentFile';
+    protected static $openAPIModelName = 'OrderRecommendedPriceResponseData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,13 +59,7 @@ class ExpeditorContractUpdatesCommercialConditionFullContentFile implements Mode
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
-        'title' => 'string',
-        'extension' => 'string',
-        'mime' => 'string',
-        'size' => 'int',
-        'url' => 'string',
-        'sha1' => 'string'
+        'recommended_price' => '\MagDv\Cargomart\Dto\OrderRecommendedPriceResponseDataRecommendedPrice'
     ];
 
     /**
@@ -75,13 +70,7 @@ class ExpeditorContractUpdatesCommercialConditionFullContentFile implements Mode
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => 'uuid',
-        'title' => null,
-        'extension' => null,
-        'mime' => null,
-        'size' => null,
-        'url' => null,
-        'sha1' => null
+        'recommended_price' => null
     ];
 
     /**
@@ -90,13 +79,7 @@ class ExpeditorContractUpdatesCommercialConditionFullContentFile implements Mode
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-        'title' => false,
-        'extension' => false,
-        'mime' => false,
-        'size' => false,
-        'url' => false,
-        'sha1' => false
+        'recommended_price' => false
     ];
 
     /**
@@ -185,13 +168,7 @@ class ExpeditorContractUpdatesCommercialConditionFullContentFile implements Mode
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'title' => 'title',
-        'extension' => 'extension',
-        'mime' => 'mime',
-        'size' => 'size',
-        'url' => 'url',
-        'sha1' => 'sha1'
+        'recommended_price' => 'recommendedPrice'
     ];
 
     /**
@@ -200,13 +177,7 @@ class ExpeditorContractUpdatesCommercialConditionFullContentFile implements Mode
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'title' => 'setTitle',
-        'extension' => 'setExtension',
-        'mime' => 'setMime',
-        'size' => 'setSize',
-        'url' => 'setUrl',
-        'sha1' => 'setSha1'
+        'recommended_price' => 'setRecommendedPrice'
     ];
 
     /**
@@ -215,13 +186,7 @@ class ExpeditorContractUpdatesCommercialConditionFullContentFile implements Mode
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'title' => 'getTitle',
-        'extension' => 'getExtension',
-        'mime' => 'getMime',
-        'size' => 'getSize',
-        'url' => 'getUrl',
-        'sha1' => 'getSha1'
+        'recommended_price' => 'getRecommendedPrice'
     ];
 
     /**
@@ -281,13 +246,7 @@ class ExpeditorContractUpdatesCommercialConditionFullContentFile implements Mode
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('title', $data ?? [], null);
-        $this->setIfExists('extension', $data ?? [], null);
-        $this->setIfExists('mime', $data ?? [], null);
-        $this->setIfExists('size', $data ?? [], null);
-        $this->setIfExists('url', $data ?? [], null);
-        $this->setIfExists('sha1', $data ?? [], null);
+        $this->setIfExists('recommended_price', $data ?? [], null);
     }
 
     /**
@@ -317,23 +276,8 @@ class ExpeditorContractUpdatesCommercialConditionFullContentFile implements Mode
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['title'] === null) {
-            $invalidProperties[] = "'title' can't be null";
-        }
-        if ($this->container['extension'] === null) {
-            $invalidProperties[] = "'extension' can't be null";
-        }
-        if ($this->container['mime'] === null) {
-            $invalidProperties[] = "'mime' can't be null";
-        }
-        if ($this->container['size'] === null) {
-            $invalidProperties[] = "'size' can't be null";
-        }
-        if ($this->container['url'] === null) {
-            $invalidProperties[] = "'url' can't be null";
+        if ($this->container['recommended_price'] === null) {
+            $invalidProperties[] = "'recommended_price' can't be null";
         }
         return $invalidProperties;
     }
@@ -351,190 +295,28 @@ class ExpeditorContractUpdatesCommercialConditionFullContentFile implements Mode
 
 
     /**
-     * Gets id
+     * Gets recommended_price
      *
-     * @return string
+     * @return \MagDv\Cargomart\Dto\OrderRecommendedPriceResponseDataRecommendedPrice
      */
-    public function getId()
+    public function getRecommendedPrice()
     {
-        return $this->container['id'];
+        return $this->container['recommended_price'];
     }
 
     /**
-     * Sets id
+     * Sets recommended_price
      *
-     * @param string $id Идентификатор файла
+     * @param \MagDv\Cargomart\Dto\OrderRecommendedPriceResponseDataRecommendedPrice $recommended_price recommended_price
      *
      * @return self
      */
-    public function setId($id)
+    public function setRecommendedPrice($recommended_price)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($recommended_price)) {
+            throw new \InvalidArgumentException('non-nullable recommended_price cannot be null');
         }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets title
-     *
-     * @return string
-     */
-    public function getTitle()
-    {
-        return $this->container['title'];
-    }
-
-    /**
-     * Sets title
-     *
-     * @param string $title Исходное имя файла, который загрузил пользователь
-     *
-     * @return self
-     */
-    public function setTitle($title)
-    {
-        if (is_null($title)) {
-            throw new \InvalidArgumentException('non-nullable title cannot be null');
-        }
-        $this->container['title'] = $title;
-
-        return $this;
-    }
-
-    /**
-     * Gets extension
-     *
-     * @return string
-     */
-    public function getExtension()
-    {
-        return $this->container['extension'];
-    }
-
-    /**
-     * Sets extension
-     *
-     * @param string $extension Расширение файла
-     *
-     * @return self
-     */
-    public function setExtension($extension)
-    {
-        if (is_null($extension)) {
-            throw new \InvalidArgumentException('non-nullable extension cannot be null');
-        }
-        $this->container['extension'] = $extension;
-
-        return $this;
-    }
-
-    /**
-     * Gets mime
-     *
-     * @return string
-     */
-    public function getMime()
-    {
-        return $this->container['mime'];
-    }
-
-    /**
-     * Sets mime
-     *
-     * @param string $mime Mime тип файла
-     *
-     * @return self
-     */
-    public function setMime($mime)
-    {
-        if (is_null($mime)) {
-            throw new \InvalidArgumentException('non-nullable mime cannot be null');
-        }
-        $this->container['mime'] = $mime;
-
-        return $this;
-    }
-
-    /**
-     * Gets size
-     *
-     * @return int
-     */
-    public function getSize()
-    {
-        return $this->container['size'];
-    }
-
-    /**
-     * Sets size
-     *
-     * @param int $size Размер файла (в байтах)
-     *
-     * @return self
-     */
-    public function setSize($size)
-    {
-        if (is_null($size)) {
-            throw new \InvalidArgumentException('non-nullable size cannot be null');
-        }
-        $this->container['size'] = $size;
-
-        return $this;
-    }
-
-    /**
-     * Gets url
-     *
-     * @return string
-     */
-    public function getUrl()
-    {
-        return $this->container['url'];
-    }
-
-    /**
-     * Sets url
-     *
-     * @param string $url Ссылка на скачивание файла
-     *
-     * @return self
-     */
-    public function setUrl($url)
-    {
-        if (is_null($url)) {
-            throw new \InvalidArgumentException('non-nullable url cannot be null');
-        }
-        $this->container['url'] = $url;
-
-        return $this;
-    }
-
-    /**
-     * Gets sha1
-     *
-     * @return string|null
-     */
-    public function getSha1()
-    {
-        return $this->container['sha1'];
-    }
-
-    /**
-     * Sets sha1
-     *
-     * @param string|null $sha1 Хэш сумма файла
-     *
-     * @return self
-     */
-    public function setSha1($sha1)
-    {
-        if (is_null($sha1)) {
-            throw new \InvalidArgumentException('non-nullable sha1 cannot be null');
-        }
-        $this->container['sha1'] = $sha1;
+        $this->container['recommended_price'] = $recommended_price;
 
         return $this;
     }

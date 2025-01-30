@@ -62,8 +62,8 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
         'status' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesStatus',
         'status_updated_at' => 'mixed',
         'additional_agreement' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesAdditionalAgreement',
-        'commercial_conditions' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionFull[]',
-        'selected_commercial_conditions' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType[]',
+        'commercial_conditions' => '\MagDv\Cargomart\Dto\CommercialCondition[]',
+        'selected_commercial_conditions' => '\MagDv\Cargomart\Dto\CommercialConditionType[]',
         'signer' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesSigner',
         'proxy' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesProxy'
     ];
@@ -427,7 +427,7 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets commercial_conditions
      *
-     * @return \MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionFull[]|null
+     * @return \MagDv\Cargomart\Dto\CommercialCondition[]|null
      */
     public function getCommercialConditions()
     {
@@ -437,7 +437,7 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets commercial_conditions
      *
-     * @param \MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionFull[]|null $commercial_conditions Коммерческие условия
+     * @param \MagDv\Cargomart\Dto\CommercialCondition[]|null $commercial_conditions Коммерческие условия
      *
      * @return self
      */
@@ -454,7 +454,7 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets selected_commercial_conditions
      *
-     * @return \MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType[]|null
+     * @return \MagDv\Cargomart\Dto\CommercialConditionType[]|null
      */
     public function getSelectedCommercialConditions()
     {
@@ -464,7 +464,7 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets selected_commercial_conditions
      *
-     * @param \MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType[]|null $selected_commercial_conditions selected_commercial_conditions
+     * @param \MagDv\Cargomart\Dto\CommercialConditionType[]|null $selected_commercial_conditions selected_commercial_conditions
      *
      * @return self
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderDowntimeClaimPointFields
+ * CompanyBranchResponseData
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * OrderDowntimeClaimPointFields Class Doc Comment
+ * CompanyBranchResponseData Class Doc Comment
  *
  * @category Class
- * @description Претензия о простое по конкретному пункту погрузки/выгрузки заявки
+ * @description Список дочерних компаний
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class OrderDowntimeClaimPointFields implements ModelInterface, ArrayAccess, \JsonSerializable
+class CompanyBranchResponseData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class OrderDowntimeClaimPointFields implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'OrderDowntimeClaimPointFields';
+    protected static $openAPIModelName = 'CompanyBranchResponseData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +59,7 @@ class OrderDowntimeClaimPointFields implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int',
-        'order_point_id' => 'int',
-        'data' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimPointFieldsData'
+        'company_branch' => '\MagDv\Cargomart\Dto\CompanyBranch[]'
     ];
 
     /**
@@ -72,9 +70,7 @@ class OrderDowntimeClaimPointFields implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'order_point_id' => null,
-        'data' => null
+        'company_branch' => null
     ];
 
     /**
@@ -83,9 +79,7 @@ class OrderDowntimeClaimPointFields implements ModelInterface, ArrayAccess, \Jso
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-        'order_point_id' => false,
-        'data' => false
+        'company_branch' => false
     ];
 
     /**
@@ -174,9 +168,7 @@ class OrderDowntimeClaimPointFields implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'order_point_id' => 'orderPointId',
-        'data' => 'data'
+        'company_branch' => 'companyBranch'
     ];
 
     /**
@@ -185,9 +177,7 @@ class OrderDowntimeClaimPointFields implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'order_point_id' => 'setOrderPointId',
-        'data' => 'setData'
+        'company_branch' => 'setCompanyBranch'
     ];
 
     /**
@@ -196,9 +186,7 @@ class OrderDowntimeClaimPointFields implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'order_point_id' => 'getOrderPointId',
-        'data' => 'getData'
+        'company_branch' => 'getCompanyBranch'
     ];
 
     /**
@@ -258,9 +246,7 @@ class OrderDowntimeClaimPointFields implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('order_point_id', $data ?? [], null);
-        $this->setIfExists('data', $data ?? [], null);
+        $this->setIfExists('company_branch', $data ?? [], null);
     }
 
     /**
@@ -290,17 +276,6 @@ class OrderDowntimeClaimPointFields implements ModelInterface, ArrayAccess, \Jso
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-        if (($this->container['id'] < 0)) {
-            $invalidProperties[] = "invalid value for 'id', must be bigger than or equal to 0.";
-        }
-
-        if (!is_null($this->container['order_point_id']) && ($this->container['order_point_id'] < 0)) {
-            $invalidProperties[] = "invalid value for 'order_point_id', must be bigger than or equal to 0.";
-        }
-
         return $invalidProperties;
     }
 
@@ -317,92 +292,28 @@ class OrderDowntimeClaimPointFields implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets id
+     * Gets company_branch
      *
-     * @return int
+     * @return \MagDv\Cargomart\Dto\CompanyBranch[]|null
      */
-    public function getId()
+    public function getCompanyBranch()
     {
-        return $this->container['id'];
+        return $this->container['company_branch'];
     }
 
     /**
-     * Sets id
+     * Sets company_branch
      *
-     * @param int $id Числовой идентификатор объекта
+     * @param \MagDv\Cargomart\Dto\CompanyBranch[]|null $company_branch company_branch
      *
      * @return self
      */
-    public function setId($id)
+    public function setCompanyBranch($company_branch)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($company_branch)) {
+            throw new \InvalidArgumentException('non-nullable company_branch cannot be null');
         }
-
-        if (($id < 0)) {
-            throw new \InvalidArgumentException('invalid value for $id when calling OrderDowntimeClaimPointFields., must be bigger than or equal to 0.');
-        }
-
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets order_point_id
-     *
-     * @return int|null
-     */
-    public function getOrderPointId()
-    {
-        return $this->container['order_point_id'];
-    }
-
-    /**
-     * Sets order_point_id
-     *
-     * @param int|null $order_point_id Числовой идентификатор объекта
-     *
-     * @return self
-     */
-    public function setOrderPointId($order_point_id)
-    {
-        if (is_null($order_point_id)) {
-            throw new \InvalidArgumentException('non-nullable order_point_id cannot be null');
-        }
-
-        if (($order_point_id < 0)) {
-            throw new \InvalidArgumentException('invalid value for $order_point_id when calling OrderDowntimeClaimPointFields., must be bigger than or equal to 0.');
-        }
-
-        $this->container['order_point_id'] = $order_point_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimPointFieldsData|null
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaimPointFieldsData|null $data data
-     *
-     * @return self
-     */
-    public function setData($data)
-    {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
-        }
-        $this->container['data'] = $data;
+        $this->container['company_branch'] = $company_branch;
 
         return $this;
     }

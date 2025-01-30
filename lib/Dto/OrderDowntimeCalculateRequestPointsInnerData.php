@@ -1,6 +1,6 @@
 <?php
 /**
- * ExpeditorContractUpdatesCommercialConditionFullSignFile
+ * OrderDowntimeCalculateRequestPointsInnerData
  *
  * PHP version 7.4
  *
@@ -33,15 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * ExpeditorContractUpdatesCommercialConditionFullSignFile Class Doc Comment
+ * OrderDowntimeCalculateRequestPointsInnerData Class Doc Comment
  *
  * @category Class
+ * @description Данные требования о простое по конкретном пункте
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ExpeditorContractUpdatesCommercialConditionFullSignFile implements ModelInterface, ArrayAccess, \JsonSerializable
+class OrderDowntimeCalculateRequestPointsInnerData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +51,7 @@ class ExpeditorContractUpdatesCommercialConditionFullSignFile implements ModelIn
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ExpeditorContractUpdatesCommercialConditionFull_signFile';
+    protected static $openAPIModelName = 'OrderDowntimeCalculateRequest_points_inner_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,13 +59,9 @@ class ExpeditorContractUpdatesCommercialConditionFullSignFile implements ModelIn
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
-        'title' => 'string',
-        'extension' => 'string',
-        'mime' => 'string',
-        'size' => 'int',
-        'url' => 'string',
-        'sha1' => 'string'
+        'actual_arrival' => '\MagDv\Cargomart\Dto\DateTimeSeparate',
+        'actual_departure' => '\MagDv\Cargomart\Dto\DateTimeSeparate',
+        'reason' => 'string'
     ];
 
     /**
@@ -75,13 +72,9 @@ class ExpeditorContractUpdatesCommercialConditionFullSignFile implements ModelIn
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => 'uuid',
-        'title' => null,
-        'extension' => null,
-        'mime' => null,
-        'size' => null,
-        'url' => null,
-        'sha1' => null
+        'actual_arrival' => null,
+        'actual_departure' => null,
+        'reason' => null
     ];
 
     /**
@@ -90,13 +83,9 @@ class ExpeditorContractUpdatesCommercialConditionFullSignFile implements ModelIn
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-        'title' => false,
-        'extension' => false,
-        'mime' => false,
-        'size' => false,
-        'url' => false,
-        'sha1' => false
+        'actual_arrival' => false,
+        'actual_departure' => false,
+        'reason' => false
     ];
 
     /**
@@ -185,13 +174,9 @@ class ExpeditorContractUpdatesCommercialConditionFullSignFile implements ModelIn
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'title' => 'title',
-        'extension' => 'extension',
-        'mime' => 'mime',
-        'size' => 'size',
-        'url' => 'url',
-        'sha1' => 'sha1'
+        'actual_arrival' => 'actualArrival',
+        'actual_departure' => 'actualDeparture',
+        'reason' => 'reason'
     ];
 
     /**
@@ -200,13 +185,9 @@ class ExpeditorContractUpdatesCommercialConditionFullSignFile implements ModelIn
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'title' => 'setTitle',
-        'extension' => 'setExtension',
-        'mime' => 'setMime',
-        'size' => 'setSize',
-        'url' => 'setUrl',
-        'sha1' => 'setSha1'
+        'actual_arrival' => 'setActualArrival',
+        'actual_departure' => 'setActualDeparture',
+        'reason' => 'setReason'
     ];
 
     /**
@@ -215,13 +196,9 @@ class ExpeditorContractUpdatesCommercialConditionFullSignFile implements ModelIn
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'title' => 'getTitle',
-        'extension' => 'getExtension',
-        'mime' => 'getMime',
-        'size' => 'getSize',
-        'url' => 'getUrl',
-        'sha1' => 'getSha1'
+        'actual_arrival' => 'getActualArrival',
+        'actual_departure' => 'getActualDeparture',
+        'reason' => 'getReason'
     ];
 
     /**
@@ -281,13 +258,9 @@ class ExpeditorContractUpdatesCommercialConditionFullSignFile implements ModelIn
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('title', $data ?? [], null);
-        $this->setIfExists('extension', $data ?? [], null);
-        $this->setIfExists('mime', $data ?? [], null);
-        $this->setIfExists('size', $data ?? [], null);
-        $this->setIfExists('url', $data ?? [], null);
-        $this->setIfExists('sha1', $data ?? [], null);
+        $this->setIfExists('actual_arrival', $data ?? [], null);
+        $this->setIfExists('actual_departure', $data ?? [], null);
+        $this->setIfExists('reason', $data ?? [], null);
     }
 
     /**
@@ -317,24 +290,16 @@ class ExpeditorContractUpdatesCommercialConditionFullSignFile implements ModelIn
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
+        if ($this->container['actual_arrival'] === null) {
+            $invalidProperties[] = "'actual_arrival' can't be null";
         }
-        if ($this->container['title'] === null) {
-            $invalidProperties[] = "'title' can't be null";
+        if ($this->container['actual_departure'] === null) {
+            $invalidProperties[] = "'actual_departure' can't be null";
         }
-        if ($this->container['extension'] === null) {
-            $invalidProperties[] = "'extension' can't be null";
+        if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) > 2000)) {
+            $invalidProperties[] = "invalid value for 'reason', the character length must be smaller than or equal to 2000.";
         }
-        if ($this->container['mime'] === null) {
-            $invalidProperties[] = "'mime' can't be null";
-        }
-        if ($this->container['size'] === null) {
-            $invalidProperties[] = "'size' can't be null";
-        }
-        if ($this->container['url'] === null) {
-            $invalidProperties[] = "'url' can't be null";
-        }
+
         return $invalidProperties;
     }
 
@@ -351,190 +316,86 @@ class ExpeditorContractUpdatesCommercialConditionFullSignFile implements ModelIn
 
 
     /**
-     * Gets id
+     * Gets actual_arrival
      *
-     * @return string
+     * @return \MagDv\Cargomart\Dto\DateTimeSeparate
      */
-    public function getId()
+    public function getActualArrival()
     {
-        return $this->container['id'];
+        return $this->container['actual_arrival'];
     }
 
     /**
-     * Sets id
+     * Sets actual_arrival
      *
-     * @param string $id Идентификатор файла
+     * @param \MagDv\Cargomart\Dto\DateTimeSeparate $actual_arrival Объект разделенной передачи даты и времени
      *
      * @return self
      */
-    public function setId($id)
+    public function setActualArrival($actual_arrival)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($actual_arrival)) {
+            throw new \InvalidArgumentException('non-nullable actual_arrival cannot be null');
         }
-        $this->container['id'] = $id;
+        $this->container['actual_arrival'] = $actual_arrival;
 
         return $this;
     }
 
     /**
-     * Gets title
+     * Gets actual_departure
      *
-     * @return string
+     * @return \MagDv\Cargomart\Dto\DateTimeSeparate
      */
-    public function getTitle()
+    public function getActualDeparture()
     {
-        return $this->container['title'];
+        return $this->container['actual_departure'];
     }
 
     /**
-     * Sets title
+     * Sets actual_departure
      *
-     * @param string $title Исходное имя файла, который загрузил пользователь
+     * @param \MagDv\Cargomart\Dto\DateTimeSeparate $actual_departure Объект разделенной передачи даты и времени
      *
      * @return self
      */
-    public function setTitle($title)
+    public function setActualDeparture($actual_departure)
     {
-        if (is_null($title)) {
-            throw new \InvalidArgumentException('non-nullable title cannot be null');
+        if (is_null($actual_departure)) {
+            throw new \InvalidArgumentException('non-nullable actual_departure cannot be null');
         }
-        $this->container['title'] = $title;
+        $this->container['actual_departure'] = $actual_departure;
 
         return $this;
     }
 
     /**
-     * Gets extension
-     *
-     * @return string
-     */
-    public function getExtension()
-    {
-        return $this->container['extension'];
-    }
-
-    /**
-     * Sets extension
-     *
-     * @param string $extension Расширение файла
-     *
-     * @return self
-     */
-    public function setExtension($extension)
-    {
-        if (is_null($extension)) {
-            throw new \InvalidArgumentException('non-nullable extension cannot be null');
-        }
-        $this->container['extension'] = $extension;
-
-        return $this;
-    }
-
-    /**
-     * Gets mime
-     *
-     * @return string
-     */
-    public function getMime()
-    {
-        return $this->container['mime'];
-    }
-
-    /**
-     * Sets mime
-     *
-     * @param string $mime Mime тип файла
-     *
-     * @return self
-     */
-    public function setMime($mime)
-    {
-        if (is_null($mime)) {
-            throw new \InvalidArgumentException('non-nullable mime cannot be null');
-        }
-        $this->container['mime'] = $mime;
-
-        return $this;
-    }
-
-    /**
-     * Gets size
-     *
-     * @return int
-     */
-    public function getSize()
-    {
-        return $this->container['size'];
-    }
-
-    /**
-     * Sets size
-     *
-     * @param int $size Размер файла (в байтах)
-     *
-     * @return self
-     */
-    public function setSize($size)
-    {
-        if (is_null($size)) {
-            throw new \InvalidArgumentException('non-nullable size cannot be null');
-        }
-        $this->container['size'] = $size;
-
-        return $this;
-    }
-
-    /**
-     * Gets url
-     *
-     * @return string
-     */
-    public function getUrl()
-    {
-        return $this->container['url'];
-    }
-
-    /**
-     * Sets url
-     *
-     * @param string $url Ссылка на скачивание файла
-     *
-     * @return self
-     */
-    public function setUrl($url)
-    {
-        if (is_null($url)) {
-            throw new \InvalidArgumentException('non-nullable url cannot be null');
-        }
-        $this->container['url'] = $url;
-
-        return $this;
-    }
-
-    /**
-     * Gets sha1
+     * Gets reason
      *
      * @return string|null
      */
-    public function getSha1()
+    public function getReason()
     {
-        return $this->container['sha1'];
+        return $this->container['reason'];
     }
 
     /**
-     * Sets sha1
+     * Sets reason
      *
-     * @param string|null $sha1 Хэш сумма файла
+     * @param string|null $reason Среднее текстовое сообщение
      *
      * @return self
      */
-    public function setSha1($sha1)
+    public function setReason($reason)
     {
-        if (is_null($sha1)) {
-            throw new \InvalidArgumentException('non-nullable sha1 cannot be null');
+        if (is_null($reason)) {
+            throw new \InvalidArgumentException('non-nullable reason cannot be null');
         }
-        $this->container['sha1'] = $sha1;
+        if ((mb_strlen($reason) > 2000)) {
+            throw new \InvalidArgumentException('invalid length for $reason when calling OrderDowntimeCalculateRequestPointsInnerData., must be smaller than or equal to 2000.');
+        }
+
+        $this->container['reason'] = $reason;
 
         return $this;
     }

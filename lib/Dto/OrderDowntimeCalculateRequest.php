@@ -1,6 +1,6 @@
 <?php
 /**
- * ExpeditorContractUpdatesCommercialConditionFull
+ * OrderDowntimeCalculateRequest
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * ExpeditorContractUpdatesCommercialConditionFull Class Doc Comment
+ * OrderDowntimeCalculateRequest Class Doc Comment
  *
  * @category Class
- * @description Информация о коммерческом условии
+ * @description Данные для расчета простоя
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface, ArrayAccess, \JsonSerializable
+class OrderDowntimeCalculateRequest implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ExpeditorContractUpdatesCommercialConditionFull';
+    protected static $openAPIModelName = 'OrderDowntimeCalculateRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,12 +59,7 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'version' => 'string',
-        'type' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType',
-        'start_date' => '\DateTime',
-        'end_date' => '\DateTime',
-        'content_file' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionFullContentFile',
-        'sign_file' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionFullSignFile'
+        'points' => '\MagDv\Cargomart\Dto\OrderDowntimeCalculateRequestPointsInner[]'
     ];
 
     /**
@@ -75,12 +70,7 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'version' => null,
-        'type' => null,
-        'start_date' => 'date',
-        'end_date' => 'date',
-        'content_file' => null,
-        'sign_file' => null
+        'points' => null
     ];
 
     /**
@@ -89,12 +79,7 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'version' => false,
-        'type' => false,
-        'start_date' => false,
-        'end_date' => false,
-        'content_file' => false,
-        'sign_file' => false
+        'points' => false
     ];
 
     /**
@@ -183,12 +168,7 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
      * @var string[]
      */
     protected static $attributeMap = [
-        'version' => 'version',
-        'type' => 'type',
-        'start_date' => 'startDate',
-        'end_date' => 'endDate',
-        'content_file' => 'contentFile',
-        'sign_file' => 'signFile'
+        'points' => 'points'
     ];
 
     /**
@@ -197,12 +177,7 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
      * @var string[]
      */
     protected static $setters = [
-        'version' => 'setVersion',
-        'type' => 'setType',
-        'start_date' => 'setStartDate',
-        'end_date' => 'setEndDate',
-        'content_file' => 'setContentFile',
-        'sign_file' => 'setSignFile'
+        'points' => 'setPoints'
     ];
 
     /**
@@ -211,12 +186,7 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
      * @var string[]
      */
     protected static $getters = [
-        'version' => 'getVersion',
-        'type' => 'getType',
-        'start_date' => 'getStartDate',
-        'end_date' => 'getEndDate',
-        'content_file' => 'getContentFile',
-        'sign_file' => 'getSignFile'
+        'points' => 'getPoints'
     ];
 
     /**
@@ -276,12 +246,7 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('version', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('start_date', $data ?? [], null);
-        $this->setIfExists('end_date', $data ?? [], null);
-        $this->setIfExists('content_file', $data ?? [], null);
-        $this->setIfExists('sign_file', $data ?? [], null);
+        $this->setIfExists('points', $data ?? [], null);
     }
 
     /**
@@ -311,17 +276,8 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
     {
         $invalidProperties = [];
 
-        if ($this->container['version'] === null) {
-            $invalidProperties[] = "'version' can't be null";
-        }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        if ($this->container['content_file'] === null) {
-            $invalidProperties[] = "'content_file' can't be null";
-        }
-        if ($this->container['sign_file'] === null) {
-            $invalidProperties[] = "'sign_file' can't be null";
+        if ($this->container['points'] === null) {
+            $invalidProperties[] = "'points' can't be null";
         }
         return $invalidProperties;
     }
@@ -339,163 +295,28 @@ class ExpeditorContractUpdatesCommercialConditionFull implements ModelInterface,
 
 
     /**
-     * Gets version
+     * Gets points
      *
-     * @return string
+     * @return \MagDv\Cargomart\Dto\OrderDowntimeCalculateRequestPointsInner[]
      */
-    public function getVersion()
+    public function getPoints()
     {
-        return $this->container['version'];
+        return $this->container['points'];
     }
 
     /**
-     * Sets version
+     * Sets points
      *
-     * @param string $version Версия условий в свободной форме
+     * @param \MagDv\Cargomart\Dto\OrderDowntimeCalculateRequestPointsInner[] $points points
      *
      * @return self
      */
-    public function setVersion($version)
+    public function setPoints($points)
     {
-        if (is_null($version)) {
-            throw new \InvalidArgumentException('non-nullable version cannot be null');
+        if (is_null($points)) {
+            throw new \InvalidArgumentException('non-nullable points cannot be null');
         }
-        $this->container['version'] = $version;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return \MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets start_date
-     *
-     * @return \DateTime|null
-     */
-    public function getStartDate()
-    {
-        return $this->container['start_date'];
-    }
-
-    /**
-     * Sets start_date
-     *
-     * @param \DateTime|null $start_date Дата начала действия комм. условий
-     *
-     * @return self
-     */
-    public function setStartDate($start_date)
-    {
-        if (is_null($start_date)) {
-            throw new \InvalidArgumentException('non-nullable start_date cannot be null');
-        }
-        $this->container['start_date'] = $start_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets end_date
-     *
-     * @return \DateTime|null
-     */
-    public function getEndDate()
-    {
-        return $this->container['end_date'];
-    }
-
-    /**
-     * Sets end_date
-     *
-     * @param \DateTime|null $end_date Дата окончания действия комм. условий
-     *
-     * @return self
-     */
-    public function setEndDate($end_date)
-    {
-        if (is_null($end_date)) {
-            throw new \InvalidArgumentException('non-nullable end_date cannot be null');
-        }
-        $this->container['end_date'] = $end_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets content_file
-     *
-     * @return \MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionFullContentFile
-     */
-    public function getContentFile()
-    {
-        return $this->container['content_file'];
-    }
-
-    /**
-     * Sets content_file
-     *
-     * @param \MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionFullContentFile $content_file content_file
-     *
-     * @return self
-     */
-    public function setContentFile($content_file)
-    {
-        if (is_null($content_file)) {
-            throw new \InvalidArgumentException('non-nullable content_file cannot be null');
-        }
-        $this->container['content_file'] = $content_file;
-
-        return $this;
-    }
-
-    /**
-     * Gets sign_file
-     *
-     * @return \MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionFullSignFile
-     */
-    public function getSignFile()
-    {
-        return $this->container['sign_file'];
-    }
-
-    /**
-     * Sets sign_file
-     *
-     * @param \MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionFullSignFile $sign_file sign_file
-     *
-     * @return self
-     */
-    public function setSignFile($sign_file)
-    {
-        if (is_null($sign_file)) {
-            throw new \InvalidArgumentException('non-nullable sign_file cannot be null');
-        }
-        $this->container['sign_file'] = $sign_file;
+        $this->container['points'] = $points;
 
         return $this;
     }

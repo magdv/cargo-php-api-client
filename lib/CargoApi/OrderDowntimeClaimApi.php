@@ -864,365 +864,20 @@ class OrderDowntimeClaimApi
     }
 
     /**
-     * Operation createOrderDowntimeClaim
-     *
-     * Создание претензии о простое
-     *
-     * @param  string $order_id Идентификатор заявки. (required)
-     * @param  \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest $order_downtime_claim_create_request order_downtime_claim_create_request (optional)
-     *
-     * @throws \MagDv\Cargomart\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse
-     */
-    public function createOrderDowntimeClaim($order_id, $order_downtime_claim_create_request = null)
-    {
-        list($response) = $this->createOrderDowntimeClaimWithHttpInfo($order_id, $order_downtime_claim_create_request);
-        return $response;
-    }
-
-    /**
-     * Operation createOrderDowntimeClaimWithHttpInfo
-     *
-     * Создание претензии о простое
-     *
-     * @param  string $order_id Идентификатор заявки. (required)
-     * @param  \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest $order_downtime_claim_create_request (optional)
-     *
-     * @throws \MagDv\Cargomart\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \MagDv\Cargomart\Dto\OrderDowntimeClaimResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function createOrderDowntimeClaimWithHttpInfo($order_id, $order_downtime_claim_create_request = null)
-    {
-        $request = $this->createOrderDowntimeClaimRequest($order_id, $order_downtime_claim_create_request);
-
-        try {
-            try {
-                $response = $this->httpClient->sendRequest($request);
-            } catch (HttpException $e) {
-                $response = $e->getResponse();
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $response->getStatusCode(),
-                        (string) $request->getUri()
-                    ),
-                    $request,
-                    $response,
-                    $e
-                );
-            } catch (ClientExceptionInterface $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $request,
-                    null,
-                    $e
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            switch($statusCode) {
-                case 200:
-                    if ('\MagDv\Cargomart\Dto\OrderDowntimeClaimResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\OrderDowntimeClaimResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 400:
-                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 401:
-                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 403:
-                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 404:
-                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\MagDv\Cargomart\Dto\OrderDowntimeClaimResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\OrderDowntimeClaimResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 403:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation createOrderDowntimeClaimAsync
-     *
-     * Создание претензии о простое
-     *
-     * @param  string $order_id Идентификатор заявки. (required)
-     * @param  \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest $order_downtime_claim_create_request (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return Promise
-     */
-    public function createOrderDowntimeClaimAsync($order_id, $order_downtime_claim_create_request = null)
-    {
-        return $this->createOrderDowntimeClaimAsyncWithHttpInfo($order_id, $order_downtime_claim_create_request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation createOrderDowntimeClaimAsyncWithHttpInfo
-     *
-     * Создание претензии о простое
-     *
-     * @param  string $order_id Идентификатор заявки. (required)
-     * @param  \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest $order_downtime_claim_create_request (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return Promise
-     */
-    public function createOrderDowntimeClaimAsyncWithHttpInfo($order_id, $order_downtime_claim_create_request = null)
-    {
-        $returnType = '\MagDv\Cargomart\Dto\OrderDowntimeClaimResponse';
-        $request = $this->createOrderDowntimeClaimRequest($order_id, $order_downtime_claim_create_request);
-
-        return $this->httpAsyncClient->sendAsyncRequest($request)
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function (HttpException $exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $exception->getRequest(),
-                        $exception->getResponse(),
-                        $exception
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'createOrderDowntimeClaim'
-     *
-     * @param  string $order_id Идентификатор заявки. (required)
-     * @param  \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest $order_downtime_claim_create_request (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return RequestInterface
-     */
-    public function createOrderDowntimeClaimRequest($order_id, $order_downtime_claim_create_request = null)
-    {
-        // verify the required parameter 'order_id' is set
-        if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $order_id when calling createOrderDowntimeClaim'
-            );
-        }
-
-        $resourcePath = '/api/v2/order/{orderId}/downtime-claim';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = null;
-        $multipart = false;
-
-
-
-        // path params
-        if ($order_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'orderId' . '}',
-                ObjectSerializer::toPathValue($order_id),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json'],
-            'application/json',
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($order_downtime_claim_create_request)) {
-            if ($this->headerSelector->isJsonMime($headers['Content-Type'])) {
-                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($order_downtime_claim_create_request));
-            } else {
-                $httpBody = $order_downtime_claim_create_request;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($this->headerSelector->isJsonMime($headers['Content-Type'])) {
-                $httpBody = json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-
-        $uri = $this->createUri($operationHost, $resourcePath, $queryParams);
-
-        return $this->createRequest('POST', $uri, $headers, $httpBody);
-    }
-
-    /**
      * Operation createOrderDowntimeClaimCalculate
      *
      * Расчёт претензии о простое
      *
      * @param  string $order_id Идентификатор заявки. (required)
-     * @param  \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest $order_downtime_claim_create_request order_downtime_claim_create_request (optional)
+     * @param  \MagDv\Cargomart\Dto\OrderDowntimeCalculateRequest $order_downtime_calculate_request order_downtime_calculate_request (optional)
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \MagDv\Cargomart\Dto\OrderDowntimeResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse
      */
-    public function createOrderDowntimeClaimCalculate($order_id, $order_downtime_claim_create_request = null)
+    public function createOrderDowntimeClaimCalculate($order_id, $order_downtime_calculate_request = null)
     {
-        list($response) = $this->createOrderDowntimeClaimCalculateWithHttpInfo($order_id, $order_downtime_claim_create_request);
+        list($response) = $this->createOrderDowntimeClaimCalculateWithHttpInfo($order_id, $order_downtime_calculate_request);
         return $response;
     }
 
@@ -1232,15 +887,15 @@ class OrderDowntimeClaimApi
      * Расчёт претензии о простое
      *
      * @param  string $order_id Идентификатор заявки. (required)
-     * @param  \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest $order_downtime_claim_create_request (optional)
+     * @param  \MagDv\Cargomart\Dto\OrderDowntimeCalculateRequest $order_downtime_calculate_request (optional)
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \MagDv\Cargomart\Dto\OrderDowntimeResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function createOrderDowntimeClaimCalculateWithHttpInfo($order_id, $order_downtime_claim_create_request = null)
+    public function createOrderDowntimeClaimCalculateWithHttpInfo($order_id, $order_downtime_calculate_request = null)
     {
-        $request = $this->createOrderDowntimeClaimCalculateRequest($order_id, $order_downtime_claim_create_request);
+        $request = $this->createOrderDowntimeClaimCalculateRequest($order_id, $order_downtime_calculate_request);
 
         try {
             try {
@@ -1397,14 +1052,14 @@ class OrderDowntimeClaimApi
      * Расчёт претензии о простое
      *
      * @param  string $order_id Идентификатор заявки. (required)
-     * @param  \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest $order_downtime_claim_create_request (optional)
+     * @param  \MagDv\Cargomart\Dto\OrderDowntimeCalculateRequest $order_downtime_calculate_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function createOrderDowntimeClaimCalculateAsync($order_id, $order_downtime_claim_create_request = null)
+    public function createOrderDowntimeClaimCalculateAsync($order_id, $order_downtime_calculate_request = null)
     {
-        return $this->createOrderDowntimeClaimCalculateAsyncWithHttpInfo($order_id, $order_downtime_claim_create_request)
+        return $this->createOrderDowntimeClaimCalculateAsyncWithHttpInfo($order_id, $order_downtime_calculate_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1418,15 +1073,15 @@ class OrderDowntimeClaimApi
      * Расчёт претензии о простое
      *
      * @param  string $order_id Идентификатор заявки. (required)
-     * @param  \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest $order_downtime_claim_create_request (optional)
+     * @param  \MagDv\Cargomart\Dto\OrderDowntimeCalculateRequest $order_downtime_calculate_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function createOrderDowntimeClaimCalculateAsyncWithHttpInfo($order_id, $order_downtime_claim_create_request = null)
+    public function createOrderDowntimeClaimCalculateAsyncWithHttpInfo($order_id, $order_downtime_calculate_request = null)
     {
         $returnType = '\MagDv\Cargomart\Dto\OrderDowntimeResponse';
-        $request = $this->createOrderDowntimeClaimCalculateRequest($order_id, $order_downtime_claim_create_request);
+        $request = $this->createOrderDowntimeClaimCalculateRequest($order_id, $order_downtime_calculate_request);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
             ->then(
@@ -1464,12 +1119,12 @@ class OrderDowntimeClaimApi
      * Create request for operation 'createOrderDowntimeClaimCalculate'
      *
      * @param  string $order_id Идентификатор заявки. (required)
-     * @param  \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest $order_downtime_claim_create_request (optional)
+     * @param  \MagDv\Cargomart\Dto\OrderDowntimeCalculateRequest $order_downtime_calculate_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
      */
-    public function createOrderDowntimeClaimCalculateRequest($order_id, $order_downtime_claim_create_request = null)
+    public function createOrderDowntimeClaimCalculateRequest($order_id, $order_downtime_calculate_request = null)
     {
         // verify the required parameter 'order_id' is set
         if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
@@ -1504,11 +1159,11 @@ class OrderDowntimeClaimApi
         );
 
         // for model (json/xml)
-        if (isset($order_downtime_claim_create_request)) {
+        if (isset($order_downtime_calculate_request)) {
             if ($this->headerSelector->isJsonMime($headers['Content-Type'])) {
-                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($order_downtime_claim_create_request));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($order_downtime_calculate_request));
             } else {
-                $httpBody = $order_downtime_claim_create_request;
+                $httpBody = $order_downtime_calculate_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

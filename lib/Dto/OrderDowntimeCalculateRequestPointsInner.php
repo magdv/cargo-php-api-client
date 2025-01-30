@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderDowntimeClaimCreateRequest
+ * OrderDowntimeCalculateRequestPointsInner
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * OrderDowntimeClaimCreateRequest Class Doc Comment
+ * OrderDowntimeCalculateRequestPointsInner Class Doc Comment
  *
  * @category Class
- * @description Данные для создания требования
+ * @description Информация о простое по конкретному пункту погрузки/выгрузки заявки
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class OrderDowntimeClaimCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializable
+class OrderDowntimeCalculateRequestPointsInner implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class OrderDowntimeClaimCreateRequest implements ModelInterface, ArrayAccess, \J
       *
       * @var string
       */
-    protected static $openAPIModelName = 'OrderDowntimeClaimCreateRequest';
+    protected static $openAPIModelName = 'OrderDowntimeCalculateRequest_points_inner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,8 @@ class OrderDowntimeClaimCreateRequest implements ModelInterface, ArrayAccess, \J
       * @var string[]
       */
     protected static $openAPITypes = [
-        'points' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimPointFields[]'
+        'id' => 'int',
+        'data' => '\MagDv\Cargomart\Dto\OrderDowntimeCalculateRequestPointsInnerData'
     ];
 
     /**
@@ -70,7 +71,8 @@ class OrderDowntimeClaimCreateRequest implements ModelInterface, ArrayAccess, \J
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'points' => null
+        'id' => null,
+        'data' => null
     ];
 
     /**
@@ -79,7 +81,8 @@ class OrderDowntimeClaimCreateRequest implements ModelInterface, ArrayAccess, \J
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'points' => false
+        'id' => false,
+        'data' => false
     ];
 
     /**
@@ -168,7 +171,8 @@ class OrderDowntimeClaimCreateRequest implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $attributeMap = [
-        'points' => 'points'
+        'id' => 'id',
+        'data' => 'data'
     ];
 
     /**
@@ -177,7 +181,8 @@ class OrderDowntimeClaimCreateRequest implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $setters = [
-        'points' => 'setPoints'
+        'id' => 'setId',
+        'data' => 'setData'
     ];
 
     /**
@@ -186,7 +191,8 @@ class OrderDowntimeClaimCreateRequest implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $getters = [
-        'points' => 'getPoints'
+        'id' => 'getId',
+        'data' => 'getData'
     ];
 
     /**
@@ -246,7 +252,8 @@ class OrderDowntimeClaimCreateRequest implements ModelInterface, ArrayAccess, \J
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('points', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('data', $data ?? [], null);
     }
 
     /**
@@ -276,9 +283,13 @@ class OrderDowntimeClaimCreateRequest implements ModelInterface, ArrayAccess, \J
     {
         $invalidProperties = [];
 
-        if ($this->container['points'] === null) {
-            $invalidProperties[] = "'points' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
+        if (($this->container['id'] < 0)) {
+            $invalidProperties[] = "invalid value for 'id', must be bigger than or equal to 0.";
+        }
+
         return $invalidProperties;
     }
 
@@ -295,28 +306,60 @@ class OrderDowntimeClaimCreateRequest implements ModelInterface, ArrayAccess, \J
 
 
     /**
-     * Gets points
+     * Gets id
      *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimPointFields[]
+     * @return int
      */
-    public function getPoints()
+    public function getId()
     {
-        return $this->container['points'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets points
+     * Sets id
      *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaimPointFields[] $points points
+     * @param int $id Числовой идентификатор объекта
      *
      * @return self
      */
-    public function setPoints($points)
+    public function setId($id)
     {
-        if (is_null($points)) {
-            throw new \InvalidArgumentException('non-nullable points cannot be null');
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
-        $this->container['points'] = $points;
+
+        if (($id < 0)) {
+            throw new \InvalidArgumentException('invalid value for $id when calling OrderDowntimeCalculateRequestPointsInner., must be bigger than or equal to 0.');
+        }
+
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     *
+     * @return \MagDv\Cargomart\Dto\OrderDowntimeCalculateRequestPointsInnerData|null
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     *
+     * @param \MagDv\Cargomart\Dto\OrderDowntimeCalculateRequestPointsInnerData|null $data data
+     *
+     * @return self
+     */
+    public function setData($data)
+    {
+        if (is_null($data)) {
+            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        }
+        $this->container['data'] = $data;
 
         return $this;
     }

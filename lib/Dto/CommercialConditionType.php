@@ -1,6 +1,6 @@
 <?php
 /**
- * ExpeditorContractUpdatesCommercialConditionType
+ * CommercialConditionType
  *
  * PHP version 7.4
  *
@@ -31,7 +31,7 @@ namespace MagDv\Cargomart\Dto;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * ExpeditorContractUpdatesCommercialConditionType Class Doc Comment
+ * CommercialConditionType Class Doc Comment
  *
  * @category Class
  * @description Тип коммерческих условий (внутрироссийские/международные)
@@ -39,7 +39,7 @@ use \MagDv\Cargomart\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class ExpeditorContractUpdatesCommercialConditionType
+class CommercialConditionType
 {
     /**
      * Possible values of this enum

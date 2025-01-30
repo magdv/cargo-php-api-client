@@ -62,8 +62,7 @@ class ClaimDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
         'order_id' => 'string',
         'points' => '\MagDv\Cargomart\Dto\ClaimDowntimePoint[]',
         'downtime' => '\MagDv\Cargomart\Dto\Downtime',
-        'proofs' => '\MagDv\Cargomart\Dto\ClaimProofDocument[]',
-        'type' => '\MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum'
+        'proofs' => '\MagDv\Cargomart\Dto\ClaimProofDocument[]'
     ];
 
     /**
@@ -77,8 +76,7 @@ class ClaimDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
         'order_id' => 'cm-uuid',
         'points' => null,
         'downtime' => null,
-        'proofs' => null,
-        'type' => null
+        'proofs' => null
     ];
 
     /**
@@ -90,8 +88,7 @@ class ClaimDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
         'order_id' => false,
         'points' => false,
         'downtime' => false,
-        'proofs' => false,
-        'type' => false
+        'proofs' => false
     ];
 
     /**
@@ -183,8 +180,7 @@ class ClaimDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
         'order_id' => 'orderId',
         'points' => 'points',
         'downtime' => 'downtime',
-        'proofs' => 'proofs',
-        'type' => 'type'
+        'proofs' => 'proofs'
     ];
 
     /**
@@ -196,8 +192,7 @@ class ClaimDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
         'order_id' => 'setOrderId',
         'points' => 'setPoints',
         'downtime' => 'setDowntime',
-        'proofs' => 'setProofs',
-        'type' => 'setType'
+        'proofs' => 'setProofs'
     ];
 
     /**
@@ -209,8 +204,7 @@ class ClaimDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
         'order_id' => 'getOrderId',
         'points' => 'getPoints',
         'downtime' => 'getDowntime',
-        'proofs' => 'getProofs',
-        'type' => 'getType'
+        'proofs' => 'getProofs'
     ];
 
     /**
@@ -274,7 +268,6 @@ class ClaimDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('points', $data ?? [], null);
         $this->setIfExists('downtime', $data ?? [], null);
         $this->setIfExists('proofs', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
     }
 
     /**
@@ -321,9 +314,6 @@ class ClaimDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
             $invalidProperties[] = "invalid value for 'proofs', number of items must be greater than or equal to 1.";
         }
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -450,33 +440,6 @@ class ClaimDowntimeCommonMixin implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('invalid length for $proofs when calling ClaimDowntimeCommonMixin., number of items must be greater than or equal to 1.');
         }
         $this->container['proofs'] = $proofs;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return \MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum $type Тип претензии о простое
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
 
         return $this;
     }

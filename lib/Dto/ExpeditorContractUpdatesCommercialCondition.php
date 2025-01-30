@@ -59,7 +59,7 @@ class ExpeditorContractUpdatesCommercialCondition implements ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType'
+        'type' => '\MagDv\Cargomart\Dto\CommercialConditionType'
     ];
 
     /**
@@ -297,7 +297,7 @@ class ExpeditorContractUpdatesCommercialCondition implements ModelInterface, Arr
     /**
      * Gets type
      *
-     * @return \MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType
+     * @return \MagDv\Cargomart\Dto\CommercialConditionType
      */
     public function getType()
     {
@@ -307,7 +307,7 @@ class ExpeditorContractUpdatesCommercialCondition implements ModelInterface, Arr
     /**
      * Sets type
      *
-     * @param \MagDv\Cargomart\Dto\ExpeditorContractUpdatesCommercialConditionType $type type
+     * @param \MagDv\Cargomart\Dto\CommercialConditionType $type type
      *
      * @return self
      */
