@@ -1,6 +1,6 @@
 <?php
 /**
- * ExpeditorContractUpdatesSigner
+ * ExpeditorContractUpdatesContract
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * ExpeditorContractUpdatesSigner Class Doc Comment
+ * ExpeditorContractUpdatesContract Class Doc Comment
  *
  * @category Class
- * @description Данные подписанта
+ * @description Данные договора
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ExpeditorContractUpdatesSigner implements ModelInterface, ArrayAccess, \JsonSerializable
+class ExpeditorContractUpdatesContract implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ExpeditorContractUpdatesSigner implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ExpeditorContractUpdatesSigner';
+    protected static $openAPIModelName = 'ExpeditorContractUpdatesContract';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,12 +59,8 @@ class ExpeditorContractUpdatesSigner implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'second_name' => 'string',
-        'inn' => 'string',
-        'foundation_document' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesFoundationDocument',
-        'phone' => 'string'
+        'number' => 'string',
+        'date' => '\DateTime'
     ];
 
     /**
@@ -75,12 +71,8 @@ class ExpeditorContractUpdatesSigner implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'first_name' => null,
-        'last_name' => null,
-        'second_name' => null,
-        'inn' => null,
-        'foundation_document' => null,
-        'phone' => null
+        'number' => null,
+        'date' => 'date'
     ];
 
     /**
@@ -89,12 +81,8 @@ class ExpeditorContractUpdatesSigner implements ModelInterface, ArrayAccess, \Js
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'first_name' => false,
-        'last_name' => false,
-        'second_name' => false,
-        'inn' => false,
-        'foundation_document' => false,
-        'phone' => false
+        'number' => false,
+        'date' => false
     ];
 
     /**
@@ -183,12 +171,8 @@ class ExpeditorContractUpdatesSigner implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'first_name' => 'firstName',
-        'last_name' => 'lastName',
-        'second_name' => 'secondName',
-        'inn' => 'inn',
-        'foundation_document' => 'foundationDocument',
-        'phone' => 'phone'
+        'number' => 'number',
+        'date' => 'date'
     ];
 
     /**
@@ -197,12 +181,8 @@ class ExpeditorContractUpdatesSigner implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'second_name' => 'setSecondName',
-        'inn' => 'setInn',
-        'foundation_document' => 'setFoundationDocument',
-        'phone' => 'setPhone'
+        'number' => 'setNumber',
+        'date' => 'setDate'
     ];
 
     /**
@@ -211,12 +191,8 @@ class ExpeditorContractUpdatesSigner implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'second_name' => 'getSecondName',
-        'inn' => 'getInn',
-        'foundation_document' => 'getFoundationDocument',
-        'phone' => 'getPhone'
+        'number' => 'getNumber',
+        'date' => 'getDate'
     ];
 
     /**
@@ -276,12 +252,8 @@ class ExpeditorContractUpdatesSigner implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('first_name', $data ?? [], null);
-        $this->setIfExists('last_name', $data ?? [], null);
-        $this->setIfExists('second_name', $data ?? [], null);
-        $this->setIfExists('inn', $data ?? [], null);
-        $this->setIfExists('foundation_document', $data ?? [], null);
-        $this->setIfExists('phone', $data ?? [], null);
+        $this->setIfExists('number', $data ?? [], null);
+        $this->setIfExists('date', $data ?? [], null);
     }
 
     /**
@@ -311,14 +283,11 @@ class ExpeditorContractUpdatesSigner implements ModelInterface, ArrayAccess, \Js
     {
         $invalidProperties = [];
 
-        if ($this->container['first_name'] === null) {
-            $invalidProperties[] = "'first_name' can't be null";
+        if ($this->container['number'] === null) {
+            $invalidProperties[] = "'number' can't be null";
         }
-        if ($this->container['last_name'] === null) {
-            $invalidProperties[] = "'last_name' can't be null";
-        }
-        if ($this->container['phone'] === null) {
-            $invalidProperties[] = "'phone' can't be null";
+        if ($this->container['date'] === null) {
+            $invalidProperties[] = "'date' can't be null";
         }
         return $invalidProperties;
     }
@@ -336,163 +305,55 @@ class ExpeditorContractUpdatesSigner implements ModelInterface, ArrayAccess, \Js
 
 
     /**
-     * Gets first_name
+     * Gets number
      *
      * @return string
      */
-    public function getFirstName()
+    public function getNumber()
     {
-        return $this->container['first_name'];
+        return $this->container['number'];
     }
 
     /**
-     * Sets first_name
+     * Sets number
      *
-     * @param string $first_name Имя человека, обладающего правом подписи
+     * @param string $number Номер
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function setNumber($number)
     {
-        if (is_null($first_name)) {
-            throw new \InvalidArgumentException('non-nullable first_name cannot be null');
+        if (is_null($number)) {
+            throw new \InvalidArgumentException('non-nullable number cannot be null');
         }
-        $this->container['first_name'] = $first_name;
+        $this->container['number'] = $number;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets date
      *
-     * @return string
+     * @return \DateTime
      */
-    public function getLastName()
+    public function getDate()
     {
-        return $this->container['last_name'];
+        return $this->container['date'];
     }
 
     /**
-     * Sets last_name
+     * Sets date
      *
-     * @param string $last_name Фамилия человека, обладающего правом подписи
+     * @param \DateTime $date Дата
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function setDate($date)
     {
-        if (is_null($last_name)) {
-            throw new \InvalidArgumentException('non-nullable last_name cannot be null');
+        if (is_null($date)) {
+            throw new \InvalidArgumentException('non-nullable date cannot be null');
         }
-        $this->container['last_name'] = $last_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets second_name
-     *
-     * @return string|null
-     */
-    public function getSecondName()
-    {
-        return $this->container['second_name'];
-    }
-
-    /**
-     * Sets second_name
-     *
-     * @param string|null $second_name Отчество человека, обладающего правом подписи
-     *
-     * @return self
-     */
-    public function setSecondName($second_name)
-    {
-        if (is_null($second_name)) {
-            throw new \InvalidArgumentException('non-nullable second_name cannot be null');
-        }
-        $this->container['second_name'] = $second_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets inn
-     *
-     * @return string|null
-     */
-    public function getInn()
-    {
-        return $this->container['inn'];
-    }
-
-    /**
-     * Sets inn
-     *
-     * @param string|null $inn ИНН подписанта
-     *
-     * @return self
-     */
-    public function setInn($inn)
-    {
-        if (is_null($inn)) {
-            throw new \InvalidArgumentException('non-nullable inn cannot be null');
-        }
-        $this->container['inn'] = $inn;
-
-        return $this;
-    }
-
-    /**
-     * Gets foundation_document
-     *
-     * @return \MagDv\Cargomart\Dto\ExpeditorContractUpdatesFoundationDocument|null
-     */
-    public function getFoundationDocument()
-    {
-        return $this->container['foundation_document'];
-    }
-
-    /**
-     * Sets foundation_document
-     *
-     * @param \MagDv\Cargomart\Dto\ExpeditorContractUpdatesFoundationDocument|null $foundation_document foundation_document
-     *
-     * @return self
-     */
-    public function setFoundationDocument($foundation_document)
-    {
-        if (is_null($foundation_document)) {
-            throw new \InvalidArgumentException('non-nullable foundation_document cannot be null');
-        }
-        $this->container['foundation_document'] = $foundation_document;
-
-        return $this;
-    }
-
-    /**
-     * Gets phone
-     *
-     * @return string
-     */
-    public function getPhone()
-    {
-        return $this->container['phone'];
-    }
-
-    /**
-     * Sets phone
-     *
-     * @param string $phone Номер телефона на который пользователь зарегистрировал ПЭП
-     *
-     * @return self
-     */
-    public function setPhone($phone)
-    {
-        if (is_null($phone)) {
-            throw new \InvalidArgumentException('non-nullable phone cannot be null');
-        }
-        $this->container['phone'] = $phone;
+        $this->container['date'] = $date;
 
         return $this;
     }

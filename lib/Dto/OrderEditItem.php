@@ -122,6 +122,7 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'general_partner_contract_id' => 'string',
         'general_partner_contact' => 'int[]',
         'company_branch_id' => 'int',
+        'start_perform_date' => '\DateTime',
         'is_proxy_date_end' => 'bool',
         'car_request' => '\MagDv\Cargomart\Dto\OrderOfferCarRequest',
         'recommended_price' => 'string',
@@ -202,6 +203,7 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'general_partner_contract_id' => null,
         'general_partner_contact' => null,
         'company_branch_id' => null,
+        'start_perform_date' => 'date-time',
         'is_proxy_date_end' => null,
         'car_request' => null,
         'recommended_price' => null,
@@ -280,6 +282,7 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'general_partner_contract_id' => false,
         'general_partner_contact' => false,
         'company_branch_id' => false,
+        'start_perform_date' => false,
         'is_proxy_date_end' => false,
         'car_request' => false,
         'recommended_price' => false,
@@ -438,6 +441,7 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'general_partner_contract_id' => 'generalPartnerContractId',
         'general_partner_contact' => 'generalPartnerContact',
         'company_branch_id' => 'companyBranchId',
+        'start_perform_date' => 'startPerformDate',
         'is_proxy_date_end' => 'isProxyDateEnd',
         'car_request' => 'carRequest',
         'recommended_price' => 'recommendedPrice',
@@ -516,6 +520,7 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'general_partner_contract_id' => 'setGeneralPartnerContractId',
         'general_partner_contact' => 'setGeneralPartnerContact',
         'company_branch_id' => 'setCompanyBranchId',
+        'start_perform_date' => 'setStartPerformDate',
         'is_proxy_date_end' => 'setIsProxyDateEnd',
         'car_request' => 'setCarRequest',
         'recommended_price' => 'setRecommendedPrice',
@@ -594,6 +599,7 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'general_partner_contract_id' => 'getGeneralPartnerContractId',
         'general_partner_contact' => 'getGeneralPartnerContact',
         'company_branch_id' => 'getCompanyBranchId',
+        'start_perform_date' => 'getStartPerformDate',
         'is_proxy_date_end' => 'getIsProxyDateEnd',
         'car_request' => 'getCarRequest',
         'recommended_price' => 'getRecommendedPrice',
@@ -723,6 +729,7 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('general_partner_contract_id', $data ?? [], null);
         $this->setIfExists('general_partner_contact', $data ?? [], null);
         $this->setIfExists('company_branch_id', $data ?? [], null);
+        $this->setIfExists('start_perform_date', $data ?? [], null);
         $this->setIfExists('is_proxy_date_end', $data ?? [], false);
         $this->setIfExists('car_request', $data ?? [], null);
         $this->setIfExists('recommended_price', $data ?? [], null);
@@ -2506,6 +2513,33 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable company_branch_id cannot be null');
         }
         $this->container['company_branch_id'] = $company_branch_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets start_perform_date
+     *
+     * @return \DateTime|null
+     */
+    public function getStartPerformDate()
+    {
+        return $this->container['start_perform_date'];
+    }
+
+    /**
+     * Sets start_perform_date
+     *
+     * @param \DateTime|null $start_perform_date Дата начала погрузки
+     *
+     * @return self
+     */
+    public function setStartPerformDate($start_perform_date)
+    {
+        if (is_null($start_perform_date)) {
+            throw new \InvalidArgumentException('non-nullable start_perform_date cannot be null');
+        }
+        $this->container['start_perform_date'] = $start_perform_date;
 
         return $this;
     }

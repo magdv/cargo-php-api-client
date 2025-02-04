@@ -62,7 +62,7 @@ class ExpeditorContractUpdatesProxyRequest implements ModelInterface, ArrayAcces
         'number' => 'string',
         'create_date' => '\DateTime',
         'end_date' => '\DateTime',
-        'file_id' => 'string'
+        'file_ids' => 'string[]'
     ];
 
     /**
@@ -76,7 +76,7 @@ class ExpeditorContractUpdatesProxyRequest implements ModelInterface, ArrayAcces
         'number' => null,
         'create_date' => 'date',
         'end_date' => 'date',
-        'file_id' => 'uuid'
+        'file_ids' => 'uuid'
     ];
 
     /**
@@ -88,7 +88,7 @@ class ExpeditorContractUpdatesProxyRequest implements ModelInterface, ArrayAcces
         'number' => false,
         'create_date' => false,
         'end_date' => false,
-        'file_id' => false
+        'file_ids' => false
     ];
 
     /**
@@ -180,7 +180,7 @@ class ExpeditorContractUpdatesProxyRequest implements ModelInterface, ArrayAcces
         'number' => 'number',
         'create_date' => 'createDate',
         'end_date' => 'endDate',
-        'file_id' => 'fileId'
+        'file_ids' => 'fileIds'
     ];
 
     /**
@@ -192,7 +192,7 @@ class ExpeditorContractUpdatesProxyRequest implements ModelInterface, ArrayAcces
         'number' => 'setNumber',
         'create_date' => 'setCreateDate',
         'end_date' => 'setEndDate',
-        'file_id' => 'setFileId'
+        'file_ids' => 'setFileIds'
     ];
 
     /**
@@ -204,7 +204,7 @@ class ExpeditorContractUpdatesProxyRequest implements ModelInterface, ArrayAcces
         'number' => 'getNumber',
         'create_date' => 'getCreateDate',
         'end_date' => 'getEndDate',
-        'file_id' => 'getFileId'
+        'file_ids' => 'getFileIds'
     ];
 
     /**
@@ -267,7 +267,7 @@ class ExpeditorContractUpdatesProxyRequest implements ModelInterface, ArrayAcces
         $this->setIfExists('number', $data ?? [], null);
         $this->setIfExists('create_date', $data ?? [], null);
         $this->setIfExists('end_date', $data ?? [], null);
-        $this->setIfExists('file_id', $data ?? [], null);
+        $this->setIfExists('file_ids', $data ?? [], null);
     }
 
     /**
@@ -303,8 +303,8 @@ class ExpeditorContractUpdatesProxyRequest implements ModelInterface, ArrayAcces
         if ($this->container['create_date'] === null) {
             $invalidProperties[] = "'create_date' can't be null";
         }
-        if ($this->container['file_id'] === null) {
-            $invalidProperties[] = "'file_id' can't be null";
+        if ($this->container['file_ids'] === null) {
+            $invalidProperties[] = "'file_ids' can't be null";
         }
         return $invalidProperties;
     }
@@ -403,28 +403,28 @@ class ExpeditorContractUpdatesProxyRequest implements ModelInterface, ArrayAcces
     }
 
     /**
-     * Gets file_id
+     * Gets file_ids
      *
-     * @return string
+     * @return string[]
      */
-    public function getFileId()
+    public function getFileIds()
     {
-        return $this->container['file_id'];
+        return $this->container['file_ids'];
     }
 
     /**
-     * Sets file_id
+     * Sets file_ids
      *
-     * @param string $file_id Идентификатор файла скана доверенности
+     * @param string[] $file_ids Идентификаторы файлов скана доверенности
      *
      * @return self
      */
-    public function setFileId($file_id)
+    public function setFileIds($file_ids)
     {
-        if (is_null($file_id)) {
-            throw new \InvalidArgumentException('non-nullable file_id cannot be null');
+        if (is_null($file_ids)) {
+            throw new \InvalidArgumentException('non-nullable file_ids cannot be null');
         }
-        $this->container['file_id'] = $file_id;
+        $this->container['file_ids'] = $file_ids;
 
         return $this;
     }

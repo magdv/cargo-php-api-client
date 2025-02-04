@@ -177,6 +177,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'paid_invoice_date' => '\DateTime',
         'paid_expeditor_payment_date' => '\DateTime',
         'carrier_package_id' => 'string',
+        'start_perform_date' => '\DateTime',
         'carrier_package_status' => '\MagDv\Cargomart\Dto\OrderDocumentPackageStatus',
         'carrier_payment_type' => '\MagDv\Cargomart\Dto\OrderCarrierPaymentType',
         'banking_details' => '\MagDv\Cargomart\Dto\OrderBanking',
@@ -321,6 +322,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'paid_invoice_date' => 'date',
         'paid_expeditor_payment_date' => 'date',
         'carrier_package_id' => null,
+        'start_perform_date' => 'date-time',
         'carrier_package_status' => null,
         'carrier_payment_type' => null,
         'banking_details' => null,
@@ -463,6 +465,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'paid_invoice_date' => false,
         'paid_expeditor_payment_date' => false,
         'carrier_package_id' => false,
+        'start_perform_date' => false,
         'carrier_package_status' => false,
         'carrier_payment_type' => false,
         'banking_details' => false,
@@ -685,6 +688,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'paid_invoice_date' => 'paidInvoiceDate',
         'paid_expeditor_payment_date' => 'paidExpeditorPaymentDate',
         'carrier_package_id' => 'carrierPackageId',
+        'start_perform_date' => 'startPerformDate',
         'carrier_package_status' => 'carrierPackageStatus',
         'carrier_payment_type' => 'carrierPaymentType',
         'banking_details' => 'bankingDetails',
@@ -827,6 +831,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'paid_invoice_date' => 'setPaidInvoiceDate',
         'paid_expeditor_payment_date' => 'setPaidExpeditorPaymentDate',
         'carrier_package_id' => 'setCarrierPackageId',
+        'start_perform_date' => 'setStartPerformDate',
         'carrier_package_status' => 'setCarrierPackageStatus',
         'carrier_payment_type' => 'setCarrierPaymentType',
         'banking_details' => 'setBankingDetails',
@@ -969,6 +974,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'paid_invoice_date' => 'getPaidInvoiceDate',
         'paid_expeditor_payment_date' => 'getPaidExpeditorPaymentDate',
         'carrier_package_id' => 'getCarrierPackageId',
+        'start_perform_date' => 'getStartPerformDate',
         'carrier_package_status' => 'getCarrierPackageStatus',
         'carrier_payment_type' => 'getCarrierPaymentType',
         'banking_details' => 'getBankingDetails',
@@ -1162,6 +1168,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('paid_invoice_date', $data ?? [], null);
         $this->setIfExists('paid_expeditor_payment_date', $data ?? [], null);
         $this->setIfExists('carrier_package_id', $data ?? [], null);
+        $this->setIfExists('start_perform_date', $data ?? [], null);
         $this->setIfExists('carrier_package_status', $data ?? [], null);
         $this->setIfExists('carrier_payment_type', $data ?? [], null);
         $this->setIfExists('banking_details', $data ?? [], null);
@@ -4489,6 +4496,33 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable carrier_package_id cannot be null');
         }
         $this->container['carrier_package_id'] = $carrier_package_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets start_perform_date
+     *
+     * @return \DateTime|null
+     */
+    public function getStartPerformDate()
+    {
+        return $this->container['start_perform_date'];
+    }
+
+    /**
+     * Sets start_perform_date
+     *
+     * @param \DateTime|null $start_perform_date Дата начала погрузки
+     *
+     * @return self
+     */
+    public function setStartPerformDate($start_perform_date)
+    {
+        if (is_null($start_perform_date)) {
+            throw new \InvalidArgumentException('non-nullable start_perform_date cannot be null');
+        }
+        $this->container['start_perform_date'] = $start_perform_date;
 
         return $this;
     }
