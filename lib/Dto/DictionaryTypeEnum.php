@@ -72,6 +72,8 @@ class DictionaryTypeEnum
 
     public const TRAILER_TYPE = 'trailerType';
 
+    public const TAX_SYSTEM = 'taxSystem';
+
     public const VAT = 'vat';
 
     public const SECTION = 'section';
@@ -111,6 +113,7 @@ class DictionaryTypeEnum
             self::TRUCK_MODE,
             self::TRUCK_TYPE,
             self::TRAILER_TYPE,
+            self::TAX_SYSTEM,
             self::VAT,
             self::SECTION,
             self::CAR_PER_PERIOD,

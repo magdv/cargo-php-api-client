@@ -87,7 +87,8 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'carrier_asks_count' => 'int',
         'has_carrier_sign' => 'bool',
         'roadmap_events_count' => 'int',
-        'payment_invoice_status' => '\MagDv\Cargomart\Dto\PaymentInvoiceStatus[]'
+        'payment_invoice_status' => '\MagDv\Cargomart\Dto\PaymentInvoiceStatus[]',
+        'winner_date' => '\DateTime'
     ];
 
     /**
@@ -126,7 +127,8 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'carrier_asks_count' => null,
         'has_carrier_sign' => null,
         'roadmap_events_count' => null,
-        'payment_invoice_status' => null
+        'payment_invoice_status' => null,
+        'winner_date' => 'date-time'
     ];
 
     /**
@@ -163,7 +165,8 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'carrier_asks_count' => false,
         'has_carrier_sign' => false,
         'roadmap_events_count' => false,
-        'payment_invoice_status' => false
+        'payment_invoice_status' => false,
+        'winner_date' => false
     ];
 
     /**
@@ -280,7 +283,8 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'carrier_asks_count' => 'carrierAsksCount',
         'has_carrier_sign' => 'hasCarrierSign',
         'roadmap_events_count' => 'roadmapEventsCount',
-        'payment_invoice_status' => 'paymentInvoiceStatus'
+        'payment_invoice_status' => 'paymentInvoiceStatus',
+        'winner_date' => 'winnerDate'
     ];
 
     /**
@@ -317,7 +321,8 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'carrier_asks_count' => 'setCarrierAsksCount',
         'has_carrier_sign' => 'setHasCarrierSign',
         'roadmap_events_count' => 'setRoadmapEventsCount',
-        'payment_invoice_status' => 'setPaymentInvoiceStatus'
+        'payment_invoice_status' => 'setPaymentInvoiceStatus',
+        'winner_date' => 'setWinnerDate'
     ];
 
     /**
@@ -354,7 +359,8 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'carrier_asks_count' => 'getCarrierAsksCount',
         'has_carrier_sign' => 'getHasCarrierSign',
         'roadmap_events_count' => 'getRoadmapEventsCount',
-        'payment_invoice_status' => 'getPaymentInvoiceStatus'
+        'payment_invoice_status' => 'getPaymentInvoiceStatus',
+        'winner_date' => 'getWinnerDate'
     ];
 
     /**
@@ -443,6 +449,7 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('has_carrier_sign', $data ?? [], false);
         $this->setIfExists('roadmap_events_count', $data ?? [], null);
         $this->setIfExists('payment_invoice_status', $data ?? [], null);
+        $this->setIfExists('winner_date', $data ?? [], null);
     }
 
     /**
@@ -1305,6 +1312,33 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable payment_invoice_status cannot be null');
         }
         $this->container['payment_invoice_status'] = $payment_invoice_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets winner_date
+     *
+     * @return \DateTime|null
+     */
+    public function getWinnerDate()
+    {
+        return $this->container['winner_date'];
+    }
+
+    /**
+     * Sets winner_date
+     *
+     * @param \DateTime|null $winner_date Дата и время когда был определен победитель
+     *
+     * @return self
+     */
+    public function setWinnerDate($winner_date)
+    {
+        if (is_null($winner_date)) {
+            throw new \InvalidArgumentException('non-nullable winner_date cannot be null');
+        }
+        $this->container['winner_date'] = $winner_date;
 
         return $this;
     }

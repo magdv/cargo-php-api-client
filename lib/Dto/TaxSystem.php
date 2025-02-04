@@ -59,7 +59,7 @@ class TaxSystem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
+        'id' => '\MagDv\Cargomart\Dto\TaxSystemEnum',
         'name' => 'string',
         'title' => 'string',
         'is_with_declaration' => 'bool'
@@ -324,7 +324,7 @@ class TaxSystem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets id
      *
-     * @return string
+     * @return \MagDv\Cargomart\Dto\TaxSystemEnum
      */
     public function getId()
     {
@@ -334,7 +334,7 @@ class TaxSystem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string $id Идентификатор
+     * @param \MagDv\Cargomart\Dto\TaxSystemEnum $id id
      *
      * @return self
      */

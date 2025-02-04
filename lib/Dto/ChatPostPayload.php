@@ -83,7 +83,7 @@ class ChatPostPayload implements ModelInterface, ArrayAccess, \JsonSerializable
         'date' => '\DateTime',
         'value' => 'string',
         'currency_code' => 'string',
-        'payments' => '\MagDv\Cargomart\Dto\ChatPostPayloadInvoicePaymentsInner[]',
+        'payments' => '\MagDv\Cargomart\Dto\ChatPostPayloadOrderExpeditorPaymentCarrierUpdatePaymentsInner[]',
         'cert_id' => 'string',
         'serial_id' => 'int',
         'message' => 'string',
@@ -1553,7 +1553,7 @@ class ChatPostPayload implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets payments
      *
-     * @return \MagDv\Cargomart\Dto\ChatPostPayloadInvoicePaymentsInner[]|null
+     * @return \MagDv\Cargomart\Dto\ChatPostPayloadOrderExpeditorPaymentCarrierUpdatePaymentsInner[]|null
      */
     public function getPayments()
     {
@@ -1563,7 +1563,7 @@ class ChatPostPayload implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payments
      *
-     * @param \MagDv\Cargomart\Dto\ChatPostPayloadInvoicePaymentsInner[]|null $payments payments
+     * @param \MagDv\Cargomart\Dto\ChatPostPayloadOrderExpeditorPaymentCarrierUpdatePaymentsInner[]|null $payments payments
      *
      * @return self
      */

@@ -59,7 +59,7 @@ class OrderStepBidResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
+        'data' => '\MagDv\Cargomart\Dto\OrderStepBidResponseData',
         'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
     ];
 
@@ -304,7 +304,7 @@ class OrderStepBidResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets data
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\OrderStepBidResponseData
      */
     public function getData()
     {
@@ -314,7 +314,7 @@ class OrderStepBidResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets data
      *
-     * @param object $data Значение шага ставки
+     * @param \MagDv\Cargomart\Dto\OrderStepBidResponseData $data data
      *
      * @return self
      */

@@ -60,12 +60,14 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
       */
     protected static $openAPITypes = [
         'status' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesStatus',
+        'contract' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesContract',
         'status_updated_at' => 'mixed',
         'additional_agreement' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesAdditionalAgreement',
         'commercial_conditions' => '\MagDv\Cargomart\Dto\CommercialCondition[]',
         'selected_commercial_conditions' => '\MagDv\Cargomart\Dto\CommercialConditionType[]',
         'signer' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesSigner',
-        'proxy' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesProxy'
+        'proxy' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesProxy',
+        'refuse_comment' => 'string'
     ];
 
     /**
@@ -77,12 +79,14 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
       */
     protected static $openAPIFormats = [
         'status' => null,
+        'contract' => null,
         'status_updated_at' => null,
         'additional_agreement' => null,
         'commercial_conditions' => null,
         'selected_commercial_conditions' => null,
         'signer' => null,
-        'proxy' => null
+        'proxy' => null,
+        'refuse_comment' => null
     ];
 
     /**
@@ -92,12 +96,14 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
       */
     protected static array $openAPINullables = [
         'status' => false,
+        'contract' => false,
         'status_updated_at' => true,
         'additional_agreement' => false,
         'commercial_conditions' => false,
         'selected_commercial_conditions' => false,
         'signer' => false,
-        'proxy' => false
+        'proxy' => false,
+        'refuse_comment' => false
     ];
 
     /**
@@ -187,12 +193,14 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
      */
     protected static $attributeMap = [
         'status' => 'status',
+        'contract' => 'contract',
         'status_updated_at' => 'statusUpdatedAt',
         'additional_agreement' => 'additionalAgreement',
         'commercial_conditions' => 'commercialConditions',
         'selected_commercial_conditions' => 'selectedCommercialConditions',
         'signer' => 'signer',
-        'proxy' => 'proxy'
+        'proxy' => 'proxy',
+        'refuse_comment' => 'refuseComment'
     ];
 
     /**
@@ -202,12 +210,14 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
      */
     protected static $setters = [
         'status' => 'setStatus',
+        'contract' => 'setContract',
         'status_updated_at' => 'setStatusUpdatedAt',
         'additional_agreement' => 'setAdditionalAgreement',
         'commercial_conditions' => 'setCommercialConditions',
         'selected_commercial_conditions' => 'setSelectedCommercialConditions',
         'signer' => 'setSigner',
-        'proxy' => 'setProxy'
+        'proxy' => 'setProxy',
+        'refuse_comment' => 'setRefuseComment'
     ];
 
     /**
@@ -217,12 +227,14 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
      */
     protected static $getters = [
         'status' => 'getStatus',
+        'contract' => 'getContract',
         'status_updated_at' => 'getStatusUpdatedAt',
         'additional_agreement' => 'getAdditionalAgreement',
         'commercial_conditions' => 'getCommercialConditions',
         'selected_commercial_conditions' => 'getSelectedCommercialConditions',
         'signer' => 'getSigner',
-        'proxy' => 'getProxy'
+        'proxy' => 'getProxy',
+        'refuse_comment' => 'getRefuseComment'
     ];
 
     /**
@@ -283,12 +295,14 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
     public function __construct(?array $data = null)
     {
         $this->setIfExists('status', $data ?? [], null);
+        $this->setIfExists('contract', $data ?? [], null);
         $this->setIfExists('status_updated_at', $data ?? [], null);
         $this->setIfExists('additional_agreement', $data ?? [], null);
         $this->setIfExists('commercial_conditions', $data ?? [], null);
         $this->setIfExists('selected_commercial_conditions', $data ?? [], null);
         $this->setIfExists('signer', $data ?? [], null);
         $this->setIfExists('proxy', $data ?? [], null);
+        $this->setIfExists('refuse_comment', $data ?? [], null);
     }
 
     /**
@@ -359,6 +373,33 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
             throw new \InvalidArgumentException('non-nullable status cannot be null');
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets contract
+     *
+     * @return \MagDv\Cargomart\Dto\ExpeditorContractUpdatesContract|null
+     */
+    public function getContract()
+    {
+        return $this->container['contract'];
+    }
+
+    /**
+     * Sets contract
+     *
+     * @param \MagDv\Cargomart\Dto\ExpeditorContractUpdatesContract|null $contract contract
+     *
+     * @return self
+     */
+    public function setContract($contract)
+    {
+        if (is_null($contract)) {
+            throw new \InvalidArgumentException('non-nullable contract cannot be null');
+        }
+        $this->container['contract'] = $contract;
 
         return $this;
     }
@@ -528,6 +569,33 @@ class ExpeditorContractUpdatesState implements ModelInterface, ArrayAccess, \Jso
             throw new \InvalidArgumentException('non-nullable proxy cannot be null');
         }
         $this->container['proxy'] = $proxy;
+
+        return $this;
+    }
+
+    /**
+     * Gets refuse_comment
+     *
+     * @return string|null
+     */
+    public function getRefuseComment()
+    {
+        return $this->container['refuse_comment'];
+    }
+
+    /**
+     * Sets refuse_comment
+     *
+     * @param string|null $refuse_comment Комментарий отказа подписания доп. соглашения со стороны Каргомарта
+     *
+     * @return self
+     */
+    public function setRefuseComment($refuse_comment)
+    {
+        if (is_null($refuse_comment)) {
+            throw new \InvalidArgumentException('non-nullable refuse_comment cannot be null');
+        }
+        $this->container['refuse_comment'] = $refuse_comment;
 
         return $this;
     }

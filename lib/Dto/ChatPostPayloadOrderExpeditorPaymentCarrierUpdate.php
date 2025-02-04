@@ -64,7 +64,7 @@ class ChatPostPayloadOrderExpeditorPaymentCarrierUpdate implements ModelInterfac
         'date' => '\DateTime',
         'value' => 'string',
         'currency_code' => 'string',
-        'payments' => '\MagDv\Cargomart\Dto\ChatPostPayloadInvoicePaymentsInner[]'
+        'payments' => '\MagDv\Cargomart\Dto\ChatPostPayloadOrderExpeditorPaymentCarrierUpdatePaymentsInner[]'
     ];
 
     /**
@@ -488,7 +488,7 @@ class ChatPostPayloadOrderExpeditorPaymentCarrierUpdate implements ModelInterfac
     /**
      * Gets payments
      *
-     * @return \MagDv\Cargomart\Dto\ChatPostPayloadInvoicePaymentsInner[]|null
+     * @return \MagDv\Cargomart\Dto\ChatPostPayloadOrderExpeditorPaymentCarrierUpdatePaymentsInner[]|null
      */
     public function getPayments()
     {
@@ -498,7 +498,7 @@ class ChatPostPayloadOrderExpeditorPaymentCarrierUpdate implements ModelInterfac
     /**
      * Sets payments
      *
-     * @param \MagDv\Cargomart\Dto\ChatPostPayloadInvoicePaymentsInner[]|null $payments payments
+     * @param \MagDv\Cargomart\Dto\ChatPostPayloadOrderExpeditorPaymentCarrierUpdatePaymentsInner[]|null $payments payments
      *
      * @return self
      */
