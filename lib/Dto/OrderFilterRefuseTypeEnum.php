@@ -1,6 +1,6 @@
 <?php
 /**
- * ClaimStatus
+ * OrderFilterRefuseTypeEnum
  *
  * PHP version 7.4
  *
@@ -31,26 +31,24 @@ namespace MagDv\Cargomart\Dto;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * ClaimStatus Class Doc Comment
+ * OrderFilterRefuseTypeEnum Class Doc Comment
  *
  * @category Class
- * @description Статус требования
+ * @description Значения фильтра по типу отказа
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class ClaimStatus
+class OrderFilterRefuseTypeEnum
 {
     /**
      * Possible values of this enum
      */
-    public const DIRECTED = 'directed';
+    public const CONSIGNOR = 'consignor';
 
-    public const CANCELLED = 'cancelled';
+    public const CARRIER = 'carrier';
 
-    public const REJECTED = 'rejected';
-
-    public const FULFILLED = 'fulfilled';
+    public const EXPEDITOR = 'expeditor';
 
     /**
      * Gets allowable values of the enum
@@ -59,10 +57,9 @@ class ClaimStatus
     public static function getAllowableEnumValues()
     {
         return [
-            self::DIRECTED,
-            self::CANCELLED,
-            self::REJECTED,
-            self::FULFILLED
+            self::CONSIGNOR,
+            self::CARRIER,
+            self::EXPEDITOR
         ];
     }
 }

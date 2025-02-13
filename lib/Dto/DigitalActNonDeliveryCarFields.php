@@ -59,7 +59,6 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'create_date' => '\DateTime',
         'order_id' => 'string',
         'settlement_name' => 'string',
         'shipment_failure_type' => '\MagDv\Cargomart\Dto\OrderActNonDeliveryCarTypeEnum',
@@ -70,9 +69,7 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
         'carrier' => '\MagDv\Cargomart\Dto\DigitalActNonDeliveryCarCompany',
         'order' => '\MagDv\Cargomart\Dto\DigitalActNonDeliveryCarOrder',
         'vehicle' => '\MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixinVehicle',
-        'driver' => '\MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixinDriver',
-        'date' => '\DateTime',
-        'number' => 'string'
+        'driver' => '\MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixinDriver'
     ];
 
     /**
@@ -83,7 +80,6 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'create_date' => 'date-time',
         'order_id' => 'cm-uuid',
         'settlement_name' => null,
         'shipment_failure_type' => null,
@@ -94,9 +90,7 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
         'carrier' => null,
         'order' => null,
         'vehicle' => null,
-        'driver' => null,
-        'date' => 'date',
-        'number' => null
+        'driver' => null
     ];
 
     /**
@@ -105,7 +99,6 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'create_date' => false,
         'order_id' => false,
         'settlement_name' => false,
         'shipment_failure_type' => false,
@@ -116,9 +109,7 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
         'carrier' => false,
         'order' => false,
         'vehicle' => false,
-        'driver' => false,
-        'date' => false,
-        'number' => false
+        'driver' => false
     ];
 
     /**
@@ -207,7 +198,6 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'create_date' => 'createDate',
         'order_id' => 'orderId',
         'settlement_name' => 'settlementName',
         'shipment_failure_type' => 'shipmentFailureType',
@@ -218,9 +208,7 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
         'carrier' => 'carrier',
         'order' => 'order',
         'vehicle' => 'vehicle',
-        'driver' => 'driver',
-        'date' => 'date',
-        'number' => 'number'
+        'driver' => 'driver'
     ];
 
     /**
@@ -229,7 +217,6 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'create_date' => 'setCreateDate',
         'order_id' => 'setOrderId',
         'settlement_name' => 'setSettlementName',
         'shipment_failure_type' => 'setShipmentFailureType',
@@ -240,9 +227,7 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
         'carrier' => 'setCarrier',
         'order' => 'setOrder',
         'vehicle' => 'setVehicle',
-        'driver' => 'setDriver',
-        'date' => 'setDate',
-        'number' => 'setNumber'
+        'driver' => 'setDriver'
     ];
 
     /**
@@ -251,7 +236,6 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'create_date' => 'getCreateDate',
         'order_id' => 'getOrderId',
         'settlement_name' => 'getSettlementName',
         'shipment_failure_type' => 'getShipmentFailureType',
@@ -262,9 +246,7 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
         'carrier' => 'getCarrier',
         'order' => 'getOrder',
         'vehicle' => 'getVehicle',
-        'driver' => 'getDriver',
-        'date' => 'getDate',
-        'number' => 'getNumber'
+        'driver' => 'getDriver'
     ];
 
     /**
@@ -324,7 +306,6 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('create_date', $data ?? [], null);
         $this->setIfExists('order_id', $data ?? [], null);
         $this->setIfExists('settlement_name', $data ?? [], null);
         $this->setIfExists('shipment_failure_type', $data ?? [], null);
@@ -336,8 +317,6 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
         $this->setIfExists('order', $data ?? [], null);
         $this->setIfExists('vehicle', $data ?? [], null);
         $this->setIfExists('driver', $data ?? [], null);
-        $this->setIfExists('date', $data ?? [], null);
-        $this->setIfExists('number', $data ?? [], null);
     }
 
     /**
@@ -367,9 +346,6 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
     {
         $invalidProperties = [];
 
-        if ($this->container['create_date'] === null) {
-            $invalidProperties[] = "'create_date' can't be null";
-        }
         if ($this->container['order_id'] === null) {
             $invalidProperties[] = "'order_id' can't be null";
         }
@@ -394,12 +370,6 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
         if ($this->container['order'] === null) {
             $invalidProperties[] = "'order' can't be null";
         }
-        if ($this->container['date'] === null) {
-            $invalidProperties[] = "'date' can't be null";
-        }
-        if ($this->container['number'] === null) {
-            $invalidProperties[] = "'number' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -414,33 +384,6 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets create_date
-     *
-     * @return \DateTime
-     */
-    public function getCreateDate()
-    {
-        return $this->container['create_date'];
-    }
-
-    /**
-     * Sets create_date
-     *
-     * @param \DateTime $create_date Дата и время создания акта
-     *
-     * @return self
-     */
-    public function setCreateDate($create_date)
-    {
-        if (is_null($create_date)) {
-            throw new \InvalidArgumentException('non-nullable create_date cannot be null');
-        }
-        $this->container['create_date'] = $create_date;
-
-        return $this;
-    }
 
     /**
      * Gets order_id
@@ -735,60 +678,6 @@ class DigitalActNonDeliveryCarFields implements ModelInterface, ArrayAccess, \Js
             throw new \InvalidArgumentException('non-nullable driver cannot be null');
         }
         $this->container['driver'] = $driver;
-
-        return $this;
-    }
-
-    /**
-     * Gets date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->container['date'];
-    }
-
-    /**
-     * Sets date
-     *
-     * @param \DateTime $date Дата документа
-     *
-     * @return self
-     */
-    public function setDate($date)
-    {
-        if (is_null($date)) {
-            throw new \InvalidArgumentException('non-nullable date cannot be null');
-        }
-        $this->container['date'] = $date;
-
-        return $this;
-    }
-
-    /**
-     * Gets number
-     *
-     * @return string
-     */
-    public function getNumber()
-    {
-        return $this->container['number'];
-    }
-
-    /**
-     * Sets number
-     *
-     * @param string $number Номер документа
-     *
-     * @return self
-     */
-    public function setNumber($number)
-    {
-        if (is_null($number)) {
-            throw new \InvalidArgumentException('non-nullable number cannot be null');
-        }
-        $this->container['number'] = $number;
 
         return $this;
     }

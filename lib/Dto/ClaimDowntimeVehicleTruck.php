@@ -1,6 +1,6 @@
 <?php
 /**
- * DowntimeClaimResponseOldData
+ * ClaimDowntimeVehicleTruck
  *
  * PHP version 7.4
  *
@@ -33,15 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * DowntimeClaimResponseOldData Class Doc Comment
+ * ClaimDowntimeVehicleTruck Class Doc Comment
  *
  * @category Class
+ * @description Реквизиты тягача/фургона
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class DowntimeClaimResponseOldData implements ModelInterface, ArrayAccess, \JsonSerializable
+class ClaimDowntimeVehicleTruck implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +51,7 @@ class DowntimeClaimResponseOldData implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'DowntimeClaimResponseOld_data';
+    protected static $openAPIModelName = 'ClaimDowntimeVehicle_truck';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +59,8 @@ class DowntimeClaimResponseOldData implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'downtime_claim' => '\MagDv\Cargomart\Dto\OrderDowntimeClaim'
+        'number' => 'string',
+        'manufacturer' => 'string'
     ];
 
     /**
@@ -69,7 +71,8 @@ class DowntimeClaimResponseOldData implements ModelInterface, ArrayAccess, \Json
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'downtime_claim' => null
+        'number' => null,
+        'manufacturer' => null
     ];
 
     /**
@@ -78,7 +81,8 @@ class DowntimeClaimResponseOldData implements ModelInterface, ArrayAccess, \Json
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'downtime_claim' => false
+        'number' => false,
+        'manufacturer' => false
     ];
 
     /**
@@ -167,7 +171,8 @@ class DowntimeClaimResponseOldData implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $attributeMap = [
-        'downtime_claim' => 'downtimeClaim'
+        'number' => 'number',
+        'manufacturer' => 'manufacturer'
     ];
 
     /**
@@ -176,7 +181,8 @@ class DowntimeClaimResponseOldData implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'downtime_claim' => 'setDowntimeClaim'
+        'number' => 'setNumber',
+        'manufacturer' => 'setManufacturer'
     ];
 
     /**
@@ -185,7 +191,8 @@ class DowntimeClaimResponseOldData implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'downtime_claim' => 'getDowntimeClaim'
+        'number' => 'getNumber',
+        'manufacturer' => 'getManufacturer'
     ];
 
     /**
@@ -245,7 +252,8 @@ class DowntimeClaimResponseOldData implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('downtime_claim', $data ?? [], null);
+        $this->setIfExists('number', $data ?? [], null);
+        $this->setIfExists('manufacturer', $data ?? [], null);
     }
 
     /**
@@ -275,8 +283,11 @@ class DowntimeClaimResponseOldData implements ModelInterface, ArrayAccess, \Json
     {
         $invalidProperties = [];
 
-        if ($this->container['downtime_claim'] === null) {
-            $invalidProperties[] = "'downtime_claim' can't be null";
+        if ($this->container['number'] === null) {
+            $invalidProperties[] = "'number' can't be null";
+        }
+        if ($this->container['manufacturer'] === null) {
+            $invalidProperties[] = "'manufacturer' can't be null";
         }
         return $invalidProperties;
     }
@@ -294,28 +305,55 @@ class DowntimeClaimResponseOldData implements ModelInterface, ArrayAccess, \Json
 
 
     /**
-     * Gets downtime_claim
+     * Gets number
      *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaim
+     * @return string
      */
-    public function getDowntimeClaim()
+    public function getNumber()
     {
-        return $this->container['downtime_claim'];
+        return $this->container['number'];
     }
 
     /**
-     * Sets downtime_claim
+     * Sets number
      *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaim $downtime_claim downtime_claim
+     * @param string $number Гос. номер
      *
      * @return self
      */
-    public function setDowntimeClaim($downtime_claim)
+    public function setNumber($number)
     {
-        if (is_null($downtime_claim)) {
-            throw new \InvalidArgumentException('non-nullable downtime_claim cannot be null');
+        if (is_null($number)) {
+            throw new \InvalidArgumentException('non-nullable number cannot be null');
         }
-        $this->container['downtime_claim'] = $downtime_claim;
+        $this->container['number'] = $number;
+
+        return $this;
+    }
+
+    /**
+     * Gets manufacturer
+     *
+     * @return string
+     */
+    public function getManufacturer()
+    {
+        return $this->container['manufacturer'];
+    }
+
+    /**
+     * Sets manufacturer
+     *
+     * @param string $manufacturer Марка
+     *
+     * @return self
+     */
+    public function setManufacturer($manufacturer)
+    {
+        if (is_null($manufacturer)) {
+            throw new \InvalidArgumentException('non-nullable manufacturer cannot be null');
+        }
+        $this->container['manufacturer'] = $manufacturer;
 
         return $this;
     }

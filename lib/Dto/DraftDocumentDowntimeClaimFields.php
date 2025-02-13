@@ -296,6 +296,9 @@ class DraftDocumentDowntimeClaimFields implements ModelInterface, ArrayAccess, \
     {
         $invalidProperties = [];
 
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -305,6 +308,9 @@ class DraftDocumentDowntimeClaimFields implements ModelInterface, ArrayAccess, \
             );
         }
 
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -323,7 +329,7 @@ class DraftDocumentDowntimeClaimFields implements ModelInterface, ArrayAccess, \
     /**
      * Gets type
      *
-     * @return string|null
+     * @return string
      */
     public function getType()
     {
@@ -333,7 +339,7 @@ class DraftDocumentDowntimeClaimFields implements ModelInterface, ArrayAccess, \
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string $type type
      *
      * @return self
      */
@@ -360,7 +366,7 @@ class DraftDocumentDowntimeClaimFields implements ModelInterface, ArrayAccess, \
     /**
      * Gets data
      *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeCommonMixin|null
+     * @return \MagDv\Cargomart\Dto\OrderDowntimeCommonMixin
      */
     public function getData()
     {
@@ -370,7 +376,7 @@ class DraftDocumentDowntimeClaimFields implements ModelInterface, ArrayAccess, \
     /**
      * Sets data
      *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeCommonMixin|null $data data
+     * @param \MagDv\Cargomart\Dto\OrderDowntimeCommonMixin $data data
      *
      * @return self
      */

@@ -62,7 +62,6 @@ class DigitalActNonDeliveryCar implements ModelInterface, ArrayAccess, \JsonSeri
         'id' => 'string',
         'status' => '\MagDv\Cargomart\Dto\OrderActNonDeliveryCarStatusEnum',
         'signed_document' => '\MagDv\Cargomart\Dto\SignedDocument',
-        'create_date' => '\DateTime',
         'order_id' => 'string',
         'settlement_name' => 'string',
         'shipment_failure_type' => '\MagDv\Cargomart\Dto\OrderActNonDeliveryCarTypeEnum',
@@ -89,7 +88,6 @@ class DigitalActNonDeliveryCar implements ModelInterface, ArrayAccess, \JsonSeri
         'id' => 'uuid',
         'status' => null,
         'signed_document' => null,
-        'create_date' => 'date-time',
         'order_id' => 'cm-uuid',
         'settlement_name' => null,
         'shipment_failure_type' => null,
@@ -114,7 +112,6 @@ class DigitalActNonDeliveryCar implements ModelInterface, ArrayAccess, \JsonSeri
         'id' => false,
         'status' => false,
         'signed_document' => false,
-        'create_date' => false,
         'order_id' => false,
         'settlement_name' => false,
         'shipment_failure_type' => false,
@@ -219,7 +216,6 @@ class DigitalActNonDeliveryCar implements ModelInterface, ArrayAccess, \JsonSeri
         'id' => 'id',
         'status' => 'status',
         'signed_document' => 'signedDocument',
-        'create_date' => 'createDate',
         'order_id' => 'orderId',
         'settlement_name' => 'settlementName',
         'shipment_failure_type' => 'shipmentFailureType',
@@ -244,7 +240,6 @@ class DigitalActNonDeliveryCar implements ModelInterface, ArrayAccess, \JsonSeri
         'id' => 'setId',
         'status' => 'setStatus',
         'signed_document' => 'setSignedDocument',
-        'create_date' => 'setCreateDate',
         'order_id' => 'setOrderId',
         'settlement_name' => 'setSettlementName',
         'shipment_failure_type' => 'setShipmentFailureType',
@@ -269,7 +264,6 @@ class DigitalActNonDeliveryCar implements ModelInterface, ArrayAccess, \JsonSeri
         'id' => 'getId',
         'status' => 'getStatus',
         'signed_document' => 'getSignedDocument',
-        'create_date' => 'getCreateDate',
         'order_id' => 'getOrderId',
         'settlement_name' => 'getSettlementName',
         'shipment_failure_type' => 'getShipmentFailureType',
@@ -345,7 +339,6 @@ class DigitalActNonDeliveryCar implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('signed_document', $data ?? [], null);
-        $this->setIfExists('create_date', $data ?? [], null);
         $this->setIfExists('order_id', $data ?? [], null);
         $this->setIfExists('settlement_name', $data ?? [], null);
         $this->setIfExists('shipment_failure_type', $data ?? [], null);
@@ -394,8 +387,8 @@ class DigitalActNonDeliveryCar implements ModelInterface, ArrayAccess, \JsonSeri
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
-        if ($this->container['create_date'] === null) {
-            $invalidProperties[] = "'create_date' can't be null";
+        if ($this->container['signed_document'] === null) {
+            $invalidProperties[] = "'signed_document' can't be null";
         }
         if ($this->container['order_id'] === null) {
             $invalidProperties[] = "'order_id' can't be null";
@@ -499,7 +492,7 @@ class DigitalActNonDeliveryCar implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets signed_document
      *
-     * @return \MagDv\Cargomart\Dto\SignedDocument|null
+     * @return \MagDv\Cargomart\Dto\SignedDocument
      */
     public function getSignedDocument()
     {
@@ -509,7 +502,7 @@ class DigitalActNonDeliveryCar implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets signed_document
      *
-     * @param \MagDv\Cargomart\Dto\SignedDocument|null $signed_document signed_document
+     * @param \MagDv\Cargomart\Dto\SignedDocument $signed_document signed_document
      *
      * @return self
      */
@@ -519,33 +512,6 @@ class DigitalActNonDeliveryCar implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable signed_document cannot be null');
         }
         $this->container['signed_document'] = $signed_document;
-
-        return $this;
-    }
-
-    /**
-     * Gets create_date
-     *
-     * @return \DateTime
-     */
-    public function getCreateDate()
-    {
-        return $this->container['create_date'];
-    }
-
-    /**
-     * Sets create_date
-     *
-     * @param \DateTime $create_date Дата и время создания акта
-     *
-     * @return self
-     */
-    public function setCreateDate($create_date)
-    {
-        if (is_null($create_date)) {
-            throw new \InvalidArgumentException('non-nullable create_date cannot be null');
-        }
-        $this->container['create_date'] = $create_date;
 
         return $this;
     }

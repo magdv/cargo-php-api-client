@@ -60,7 +60,7 @@ class DraftDocument implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'type' => 'string',
-        'data' => '\MagDv\Cargomart\Dto\DigitalActNonDeliveryCarFields',
+        'data' => '\MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixin',
         'id' => 'string',
         'create_date' => '\DateTime',
         'access' => '\MagDv\Cargomart\Dto\DraftDocumentAccess'
@@ -400,7 +400,7 @@ class DraftDocument implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets data
      *
-     * @return \MagDv\Cargomart\Dto\DigitalActNonDeliveryCarFields
+     * @return \MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixin
      */
     public function getData()
     {
@@ -410,7 +410,7 @@ class DraftDocument implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets data
      *
-     * @param \MagDv\Cargomart\Dto\DigitalActNonDeliveryCarFields $data data
+     * @param \MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixin $data Поля электронного акта о неподаче машины
      *
      * @return self
      */

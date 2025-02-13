@@ -1,6 +1,6 @@
 <?php
 /**
- * DraftDocumentActNonDeliveryCar
+ * ClaimParticipant
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * DraftDocumentActNonDeliveryCar Class Doc Comment
+ * ClaimParticipant Class Doc Comment
  *
  * @category Class
- * @description Набор полей объекта черновика акта о неподачи машины
+ * @description Реквизиты заявителя/ответчика
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \JsonSerializable
+class ClaimParticipant implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'DraftDocumentActNonDeliveryCar';
+    protected static $openAPIModelName = 'ClaimParticipant';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,11 +59,11 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
-        'data' => '\MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixin',
-        'id' => 'string',
-        'create_date' => '\DateTime',
-        'access' => '\MagDv\Cargomart\Dto\DraftDocumentAccess'
+        'inn' => 'string',
+        'ogrn' => 'string',
+        'short_name' => 'string',
+        'legal_address' => 'string',
+        'phones' => 'string[]'
     ];
 
     /**
@@ -74,11 +74,11 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null,
-        'data' => null,
-        'id' => null,
-        'create_date' => 'date-time',
-        'access' => null
+        'inn' => null,
+        'ogrn' => null,
+        'short_name' => null,
+        'legal_address' => null,
+        'phones' => null
     ];
 
     /**
@@ -87,11 +87,11 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'type' => false,
-        'data' => false,
-        'id' => false,
-        'create_date' => false,
-        'access' => false
+        'inn' => false,
+        'ogrn' => false,
+        'short_name' => false,
+        'legal_address' => false,
+        'phones' => false
     ];
 
     /**
@@ -180,11 +180,11 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
-        'data' => 'data',
-        'id' => 'id',
-        'create_date' => 'createDate',
-        'access' => 'access'
+        'inn' => 'inn',
+        'ogrn' => 'ogrn',
+        'short_name' => 'shortName',
+        'legal_address' => 'legalAddress',
+        'phones' => 'phones'
     ];
 
     /**
@@ -193,11 +193,11 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
-        'data' => 'setData',
-        'id' => 'setId',
-        'create_date' => 'setCreateDate',
-        'access' => 'setAccess'
+        'inn' => 'setInn',
+        'ogrn' => 'setOgrn',
+        'short_name' => 'setShortName',
+        'legal_address' => 'setLegalAddress',
+        'phones' => 'setPhones'
     ];
 
     /**
@@ -206,11 +206,11 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
-        'data' => 'getData',
-        'id' => 'getId',
-        'create_date' => 'getCreateDate',
-        'access' => 'getAccess'
+        'inn' => 'getInn',
+        'ogrn' => 'getOgrn',
+        'short_name' => 'getShortName',
+        'legal_address' => 'getLegalAddress',
+        'phones' => 'getPhones'
     ];
 
     /**
@@ -254,19 +254,6 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
         return self::$openAPIModelName;
     }
 
-    public const TYPE_ACT_NON_DELIVERY_CAR = 'actNonDeliveryCar';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_ACT_NON_DELIVERY_CAR,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -283,11 +270,11 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('create_date', $data ?? [], null);
-        $this->setIfExists('access', $data ?? [], null);
+        $this->setIfExists('inn', $data ?? [], null);
+        $this->setIfExists('ogrn', $data ?? [], null);
+        $this->setIfExists('short_name', $data ?? [], null);
+        $this->setIfExists('legal_address', $data ?? [], null);
+        $this->setIfExists('phones', $data ?? [], null);
     }
 
     /**
@@ -317,27 +304,26 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
     {
         $invalidProperties = [];
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
+        if ($this->container['inn'] === null) {
+            $invalidProperties[] = "'inn' can't be null";
         }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'type', must be one of '%s'",
-                $this->container['type'],
-                implode("', '", $allowedValues)
-            );
+        if ($this->container['short_name'] === null) {
+            $invalidProperties[] = "'short_name' can't be null";
+        }
+        if ($this->container['legal_address'] === null) {
+            $invalidProperties[] = "'legal_address' can't be null";
+        }
+        if ($this->container['phones'] === null) {
+            $invalidProperties[] = "'phones' can't be null";
+        }
+        if ((count($this->container['phones']) > 20)) {
+            $invalidProperties[] = "invalid value for 'phones', number of items must be less than or equal to 20.";
         }
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ((count($this->container['phones']) < 1)) {
+            $invalidProperties[] = "invalid value for 'phones', number of items must be greater than or equal to 1.";
         }
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['create_date'] === null) {
-            $invalidProperties[] = "'create_date' can't be null";
-        }
+
         return $invalidProperties;
     }
 
@@ -354,146 +340,143 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
 
 
     /**
-     * Gets type
+     * Gets inn
      *
      * @return string
      */
-    public function getType()
+    public function getInn()
     {
-        return $this->container['type'];
+        return $this->container['inn'];
     }
 
     /**
-     * Sets type
+     * Sets inn
      *
-     * @param string $type type
+     * @param string $inn ИНН организации
      *
      * @return self
      */
-    public function setType($type)
+    public function setInn($inn)
     {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
+        if (is_null($inn)) {
+            throw new \InvalidArgumentException('non-nullable inn cannot be null');
         }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
+        $this->container['inn'] = $inn;
 
         return $this;
     }
 
     /**
-     * Gets data
+     * Gets ogrn
      *
-     * @return \MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixin
+     * @return string|null
      */
-    public function getData()
+    public function getOgrn()
     {
-        return $this->container['data'];
+        return $this->container['ogrn'];
     }
 
     /**
-     * Sets data
+     * Sets ogrn
      *
-     * @param \MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixin $data Поля электронного акта о неподаче машины
+     * @param string|null $ogrn ОГРН организации (обязателен для российских юр. лиц)
      *
      * @return self
      */
-    public function setData($data)
+    public function setOgrn($ogrn)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($ogrn)) {
+            throw new \InvalidArgumentException('non-nullable ogrn cannot be null');
         }
-        $this->container['data'] = $data;
+        $this->container['ogrn'] = $ogrn;
 
         return $this;
     }
 
     /**
-     * Gets id
+     * Gets short_name
      *
      * @return string
      */
-    public function getId()
+    public function getShortName()
     {
-        return $this->container['id'];
+        return $this->container['short_name'];
     }
 
     /**
-     * Sets id
+     * Sets short_name
      *
-     * @param string $id Идентификатор черновика
+     * @param string $short_name Краткое название организации
      *
      * @return self
      */
-    public function setId($id)
+    public function setShortName($short_name)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($short_name)) {
+            throw new \InvalidArgumentException('non-nullable short_name cannot be null');
         }
-        $this->container['id'] = $id;
+        $this->container['short_name'] = $short_name;
 
         return $this;
     }
 
     /**
-     * Gets create_date
+     * Gets legal_address
      *
-     * @return \DateTime
+     * @return string
      */
-    public function getCreateDate()
+    public function getLegalAddress()
     {
-        return $this->container['create_date'];
+        return $this->container['legal_address'];
     }
 
     /**
-     * Sets create_date
+     * Sets legal_address
      *
-     * @param \DateTime $create_date Дата создания черновика
+     * @param string $legal_address Юридический адрес компании
      *
      * @return self
      */
-    public function setCreateDate($create_date)
+    public function setLegalAddress($legal_address)
     {
-        if (is_null($create_date)) {
-            throw new \InvalidArgumentException('non-nullable create_date cannot be null');
+        if (is_null($legal_address)) {
+            throw new \InvalidArgumentException('non-nullable legal_address cannot be null');
         }
-        $this->container['create_date'] = $create_date;
+        $this->container['legal_address'] = $legal_address;
 
         return $this;
     }
 
     /**
-     * Gets access
+     * Gets phones
      *
-     * @return \MagDv\Cargomart\Dto\DraftDocumentAccess|null
+     * @return string[]
      */
-    public function getAccess()
+    public function getPhones()
     {
-        return $this->container['access'];
+        return $this->container['phones'];
     }
 
     /**
-     * Sets access
+     * Sets phones
      *
-     * @param \MagDv\Cargomart\Dto\DraftDocumentAccess|null $access access
+     * @param string[] $phones Номера телефонов кураторов заявки + номер телефона из карточки организации (при наличии)
      *
      * @return self
      */
-    public function setAccess($access)
+    public function setPhones($phones)
     {
-        if (is_null($access)) {
-            throw new \InvalidArgumentException('non-nullable access cannot be null');
+        if (is_null($phones)) {
+            throw new \InvalidArgumentException('non-nullable phones cannot be null');
         }
-        $this->container['access'] = $access;
+
+        if ((count($phones) > 20)) {
+            throw new \InvalidArgumentException('invalid value for $phones when calling ClaimParticipant., number of items must be less than or equal to 20.');
+        }
+        if ((count($phones) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $phones when calling ClaimParticipant., number of items must be greater than or equal to 1.');
+        }
+        $this->container['phones'] = $phones;
 
         return $this;
     }

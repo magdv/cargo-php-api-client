@@ -1261,6 +1261,337 @@ class OrderPortApi
     }
 
     /**
+     * Operation apiV2OrderExcelPost
+     *
+     * Отправка запроса на экспорт.
+     *
+     * @param  \MagDv\Cargomart\Dto\ApiV2OrderExcelPostRequest $api_v2_order_excel_post_request api_v2_order_excel_post_request (required)
+     * @param  int $x_modify_from_event Идентификатор события для получения заказов, которые изменились после этого события (optional)
+     *
+     * @throws \MagDv\Cargomart\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse
+     */
+    public function apiV2OrderExcelPost($api_v2_order_excel_post_request, $x_modify_from_event = null)
+    {
+        list($response) = $this->apiV2OrderExcelPostWithHttpInfo($api_v2_order_excel_post_request, $x_modify_from_event);
+        return $response;
+    }
+
+    /**
+     * Operation apiV2OrderExcelPostWithHttpInfo
+     *
+     * Отправка запроса на экспорт.
+     *
+     * @param  \MagDv\Cargomart\Dto\ApiV2OrderExcelPostRequest $api_v2_order_excel_post_request (required)
+     * @param  int $x_modify_from_event Идентификатор события для получения заказов, которые изменились после этого события (optional)
+     *
+     * @throws \MagDv\Cargomart\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function apiV2OrderExcelPostWithHttpInfo($api_v2_order_excel_post_request, $x_modify_from_event = null)
+    {
+        $request = $this->apiV2OrderExcelPostRequest($api_v2_order_excel_post_request, $x_modify_from_event);
+
+        try {
+            try {
+                $response = $this->httpClient->sendRequest($request);
+            } catch (HttpException $e) {
+                $response = $e->getResponse();
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $response->getStatusCode(),
+                        (string) $request->getUri()
+                    ),
+                    $request,
+                    $response,
+                    $e
+                );
+            } catch (ClientExceptionInterface $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $request,
+                    null,
+                    $e
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            switch($statusCode) {
+                case 200:
+                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 403:
+                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation apiV2OrderExcelPostAsync
+     *
+     * Отправка запроса на экспорт.
+     *
+     * @param  \MagDv\Cargomart\Dto\ApiV2OrderExcelPostRequest $api_v2_order_excel_post_request (required)
+     * @param  int $x_modify_from_event Идентификатор события для получения заказов, которые изменились после этого события (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return Promise
+     */
+    public function apiV2OrderExcelPostAsync($api_v2_order_excel_post_request, $x_modify_from_event = null)
+    {
+        return $this->apiV2OrderExcelPostAsyncWithHttpInfo($api_v2_order_excel_post_request, $x_modify_from_event)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation apiV2OrderExcelPostAsyncWithHttpInfo
+     *
+     * Отправка запроса на экспорт.
+     *
+     * @param  \MagDv\Cargomart\Dto\ApiV2OrderExcelPostRequest $api_v2_order_excel_post_request (required)
+     * @param  int $x_modify_from_event Идентификатор события для получения заказов, которые изменились после этого события (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return Promise
+     */
+    public function apiV2OrderExcelPostAsyncWithHttpInfo($api_v2_order_excel_post_request, $x_modify_from_event = null)
+    {
+        $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+        $request = $this->apiV2OrderExcelPostRequest($api_v2_order_excel_post_request, $x_modify_from_event);
+
+        return $this->httpAsyncClient->sendAsyncRequest($request)
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function (HttpException $exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $exception->getRequest(),
+                        $exception->getResponse(),
+                        $exception
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'apiV2OrderExcelPost'
+     *
+     * @param  \MagDv\Cargomart\Dto\ApiV2OrderExcelPostRequest $api_v2_order_excel_post_request (required)
+     * @param  int $x_modify_from_event Идентификатор события для получения заказов, которые изменились после этого события (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return RequestInterface
+     */
+    public function apiV2OrderExcelPostRequest($api_v2_order_excel_post_request, $x_modify_from_event = null)
+    {
+        // verify the required parameter 'api_v2_order_excel_post_request' is set
+        if ($api_v2_order_excel_post_request === null || (is_array($api_v2_order_excel_post_request) && count($api_v2_order_excel_post_request) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $api_v2_order_excel_post_request when calling apiV2OrderExcelPost'
+            );
+        }
+
+        $resourcePath = '/api/v2/order/excel';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = null;
+        $multipart = false;
+
+
+        // header params
+        if ($x_modify_from_event !== null) {
+            $headerParams['X-Modify-From-Event'] = ObjectSerializer::toHeaderValue($x_modify_from_event);
+        }
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json'],
+            'application/json',
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($api_v2_order_excel_post_request)) {
+            if ($this->headerSelector->isJsonMime($headers['Content-Type'])) {
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($api_v2_order_excel_post_request));
+            } else {
+                $httpBody = $api_v2_order_excel_post_request;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($this->headerSelector->isJsonMime($headers['Content-Type'])) {
+                $httpBody = json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+
+        $uri = $this->createUri($operationHost, $resourcePath, $queryParams);
+
+        return $this->createRequest('POST', $uri, $headers, $httpBody);
+    }
+
+    /**
      * Operation apiV2OrderImportGet
      *
      * Получение шаблона.
