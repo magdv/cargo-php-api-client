@@ -85,9 +85,21 @@ class ExpeditorCarrierContractUpdatesApiTest extends TestCase
     }
 
     /**
+     * Test case for expeditorCarrierContractUpdatesAdditionalAgreementPreview
+     *
+     * Предпросмотр файла доп. соглашения.
+     *
+     */
+    public function testExpeditorCarrierContractUpdatesAdditionalAgreementPreview()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for expeditorCarrierContractUpdatesSendSms
      *
-     * Подтверждение подписанта через sms.
+     * Отправка sms для подтверждения подписанта.
      *
      */
     public function testExpeditorCarrierContractUpdatesSendSms()

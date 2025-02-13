@@ -5,7 +5,8 @@ All URIs are relative to https://cargomart.ru.
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createExpeditorContractUpdates()**](ExpeditorCarrierContractUpdatesApi.md#createExpeditorContractUpdates) | **POST** /api/v2/expeditor-contract-updates | Запуск процесса подписания доп. соглашения договора
-[**expeditorCarrierContractUpdatesSendSms()**](ExpeditorCarrierContractUpdatesApi.md#expeditorCarrierContractUpdatesSendSms) | **POST** /api/v2/expeditor-contract-updates/signer/send-code | Подтверждение подписанта через sms
+[**expeditorCarrierContractUpdatesAdditionalAgreementPreview()**](ExpeditorCarrierContractUpdatesApi.md#expeditorCarrierContractUpdatesAdditionalAgreementPreview) | **GET** /api/v2/expeditor-contract-updates/additional-agreement-preview | Предпросмотр файла доп. соглашения
+[**expeditorCarrierContractUpdatesSendSms()**](ExpeditorCarrierContractUpdatesApi.md#expeditorCarrierContractUpdatesSendSms) | **POST** /api/v2/expeditor-contract-updates/signer/send-code | Отправка sms для подтверждения подписанта
 [**expeditorCarrierContractUpdatesSign()**](ExpeditorCarrierContractUpdatesApi.md#expeditorCarrierContractUpdatesSign) | **POST** /api/v2/expeditor-contract-updates/sign | Подписание доп. соглашения
 [**getExpeditorContractUpdates()**](ExpeditorCarrierContractUpdatesApi.md#getExpeditorContractUpdates) | **GET** /api/v2/expeditor-contract-updates | Просмотр текущего состояние обновления договора
 [**updateExpeditorCarrierContractCancel()**](ExpeditorCarrierContractUpdatesApi.md#updateExpeditorCarrierContractCancel) | **POST** /api/v2/expeditor-contract-updates/cancel | Отмена обновления договора
@@ -75,13 +76,75 @@ This endpoint does not need any parameter.
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `expeditorCarrierContractUpdatesAdditionalAgreementPreview()`
+
+```php
+expeditorCarrierContractUpdatesAdditionalAgreementPreview(): \SplFileObject
+```
+
+Предпросмотр файла доп. соглашения
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: CookieTokenAuth
+$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+
+// Configure API key authorization: HeaderAuthorizationAuth
+$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+
+$apiInstance = new MagDv\Cargomart\Api\ExpeditorCarrierContractUpdatesApi(
+    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
+    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $result = $apiInstance->expeditorCarrierContractUpdatesAdditionalAgreementPreview();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ExpeditorCarrierContractUpdatesApi->expeditorCarrierContractUpdatesAdditionalAgreementPreview: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+**\SplFileObject**
+
+### Authorization
+
+[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/pdf`, `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `expeditorCarrierContractUpdatesSendSms()`
 
 ```php
-expeditorCarrierContractUpdatesSendSms(): \MagDv\Cargomart\Dto\BaseMessageResponse
+expeditorCarrierContractUpdatesSendSms(): \MagDv\Cargomart\Dto\ExpeditorContractUpdatesSmsResponse
 ```
 
-Подтверждение подписанта через sms
+Отправка sms для подтверждения подписанта
 
 ### Example
 
@@ -122,7 +185,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\MagDv\Cargomart\Dto\BaseMessageResponse**](../Model/BaseMessageResponse.md)
+[**\MagDv\Cargomart\Dto\ExpeditorContractUpdatesSmsResponse**](../Model/ExpeditorContractUpdatesSmsResponse.md)
 
 ### Authorization
 

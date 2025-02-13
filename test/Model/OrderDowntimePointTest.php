@@ -90,6 +90,51 @@ class OrderDowntimePointTest extends TestCase
     }
 
     /**
+     * Test attribute "planned_arrival"
+     */
+    public function testPropertyPlannedArrival()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "planned_departure"
+     */
+    public function testPropertyPlannedDeparture()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "actual_arrival"
+     */
+    public function testPropertyActualArrival()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "actual_departure"
+     */
+    public function testPropertyActualDeparture()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "reason"
+     */
+    public function testPropertyReason()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "downtime"
      */
     public function testPropertyDowntime()

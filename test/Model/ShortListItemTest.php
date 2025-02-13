@@ -340,4 +340,13 @@ class ShortListItemTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "winner_date"
+     */
+    public function testPropertyWinnerDate()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

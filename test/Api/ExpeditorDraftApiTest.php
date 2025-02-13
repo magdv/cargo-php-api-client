@@ -169,18 +169,6 @@ class ExpeditorDraftApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderDraftExpeditorRecommendedPriceGet
-     *
-     * Получить рекомендованную цену по маршруту.
-     *
-     */
-    public function testApiV2OrderDraftExpeditorRecommendedPriceGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderDraftExpeditorStepBidGet
      *
      * Получить шаг ставки по цене.

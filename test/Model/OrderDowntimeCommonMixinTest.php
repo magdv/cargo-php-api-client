@@ -90,6 +90,15 @@ class OrderDowntimeCommonMixinTest extends TestCase
     }
 
     /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "points"
      */
     public function testPropertyPoints()
@@ -99,18 +108,18 @@ class OrderDowntimeCommonMixinTest extends TestCase
     }
 
     /**
-     * Test attribute "downtime"
+     * Test attribute "proof"
      */
-    public function testPropertyDowntime()
+    public function testPropertyProof()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "downtime"
      */
-    public function testPropertyType()
+    public function testPropertyDowntime()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

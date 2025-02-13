@@ -97,6 +97,18 @@ class OrderPortApiTest extends TestCase
     }
 
     /**
+     * Test case for apiV2OrderExcelPost
+     *
+     * Отправка запроса на экспорт..
+     *
+     */
+    public function testApiV2OrderExcelPost()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for apiV2OrderImportGet
      *
      * Получение шаблона..

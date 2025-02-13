@@ -178,4 +178,22 @@ class CompanyShortTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "legal_address"
+     */
+    public function testPropertyLegalAddress()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "phone"
+     */
+    public function testPropertyPhone()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

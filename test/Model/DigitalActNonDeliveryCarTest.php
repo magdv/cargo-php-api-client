@@ -108,15 +108,6 @@ class DigitalActNonDeliveryCarTest extends TestCase
     }
 
     /**
-     * Test attribute "create_date"
-     */
-    public function testPropertyCreateDate()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "order_id"
      */
     public function testPropertyOrderId()

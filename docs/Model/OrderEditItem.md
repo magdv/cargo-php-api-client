@@ -67,6 +67,7 @@ Name | Type | Description | Notes
 **general_partner_contract_id** | **string** | Идентификатор условий договора с ГП | [optional]
 **general_partner_contact** | **int[]** | Список идентифкаторов кураторов от ГП | [optional]
 **company_branch_id** | **int** | Идентификатор дочерней компании | [optional]
+**start_perform_date** | **\DateTime** | Дата начала погрузки | [optional]
 **is_proxy_date_end** | **bool** | Наступила дата, когда нельзя загрузить доверенность | [optional] [default to false]
 **car_request** | [**\MagDv\Cargomart\Dto\OrderOfferCarRequest**](OrderOfferCarRequest.md) | Запрос количества машин | [optional]
 **recommended_price** | **string** | Рекомендованная цена для этого заказа | [optional]

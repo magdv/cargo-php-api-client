@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**approveOrderDowntimeClaim()**](OrderDowntimeClaimApi.md#approveOrderDowntimeClaim) | **POST** /api/v2/order/{orderId}/expeditor-downtime-claim-approve | Утверждение Заказчиком претензии Экспедитора о простое
 [**cancelOrderDowntimeClaim()**](OrderDowntimeClaimApi.md#cancelOrderDowntimeClaim) | **POST** /api/v2/order/{orderId}/downtime-claim-cancel | Отмена Перевозчиком претензии о простое
-[**createOrderDowntimeClaim()**](OrderDowntimeClaimApi.md#createOrderDowntimeClaim) | **POST** /api/v2/order/{orderId}/downtime-claim | Создание претензии о простое
 [**createOrderDowntimeClaimCalculate()**](OrderDowntimeClaimApi.md#createOrderDowntimeClaimCalculate) | **POST** /api/v2/order/{orderId}/downtime-claim-calculate | Расчёт претензии о простое
 [**createOrderDowntimeClaimProof()**](OrderDowntimeClaimApi.md#createOrderDowntimeClaimProof) | **POST** /api/v2/order/{orderId}/downtime-claim-proof | Загрузка подтверждений простоя для претензии о простое
 [**getOrderClaim()**](OrderDowntimeClaimApi.md#getOrderClaim) | **GET** /api/v2/order/{orderId}/claim | Получение списка требований по заказу
@@ -130,66 +129,10 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `createOrderDowntimeClaim()`
-
-```php
-createOrderDowntimeClaim($order_id, $order_downtime_claim_create_request): \MagDv\Cargomart\Dto\OrderDowntimeClaimResponse
-```
-
-Создание претензии о простое
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new MagDv\Cargomart\Api\OrderDowntimeClaimApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client()
-);
-$order_id = 'order_id_example'; // string | Идентификатор заявки.
-$order_downtime_claim_create_request = new \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest(); // \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest
-
-try {
-    $result = $apiInstance->createOrderDowntimeClaim($order_id, $order_downtime_claim_create_request);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderDowntimeClaimApi->createOrderDowntimeClaim: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **order_id** | **string**| Идентификатор заявки. |
- **order_downtime_claim_create_request** | [**\MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest**](../Model/OrderDowntimeClaimCreateRequest.md)|  | [optional]
-
-### Return type
-
-[**\MagDv\Cargomart\Dto\OrderDowntimeClaimResponse**](../Model/OrderDowntimeClaimResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
 ## `createOrderDowntimeClaimCalculate()`
 
 ```php
-createOrderDowntimeClaimCalculate($order_id, $order_downtime_claim_create_request): \MagDv\Cargomart\Dto\OrderDowntimeResponse
+createOrderDowntimeClaimCalculate($order_id, $order_downtime_calculate_request): \MagDv\Cargomart\Dto\OrderDowntimeResponse
 ```
 
 Расчёт претензии о простое
@@ -208,10 +151,10 @@ $apiInstance = new MagDv\Cargomart\Api\OrderDowntimeClaimApi(
     new GuzzleHttp\Client()
 );
 $order_id = 'order_id_example'; // string | Идентификатор заявки.
-$order_downtime_claim_create_request = new \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest(); // \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest
+$order_downtime_calculate_request = new \MagDv\Cargomart\Dto\OrderDowntimeCalculateRequest(); // \MagDv\Cargomart\Dto\OrderDowntimeCalculateRequest
 
 try {
-    $result = $apiInstance->createOrderDowntimeClaimCalculate($order_id, $order_downtime_claim_create_request);
+    $result = $apiInstance->createOrderDowntimeClaimCalculate($order_id, $order_downtime_calculate_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrderDowntimeClaimApi->createOrderDowntimeClaimCalculate: ', $e->getMessage(), PHP_EOL;
@@ -223,7 +166,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_id** | **string**| Идентификатор заявки. |
- **order_downtime_claim_create_request** | [**\MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequest**](../Model/OrderDowntimeClaimCreateRequest.md)|  | [optional]
+ **order_downtime_calculate_request** | [**\MagDv\Cargomart\Dto\OrderDowntimeCalculateRequest**](../Model/OrderDowntimeCalculateRequest.md)|  | [optional]
 
 ### Return type
 

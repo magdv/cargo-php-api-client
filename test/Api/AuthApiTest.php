@@ -28,6 +28,9 @@
 
 namespace MagDv\Cargomart\Test\Api;
 
+use \MagDv\Cargomart\Configuration;
+use \MagDv\Cargomart\ApiException;
+use \MagDv\Cargomart\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**

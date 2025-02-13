@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiV2OrderExcelGet()**](OrderPortApi.md#apiV2OrderExcelGet) | **GET** /api/v2/order/excel | Получение ссылки на excel файл отчета.
 [**apiV2OrderExcelOfferReportGet()**](OrderPortApi.md#apiV2OrderExcelOfferReportGet) | **GET** /api/v2/order/excel/offer-report | выгрузка xlsx с отчетом по запросам цен.
+[**apiV2OrderExcelPost()**](OrderPortApi.md#apiV2OrderExcelPost) | **POST** /api/v2/order/excel | Отправка запроса на экспорт.
 [**apiV2OrderImportGet()**](OrderPortApi.md#apiV2OrderImportGet) | **GET** /api/v2/order/import | Получение шаблона.
 [**apiV2OrderImportPost()**](OrderPortApi.md#apiV2OrderImportPost) | **POST** /api/v2/order/import | Импорт заказа из xlsx.
 [**apiV2OrderOrderIdOfferExcelGet()**](OrderPortApi.md#apiV2OrderOrderIdOfferExcelGet) | **GET** /api/v2/order/{orderId}/offer/excel | выгрузка xlsx файла со списком предложений.
@@ -206,6 +207,73 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: Not defined
 - **Accept**: `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `apiV2OrderExcelPost()`
+
+```php
+apiV2OrderExcelPost($api_v2_order_excel_post_request, $x_modify_from_event): \MagDv\Cargomart\Dto\EmptyDataResponse
+```
+
+Отправка запроса на экспорт.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: CookieTokenAuth
+$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
+
+// Configure API key authorization: HeaderAuthorizationAuth
+$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+
+$apiInstance = new MagDv\Cargomart\Api\OrderPortApi(
+    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
+    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
+    new GuzzleHttp\Client(),
+    $config
+);
+$api_v2_order_excel_post_request = new \MagDv\Cargomart\Dto\ApiV2OrderExcelPostRequest(); // \MagDv\Cargomart\Dto\ApiV2OrderExcelPostRequest
+$x_modify_from_event = 56; // int | Идентификатор события для получения заказов, которые изменились после этого события
+
+try {
+    $result = $apiInstance->apiV2OrderExcelPost($api_v2_order_excel_post_request, $x_modify_from_event);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrderPortApi->apiV2OrderExcelPost: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **api_v2_order_excel_post_request** | [**\MagDv\Cargomart\Dto\ApiV2OrderExcelPostRequest**](../Model/ApiV2OrderExcelPostRequest.md)|  |
+ **x_modify_from_event** | **int**| Идентификатор события для получения заказов, которые изменились после этого события | [optional]
+
+### Return type
+
+[**\MagDv\Cargomart\Dto\EmptyDataResponse**](../Model/EmptyDataResponse.md)
+
+### Authorization
+
+[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

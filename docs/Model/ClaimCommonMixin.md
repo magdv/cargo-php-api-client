@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **number** | **string** | Номер требования |
 **date** | **\DateTime** | Дата создания требования (в часовом поясе создателя требования) |
 **serial_id** | **int** | Порядковый номер заказа | [optional]
-**order_id** | **string** | Индентификатор заказа |
+**order_id** | **string** | UUID или хэш объекта |
 **consignor** | [**\MagDv\Cargomart\Dto\CompanyShort**](CompanyShort.md) | Заказчик | [optional]
 **carrier** | [**\MagDv\Cargomart\Dto\CompanyShort**](CompanyShort.md) | Перевозчик | [optional]
 **penalty_sum** | [**\MagDv\Cargomart\Dto\PriceValue**](PriceValue.md) | Рассчитанная сумма штрафа | [optional]

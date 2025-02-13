@@ -11,10 +11,10 @@ Name | Type | Description | Notes
 **worker** | [**\MagDv\Cargomart\Dto\IdIntName**](IdIntName.md) | Менеджер (Id - ФИО) | [optional]
 **type** | [**\MagDv\Cargomart\Dto\ExpeditorTaskTypeEnum**](ExpeditorTaskTypeEnum.md) | Тип задачи |
 **status** | [**\MagDv\Cargomart\Dto\ExpeditorTaskStatusEnum**](ExpeditorTaskStatusEnum.md) | Статус задачи |
-**order_id** | **string** | Заказ преевозчика |
+**order_id** | **string** | Заказ перевозчика |
 **serial_id** | **int** | Порядковый номер заказа |
-**driver** | [**\MagDv\Cargomart\Dto\OrderDriver**](.md) | Информация о водителе | [optional]
-**route_point** | [**\MagDv\Cargomart\Dto\OrderRoutePoint**](.md) | Маршрутная точка заказа |
+**driver** | [**\MagDv\Cargomart\Dto\OrderDriver**](OrderDriver.md) | Информация о водителе | [optional]
+**route_point** | [**\MagDv\Cargomart\Dto\OrderRoutePoint**](OrderRoutePoint.md) | Маршрутная точка заказа |
 **chat_id** | **string** | Идентификатор чат-лога | [optional]
 **access** | [**\MagDv\Cargomart\Dto\ExpeditorTaskAccess**](ExpeditorTaskAccess.md) | Описание доступных действий | [optional]
 

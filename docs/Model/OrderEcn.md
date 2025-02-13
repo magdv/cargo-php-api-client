@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **point_index_from** | **int** | Индекс пункта погрузки из маршрута |
 **point_index_to** | **int** | Индекс пункта выгрузки из маршрута |
 **status** | [**\MagDv\Cargomart\Dto\EcnStatus**](EcnStatus.md) |  |
-**edm_operator_status** | [**\MagDv\Cargomart\Dto\OrderEcnItemEdmOperatorStatus**](OrderEcnItemEdmOperatorStatus.md) |  | [optional]
+**edm_operator_status** | [**\MagDv\Cargomart\Dto\EdmOperatorStatus**](EdmOperatorStatus.md) |  | [optional]
 **status_group** | [**\MagDv\Cargomart\Dto\EcnStatusGroup**](EcnStatusGroup.md) |  | [optional]
 **update_date** | **\DateTime** | Дата изменения | [optional]
 **additional_data** | [**\MagDv\Cargomart\Dto\EcnAdditionalData**](EcnAdditionalData.md) | Данные для генерации накладной |

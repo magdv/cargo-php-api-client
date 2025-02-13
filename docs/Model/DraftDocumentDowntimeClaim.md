@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **string** |  |
-**data** | [**\MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequestV2**](OrderDowntimeClaimCreateRequestV2.md) |  |
+**data** | [**\MagDv\Cargomart\Dto\OrderDowntimeCommonMixin**](OrderDowntimeCommonMixin.md) |  |
 **id** | **string** | Идентификатор черновика |
 **create_date** | **\DateTime** | Дата создания черновика |
 **access** | [**\MagDv\Cargomart\Dto\DraftDocumentAccess**](DraftDocumentAccess.md) |  | [optional]

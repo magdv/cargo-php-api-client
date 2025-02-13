@@ -108,9 +108,9 @@ class ExpeditorContractUpdatesProxyRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "file_id"
+     * Test attribute "file_ids"
      */
-    public function testPropertyFileId()
+    public function testPropertyFileIds()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
