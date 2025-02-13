@@ -124,4 +124,13 @@ class ExpeditorContractUpdatesSignerTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "phone"
+     */
+    public function testPropertyPhone()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

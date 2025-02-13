@@ -12,7 +12,6 @@ Method | HTTP request | Description
 [**apiV2OrderDraftExpeditorPost()**](ExpeditorDraftApi.md#apiV2OrderDraftExpeditorPost) | **POST** /api/v2/order-draft-expeditor | Создать черновик заказа
 [**apiV2OrderDraftExpeditorPriceGet()**](ExpeditorDraftApi.md#apiV2OrderDraftExpeditorPriceGet) | **GET** /api/v2/order-draft-expeditor/price | Получить цену по маршруту
 [**apiV2OrderDraftExpeditorPriceV2Get()**](ExpeditorDraftApi.md#apiV2OrderDraftExpeditorPriceV2Get) | **GET** /api/v2/order-draft-expeditor/price-v2 | Получить цену по маршруту
-[**apiV2OrderDraftExpeditorRecommendedPriceGet()**](ExpeditorDraftApi.md#apiV2OrderDraftExpeditorRecommendedPriceGet) | **GET** /api/v2/order-draft-expeditor/recommended-price | Получить рекомендованную цену по маршруту
 [**apiV2OrderDraftExpeditorStepBidGet()**](ExpeditorDraftApi.md#apiV2OrderDraftExpeditorStepBidGet) | **GET** /api/v2/order-draft-expeditor/step-bid | Получить шаг ставки по цене
 [**apiV2OrderDraftExpeditorValidatePost()**](ExpeditorDraftApi.md#apiV2OrderDraftExpeditorValidatePost) | **POST** /api/v2/order-draft-expeditor/validate | Бизнес валидация черновика.
 
@@ -588,81 +587,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\MagDv\Cargomart\Dto\OrderDraftExpeditorPriceV2Response**](../Model/OrderDraftExpeditorPriceV2Response.md)
-
-### Authorization
-
-[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `apiV2OrderDraftExpeditorRecommendedPriceGet()`
-
-```php
-apiV2OrderDraftExpeditorRecommendedPriceGet($company_branch_id, $truck_type_id, $departure_code, $destination_code, $order_type): \MagDv\Cargomart\Dto\OrderDraftExpeditorRecommendedPriceResponse
-```
-
-Получить рекомендованную цену по маршруту
-
-Получить рекомендованную цену по маршруту
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: CookieTokenAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-
-// Configure API key authorization: HeaderAuthorizationAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new MagDv\Cargomart\Api\ExpeditorDraftApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client(),
-    $config
-);
-$company_branch_id = 56; // int | Идентификатор дочерней компании заказчика
-$truck_type_id = 56; // int | Тип грузовика
-$departure_code = 'departure_code_example'; // string | Код города отправки
-$destination_code = 'destination_code_example'; // string | Код города назначения
-$order_type = 'order_type_example'; // string | Тип заказа
-
-try {
-    $result = $apiInstance->apiV2OrderDraftExpeditorRecommendedPriceGet($company_branch_id, $truck_type_id, $departure_code, $destination_code, $order_type);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ExpeditorDraftApi->apiV2OrderDraftExpeditorRecommendedPriceGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **company_branch_id** | **int**| Идентификатор дочерней компании заказчика |
- **truck_type_id** | **int**| Тип грузовика |
- **departure_code** | **string**| Код города отправки |
- **destination_code** | **string**| Код города назначения |
- **order_type** | **string**| Тип заказа |
-
-### Return type
-
-[**\MagDv\Cargomart\Dto\OrderDraftExpeditorRecommendedPriceResponse**](../Model/OrderDraftExpeditorRecommendedPriceResponse.md)
 
 ### Authorization
 

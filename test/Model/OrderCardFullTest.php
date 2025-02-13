@@ -1143,6 +1143,15 @@ class OrderCardFullTest extends TestCase
     }
 
     /**
+     * Test attribute "start_perform_date"
+     */
+    public function testPropertyStartPerformDate()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "carrier_package_status"
      */
     public function testPropertyCarrierPackageStatus()

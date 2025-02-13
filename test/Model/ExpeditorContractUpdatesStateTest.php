@@ -90,6 +90,15 @@ class ExpeditorContractUpdatesStateTest extends TestCase
     }
 
     /**
+     * Test attribute "contract"
+     */
+    public function testPropertyContract()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "status_updated_at"
      */
     public function testPropertyStatusUpdatedAt()
@@ -138,6 +147,15 @@ class ExpeditorContractUpdatesStateTest extends TestCase
      * Test attribute "proxy"
      */
     public function testPropertyProxy()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "refuse_comment"
+     */
+    public function testPropertyRefuseComment()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

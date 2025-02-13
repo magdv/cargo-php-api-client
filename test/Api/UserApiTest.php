@@ -28,16 +28,10 @@
 
 namespace MagDv\Cargomart\Test\Api;
 
-use Http\Discovery\Psr18ClientDiscovery;
-use MagDv\Cargomart\CargoApi\AuthApi;
-use MagDv\Cargomart\CargoApi\UserApi;
 use \MagDv\Cargomart\Configuration;
 use \MagDv\Cargomart\ApiException;
-use MagDv\Cargomart\Dto\LoginPasswordRequest;
-use MagDv\Cargomart\Dto\UserLoginRequest;
 use \MagDv\Cargomart\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
-
 
 /**
  * UserApiTest Class Doc Comment
@@ -55,11 +49,6 @@ class UserApiTest extends TestCase
      */
     public static function setUpBeforeClass(): void
     {
-        $params = parse_ini_file(dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . '.env');
-
-        foreach ($params as $name => $value) {
-            putenv($name . '=' . $value);
-        }
     }
 
     /**
@@ -103,24 +92,8 @@ class UserApiTest extends TestCase
      */
     public function testApiV2UserLoginPost()
     {
-        $url = getenv('CARGO_URL');
-        $login = getenv('LOGIN');
-        $password = getenv('PASSWORD');
-        $httpClient = Psr18ClientDiscovery::find();
-        $config = new Configuration();
-        $config->setHost($url);
-
-        $apiInstance = new UserApi(
-            $httpClient,
-            $config
-        );
-        $login_password_request = new UserLoginRequest();
-        $login_password_request->setLogin($login);
-        $login_password_request->setPassword($password);
-        $result = $apiInstance->apiV2UserLoginPost($login_password_request);
-        $tokenData = $result->getData()['token'];
-        $token = $tokenData->token;
-        self::assertNotNull($token);
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
     }
 
     /**

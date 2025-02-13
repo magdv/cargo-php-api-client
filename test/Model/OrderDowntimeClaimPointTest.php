@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * OrderDowntimeClaimPointTest Class Doc Comment
  *
  * @category    Class
- * @description Объект простоя по конкретному пункту погрузки/выгрузки заявки
+ * @description Претензия о простое по конкретному пункту погрузки/выгрузки заявки
  * @package     MagDv\Cargomart
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -75,15 +75,6 @@ class OrderDowntimeClaimPointTest extends TestCase
      * Test "OrderDowntimeClaimPoint"
      */
     public function testOrderDowntimeClaimPoint()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "downtime"
-     */
-    public function testPropertyDowntime()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

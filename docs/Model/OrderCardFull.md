@@ -122,6 +122,7 @@ Name | Type | Description | Notes
 **paid_invoice_date** | **\DateTime** | Дата оплаченного счета от ГП | [optional]
 **paid_expeditor_payment_date** | **\DateTime** | Дата оплаченного счета от экспедитора | [optional]
 **carrier_package_id** | **string** | Идентификатор пакета документов перевозчика | [optional]
+**start_perform_date** | **\DateTime** | Дата начала погрузки | [optional]
 **carrier_package_status** | [**\MagDv\Cargomart\Dto\OrderDocumentPackageStatus**](OrderDocumentPackageStatus.md) |  | [optional]
 **carrier_payment_type** | [**\MagDv\Cargomart\Dto\OrderCarrierPaymentType**](OrderCarrierPaymentType.md) |  | [optional]
 **banking_details** | [**\MagDv\Cargomart\Dto\OrderBanking**](OrderBanking.md) | Банковские реквизиты | [optional]

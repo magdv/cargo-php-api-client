@@ -6,8 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Идентификатор сущности акта |
 **status** | [**\MagDv\Cargomart\Dto\OrderActNonDeliveryCarStatusEnum**](OrderActNonDeliveryCarStatusEnum.md) |  |
-**signed_document** | [**\MagDv\Cargomart\Dto\SignedDocument**](SignedDocument.md) |  | [optional]
-**create_date** | **\DateTime** | Дата и время создания акта |
+**signed_document** | [**\MagDv\Cargomart\Dto\SignedDocument**](SignedDocument.md) |  |
 **order_id** | **string** | Идентификатор заказа |
 **settlement_name** | **string** | Наименование населённого пункта составления акта |
 **shipment_failure_type** | [**\MagDv\Cargomart\Dto\OrderActNonDeliveryCarTypeEnum**](OrderActNonDeliveryCarTypeEnum.md) |  |

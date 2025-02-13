@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 ## `apiV2OrderOrderIdContactDelete()`
 
 ```php
-apiV2OrderOrderIdContactDelete($order_id, $id_list_request)
+apiV2OrderOrderIdContactDelete($order_id, $id_list_request): \MagDv\Cargomart\Dto\OrderContactListResponse
 ```
 
 Список контактов на удаление из заказа.
@@ -329,7 +329,8 @@ $order_id = 'order_id_example'; // string | Идентификатор шабл�
 $id_list_request = new \MagDv\Cargomart\Dto\IdListRequest(); // \MagDv\Cargomart\Dto\IdListRequest
 
 try {
-    $apiInstance->apiV2OrderOrderIdContactDelete($order_id, $id_list_request);
+    $result = $apiInstance->apiV2OrderOrderIdContactDelete($order_id, $id_list_request);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrderEditApi->apiV2OrderOrderIdContactDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -344,7 +345,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\MagDv\Cargomart\Dto\OrderContactListResponse**](../Model/OrderContactListResponse.md)
 
 ### Authorization
 
@@ -353,7 +354,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -427,7 +428,7 @@ Name | Type | Description  | Notes
 ## `apiV2OrderOrderIdContactPatch()`
 
 ```php
-apiV2OrderOrderIdContactPatch($order_id, $id_list_request)
+apiV2OrderOrderIdContactPatch($order_id, $id_list_request): \MagDv\Cargomart\Dto\OrderContactListResponse
 ```
 
 Отправить список контактов для добавления.
@@ -460,7 +461,8 @@ $order_id = 'order_id_example'; // string | Идентификатор шабл�
 $id_list_request = new \MagDv\Cargomart\Dto\IdListRequest(); // \MagDv\Cargomart\Dto\IdListRequest
 
 try {
-    $apiInstance->apiV2OrderOrderIdContactPatch($order_id, $id_list_request);
+    $result = $apiInstance->apiV2OrderOrderIdContactPatch($order_id, $id_list_request);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrderEditApi->apiV2OrderOrderIdContactPatch: ', $e->getMessage(), PHP_EOL;
 }
@@ -475,7 +477,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\MagDv\Cargomart\Dto\OrderContactListResponse**](../Model/OrderContactListResponse.md)
 
 ### Authorization
 
@@ -484,7 +486,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

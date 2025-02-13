@@ -97,18 +97,6 @@ class OrderDowntimeClaimApiTest extends TestCase
     }
 
     /**
-     * Test case for createOrderDowntimeClaim
-     *
-     * Создание претензии о простое.
-     *
-     */
-    public function testCreateOrderDowntimeClaim()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for createOrderDowntimeClaimCalculate
      *
      * Расчёт претензии о простое.

@@ -15,5 +15,7 @@ Name | Type | Description | Notes
 **settings** | [**\MagDv\Cargomart\Dto\Settings**](Settings.md) | Настройки компании | [optional]
 **status_id** | [**\MagDv\Cargomart\Dto\CompanyStatusEnum**](CompanyStatusEnum.md) |  | [optional]
 **session_values** | [**\MagDv\Cargomart\Dto\CompanyShortSessionValues**](CompanyShortSessionValues.md) |  | [optional]
+**legal_address** | **string** | Юридический адрес | [optional]
+**phone** | **string** | Телефон | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

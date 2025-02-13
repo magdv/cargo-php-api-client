@@ -648,6 +648,15 @@ class OrderEditItemTest extends TestCase
     }
 
     /**
+     * Test attribute "start_perform_date"
+     */
+    public function testPropertyStartPerformDate()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "is_proxy_date_end"
      */
     public function testPropertyIsProxyDateEnd()

@@ -83,16 +83,4 @@ class ExpeditorCarrierContractApiTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for expeditorCarrierContractUpdatesAdditionalAgreementPreview
-     *
-     * Предпросмотр файла доп. соглашения.
-     *
-     */
-    public function testExpeditorCarrierContractUpdatesAdditionalAgreementPreview()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
 }

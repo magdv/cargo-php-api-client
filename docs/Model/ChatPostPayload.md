@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **date** | **\DateTime** | Дата оплаты |
 **value** | **string** | Сумма оплаты |
 **currency_code** | **string** | Валюта |
-**payments** | [**\MagDv\Cargomart\Dto\ChatPostPayloadInvoicePaymentsInner[]**](ChatPostPayloadInvoicePaymentsInner.md) |  | [optional]
+**payments** | [**\MagDv\Cargomart\Dto\ChatPostPayloadOrderExpeditorPaymentCarrierUpdatePaymentsInner[]**](ChatPostPayloadOrderExpeditorPaymentCarrierUpdatePaymentsInner.md) |  | [optional]
 **cert_id** | **string** | Идентификатор сертификата |
 **serial_id** | **int** | Порядковый номер заказа | [optional]
 **message** | **string** | Сообщение об изменении |

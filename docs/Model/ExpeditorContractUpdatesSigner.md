@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **second_name** | **string** | Отчество человека, обладающего правом подписи | [optional]
 **inn** | **string** | ИНН подписанта | [optional]
 **foundation_document** | [**\MagDv\Cargomart\Dto\ExpeditorContractUpdatesFoundationDocument**](ExpeditorContractUpdatesFoundationDocument.md) |  | [optional]
+**phone** | **string** | Номер телефона на который пользователь зарегистрировал ПЭП |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

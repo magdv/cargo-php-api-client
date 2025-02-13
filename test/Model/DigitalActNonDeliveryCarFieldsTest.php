@@ -81,15 +81,6 @@ class DigitalActNonDeliveryCarFieldsTest extends TestCase
     }
 
     /**
-     * Test attribute "create_date"
-     */
-    public function testPropertyCreateDate()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "order_id"
      */
     public function testPropertyOrderId()
@@ -183,24 +174,6 @@ class DigitalActNonDeliveryCarFieldsTest extends TestCase
      * Test attribute "driver"
      */
     public function testPropertyDriver()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "date"
-     */
-    public function testPropertyDate()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "number"
-     */
-    public function testPropertyNumber()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

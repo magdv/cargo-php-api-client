@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * ExpeditorContractUpdatesFoundationDocumentTest Class Doc Comment
  *
  * @category    Class
- * @description Тип документа на основании которого подписывается доп. соглашение
+ * @description Данные документа на основании которого подписывается доп. соглашение
  * @package     MagDv\Cargomart
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -75,6 +75,24 @@ class ExpeditorContractUpdatesFoundationDocumentTest extends TestCase
      * Test "ExpeditorContractUpdatesFoundationDocument"
      */
     public function testExpeditorContractUpdatesFoundationDocument()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "date"
+     */
+    public function testPropertyDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

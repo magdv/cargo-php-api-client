@@ -73,18 +73,6 @@ class ClaimApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2ClaimDowntimeIdGet
-     *
-     * Просмотр претензии о простое.
-     *
-     */
-    public function testApiV2ClaimDowntimeIdGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2ClaimGet
      *
      * Список требований на оплату.

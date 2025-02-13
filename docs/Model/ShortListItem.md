@@ -33,5 +33,6 @@ Name | Type | Description | Notes
 **has_carrier_sign** | **bool** | Подписана заявка перевозчиком-победителем | [optional] [default to false]
 **roadmap_events_count** | **int** | Количество событий требующих действия | [optional]
 **payment_invoice_status** | [**\MagDv\Cargomart\Dto\PaymentInvoiceStatus[]**](PaymentInvoiceStatus.md) |  | [optional]
+**winner_date** | **\DateTime** | Дата и время когда был определен победитель | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

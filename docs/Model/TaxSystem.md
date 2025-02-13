@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | Идентификатор |
+**id** | [**\MagDv\Cargomart\Dto\TaxSystemEnum**](TaxSystemEnum.md) |  |
 **name** | **string** | Короткое название, аббревиатура |
 **title** | **string** | Полное название |
 **is_with_declaration** | **bool** | Нуждается ли СНО в декларировании | [optional] [default to false]
