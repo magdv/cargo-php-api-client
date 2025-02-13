@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderEcnItemEdmOperatorStatus
+ * ClaimBankDetails
  *
  * PHP version 7.4
  *
@@ -33,25 +33,25 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * OrderEcnItemEdmOperatorStatus Class Doc Comment
+ * ClaimBankDetails Class Doc Comment
  *
  * @category Class
- * @description Статус в системе ЭДО
+ * @description Банковские реквизиты для оплаты простоя
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class OrderEcnItemEdmOperatorStatus implements ModelInterface, ArrayAccess, \JsonSerializable
+class ClaimBankDetails implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    public const DISCRIMINATOR = 'operator';
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
       *
       * @var string
       */
-    protected static $openAPIModelName = 'OrderEcnItem_edmOperatorStatus';
+    protected static $openAPIModelName = 'ClaimBankDetails';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,10 @@ class OrderEcnItemEdmOperatorStatus implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'operator' => '\MagDv\Cargomart\Dto\EcnOperatorEnum',
-        'value' => '\MagDv\Cargomart\Dto\EcnSbisStatusEnum'
+        'name' => 'string',
+        'operating_account' => 'string',
+        'corresponding_account' => 'string',
+        'bic' => 'string'
     ];
 
     /**
@@ -71,8 +73,10 @@ class OrderEcnItemEdmOperatorStatus implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'operator' => null,
-        'value' => null
+        'name' => null,
+        'operating_account' => null,
+        'corresponding_account' => null,
+        'bic' => null
     ];
 
     /**
@@ -81,8 +85,10 @@ class OrderEcnItemEdmOperatorStatus implements ModelInterface, ArrayAccess, \Jso
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'operator' => false,
-        'value' => false
+        'name' => false,
+        'operating_account' => false,
+        'corresponding_account' => false,
+        'bic' => false
     ];
 
     /**
@@ -171,8 +177,10 @@ class OrderEcnItemEdmOperatorStatus implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'operator' => 'operator',
-        'value' => 'value'
+        'name' => 'name',
+        'operating_account' => 'operatingAccount',
+        'corresponding_account' => 'correspondingAccount',
+        'bic' => 'bic'
     ];
 
     /**
@@ -181,8 +189,10 @@ class OrderEcnItemEdmOperatorStatus implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'operator' => 'setOperator',
-        'value' => 'setValue'
+        'name' => 'setName',
+        'operating_account' => 'setOperatingAccount',
+        'corresponding_account' => 'setCorrespondingAccount',
+        'bic' => 'setBic'
     ];
 
     /**
@@ -191,8 +201,10 @@ class OrderEcnItemEdmOperatorStatus implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'operator' => 'getOperator',
-        'value' => 'getValue'
+        'name' => 'getName',
+        'operating_account' => 'getOperatingAccount',
+        'corresponding_account' => 'getCorrespondingAccount',
+        'bic' => 'getBic'
     ];
 
     /**
@@ -252,11 +264,10 @@ class OrderEcnItemEdmOperatorStatus implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('operator', $data ?? [], null);
-        $this->setIfExists('value', $data ?? [], null);
-
-        // Initialize discriminator property with the model name.
-        $this->container['operator'] = static::$openAPIModelName;
+        $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('operating_account', $data ?? [], null);
+        $this->setIfExists('corresponding_account', $data ?? [], null);
+        $this->setIfExists('bic', $data ?? [], null);
     }
 
     /**
@@ -286,11 +297,17 @@ class OrderEcnItemEdmOperatorStatus implements ModelInterface, ArrayAccess, \Jso
     {
         $invalidProperties = [];
 
-        if ($this->container['operator'] === null) {
-            $invalidProperties[] = "'operator' can't be null";
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
         }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
+        if ($this->container['operating_account'] === null) {
+            $invalidProperties[] = "'operating_account' can't be null";
+        }
+        if ($this->container['corresponding_account'] === null) {
+            $invalidProperties[] = "'corresponding_account' can't be null";
+        }
+        if ($this->container['bic'] === null) {
+            $invalidProperties[] = "'bic' can't be null";
         }
         return $invalidProperties;
     }
@@ -308,55 +325,109 @@ class OrderEcnItemEdmOperatorStatus implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets operator
+     * Gets name
      *
-     * @return \MagDv\Cargomart\Dto\EcnOperatorEnum
+     * @return string
      */
-    public function getOperator()
+    public function getName()
     {
-        return $this->container['operator'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets operator
+     * Sets name
      *
-     * @param \MagDv\Cargomart\Dto\EcnOperatorEnum $operator operator
+     * @param string $name Название банка
      *
      * @return self
      */
-    public function setOperator($operator)
+    public function setName($name)
     {
-        if (is_null($operator)) {
-            throw new \InvalidArgumentException('non-nullable operator cannot be null');
+        if (is_null($name)) {
+            throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
-        $this->container['operator'] = $operator;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets value
+     * Gets operating_account
      *
-     * @return \MagDv\Cargomart\Dto\EcnSbisStatusEnum
+     * @return string
      */
-    public function getValue()
+    public function getOperatingAccount()
     {
-        return $this->container['value'];
+        return $this->container['operating_account'];
     }
 
     /**
-     * Sets value
+     * Sets operating_account
      *
-     * @param \MagDv\Cargomart\Dto\EcnSbisStatusEnum $value value
+     * @param string $operating_account Расчетный счет
      *
      * @return self
      */
-    public function setValue($value)
+    public function setOperatingAccount($operating_account)
     {
-        if (is_null($value)) {
-            throw new \InvalidArgumentException('non-nullable value cannot be null');
+        if (is_null($operating_account)) {
+            throw new \InvalidArgumentException('non-nullable operating_account cannot be null');
         }
-        $this->container['value'] = $value;
+        $this->container['operating_account'] = $operating_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets corresponding_account
+     *
+     * @return string
+     */
+    public function getCorrespondingAccount()
+    {
+        return $this->container['corresponding_account'];
+    }
+
+    /**
+     * Sets corresponding_account
+     *
+     * @param string $corresponding_account Корреспондентский счет
+     *
+     * @return self
+     */
+    public function setCorrespondingAccount($corresponding_account)
+    {
+        if (is_null($corresponding_account)) {
+            throw new \InvalidArgumentException('non-nullable corresponding_account cannot be null');
+        }
+        $this->container['corresponding_account'] = $corresponding_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets bic
+     *
+     * @return string
+     */
+    public function getBic()
+    {
+        return $this->container['bic'];
+    }
+
+    /**
+     * Sets bic
+     *
+     * @param string $bic БИК
+     *
+     * @return self
+     */
+    public function setBic($bic)
+    {
+        if (is_null($bic)) {
+            throw new \InvalidArgumentException('non-nullable bic cannot be null');
+        }
+        $this->container['bic'] = $bic;
 
         return $this;
     }

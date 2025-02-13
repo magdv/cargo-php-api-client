@@ -1,6 +1,6 @@
 <?php
 /**
- * DowntimeClaimResponseOld
+ * ClaimDowntimeVehicle
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * DowntimeClaimResponseOld Class Doc Comment
+ * ClaimDowntimeVehicle Class Doc Comment
  *
  * @category Class
- * @description Ответ с созданной претензией о простое по заявке
+ * @description Реквизиты простаивавшего транспортного средства
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class DowntimeClaimResponseOld implements ModelInterface, ArrayAccess, \JsonSerializable
+class ClaimDowntimeVehicle implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class DowntimeClaimResponseOld implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'DowntimeClaimResponseOld';
+    protected static $openAPIModelName = 'ClaimDowntimeVehicle';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,8 @@ class DowntimeClaimResponseOld implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\MagDv\Cargomart\Dto\DowntimeClaimResponseOldData'
+        'truck' => '\MagDv\Cargomart\Dto\ClaimDowntimeVehicleTruck',
+        'trailer' => '\MagDv\Cargomart\Dto\ClaimDowntimeVehicleTrailer'
     ];
 
     /**
@@ -70,7 +71,8 @@ class DowntimeClaimResponseOld implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null
+        'truck' => null,
+        'trailer' => null
     ];
 
     /**
@@ -79,7 +81,8 @@ class DowntimeClaimResponseOld implements ModelInterface, ArrayAccess, \JsonSeri
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false
+        'truck' => false,
+        'trailer' => false
     ];
 
     /**
@@ -168,7 +171,8 @@ class DowntimeClaimResponseOld implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data'
+        'truck' => 'truck',
+        'trailer' => 'trailer'
     ];
 
     /**
@@ -177,7 +181,8 @@ class DowntimeClaimResponseOld implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData'
+        'truck' => 'setTruck',
+        'trailer' => 'setTrailer'
     ];
 
     /**
@@ -186,7 +191,8 @@ class DowntimeClaimResponseOld implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData'
+        'truck' => 'getTruck',
+        'trailer' => 'getTrailer'
     ];
 
     /**
@@ -246,7 +252,8 @@ class DowntimeClaimResponseOld implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
+        $this->setIfExists('truck', $data ?? [], null);
+        $this->setIfExists('trailer', $data ?? [], null);
     }
 
     /**
@@ -276,8 +283,8 @@ class DowntimeClaimResponseOld implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['truck'] === null) {
+            $invalidProperties[] = "'truck' can't be null";
         }
         return $invalidProperties;
     }
@@ -295,28 +302,55 @@ class DowntimeClaimResponseOld implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets data
+     * Gets truck
      *
-     * @return \MagDv\Cargomart\Dto\DowntimeClaimResponseOldData
+     * @return \MagDv\Cargomart\Dto\ClaimDowntimeVehicleTruck
      */
-    public function getData()
+    public function getTruck()
     {
-        return $this->container['data'];
+        return $this->container['truck'];
     }
 
     /**
-     * Sets data
+     * Sets truck
      *
-     * @param \MagDv\Cargomart\Dto\DowntimeClaimResponseOldData $data data
+     * @param \MagDv\Cargomart\Dto\ClaimDowntimeVehicleTruck $truck truck
      *
      * @return self
      */
-    public function setData($data)
+    public function setTruck($truck)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($truck)) {
+            throw new \InvalidArgumentException('non-nullable truck cannot be null');
         }
-        $this->container['data'] = $data;
+        $this->container['truck'] = $truck;
+
+        return $this;
+    }
+
+    /**
+     * Gets trailer
+     *
+     * @return \MagDv\Cargomart\Dto\ClaimDowntimeVehicleTrailer|null
+     */
+    public function getTrailer()
+    {
+        return $this->container['trailer'];
+    }
+
+    /**
+     * Sets trailer
+     *
+     * @param \MagDv\Cargomart\Dto\ClaimDowntimeVehicleTrailer|null $trailer trailer
+     *
+     * @return self
+     */
+    public function setTrailer($trailer)
+    {
+        if (is_null($trailer)) {
+            throw new \InvalidArgumentException('non-nullable trailer cannot be null');
+        }
+        $this->container['trailer'] = $trailer;
 
         return $this;
     }

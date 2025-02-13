@@ -1,6 +1,6 @@
 <?php
 /**
- * ClaimDowntimeResolutionStatus
+ * ClaimDowntimeResolutionEnum
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace MagDv\Cargomart\Dto;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * ClaimDowntimeResolutionStatus Class Doc Comment
+ * ClaimDowntimeResolutionEnum Class Doc Comment
  *
  * @category Class
- * @description Статус ответа по претензии о простое по заявке
+ * @description Решение по требованию
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class ClaimDowntimeResolutionStatus
+class ClaimDowntimeResolutionEnum
 {
     /**
      * Possible values of this enum

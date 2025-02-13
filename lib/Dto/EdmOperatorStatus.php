@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderDowntimeClaimCreateRequestV2
+ * EdmOperatorStatus
  *
  * PHP version 7.4
  *
@@ -33,25 +33,25 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * OrderDowntimeClaimCreateRequestV2 Class Doc Comment
+ * EdmOperatorStatus Class Doc Comment
  *
  * @category Class
- * @description Данные для создания требования новая версия
+ * @description Статус в системе ЭДО
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, \JsonSerializable
+class EdmOperatorStatus implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    public const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = 'operator';
 
     /**
       * The original name of the model.
       *
       * @var string
       */
-    protected static $openAPIModelName = 'OrderDowntimeClaimCreateRequestV2';
+    protected static $openAPIModelName = 'EdmOperatorStatus';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,13 +59,8 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'order_id' => 'string',
-        'type' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimTypeEnum',
-        'points' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimPoint[]',
-        'proof' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimCreateProofRequest',
-        'downtime' => '\MagDv\Cargomart\Dto\Downtime',
-        'date' => '\DateTime',
-        'number' => 'string'
+        'operator' => '\MagDv\Cargomart\Dto\EcnOperatorEnum',
+        'value' => '\MagDv\Cargomart\Dto\EcnSbisStatusEnum'
     ];
 
     /**
@@ -76,13 +71,8 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'order_id' => 'cm-uuid',
-        'type' => null,
-        'points' => null,
-        'proof' => null,
-        'downtime' => null,
-        'date' => 'date',
-        'number' => null
+        'operator' => null,
+        'value' => null
     ];
 
     /**
@@ -91,13 +81,8 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'order_id' => false,
-        'type' => false,
-        'points' => false,
-        'proof' => false,
-        'downtime' => false,
-        'date' => false,
-        'number' => false
+        'operator' => false,
+        'value' => false
     ];
 
     /**
@@ -186,13 +171,8 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $attributeMap = [
-        'order_id' => 'orderId',
-        'type' => 'type',
-        'points' => 'points',
-        'proof' => 'proof',
-        'downtime' => 'downtime',
-        'date' => 'date',
-        'number' => 'number'
+        'operator' => 'operator',
+        'value' => 'value'
     ];
 
     /**
@@ -201,13 +181,8 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $setters = [
-        'order_id' => 'setOrderId',
-        'type' => 'setType',
-        'points' => 'setPoints',
-        'proof' => 'setProof',
-        'downtime' => 'setDowntime',
-        'date' => 'setDate',
-        'number' => 'setNumber'
+        'operator' => 'setOperator',
+        'value' => 'setValue'
     ];
 
     /**
@@ -216,13 +191,8 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $getters = [
-        'order_id' => 'getOrderId',
-        'type' => 'getType',
-        'points' => 'getPoints',
-        'proof' => 'getProof',
-        'downtime' => 'getDowntime',
-        'date' => 'getDate',
-        'number' => 'getNumber'
+        'operator' => 'getOperator',
+        'value' => 'getValue'
     ];
 
     /**
@@ -282,13 +252,11 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('order_id', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('points', $data ?? [], null);
-        $this->setIfExists('proof', $data ?? [], null);
-        $this->setIfExists('downtime', $data ?? [], null);
-        $this->setIfExists('date', $data ?? [], null);
-        $this->setIfExists('number', $data ?? [], null);
+        $this->setIfExists('operator', $data ?? [], null);
+        $this->setIfExists('value', $data ?? [], null);
+
+        // Initialize discriminator property with the model name.
+        $this->container['operator'] = static::$openAPIModelName;
     }
 
     /**
@@ -318,26 +286,11 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
     {
         $invalidProperties = [];
 
-        if ($this->container['order_id'] === null) {
-            $invalidProperties[] = "'order_id' can't be null";
+        if ($this->container['operator'] === null) {
+            $invalidProperties[] = "'operator' can't be null";
         }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        if ($this->container['points'] === null) {
-            $invalidProperties[] = "'points' can't be null";
-        }
-        if ($this->container['proof'] === null) {
-            $invalidProperties[] = "'proof' can't be null";
-        }
-        if ($this->container['downtime'] === null) {
-            $invalidProperties[] = "'downtime' can't be null";
-        }
-        if ($this->container['date'] === null) {
-            $invalidProperties[] = "'date' can't be null";
-        }
-        if ($this->container['number'] === null) {
-            $invalidProperties[] = "'number' can't be null";
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
         }
         return $invalidProperties;
     }
@@ -355,190 +308,55 @@ class OrderDowntimeClaimCreateRequestV2 implements ModelInterface, ArrayAccess, 
 
 
     /**
-     * Gets order_id
+     * Gets operator
      *
-     * @return string
+     * @return \MagDv\Cargomart\Dto\EcnOperatorEnum
      */
-    public function getOrderId()
+    public function getOperator()
     {
-        return $this->container['order_id'];
+        return $this->container['operator'];
     }
 
     /**
-     * Sets order_id
+     * Sets operator
      *
-     * @param string $order_id UUID или хэш объекта
+     * @param \MagDv\Cargomart\Dto\EcnOperatorEnum $operator operator
      *
      * @return self
      */
-    public function setOrderId($order_id)
+    public function setOperator($operator)
     {
-        if (is_null($order_id)) {
-            throw new \InvalidArgumentException('non-nullable order_id cannot be null');
+        if (is_null($operator)) {
+            throw new \InvalidArgumentException('non-nullable operator cannot be null');
         }
-        $this->container['order_id'] = $order_id;
+        $this->container['operator'] = $operator;
 
         return $this;
     }
 
     /**
-     * Gets type
+     * Gets value
      *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimTypeEnum
+     * @return \MagDv\Cargomart\Dto\EcnSbisStatusEnum
      */
-    public function getType()
+    public function getValue()
     {
-        return $this->container['type'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets type
+     * Sets value
      *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaimTypeEnum $type Тип претензии о простое
+     * @param \MagDv\Cargomart\Dto\EcnSbisStatusEnum $value value
      *
      * @return self
      */
-    public function setType($type)
+    public function setValue($value)
     {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
+        if (is_null($value)) {
+            throw new \InvalidArgumentException('non-nullable value cannot be null');
         }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets points
-     *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimPoint[]
-     */
-    public function getPoints()
-    {
-        return $this->container['points'];
-    }
-
-    /**
-     * Sets points
-     *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaimPoint[] $points points
-     *
-     * @return self
-     */
-    public function setPoints($points)
-    {
-        if (is_null($points)) {
-            throw new \InvalidArgumentException('non-nullable points cannot be null');
-        }
-        $this->container['points'] = $points;
-
-        return $this;
-    }
-
-    /**
-     * Gets proof
-     *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateProofRequest
-     */
-    public function getProof()
-    {
-        return $this->container['proof'];
-    }
-
-    /**
-     * Sets proof
-     *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateProofRequest $proof proof
-     *
-     * @return self
-     */
-    public function setProof($proof)
-    {
-        if (is_null($proof)) {
-            throw new \InvalidArgumentException('non-nullable proof cannot be null');
-        }
-        $this->container['proof'] = $proof;
-
-        return $this;
-    }
-
-    /**
-     * Gets downtime
-     *
-     * @return \MagDv\Cargomart\Dto\Downtime
-     */
-    public function getDowntime()
-    {
-        return $this->container['downtime'];
-    }
-
-    /**
-     * Sets downtime
-     *
-     * @param \MagDv\Cargomart\Dto\Downtime $downtime Простой по заявке
-     *
-     * @return self
-     */
-    public function setDowntime($downtime)
-    {
-        if (is_null($downtime)) {
-            throw new \InvalidArgumentException('non-nullable downtime cannot be null');
-        }
-        $this->container['downtime'] = $downtime;
-
-        return $this;
-    }
-
-    /**
-     * Gets date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->container['date'];
-    }
-
-    /**
-     * Sets date
-     *
-     * @param \DateTime $date Дата документа
-     *
-     * @return self
-     */
-    public function setDate($date)
-    {
-        if (is_null($date)) {
-            throw new \InvalidArgumentException('non-nullable date cannot be null');
-        }
-        $this->container['date'] = $date;
-
-        return $this;
-    }
-
-    /**
-     * Gets number
-     *
-     * @return string
-     */
-    public function getNumber()
-    {
-        return $this->container['number'];
-    }
-
-    /**
-     * Sets number
-     *
-     * @param string $number Номер документа
-     *
-     * @return self
-     */
-    public function setNumber($number)
-    {
-        if (is_null($number)) {
-            throw new \InvalidArgumentException('non-nullable number cannot be null');
-        }
-        $this->container['number'] = $number;
+        $this->container['value'] = $value;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * ClaimDowntimeResolutionMixin
+ * ApiV2OrderExcelPostRequest
  *
  * PHP version 7.4
  *
@@ -33,16 +33,15 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * ClaimDowntimeResolutionMixin Class Doc Comment
+ * ApiV2OrderExcelPostRequest Class Doc Comment
  *
  * @category Class
- * @description Общие поля решения по претензии о простое по заявке
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ClaimDowntimeResolutionMixin implements ModelInterface, ArrayAccess, \JsonSerializable
+class ApiV2OrderExcelPostRequest implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +50,7 @@ class ClaimDowntimeResolutionMixin implements ModelInterface, ArrayAccess, \Json
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ClaimDowntimeResolutionMixin';
+    protected static $openAPIModelName = '_api_v2_order_excel_post_request';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,9 +58,7 @@ class ClaimDowntimeResolutionMixin implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'claim_id' => 'string',
-        'status' => '\MagDv\Cargomart\Dto\ClaimDowntimeResolutionStatus',
-        'reason' => 'string'
+        'filter' => '\MagDv\Cargomart\Dto\ApiV2OrderExcelPostRequestFilter'
     ];
 
     /**
@@ -72,9 +69,7 @@ class ClaimDowntimeResolutionMixin implements ModelInterface, ArrayAccess, \Json
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'claim_id' => 'uuid',
-        'status' => null,
-        'reason' => null
+        'filter' => null
     ];
 
     /**
@@ -83,9 +78,7 @@ class ClaimDowntimeResolutionMixin implements ModelInterface, ArrayAccess, \Json
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'claim_id' => false,
-        'status' => false,
-        'reason' => false
+        'filter' => false
     ];
 
     /**
@@ -174,9 +167,7 @@ class ClaimDowntimeResolutionMixin implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $attributeMap = [
-        'claim_id' => 'claimId',
-        'status' => 'status',
-        'reason' => 'reason'
+        'filter' => 'filter'
     ];
 
     /**
@@ -185,9 +176,7 @@ class ClaimDowntimeResolutionMixin implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'claim_id' => 'setClaimId',
-        'status' => 'setStatus',
-        'reason' => 'setReason'
+        'filter' => 'setFilter'
     ];
 
     /**
@@ -196,9 +185,7 @@ class ClaimDowntimeResolutionMixin implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'claim_id' => 'getClaimId',
-        'status' => 'getStatus',
-        'reason' => 'getReason'
+        'filter' => 'getFilter'
     ];
 
     /**
@@ -258,9 +245,7 @@ class ClaimDowntimeResolutionMixin implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('claim_id', $data ?? [], null);
-        $this->setIfExists('status', $data ?? [], null);
-        $this->setIfExists('reason', $data ?? [], null);
+        $this->setIfExists('filter', $data ?? [], null);
     }
 
     /**
@@ -290,16 +275,6 @@ class ClaimDowntimeResolutionMixin implements ModelInterface, ArrayAccess, \Json
     {
         $invalidProperties = [];
 
-        if ($this->container['claim_id'] === null) {
-            $invalidProperties[] = "'claim_id' can't be null";
-        }
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
-        }
-        if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) > 2000)) {
-            $invalidProperties[] = "invalid value for 'reason', the character length must be smaller than or equal to 2000.";
-        }
-
         return $invalidProperties;
     }
 
@@ -316,86 +291,28 @@ class ClaimDowntimeResolutionMixin implements ModelInterface, ArrayAccess, \Json
 
 
     /**
-     * Gets claim_id
+     * Gets filter
      *
-     * @return string
+     * @return \MagDv\Cargomart\Dto\ApiV2OrderExcelPostRequestFilter|null
      */
-    public function getClaimId()
+    public function getFilter()
     {
-        return $this->container['claim_id'];
+        return $this->container['filter'];
     }
 
     /**
-     * Sets claim_id
+     * Sets filter
      *
-     * @param string $claim_id UUID объекта
+     * @param \MagDv\Cargomart\Dto\ApiV2OrderExcelPostRequestFilter|null $filter filter
      *
      * @return self
      */
-    public function setClaimId($claim_id)
+    public function setFilter($filter)
     {
-        if (is_null($claim_id)) {
-            throw new \InvalidArgumentException('non-nullable claim_id cannot be null');
+        if (is_null($filter)) {
+            throw new \InvalidArgumentException('non-nullable filter cannot be null');
         }
-        $this->container['claim_id'] = $claim_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return \MagDv\Cargomart\Dto\ClaimDowntimeResolutionStatus
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param \MagDv\Cargomart\Dto\ClaimDowntimeResolutionStatus $status Status решения по претензии
-     *
-     * @return self
-     */
-    public function setStatus($status)
-    {
-        if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
-        }
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets reason
-     *
-     * @return string|null
-     */
-    public function getReason()
-    {
-        return $this->container['reason'];
-    }
-
-    /**
-     * Sets reason
-     *
-     * @param string|null $reason Среднее текстовое сообщение
-     *
-     * @return self
-     */
-    public function setReason($reason)
-    {
-        if (is_null($reason)) {
-            throw new \InvalidArgumentException('non-nullable reason cannot be null');
-        }
-        if ((mb_strlen($reason) > 2000)) {
-            throw new \InvalidArgumentException('invalid length for $reason when calling ClaimDowntimeResolutionMixin., must be smaller than or equal to 2000.');
-        }
-
-        $this->container['reason'] = $reason;
+        $this->container['filter'] = $filter;
 
         return $this;
     }

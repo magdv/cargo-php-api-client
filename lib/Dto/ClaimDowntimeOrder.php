@@ -1,6 +1,6 @@
 <?php
 /**
- * DraftDocumentActNonDeliveryCar
+ * ClaimDowntimeOrder
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * DraftDocumentActNonDeliveryCar Class Doc Comment
+ * ClaimDowntimeOrder Class Doc Comment
  *
  * @category Class
- * @description Набор полей объекта черновика акта о неподачи машины
+ * @description Реквизиты транспортной заявки
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \JsonSerializable
+class ClaimDowntimeOrder implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'DraftDocumentActNonDeliveryCar';
+    protected static $openAPIModelName = 'ClaimDowntimeOrder';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,11 +59,8 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
-        'data' => '\MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixin',
         'id' => 'string',
-        'create_date' => '\DateTime',
-        'access' => '\MagDv\Cargomart\Dto\DraftDocumentAccess'
+        'serial_id' => 'int'
     ];
 
     /**
@@ -74,11 +71,8 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null,
-        'data' => null,
         'id' => null,
-        'create_date' => 'date-time',
-        'access' => null
+        'serial_id' => null
     ];
 
     /**
@@ -87,11 +81,8 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'type' => false,
-        'data' => false,
         'id' => false,
-        'create_date' => false,
-        'access' => false
+        'serial_id' => false
     ];
 
     /**
@@ -180,11 +171,8 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
-        'data' => 'data',
         'id' => 'id',
-        'create_date' => 'createDate',
-        'access' => 'access'
+        'serial_id' => 'serialId'
     ];
 
     /**
@@ -193,11 +181,8 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
-        'data' => 'setData',
         'id' => 'setId',
-        'create_date' => 'setCreateDate',
-        'access' => 'setAccess'
+        'serial_id' => 'setSerialId'
     ];
 
     /**
@@ -206,11 +191,8 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
-        'data' => 'getData',
         'id' => 'getId',
-        'create_date' => 'getCreateDate',
-        'access' => 'getAccess'
+        'serial_id' => 'getSerialId'
     ];
 
     /**
@@ -254,19 +236,6 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
         return self::$openAPIModelName;
     }
 
-    public const TYPE_ACT_NON_DELIVERY_CAR = 'actNonDeliveryCar';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_ACT_NON_DELIVERY_CAR,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -283,11 +252,8 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('data', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('create_date', $data ?? [], null);
-        $this->setIfExists('access', $data ?? [], null);
+        $this->setIfExists('serial_id', $data ?? [], null);
     }
 
     /**
@@ -317,26 +283,11 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
     {
         $invalidProperties = [];
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'type', must be one of '%s'",
-                $this->container['type'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['create_date'] === null) {
-            $invalidProperties[] = "'create_date' can't be null";
+        if ($this->container['serial_id'] === null) {
+            $invalidProperties[] = "'serial_id' can't be null";
         }
         return $invalidProperties;
     }
@@ -354,70 +305,6 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
 
 
     /**
-     * Gets type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     *
-     * @return \MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixin
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     *
-     * @param \MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixin $data Поля электронного акта о неподаче машины
-     *
-     * @return self
-     */
-    public function setData($data)
-    {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
-        }
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
      * Gets id
      *
      * @return string
@@ -430,7 +317,7 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets id
      *
-     * @param string $id Идентификатор черновика
+     * @param string $id Hash объекта
      *
      * @return self
      */
@@ -445,55 +332,28 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
     }
 
     /**
-     * Gets create_date
+     * Gets serial_id
      *
-     * @return \DateTime
+     * @return int
      */
-    public function getCreateDate()
+    public function getSerialId()
     {
-        return $this->container['create_date'];
+        return $this->container['serial_id'];
     }
 
     /**
-     * Sets create_date
+     * Sets serial_id
      *
-     * @param \DateTime $create_date Дата создания черновика
+     * @param int $serial_id Порядковый номер заказа
      *
      * @return self
      */
-    public function setCreateDate($create_date)
+    public function setSerialId($serial_id)
     {
-        if (is_null($create_date)) {
-            throw new \InvalidArgumentException('non-nullable create_date cannot be null');
+        if (is_null($serial_id)) {
+            throw new \InvalidArgumentException('non-nullable serial_id cannot be null');
         }
-        $this->container['create_date'] = $create_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets access
-     *
-     * @return \MagDv\Cargomart\Dto\DraftDocumentAccess|null
-     */
-    public function getAccess()
-    {
-        return $this->container['access'];
-    }
-
-    /**
-     * Sets access
-     *
-     * @param \MagDv\Cargomart\Dto\DraftDocumentAccess|null $access access
-     *
-     * @return self
-     */
-    public function setAccess($access)
-    {
-        if (is_null($access)) {
-            throw new \InvalidArgumentException('non-nullable access cannot be null');
-        }
-        $this->container['access'] = $access;
+        $this->container['serial_id'] = $serial_id;
 
         return $this;
     }

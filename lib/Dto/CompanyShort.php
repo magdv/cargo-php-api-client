@@ -69,7 +69,9 @@ class CompanyShort implements ModelInterface, ArrayAccess, \JsonSerializable
         'kpp' => 'string',
         'settings' => '\MagDv\Cargomart\Dto\Settings',
         'status_id' => '\MagDv\Cargomart\Dto\CompanyStatusEnum',
-        'session_values' => '\MagDv\Cargomart\Dto\CompanyShortSessionValues'
+        'session_values' => '\MagDv\Cargomart\Dto\CompanyShortSessionValues',
+        'legal_address' => 'string',
+        'phone' => 'string'
     ];
 
     /**
@@ -90,7 +92,9 @@ class CompanyShort implements ModelInterface, ArrayAccess, \JsonSerializable
         'kpp' => null,
         'settings' => null,
         'status_id' => null,
-        'session_values' => null
+        'session_values' => null,
+        'legal_address' => null,
+        'phone' => null
     ];
 
     /**
@@ -109,7 +113,9 @@ class CompanyShort implements ModelInterface, ArrayAccess, \JsonSerializable
         'kpp' => false,
         'settings' => false,
         'status_id' => false,
-        'session_values' => false
+        'session_values' => false,
+        'legal_address' => false,
+        'phone' => false
     ];
 
     /**
@@ -208,7 +214,9 @@ class CompanyShort implements ModelInterface, ArrayAccess, \JsonSerializable
         'kpp' => 'kpp',
         'settings' => 'settings',
         'status_id' => 'statusId',
-        'session_values' => 'sessionValues'
+        'session_values' => 'sessionValues',
+        'legal_address' => 'legalAddress',
+        'phone' => 'phone'
     ];
 
     /**
@@ -227,7 +235,9 @@ class CompanyShort implements ModelInterface, ArrayAccess, \JsonSerializable
         'kpp' => 'setKpp',
         'settings' => 'setSettings',
         'status_id' => 'setStatusId',
-        'session_values' => 'setSessionValues'
+        'session_values' => 'setSessionValues',
+        'legal_address' => 'setLegalAddress',
+        'phone' => 'setPhone'
     ];
 
     /**
@@ -246,7 +256,9 @@ class CompanyShort implements ModelInterface, ArrayAccess, \JsonSerializable
         'kpp' => 'getKpp',
         'settings' => 'getSettings',
         'status_id' => 'getStatusId',
-        'session_values' => 'getSessionValues'
+        'session_values' => 'getSessionValues',
+        'legal_address' => 'getLegalAddress',
+        'phone' => 'getPhone'
     ];
 
     /**
@@ -317,6 +329,8 @@ class CompanyShort implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('settings', $data ?? [], null);
         $this->setIfExists('status_id', $data ?? [], null);
         $this->setIfExists('session_values', $data ?? [], null);
+        $this->setIfExists('legal_address', $data ?? [], null);
+        $this->setIfExists('phone', $data ?? [], null);
     }
 
     /**
@@ -657,6 +671,60 @@ class CompanyShort implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable session_values cannot be null');
         }
         $this->container['session_values'] = $session_values;
+
+        return $this;
+    }
+
+    /**
+     * Gets legal_address
+     *
+     * @return string|null
+     */
+    public function getLegalAddress()
+    {
+        return $this->container['legal_address'];
+    }
+
+    /**
+     * Sets legal_address
+     *
+     * @param string|null $legal_address Юридический адрес
+     *
+     * @return self
+     */
+    public function setLegalAddress($legal_address)
+    {
+        if (is_null($legal_address)) {
+            throw new \InvalidArgumentException('non-nullable legal_address cannot be null');
+        }
+        $this->container['legal_address'] = $legal_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone
+     *
+     * @return string|null
+     */
+    public function getPhone()
+    {
+        return $this->container['phone'];
+    }
+
+    /**
+     * Sets phone
+     *
+     * @param string|null $phone Телефон
+     *
+     * @return self
+     */
+    public function setPhone($phone)
+    {
+        if (is_null($phone)) {
+            throw new \InvalidArgumentException('non-nullable phone cannot be null');
+        }
+        $this->container['phone'] = $phone;
 
         return $this;
     }

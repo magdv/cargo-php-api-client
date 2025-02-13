@@ -1,6 +1,6 @@
 <?php
 /**
- * DraftDocumentActNonDeliveryCar
+ * ClaimDowntimeVehicleTrailer
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * DraftDocumentActNonDeliveryCar Class Doc Comment
+ * ClaimDowntimeVehicleTrailer Class Doc Comment
  *
  * @category Class
- * @description Набор полей объекта черновика акта о неподачи машины
+ * @description Реквизиты полуприцепа (при наличии)
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \JsonSerializable
+class ClaimDowntimeVehicleTrailer implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'DraftDocumentActNonDeliveryCar';
+    protected static $openAPIModelName = 'ClaimDowntimeVehicle_trailer';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,11 +59,8 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
-        'data' => '\MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixin',
-        'id' => 'string',
-        'create_date' => '\DateTime',
-        'access' => '\MagDv\Cargomart\Dto\DraftDocumentAccess'
+        'number' => 'string',
+        'manufacturer' => 'string'
     ];
 
     /**
@@ -74,11 +71,8 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null,
-        'data' => null,
-        'id' => null,
-        'create_date' => 'date-time',
-        'access' => null
+        'number' => null,
+        'manufacturer' => null
     ];
 
     /**
@@ -87,11 +81,8 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'type' => false,
-        'data' => false,
-        'id' => false,
-        'create_date' => false,
-        'access' => false
+        'number' => false,
+        'manufacturer' => false
     ];
 
     /**
@@ -180,11 +171,8 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
-        'data' => 'data',
-        'id' => 'id',
-        'create_date' => 'createDate',
-        'access' => 'access'
+        'number' => 'number',
+        'manufacturer' => 'manufacturer'
     ];
 
     /**
@@ -193,11 +181,8 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
-        'data' => 'setData',
-        'id' => 'setId',
-        'create_date' => 'setCreateDate',
-        'access' => 'setAccess'
+        'number' => 'setNumber',
+        'manufacturer' => 'setManufacturer'
     ];
 
     /**
@@ -206,11 +191,8 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
-        'data' => 'getData',
-        'id' => 'getId',
-        'create_date' => 'getCreateDate',
-        'access' => 'getAccess'
+        'number' => 'getNumber',
+        'manufacturer' => 'getManufacturer'
     ];
 
     /**
@@ -254,19 +236,6 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
         return self::$openAPIModelName;
     }
 
-    public const TYPE_ACT_NON_DELIVERY_CAR = 'actNonDeliveryCar';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_ACT_NON_DELIVERY_CAR,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -283,11 +252,8 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('create_date', $data ?? [], null);
-        $this->setIfExists('access', $data ?? [], null);
+        $this->setIfExists('number', $data ?? [], null);
+        $this->setIfExists('manufacturer', $data ?? [], null);
     }
 
     /**
@@ -317,26 +283,11 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
     {
         $invalidProperties = [];
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
+        if ($this->container['number'] === null) {
+            $invalidProperties[] = "'number' can't be null";
         }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'type', must be one of '%s'",
-                $this->container['type'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['create_date'] === null) {
-            $invalidProperties[] = "'create_date' can't be null";
+        if ($this->container['manufacturer'] === null) {
+            $invalidProperties[] = "'manufacturer' can't be null";
         }
         return $invalidProperties;
     }
@@ -354,146 +305,55 @@ class DraftDocumentActNonDeliveryCar implements ModelInterface, ArrayAccess, \Js
 
 
     /**
-     * Gets type
+     * Gets number
      *
      * @return string
      */
-    public function getType()
+    public function getNumber()
     {
-        return $this->container['type'];
+        return $this->container['number'];
     }
 
     /**
-     * Sets type
+     * Sets number
      *
-     * @param string $type type
+     * @param string $number Гос. номер
      *
      * @return self
      */
-    public function setType($type)
+    public function setNumber($number)
     {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
+        if (is_null($number)) {
+            throw new \InvalidArgumentException('non-nullable number cannot be null');
         }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
+        $this->container['number'] = $number;
 
         return $this;
     }
 
     /**
-     * Gets data
-     *
-     * @return \MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixin
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     *
-     * @param \MagDv\Cargomart\Dto\DigitalActNonDeliveryCarMixin $data Поля электронного акта о неподаче машины
-     *
-     * @return self
-     */
-    public function setData($data)
-    {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
-        }
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
+     * Gets manufacturer
      *
      * @return string
      */
-    public function getId()
+    public function getManufacturer()
     {
-        return $this->container['id'];
+        return $this->container['manufacturer'];
     }
 
     /**
-     * Sets id
+     * Sets manufacturer
      *
-     * @param string $id Идентификатор черновика
+     * @param string $manufacturer Марка
      *
      * @return self
      */
-    public function setId($id)
+    public function setManufacturer($manufacturer)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($manufacturer)) {
+            throw new \InvalidArgumentException('non-nullable manufacturer cannot be null');
         }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets create_date
-     *
-     * @return \DateTime
-     */
-    public function getCreateDate()
-    {
-        return $this->container['create_date'];
-    }
-
-    /**
-     * Sets create_date
-     *
-     * @param \DateTime $create_date Дата создания черновика
-     *
-     * @return self
-     */
-    public function setCreateDate($create_date)
-    {
-        if (is_null($create_date)) {
-            throw new \InvalidArgumentException('non-nullable create_date cannot be null');
-        }
-        $this->container['create_date'] = $create_date;
-
-        return $this;
-    }
-
-    /**
-     * Gets access
-     *
-     * @return \MagDv\Cargomart\Dto\DraftDocumentAccess|null
-     */
-    public function getAccess()
-    {
-        return $this->container['access'];
-    }
-
-    /**
-     * Sets access
-     *
-     * @param \MagDv\Cargomart\Dto\DraftDocumentAccess|null $access access
-     *
-     * @return self
-     */
-    public function setAccess($access)
-    {
-        if (is_null($access)) {
-            throw new \InvalidArgumentException('non-nullable access cannot be null');
-        }
-        $this->container['access'] = $access;
+        $this->container['manufacturer'] = $manufacturer;
 
         return $this;
     }

@@ -73,7 +73,7 @@ class OrderEcn implements ModelInterface, ArrayAccess, \JsonSerializable
         'point_index_from' => 'int',
         'point_index_to' => 'int',
         'status' => '\MagDv\Cargomart\Dto\EcnStatus',
-        'edm_operator_status' => '\MagDv\Cargomart\Dto\OrderEcnItemEdmOperatorStatus',
+        'edm_operator_status' => '\MagDv\Cargomart\Dto\EdmOperatorStatus',
         'status_group' => '\MagDv\Cargomart\Dto\EcnStatusGroup',
         'update_date' => '\DateTime',
         'additional_data' => '\MagDv\Cargomart\Dto\EcnAdditionalData',
@@ -866,7 +866,7 @@ class OrderEcn implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets edm_operator_status
      *
-     * @return \MagDv\Cargomart\Dto\OrderEcnItemEdmOperatorStatus|null
+     * @return \MagDv\Cargomart\Dto\EdmOperatorStatus|null
      */
     public function getEdmOperatorStatus()
     {
@@ -876,7 +876,7 @@ class OrderEcn implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets edm_operator_status
      *
-     * @param \MagDv\Cargomart\Dto\OrderEcnItemEdmOperatorStatus|null $edm_operator_status edm_operator_status
+     * @param \MagDv\Cargomart\Dto\EdmOperatorStatus|null $edm_operator_status edm_operator_status
      *
      * @return self
      */

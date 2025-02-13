@@ -60,7 +60,7 @@ class DraftDocumentDowntimeClaim implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPITypes = [
         'type' => 'string',
-        'data' => '\MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequestV2',
+        'data' => '\MagDv\Cargomart\Dto\OrderDowntimeCommonMixin',
         'id' => 'string',
         'create_date' => '\DateTime',
         'access' => '\MagDv\Cargomart\Dto\DraftDocumentAccess'
@@ -393,7 +393,7 @@ class DraftDocumentDowntimeClaim implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets data
      *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequestV2
+     * @return \MagDv\Cargomart\Dto\OrderDowntimeCommonMixin
      */
     public function getData()
     {
@@ -403,7 +403,7 @@ class DraftDocumentDowntimeClaim implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets data
      *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaimCreateRequestV2 $data data
+     * @param \MagDv\Cargomart\Dto\OrderDowntimeCommonMixin $data data
      *
      * @return self
      */

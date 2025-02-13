@@ -36,7 +36,7 @@ use \MagDv\Cargomart\ObjectSerializer;
  * ClaimDowntime Class Doc Comment
  *
  * @category Class
- * @description Объект претензии о простое по заявке
+ * @description Объект требования о простое по заявке
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -65,7 +65,12 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         'signed_documents' => '\MagDv\Cargomart\Dto\SignedDocument[]',
         'reject_reason' => 'string',
         'access' => 'object',
-        'order_id' => 'string',
+        'order' => '\MagDv\Cargomart\Dto\ClaimDowntimeOrder',
+        'claimant' => '\MagDv\Cargomart\Dto\ClaimParticipant',
+        'respondent' => '\MagDv\Cargomart\Dto\ClaimParticipant',
+        'vehicle' => '\MagDv\Cargomart\Dto\ClaimDowntimeVehicle',
+        'contract' => '\MagDv\Cargomart\Dto\ClaimDowntimeContract',
+        'bank_details' => '\MagDv\Cargomart\Dto\ClaimBankDetails',
         'points' => '\MagDv\Cargomart\Dto\ClaimDowntimePoint[]',
         'downtime' => '\MagDv\Cargomart\Dto\Downtime',
         'proofs' => '\MagDv\Cargomart\Dto\ClaimProofDocument[]',
@@ -87,7 +92,12 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         'signed_documents' => null,
         'reject_reason' => null,
         'access' => null,
-        'order_id' => 'cm-uuid',
+        'order' => null,
+        'claimant' => null,
+        'respondent' => null,
+        'vehicle' => null,
+        'contract' => null,
+        'bank_details' => null,
         'points' => null,
         'downtime' => null,
         'proofs' => null,
@@ -107,7 +117,12 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         'signed_documents' => false,
         'reject_reason' => false,
         'access' => false,
-        'order_id' => false,
+        'order' => false,
+        'claimant' => false,
+        'respondent' => false,
+        'vehicle' => false,
+        'contract' => false,
+        'bank_details' => false,
         'points' => false,
         'downtime' => false,
         'proofs' => false,
@@ -207,7 +222,12 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         'signed_documents' => 'signedDocuments',
         'reject_reason' => 'rejectReason',
         'access' => 'access',
-        'order_id' => 'orderId',
+        'order' => 'order',
+        'claimant' => 'claimant',
+        'respondent' => 'respondent',
+        'vehicle' => 'vehicle',
+        'contract' => 'contract',
+        'bank_details' => 'bankDetails',
         'points' => 'points',
         'downtime' => 'downtime',
         'proofs' => 'proofs',
@@ -227,7 +247,12 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         'signed_documents' => 'setSignedDocuments',
         'reject_reason' => 'setRejectReason',
         'access' => 'setAccess',
-        'order_id' => 'setOrderId',
+        'order' => 'setOrder',
+        'claimant' => 'setClaimant',
+        'respondent' => 'setRespondent',
+        'vehicle' => 'setVehicle',
+        'contract' => 'setContract',
+        'bank_details' => 'setBankDetails',
         'points' => 'setPoints',
         'downtime' => 'setDowntime',
         'proofs' => 'setProofs',
@@ -247,7 +272,12 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         'signed_documents' => 'getSignedDocuments',
         'reject_reason' => 'getRejectReason',
         'access' => 'getAccess',
-        'order_id' => 'getOrderId',
+        'order' => 'getOrder',
+        'claimant' => 'getClaimant',
+        'respondent' => 'getRespondent',
+        'vehicle' => 'getVehicle',
+        'contract' => 'getContract',
+        'bank_details' => 'getBankDetails',
         'points' => 'getPoints',
         'downtime' => 'getDowntime',
         'proofs' => 'getProofs',
@@ -318,7 +348,12 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('signed_documents', $data ?? [], null);
         $this->setIfExists('reject_reason', $data ?? [], null);
         $this->setIfExists('access', $data ?? [], null);
-        $this->setIfExists('order_id', $data ?? [], null);
+        $this->setIfExists('order', $data ?? [], null);
+        $this->setIfExists('claimant', $data ?? [], null);
+        $this->setIfExists('respondent', $data ?? [], null);
+        $this->setIfExists('vehicle', $data ?? [], null);
+        $this->setIfExists('contract', $data ?? [], null);
+        $this->setIfExists('bank_details', $data ?? [], null);
         $this->setIfExists('points', $data ?? [], null);
         $this->setIfExists('downtime', $data ?? [], null);
         $this->setIfExists('proofs', $data ?? [], null);
@@ -366,8 +401,23 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'reject_reason', the character length must be smaller than or equal to 2000.";
         }
 
-        if ($this->container['order_id'] === null) {
-            $invalidProperties[] = "'order_id' can't be null";
+        if ($this->container['order'] === null) {
+            $invalidProperties[] = "'order' can't be null";
+        }
+        if ($this->container['claimant'] === null) {
+            $invalidProperties[] = "'claimant' can't be null";
+        }
+        if ($this->container['respondent'] === null) {
+            $invalidProperties[] = "'respondent' can't be null";
+        }
+        if ($this->container['vehicle'] === null) {
+            $invalidProperties[] = "'vehicle' can't be null";
+        }
+        if ($this->container['contract'] === null) {
+            $invalidProperties[] = "'contract' can't be null";
+        }
+        if ($this->container['bank_details'] === null) {
+            $invalidProperties[] = "'bank_details' can't be null";
         }
         if ($this->container['points'] === null) {
             $invalidProperties[] = "'points' can't be null";
@@ -471,7 +521,7 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets type
      *
-     * @param \MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum $type Тип претензии о простое
+     * @param \MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum $type Тип требования о простое
      *
      * @return self
      */
@@ -571,28 +621,163 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets order_id
+     * Gets order
      *
-     * @return string
+     * @return \MagDv\Cargomart\Dto\ClaimDowntimeOrder
      */
-    public function getOrderId()
+    public function getOrder()
     {
-        return $this->container['order_id'];
+        return $this->container['order'];
     }
 
     /**
-     * Sets order_id
+     * Sets order
      *
-     * @param string $order_id UUID или хэш объекта
+     * @param \MagDv\Cargomart\Dto\ClaimDowntimeOrder $order order
      *
      * @return self
      */
-    public function setOrderId($order_id)
+    public function setOrder($order)
     {
-        if (is_null($order_id)) {
-            throw new \InvalidArgumentException('non-nullable order_id cannot be null');
+        if (is_null($order)) {
+            throw new \InvalidArgumentException('non-nullable order cannot be null');
         }
-        $this->container['order_id'] = $order_id;
+        $this->container['order'] = $order;
+
+        return $this;
+    }
+
+    /**
+     * Gets claimant
+     *
+     * @return \MagDv\Cargomart\Dto\ClaimParticipant
+     */
+    public function getClaimant()
+    {
+        return $this->container['claimant'];
+    }
+
+    /**
+     * Sets claimant
+     *
+     * @param \MagDv\Cargomart\Dto\ClaimParticipant $claimant Реквизиты заявителя
+     *
+     * @return self
+     */
+    public function setClaimant($claimant)
+    {
+        if (is_null($claimant)) {
+            throw new \InvalidArgumentException('non-nullable claimant cannot be null');
+        }
+        $this->container['claimant'] = $claimant;
+
+        return $this;
+    }
+
+    /**
+     * Gets respondent
+     *
+     * @return \MagDv\Cargomart\Dto\ClaimParticipant
+     */
+    public function getRespondent()
+    {
+        return $this->container['respondent'];
+    }
+
+    /**
+     * Sets respondent
+     *
+     * @param \MagDv\Cargomart\Dto\ClaimParticipant $respondent Реквизиты ответчика
+     *
+     * @return self
+     */
+    public function setRespondent($respondent)
+    {
+        if (is_null($respondent)) {
+            throw new \InvalidArgumentException('non-nullable respondent cannot be null');
+        }
+        $this->container['respondent'] = $respondent;
+
+        return $this;
+    }
+
+    /**
+     * Gets vehicle
+     *
+     * @return \MagDv\Cargomart\Dto\ClaimDowntimeVehicle
+     */
+    public function getVehicle()
+    {
+        return $this->container['vehicle'];
+    }
+
+    /**
+     * Sets vehicle
+     *
+     * @param \MagDv\Cargomart\Dto\ClaimDowntimeVehicle $vehicle vehicle
+     *
+     * @return self
+     */
+    public function setVehicle($vehicle)
+    {
+        if (is_null($vehicle)) {
+            throw new \InvalidArgumentException('non-nullable vehicle cannot be null');
+        }
+        $this->container['vehicle'] = $vehicle;
+
+        return $this;
+    }
+
+    /**
+     * Gets contract
+     *
+     * @return \MagDv\Cargomart\Dto\ClaimDowntimeContract
+     */
+    public function getContract()
+    {
+        return $this->container['contract'];
+    }
+
+    /**
+     * Sets contract
+     *
+     * @param \MagDv\Cargomart\Dto\ClaimDowntimeContract $contract contract
+     *
+     * @return self
+     */
+    public function setContract($contract)
+    {
+        if (is_null($contract)) {
+            throw new \InvalidArgumentException('non-nullable contract cannot be null');
+        }
+        $this->container['contract'] = $contract;
+
+        return $this;
+    }
+
+    /**
+     * Gets bank_details
+     *
+     * @return \MagDv\Cargomart\Dto\ClaimBankDetails
+     */
+    public function getBankDetails()
+    {
+        return $this->container['bank_details'];
+    }
+
+    /**
+     * Sets bank_details
+     *
+     * @param \MagDv\Cargomart\Dto\ClaimBankDetails $bank_details bank_details
+     *
+     * @return self
+     */
+    public function setBankDetails($bank_details)
+    {
+        if (is_null($bank_details)) {
+            throw new \InvalidArgumentException('non-nullable bank_details cannot be null');
+        }
+        $this->container['bank_details'] = $bank_details;
 
         return $this;
     }

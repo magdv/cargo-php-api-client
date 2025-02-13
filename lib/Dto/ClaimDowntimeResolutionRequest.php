@@ -59,11 +59,8 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'claim_id' => 'string',
-        'status' => '\MagDv\Cargomart\Dto\ClaimDowntimeResolutionStatus',
-        'reason' => 'string',
-        'date' => '\DateTime',
-        'number' => 'string'
+        'status' => '\MagDv\Cargomart\Dto\ClaimDowntimeResolutionEnum',
+        'reason' => 'string'
     ];
 
     /**
@@ -74,11 +71,8 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'claim_id' => 'uuid',
         'status' => null,
-        'reason' => null,
-        'date' => 'date',
-        'number' => null
+        'reason' => null
     ];
 
     /**
@@ -87,11 +81,8 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'claim_id' => false,
         'status' => false,
-        'reason' => false,
-        'date' => false,
-        'number' => false
+        'reason' => false
     ];
 
     /**
@@ -180,11 +171,8 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'claim_id' => 'claimId',
         'status' => 'status',
-        'reason' => 'reason',
-        'date' => 'date',
-        'number' => 'number'
+        'reason' => 'reason'
     ];
 
     /**
@@ -193,11 +181,8 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'claim_id' => 'setClaimId',
         'status' => 'setStatus',
-        'reason' => 'setReason',
-        'date' => 'setDate',
-        'number' => 'setNumber'
+        'reason' => 'setReason'
     ];
 
     /**
@@ -206,11 +191,8 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'claim_id' => 'getClaimId',
         'status' => 'getStatus',
-        'reason' => 'getReason',
-        'date' => 'getDate',
-        'number' => 'getNumber'
+        'reason' => 'getReason'
     ];
 
     /**
@@ -270,11 +252,8 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('claim_id', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('reason', $data ?? [], null);
-        $this->setIfExists('date', $data ?? [], null);
-        $this->setIfExists('number', $data ?? [], null);
     }
 
     /**
@@ -304,9 +283,6 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
     {
         $invalidProperties = [];
 
-        if ($this->container['claim_id'] === null) {
-            $invalidProperties[] = "'claim_id' can't be null";
-        }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
@@ -314,12 +290,6 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
             $invalidProperties[] = "invalid value for 'reason', the character length must be smaller than or equal to 2000.";
         }
 
-        if ($this->container['date'] === null) {
-            $invalidProperties[] = "'date' can't be null";
-        }
-        if ($this->container['number'] === null) {
-            $invalidProperties[] = "'number' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -336,36 +306,9 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
 
 
     /**
-     * Gets claim_id
-     *
-     * @return string
-     */
-    public function getClaimId()
-    {
-        return $this->container['claim_id'];
-    }
-
-    /**
-     * Sets claim_id
-     *
-     * @param string $claim_id UUID объекта
-     *
-     * @return self
-     */
-    public function setClaimId($claim_id)
-    {
-        if (is_null($claim_id)) {
-            throw new \InvalidArgumentException('non-nullable claim_id cannot be null');
-        }
-        $this->container['claim_id'] = $claim_id;
-
-        return $this;
-    }
-
-    /**
      * Gets status
      *
-     * @return \MagDv\Cargomart\Dto\ClaimDowntimeResolutionStatus
+     * @return \MagDv\Cargomart\Dto\ClaimDowntimeResolutionEnum
      */
     public function getStatus()
     {
@@ -375,7 +318,7 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets status
      *
-     * @param \MagDv\Cargomart\Dto\ClaimDowntimeResolutionStatus $status Status решения по претензии
+     * @param \MagDv\Cargomart\Dto\ClaimDowntimeResolutionEnum $status status
      *
      * @return self
      */
@@ -416,60 +359,6 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
         }
 
         $this->container['reason'] = $reason;
-
-        return $this;
-    }
-
-    /**
-     * Gets date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->container['date'];
-    }
-
-    /**
-     * Sets date
-     *
-     * @param \DateTime $date Дата документа
-     *
-     * @return self
-     */
-    public function setDate($date)
-    {
-        if (is_null($date)) {
-            throw new \InvalidArgumentException('non-nullable date cannot be null');
-        }
-        $this->container['date'] = $date;
-
-        return $this;
-    }
-
-    /**
-     * Gets number
-     *
-     * @return string
-     */
-    public function getNumber()
-    {
-        return $this->container['number'];
-    }
-
-    /**
-     * Sets number
-     *
-     * @param string $number Номер документа
-     *
-     * @return self
-     */
-    public function setNumber($number)
-    {
-        if (is_null($number)) {
-            throw new \InvalidArgumentException('non-nullable number cannot be null');
-        }
-        $this->container['number'] = $number;
 
         return $this;
     }
