@@ -44,7 +44,7 @@ use \MagDv\Cargomart\ObjectSerializer;
  */
 class EdmOperatorStatus implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    public const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = 'operator';
 
     /**
       * The original name of the model.
@@ -254,6 +254,9 @@ class EdmOperatorStatus implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $this->setIfExists('operator', $data ?? [], null);
         $this->setIfExists('value', $data ?? [], null);
+
+        // Initialize discriminator property with the model name.
+        $this->container['operator'] = static::$openAPIModelName;
     }
 
     /**
