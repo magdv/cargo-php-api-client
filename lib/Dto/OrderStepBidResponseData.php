@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderStepBidResponse
+ * OrderStepBidResponseData
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * OrderStepBidResponse Class Doc Comment
+ * OrderStepBidResponseData Class Doc Comment
  *
  * @category Class
- * @description Ответ на запрос шага ставки по цене
+ * @description Значение шага ставки
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class OrderStepBidResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class OrderStepBidResponseData implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class OrderStepBidResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'OrderStepBidResponse';
+    protected static $openAPIModelName = 'OrderStepBidResponseData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,7 @@ class OrderStepBidResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => '\MagDv\Cargomart\Dto\OrderStepBidResponseData',
-        'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
+        'step_bid' => 'string'
     ];
 
     /**
@@ -71,8 +70,7 @@ class OrderStepBidResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'message' => null
+        'step_bid' => 'cm-price'
     ];
 
     /**
@@ -81,8 +79,7 @@ class OrderStepBidResponse implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-        'message' => false
+        'step_bid' => false
     ];
 
     /**
@@ -171,8 +168,7 @@ class OrderStepBidResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'message' => 'message'
+        'step_bid' => 'stepBid'
     ];
 
     /**
@@ -181,8 +177,7 @@ class OrderStepBidResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'message' => 'setMessage'
+        'step_bid' => 'setStepBid'
     ];
 
     /**
@@ -191,8 +186,7 @@ class OrderStepBidResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'message' => 'getMessage'
+        'step_bid' => 'getStepBid'
     ];
 
     /**
@@ -252,8 +246,7 @@ class OrderStepBidResponse implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('message', $data ?? [], null);
+        $this->setIfExists('step_bid', $data ?? [], null);
     }
 
     /**
@@ -283,9 +276,13 @@ class OrderStepBidResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['step_bid'] === null) {
+            $invalidProperties[] = "'step_bid' can't be null";
         }
+        if (!preg_match("/^(0|([1-9]\\d*))([.]\\d{1,4})?$/", $this->container['step_bid'])) {
+            $invalidProperties[] = "invalid value for 'step_bid', must be conform to the pattern /^(0|([1-9]\\d*))([.]\\d{1,4})?$/.";
+        }
+
         return $invalidProperties;
     }
 
@@ -302,55 +299,33 @@ class OrderStepBidResponse implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets data
+     * Gets step_bid
      *
-     * @return \MagDv\Cargomart\Dto\OrderStepBidResponseData
+     * @return string
      */
-    public function getData()
+    public function getStepBid()
     {
-        return $this->container['data'];
+        return $this->container['step_bid'];
     }
 
     /**
-     * Sets data
+     * Sets step_bid
      *
-     * @param \MagDv\Cargomart\Dto\OrderStepBidResponseData $data data
+     * @param string $step_bid Шаг ставки
      *
      * @return self
      */
-    public function setData($data)
+    public function setStepBid($step_bid)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($step_bid)) {
+            throw new \InvalidArgumentException('non-nullable step_bid cannot be null');
         }
-        $this->container['data'] = $data;
 
-        return $this;
-    }
-
-    /**
-     * Gets message
-     *
-     * @return \MagDv\Cargomart\Dto\MessageV2[]|null
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     *
-     * @param \MagDv\Cargomart\Dto\MessageV2[]|null $message message
-     *
-     * @return self
-     */
-    public function setMessage($message)
-    {
-        if (is_null($message)) {
-            throw new \InvalidArgumentException('non-nullable message cannot be null');
+        if ((!preg_match("/^(0|([1-9]\\d*))([.]\\d{1,4})?$/", ObjectSerializer::toString($step_bid)))) {
+            throw new \InvalidArgumentException("invalid value for \$step_bid when calling OrderStepBidResponseData., must conform to the pattern /^(0|([1-9]\\d*))([.]\\d{1,4})?$/.");
         }
-        $this->container['message'] = $message;
+
+        $this->container['step_bid'] = $step_bid;
 
         return $this;
     }
