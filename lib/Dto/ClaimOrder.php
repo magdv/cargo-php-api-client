@@ -1,6 +1,6 @@
 <?php
 /**
- * ClaimCommonMixin
+ * ClaimOrder
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * ClaimCommonMixin Class Doc Comment
+ * ClaimOrder Class Doc Comment
  *
  * @category Class
- * @description Набор общих полей требования на оплату
+ * @description Реквизиты транспортной заявки
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
+class ClaimOrder implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ClaimCommonMixin';
+    protected static $openAPIModelName = 'ClaimOrder';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,16 +60,8 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'number' => 'string',
-        'date' => '\DateTime',
         'serial_id' => 'int',
-        'order_id' => 'string',
-        'consignor' => '\MagDv\Cargomart\Dto\CompanyShort',
-        'carrier' => '\MagDv\Cargomart\Dto\CompanyShort',
-        'penalty_sum' => '\MagDv\Cargomart\Dto\PriceValue',
-        'status' => '\MagDv\Cargomart\Dto\ClaimStatus',
-        'claimant' => '\MagDv\Cargomart\Dto\ClaimantType',
-        'respondent' => '\MagDv\Cargomart\Dto\ClaimantType'
+        'route_point' => 'string'
     ];
 
     /**
@@ -80,17 +72,9 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => 'uuid',
-        'number' => null,
-        'date' => 'date-time',
+        'id' => null,
         'serial_id' => null,
-        'order_id' => 'cm-uuid',
-        'consignor' => null,
-        'carrier' => null,
-        'penalty_sum' => null,
-        'status' => null,
-        'claimant' => null,
-        'respondent' => null
+        'route_point' => null
     ];
 
     /**
@@ -100,16 +84,8 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'number' => false,
-        'date' => false,
         'serial_id' => false,
-        'order_id' => false,
-        'consignor' => false,
-        'carrier' => false,
-        'penalty_sum' => false,
-        'status' => false,
-        'claimant' => false,
-        'respondent' => false
+        'route_point' => false
     ];
 
     /**
@@ -199,16 +175,8 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'number' => 'number',
-        'date' => 'date',
         'serial_id' => 'serialId',
-        'order_id' => 'orderId',
-        'consignor' => 'consignor',
-        'carrier' => 'carrier',
-        'penalty_sum' => 'penaltySum',
-        'status' => 'status',
-        'claimant' => 'claimant',
-        'respondent' => 'respondent'
+        'route_point' => 'routePoint'
     ];
 
     /**
@@ -218,16 +186,8 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'number' => 'setNumber',
-        'date' => 'setDate',
         'serial_id' => 'setSerialId',
-        'order_id' => 'setOrderId',
-        'consignor' => 'setConsignor',
-        'carrier' => 'setCarrier',
-        'penalty_sum' => 'setPenaltySum',
-        'status' => 'setStatus',
-        'claimant' => 'setClaimant',
-        'respondent' => 'setRespondent'
+        'route_point' => 'setRoutePoint'
     ];
 
     /**
@@ -237,16 +197,8 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'number' => 'getNumber',
-        'date' => 'getDate',
         'serial_id' => 'getSerialId',
-        'order_id' => 'getOrderId',
-        'consignor' => 'getConsignor',
-        'carrier' => 'getCarrier',
-        'penalty_sum' => 'getPenaltySum',
-        'status' => 'getStatus',
-        'claimant' => 'getClaimant',
-        'respondent' => 'getRespondent'
+        'route_point' => 'getRoutePoint'
     ];
 
     /**
@@ -307,16 +259,8 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('number', $data ?? [], null);
-        $this->setIfExists('date', $data ?? [], null);
         $this->setIfExists('serial_id', $data ?? [], null);
-        $this->setIfExists('order_id', $data ?? [], null);
-        $this->setIfExists('consignor', $data ?? [], null);
-        $this->setIfExists('carrier', $data ?? [], null);
-        $this->setIfExists('penalty_sum', $data ?? [], null);
-        $this->setIfExists('status', $data ?? [], null);
-        $this->setIfExists('claimant', $data ?? [], null);
-        $this->setIfExists('respondent', $data ?? [], null);
+        $this->setIfExists('route_point', $data ?? [], null);
     }
 
     /**
@@ -349,21 +293,11 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['number'] === null) {
-            $invalidProperties[] = "'number' can't be null";
+        if ($this->container['serial_id'] === null) {
+            $invalidProperties[] = "'serial_id' can't be null";
         }
-        if ($this->container['date'] === null) {
-            $invalidProperties[] = "'date' can't be null";
-        }
-        if (!is_null($this->container['serial_id']) && ($this->container['serial_id'] < 0)) {
-            $invalidProperties[] = "invalid value for 'serial_id', must be bigger than or equal to 0.";
-        }
-
-        if ($this->container['order_id'] === null) {
-            $invalidProperties[] = "'order_id' can't be null";
-        }
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
+        if ($this->container['route_point'] === null) {
+            $invalidProperties[] = "'route_point' can't be null";
         }
         return $invalidProperties;
     }
@@ -393,7 +327,7 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string $id UUID объекта
+     * @param string $id Hash объекта
      *
      * @return self
      */
@@ -408,63 +342,9 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets number
-     *
-     * @return string
-     */
-    public function getNumber()
-    {
-        return $this->container['number'];
-    }
-
-    /**
-     * Sets number
-     *
-     * @param string $number Номер требования
-     *
-     * @return self
-     */
-    public function setNumber($number)
-    {
-        if (is_null($number)) {
-            throw new \InvalidArgumentException('non-nullable number cannot be null');
-        }
-        $this->container['number'] = $number;
-
-        return $this;
-    }
-
-    /**
-     * Gets date
-     *
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->container['date'];
-    }
-
-    /**
-     * Sets date
-     *
-     * @param \DateTime $date Дата создания требования (в часовом поясе создателя требования)
-     *
-     * @return self
-     */
-    public function setDate($date)
-    {
-        if (is_null($date)) {
-            throw new \InvalidArgumentException('non-nullable date cannot be null');
-        }
-        $this->container['date'] = $date;
-
-        return $this;
-    }
-
-    /**
      * Gets serial_id
      *
-     * @return int|null
+     * @return int
      */
     public function getSerialId()
     {
@@ -474,7 +354,7 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets serial_id
      *
-     * @param int|null $serial_id Порядковый номер заказа
+     * @param int $serial_id Порядковый номер заказа
      *
      * @return self
      */
@@ -483,201 +363,34 @@ class ClaimCommonMixin implements ModelInterface, ArrayAccess, \JsonSerializable
         if (is_null($serial_id)) {
             throw new \InvalidArgumentException('non-nullable serial_id cannot be null');
         }
-
-        if (($serial_id < 0)) {
-            throw new \InvalidArgumentException('invalid value for $serial_id when calling ClaimCommonMixin., must be bigger than or equal to 0.');
-        }
-
         $this->container['serial_id'] = $serial_id;
 
         return $this;
     }
 
     /**
-     * Gets order_id
+     * Gets route_point
      *
      * @return string
      */
-    public function getOrderId()
+    public function getRoutePoint()
     {
-        return $this->container['order_id'];
+        return $this->container['route_point'];
     }
 
     /**
-     * Sets order_id
+     * Sets route_point
      *
-     * @param string $order_id UUID или хэш объекта
+     * @param string $route_point Наименование маршрута
      *
      * @return self
      */
-    public function setOrderId($order_id)
+    public function setRoutePoint($route_point)
     {
-        if (is_null($order_id)) {
-            throw new \InvalidArgumentException('non-nullable order_id cannot be null');
+        if (is_null($route_point)) {
+            throw new \InvalidArgumentException('non-nullable route_point cannot be null');
         }
-        $this->container['order_id'] = $order_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets consignor
-     *
-     * @return \MagDv\Cargomart\Dto\CompanyShort|null
-     */
-    public function getConsignor()
-    {
-        return $this->container['consignor'];
-    }
-
-    /**
-     * Sets consignor
-     *
-     * @param \MagDv\Cargomart\Dto\CompanyShort|null $consignor Заказчик
-     *
-     * @return self
-     */
-    public function setConsignor($consignor)
-    {
-        if (is_null($consignor)) {
-            throw new \InvalidArgumentException('non-nullable consignor cannot be null');
-        }
-        $this->container['consignor'] = $consignor;
-
-        return $this;
-    }
-
-    /**
-     * Gets carrier
-     *
-     * @return \MagDv\Cargomart\Dto\CompanyShort|null
-     */
-    public function getCarrier()
-    {
-        return $this->container['carrier'];
-    }
-
-    /**
-     * Sets carrier
-     *
-     * @param \MagDv\Cargomart\Dto\CompanyShort|null $carrier Перевозчик
-     *
-     * @return self
-     */
-    public function setCarrier($carrier)
-    {
-        if (is_null($carrier)) {
-            throw new \InvalidArgumentException('non-nullable carrier cannot be null');
-        }
-        $this->container['carrier'] = $carrier;
-
-        return $this;
-    }
-
-    /**
-     * Gets penalty_sum
-     *
-     * @return \MagDv\Cargomart\Dto\PriceValue|null
-     */
-    public function getPenaltySum()
-    {
-        return $this->container['penalty_sum'];
-    }
-
-    /**
-     * Sets penalty_sum
-     *
-     * @param \MagDv\Cargomart\Dto\PriceValue|null $penalty_sum Рассчитанная сумма штрафа
-     *
-     * @return self
-     */
-    public function setPenaltySum($penalty_sum)
-    {
-        if (is_null($penalty_sum)) {
-            throw new \InvalidArgumentException('non-nullable penalty_sum cannot be null');
-        }
-        $this->container['penalty_sum'] = $penalty_sum;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return \MagDv\Cargomart\Dto\ClaimStatus
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param \MagDv\Cargomart\Dto\ClaimStatus $status status
-     *
-     * @return self
-     */
-    public function setStatus($status)
-    {
-        if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
-        }
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets claimant
-     *
-     * @return \MagDv\Cargomart\Dto\ClaimantType|null
-     */
-    public function getClaimant()
-    {
-        return $this->container['claimant'];
-    }
-
-    /**
-     * Sets claimant
-     *
-     * @param \MagDv\Cargomart\Dto\ClaimantType|null $claimant claimant
-     *
-     * @return self
-     */
-    public function setClaimant($claimant)
-    {
-        if (is_null($claimant)) {
-            throw new \InvalidArgumentException('non-nullable claimant cannot be null');
-        }
-        $this->container['claimant'] = $claimant;
-
-        return $this;
-    }
-
-    /**
-     * Gets respondent
-     *
-     * @return \MagDv\Cargomart\Dto\ClaimantType|null
-     */
-    public function getRespondent()
-    {
-        return $this->container['respondent'];
-    }
-
-    /**
-     * Sets respondent
-     *
-     * @param \MagDv\Cargomart\Dto\ClaimantType|null $respondent respondent
-     *
-     * @return self
-     */
-    public function setRespondent($respondent)
-    {
-        if (is_null($respondent)) {
-            throw new \InvalidArgumentException('non-nullable respondent cannot be null');
-        }
-        $this->container['respondent'] = $respondent;
+        $this->container['route_point'] = $route_point;
 
         return $this;
     }

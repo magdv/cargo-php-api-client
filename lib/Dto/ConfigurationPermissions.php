@@ -166,7 +166,8 @@ class ConfigurationPermissions implements ModelInterface, ArrayAccess, \JsonSeri
         'view_contract_conclusion' => 'bool',
         'view_main_search' => 'bool',
         'order_multi_currency_param' => 'bool',
-        'view_claim_list' => 'bool'
+        'view_claim_list' => 'bool',
+        'sign_additional_agreement' => 'bool'
     ];
 
     /**
@@ -284,7 +285,8 @@ class ConfigurationPermissions implements ModelInterface, ArrayAccess, \JsonSeri
         'view_contract_conclusion' => null,
         'view_main_search' => null,
         'order_multi_currency_param' => null,
-        'view_claim_list' => null
+        'view_claim_list' => null,
+        'sign_additional_agreement' => null
     ];
 
     /**
@@ -400,7 +402,8 @@ class ConfigurationPermissions implements ModelInterface, ArrayAccess, \JsonSeri
         'view_contract_conclusion' => false,
         'view_main_search' => false,
         'order_multi_currency_param' => false,
-        'view_claim_list' => false
+        'view_claim_list' => false,
+        'sign_additional_agreement' => false
     ];
 
     /**
@@ -596,7 +599,8 @@ class ConfigurationPermissions implements ModelInterface, ArrayAccess, \JsonSeri
         'view_contract_conclusion' => 'viewContractConclusion',
         'view_main_search' => 'viewMainSearch',
         'order_multi_currency_param' => 'orderMultiCurrencyParam',
-        'view_claim_list' => 'viewClaimList'
+        'view_claim_list' => 'viewClaimList',
+        'sign_additional_agreement' => 'signAdditionalAgreement'
     ];
 
     /**
@@ -712,7 +716,8 @@ class ConfigurationPermissions implements ModelInterface, ArrayAccess, \JsonSeri
         'view_contract_conclusion' => 'setViewContractConclusion',
         'view_main_search' => 'setViewMainSearch',
         'order_multi_currency_param' => 'setOrderMultiCurrencyParam',
-        'view_claim_list' => 'setViewClaimList'
+        'view_claim_list' => 'setViewClaimList',
+        'sign_additional_agreement' => 'setSignAdditionalAgreement'
     ];
 
     /**
@@ -828,7 +833,8 @@ class ConfigurationPermissions implements ModelInterface, ArrayAccess, \JsonSeri
         'view_contract_conclusion' => 'getViewContractConclusion',
         'view_main_search' => 'getViewMainSearch',
         'order_multi_currency_param' => 'getOrderMultiCurrencyParam',
-        'view_claim_list' => 'getViewClaimList'
+        'view_claim_list' => 'getViewClaimList',
+        'sign_additional_agreement' => 'getSignAdditionalAgreement'
     ];
 
     /**
@@ -996,6 +1002,7 @@ class ConfigurationPermissions implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('view_main_search', $data ?? [], false);
         $this->setIfExists('order_multi_currency_param', $data ?? [], false);
         $this->setIfExists('view_claim_list', $data ?? [], false);
+        $this->setIfExists('sign_additional_agreement', $data ?? [], false);
     }
 
     /**
@@ -3952,6 +3959,33 @@ class ConfigurationPermissions implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable view_claim_list cannot be null');
         }
         $this->container['view_claim_list'] = $view_claim_list;
+
+        return $this;
+    }
+
+    /**
+     * Gets sign_additional_agreement
+     *
+     * @return bool|null
+     */
+    public function getSignAdditionalAgreement()
+    {
+        return $this->container['sign_additional_agreement'];
+    }
+
+    /**
+     * Sets sign_additional_agreement
+     *
+     * @param bool|null $sign_additional_agreement Доступ к подписанию доп. соглашения
+     *
+     * @return self
+     */
+    public function setSignAdditionalAgreement($sign_additional_agreement)
+    {
+        if (is_null($sign_additional_agreement)) {
+            throw new \InvalidArgumentException('non-nullable sign_additional_agreement cannot be null');
+        }
+        $this->container['sign_additional_agreement'] = $sign_additional_agreement;
 
         return $this;
     }

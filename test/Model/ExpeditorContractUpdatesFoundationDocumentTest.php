@@ -90,9 +90,9 @@ class ExpeditorContractUpdatesFoundationDocumentTest extends TestCase
     }
 
     /**
-     * Test attribute "date"
+     * Test attribute "end_date"
      */
-    public function testPropertyDate()
+    public function testPropertyEndDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

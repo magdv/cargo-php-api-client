@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Идентификатор заказа |
 **serial_id** | **int** | Порядковый номер заказа | [optional]
+**serial_number_and_version** | **string** | Порядковый номер с версией | [optional]
 **status_id** | **int** | Статуса заказа | [optional]
 **ext_status_id** | **int** | Расширенный статус заказа | [optional]
 **comment** | **string** | Комментарий к заказу | [optional]

@@ -1,6 +1,6 @@
 <?php
 /**
- * ClaimDowntimeResolutionRequest
+ * EcnInformationItem
  *
  * PHP version 7.4
  *
@@ -33,16 +33,15 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * ClaimDowntimeResolutionRequest Class Doc Comment
+ * EcnInformationItem Class Doc Comment
  *
  * @category Class
- * @description Данные для создания решения по требованию
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \JsonSerializable
+class EcnInformationItem implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +50,7 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ClaimDowntimeResolutionRequest';
+    protected static $openAPIModelName = 'EcnInformationItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +58,8 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'status' => '\MagDv\Cargomart\Dto\ClaimDowntimeResolutionEnum',
-        'reason' => 'string'
+        'id' => 'string',
+        'value' => 'string'
     ];
 
     /**
@@ -71,8 +70,8 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'status' => null,
-        'reason' => null
+        'id' => null,
+        'value' => null
     ];
 
     /**
@@ -81,8 +80,8 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'status' => false,
-        'reason' => false
+        'id' => false,
+        'value' => false
     ];
 
     /**
@@ -171,8 +170,8 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'status' => 'status',
-        'reason' => 'reason'
+        'id' => 'id',
+        'value' => 'value'
     ];
 
     /**
@@ -181,8 +180,8 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'status' => 'setStatus',
-        'reason' => 'setReason'
+        'id' => 'setId',
+        'value' => 'setValue'
     ];
 
     /**
@@ -191,8 +190,8 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'status' => 'getStatus',
-        'reason' => 'getReason'
+        'id' => 'getId',
+        'value' => 'getValue'
     ];
 
     /**
@@ -252,8 +251,8 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('status', $data ?? [], null);
-        $this->setIfExists('reason', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('value', $data ?? [], null);
     }
 
     /**
@@ -283,13 +282,12 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
     {
         $invalidProperties = [];
 
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
-        if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) > 2000)) {
-            $invalidProperties[] = "invalid value for 'reason', the character length must be smaller than or equal to 2000.";
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
         }
-
         return $invalidProperties;
     }
 
@@ -306,59 +304,55 @@ class ClaimDowntimeResolutionRequest implements ModelInterface, ArrayAccess, \Js
 
 
     /**
-     * Gets status
+     * Gets id
      *
-     * @return \MagDv\Cargomart\Dto\ClaimDowntimeResolutionEnum
+     * @return string
      */
-    public function getStatus()
+    public function getId()
     {
-        return $this->container['status'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets status
+     * Sets id
      *
-     * @param \MagDv\Cargomart\Dto\ClaimDowntimeResolutionEnum $status status
+     * @param string $id Идентификатор
      *
      * @return self
      */
-    public function setStatus($status)
+    public function setId($id)
     {
-        if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
-        $this->container['status'] = $status;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets reason
+     * Gets value
      *
-     * @return string|null
+     * @return string
      */
-    public function getReason()
+    public function getValue()
     {
-        return $this->container['reason'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets reason
+     * Sets value
      *
-     * @param string|null $reason Среднее текстовое сообщение
+     * @param string $value Значение
      *
      * @return self
      */
-    public function setReason($reason)
+    public function setValue($value)
     {
-        if (is_null($reason)) {
-            throw new \InvalidArgumentException('non-nullable reason cannot be null');
+        if (is_null($value)) {
+            throw new \InvalidArgumentException('non-nullable value cannot be null');
         }
-        if ((mb_strlen($reason) > 2000)) {
-            throw new \InvalidArgumentException('invalid length for $reason when calling ClaimDowntimeResolutionRequest., must be smaller than or equal to 2000.');
-        }
-
-        $this->container['reason'] = $reason;
+        $this->container['value'] = $value;
 
         return $this;
     }

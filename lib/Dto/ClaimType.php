@@ -1,6 +1,6 @@
 <?php
 /**
- * ClaimDowntimeResolutionEnum
+ * ClaimType
  *
  * PHP version 7.4
  *
@@ -31,22 +31,22 @@ namespace MagDv\Cargomart\Dto;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * ClaimDowntimeResolutionEnum Class Doc Comment
+ * ClaimType Class Doc Comment
  *
  * @category Class
- * @description Решение по требованию
+ * @description Тип требования
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class ClaimDowntimeResolutionEnum
+class ClaimType
 {
     /**
      * Possible values of this enum
      */
-    public const REJECTED = 'rejected';
+    public const DOWNTIME = 'downtime';
 
-    public const APPROVED = 'approved';
+    public const NON_DELIVERY_CAR = 'non-delivery-car';
 
     /**
      * Gets allowable values of the enum
@@ -55,8 +55,8 @@ class ClaimDowntimeResolutionEnum
     public static function getAllowableEnumValues()
     {
         return [
-            self::REJECTED,
-            self::APPROVED
+            self::DOWNTIME,
+            self::NON_DELIVERY_CAR
         ];
     }
 }

@@ -61,6 +61,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'string',
         'serial_id' => 'int',
+        'serial_number_and_version' => 'string',
         'status_id' => '\MagDv\Cargomart\Dto\OrderStatusEnum',
         'ext_status_id' => '\MagDv\Cargomart\Dto\OrderStatusEnum',
         'end_date' => '\DateTime',
@@ -206,6 +207,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => null,
         'serial_id' => null,
+        'serial_number_and_version' => null,
         'status_id' => null,
         'ext_status_id' => null,
         'end_date' => 'date-time',
@@ -349,6 +351,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => false,
         'serial_id' => false,
+        'serial_number_and_version' => false,
         'status_id' => false,
         'ext_status_id' => false,
         'end_date' => false,
@@ -572,6 +575,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'serial_id' => 'serialId',
+        'serial_number_and_version' => 'serialNumberAndVersion',
         'status_id' => 'statusId',
         'ext_status_id' => 'extStatusId',
         'end_date' => 'endDate',
@@ -715,6 +719,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'serial_id' => 'setSerialId',
+        'serial_number_and_version' => 'setSerialNumberAndVersion',
         'status_id' => 'setStatusId',
         'ext_status_id' => 'setExtStatusId',
         'end_date' => 'setEndDate',
@@ -858,6 +863,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'serial_id' => 'getSerialId',
+        'serial_number_and_version' => 'getSerialNumberAndVersion',
         'status_id' => 'getStatusId',
         'ext_status_id' => 'getExtStatusId',
         'end_date' => 'getEndDate',
@@ -1052,6 +1058,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('serial_id', $data ?? [], null);
+        $this->setIfExists('serial_number_and_version', $data ?? [], null);
         $this->setIfExists('status_id', $data ?? [], null);
         $this->setIfExists('ext_status_id', $data ?? [], null);
         $this->setIfExists('end_date', $data ?? [], null);
@@ -1324,6 +1331,33 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable serial_id cannot be null');
         }
         $this->container['serial_id'] = $serial_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets serial_number_and_version
+     *
+     * @return string|null
+     */
+    public function getSerialNumberAndVersion()
+    {
+        return $this->container['serial_number_and_version'];
+    }
+
+    /**
+     * Sets serial_number_and_version
+     *
+     * @param string|null $serial_number_and_version Порядковый номер с версией
+     *
+     * @return self
+     */
+    public function setSerialNumberAndVersion($serial_number_and_version)
+    {
+        if (is_null($serial_number_and_version)) {
+            throw new \InvalidArgumentException('non-nullable serial_number_and_version cannot be null');
+        }
+        $this->container['serial_number_and_version'] = $serial_number_and_version;
 
         return $this;
     }

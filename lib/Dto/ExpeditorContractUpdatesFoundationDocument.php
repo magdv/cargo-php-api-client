@@ -60,7 +60,7 @@ class ExpeditorContractUpdatesFoundationDocument implements ModelInterface, Arra
       */
     protected static $openAPITypes = [
         'type' => '\MagDv\Cargomart\Dto\ExpeditorContractUpdatesFoundationDocumentType',
-        'date' => '\DateTime'
+        'end_date' => '\DateTime'
     ];
 
     /**
@@ -72,7 +72,7 @@ class ExpeditorContractUpdatesFoundationDocument implements ModelInterface, Arra
       */
     protected static $openAPIFormats = [
         'type' => null,
-        'date' => 'date'
+        'end_date' => 'date'
     ];
 
     /**
@@ -82,7 +82,7 @@ class ExpeditorContractUpdatesFoundationDocument implements ModelInterface, Arra
       */
     protected static array $openAPINullables = [
         'type' => false,
-        'date' => false
+        'end_date' => false
     ];
 
     /**
@@ -172,7 +172,7 @@ class ExpeditorContractUpdatesFoundationDocument implements ModelInterface, Arra
      */
     protected static $attributeMap = [
         'type' => 'type',
-        'date' => 'date'
+        'end_date' => 'endDate'
     ];
 
     /**
@@ -182,7 +182,7 @@ class ExpeditorContractUpdatesFoundationDocument implements ModelInterface, Arra
      */
     protected static $setters = [
         'type' => 'setType',
-        'date' => 'setDate'
+        'end_date' => 'setEndDate'
     ];
 
     /**
@@ -192,7 +192,7 @@ class ExpeditorContractUpdatesFoundationDocument implements ModelInterface, Arra
      */
     protected static $getters = [
         'type' => 'getType',
-        'date' => 'getDate'
+        'end_date' => 'getEndDate'
     ];
 
     /**
@@ -253,7 +253,7 @@ class ExpeditorContractUpdatesFoundationDocument implements ModelInterface, Arra
     public function __construct(?array $data = null)
     {
         $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('date', $data ?? [], null);
+        $this->setIfExists('end_date', $data ?? [], null);
     }
 
     /**
@@ -329,28 +329,28 @@ class ExpeditorContractUpdatesFoundationDocument implements ModelInterface, Arra
     }
 
     /**
-     * Gets date
+     * Gets end_date
      *
      * @return \DateTime|null
      */
-    public function getDate()
+    public function getEndDate()
     {
-        return $this->container['date'];
+        return $this->container['end_date'];
     }
 
     /**
-     * Sets date
+     * Sets end_date
      *
-     * @param \DateTime|null $date Дата
+     * @param \DateTime|null $end_date Дата
      *
      * @return self
      */
-    public function setDate($date)
+    public function setEndDate($end_date)
     {
-        if (is_null($date)) {
-            throw new \InvalidArgumentException('non-nullable date cannot be null');
+        if (is_null($end_date)) {
+            throw new \InvalidArgumentException('non-nullable end_date cannot be null');
         }
-        $this->container['date'] = $date;
+        $this->container['end_date'] = $end_date;
 
         return $this;
     }

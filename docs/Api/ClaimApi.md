@@ -10,7 +10,7 @@ Method | HTTP request | Description
 ## `apiV2ClaimGet()`
 
 ```php
-apiV2ClaimGet($filter_claim_number, $filter_serial_id, $filter_status, $filter_claimant, $filter_carrier, $filter_consignor, $filter_type, $sort, $per_page, $page): \MagDv\Cargomart\Dto\ClaimListResponse
+apiV2ClaimGet($filter_claim_number, $filter_order_serial_id, $filter_claim_type, $filter_claim_status, $filter_type, $sort, $per_page, $page): \MagDv\Cargomart\Dto\ClaimListResponse
 ```
 
 Список требований на оплату
@@ -40,18 +40,16 @@ $apiInstance = new MagDv\Cargomart\Api\ClaimApi(
     $config
 );
 $filter_claim_number = 'filter_claim_number_example'; // string | Номер требования
-$filter_serial_id = 'filter_serial_id_example'; // string | Номер заявки
-$filter_status = array(new \MagDv\Cargomart\Dto\\MagDv\Cargomart\Dto\ClaimStatus()); // \MagDv\Cargomart\Dto\ClaimStatus[] | Статус требования
-$filter_claimant = new \MagDv\Cargomart\Dto\\MagDv\Cargomart\Dto\ClaimantType(); // \MagDv\Cargomart\Dto\ClaimantType | Заявитель требования
-$filter_carrier = 'filter_carrier_example'; // string | Хэш код компании перевозчика
-$filter_consignor = 'filter_consignor_example'; // string | Хэш код компании заказчика
+$filter_order_serial_id = 'filter_order_serial_id_example'; // string | Номер заявки
+$filter_claim_type = new \MagDv\Cargomart\Dto\\MagDv\Cargomart\Dto\ClaimType(); // \MagDv\Cargomart\Dto\ClaimType | Тип требования
+$filter_claim_status = array(new \MagDv\Cargomart\Dto\\MagDv\Cargomart\Dto\ClaimStatus()); // \MagDv\Cargomart\Dto\ClaimStatus[] | Статус требования
 $filter_type = new \MagDv\Cargomart\Dto\\MagDv\Cargomart\Dto\ClaimFilterTypeEnum(); // \MagDv\Cargomart\Dto\ClaimFilterTypeEnum | Тип требования
 $sort = array('sort_example'); // string[] | Сортировка списка требований. Поддерживается сортировка по полю date. При наличии префикса \"-\" сортировка будет произведена в обратном порядке.
 $per_page = 20; // int | Количество элементов на страницу
 $page = 1; // int | Номер страницы
 
 try {
-    $result = $apiInstance->apiV2ClaimGet($filter_claim_number, $filter_serial_id, $filter_status, $filter_claimant, $filter_carrier, $filter_consignor, $filter_type, $sort, $per_page, $page);
+    $result = $apiInstance->apiV2ClaimGet($filter_claim_number, $filter_order_serial_id, $filter_claim_type, $filter_claim_status, $filter_type, $sort, $per_page, $page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ClaimApi->apiV2ClaimGet: ', $e->getMessage(), PHP_EOL;
@@ -63,11 +61,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_claim_number** | **string**| Номер требования | [optional]
- **filter_serial_id** | **string**| Номер заявки | [optional]
- **filter_status** | [**\MagDv\Cargomart\Dto\ClaimStatus[]**](../Model/\MagDv\Cargomart\Dto\ClaimStatus.md)| Статус требования | [optional]
- **filter_claimant** | [**\MagDv\Cargomart\Dto\ClaimantType**](../Model/.md)| Заявитель требования | [optional]
- **filter_carrier** | **string**| Хэш код компании перевозчика | [optional]
- **filter_consignor** | **string**| Хэш код компании заказчика | [optional]
+ **filter_order_serial_id** | **string**| Номер заявки | [optional]
+ **filter_claim_type** | [**\MagDv\Cargomart\Dto\ClaimType**](../Model/.md)| Тип требования | [optional]
+ **filter_claim_status** | [**\MagDv\Cargomart\Dto\ClaimStatus[]**](../Model/\MagDv\Cargomart\Dto\ClaimStatus.md)| Статус требования | [optional]
  **filter_type** | [**\MagDv\Cargomart\Dto\ClaimFilterTypeEnum**](../Model/.md)| Тип требования | [optional]
  **sort** | [**string[]**](../Model/string.md)| Сортировка списка требований. Поддерживается сортировка по полю date. При наличии префикса \&quot;-\&quot; сортировка будет произведена в обратном порядке. | [optional]
  **per_page** | **int**| Количество элементов на страницу | [optional] [default to 20]

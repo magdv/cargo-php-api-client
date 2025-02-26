@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **truck_search_time_end** | **\DateTime** | Крайняя дата назначения машины | [optional]
 **winner_date** | **\DateTime** | Дата и время когда был определен победитель | [optional]
 **serial_id** | **int** | Порядковый номер |
+**serial_number_and_version** | **string** | Порядковый номер с версией |
 **customer_id** | **string** | Id клиента |
 **curators** | **int[]** | Список идентифкаторов контактных лиц |
 **expeditor_id** | **string** | Идентификатор экспедитора | [optional]

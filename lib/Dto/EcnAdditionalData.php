@@ -75,7 +75,8 @@ class EcnAdditionalData implements ModelInterface, ArrayAccess, \JsonSerializabl
         'loader_person' => '\MagDv\Cargomart\Dto\EcnAdditionalDataLoaderPerson',
         'consignor_mark' => '\MagDv\Cargomart\Dto\ConsignorMarkEnum',
         'mark_comment' => 'string',
-        'notify_params' => '\MagDv\Cargomart\Dto\NotifyParamItem[]'
+        'notify_params' => '\MagDv\Cargomart\Dto\NotifyParamItem[]',
+        'information' => '\MagDv\Cargomart\Dto\EcnInformation'
     ];
 
     /**
@@ -102,7 +103,8 @@ class EcnAdditionalData implements ModelInterface, ArrayAccess, \JsonSerializabl
         'loader_person' => null,
         'consignor_mark' => null,
         'mark_comment' => null,
-        'notify_params' => null
+        'notify_params' => null,
+        'information' => null
     ];
 
     /**
@@ -127,7 +129,8 @@ class EcnAdditionalData implements ModelInterface, ArrayAccess, \JsonSerializabl
         'loader_person' => false,
         'consignor_mark' => false,
         'mark_comment' => false,
-        'notify_params' => false
+        'notify_params' => false,
+        'information' => false
     ];
 
     /**
@@ -232,7 +235,8 @@ class EcnAdditionalData implements ModelInterface, ArrayAccess, \JsonSerializabl
         'loader_person' => 'loaderPerson',
         'consignor_mark' => 'consignorMark',
         'mark_comment' => 'markComment',
-        'notify_params' => 'notifyParams'
+        'notify_params' => 'notifyParams',
+        'information' => 'information'
     ];
 
     /**
@@ -257,7 +261,8 @@ class EcnAdditionalData implements ModelInterface, ArrayAccess, \JsonSerializabl
         'loader_person' => 'setLoaderPerson',
         'consignor_mark' => 'setConsignorMark',
         'mark_comment' => 'setMarkComment',
-        'notify_params' => 'setNotifyParams'
+        'notify_params' => 'setNotifyParams',
+        'information' => 'setInformation'
     ];
 
     /**
@@ -282,7 +287,8 @@ class EcnAdditionalData implements ModelInterface, ArrayAccess, \JsonSerializabl
         'loader_person' => 'getLoaderPerson',
         'consignor_mark' => 'getConsignorMark',
         'mark_comment' => 'getMarkComment',
-        'notify_params' => 'getNotifyParams'
+        'notify_params' => 'getNotifyParams',
+        'information' => 'getInformation'
     ];
 
     /**
@@ -359,6 +365,7 @@ class EcnAdditionalData implements ModelInterface, ArrayAccess, \JsonSerializabl
         $this->setIfExists('consignor_mark', $data ?? [], null);
         $this->setIfExists('mark_comment', $data ?? [], null);
         $this->setIfExists('notify_params', $data ?? [], null);
+        $this->setIfExists('information', $data ?? [], null);
     }
 
     /**
@@ -867,6 +874,33 @@ class EcnAdditionalData implements ModelInterface, ArrayAccess, \JsonSerializabl
             throw new \InvalidArgumentException('non-nullable notify_params cannot be null');
         }
         $this->container['notify_params'] = $notify_params;
+
+        return $this;
+    }
+
+    /**
+     * Gets information
+     *
+     * @return \MagDv\Cargomart\Dto\EcnInformation|null
+     */
+    public function getInformation()
+    {
+        return $this->container['information'];
+    }
+
+    /**
+     * Sets information
+     *
+     * @param \MagDv\Cargomart\Dto\EcnInformation|null $information information
+     *
+     * @return self
+     */
+    public function setInformation($information)
+    {
+        if (is_null($information)) {
+            throw new \InvalidArgumentException('non-nullable information cannot be null');
+        }
+        $this->container['information'] = $information;
 
         return $this;
     }

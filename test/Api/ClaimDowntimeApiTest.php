@@ -73,12 +73,12 @@ class ClaimDowntimeApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2ClaimDowntimeIdCancelPost
+     * Test case for apiV2ClaimDowntimeIdApprovePost
      *
-     * Отмена претензии о простое.
+     * Согласование требования по простою.
      *
      */
-    public function testApiV2ClaimDowntimeIdCancelPost()
+    public function testApiV2ClaimDowntimeIdApprovePost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -109,12 +109,24 @@ class ClaimDowntimeApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2ClaimDowntimeIdResolvePost
+     * Test case for apiV2ClaimDowntimeIdRejectPost
      *
-     * Решение по претензии о простое.
+     * Отклонение требования по простою.
      *
      */
-    public function testApiV2ClaimDowntimeIdResolvePost()
+    public function testApiV2ClaimDowntimeIdRejectPost()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for apiV2ClaimDowntimeIdRevokePost
+     *
+     * Отзыв требования по простою.
+     *
+     */
+    public function testApiV2ClaimDowntimeIdRevokePost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -123,7 +135,7 @@ class ClaimDowntimeApiTest extends TestCase
     /**
      * Test case for apiV2ClaimDowntimePost
      *
-     * Создание претензии о простое.
+     * Подача (создание) требования по простою.
      *
      */
     public function testApiV2ClaimDowntimePost()

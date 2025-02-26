@@ -1,6 +1,6 @@
 <?php
 /**
- * ClaimItem
+ * Claim
  *
  * PHP version 7.4
  *
@@ -33,7 +33,7 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * ClaimItem Class Doc Comment
+ * Claim Class Doc Comment
  *
  * @category Class
  * @description Объект требования на оплату
@@ -42,7 +42,7 @@ use \MagDv\Cargomart\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
+class Claim implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ClaimItem';
+    protected static $openAPIModelName = 'Claim';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -61,15 +61,13 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'string',
         'number' => 'string',
-        'date' => '\DateTime',
-        'serial_id' => 'int',
-        'order_id' => 'string',
-        'consignor' => '\MagDv\Cargomart\Dto\CompanyShort',
-        'carrier' => '\MagDv\Cargomart\Dto\CompanyShort',
-        'penalty_sum' => '\MagDv\Cargomart\Dto\PriceValue',
+        'type' => '\MagDv\Cargomart\Dto\ClaimType',
         'status' => '\MagDv\Cargomart\Dto\ClaimStatus',
-        'claimant' => '\MagDv\Cargomart\Dto\ClaimantType',
-        'respondent' => '\MagDv\Cargomart\Dto\ClaimantType'
+        'date' => '\DateTime',
+        'order' => '\MagDv\Cargomart\Dto\ClaimOrder',
+        'claimant' => '\MagDv\Cargomart\Dto\ClaimParticipant',
+        'respondent' => '\MagDv\Cargomart\Dto\ClaimParticipant',
+        'amount' => '\MagDv\Cargomart\Dto\PriceValue'
     ];
 
     /**
@@ -82,15 +80,13 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => 'uuid',
         'number' => null,
-        'date' => 'date-time',
-        'serial_id' => null,
-        'order_id' => 'cm-uuid',
-        'consignor' => null,
-        'carrier' => null,
-        'penalty_sum' => null,
+        'type' => null,
         'status' => null,
+        'date' => 'date',
+        'order' => null,
         'claimant' => null,
-        'respondent' => null
+        'respondent' => null,
+        'amount' => null
     ];
 
     /**
@@ -101,15 +97,13 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => false,
         'number' => false,
-        'date' => false,
-        'serial_id' => false,
-        'order_id' => false,
-        'consignor' => false,
-        'carrier' => false,
-        'penalty_sum' => false,
+        'type' => false,
         'status' => false,
+        'date' => false,
+        'order' => false,
         'claimant' => false,
-        'respondent' => false
+        'respondent' => false,
+        'amount' => false
     ];
 
     /**
@@ -200,15 +194,13 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'number' => 'number',
-        'date' => 'date',
-        'serial_id' => 'serialId',
-        'order_id' => 'orderId',
-        'consignor' => 'consignor',
-        'carrier' => 'carrier',
-        'penalty_sum' => 'penaltySum',
+        'type' => 'type',
         'status' => 'status',
+        'date' => 'date',
+        'order' => 'order',
         'claimant' => 'claimant',
-        'respondent' => 'respondent'
+        'respondent' => 'respondent',
+        'amount' => 'amount'
     ];
 
     /**
@@ -219,15 +211,13 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'number' => 'setNumber',
-        'date' => 'setDate',
-        'serial_id' => 'setSerialId',
-        'order_id' => 'setOrderId',
-        'consignor' => 'setConsignor',
-        'carrier' => 'setCarrier',
-        'penalty_sum' => 'setPenaltySum',
+        'type' => 'setType',
         'status' => 'setStatus',
+        'date' => 'setDate',
+        'order' => 'setOrder',
         'claimant' => 'setClaimant',
-        'respondent' => 'setRespondent'
+        'respondent' => 'setRespondent',
+        'amount' => 'setAmount'
     ];
 
     /**
@@ -238,15 +228,13 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'number' => 'getNumber',
-        'date' => 'getDate',
-        'serial_id' => 'getSerialId',
-        'order_id' => 'getOrderId',
-        'consignor' => 'getConsignor',
-        'carrier' => 'getCarrier',
-        'penalty_sum' => 'getPenaltySum',
+        'type' => 'getType',
         'status' => 'getStatus',
+        'date' => 'getDate',
+        'order' => 'getOrder',
         'claimant' => 'getClaimant',
-        'respondent' => 'getRespondent'
+        'respondent' => 'getRespondent',
+        'amount' => 'getAmount'
     ];
 
     /**
@@ -308,15 +296,13 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('number', $data ?? [], null);
-        $this->setIfExists('date', $data ?? [], null);
-        $this->setIfExists('serial_id', $data ?? [], null);
-        $this->setIfExists('order_id', $data ?? [], null);
-        $this->setIfExists('consignor', $data ?? [], null);
-        $this->setIfExists('carrier', $data ?? [], null);
-        $this->setIfExists('penalty_sum', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
+        $this->setIfExists('date', $data ?? [], null);
+        $this->setIfExists('order', $data ?? [], null);
         $this->setIfExists('claimant', $data ?? [], null);
         $this->setIfExists('respondent', $data ?? [], null);
+        $this->setIfExists('amount', $data ?? [], null);
     }
 
     /**
@@ -352,18 +338,26 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['number'] === null) {
             $invalidProperties[] = "'number' can't be null";
         }
-        if ($this->container['date'] === null) {
-            $invalidProperties[] = "'date' can't be null";
-        }
-        if (!is_null($this->container['serial_id']) && ($this->container['serial_id'] < 0)) {
-            $invalidProperties[] = "invalid value for 'serial_id', must be bigger than or equal to 0.";
-        }
-
-        if ($this->container['order_id'] === null) {
-            $invalidProperties[] = "'order_id' can't be null";
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
         }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
+        }
+        if ($this->container['date'] === null) {
+            $invalidProperties[] = "'date' can't be null";
+        }
+        if ($this->container['order'] === null) {
+            $invalidProperties[] = "'order' can't be null";
+        }
+        if ($this->container['claimant'] === null) {
+            $invalidProperties[] = "'claimant' can't be null";
+        }
+        if ($this->container['respondent'] === null) {
+            $invalidProperties[] = "'respondent' can't be null";
+        }
+        if ($this->container['amount'] === null) {
+            $invalidProperties[] = "'amount' can't be null";
         }
         return $invalidProperties;
     }
@@ -435,168 +429,28 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets date
+     * Gets type
      *
-     * @return \DateTime
+     * @return \MagDv\Cargomart\Dto\ClaimType
      */
-    public function getDate()
+    public function getType()
     {
-        return $this->container['date'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets date
+     * Sets type
      *
-     * @param \DateTime $date Дата создания требования (в часовом поясе создателя требования)
+     * @param \MagDv\Cargomart\Dto\ClaimType $type type
      *
      * @return self
      */
-    public function setDate($date)
+    public function setType($type)
     {
-        if (is_null($date)) {
-            throw new \InvalidArgumentException('non-nullable date cannot be null');
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
         }
-        $this->container['date'] = $date;
-
-        return $this;
-    }
-
-    /**
-     * Gets serial_id
-     *
-     * @return int|null
-     */
-    public function getSerialId()
-    {
-        return $this->container['serial_id'];
-    }
-
-    /**
-     * Sets serial_id
-     *
-     * @param int|null $serial_id Порядковый номер заказа
-     *
-     * @return self
-     */
-    public function setSerialId($serial_id)
-    {
-        if (is_null($serial_id)) {
-            throw new \InvalidArgumentException('non-nullable serial_id cannot be null');
-        }
-
-        if (($serial_id < 0)) {
-            throw new \InvalidArgumentException('invalid value for $serial_id when calling ClaimItem., must be bigger than or equal to 0.');
-        }
-
-        $this->container['serial_id'] = $serial_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets order_id
-     *
-     * @return string
-     */
-    public function getOrderId()
-    {
-        return $this->container['order_id'];
-    }
-
-    /**
-     * Sets order_id
-     *
-     * @param string $order_id UUID или хэш объекта
-     *
-     * @return self
-     */
-    public function setOrderId($order_id)
-    {
-        if (is_null($order_id)) {
-            throw new \InvalidArgumentException('non-nullable order_id cannot be null');
-        }
-        $this->container['order_id'] = $order_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets consignor
-     *
-     * @return \MagDv\Cargomart\Dto\CompanyShort|null
-     */
-    public function getConsignor()
-    {
-        return $this->container['consignor'];
-    }
-
-    /**
-     * Sets consignor
-     *
-     * @param \MagDv\Cargomart\Dto\CompanyShort|null $consignor Заказчик
-     *
-     * @return self
-     */
-    public function setConsignor($consignor)
-    {
-        if (is_null($consignor)) {
-            throw new \InvalidArgumentException('non-nullable consignor cannot be null');
-        }
-        $this->container['consignor'] = $consignor;
-
-        return $this;
-    }
-
-    /**
-     * Gets carrier
-     *
-     * @return \MagDv\Cargomart\Dto\CompanyShort|null
-     */
-    public function getCarrier()
-    {
-        return $this->container['carrier'];
-    }
-
-    /**
-     * Sets carrier
-     *
-     * @param \MagDv\Cargomart\Dto\CompanyShort|null $carrier Перевозчик
-     *
-     * @return self
-     */
-    public function setCarrier($carrier)
-    {
-        if (is_null($carrier)) {
-            throw new \InvalidArgumentException('non-nullable carrier cannot be null');
-        }
-        $this->container['carrier'] = $carrier;
-
-        return $this;
-    }
-
-    /**
-     * Gets penalty_sum
-     *
-     * @return \MagDv\Cargomart\Dto\PriceValue|null
-     */
-    public function getPenaltySum()
-    {
-        return $this->container['penalty_sum'];
-    }
-
-    /**
-     * Sets penalty_sum
-     *
-     * @param \MagDv\Cargomart\Dto\PriceValue|null $penalty_sum Рассчитанная сумма штрафа
-     *
-     * @return self
-     */
-    public function setPenaltySum($penalty_sum)
-    {
-        if (is_null($penalty_sum)) {
-            throw new \InvalidArgumentException('non-nullable penalty_sum cannot be null');
-        }
-        $this->container['penalty_sum'] = $penalty_sum;
+        $this->container['type'] = $type;
 
         return $this;
     }
@@ -629,9 +483,63 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->container['date'];
+    }
+
+    /**
+     * Sets date
+     *
+     * @param \DateTime $date Дата подачи требования
+     *
+     * @return self
+     */
+    public function setDate($date)
+    {
+        if (is_null($date)) {
+            throw new \InvalidArgumentException('non-nullable date cannot be null');
+        }
+        $this->container['date'] = $date;
+
+        return $this;
+    }
+
+    /**
+     * Gets order
+     *
+     * @return \MagDv\Cargomart\Dto\ClaimOrder
+     */
+    public function getOrder()
+    {
+        return $this->container['order'];
+    }
+
+    /**
+     * Sets order
+     *
+     * @param \MagDv\Cargomart\Dto\ClaimOrder $order order
+     *
+     * @return self
+     */
+    public function setOrder($order)
+    {
+        if (is_null($order)) {
+            throw new \InvalidArgumentException('non-nullable order cannot be null');
+        }
+        $this->container['order'] = $order;
+
+        return $this;
+    }
+
+    /**
      * Gets claimant
      *
-     * @return \MagDv\Cargomart\Dto\ClaimantType|null
+     * @return \MagDv\Cargomart\Dto\ClaimParticipant
      */
     public function getClaimant()
     {
@@ -641,7 +549,7 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets claimant
      *
-     * @param \MagDv\Cargomart\Dto\ClaimantType|null $claimant claimant
+     * @param \MagDv\Cargomart\Dto\ClaimParticipant $claimant Реквизиты заявителя
      *
      * @return self
      */
@@ -658,7 +566,7 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets respondent
      *
-     * @return \MagDv\Cargomart\Dto\ClaimantType|null
+     * @return \MagDv\Cargomart\Dto\ClaimParticipant
      */
     public function getRespondent()
     {
@@ -668,7 +576,7 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets respondent
      *
-     * @param \MagDv\Cargomart\Dto\ClaimantType|null $respondent respondent
+     * @param \MagDv\Cargomart\Dto\ClaimParticipant $respondent Реквизиты ответчика
      *
      * @return self
      */
@@ -678,6 +586,33 @@ class ClaimItem implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable respondent cannot be null');
         }
         $this->container['respondent'] = $respondent;
+
+        return $this;
+    }
+
+    /**
+     * Gets amount
+     *
+     * @return \MagDv\Cargomart\Dto\PriceValue
+     */
+    public function getAmount()
+    {
+        return $this->container['amount'];
+    }
+
+    /**
+     * Sets amount
+     *
+     * @param \MagDv\Cargomart\Dto\PriceValue $amount Сумма штрафа
+     *
+     * @return self
+     */
+    public function setAmount($amount)
+    {
+        if (is_null($amount)) {
+            throw new \InvalidArgumentException('non-nullable amount cannot be null');
+        }
+        $this->container['amount'] = $amount;
 
         return $this;
     }

@@ -61,6 +61,7 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'string',
         'serial_id' => 'int',
+        'serial_number_and_version' => 'string',
         'status' => '\MagDv\Cargomart\Dto\ProposalStatusEnum',
         'customer_id' => 'string',
         'search_range' => '\MagDv\Cargomart\Dto\DateTimeRange',
@@ -101,6 +102,7 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => 'uuid',
         'serial_id' => null,
+        'serial_number_and_version' => null,
         'status' => null,
         'customer_id' => null,
         'search_range' => null,
@@ -139,6 +141,7 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => false,
         'serial_id' => false,
+        'serial_number_and_version' => false,
         'status' => false,
         'customer_id' => false,
         'search_range' => false,
@@ -257,6 +260,7 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'serial_id' => 'serialId',
+        'serial_number_and_version' => 'serialNumberAndVersion',
         'status' => 'status',
         'customer_id' => 'customerId',
         'search_range' => 'searchRange',
@@ -295,6 +299,7 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'serial_id' => 'setSerialId',
+        'serial_number_and_version' => 'setSerialNumberAndVersion',
         'status' => 'setStatus',
         'customer_id' => 'setCustomerId',
         'search_range' => 'setSearchRange',
@@ -333,6 +338,7 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'serial_id' => 'getSerialId',
+        'serial_number_and_version' => 'getSerialNumberAndVersion',
         'status' => 'getStatus',
         'customer_id' => 'getCustomerId',
         'search_range' => 'getSearchRange',
@@ -422,6 +428,7 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('serial_id', $data ?? [], null);
+        $this->setIfExists('serial_number_and_version', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('customer_id', $data ?? [], null);
         $this->setIfExists('search_range', $data ?? [], null);
@@ -573,6 +580,33 @@ class ShortListItem implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable serial_id cannot be null');
         }
         $this->container['serial_id'] = $serial_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets serial_number_and_version
+     *
+     * @return string|null
+     */
+    public function getSerialNumberAndVersion()
+    {
+        return $this->container['serial_number_and_version'];
+    }
+
+    /**
+     * Sets serial_number_and_version
+     *
+     * @param string|null $serial_number_and_version Порядковый номер с версией
+     *
+     * @return self
+     */
+    public function setSerialNumberAndVersion($serial_number_and_version)
+    {
+        if (is_null($serial_number_and_version)) {
+            throw new \InvalidArgumentException('non-nullable serial_number_and_version cannot be null');
+        }
+        $this->container['serial_number_and_version'] = $serial_number_and_version;
 
         return $this;
     }

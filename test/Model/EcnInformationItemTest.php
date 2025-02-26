@@ -1,6 +1,6 @@
 <?php
 /**
- * ClaimDowntimeResolutionEnumTest
+ * EcnInformationItemTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace MagDv\Cargomart\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ClaimDowntimeResolutionEnumTest Class Doc Comment
+ * EcnInformationItemTest Class Doc Comment
  *
  * @category    Class
- * @description Решение по требованию
+ * @description EcnInformationItem
  * @package     MagDv\Cargomart
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ClaimDowntimeResolutionEnumTest extends TestCase
+class EcnInformationItemTest extends TestCase
 {
 
     /**
@@ -72,9 +72,27 @@ class ClaimDowntimeResolutionEnumTest extends TestCase
     }
 
     /**
-     * Test "ClaimDowntimeResolutionEnum"
+     * Test "EcnInformationItem"
      */
-    public function testClaimDowntimeResolutionEnum()
+    public function testEcnInformationItem()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "value"
+     */
+    public function testPropertyValue()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -62,6 +62,7 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => 'string',
         'draft_id' => 'string',
         'serial_id' => 'int',
+        'serial_number_and_version' => 'string',
         'status_id' => '\MagDv\Cargomart\Dto\OrderStatusEnum',
         'ext_status_id' => '\MagDv\Cargomart\Dto\OrderStatusEnum',
         'type' => '\MagDv\Cargomart\Dto\OrderType',
@@ -174,6 +175,7 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => null,
         'draft_id' => null,
         'serial_id' => null,
+        'serial_number_and_version' => null,
         'status_id' => null,
         'ext_status_id' => null,
         'type' => null,
@@ -284,6 +286,7 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => false,
         'draft_id' => false,
         'serial_id' => false,
+        'serial_number_and_version' => false,
         'status_id' => false,
         'ext_status_id' => false,
         'type' => false,
@@ -474,6 +477,7 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => 'id',
         'draft_id' => 'draftId',
         'serial_id' => 'serialId',
+        'serial_number_and_version' => 'serialNumberAndVersion',
         'status_id' => 'statusId',
         'ext_status_id' => 'extStatusId',
         'type' => 'type',
@@ -584,6 +588,7 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => 'setId',
         'draft_id' => 'setDraftId',
         'serial_id' => 'setSerialId',
+        'serial_number_and_version' => 'setSerialNumberAndVersion',
         'status_id' => 'setStatusId',
         'ext_status_id' => 'setExtStatusId',
         'type' => 'setType',
@@ -694,6 +699,7 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'id' => 'getId',
         'draft_id' => 'getDraftId',
         'serial_id' => 'getSerialId',
+        'serial_number_and_version' => 'getSerialNumberAndVersion',
         'status_id' => 'getStatusId',
         'ext_status_id' => 'getExtStatusId',
         'type' => 'getType',
@@ -855,6 +861,7 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('draft_id', $data ?? [], null);
         $this->setIfExists('serial_id', $data ?? [], null);
+        $this->setIfExists('serial_number_and_version', $data ?? [], null);
         $this->setIfExists('status_id', $data ?? [], null);
         $this->setIfExists('ext_status_id', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
@@ -1119,6 +1126,33 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable serial_id cannot be null');
         }
         $this->container['serial_id'] = $serial_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets serial_number_and_version
+     *
+     * @return string|null
+     */
+    public function getSerialNumberAndVersion()
+    {
+        return $this->container['serial_number_and_version'];
+    }
+
+    /**
+     * Sets serial_number_and_version
+     *
+     * @param string|null $serial_number_and_version Порядковый номер с версией
+     *
+     * @return self
+     */
+    public function setSerialNumberAndVersion($serial_number_and_version)
+    {
+        if (is_null($serial_number_and_version)) {
+            throw new \InvalidArgumentException('non-nullable serial_number_and_version cannot be null');
+        }
+        $this->container['serial_number_and_version'] = $serial_number_and_version;
 
         return $this;
     }

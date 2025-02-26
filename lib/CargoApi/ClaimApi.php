@@ -179,11 +179,9 @@ class ClaimApi
      * Список требований на оплату
      *
      * @param  string $filter_claim_number Номер требования (optional)
-     * @param  string $filter_serial_id Номер заявки (optional)
-     * @param  \MagDv\Cargomart\Dto\ClaimStatus[] $filter_status Статус требования (optional)
-     * @param  \MagDv\Cargomart\Dto\ClaimantType $filter_claimant Заявитель требования (optional)
-     * @param  string $filter_carrier Хэш код компании перевозчика (optional)
-     * @param  string $filter_consignor Хэш код компании заказчика (optional)
+     * @param  string $filter_order_serial_id Номер заявки (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimType $filter_claim_type Тип требования (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimStatus[] $filter_claim_status Статус требования (optional)
      * @param  \MagDv\Cargomart\Dto\ClaimFilterTypeEnum $filter_type Тип требования (optional)
      * @param  string[] $sort Сортировка списка требований. Поддерживается сортировка по полю date. При наличии префикса \&quot;-\&quot; сортировка будет произведена в обратном порядке. (optional)
      * @param  int $per_page Количество элементов на страницу (optional, default to 20)
@@ -193,9 +191,9 @@ class ClaimApi
      * @throws \InvalidArgumentException
      * @return \MagDv\Cargomart\Dto\ClaimListResponse
      */
-    public function apiV2ClaimGet($filter_claim_number = null, $filter_serial_id = null, $filter_status = null, $filter_claimant = null, $filter_carrier = null, $filter_consignor = null, $filter_type = null, $sort = null, $per_page = 20, $page = 1)
+    public function apiV2ClaimGet($filter_claim_number = null, $filter_order_serial_id = null, $filter_claim_type = null, $filter_claim_status = null, $filter_type = null, $sort = null, $per_page = 20, $page = 1)
     {
-        list($response) = $this->apiV2ClaimGetWithHttpInfo($filter_claim_number, $filter_serial_id, $filter_status, $filter_claimant, $filter_carrier, $filter_consignor, $filter_type, $sort, $per_page, $page);
+        list($response) = $this->apiV2ClaimGetWithHttpInfo($filter_claim_number, $filter_order_serial_id, $filter_claim_type, $filter_claim_status, $filter_type, $sort, $per_page, $page);
         return $response;
     }
 
@@ -205,11 +203,9 @@ class ClaimApi
      * Список требований на оплату
      *
      * @param  string $filter_claim_number Номер требования (optional)
-     * @param  string $filter_serial_id Номер заявки (optional)
-     * @param  \MagDv\Cargomart\Dto\ClaimStatus[] $filter_status Статус требования (optional)
-     * @param  \MagDv\Cargomart\Dto\ClaimantType $filter_claimant Заявитель требования (optional)
-     * @param  string $filter_carrier Хэш код компании перевозчика (optional)
-     * @param  string $filter_consignor Хэш код компании заказчика (optional)
+     * @param  string $filter_order_serial_id Номер заявки (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimType $filter_claim_type Тип требования (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimStatus[] $filter_claim_status Статус требования (optional)
      * @param  \MagDv\Cargomart\Dto\ClaimFilterTypeEnum $filter_type Тип требования (optional)
      * @param  string[] $sort Сортировка списка требований. Поддерживается сортировка по полю date. При наличии префикса \&quot;-\&quot; сортировка будет произведена в обратном порядке. (optional)
      * @param  int $per_page Количество элементов на страницу (optional, default to 20)
@@ -219,9 +215,9 @@ class ClaimApi
      * @throws \InvalidArgumentException
      * @return array of \MagDv\Cargomart\Dto\ClaimListResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV2ClaimGetWithHttpInfo($filter_claim_number = null, $filter_serial_id = null, $filter_status = null, $filter_claimant = null, $filter_carrier = null, $filter_consignor = null, $filter_type = null, $sort = null, $per_page = 20, $page = 1)
+    public function apiV2ClaimGetWithHttpInfo($filter_claim_number = null, $filter_order_serial_id = null, $filter_claim_type = null, $filter_claim_status = null, $filter_type = null, $sort = null, $per_page = 20, $page = 1)
     {
-        $request = $this->apiV2ClaimGetRequest($filter_claim_number, $filter_serial_id, $filter_status, $filter_claimant, $filter_carrier, $filter_consignor, $filter_type, $sort, $per_page, $page);
+        $request = $this->apiV2ClaimGetRequest($filter_claim_number, $filter_order_serial_id, $filter_claim_type, $filter_claim_status, $filter_type, $sort, $per_page, $page);
 
         try {
             try {
@@ -298,11 +294,9 @@ class ClaimApi
      * Список требований на оплату
      *
      * @param  string $filter_claim_number Номер требования (optional)
-     * @param  string $filter_serial_id Номер заявки (optional)
-     * @param  \MagDv\Cargomart\Dto\ClaimStatus[] $filter_status Статус требования (optional)
-     * @param  \MagDv\Cargomart\Dto\ClaimantType $filter_claimant Заявитель требования (optional)
-     * @param  string $filter_carrier Хэш код компании перевозчика (optional)
-     * @param  string $filter_consignor Хэш код компании заказчика (optional)
+     * @param  string $filter_order_serial_id Номер заявки (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimType $filter_claim_type Тип требования (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimStatus[] $filter_claim_status Статус требования (optional)
      * @param  \MagDv\Cargomart\Dto\ClaimFilterTypeEnum $filter_type Тип требования (optional)
      * @param  string[] $sort Сортировка списка требований. Поддерживается сортировка по полю date. При наличии префикса \&quot;-\&quot; сортировка будет произведена в обратном порядке. (optional)
      * @param  int $per_page Количество элементов на страницу (optional, default to 20)
@@ -311,9 +305,9 @@ class ClaimApi
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function apiV2ClaimGetAsync($filter_claim_number = null, $filter_serial_id = null, $filter_status = null, $filter_claimant = null, $filter_carrier = null, $filter_consignor = null, $filter_type = null, $sort = null, $per_page = 20, $page = 1)
+    public function apiV2ClaimGetAsync($filter_claim_number = null, $filter_order_serial_id = null, $filter_claim_type = null, $filter_claim_status = null, $filter_type = null, $sort = null, $per_page = 20, $page = 1)
     {
-        return $this->apiV2ClaimGetAsyncWithHttpInfo($filter_claim_number, $filter_serial_id, $filter_status, $filter_claimant, $filter_carrier, $filter_consignor, $filter_type, $sort, $per_page, $page)
+        return $this->apiV2ClaimGetAsyncWithHttpInfo($filter_claim_number, $filter_order_serial_id, $filter_claim_type, $filter_claim_status, $filter_type, $sort, $per_page, $page)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -327,11 +321,9 @@ class ClaimApi
      * Список требований на оплату
      *
      * @param  string $filter_claim_number Номер требования (optional)
-     * @param  string $filter_serial_id Номер заявки (optional)
-     * @param  \MagDv\Cargomart\Dto\ClaimStatus[] $filter_status Статус требования (optional)
-     * @param  \MagDv\Cargomart\Dto\ClaimantType $filter_claimant Заявитель требования (optional)
-     * @param  string $filter_carrier Хэш код компании перевозчика (optional)
-     * @param  string $filter_consignor Хэш код компании заказчика (optional)
+     * @param  string $filter_order_serial_id Номер заявки (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimType $filter_claim_type Тип требования (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimStatus[] $filter_claim_status Статус требования (optional)
      * @param  \MagDv\Cargomart\Dto\ClaimFilterTypeEnum $filter_type Тип требования (optional)
      * @param  string[] $sort Сортировка списка требований. Поддерживается сортировка по полю date. При наличии префикса \&quot;-\&quot; сортировка будет произведена в обратном порядке. (optional)
      * @param  int $per_page Количество элементов на страницу (optional, default to 20)
@@ -340,10 +332,10 @@ class ClaimApi
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function apiV2ClaimGetAsyncWithHttpInfo($filter_claim_number = null, $filter_serial_id = null, $filter_status = null, $filter_claimant = null, $filter_carrier = null, $filter_consignor = null, $filter_type = null, $sort = null, $per_page = 20, $page = 1)
+    public function apiV2ClaimGetAsyncWithHttpInfo($filter_claim_number = null, $filter_order_serial_id = null, $filter_claim_type = null, $filter_claim_status = null, $filter_type = null, $sort = null, $per_page = 20, $page = 1)
     {
         $returnType = '\MagDv\Cargomart\Dto\ClaimListResponse';
-        $request = $this->apiV2ClaimGetRequest($filter_claim_number, $filter_serial_id, $filter_status, $filter_claimant, $filter_carrier, $filter_consignor, $filter_type, $sort, $per_page, $page);
+        $request = $this->apiV2ClaimGetRequest($filter_claim_number, $filter_order_serial_id, $filter_claim_type, $filter_claim_status, $filter_type, $sort, $per_page, $page);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
             ->then(
@@ -381,11 +373,9 @@ class ClaimApi
      * Create request for operation 'apiV2ClaimGet'
      *
      * @param  string $filter_claim_number Номер требования (optional)
-     * @param  string $filter_serial_id Номер заявки (optional)
-     * @param  \MagDv\Cargomart\Dto\ClaimStatus[] $filter_status Статус требования (optional)
-     * @param  \MagDv\Cargomart\Dto\ClaimantType $filter_claimant Заявитель требования (optional)
-     * @param  string $filter_carrier Хэш код компании перевозчика (optional)
-     * @param  string $filter_consignor Хэш код компании заказчика (optional)
+     * @param  string $filter_order_serial_id Номер заявки (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimType $filter_claim_type Тип требования (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimStatus[] $filter_claim_status Статус требования (optional)
      * @param  \MagDv\Cargomart\Dto\ClaimFilterTypeEnum $filter_type Тип требования (optional)
      * @param  string[] $sort Сортировка списка требований. Поддерживается сортировка по полю date. При наличии префикса \&quot;-\&quot; сортировка будет произведена в обратном порядке. (optional)
      * @param  int $per_page Количество элементов на страницу (optional, default to 20)
@@ -394,7 +384,7 @@ class ClaimApi
      * @throws \InvalidArgumentException
      * @return RequestInterface
      */
-    public function apiV2ClaimGetRequest($filter_claim_number = null, $filter_serial_id = null, $filter_status = null, $filter_claimant = null, $filter_carrier = null, $filter_consignor = null, $filter_type = null, $sort = null, $per_page = 20, $page = 1)
+    public function apiV2ClaimGetRequest($filter_claim_number = null, $filter_order_serial_id = null, $filter_claim_type = null, $filter_claim_status = null, $filter_type = null, $sort = null, $per_page = 20, $page = 1)
     {
 
         $resourcePath = '/api/v2/claim';
@@ -416,58 +406,36 @@ class ClaimApi
             }
         }
         // query params
-        if ($filter_serial_id !== null) {
-            if('form' === 'form' && is_array($filter_serial_id)) {
-                foreach($filter_serial_id as $key => $value) {
+        if ($filter_order_serial_id !== null) {
+            if('form' === 'form' && is_array($filter_order_serial_id)) {
+                foreach($filter_order_serial_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
             }
             else {
-                $queryParams['filter[serialId]'] = $filter_serial_id;
+                $queryParams['filter[orderSerialId]'] = $filter_order_serial_id;
             }
         }
         // query params
-        if ($filter_status !== null) {
-            if('form' === 'form' && is_array($filter_status)) {
-                foreach($filter_status as $key => $value) {
+        if ($filter_claim_type !== null) {
+            if('form' === 'form' && is_array($filter_claim_type)) {
+                foreach($filter_claim_type as $key => $value) {
                     $queryParams[$key] = $value;
                 }
             }
             else {
-                $queryParams['filter[status][]'] = $filter_status;
+                $queryParams['filter[claimType]'] = $filter_claim_type;
             }
         }
         // query params
-        if ($filter_claimant !== null) {
-            if('form' === 'form' && is_array($filter_claimant)) {
-                foreach($filter_claimant as $key => $value) {
+        if ($filter_claim_status !== null) {
+            if('form' === 'form' && is_array($filter_claim_status)) {
+                foreach($filter_claim_status as $key => $value) {
                     $queryParams[$key] = $value;
                 }
             }
             else {
-                $queryParams['filter[claimant]'] = $filter_claimant;
-            }
-        }
-        // query params
-        if ($filter_carrier !== null) {
-            if('form' === 'form' && is_array($filter_carrier)) {
-                foreach($filter_carrier as $key => $value) {
-                    $queryParams[$key] = $value;
-                }
-            }
-            else {
-                $queryParams['filter[carrier]'] = $filter_carrier;
-            }
-        }
-        // query params
-        if ($filter_consignor !== null) {
-            if('form' === 'form' && is_array($filter_consignor)) {
-                foreach($filter_consignor as $key => $value) {
-                    $queryParams[$key] = $value;
-                }
-            }
-            else {
-                $queryParams['filter[consignor]'] = $filter_consignor;
+                $queryParams['filter[claimStatus][]'] = $filter_claim_status;
             }
         }
         // query params

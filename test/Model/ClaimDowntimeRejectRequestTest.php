@@ -1,6 +1,6 @@
 <?php
 /**
- * ClaimDowntimeResolutionRequestTest
+ * ClaimDowntimeRejectRequestTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace MagDv\Cargomart\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ClaimDowntimeResolutionRequestTest Class Doc Comment
+ * ClaimDowntimeRejectRequestTest Class Doc Comment
  *
  * @category    Class
- * @description Данные для создания решения по требованию
+ * @description Данные для отклонения требования по простою
  * @package     MagDv\Cargomart
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ClaimDowntimeResolutionRequestTest extends TestCase
+class ClaimDowntimeRejectRequestTest extends TestCase
 {
 
     /**
@@ -72,18 +72,9 @@ class ClaimDowntimeResolutionRequestTest extends TestCase
     }
 
     /**
-     * Test "ClaimDowntimeResolutionRequest"
+     * Test "ClaimDowntimeRejectRequest"
      */
-    public function testClaimDowntimeResolutionRequest()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
+    public function testClaimDowntimeRejectRequest()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

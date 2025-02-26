@@ -59,7 +59,7 @@ class DigitalActNonDeliveryCarOrder implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'serial_id' => 'int',
+        'serial_id' => 'string',
         'external_id' => 'string',
         'cargo_name' => 'string',
         'route_name' => 'string',
@@ -334,7 +334,7 @@ class DigitalActNonDeliveryCarOrder implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets serial_id
      *
-     * @return int
+     * @return string
      */
     public function getSerialId()
     {
@@ -344,7 +344,7 @@ class DigitalActNonDeliveryCarOrder implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets serial_id
      *
-     * @param int $serial_id Порядковый номер заказа
+     * @param string $serial_id Порядковый номер заказа
      *
      * @return self
      */

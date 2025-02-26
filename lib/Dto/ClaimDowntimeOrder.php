@@ -60,7 +60,8 @@ class ClaimDowntimeOrder implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'serial_id' => 'int'
+        'serial_id' => 'int',
+        'signed_on' => '\DateTime'
     ];
 
     /**
@@ -72,7 +73,8 @@ class ClaimDowntimeOrder implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'serial_id' => null
+        'serial_id' => null,
+        'signed_on' => 'date'
     ];
 
     /**
@@ -82,7 +84,8 @@ class ClaimDowntimeOrder implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'serial_id' => false
+        'serial_id' => false,
+        'signed_on' => false
     ];
 
     /**
@@ -172,7 +175,8 @@ class ClaimDowntimeOrder implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'serial_id' => 'serialId'
+        'serial_id' => 'serialId',
+        'signed_on' => 'signedOn'
     ];
 
     /**
@@ -182,7 +186,8 @@ class ClaimDowntimeOrder implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $setters = [
         'id' => 'setId',
-        'serial_id' => 'setSerialId'
+        'serial_id' => 'setSerialId',
+        'signed_on' => 'setSignedOn'
     ];
 
     /**
@@ -192,7 +197,8 @@ class ClaimDowntimeOrder implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $getters = [
         'id' => 'getId',
-        'serial_id' => 'getSerialId'
+        'serial_id' => 'getSerialId',
+        'signed_on' => 'getSignedOn'
     ];
 
     /**
@@ -254,6 +260,7 @@ class ClaimDowntimeOrder implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('serial_id', $data ?? [], null);
+        $this->setIfExists('signed_on', $data ?? [], null);
     }
 
     /**
@@ -288,6 +295,9 @@ class ClaimDowntimeOrder implements ModelInterface, ArrayAccess, \JsonSerializab
         }
         if ($this->container['serial_id'] === null) {
             $invalidProperties[] = "'serial_id' can't be null";
+        }
+        if ($this->container['signed_on'] === null) {
+            $invalidProperties[] = "'signed_on' can't be null";
         }
         return $invalidProperties;
     }
@@ -344,7 +354,7 @@ class ClaimDowntimeOrder implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets serial_id
      *
-     * @param int $serial_id Порядковый номер заказа
+     * @param int $serial_id Порядковый номер заявки
      *
      * @return self
      */
@@ -354,6 +364,33 @@ class ClaimDowntimeOrder implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable serial_id cannot be null');
         }
         $this->container['serial_id'] = $serial_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets signed_on
+     *
+     * @return \DateTime
+     */
+    public function getSignedOn()
+    {
+        return $this->container['signed_on'];
+    }
+
+    /**
+     * Sets signed_on
+     *
+     * @param \DateTime $signed_on Дата подписания (взятия) заявки YYYY-MM-DD
+     *
+     * @return self
+     */
+    public function setSignedOn($signed_on)
+    {
+        if (is_null($signed_on)) {
+            throw new \InvalidArgumentException('non-nullable signed_on cannot be null');
+        }
+        $this->container['signed_on'] = $signed_on;
 
         return $this;
     }

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Идентификатор заказа |
 **serial_id** | **int** | Порядковый номер заказа | [optional]
+**serial_number_and_version** | **string** | Порядковый номер с версией | [optional]
 **status** | [**\MagDv\Cargomart\Dto\ProposalStatusEnum**](ProposalStatusEnum.md) | Статус |
 **customer_id** | **string** | Хэш отправителя |
 **search_range** | [**\MagDv\Cargomart\Dto\DateTimeRange**](DateTimeRange.md) | Диапазон дат сбора заявок |

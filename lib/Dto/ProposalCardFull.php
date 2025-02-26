@@ -64,6 +64,7 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'truck_search_time_end' => '\DateTime',
         'winner_date' => '\DateTime',
         'serial_id' => 'int',
+        'serial_number_and_version' => 'string',
         'customer_id' => 'string',
         'curators' => 'int[]',
         'expeditor_id' => 'string',
@@ -118,6 +119,7 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'truck_search_time_end' => 'date-time',
         'winner_date' => 'date-time',
         'serial_id' => null,
+        'serial_number_and_version' => null,
         'customer_id' => null,
         'curators' => null,
         'expeditor_id' => null,
@@ -170,6 +172,7 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'truck_search_time_end' => false,
         'winner_date' => false,
         'serial_id' => false,
+        'serial_number_and_version' => false,
         'customer_id' => false,
         'curators' => false,
         'expeditor_id' => false,
@@ -302,6 +305,7 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'truck_search_time_end' => 'truckSearchTimeEnd',
         'winner_date' => 'winnerDate',
         'serial_id' => 'serialId',
+        'serial_number_and_version' => 'serialNumberAndVersion',
         'customer_id' => 'customerId',
         'curators' => 'curators',
         'expeditor_id' => 'expeditorId',
@@ -354,6 +358,7 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'truck_search_time_end' => 'setTruckSearchTimeEnd',
         'winner_date' => 'setWinnerDate',
         'serial_id' => 'setSerialId',
+        'serial_number_and_version' => 'setSerialNumberAndVersion',
         'customer_id' => 'setCustomerId',
         'curators' => 'setCurators',
         'expeditor_id' => 'setExpeditorId',
@@ -406,6 +411,7 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'truck_search_time_end' => 'getTruckSearchTimeEnd',
         'winner_date' => 'getWinnerDate',
         'serial_id' => 'getSerialId',
+        'serial_number_and_version' => 'getSerialNumberAndVersion',
         'customer_id' => 'getCustomerId',
         'curators' => 'getCurators',
         'expeditor_id' => 'getExpeditorId',
@@ -509,6 +515,7 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('truck_search_time_end', $data ?? [], null);
         $this->setIfExists('winner_date', $data ?? [], null);
         $this->setIfExists('serial_id', $data ?? [], null);
+        $this->setIfExists('serial_number_and_version', $data ?? [], null);
         $this->setIfExists('customer_id', $data ?? [], null);
         $this->setIfExists('curators', $data ?? [], null);
         $this->setIfExists('expeditor_id', $data ?? [], null);
@@ -582,6 +589,9 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         }
         if ($this->container['serial_id'] === null) {
             $invalidProperties[] = "'serial_id' can't be null";
+        }
+        if ($this->container['serial_number_and_version'] === null) {
+            $invalidProperties[] = "'serial_number_and_version' can't be null";
         }
         if ($this->container['customer_id'] === null) {
             $invalidProperties[] = "'customer_id' can't be null";
@@ -763,6 +773,33 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable serial_id cannot be null');
         }
         $this->container['serial_id'] = $serial_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets serial_number_and_version
+     *
+     * @return string
+     */
+    public function getSerialNumberAndVersion()
+    {
+        return $this->container['serial_number_and_version'];
+    }
+
+    /**
+     * Sets serial_number_and_version
+     *
+     * @param string $serial_number_and_version Порядковый номер с версией
+     *
+     * @return self
+     */
+    public function setSerialNumberAndVersion($serial_number_and_version)
+    {
+        if (is_null($serial_number_and_version)) {
+            throw new \InvalidArgumentException('non-nullable serial_number_and_version cannot be null');
+        }
+        $this->container['serial_number_and_version'] = $serial_number_and_version;
 
         return $this;
     }
