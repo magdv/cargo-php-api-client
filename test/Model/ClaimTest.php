@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderDowntimeClaimCreateRequestV2Test
+ * ClaimTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace MagDv\Cargomart\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * OrderDowntimeClaimCreateRequestV2Test Class Doc Comment
+ * ClaimTest Class Doc Comment
  *
  * @category    Class
- * @description Данные для создания требования новая версия
+ * @description Объект требования на оплату
  * @package     MagDv\Cargomart
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class OrderDowntimeClaimCreateRequestV2Test extends TestCase
+class ClaimTest extends TestCase
 {
 
     /**
@@ -72,36 +72,27 @@ class OrderDowntimeClaimCreateRequestV2Test extends TestCase
     }
 
     /**
-     * Test "OrderDowntimeClaimCreateRequestV2"
+     * Test "Claim"
      */
-    public function testOrderDowntimeClaimCreateRequestV2()
+    public function testClaim()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "order_id"
+     * Test attribute "id"
      */
-    public function testPropertyOrderId()
+    public function testPropertyId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "points"
+     * Test attribute "number"
      */
-    public function testPropertyPoints()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "downtime"
-     */
-    public function testPropertyDowntime()
+    public function testPropertyNumber()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -117,6 +108,15 @@ class OrderDowntimeClaimCreateRequestV2Test extends TestCase
     }
 
     /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "date"
      */
     public function testPropertyDate()
@@ -126,9 +126,36 @@ class OrderDowntimeClaimCreateRequestV2Test extends TestCase
     }
 
     /**
-     * Test attribute "number"
+     * Test attribute "order"
      */
-    public function testPropertyNumber()
+    public function testPropertyOrder()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "claimant"
+     */
+    public function testPropertyClaimant()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "respondent"
+     */
+    public function testPropertyRespondent()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "amount"
+     */
+    public function testPropertyAmount()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

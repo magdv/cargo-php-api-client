@@ -1,6 +1,6 @@
 <?php
 /**
- * ExpeditorContractUpdatesCommercialConditionFullTest
+ * ClaimTypeTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace MagDv\Cargomart\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ExpeditorContractUpdatesCommercialConditionFullTest Class Doc Comment
+ * ClaimTypeTest Class Doc Comment
  *
  * @category    Class
- * @description Информация о коммерческом условии
+ * @description Тип требования
  * @package     MagDv\Cargomart
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ExpeditorContractUpdatesCommercialConditionFullTest extends TestCase
+class ClaimTypeTest extends TestCase
 {
 
     /**
@@ -72,45 +72,9 @@ class ExpeditorContractUpdatesCommercialConditionFullTest extends TestCase
     }
 
     /**
-     * Test "ExpeditorContractUpdatesCommercialConditionFull"
+     * Test "ClaimType"
      */
-    public function testExpeditorContractUpdatesCommercialConditionFull()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "version"
-     */
-    public function testPropertyVersion()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "content_file"
-     */
-    public function testPropertyContentFile()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "sign_file"
-     */
-    public function testPropertySignFile()
+    public function testClaimType()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -521,7 +521,7 @@ class ClaimDowntime implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets type
      *
-     * @param \MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum $type Тип требования о простое
+     * @param \MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum $type Тип требования по простою
      *
      * @return self
      */

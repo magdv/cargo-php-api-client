@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **xls** | [**\MagDv\Cargomart\Dto\FileUrl**](FileUrl.md) | Ссылка для скачивания накладной в формате XLS | [optional]
 **xml** | [**\MagDv\Cargomart\Dto\FileUrl**](FileUrl.md) | Ссылка для скачивания накладной в формате XML | [optional]
 **notify_params** | [**\MagDv\Cargomart\Dto\NotifyParamItem[]**](NotifyParamItem.md) | Список параметров для рассылки уведомлений по ЭТРН | [optional]
+**information** | [**\MagDv\Cargomart\Dto\EcnInformation**](EcnInformation.md) |  | [optional]
 **access** | [**\MagDv\Cargomart\Dto\OrderEcnAccess**](OrderEcnAccess.md) | Описание доступных действий по объекту. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

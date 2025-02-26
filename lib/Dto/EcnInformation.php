@@ -1,6 +1,6 @@
 <?php
 /**
- * ClaimListResponse
+ * EcnInformation
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * ClaimListResponse Class Doc Comment
+ * EcnInformation Class Doc Comment
  *
  * @category Class
- * @description Список требований на оплату
+ * @description Дополнительная информация в ЭТРН
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class EcnInformation implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ClaimListResponse';
+    protected static $openAPIModelName = 'EcnInformation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
-        'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
+        'text' => '\MagDv\Cargomart\Dto\EcnInformationItem[]'
     ];
 
     /**
@@ -71,8 +70,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'message' => null
+        'text' => null
     ];
 
     /**
@@ -81,8 +79,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-        'message' => false
+        'text' => false
     ];
 
     /**
@@ -171,8 +168,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'message' => 'message'
+        'text' => 'text'
     ];
 
     /**
@@ -181,8 +177,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'message' => 'setMessage'
+        'text' => 'setText'
     ];
 
     /**
@@ -191,8 +186,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'message' => 'getMessage'
+        'text' => 'getText'
     ];
 
     /**
@@ -252,8 +246,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('message', $data ?? [], null);
+        $this->setIfExists('text', $data ?? [], null);
     }
 
     /**
@@ -283,9 +276,6 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -302,55 +292,28 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets data
+     * Gets text
      *
-     * @return object
+     * @return \MagDv\Cargomart\Dto\EcnInformationItem[]|null
      */
-    public function getData()
+    public function getText()
     {
-        return $this->container['data'];
+        return $this->container['text'];
     }
 
     /**
-     * Sets data
+     * Sets text
      *
-     * @param object $data Список требований
+     * @param \MagDv\Cargomart\Dto\EcnInformationItem[]|null $text Содержимое доп.информации
      *
      * @return self
      */
-    public function setData($data)
+    public function setText($text)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($text)) {
+            throw new \InvalidArgumentException('non-nullable text cannot be null');
         }
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
-     *
-     * @return \MagDv\Cargomart\Dto\MessageV2[]|null
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     *
-     * @param \MagDv\Cargomart\Dto\MessageV2[]|null $message message
-     *
-     * @return self
-     */
-    public function setMessage($message)
-    {
-        if (is_null($message)) {
-            throw new \InvalidArgumentException('non-nullable message cannot be null');
-        }
-        $this->container['message'] = $message;
+        $this->container['text'] = $text;
 
         return $this;
     }

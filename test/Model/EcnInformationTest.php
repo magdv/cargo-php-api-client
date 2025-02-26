@@ -1,6 +1,6 @@
 <?php
 /**
- * ClaimantTypeTest
+ * EcnInformationTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace MagDv\Cargomart\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ClaimantTypeTest Class Doc Comment
+ * EcnInformationTest Class Doc Comment
  *
  * @category    Class
- * @description Заявитель/ответчик по требованию
+ * @description Дополнительная информация в ЭТРН
  * @package     MagDv\Cargomart
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ClaimantTypeTest extends TestCase
+class EcnInformationTest extends TestCase
 {
 
     /**
@@ -72,9 +72,18 @@ class ClaimantTypeTest extends TestCase
     }
 
     /**
-     * Test "ClaimantType"
+     * Test "EcnInformation"
      */
-    public function testClaimantType()
+    public function testEcnInformation()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "text"
+     */
+    public function testPropertyText()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

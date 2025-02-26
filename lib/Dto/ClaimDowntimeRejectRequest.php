@@ -1,6 +1,6 @@
 <?php
 /**
- * ClaimListResponse
+ * ClaimDowntimeRejectRequest
  *
  * PHP version 7.4
  *
@@ -33,16 +33,16 @@ use \ArrayAccess;
 use \MagDv\Cargomart\ObjectSerializer;
 
 /**
- * ClaimListResponse Class Doc Comment
+ * ClaimDowntimeRejectRequest Class Doc Comment
  *
  * @category Class
- * @description Список требований на оплату
+ * @description Данные для отклонения требования по простою
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class ClaimDowntimeRejectRequest implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ClaimListResponse';
+    protected static $openAPIModelName = 'ClaimDowntimeRejectRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'data' => 'object',
-        'message' => '\MagDv\Cargomart\Dto\MessageV2[]'
+        'reason' => 'string'
     ];
 
     /**
@@ -71,8 +70,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'data' => null,
-        'message' => null
+        'reason' => null
     ];
 
     /**
@@ -81,8 +79,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'data' => false,
-        'message' => false
+        'reason' => false
     ];
 
     /**
@@ -171,8 +168,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'data' => 'data',
-        'message' => 'message'
+        'reason' => 'reason'
     ];
 
     /**
@@ -181,8 +177,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'data' => 'setData',
-        'message' => 'setMessage'
+        'reason' => 'setReason'
     ];
 
     /**
@@ -191,8 +186,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'data' => 'getData',
-        'message' => 'getMessage'
+        'reason' => 'getReason'
     ];
 
     /**
@@ -252,8 +246,7 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('message', $data ?? [], null);
+        $this->setIfExists('reason', $data ?? [], null);
     }
 
     /**
@@ -283,9 +276,13 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $invalidProperties = [];
 
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['reason'] === null) {
+            $invalidProperties[] = "'reason' can't be null";
         }
+        if ((mb_strlen($this->container['reason']) > 2000)) {
+            $invalidProperties[] = "invalid value for 'reason', the character length must be smaller than or equal to 2000.";
+        }
+
         return $invalidProperties;
     }
 
@@ -302,55 +299,32 @@ class ClaimListResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets data
+     * Gets reason
      *
-     * @return object
+     * @return string
      */
-    public function getData()
+    public function getReason()
     {
-        return $this->container['data'];
+        return $this->container['reason'];
     }
 
     /**
-     * Sets data
+     * Sets reason
      *
-     * @param object $data Список требований
+     * @param string $reason Среднее текстовое сообщение
      *
      * @return self
      */
-    public function setData($data)
+    public function setReason($reason)
     {
-        if (is_null($data)) {
-            throw new \InvalidArgumentException('non-nullable data cannot be null');
+        if (is_null($reason)) {
+            throw new \InvalidArgumentException('non-nullable reason cannot be null');
         }
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
-     *
-     * @return \MagDv\Cargomart\Dto\MessageV2[]|null
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     *
-     * @param \MagDv\Cargomart\Dto\MessageV2[]|null $message message
-     *
-     * @return self
-     */
-    public function setMessage($message)
-    {
-        if (is_null($message)) {
-            throw new \InvalidArgumentException('non-nullable message cannot be null');
+        if ((mb_strlen($reason) > 2000)) {
+            throw new \InvalidArgumentException('invalid length for $reason when calling ClaimDowntimeRejectRequest., must be smaller than or equal to 2000.');
         }
-        $this->container['message'] = $message;
+
+        $this->container['reason'] = $reason;
 
         return $this;
     }

@@ -126,6 +126,15 @@ class ProposalCardFullTest extends TestCase
     }
 
     /**
+     * Test attribute "serial_number_and_version"
+     */
+    public function testPropertySerialNumberAndVersion()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "customer_id"
      */
     public function testPropertyCustomerId()

@@ -82,6 +82,7 @@ class OrderEcn implements ModelInterface, ArrayAccess, \JsonSerializable
         'xls' => '\MagDv\Cargomart\Dto\FileUrl',
         'xml' => '\MagDv\Cargomart\Dto\FileUrl',
         'notify_params' => '\MagDv\Cargomart\Dto\NotifyParamItem[]',
+        'information' => '\MagDv\Cargomart\Dto\EcnInformation',
         'access' => '\MagDv\Cargomart\Dto\OrderEcnAccess'
     ];
 
@@ -116,6 +117,7 @@ class OrderEcn implements ModelInterface, ArrayAccess, \JsonSerializable
         'xls' => null,
         'xml' => null,
         'notify_params' => null,
+        'information' => null,
         'access' => null
     ];
 
@@ -148,6 +150,7 @@ class OrderEcn implements ModelInterface, ArrayAccess, \JsonSerializable
         'xls' => false,
         'xml' => false,
         'notify_params' => false,
+        'information' => false,
         'access' => false
     ];
 
@@ -260,6 +263,7 @@ class OrderEcn implements ModelInterface, ArrayAccess, \JsonSerializable
         'xls' => 'xls',
         'xml' => 'xml',
         'notify_params' => 'notifyParams',
+        'information' => 'information',
         'access' => 'access'
     ];
 
@@ -292,6 +296,7 @@ class OrderEcn implements ModelInterface, ArrayAccess, \JsonSerializable
         'xls' => 'setXls',
         'xml' => 'setXml',
         'notify_params' => 'setNotifyParams',
+        'information' => 'setInformation',
         'access' => 'setAccess'
     ];
 
@@ -324,6 +329,7 @@ class OrderEcn implements ModelInterface, ArrayAccess, \JsonSerializable
         'xls' => 'getXls',
         'xml' => 'getXml',
         'notify_params' => 'getNotifyParams',
+        'information' => 'getInformation',
         'access' => 'getAccess'
     ];
 
@@ -407,6 +413,7 @@ class OrderEcn implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('xls', $data ?? [], null);
         $this->setIfExists('xml', $data ?? [], null);
         $this->setIfExists('notify_params', $data ?? [], null);
+        $this->setIfExists('information', $data ?? [], null);
         $this->setIfExists('access', $data ?? [], null);
     }
 
@@ -1102,6 +1109,33 @@ class OrderEcn implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable notify_params cannot be null');
         }
         $this->container['notify_params'] = $notify_params;
+
+        return $this;
+    }
+
+    /**
+     * Gets information
+     *
+     * @return \MagDv\Cargomart\Dto\EcnInformation|null
+     */
+    public function getInformation()
+    {
+        return $this->container['information'];
+    }
+
+    /**
+     * Sets information
+     *
+     * @param \MagDv\Cargomart\Dto\EcnInformation|null $information information
+     *
+     * @return self
+     */
+    public function setInformation($information)
+    {
+        if (is_null($information)) {
+            throw new \InvalidArgumentException('non-nullable information cannot be null');
+        }
+        $this->container['information'] = $information;
 
         return $this;
     }

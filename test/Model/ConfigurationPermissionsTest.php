@@ -1051,4 +1051,13 @@ class ConfigurationPermissionsTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "sign_additional_agreement"
+     */
+    public function testPropertySignAdditionalAgreement()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

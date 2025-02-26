@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | UUID объекта |
 **status** | [**\MagDv\Cargomart\Dto\ClaimStatus**](ClaimStatus.md) |  |
-**type** | [**\MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum**](ClaimDowntimeTypeEnum.md) | Тип требования о простое |
+**type** | [**\MagDv\Cargomart\Dto\ClaimDowntimeTypeEnum**](ClaimDowntimeTypeEnum.md) | Тип требования по простою |
 **signed_documents** | [**\MagDv\Cargomart\Dto\SignedDocument[]**](SignedDocument.md) |  | [optional]
 **reject_reason** | **string** | Среднее текстовое сообщение | [optional]
 **access** | **object** |  | [optional]

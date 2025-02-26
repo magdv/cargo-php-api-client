@@ -1,6 +1,6 @@
 <?php
 /**
- * ExpeditorContractUpdatesCommercialConditionFullContentFileTest
+ * ClaimOrderTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace MagDv\Cargomart\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ExpeditorContractUpdatesCommercialConditionFullContentFileTest Class Doc Comment
+ * ClaimOrderTest Class Doc Comment
  *
  * @category    Class
- * @description ExpeditorContractUpdatesCommercialConditionFullContentFile
+ * @description Реквизиты транспортной заявки
  * @package     MagDv\Cargomart
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ExpeditorContractUpdatesCommercialConditionFullContentFileTest extends TestCase
+class ClaimOrderTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class ExpeditorContractUpdatesCommercialConditionFullContentFileTest extends Tes
     }
 
     /**
-     * Test "ExpeditorContractUpdatesCommercialConditionFullContentFile"
+     * Test "ClaimOrder"
      */
-    public function testExpeditorContractUpdatesCommercialConditionFullContentFile()
+    public function testClaimOrder()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -90,54 +90,18 @@ class ExpeditorContractUpdatesCommercialConditionFullContentFileTest extends Tes
     }
 
     /**
-     * Test attribute "title"
+     * Test attribute "serial_id"
      */
-    public function testPropertyTitle()
+    public function testPropertySerialId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "extension"
+     * Test attribute "route_point"
      */
-    public function testPropertyExtension()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "mime"
-     */
-    public function testPropertyMime()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "size"
-     */
-    public function testPropertySize()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "url"
-     */
-    public function testPropertyUrl()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "sha1"
-     */
-    public function testPropertySha1()
+    public function testPropertyRoutePoint()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

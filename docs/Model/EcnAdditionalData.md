@@ -21,5 +21,6 @@ Name | Type | Description | Notes
 **consignor_mark** | [**\MagDv\Cargomart\Dto\ConsignorMarkEnum**](ConsignorMarkEnum.md) |  | [optional]
 **mark_comment** | **string** | Комментарий к отметке | [optional]
 **notify_params** | [**\MagDv\Cargomart\Dto\NotifyParamItem[]**](NotifyParamItem.md) | Список параметров для рассылки уведомлений по ЭТРН | [optional]
+**information** | [**\MagDv\Cargomart\Dto\EcnInformation**](EcnInformation.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

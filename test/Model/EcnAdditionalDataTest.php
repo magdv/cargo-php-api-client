@@ -232,4 +232,13 @@ class EcnAdditionalDataTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "information"
+     */
+    public function testPropertyInformation()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

@@ -288,6 +288,15 @@ class OrderEcnTest extends TestCase
     }
 
     /**
+     * Test attribute "information"
+     */
+    public function testPropertyInformation()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "access"
      */
     public function testPropertyAccess()

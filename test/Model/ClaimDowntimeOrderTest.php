@@ -97,4 +97,13 @@ class ClaimDowntimeOrderTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "signed_on"
+     */
+    public function testPropertySignedOn()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * OrderDowntimeClaimPointFieldsTest
+ * OrderStepBidResponseDataTest
  *
  * PHP version 7.4
  *
@@ -32,15 +32,15 @@ namespace MagDv\Cargomart\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * OrderDowntimeClaimPointFieldsTest Class Doc Comment
+ * OrderStepBidResponseDataTest Class Doc Comment
  *
  * @category    Class
- * @description Претензия о простое по конкретному пункту погрузки/выгрузки заявки
+ * @description Значение шага ставки
  * @package     MagDv\Cargomart
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class OrderDowntimeClaimPointFieldsTest extends TestCase
+class OrderStepBidResponseDataTest extends TestCase
 {
 
     /**
@@ -72,36 +72,18 @@ class OrderDowntimeClaimPointFieldsTest extends TestCase
     }
 
     /**
-     * Test "OrderDowntimeClaimPointFields"
+     * Test "OrderStepBidResponseData"
      */
-    public function testOrderDowntimeClaimPointFields()
+    public function testOrderStepBidResponseData()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "step_bid"
      */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "order_point_id"
-     */
-    public function testPropertyOrderPointId()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "data"
-     */
-    public function testPropertyData()
+    public function testPropertyStepBid()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

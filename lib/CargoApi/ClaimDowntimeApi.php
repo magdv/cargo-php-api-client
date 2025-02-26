@@ -174,9 +174,9 @@ class ClaimDowntimeApi
     }
 
     /**
-     * Operation apiV2ClaimDowntimeIdCancelPost
+     * Operation apiV2ClaimDowntimeIdApprovePost
      *
-     * Отмена претензии о простое
+     * Согласование требования по простою
      *
      * @param  string $id Идентификатор претензии. (required)
      *
@@ -184,16 +184,16 @@ class ClaimDowntimeApi
      * @throws \InvalidArgumentException
      * @return \MagDv\Cargomart\Dto\DowntimeClaimResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse
      */
-    public function apiV2ClaimDowntimeIdCancelPost($id)
+    public function apiV2ClaimDowntimeIdApprovePost($id)
     {
-        list($response) = $this->apiV2ClaimDowntimeIdCancelPostWithHttpInfo($id);
+        list($response) = $this->apiV2ClaimDowntimeIdApprovePostWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation apiV2ClaimDowntimeIdCancelPostWithHttpInfo
+     * Operation apiV2ClaimDowntimeIdApprovePostWithHttpInfo
      *
-     * Отмена претензии о простое
+     * Согласование требования по простою
      *
      * @param  string $id Идентификатор претензии. (required)
      *
@@ -201,9 +201,9 @@ class ClaimDowntimeApi
      * @throws \InvalidArgumentException
      * @return array of \MagDv\Cargomart\Dto\DowntimeClaimResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV2ClaimDowntimeIdCancelPostWithHttpInfo($id)
+    public function apiV2ClaimDowntimeIdApprovePostWithHttpInfo($id)
     {
-        $request = $this->apiV2ClaimDowntimeIdCancelPostRequest($id);
+        $request = $this->apiV2ClaimDowntimeIdApprovePostRequest($id);
 
         try {
             try {
@@ -355,18 +355,18 @@ class ClaimDowntimeApi
     }
 
     /**
-     * Operation apiV2ClaimDowntimeIdCancelPostAsync
+     * Operation apiV2ClaimDowntimeIdApprovePostAsync
      *
-     * Отмена претензии о простое
+     * Согласование требования по простою
      *
      * @param  string $id Идентификатор претензии. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function apiV2ClaimDowntimeIdCancelPostAsync($id)
+    public function apiV2ClaimDowntimeIdApprovePostAsync($id)
     {
-        return $this->apiV2ClaimDowntimeIdCancelPostAsyncWithHttpInfo($id)
+        return $this->apiV2ClaimDowntimeIdApprovePostAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -375,19 +375,19 @@ class ClaimDowntimeApi
     }
 
     /**
-     * Operation apiV2ClaimDowntimeIdCancelPostAsyncWithHttpInfo
+     * Operation apiV2ClaimDowntimeIdApprovePostAsyncWithHttpInfo
      *
-     * Отмена претензии о простое
+     * Согласование требования по простою
      *
      * @param  string $id Идентификатор претензии. (required)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function apiV2ClaimDowntimeIdCancelPostAsyncWithHttpInfo($id)
+    public function apiV2ClaimDowntimeIdApprovePostAsyncWithHttpInfo($id)
     {
         $returnType = '\MagDv\Cargomart\Dto\DowntimeClaimResponse';
-        $request = $this->apiV2ClaimDowntimeIdCancelPostRequest($id);
+        $request = $this->apiV2ClaimDowntimeIdApprovePostRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
             ->then(
@@ -422,23 +422,23 @@ class ClaimDowntimeApi
     }
 
     /**
-     * Create request for operation 'apiV2ClaimDowntimeIdCancelPost'
+     * Create request for operation 'apiV2ClaimDowntimeIdApprovePost'
      *
      * @param  string $id Идентификатор претензии. (required)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
      */
-    public function apiV2ClaimDowntimeIdCancelPostRequest($id)
+    public function apiV2ClaimDowntimeIdApprovePostRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling apiV2ClaimDowntimeIdCancelPost'
+                'Missing the required parameter $id when calling apiV2ClaimDowntimeIdApprovePost'
             );
         }
 
-        $resourcePath = '/api/v2/claim/downtime/{id}/cancel';
+        $resourcePath = '/api/v2/claim/downtime/{id}/approve';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1206,38 +1206,38 @@ class ClaimDowntimeApi
     }
 
     /**
-     * Operation apiV2ClaimDowntimeIdResolvePost
+     * Operation apiV2ClaimDowntimeIdRejectPost
      *
-     * Решение по претензии о простое
+     * Отклонение требования по простою
      *
      * @param  string $id Идентификатор претензии. (required)
-     * @param  \MagDv\Cargomart\Dto\ClaimDowntimeResolutionRequest $claim_downtime_resolution_request claim_downtime_resolution_request (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimDowntimeRejectRequest $claim_downtime_reject_request claim_downtime_reject_request (optional)
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \MagDv\Cargomart\Dto\DowntimeClaimResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse
      */
-    public function apiV2ClaimDowntimeIdResolvePost($id, $claim_downtime_resolution_request = null)
+    public function apiV2ClaimDowntimeIdRejectPost($id, $claim_downtime_reject_request = null)
     {
-        list($response) = $this->apiV2ClaimDowntimeIdResolvePostWithHttpInfo($id, $claim_downtime_resolution_request);
+        list($response) = $this->apiV2ClaimDowntimeIdRejectPostWithHttpInfo($id, $claim_downtime_reject_request);
         return $response;
     }
 
     /**
-     * Operation apiV2ClaimDowntimeIdResolvePostWithHttpInfo
+     * Operation apiV2ClaimDowntimeIdRejectPostWithHttpInfo
      *
-     * Решение по претензии о простое
+     * Отклонение требования по простою
      *
      * @param  string $id Идентификатор претензии. (required)
-     * @param  \MagDv\Cargomart\Dto\ClaimDowntimeResolutionRequest $claim_downtime_resolution_request (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimDowntimeRejectRequest $claim_downtime_reject_request (optional)
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \MagDv\Cargomart\Dto\DowntimeClaimResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV2ClaimDowntimeIdResolvePostWithHttpInfo($id, $claim_downtime_resolution_request = null)
+    public function apiV2ClaimDowntimeIdRejectPostWithHttpInfo($id, $claim_downtime_reject_request = null)
     {
-        $request = $this->apiV2ClaimDowntimeIdResolvePostRequest($id, $claim_downtime_resolution_request);
+        $request = $this->apiV2ClaimDowntimeIdRejectPostRequest($id, $claim_downtime_reject_request);
 
         try {
             try {
@@ -1389,19 +1389,19 @@ class ClaimDowntimeApi
     }
 
     /**
-     * Operation apiV2ClaimDowntimeIdResolvePostAsync
+     * Operation apiV2ClaimDowntimeIdRejectPostAsync
      *
-     * Решение по претензии о простое
+     * Отклонение требования по простою
      *
      * @param  string $id Идентификатор претензии. (required)
-     * @param  \MagDv\Cargomart\Dto\ClaimDowntimeResolutionRequest $claim_downtime_resolution_request (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimDowntimeRejectRequest $claim_downtime_reject_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function apiV2ClaimDowntimeIdResolvePostAsync($id, $claim_downtime_resolution_request = null)
+    public function apiV2ClaimDowntimeIdRejectPostAsync($id, $claim_downtime_reject_request = null)
     {
-        return $this->apiV2ClaimDowntimeIdResolvePostAsyncWithHttpInfo($id, $claim_downtime_resolution_request)
+        return $this->apiV2ClaimDowntimeIdRejectPostAsyncWithHttpInfo($id, $claim_downtime_reject_request)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1410,20 +1410,20 @@ class ClaimDowntimeApi
     }
 
     /**
-     * Operation apiV2ClaimDowntimeIdResolvePostAsyncWithHttpInfo
+     * Operation apiV2ClaimDowntimeIdRejectPostAsyncWithHttpInfo
      *
-     * Решение по претензии о простое
+     * Отклонение требования по простою
      *
      * @param  string $id Идентификатор претензии. (required)
-     * @param  \MagDv\Cargomart\Dto\ClaimDowntimeResolutionRequest $claim_downtime_resolution_request (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimDowntimeRejectRequest $claim_downtime_reject_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return Promise
      */
-    public function apiV2ClaimDowntimeIdResolvePostAsyncWithHttpInfo($id, $claim_downtime_resolution_request = null)
+    public function apiV2ClaimDowntimeIdRejectPostAsyncWithHttpInfo($id, $claim_downtime_reject_request = null)
     {
         $returnType = '\MagDv\Cargomart\Dto\DowntimeClaimResponse';
-        $request = $this->apiV2ClaimDowntimeIdResolvePostRequest($id, $claim_downtime_resolution_request);
+        $request = $this->apiV2ClaimDowntimeIdRejectPostRequest($id, $claim_downtime_reject_request);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
             ->then(
@@ -1458,24 +1458,24 @@ class ClaimDowntimeApi
     }
 
     /**
-     * Create request for operation 'apiV2ClaimDowntimeIdResolvePost'
+     * Create request for operation 'apiV2ClaimDowntimeIdRejectPost'
      *
      * @param  string $id Идентификатор претензии. (required)
-     * @param  \MagDv\Cargomart\Dto\ClaimDowntimeResolutionRequest $claim_downtime_resolution_request (optional)
+     * @param  \MagDv\Cargomart\Dto\ClaimDowntimeRejectRequest $claim_downtime_reject_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return RequestInterface
      */
-    public function apiV2ClaimDowntimeIdResolvePostRequest($id, $claim_downtime_resolution_request = null)
+    public function apiV2ClaimDowntimeIdRejectPostRequest($id, $claim_downtime_reject_request = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling apiV2ClaimDowntimeIdResolvePost'
+                'Missing the required parameter $id when calling apiV2ClaimDowntimeIdRejectPost'
             );
         }
 
-        $resourcePath = '/api/v2/claim/downtime/{id}/resolve';
+        $resourcePath = '/api/v2/claim/downtime/{id}/reject';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1501,11 +1501,11 @@ class ClaimDowntimeApi
         );
 
         // for model (json/xml)
-        if (isset($claim_downtime_resolution_request)) {
+        if (isset($claim_downtime_reject_request)) {
             if ($this->headerSelector->isJsonMime($headers['Content-Type'])) {
-                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($claim_downtime_resolution_request));
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($claim_downtime_reject_request));
             } else {
-                $httpBody = $claim_downtime_resolution_request;
+                $httpBody = $claim_downtime_reject_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1561,9 +1561,353 @@ class ClaimDowntimeApi
     }
 
     /**
+     * Operation apiV2ClaimDowntimeIdRevokePost
+     *
+     * Отзыв требования по простою
+     *
+     * @param  string $id Идентификатор претензии. (required)
+     *
+     * @throws \MagDv\Cargomart\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \MagDv\Cargomart\Dto\DowntimeClaimResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse
+     */
+    public function apiV2ClaimDowntimeIdRevokePost($id)
+    {
+        list($response) = $this->apiV2ClaimDowntimeIdRevokePostWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation apiV2ClaimDowntimeIdRevokePostWithHttpInfo
+     *
+     * Отзыв требования по простою
+     *
+     * @param  string $id Идентификатор претензии. (required)
+     *
+     * @throws \MagDv\Cargomart\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \MagDv\Cargomart\Dto\DowntimeClaimResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function apiV2ClaimDowntimeIdRevokePostWithHttpInfo($id)
+    {
+        $request = $this->apiV2ClaimDowntimeIdRevokePostRequest($id);
+
+        try {
+            try {
+                $response = $this->httpClient->sendRequest($request);
+            } catch (HttpException $e) {
+                $response = $e->getResponse();
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $response->getStatusCode(),
+                        (string) $request->getUri()
+                    ),
+                    $request,
+                    $response,
+                    $e
+                );
+            } catch (ClientExceptionInterface $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $request,
+                    null,
+                    $e
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            switch($statusCode) {
+                case 200:
+                    if ('\MagDv\Cargomart\Dto\DowntimeClaimResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\DowntimeClaimResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 403:
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\MagDv\Cargomart\Dto\DowntimeClaimResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MagDv\Cargomart\Dto\DowntimeClaimResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation apiV2ClaimDowntimeIdRevokePostAsync
+     *
+     * Отзыв требования по простою
+     *
+     * @param  string $id Идентификатор претензии. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return Promise
+     */
+    public function apiV2ClaimDowntimeIdRevokePostAsync($id)
+    {
+        return $this->apiV2ClaimDowntimeIdRevokePostAsyncWithHttpInfo($id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation apiV2ClaimDowntimeIdRevokePostAsyncWithHttpInfo
+     *
+     * Отзыв требования по простою
+     *
+     * @param  string $id Идентификатор претензии. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return Promise
+     */
+    public function apiV2ClaimDowntimeIdRevokePostAsyncWithHttpInfo($id)
+    {
+        $returnType = '\MagDv\Cargomart\Dto\DowntimeClaimResponse';
+        $request = $this->apiV2ClaimDowntimeIdRevokePostRequest($id);
+
+        return $this->httpAsyncClient->sendAsyncRequest($request)
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function (HttpException $exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $exception->getRequest(),
+                        $exception->getResponse(),
+                        $exception
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'apiV2ClaimDowntimeIdRevokePost'
+     *
+     * @param  string $id Идентификатор претензии. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return RequestInterface
+     */
+    public function apiV2ClaimDowntimeIdRevokePostRequest($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling apiV2ClaimDowntimeIdRevokePost'
+            );
+        }
+
+        $resourcePath = '/api/v2/claim/downtime/{id}/revoke';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = null;
+        $multipart = false;
+
+
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json'],
+            '',
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($this->headerSelector->isJsonMime($headers['Content-Type'])) {
+                $httpBody = json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('token');
+        if ($apiKey !== null) {
+            
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+
+        $uri = $this->createUri($operationHost, $resourcePath, $queryParams);
+
+        return $this->createRequest('POST', $uri, $headers, $httpBody);
+    }
+
+    /**
      * Operation apiV2ClaimDowntimePost
      *
-     * Создание претензии о простое
+     * Подача (создание) требования по простою
      *
      * @param  \MagDv\Cargomart\Dto\ClaimDowntimeCreateRequest $claim_downtime_create_request claim_downtime_create_request (optional)
      *
@@ -1580,7 +1924,7 @@ class ClaimDowntimeApi
     /**
      * Operation apiV2ClaimDowntimePostWithHttpInfo
      *
-     * Создание претензии о простое
+     * Подача (создание) требования по простою
      *
      * @param  \MagDv\Cargomart\Dto\ClaimDowntimeCreateRequest $claim_downtime_create_request (optional)
      *
@@ -1724,7 +2068,7 @@ class ClaimDowntimeApi
     /**
      * Operation apiV2ClaimDowntimePostAsync
      *
-     * Создание претензии о простое
+     * Подача (создание) требования по простою
      *
      * @param  \MagDv\Cargomart\Dto\ClaimDowntimeCreateRequest $claim_downtime_create_request (optional)
      *
@@ -1744,7 +2088,7 @@ class ClaimDowntimeApi
     /**
      * Operation apiV2ClaimDowntimePostAsyncWithHttpInfo
      *
-     * Создание претензии о простое
+     * Подача (создание) требования по простою
      *
      * @param  \MagDv\Cargomart\Dto\ClaimDowntimeCreateRequest $claim_downtime_create_request (optional)
      *

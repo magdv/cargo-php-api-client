@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **string** | Идентификатор заказа |
 **draft_id** | **string** | Идентификатор черновика | [optional]
 **serial_id** | **int** | Порядковый номер заказа | [optional]
+**serial_number_and_version** | **string** | Порядковый номер с версией | [optional]
 **status_id** | [**\MagDv\Cargomart\Dto\OrderStatusEnum**](OrderStatusEnum.md) | Статуса заказа |
 **ext_status_id** | [**\MagDv\Cargomart\Dto\OrderStatusEnum**](OrderStatusEnum.md) | Расширенный статус заказа |
 **type** | [**\MagDv\Cargomart\Dto\OrderType**](OrderType.md) | Тип заказа |

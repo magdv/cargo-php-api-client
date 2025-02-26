@@ -46,7 +46,7 @@ class ClaimStatus
      */
     public const DIRECTED = 'directed';
 
-    public const CANCELLED = 'cancelled';
+    public const REVOKED = 'revoked';
 
     public const REJECTED = 'rejected';
 
@@ -60,7 +60,7 @@ class ClaimStatus
     {
         return [
             self::DIRECTED,
-            self::CANCELLED,
+            self::REVOKED,
             self::REJECTED,
             self::FULFILLED
         ];

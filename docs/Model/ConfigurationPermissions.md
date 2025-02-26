@@ -112,5 +112,6 @@ Name | Type | Description | Notes
 **view_main_search** | **bool** | Доступ к глобальному поиску | [optional] [default to false]
 **order_multi_currency_param** | **bool** | Редактировать параметр isMultiCurrency заказа | [optional] [default to false]
 **view_claim_list** | **bool** | Доступ к разделу списка требований | [optional] [default to false]
+**sign_additional_agreement** | **bool** | Доступ к подписанию доп. соглашения | [optional] [default to false]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

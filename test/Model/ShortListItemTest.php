@@ -99,6 +99,15 @@ class ShortListItemTest extends TestCase
     }
 
     /**
+     * Test attribute "serial_number_and_version"
+     */
+    public function testPropertySerialNumberAndVersion()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "status"
      */
     public function testPropertyStatus()
