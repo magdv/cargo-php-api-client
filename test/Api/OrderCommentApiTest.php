@@ -85,18 +85,6 @@ class OrderCommentApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderOrderIdCommentIdReplyPost
-     *
-     * Добавление ответа на комментарий.
-     *
-     */
-    public function testApiV2OrderOrderIdCommentIdReplyPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderOrderIdCommentPost
      *
      * Создание комментария.

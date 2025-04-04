@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **new_order_edit_form** | **bool** | Использовать новую форму редактирования заказа | [optional] [default to false]
 **common_draft** | **bool** | Использовать новую форму создания черновиков | [optional] [default to false]
 **one_order_list** | **bool** | Использовать объединенный список заказов | [optional] [default to false]
-**order_downtime_claim** | **bool** | Включить фичу претензий о простое по заявкам | [optional] [default to false]
+**order_downtime_claim** | **bool** | Включить фичу требований о простое по заявкам | [optional] [default to false]
 **order_filter_new** | **bool** | Фильтр на заказы второй версии | [optional] [default to false]
 **order_roadmap** | **bool** | Включить роадмап | [optional] [default to false]
 **price_prediction** | **bool** | Использовать предсказания цены | [optional] [default to false]

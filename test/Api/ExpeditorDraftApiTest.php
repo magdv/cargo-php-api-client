@@ -167,28 +167,4 @@ class ExpeditorDraftApiTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for apiV2OrderDraftExpeditorStepBidGet
-     *
-     * Получить шаг ставки по цене.
-     *
-     */
-    public function testApiV2OrderDraftExpeditorStepBidGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderDraftExpeditorValidatePost
-     *
-     * Бизнес валидация черновика..
-     *
-     */
-    public function testApiV2OrderDraftExpeditorValidatePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
 }

@@ -109,18 +109,6 @@ class OrderEditApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderOrderIdClonePost
-     *
-     * Создание нового заказа из шаблона или на основании.
-     *
-     */
-    public function testApiV2OrderOrderIdClonePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderOrderIdContactDelete
      *
      * Список контактов на удаление из заказа..
@@ -181,18 +169,6 @@ class OrderEditApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderOrderIdModerationApprovePost
-     *
-     * Опубликовать заказ под ГП..
-     *
-     */
-    public function testApiV2OrderOrderIdModerationApprovePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderOrderIdModerationDelete
      *
      * Забрать заказ на модерации ГП..
@@ -211,18 +187,6 @@ class OrderEditApiTest extends TestCase
      *
      */
     public function testApiV2OrderOrderIdModerationPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdModerationRejectPost
-     *
-     * Отклонение модератором заказа..
-     *
-     */
-    public function testApiV2OrderOrderIdModerationRejectPost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -343,18 +307,6 @@ class OrderEditApiTest extends TestCase
      *
      */
     public function testApiV2OrderOrderIdTagPut()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdValidatePost
-     *
-     * Проверка валидности заказа.
-     *
-     */
-    public function testApiV2OrderOrderIdValidatePost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

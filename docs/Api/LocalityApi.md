@@ -5,7 +5,6 @@ All URIs are relative to https://cargomart.ru.
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiV2LocalityGet()**](LocalityApi.md#apiV2LocalityGet) | **GET** /api/v2/locality | Поиск по кладру.
-[**apiV2LocalityNearestGet()**](LocalityApi.md#apiV2LocalityNearestGet) | **GET** /api/v2/locality/nearest | Поиск ближайших локалити в радиусе 50 км от заданных координат
 
 
 ## `apiV2LocalityGet()`
@@ -69,77 +68,6 @@ Name | Type | Description  | Notes
  **filter** | [**\MagDv\Cargomart\Dto\LocalityFilterEnum**](../Model/.md)| Фильтр по административным уровням | [optional]
  **hierarchy** | **string**| Код объекта иерархии для ограничения поиска только по вхождению в этот объект | [optional]
  **sort** | [**\MagDv\Cargomart\Dto\LocalitySortTypeEnum**](../Model/.md)| Дополнительная сортировка - тип поиска. | [optional]
- **per_page** | **int**| Количество элементов на страницу | [optional]
- **page** | **int**| Номер текущей выбираемой страницы | [optional]
-
-### Return type
-
-[**\MagDv\Cargomart\Dto\LocalityResponse**](../Model/LocalityResponse.md)
-
-### Authorization
-
-[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `apiV2LocalityNearestGet()`
-
-```php
-apiV2LocalityNearestGet($latitude, $longitude, $per_page, $page): \MagDv\Cargomart\Dto\LocalityResponse
-```
-
-Поиск ближайших локалити в радиусе 50 км от заданных координат
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: CookieTokenAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-
-// Configure API key authorization: HeaderAuthorizationAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new MagDv\Cargomart\Api\LocalityApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client(),
-    $config
-);
-$latitude = 'latitude_example'; // string | Координаты широты
-$longitude = 'longitude_example'; // string | Координаты долготы
-$per_page = 56; // int | Количество элементов на страницу
-$page = 56; // int | Номер текущей выбираемой страницы
-
-try {
-    $result = $apiInstance->apiV2LocalityNearestGet($latitude, $longitude, $per_page, $page);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling LocalityApi->apiV2LocalityNearestGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **latitude** | **string**| Координаты широты |
- **longitude** | **string**| Координаты долготы |
  **per_page** | **int**| Количество элементов на страницу | [optional]
  **page** | **int**| Номер текущей выбираемой страницы | [optional]
 

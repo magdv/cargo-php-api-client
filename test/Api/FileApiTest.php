@@ -73,18 +73,6 @@ class FileApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2FileClearDelete
-     *
-     * Удаление всех временных файлов пользователя, не привязанных к документам..
-     *
-     */
-    public function testApiV2FileClearDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2FileDelete
      *
      * Удаление списка файлов..
@@ -109,36 +97,12 @@ class FileApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2FileIdDelete
-     *
-     * Удаление файла по его идентификатору..
-     *
-     */
-    public function testApiV2FileIdDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2FilePost
      *
      * Загрузка не привязанного к документам файла.
      *
      */
     public function testApiV2FilePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UploadPost
-     *
-     * Загрузка временного файла, не привязанного ни к чему.
-     *
-     */
-    public function testApiV2UploadPost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -73,30 +73,6 @@ class OrderItemApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderOrderIdAfeerExpressPost
-     *
-     * Подтверждение везти экспресс - заказ.
-     *
-     */
-    public function testApiV2OrderOrderIdAfeerExpressPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdArchivePost
-     *
-     * Добавление заказа в архив..
-     *
-     */
-    public function testApiV2OrderOrderIdArchivePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderOrderIdBidGet
      *
      * получение списка ставок на заказ..
@@ -127,66 +103,6 @@ class OrderItemApiTest extends TestCase
      *
      */
     public function testApiV2OrderOrderIdBidPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdBrokerDelete
-     *
-     * Удвление брокера с заказа..
-     *
-     */
-    public function testApiV2OrderOrderIdBrokerDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdBrokerGet
-     *
-     * Получение брокера на заказ..
-     *
-     */
-    public function testApiV2OrderOrderIdBrokerGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdBrokerPut
-     *
-     * Установка брокера на заказ..
-     *
-     */
-    public function testApiV2OrderOrderIdBrokerPut()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdCancelPost
-     *
-     * Отмена опубликованного заказа..
-     *
-     */
-    public function testApiV2OrderOrderIdCancelPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdCarrierSignPost
-     *
-     * Подписать взятие заказа перевозчиком.
-     *
-     */
-    public function testApiV2OrderOrderIdCarrierSignPost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -277,42 +193,6 @@ class OrderItemApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderOrderIdNegotiatePost
-     *
-     * Изменение заказчиком условий заказа, чтобы ближе соответствовать поступившим предложениям от перевозчиков.
-     *
-     */
-    public function testApiV2OrderOrderIdNegotiatePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdOfferGet
-     *
-     * получение списка предложений на заказ..
-     *
-     */
-    public function testApiV2OrderOrderIdOfferGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdOfferPost
-     *
-     * Установка предложения на заказ..
-     *
-     */
-    public function testApiV2OrderOrderIdOfferPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderOrderIdOriginalDocsAcceptPost
      *
      * Подтвердить принятие оригиналов документов..
@@ -331,18 +211,6 @@ class OrderItemApiTest extends TestCase
      *
      */
     public function testApiV2OrderOrderIdOriginalDocsRejectPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdOriginalDocsTrackingNumberPost
-     *
-     * Указать трек номер отправленных документов..
-     *
-     */
-    public function testApiV2OrderOrderIdOriginalDocsTrackingNumberPost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -403,30 +271,6 @@ class OrderItemApiTest extends TestCase
      *
      */
     public function testApiV2OrderOrderIdSignedDocumentGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdSimpleDocumentGet
-     *
-     * Получение документов заказа со списком титулов.
-     *
-     */
-    public function testApiV2OrderOrderIdSimpleDocumentGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdUnarchivePost
-     *
-     * Возврат заказа из архива..
-     *
-     */
-    public function testApiV2OrderOrderIdUnarchivePost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -543,7 +543,7 @@ class ConfigurationFeatures implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets order_downtime_claim
      *
-     * @param bool|null $order_downtime_claim Включить фичу претензий о простое по заявкам
+     * @param bool|null $order_downtime_claim Включить фичу требований о простое по заявкам
      *
      * @return self
      */

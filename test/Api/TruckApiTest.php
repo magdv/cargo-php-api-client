@@ -73,48 +73,12 @@ class TruckApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2TruckDelete
-     *
-     * Групповое удаление ТС.
-     *
-     */
-    public function testApiV2TruckDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2TruckGet
      *
      * Метод возращает список ТС.
      *
      */
     public function testApiV2TruckGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2TruckIdActivationDelete
-     *
-     * Удаление возможности создавать фильтр на машину для поиска заказов.
-     *
-     */
-    public function testApiV2TruckIdActivationDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2TruckIdActivationPost
-     *
-     * Разрешить создавать фильтр на машину для поиска заказов.
-     *
-     */
-    public function testApiV2TruckIdActivationPost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -151,18 +115,6 @@ class TruckApiTest extends TestCase
      *
      */
     public function testApiV2TruckIdPut()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2TruckPost
-     *
-     * Создание нового ТС.
-     *
-     */
-    public function testApiV2TruckPost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

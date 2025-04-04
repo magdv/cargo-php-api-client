@@ -81,8 +81,6 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'patch' => '\MagDv\Cargomart\Dto\OrderPatchLastItem',
         'last_patch' => '\MagDv\Cargomart\Dto\OrderPatchLastItem',
         'truck_driver_patch' => '\MagDv\Cargomart\Dto\OrderPatchLastItem',
-        'carrier_downtime_claim' => '\MagDv\Cargomart\Dto\OrderDowntimeClaim',
-        'expeditor_downtime_claim' => '\MagDv\Cargomart\Dto\OrderDowntimeClaim',
         'external_id' => 'string',
         'external_id_label' => 'string',
         'customer_branch_id' => 'int',
@@ -136,8 +134,6 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'patch' => null,
         'last_patch' => null,
         'truck_driver_patch' => null,
-        'carrier_downtime_claim' => null,
-        'expeditor_downtime_claim' => null,
         'external_id' => null,
         'external_id_label' => null,
         'customer_branch_id' => null,
@@ -189,8 +185,6 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'patch' => false,
         'last_patch' => false,
         'truck_driver_patch' => false,
-        'carrier_downtime_claim' => false,
-        'expeditor_downtime_claim' => false,
         'external_id' => false,
         'external_id_label' => false,
         'customer_branch_id' => false,
@@ -322,8 +316,6 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'patch' => 'patch',
         'last_patch' => 'lastPatch',
         'truck_driver_patch' => 'truckDriverPatch',
-        'carrier_downtime_claim' => 'carrierDowntimeClaim',
-        'expeditor_downtime_claim' => 'expeditorDowntimeClaim',
         'external_id' => 'externalId',
         'external_id_label' => 'externalIdLabel',
         'customer_branch_id' => 'customerBranchId',
@@ -375,8 +367,6 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'patch' => 'setPatch',
         'last_patch' => 'setLastPatch',
         'truck_driver_patch' => 'setTruckDriverPatch',
-        'carrier_downtime_claim' => 'setCarrierDowntimeClaim',
-        'expeditor_downtime_claim' => 'setExpeditorDowntimeClaim',
         'external_id' => 'setExternalId',
         'external_id_label' => 'setExternalIdLabel',
         'customer_branch_id' => 'setCustomerBranchId',
@@ -428,8 +418,6 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'patch' => 'getPatch',
         'last_patch' => 'getLastPatch',
         'truck_driver_patch' => 'getTruckDriverPatch',
-        'carrier_downtime_claim' => 'getCarrierDowntimeClaim',
-        'expeditor_downtime_claim' => 'getExpeditorDowntimeClaim',
         'external_id' => 'getExternalId',
         'external_id_label' => 'getExternalIdLabel',
         'customer_branch_id' => 'getCustomerBranchId',
@@ -532,8 +520,6 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('patch', $data ?? [], null);
         $this->setIfExists('last_patch', $data ?? [], null);
         $this->setIfExists('truck_driver_patch', $data ?? [], null);
-        $this->setIfExists('carrier_downtime_claim', $data ?? [], null);
-        $this->setIfExists('expeditor_downtime_claim', $data ?? [], null);
         $this->setIfExists('external_id', $data ?? [], null);
         $this->setIfExists('external_id_label', $data ?? [], null);
         $this->setIfExists('customer_branch_id', $data ?? [], null);
@@ -1236,60 +1222,6 @@ class ProposalCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable truck_driver_patch cannot be null');
         }
         $this->container['truck_driver_patch'] = $truck_driver_patch;
-
-        return $this;
-    }
-
-    /**
-     * Gets carrier_downtime_claim
-     *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaim|null
-     */
-    public function getCarrierDowntimeClaim()
-    {
-        return $this->container['carrier_downtime_claim'];
-    }
-
-    /**
-     * Sets carrier_downtime_claim
-     *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaim|null $carrier_downtime_claim Претензия о простое перевозчика Экспедитору
-     *
-     * @return self
-     */
-    public function setCarrierDowntimeClaim($carrier_downtime_claim)
-    {
-        if (is_null($carrier_downtime_claim)) {
-            throw new \InvalidArgumentException('non-nullable carrier_downtime_claim cannot be null');
-        }
-        $this->container['carrier_downtime_claim'] = $carrier_downtime_claim;
-
-        return $this;
-    }
-
-    /**
-     * Gets expeditor_downtime_claim
-     *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaim|null
-     */
-    public function getExpeditorDowntimeClaim()
-    {
-        return $this->container['expeditor_downtime_claim'];
-    }
-
-    /**
-     * Sets expeditor_downtime_claim
-     *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaim|null $expeditor_downtime_claim Претензия о простое Экспедитора Заказчику
-     *
-     * @return self
-     */
-    public function setExpeditorDowntimeClaim($expeditor_downtime_claim)
-    {
-        if (is_null($expeditor_downtime_claim)) {
-            throw new \InvalidArgumentException('non-nullable expeditor_downtime_claim cannot be null');
-        }
-        $this->container['expeditor_downtime_claim'] = $expeditor_downtime_claim;
 
         return $this;
     }

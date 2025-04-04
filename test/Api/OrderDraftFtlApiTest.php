@@ -73,18 +73,6 @@ class OrderDraftFtlApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderDraftFtlConditionsGet
-     *
-     * Получить условия перевозки.
-     *
-     */
-    public function testApiV2OrderDraftFtlConditionsGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderDraftFtlDraftIdDelete
      *
      * Удаление черновика заказа.
@@ -151,18 +139,6 @@ class OrderDraftFtlApiTest extends TestCase
      *
      */
     public function testApiV2OrderDraftFtlStepBidGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderDraftFtlValidatePost
-     *
-     * Бизнес валидация черновика FTL..
-     *
-     */
-    public function testApiV2OrderDraftFtlValidatePost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

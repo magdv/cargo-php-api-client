@@ -73,42 +73,6 @@ class OrderDocumentApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderDocumentDocumentIdDelete
-     *
-     * Удаление документа.
-     *
-     */
-    public function testApiV2OrderDocumentDocumentIdDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderDocumentDocumentIdGet
-     *
-     * Получение документа.
-     *
-     */
-    public function testApiV2OrderDocumentDocumentIdGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderDocumentDocumentIdPut
-     *
-     * Редактирование документа.
-     *
-     */
-    public function testApiV2OrderDocumentDocumentIdPut()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderDocumentPackagePackageIdAcceptPost
      *
      * Подтверждение что пакет сканов документов перевозчика принят.
@@ -121,36 +85,12 @@ class OrderDocumentApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderDocumentPackagePackageIdDocumentPost
-     *
-     * Создание документа.
-     *
-     */
-    public function testApiV2OrderDocumentPackagePackageIdDocumentPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderDocumentPackagePackageIdGet
      *
      * Получение пакета документов по заказу.
      *
      */
     public function testApiV2OrderDocumentPackagePackageIdGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderDocumentPackagePackageIdModerationPost
-     *
-     * Отправка пакета документов на проверку.
-     *
-     */
-    public function testApiV2OrderDocumentPackagePackageIdModerationPost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -175,18 +115,6 @@ class OrderDocumentApiTest extends TestCase
      *
      */
     public function testApiV2OrderDocumentPackagePackageIdShowToCustomerPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderDocumentPackagePackageIdUpdatePut
-     *
-     * Валидация пакета документов перед сохранением файлов в документы заказа и отправкой на модерацию.
-     *
-     */
-    public function testApiV2OrderDocumentPackagePackageIdUpdatePut()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

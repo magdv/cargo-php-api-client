@@ -78,6 +78,7 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'conditions' => 'string[]',
         'payment_type_id' => 'int',
         'payment_detail' => 'string',
+        'open_currency_code' => 'string',
         'currency_code' => 'string',
         'is_multi_currency' => 'bool',
         'vat_rate' => 'float',
@@ -160,6 +161,7 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'conditions' => null,
         'payment_type_id' => null,
         'payment_detail' => null,
+        'open_currency_code' => null,
         'currency_code' => null,
         'is_multi_currency' => null,
         'vat_rate' => null,
@@ -240,6 +242,7 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'conditions' => false,
         'payment_type_id' => false,
         'payment_detail' => false,
+        'open_currency_code' => false,
         'currency_code' => false,
         'is_multi_currency' => false,
         'vat_rate' => false,
@@ -400,6 +403,7 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'conditions' => 'conditions',
         'payment_type_id' => 'paymentTypeId',
         'payment_detail' => 'paymentDetail',
+        'open_currency_code' => 'openCurrencyCode',
         'currency_code' => 'currencyCode',
         'is_multi_currency' => 'isMultiCurrency',
         'vat_rate' => 'vatRate',
@@ -480,6 +484,7 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'conditions' => 'setConditions',
         'payment_type_id' => 'setPaymentTypeId',
         'payment_detail' => 'setPaymentDetail',
+        'open_currency_code' => 'setOpenCurrencyCode',
         'currency_code' => 'setCurrencyCode',
         'is_multi_currency' => 'setIsMultiCurrency',
         'vat_rate' => 'setVatRate',
@@ -560,6 +565,7 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'conditions' => 'getConditions',
         'payment_type_id' => 'getPaymentTypeId',
         'payment_detail' => 'getPaymentDetail',
+        'open_currency_code' => 'getOpenCurrencyCode',
         'currency_code' => 'getCurrencyCode',
         'is_multi_currency' => 'getIsMultiCurrency',
         'vat_rate' => 'getVatRate',
@@ -691,6 +697,7 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('conditions', $data ?? [], null);
         $this->setIfExists('payment_type_id', $data ?? [], null);
         $this->setIfExists('payment_detail', $data ?? [], null);
+        $this->setIfExists('open_currency_code', $data ?? [], null);
         $this->setIfExists('currency_code', $data ?? [], null);
         $this->setIfExists('is_multi_currency', $data ?? [], false);
         $this->setIfExists('vat_rate', $data ?? [], null);
@@ -1315,6 +1322,33 @@ class OrderEditItem implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable payment_detail cannot be null');
         }
         $this->container['payment_detail'] = $payment_detail;
+
+        return $this;
+    }
+
+    /**
+     * Gets open_currency_code
+     *
+     * @return string|null
+     */
+    public function getOpenCurrencyCode()
+    {
+        return $this->container['open_currency_code'];
+    }
+
+    /**
+     * Sets open_currency_code
+     *
+     * @param string|null $open_currency_code Код валюты заказа при публикации
+     *
+     * @return self
+     */
+    public function setOpenCurrencyCode($open_currency_code)
+    {
+        if (is_null($open_currency_code)) {
+            throw new \InvalidArgumentException('non-nullable open_currency_code cannot be null');
+        }
+        $this->container['open_currency_code'] = $open_currency_code;
 
         return $this;
     }

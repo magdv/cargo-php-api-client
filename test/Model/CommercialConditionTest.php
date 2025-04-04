@@ -81,15 +81,6 @@ class CommercialConditionTest extends TestCase
     }
 
     /**
-     * Test attribute "version"
-     */
-    public function testPropertyVersion()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "start_date"
      */
     public function testPropertyStartDate()
@@ -102,6 +93,15 @@ class CommercialConditionTest extends TestCase
      * Test attribute "end_date"
      */
     public function testPropertyEndDate()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "publish_date"
+     */
+    public function testPropertyPublishDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

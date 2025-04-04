@@ -36,7 +36,7 @@ use \MagDv\Cargomart\ObjectSerializer;
  * DraftDocumentResponse Class Doc Comment
  *
  * @category Class
- * @description Детали черновика документу
+ * @description Данные черновика документа
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

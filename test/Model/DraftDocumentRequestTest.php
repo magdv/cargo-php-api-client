@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  * DraftDocumentRequestTest Class Doc Comment
  *
  * @category    Class
- * @description Данные для редактирования объекта заказа
+ * @description Данные черновика документа
  * @package     MagDv\Cargomart
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

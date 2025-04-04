@@ -4,82 +4,13 @@ All URIs are relative to https://cargomart.ru.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV2OrderDraftFtlConditionsGet()**](OrderDraftFtlApi.md#apiV2OrderDraftFtlConditionsGet) | **GET** /api/v2/order-draft-ftl/conditions | Получить условия перевозки
 [**apiV2OrderDraftFtlDraftIdDelete()**](OrderDraftFtlApi.md#apiV2OrderDraftFtlDraftIdDelete) | **DELETE** /api/v2/order-draft-ftl/{draftId} | Удаление черновика заказа
 [**apiV2OrderDraftFtlDraftIdGet()**](OrderDraftFtlApi.md#apiV2OrderDraftFtlDraftIdGet) | **GET** /api/v2/order-draft-ftl/{draftId} | Получение иформации о черновике FTL заказа.
 [**apiV2OrderDraftFtlDraftIdPublishPost()**](OrderDraftFtlApi.md#apiV2OrderDraftFtlDraftIdPublishPost) | **POST** /api/v2/order-draft-ftl/{draftId}/publish | Публикация черновика FTL заказа.
 [**apiV2OrderDraftFtlDraftIdPut()**](OrderDraftFtlApi.md#apiV2OrderDraftFtlDraftIdPut) | **PUT** /api/v2/order-draft-ftl/{draftId} | Редактирование черновика заказа FTL
 [**apiV2OrderDraftFtlPost()**](OrderDraftFtlApi.md#apiV2OrderDraftFtlPost) | **POST** /api/v2/order-draft-ftl | Создание черновика заказа FTL
 [**apiV2OrderDraftFtlStepBidGet()**](OrderDraftFtlApi.md#apiV2OrderDraftFtlStepBidGet) | **GET** /api/v2/order-draft-ftl/step-bid | Получить шаг ставки по цене
-[**apiV2OrderDraftFtlValidatePost()**](OrderDraftFtlApi.md#apiV2OrderDraftFtlValidatePost) | **POST** /api/v2/order-draft-ftl/validate | Бизнес валидация черновика FTL.
 
-
-## `apiV2OrderDraftFtlConditionsGet()`
-
-```php
-apiV2OrderDraftFtlConditionsGet($route_points): \MagDv\Cargomart\Dto\OrderDraftFtlConditionsResponse
-```
-
-Получить условия перевозки
-
-Получить условия перевозки
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: CookieTokenAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-
-// Configure API key authorization: HeaderAuthorizationAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new MagDv\Cargomart\Api\OrderDraftFtlApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client(),
-    $config
-);
-$route_points = array('route_points_example'); // string[] | Список КЛАДР кодов пунктов
-
-try {
-    $result = $apiInstance->apiV2OrderDraftFtlConditionsGet($route_points);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderDraftFtlApi->apiV2OrderDraftFtlConditionsGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **route_points** | [**string[]**](../Model/string.md)| Список КЛАДР кодов пунктов |
-
-### Return type
-
-[**\MagDv\Cargomart\Dto\OrderDraftFtlConditionsResponse**](../Model/OrderDraftFtlConditionsResponse.md)
-
-### Authorization
-
-[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
 
 ## `apiV2OrderDraftFtlDraftIdDelete()`
 
@@ -472,71 +403,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `apiV2OrderDraftFtlValidatePost()`
-
-```php
-apiV2OrderDraftFtlValidatePost($order_draft_ftl_request): \MagDv\Cargomart\Dto\BaseMessageResponse
-```
-
-Бизнес валидация черновика FTL.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: CookieTokenAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-
-// Configure API key authorization: HeaderAuthorizationAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new MagDv\Cargomart\Api\OrderDraftFtlApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client(),
-    $config
-);
-$order_draft_ftl_request = new \MagDv\Cargomart\Dto\OrderDraftFtlRequest(); // \MagDv\Cargomart\Dto\OrderDraftFtlRequest
-
-try {
-    $result = $apiInstance->apiV2OrderDraftFtlValidatePost($order_draft_ftl_request);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderDraftFtlApi->apiV2OrderDraftFtlValidatePost: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **order_draft_ftl_request** | [**\MagDv\Cargomart\Dto\OrderDraftFtlRequest**](../Model/OrderDraftFtlRequest.md)|  | [optional]
-
-### Return type
-
-[**\MagDv\Cargomart\Dto\BaseMessageResponse**](../Model/BaseMessageResponse.md)
-
-### Authorization
-
-[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

@@ -73,18 +73,6 @@ class DeviceApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2DeviceIdDelete
-     *
-     * Удаление идентификатора устройства..
-     *
-     */
-    public function testApiV2DeviceIdDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2DevicePost
      *
      * Регистрация нового устройства пользователя..

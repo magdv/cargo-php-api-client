@@ -75,7 +75,7 @@ class SignedDocumentsApiTest extends TestCase
     /**
      * Test case for getSignedDocumentById
      *
-     * Детали подписанного документу..
+     * Детали подписанного документа..
      *
      */
     public function testGetSignedDocumentById()

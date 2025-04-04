@@ -97,48 +97,12 @@ class DictionaryApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2DictionaryExpeditorBranchGet
-     *
-     * Вывод списка филиалов..
-     *
-     */
-    public function testApiV2DictionaryExpeditorBranchGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2DictionaryGet
      *
      * Метод возвращает список словарей.
      *
      */
     public function testApiV2DictionaryGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderRefuseReasonGet
-     *
-     * Словарь причин для отказа.
-     *
-     */
-    public function testApiV2OrderRefuseReasonGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2PriceTypeGet
-     *
-     * Словарь тип цены.
-     *
-     */
-    public function testApiV2PriceTypeGet()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

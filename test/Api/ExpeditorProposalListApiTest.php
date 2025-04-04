@@ -73,18 +73,6 @@ class ExpeditorProposalListApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2ExpeditorProposalExistsGet
-     *
-     * Метод для существования хоть одной записи по запросу..
-     *
-     */
-    public function testApiV2ExpeditorProposalExistsGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2ExpeditorProposalGet
      *
      * Метод для получения списка заказов Экспедитора согласно фильтру..

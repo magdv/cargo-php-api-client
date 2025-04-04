@@ -36,7 +36,7 @@ use \MagDv\Cargomart\ObjectSerializer;
  * DraftDocumentRequest Class Doc Comment
  *
  * @category Class
- * @description Данные для редактирования объекта заказа
+ * @description Данные черновика документа
  * @package  MagDv\Cargomart
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -236,8 +236,6 @@ class DraftDocumentRequest implements ModelInterface, ArrayAccess, \JsonSerializ
         return self::$openAPIModelName;
     }
 
-    public const TYPE_DOWNTIME_CLAIM = 'downtimeClaim';
-    public const TYPE_DOWNTIME_CLAIM_RESPONSE = 'downtimeClaimResponse';
     public const TYPE_ACT_NON_DELIVERY_CAR = 'actNonDeliveryCar';
 
     /**
@@ -248,8 +246,6 @@ class DraftDocumentRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     public function getTypeAllowableValues()
     {
         return [
-            self::TYPE_DOWNTIME_CLAIM,
-            self::TYPE_DOWNTIME_CLAIM_RESPONSE,
             self::TYPE_ACT_NON_DELIVERY_CAR,
         ];
     }

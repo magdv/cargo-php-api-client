@@ -83,16 +83,4 @@ class OrderChatApiTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for apiV2OrderOrderIdChatTypePost
-     *
-     * создание комнаты по типу..
-     *
-     */
-    public function testApiV2OrderOrderIdChatTypePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
 }
