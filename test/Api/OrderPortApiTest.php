@@ -73,66 +73,6 @@ class OrderPortApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderExcelGet
-     *
-     * Получение ссылки на excel файл отчета..
-     *
-     */
-    public function testApiV2OrderExcelGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderExcelOfferReportGet
-     *
-     * выгрузка xlsx с отчетом по запросам цен..
-     *
-     */
-    public function testApiV2OrderExcelOfferReportGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderExcelPost
-     *
-     * Отправка запроса на экспорт..
-     *
-     */
-    public function testApiV2OrderExcelPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderImportGet
-     *
-     * Получение шаблона..
-     *
-     */
-    public function testApiV2OrderImportGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderImportPost
-     *
-     * Импорт заказа из xlsx..
-     *
-     */
-    public function testApiV2OrderImportPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderOrderIdOfferExcelGet
      *
      * выгрузка xlsx файла со списком предложений..

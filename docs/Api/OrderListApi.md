@@ -4,77 +4,11 @@ All URIs are relative to https://cargomart.ru.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV2OrderBrokerGet()**](OrderListApi.md#apiV2OrderBrokerGet) | **GET** /api/v2/order/broker | Получение списка брокеров.
 [**apiV2OrderCountGet()**](OrderListApi.md#apiV2OrderCountGet) | **GET** /api/v2/order/count | Метод для получения количества заказов согласно фильтру.
 [**apiV2OrderExistsGet()**](OrderListApi.md#apiV2OrderExistsGet) | **GET** /api/v2/order/exists | Метод для проверки существования хоть одной записи по запросу.
 [**apiV2OrderGet()**](OrderListApi.md#apiV2OrderGet) | **GET** /api/v2/order | Метод для получения списка заказов согласно фильтру.
 [**apiV2OrderIdsGet()**](OrderListApi.md#apiV2OrderIdsGet) | **GET** /api/v2/order/ids | Метод для получения списка идентификаторов (хешей) заказов согласно фильтру.
 
-
-## `apiV2OrderBrokerGet()`
-
-```php
-apiV2OrderBrokerGet($filter_order): \MagDv\Cargomart\Dto\BrokerListResponse
-```
-
-Получение списка брокеров.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: CookieTokenAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-
-// Configure API key authorization: HeaderAuthorizationAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new MagDv\Cargomart\Api\OrderListApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client(),
-    $config
-);
-$filter_order = array('filter_order_example'); // string[] | Массив id хэшей заказов
-
-try {
-    $result = $apiInstance->apiV2OrderBrokerGet($filter_order);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderListApi->apiV2OrderBrokerGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filter_order** | [**string[]**](../Model/string.md)| Массив id хэшей заказов | [optional]
-
-### Return type
-
-[**\MagDv\Cargomart\Dto\BrokerListResponse**](../Model/BrokerListResponse.md)
-
-### Authorization
-
-[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
 
 ## `apiV2OrderCountGet()`
 

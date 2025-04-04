@@ -83,16 +83,4 @@ class OrderRoadmapApiTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for apiV2RoadmapRoadmapIdHidePost
-     *
-     * Скрытие динамического типа роадмап.
-     *
-     */
-    public function testApiV2RoadmapRoadmapIdHidePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
 }

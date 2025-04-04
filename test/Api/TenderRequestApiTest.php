@@ -73,36 +73,12 @@ class TenderRequestApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2TenderRequestGet
-     *
-     * Получение списка тендеров в статусе запроса цены.
-     *
-     */
-    public function testApiV2TenderRequestGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2TenderRequestLotGet
      *
      * Получение списка лотов по тендеру в статусе запроса цены.
      *
      */
     public function testApiV2TenderRequestLotGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2TenderRequestLotLotIdCompanyStatsGet
-     *
-     * Получить список компаний со статистикой по лоту.
-     *
-     */
-    public function testApiV2TenderRequestLotLotIdCompanyStatsGet()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -139,42 +115,6 @@ class TenderRequestApiTest extends TestCase
      *
      */
     public function testApiV2TenderRequestLotLotIdOfferPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2TenderRequestLotLotIdProposalGet
-     *
-     * Получить список предложений по лоту.
-     *
-     */
-    public function testApiV2TenderRequestLotLotIdProposalGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2TenderRequestTenderIdCancelPost
-     *
-     * Отмена тендера.
-     *
-     */
-    public function testApiV2TenderRequestTenderIdCancelPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2TenderRequestTenderIdCompanyStatsGet
-     *
-     * Получить список компаний со статистикой вовлеченности.
-     *
-     */
-    public function testApiV2TenderRequestTenderIdCompanyStatsGet()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **end_date** | **\DateTime** | Дата окончания торгов | [optional]
 **duration** | **int** | Продолжительность торгов | [optional]
 **create_date** | **\DateTime** | Дата создания торгов | [optional]
+**open_currency_code** | **string** | Код валюты заказа при публикации | [optional]
 **currency_code** | **string** | Код валюты заказа | [optional]
 **is_multi_currency** | **bool** | Флаг мультивалютности | [optional] [default to false]
 **open_price** | **string** | Цена открытия заказа | [optional]
@@ -131,7 +132,6 @@ Name | Type | Description | Notes
 **patch** | [**\MagDv\Cargomart\Dto\OrderPatchLastItem**](OrderPatchLastItem.md) | Запрос на изменение заказа | [optional]
 **last_patch** | [**\MagDv\Cargomart\Dto\OrderPatchLastItem**](OrderPatchLastItem.md) | @deprecated Запрос на изменение заказа от экспедитора (использовать patch) | [optional]
 **truck_driver_patch** | [**\MagDv\Cargomart\Dto\OrderPatchLastItem**](OrderPatchLastItem.md) | @deprecated Запрос на изменение машины и водителя в заказе (использовать patch) | [optional]
-**carrier_downtime_claim** | [**\MagDv\Cargomart\Dto\OrderDowntimeClaim**](OrderDowntimeClaim.md) | Претензия о простое перевозчика Экспедитору | [optional]
 **expeditor_consignor_contract** | [**\MagDv\Cargomart\Dto\ExpeditorContract**](ExpeditorContract.md) | Данные договора | [optional]
 **expeditor_carrier_contract** | [**\MagDv\Cargomart\Dto\ExpeditorContract**](ExpeditorContract.md) | Данные договора | [optional]
 **gp_carrier_contract** | [**\MagDv\Cargomart\Dto\GeneralPartnerContract**](GeneralPartnerContract.md) | Данные договора между ГП и перевозчиком | [optional]
@@ -139,6 +139,5 @@ Name | Type | Description | Notes
 **bidding_type** | [**\MagDv\Cargomart\Dto\OrderBiddingType**](OrderBiddingType.md) |  | [optional]
 **bidding** | [**\MagDv\Cargomart\Dto\OrderDraftExpeditorBidding**](OrderDraftExpeditorBidding.md) | Настройки торгов | [optional]
 **has_carrier_sign** | **bool** | Подписана заявка перевозчиком-победителем | [optional] [default to false]
-**expeditor_downtime_claim** | [**\MagDv\Cargomart\Dto\OrderDowntimeClaim**](OrderDowntimeClaim.md) | Претензия о простое Экспедитора Заказчику | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

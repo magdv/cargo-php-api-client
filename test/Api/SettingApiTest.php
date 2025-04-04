@@ -83,16 +83,4 @@ class SettingApiTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for apiV2SettingNamePatch
-     *
-     * Изменение значения настройки.
-     *
-     */
-    public function testApiV2SettingNamePatch()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
 }

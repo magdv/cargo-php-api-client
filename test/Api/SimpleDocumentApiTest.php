@@ -83,28 +83,4 @@ class SimpleDocumentApiTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for apiV2ExpeditorProposalIdSimpleDocumentsGet
-     *
-     * Получение списка документов заявки со списком титулов.
-     *
-     */
-    public function testApiV2ExpeditorProposalIdSimpleDocumentsGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdSimpleDocumentGet
-     *
-     * Получение документов заказа со списком титулов.
-     *
-     */
-    public function testApiV2OrderOrderIdSimpleDocumentGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
 }

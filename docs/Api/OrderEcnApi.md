@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiV2OrderEcnIdCancelPost()**](OrderEcnApi.md#apiV2OrderEcnIdCancelPost) | **POST** /api/v2/order-ecn/{id}/cancel | Отмена ЭТрН
 [**apiV2OrderEcnIdGet()**](OrderEcnApi.md#apiV2OrderEcnIdGet) | **GET** /api/v2/order-ecn/{id} | Получение объекта ЭТрН
-[**apiV2OrderEcnIdHistoryGet()**](OrderEcnApi.md#apiV2OrderEcnIdHistoryGet) | **GET** /api/v2/order-ecn/{id}/history | Получить историю ЭТРН
 [**apiV2OrderOrderIdCheckDigitalEcnAccessGet()**](OrderEcnApi.md#apiV2OrderOrderIdCheckDigitalEcnAccessGet) | **GET** /api/v2/order/{orderId}/check-digital-ecn-access | Проверка доступа к созданию Электронной ТРН.
 [**apiV2OrderOrderIdEcnGet()**](OrderEcnApi.md#apiV2OrderOrderIdEcnGet) | **GET** /api/v2/order/{orderId}/ecn | Получение списка ЭТрН у заказа
 [**apiV2OrderOrderIdEcnPost()**](OrderEcnApi.md#apiV2OrderOrderIdEcnPost) | **POST** /api/v2/order/{orderId}/ecn | Создание ЭТрН для заказа.
@@ -130,71 +129,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\MagDv\Cargomart\Dto\OrderEcnResponse**](../Model/OrderEcnResponse.md)
-
-### Authorization
-
-[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `apiV2OrderEcnIdHistoryGet()`
-
-```php
-apiV2OrderEcnIdHistoryGet($id): \MagDv\Cargomart\Dto\OrderEcnHistoryResponse
-```
-
-Получить историю ЭТРН
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: CookieTokenAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-
-// Configure API key authorization: HeaderAuthorizationAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new MagDv\Cargomart\Api\OrderEcnApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client(),
-    $config
-);
-$id = 'id_example'; // string | Идентификатор Этрн.
-
-try {
-    $result = $apiInstance->apiV2OrderEcnIdHistoryGet($id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderEcnApi->apiV2OrderEcnIdHistoryGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Идентификатор Этрн. |
-
-### Return type
-
-[**\MagDv\Cargomart\Dto\OrderEcnHistoryResponse**](../Model/OrderEcnHistoryResponse.md)
 
 ### Authorization
 

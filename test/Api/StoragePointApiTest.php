@@ -73,18 +73,6 @@ class StoragePointApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2AcStoragePointGet
-     *
-     * Поиск пунктов погрузки/выгрузки..
-     *
-     */
-    public function testApiV2AcStoragePointGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2StoragePointDelete
      *
      * Групповое удаление пунктов погрузки/выгрузки..
@@ -103,30 +91,6 @@ class StoragePointApiTest extends TestCase
      *
      */
     public function testApiV2StoragePointGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2StoragePointIdContactContactIdDelete
-     *
-     * @deprecated. Использовать вместе с редактированием SP. Удаление одного контакта пункта погрузки/выгрузки.
-     *
-     */
-    public function testApiV2StoragePointIdContactContactIdDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2StoragePointIdContactContactIdPut
-     *
-     * @deprecated. Использовать вместе с редактированием SP. Редактирование контакта пункта погрузки/выгрузки.
-     *
-     */
-    public function testApiV2StoragePointIdContactContactIdPut()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -97,18 +97,6 @@ class OrderEcnApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderEcnIdHistoryGet
-     *
-     * Получить историю ЭТРН.
-     *
-     */
-    public function testApiV2OrderEcnIdHistoryGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderOrderIdCheckDigitalEcnAccessGet
      *
      * Проверка доступа к созданию Электронной ТРН..

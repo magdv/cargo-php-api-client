@@ -7,16 +7,13 @@ Method | HTTP request | Description
 [**apiV2OrderOrderIdClientAccessDelete()**](OrderEditApi.md#apiV2OrderOrderIdClientAccessDelete) | **DELETE** /api/v2/order/{orderId}/client-access | Удалить список партнеров из исключенных.
 [**apiV2OrderOrderIdClientAccessGet()**](OrderEditApi.md#apiV2OrderOrderIdClientAccessGet) | **GET** /api/v2/order/{orderId}/client-access | Получение списка исключеных партнеров.
 [**apiV2OrderOrderIdClientAccessPatch()**](OrderEditApi.md#apiV2OrderOrderIdClientAccessPatch) | **PATCH** /api/v2/order/{orderId}/client-access | Отправить список партнеров на исключение.
-[**apiV2OrderOrderIdClonePost()**](OrderEditApi.md#apiV2OrderOrderIdClonePost) | **POST** /api/v2/order/{orderId}/clone | Создание нового заказа из шаблона или на основании
 [**apiV2OrderOrderIdContactDelete()**](OrderEditApi.md#apiV2OrderOrderIdContactDelete) | **DELETE** /api/v2/order/{orderId}/contact | Список контактов на удаление из заказа.
 [**apiV2OrderOrderIdContactGet()**](OrderEditApi.md#apiV2OrderOrderIdContactGet) | **GET** /api/v2/order/{orderId}/contact | Получение списка контактов.
 [**apiV2OrderOrderIdContactPatch()**](OrderEditApi.md#apiV2OrderOrderIdContactPatch) | **PATCH** /api/v2/order/{orderId}/contact | Отправить список контактов для добавления.
 [**apiV2OrderOrderIdDelete()**](OrderEditApi.md#apiV2OrderOrderIdDelete) | **DELETE** /api/v2/order/{orderId} | Удаление заказа
 [**apiV2OrderOrderIdEditGet()**](OrderEditApi.md#apiV2OrderOrderIdEditGet) | **GET** /api/v2/order/{orderId}/edit | Получение данных для редактирования заказа
-[**apiV2OrderOrderIdModerationApprovePost()**](OrderEditApi.md#apiV2OrderOrderIdModerationApprovePost) | **POST** /api/v2/order/{orderId}/moderation-approve | Опубликовать заказ под ГП.
 [**apiV2OrderOrderIdModerationDelete()**](OrderEditApi.md#apiV2OrderOrderIdModerationDelete) | **DELETE** /api/v2/order/{orderId}/moderation | Забрать заказ на модерации ГП.
 [**apiV2OrderOrderIdModerationPost()**](OrderEditApi.md#apiV2OrderOrderIdModerationPost) | **POST** /api/v2/order/{orderId}/moderation | Отправка заказа на модерацию ГП.
-[**apiV2OrderOrderIdModerationRejectPost()**](OrderEditApi.md#apiV2OrderOrderIdModerationRejectPost) | **POST** /api/v2/order/{orderId}/moderation-reject | Отклонение модератором заказа.
 [**apiV2OrderOrderIdPatch()**](OrderEditApi.md#apiV2OrderOrderIdPatch) | **PATCH** /api/v2/order/{orderId} | Редактирование информации о заказе
 [**apiV2OrderOrderIdPointPointIdDelete()**](OrderEditApi.md#apiV2OrderOrderIdPointPointIdDelete) | **DELETE** /api/v2/order/{orderId}/point/{pointId} | Удаление маршрутной точки
 [**apiV2OrderOrderIdPointPointIdGet()**](OrderEditApi.md#apiV2OrderOrderIdPointPointIdGet) | **GET** /api/v2/order/{orderId}/point/{pointId} | Получение информации по кокретной точке
@@ -27,7 +24,6 @@ Method | HTTP request | Description
 [**apiV2OrderOrderIdSavePost()**](OrderEditApi.md#apiV2OrderOrderIdSavePost) | **POST** /api/v2/order/{orderId}/save | Перевод заказа из времменого в черновики.
 [**apiV2OrderOrderIdTagGet()**](OrderEditApi.md#apiV2OrderOrderIdTagGet) | **GET** /api/v2/order/{orderId}/tag | Получение списка тэгов заказа.
 [**apiV2OrderOrderIdTagPut()**](OrderEditApi.md#apiV2OrderOrderIdTagPut) | **PUT** /api/v2/order/{orderId}/tag | Запись списка тэгов.
-[**apiV2OrderOrderIdValidatePost()**](OrderEditApi.md#apiV2OrderOrderIdValidatePost) | **POST** /api/v2/order/{orderId}/validate | Проверка валидности заказа
 [**apiV2OrderPost()**](OrderEditApi.md#apiV2OrderPost) | **POST** /api/v2/order | Создание нового заказа
 
 
@@ -223,71 +219,6 @@ void (empty response body)
 
 - **Content-Type**: `application/json`
 - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `apiV2OrderOrderIdClonePost()`
-
-```php
-apiV2OrderOrderIdClonePost($order_id): \MagDv\Cargomart\Dto\OrderEditResponse
-```
-
-Создание нового заказа из шаблона или на основании
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: CookieTokenAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-
-// Configure API key authorization: HeaderAuthorizationAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new MagDv\Cargomart\Api\OrderEditApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client(),
-    $config
-);
-$order_id = 'order_id_example'; // string | Идентификатор шаблона или базового заказа.
-
-try {
-    $result = $apiInstance->apiV2OrderOrderIdClonePost($order_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderEditApi->apiV2OrderOrderIdClonePost: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **order_id** | **string**| Идентификатор шаблона или базового заказа. |
-
-### Return type
-
-[**\MagDv\Cargomart\Dto\OrderEditResponse**](../Model/OrderEditResponse.md)
-
-### Authorization
-
-[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -621,71 +552,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `apiV2OrderOrderIdModerationApprovePost()`
-
-```php
-apiV2OrderOrderIdModerationApprovePost($order_id): \MagDv\Cargomart\Dto\OrderEditResponse
-```
-
-Опубликовать заказ под ГП.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: CookieTokenAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-
-// Configure API key authorization: HeaderAuthorizationAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new MagDv\Cargomart\Api\OrderEditApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client(),
-    $config
-);
-$order_id = 'order_id_example'; // string | Идентификатор шаблона или базового заказа.
-
-try {
-    $result = $apiInstance->apiV2OrderOrderIdModerationApprovePost($order_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderEditApi->apiV2OrderOrderIdModerationApprovePost: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **order_id** | **string**| Идентификатор шаблона или базового заказа. |
-
-### Return type
-
-[**\MagDv\Cargomart\Dto\OrderEditResponse**](../Model/OrderEditResponse.md)
-
-### Authorization
-
-[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
 ## `apiV2OrderOrderIdModerationDelete()`
 
 ```php
@@ -804,73 +670,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\MagDv\Cargomart\Dto\OrderEditResponse**](../Model/OrderEditResponse.md)
-
-### Authorization
-
-[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `apiV2OrderOrderIdModerationRejectPost()`
-
-```php
-apiV2OrderOrderIdModerationRejectPost($order_id, $message_request): \MagDv\Cargomart\Dto\OrderCardResponse
-```
-
-Отклонение модератором заказа.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: CookieTokenAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-
-// Configure API key authorization: HeaderAuthorizationAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new MagDv\Cargomart\Api\OrderEditApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client(),
-    $config
-);
-$order_id = 'order_id_example'; // string | Идентификатор шаблона или базового заказа.
-$message_request = new \MagDv\Cargomart\Dto\MessageRequest(); // \MagDv\Cargomart\Dto\MessageRequest
-
-try {
-    $result = $apiInstance->apiV2OrderOrderIdModerationRejectPost($order_id, $message_request);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderEditApi->apiV2OrderOrderIdModerationRejectPost: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **order_id** | **string**| Идентификатор шаблона или базового заказа. |
- **message_request** | [**\MagDv\Cargomart\Dto\MessageRequest**](../Model/MessageRequest.md)|  |
-
-### Return type
-
-[**\MagDv\Cargomart\Dto\OrderCardResponse**](../Model/OrderCardResponse.md)
 
 ### Authorization
 
@@ -1545,71 +1344,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `apiV2OrderOrderIdValidatePost()`
-
-```php
-apiV2OrderOrderIdValidatePost($order_id): \MagDv\Cargomart\Dto\OrderEditResponse
-```
-
-Проверка валидности заказа
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: CookieTokenAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-
-// Configure API key authorization: HeaderAuthorizationAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new MagDv\Cargomart\Api\OrderEditApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client(),
-    $config
-);
-$order_id = 'order_id_example'; // string | Идентификатор шаблона или базового заказа.
-
-try {
-    $result = $apiInstance->apiV2OrderOrderIdValidatePost($order_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderEditApi->apiV2OrderOrderIdValidatePost: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **order_id** | **string**| Идентификатор шаблона или базового заказа. |
-
-### Return type
-
-[**\MagDv\Cargomart\Dto\OrderEditResponse**](../Model/OrderEditResponse.md)
-
-### Authorization
-
-[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

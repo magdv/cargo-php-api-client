@@ -153,6 +153,15 @@ class OrderCardFullTest extends TestCase
     }
 
     /**
+     * Test attribute "open_currency_code"
+     */
+    public function testPropertyOpenCurrencyCode()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "currency_code"
      */
     public function testPropertyCurrencyCode()
@@ -1224,15 +1233,6 @@ class OrderCardFullTest extends TestCase
     }
 
     /**
-     * Test attribute "carrier_downtime_claim"
-     */
-    public function testPropertyCarrierDowntimeClaim()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "expeditor_consignor_contract"
      */
     public function testPropertyExpeditorConsignorContract()
@@ -1290,15 +1290,6 @@ class OrderCardFullTest extends TestCase
      * Test attribute "has_carrier_sign"
      */
     public function testPropertyHasCarrierSign()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "expeditor_downtime_claim"
-     */
-    public function testPropertyExpeditorDowntimeClaim()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

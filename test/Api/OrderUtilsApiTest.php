@@ -85,48 +85,12 @@ class OrderUtilsApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderAcCuratorGet
-     *
-     * Поиск кураторов заказов от отправителя.
-     *
-     */
-    public function testApiV2OrderAcCuratorGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderAcDriverGet
-     *
-     * Поиск водителей по имени, с которыми ранее работал клиент..
-     *
-     */
-    public function testApiV2OrderAcDriverGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderAcDriverNameGet
      *
      * Поиск водителей по имени, с которыми ранее работал клиент.
      *
      */
     public function testApiV2OrderAcDriverNameGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderAcPointContactsGet
-     *
-     * Поиск по данным контактов точек маршурта текущего клиента..
-     *
-     */
-    public function testApiV2OrderAcPointContactsGet()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

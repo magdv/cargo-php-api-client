@@ -4,7 +4,7 @@ All URIs are relative to https://cargomart.ru.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getSignedDocumentById()**](SignedDocumentsApi.md#getSignedDocumentById) | **GET** /api/v2/signed-document/{id} | Детали подписанного документу.
+[**getSignedDocumentById()**](SignedDocumentsApi.md#getSignedDocumentById) | **GET** /api/v2/signed-document/{id} | Детали подписанного документа.
 [**getSignedDocumentPdfById()**](SignedDocumentsApi.md#getSignedDocumentPdfById) | **GET** /api/v2/signed-document/{id}/pdf | Просмотр печатной формы документа в формате PDF.
 
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 getSignedDocumentById($id): \MagDv\Cargomart\Dto\SignedDocumentResponse
 ```
 
-Детали подписанного документу.
+Детали подписанного документа.
 
 ### Example
 

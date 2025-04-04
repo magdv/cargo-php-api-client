@@ -83,16 +83,4 @@ class LocalityApiTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for apiV2LocalityNearestGet
-     *
-     * Поиск ближайших локалити в радиусе 50 км от заданных координат.
-     *
-     */
-    public function testApiV2LocalityNearestGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
 }

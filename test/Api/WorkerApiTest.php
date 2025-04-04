@@ -73,18 +73,6 @@ class WorkerApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2WorkerDelete
-     *
-     * Удаление списка сотрудников..
-     *
-     */
-    public function testApiV2WorkerDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2WorkerGet
      *
      * Вывод списка сотрудников компании..
@@ -109,96 +97,12 @@ class WorkerApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2WorkerIdCertificatePost
-     *
-     * Выдача сертификата пользователю.
-     *
-     */
-    public function testApiV2WorkerIdCertificatePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2WorkerIdChatGet
-     *
-     * Получение списка комнат сотрудника..
-     *
-     */
-    public function testApiV2WorkerIdChatGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2WorkerIdContactComplainPost
-     *
-     * Оставить жалобу на контакты сотрудника..
-     *
-     */
-    public function testApiV2WorkerIdContactComplainPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2WorkerIdDelete
-     *
-     * Удаление выбранного сотрудника.
-     *
-     */
-    public function testApiV2WorkerIdDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2WorkerIdGet
      *
      * Получение информации по указанному сотруднику компании..
      *
      */
     public function testApiV2WorkerIdGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2WorkerIdPut
-     *
-     * Обновить данные сотрудника..
-     *
-     */
-    public function testApiV2WorkerIdPut()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2WorkerIdResendInvitePost
-     *
-     * Повторно отправть письмо с приглашением в сотрудники..
-     *
-     */
-    public function testApiV2WorkerIdResendInvitePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2WorkerPost
-     *
-     * Создание нового сотрудника..
-     *
-     */
-    public function testApiV2WorkerPost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

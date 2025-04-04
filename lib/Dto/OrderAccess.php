@@ -3490,7 +3490,7 @@ class OrderAccess implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets create_downtime_claim
      *
-     * @param bool|null $create_downtime_claim Возможность создать претензию Перевозчика о простое по заявке
+     * @param bool|null $create_downtime_claim Возможность создать требование Перевозчика о простое по заявке
      *
      * @return self
      */
@@ -3517,7 +3517,7 @@ class OrderAccess implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets view_claim_list
      *
-     * @param bool|null $view_claim_list Возможность просмотра списка претензий по заявке
+     * @param bool|null $view_claim_list Возможность просмотра списка требований по заявке
      *
      * @return self
      */

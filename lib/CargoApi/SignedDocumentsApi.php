@@ -176,7 +176,7 @@ class SignedDocumentsApi
     /**
      * Operation getSignedDocumentById
      *
-     * Детали подписанного документу.
+     * Детали подписанного документа.
      *
      * @param  string $id Идентификатор документа. (required)
      *
@@ -193,7 +193,7 @@ class SignedDocumentsApi
     /**
      * Operation getSignedDocumentByIdWithHttpInfo
      *
-     * Детали подписанного документу.
+     * Детали подписанного документа.
      *
      * @param  string $id Идентификатор документа. (required)
      *
@@ -337,7 +337,7 @@ class SignedDocumentsApi
     /**
      * Operation getSignedDocumentByIdAsync
      *
-     * Детали подписанного документу.
+     * Детали подписанного документа.
      *
      * @param  string $id Идентификатор документа. (required)
      *
@@ -357,7 +357,7 @@ class SignedDocumentsApi
     /**
      * Operation getSignedDocumentByIdAsyncWithHttpInfo
      *
-     * Детали подписанного документу.
+     * Детали подписанного документа.
      *
      * @param  string $id Идентификатор документа. (required)
      *

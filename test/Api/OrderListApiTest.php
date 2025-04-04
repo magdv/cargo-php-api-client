@@ -73,18 +73,6 @@ class OrderListApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderBrokerGet
-     *
-     * Получение списка брокеров..
-     *
-     */
-    public function testApiV2OrderBrokerGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderCountGet
      *
      * Метод для получения количества заказов согласно фильтру..

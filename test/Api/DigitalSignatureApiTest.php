@@ -73,60 +73,12 @@ class DigitalSignatureApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2UserCertificateCertificateIdApprovePost
-     *
-     * Подтвердить сертификат..
-     *
-     */
-    public function testApiV2UserCertificateCertificateIdApprovePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserCertificateCertificateIdCancelPost
-     *
-     * Отмена выдачи сертификата..
-     *
-     */
-    public function testApiV2UserCertificateCertificateIdCancelPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2UserCertificateCertificateIdGet
      *
      * Просмотреть информацию о сертификате.
      *
      */
     public function testApiV2UserCertificateCertificateIdGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserCertificateCertificateIdPut
-     *
-     * Обновление данных сертификата..
-     *
-     */
-    public function testApiV2UserCertificateCertificateIdPut()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserCertificateCertificateIdRejectPost
-     *
-     * Сообщить об ошибке в сертификате..
-     *
-     */
-    public function testApiV2UserCertificateCertificateIdRejectPost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -145,18 +97,6 @@ class DigitalSignatureApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2UserCertificateCertificateIdSendPost
-     *
-     * Отправить смс для подвтерждения сертификата..
-     *
-     */
-    public function testApiV2UserCertificateCertificateIdSendPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2UserSelfCertificateGet
      *
      * Получить список сертификатов текущего пользователя.
@@ -169,48 +109,12 @@ class DigitalSignatureApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2UserSelfDsPhoneVerificationCodePost
-     *
-     * deprecated! Выслать код для подтверждения.
-     *
-     */
-    public function testApiV2UserSelfDsPhoneVerificationCodePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2WorkerIdCertificateGet
      *
      * Получить список сертификатов пользователя.
      *
      */
     public function testApiV2WorkerIdCertificateGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2WorkerIdCertificatePost
-     *
-     * Выдача сертификата пользователю.
-     *
-     */
-    public function testApiV2WorkerIdCertificatePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2WorkerIdChatGet
-     *
-     * Получение списка комнат сотрудника..
-     *
-     */
-    public function testApiV2WorkerIdChatGet()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

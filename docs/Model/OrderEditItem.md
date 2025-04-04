@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **conditions** | **string[]** | Условия перевозки | [optional]
 **payment_type_id** | **int** | Идентификатор способа оплаты заказа | [optional]
 **payment_detail** | **string** | Комментарий по оплате | [optional]
+**open_currency_code** | **string** | Код валюты заказа при публикации | [optional]
 **currency_code** | **string** | Код валюты заказа | [optional]
 **is_multi_currency** | **bool** | Флаг мультивалютности | [optional] [default to false]
 **vat_rate** | **float** | Ставка НДС | [optional]

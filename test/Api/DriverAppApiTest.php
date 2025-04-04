@@ -83,16 +83,4 @@ class DriverAppApiTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for apiV2DriverAppInvitePost
-     *
-     * Отправить на номер телефона водителя приглашение на установку 'приложения водителя'..
-     *
-     */
-    public function testApiV2DriverAppInvitePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
 }

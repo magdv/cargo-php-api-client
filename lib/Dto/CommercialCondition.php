@@ -59,9 +59,9 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'version' => 'string',
         'start_date' => '\DateTime',
         'end_date' => '\DateTime',
+        'publish_date' => '\DateTime',
         'type' => '\MagDv\Cargomart\Dto\CommercialConditionType',
         'content_file' => '\MagDv\Cargomart\Dto\FileV2',
         'sign_file' => '\MagDv\Cargomart\Dto\FileV2'
@@ -75,9 +75,9 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'version' => null,
         'start_date' => 'date',
         'end_date' => 'date',
+        'publish_date' => 'date-time',
         'type' => null,
         'content_file' => null,
         'sign_file' => null
@@ -89,9 +89,9 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'version' => false,
         'start_date' => false,
         'end_date' => false,
+        'publish_date' => false,
         'type' => false,
         'content_file' => false,
         'sign_file' => false
@@ -183,9 +183,9 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'version' => 'version',
         'start_date' => 'startDate',
         'end_date' => 'endDate',
+        'publish_date' => 'publishDate',
         'type' => 'type',
         'content_file' => 'contentFile',
         'sign_file' => 'signFile'
@@ -197,9 +197,9 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'version' => 'setVersion',
         'start_date' => 'setStartDate',
         'end_date' => 'setEndDate',
+        'publish_date' => 'setPublishDate',
         'type' => 'setType',
         'content_file' => 'setContentFile',
         'sign_file' => 'setSignFile'
@@ -211,9 +211,9 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'version' => 'getVersion',
         'start_date' => 'getStartDate',
         'end_date' => 'getEndDate',
+        'publish_date' => 'getPublishDate',
         'type' => 'getType',
         'content_file' => 'getContentFile',
         'sign_file' => 'getSignFile'
@@ -276,9 +276,9 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('version', $data ?? [], null);
         $this->setIfExists('start_date', $data ?? [], null);
         $this->setIfExists('end_date', $data ?? [], null);
+        $this->setIfExists('publish_date', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('content_file', $data ?? [], null);
         $this->setIfExists('sign_file', $data ?? [], null);
@@ -311,9 +311,6 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['version'] === null) {
-            $invalidProperties[] = "'version' can't be null";
-        }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
@@ -337,33 +334,6 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets version
-     *
-     * @return string
-     */
-    public function getVersion()
-    {
-        return $this->container['version'];
-    }
-
-    /**
-     * Sets version
-     *
-     * @param string $version Версия условий в свободной форме
-     *
-     * @return self
-     */
-    public function setVersion($version)
-    {
-        if (is_null($version)) {
-            throw new \InvalidArgumentException('non-nullable version cannot be null');
-        }
-        $this->container['version'] = $version;
-
-        return $this;
-    }
 
     /**
      * Gets start_date
@@ -415,6 +385,33 @@ class CommercialCondition implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable end_date cannot be null');
         }
         $this->container['end_date'] = $end_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets publish_date
+     *
+     * @return \DateTime|null
+     */
+    public function getPublishDate()
+    {
+        return $this->container['publish_date'];
+    }
+
+    /**
+     * Sets publish_date
+     *
+     * @param \DateTime|null $publish_date Дата публикации
+     *
+     * @return self
+     */
+    public function setPublishDate($publish_date)
+    {
+        if (is_null($publish_date)) {
+            throw new \InvalidArgumentException('non-nullable publish_date cannot be null');
+        }
+        $this->container['publish_date'] = $publish_date;
 
         return $this;
     }

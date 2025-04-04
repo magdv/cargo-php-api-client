@@ -73,18 +73,6 @@ class UserApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2UserCountActiveGet
-     *
-     * Количество активных пользователей.
-     *
-     */
-    public function testApiV2UserCountActiveGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2UserLoginPost
      *
      * Авторизация пользователя и выдача токена..
@@ -133,18 +121,6 @@ class UserApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2UserRecoveryIdResendCodePost
-     *
-     * Повторная отправка проверочного кода..
-     *
-     */
-    public function testApiV2UserRecoveryIdResendCodePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2UserRecoveryPost
      *
      * Запрос на восстановление пароля..
@@ -181,84 +157,12 @@ class UserApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2UserSelfContactEmailDelete
-     *
-     * Удаление контактного email..
-     *
-     */
-    public function testApiV2UserSelfContactEmailDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserSelfContactEmailPost
-     *
-     * Создание контактного email..
-     *
-     */
-    public function testApiV2UserSelfContactEmailPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserSelfContactEmailResendPost
-     *
-     * Запрос на повторную отправку кода..
-     *
-     */
-    public function testApiV2UserSelfContactEmailResendPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2UserSelfDelete
      *
      * Удаление пользователя самим собой..
      *
      */
     public function testApiV2UserSelfDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserSelfDsPhoneVerificationCodePost
-     *
-     * deprecated! Выслать код для подтверждения.
-     *
-     */
-    public function testApiV2UserSelfDsPhoneVerificationCodePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserSelfEmailChangeDelete
-     *
-     * Отмена запроса на изменение почты..
-     *
-     */
-    public function testApiV2UserSelfEmailChangeDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserSelfEmailChangePost
-     *
-     * Посылает email на подтверждение почты..
-     *
-     */
-    public function testApiV2UserSelfEmailChangePost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -277,60 +181,12 @@ class UserApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2UserSelfEmailCodeSendPost
-     *
-     * Посылает повторные email с кодом подтверждения..
-     *
-     */
-    public function testApiV2UserSelfEmailCodeSendPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2UserSelfGet
      *
      * Возвращает реквизиты своей организации..
      *
      */
     public function testApiV2UserSelfGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserSelfPasswordChangePut
-     *
-     * Меняет пароль пользователю..
-     *
-     */
-    public function testApiV2UserSelfPasswordChangePut()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserSelfPhoneChangeDelete
-     *
-     * Отменяет запроса на изменение телефона..
-     *
-     */
-    public function testApiV2UserSelfPhoneChangeDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserSelfPhoneChangePost
-     *
-     * Запрос на изменение телефона..
-     *
-     */
-    public function testApiV2UserSelfPhoneChangePost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -349,48 +205,12 @@ class UserApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2UserSelfSmsCodeConfirmPost
-     *
-     * Подтверждение телефона по коду из смс..
-     *
-     */
-    public function testApiV2UserSelfSmsCodeConfirmPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserSelfSmsCodeSendPost
-     *
-     * Посылает повторную смс..
-     *
-     */
-    public function testApiV2UserSelfSmsCodeSendPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2UserSelfTokenPost
      *
      * Создание одноразового токена.
      *
      */
     public function testApiV2UserSelfTokenPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserSelfUsedeskTokenPut
-     *
-     * Обновляет токен с useDesk..
-     *
-     */
-    public function testApiV2UserSelfUsedeskTokenPut()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

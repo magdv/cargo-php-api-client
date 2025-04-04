@@ -67,6 +67,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'end_date' => '\DateTime',
         'duration' => 'int',
         'create_date' => '\DateTime',
+        'open_currency_code' => 'string',
         'currency_code' => 'string',
         'is_multi_currency' => 'bool',
         'open_price' => 'string',
@@ -186,15 +187,13 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'patch' => '\MagDv\Cargomart\Dto\OrderPatchLastItem',
         'last_patch' => '\MagDv\Cargomart\Dto\OrderPatchLastItem',
         'truck_driver_patch' => '\MagDv\Cargomart\Dto\OrderPatchLastItem',
-        'carrier_downtime_claim' => '\MagDv\Cargomart\Dto\OrderDowntimeClaim',
         'expeditor_consignor_contract' => '\MagDv\Cargomart\Dto\ExpeditorContract',
         'expeditor_carrier_contract' => '\MagDv\Cargomart\Dto\ExpeditorContract',
         'gp_carrier_contract' => '\MagDv\Cargomart\Dto\GeneralPartnerContract',
         'price_strategy_type' => '\MagDv\Cargomart\Dto\OrderPriceStrategyType',
         'bidding_type' => '\MagDv\Cargomart\Dto\OrderBiddingType',
         'bidding' => '\MagDv\Cargomart\Dto\OrderDraftExpeditorBidding',
-        'has_carrier_sign' => 'bool',
-        'expeditor_downtime_claim' => '\MagDv\Cargomart\Dto\OrderDowntimeClaim'
+        'has_carrier_sign' => 'bool'
     ];
 
     /**
@@ -213,6 +212,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'end_date' => 'date-time',
         'duration' => null,
         'create_date' => 'date-time',
+        'open_currency_code' => null,
         'currency_code' => null,
         'is_multi_currency' => null,
         'open_price' => 'cm-price',
@@ -332,15 +332,13 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'patch' => null,
         'last_patch' => null,
         'truck_driver_patch' => null,
-        'carrier_downtime_claim' => null,
         'expeditor_consignor_contract' => null,
         'expeditor_carrier_contract' => null,
         'gp_carrier_contract' => null,
         'price_strategy_type' => null,
         'bidding_type' => null,
         'bidding' => null,
-        'has_carrier_sign' => null,
-        'expeditor_downtime_claim' => null
+        'has_carrier_sign' => null
     ];
 
     /**
@@ -357,6 +355,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'end_date' => false,
         'duration' => false,
         'create_date' => false,
+        'open_currency_code' => false,
         'currency_code' => false,
         'is_multi_currency' => false,
         'open_price' => false,
@@ -476,15 +475,13 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'patch' => false,
         'last_patch' => false,
         'truck_driver_patch' => false,
-        'carrier_downtime_claim' => false,
         'expeditor_consignor_contract' => false,
         'expeditor_carrier_contract' => false,
         'gp_carrier_contract' => false,
         'price_strategy_type' => false,
         'bidding_type' => false,
         'bidding' => false,
-        'has_carrier_sign' => false,
-        'expeditor_downtime_claim' => false
+        'has_carrier_sign' => false
     ];
 
     /**
@@ -581,6 +578,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'end_date' => 'endDate',
         'duration' => 'duration',
         'create_date' => 'createDate',
+        'open_currency_code' => 'openCurrencyCode',
         'currency_code' => 'currencyCode',
         'is_multi_currency' => 'isMultiCurrency',
         'open_price' => 'openPrice',
@@ -700,15 +698,13 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'patch' => 'patch',
         'last_patch' => 'lastPatch',
         'truck_driver_patch' => 'truckDriverPatch',
-        'carrier_downtime_claim' => 'carrierDowntimeClaim',
         'expeditor_consignor_contract' => 'expeditorConsignorContract',
         'expeditor_carrier_contract' => 'expeditorCarrierContract',
         'gp_carrier_contract' => 'gpCarrierContract',
         'price_strategy_type' => 'priceStrategyType',
         'bidding_type' => 'biddingType',
         'bidding' => 'bidding',
-        'has_carrier_sign' => 'hasCarrierSign',
-        'expeditor_downtime_claim' => 'expeditorDowntimeClaim'
+        'has_carrier_sign' => 'hasCarrierSign'
     ];
 
     /**
@@ -725,6 +721,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'end_date' => 'setEndDate',
         'duration' => 'setDuration',
         'create_date' => 'setCreateDate',
+        'open_currency_code' => 'setOpenCurrencyCode',
         'currency_code' => 'setCurrencyCode',
         'is_multi_currency' => 'setIsMultiCurrency',
         'open_price' => 'setOpenPrice',
@@ -844,15 +841,13 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'patch' => 'setPatch',
         'last_patch' => 'setLastPatch',
         'truck_driver_patch' => 'setTruckDriverPatch',
-        'carrier_downtime_claim' => 'setCarrierDowntimeClaim',
         'expeditor_consignor_contract' => 'setExpeditorConsignorContract',
         'expeditor_carrier_contract' => 'setExpeditorCarrierContract',
         'gp_carrier_contract' => 'setGpCarrierContract',
         'price_strategy_type' => 'setPriceStrategyType',
         'bidding_type' => 'setBiddingType',
         'bidding' => 'setBidding',
-        'has_carrier_sign' => 'setHasCarrierSign',
-        'expeditor_downtime_claim' => 'setExpeditorDowntimeClaim'
+        'has_carrier_sign' => 'setHasCarrierSign'
     ];
 
     /**
@@ -869,6 +864,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'end_date' => 'getEndDate',
         'duration' => 'getDuration',
         'create_date' => 'getCreateDate',
+        'open_currency_code' => 'getOpenCurrencyCode',
         'currency_code' => 'getCurrencyCode',
         'is_multi_currency' => 'getIsMultiCurrency',
         'open_price' => 'getOpenPrice',
@@ -988,15 +984,13 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         'patch' => 'getPatch',
         'last_patch' => 'getLastPatch',
         'truck_driver_patch' => 'getTruckDriverPatch',
-        'carrier_downtime_claim' => 'getCarrierDowntimeClaim',
         'expeditor_consignor_contract' => 'getExpeditorConsignorContract',
         'expeditor_carrier_contract' => 'getExpeditorCarrierContract',
         'gp_carrier_contract' => 'getGpCarrierContract',
         'price_strategy_type' => 'getPriceStrategyType',
         'bidding_type' => 'getBiddingType',
         'bidding' => 'getBidding',
-        'has_carrier_sign' => 'getHasCarrierSign',
-        'expeditor_downtime_claim' => 'getExpeditorDowntimeClaim'
+        'has_carrier_sign' => 'getHasCarrierSign'
     ];
 
     /**
@@ -1064,6 +1058,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('end_date', $data ?? [], null);
         $this->setIfExists('duration', $data ?? [], null);
         $this->setIfExists('create_date', $data ?? [], null);
+        $this->setIfExists('open_currency_code', $data ?? [], null);
         $this->setIfExists('currency_code', $data ?? [], null);
         $this->setIfExists('is_multi_currency', $data ?? [], false);
         $this->setIfExists('open_price', $data ?? [], null);
@@ -1183,7 +1178,6 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('patch', $data ?? [], null);
         $this->setIfExists('last_patch', $data ?? [], null);
         $this->setIfExists('truck_driver_patch', $data ?? [], null);
-        $this->setIfExists('carrier_downtime_claim', $data ?? [], null);
         $this->setIfExists('expeditor_consignor_contract', $data ?? [], null);
         $this->setIfExists('expeditor_carrier_contract', $data ?? [], null);
         $this->setIfExists('gp_carrier_contract', $data ?? [], null);
@@ -1191,7 +1185,6 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('bidding_type', $data ?? [], null);
         $this->setIfExists('bidding', $data ?? [], null);
         $this->setIfExists('has_carrier_sign', $data ?? [], false);
-        $this->setIfExists('expeditor_downtime_claim', $data ?? [], null);
     }
 
     /**
@@ -1493,6 +1486,33 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable create_date cannot be null');
         }
         $this->container['create_date'] = $create_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets open_currency_code
+     *
+     * @return string|null
+     */
+    public function getOpenCurrencyCode()
+    {
+        return $this->container['open_currency_code'];
+    }
+
+    /**
+     * Sets open_currency_code
+     *
+     * @param string|null $open_currency_code Код валюты заказа при публикации
+     *
+     * @return self
+     */
+    public function setOpenCurrencyCode($open_currency_code)
+    {
+        if (is_null($open_currency_code)) {
+            throw new \InvalidArgumentException('non-nullable open_currency_code cannot be null');
+        }
+        $this->container['open_currency_code'] = $open_currency_code;
 
         return $this;
     }
@@ -4755,33 +4775,6 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets carrier_downtime_claim
-     *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaim|null
-     */
-    public function getCarrierDowntimeClaim()
-    {
-        return $this->container['carrier_downtime_claim'];
-    }
-
-    /**
-     * Sets carrier_downtime_claim
-     *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaim|null $carrier_downtime_claim Претензия о простое перевозчика Экспедитору
-     *
-     * @return self
-     */
-    public function setCarrierDowntimeClaim($carrier_downtime_claim)
-    {
-        if (is_null($carrier_downtime_claim)) {
-            throw new \InvalidArgumentException('non-nullable carrier_downtime_claim cannot be null');
-        }
-        $this->container['carrier_downtime_claim'] = $carrier_downtime_claim;
-
-        return $this;
-    }
-
-    /**
      * Gets expeditor_consignor_contract
      *
      * @return \MagDv\Cargomart\Dto\ExpeditorContract|null
@@ -4966,33 +4959,6 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable has_carrier_sign cannot be null');
         }
         $this->container['has_carrier_sign'] = $has_carrier_sign;
-
-        return $this;
-    }
-
-    /**
-     * Gets expeditor_downtime_claim
-     *
-     * @return \MagDv\Cargomart\Dto\OrderDowntimeClaim|null
-     */
-    public function getExpeditorDowntimeClaim()
-    {
-        return $this->container['expeditor_downtime_claim'];
-    }
-
-    /**
-     * Sets expeditor_downtime_claim
-     *
-     * @param \MagDv\Cargomart\Dto\OrderDowntimeClaim|null $expeditor_downtime_claim Претензия о простое Экспедитора Заказчику
-     *
-     * @return self
-     */
-    public function setExpeditorDowntimeClaim($expeditor_downtime_claim)
-    {
-        if (is_null($expeditor_downtime_claim)) {
-            throw new \InvalidArgumentException('non-nullable expeditor_downtime_claim cannot be null');
-        }
-        $this->container['expeditor_downtime_claim'] = $expeditor_downtime_claim;
 
         return $this;
     }

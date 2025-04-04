@@ -83,40 +83,4 @@ class CandidateApiTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for apiV2CandidateGet
-     *
-     * Вывод списка потенциальных сотрудников компании..
-     *
-     */
-    public function testApiV2CandidateGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CandidateIdGet
-     *
-     * Получение информации по потенциальному сотруднику компании..
-     *
-     */
-    public function testApiV2CandidateIdGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CandidateIdPost
-     *
-     * Создать сотрудника из потенциального сотрудника..
-     *
-     */
-    public function testApiV2CandidateIdPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
 }

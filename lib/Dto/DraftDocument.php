@@ -254,8 +254,6 @@ class DraftDocument implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
-    public const TYPE_DOWNTIME_CLAIM = 'downtimeClaim';
-    public const TYPE_DOWNTIME_CLAIM_RESPONSE = 'downtimeClaimResponse';
     public const TYPE_ACT_NON_DELIVERY_CAR = 'actNonDeliveryCar';
 
     /**
@@ -266,8 +264,6 @@ class DraftDocument implements ModelInterface, ArrayAccess, \JsonSerializable
     public function getTypeAllowableValues()
     {
         return [
-            self::TYPE_DOWNTIME_CLAIM,
-            self::TYPE_DOWNTIME_CLAIM_RESPONSE,
             self::TYPE_ACT_NON_DELIVERY_CAR,
         ];
     }

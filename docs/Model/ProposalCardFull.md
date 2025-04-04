@@ -26,8 +26,6 @@ Name | Type | Description | Notes
 **patch** | [**\MagDv\Cargomart\Dto\OrderPatchLastItem**](OrderPatchLastItem.md) | Запрос на изменение заказа | [optional]
 **last_patch** | [**\MagDv\Cargomart\Dto\OrderPatchLastItem**](OrderPatchLastItem.md) | @deprecated Запрос на изменение заказа от экспедитора (использовать patch) | [optional]
 **truck_driver_patch** | [**\MagDv\Cargomart\Dto\OrderPatchLastItem**](OrderPatchLastItem.md) | @deprecated Запрос на изменение машины и водителя в заказе (использовать patch) | [optional]
-**carrier_downtime_claim** | [**\MagDv\Cargomart\Dto\OrderDowntimeClaim**](OrderDowntimeClaim.md) | Претензия о простое перевозчика Экспедитору | [optional]
-**expeditor_downtime_claim** | [**\MagDv\Cargomart\Dto\OrderDowntimeClaim**](OrderDowntimeClaim.md) | Претензия о простое Экспедитора Заказчику | [optional]
 **external_id** | **string** | Внешний идентификатор | [optional]
 **external_id_label** | **string** | Наименование внешнего идентификатора заказа | [optional]
 **customer_branch_id** | **int** | Идентификатор дочерней компании отправителя | [optional]

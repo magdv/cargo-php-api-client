@@ -83,40 +83,4 @@ class RegistrationApiTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for apiV2RegistrationIdGet
-     *
-     * Получение процесса регистрации..
-     *
-     */
-    public function testApiV2RegistrationIdGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2RegistrationIdResendCodePost
-     *
-     * Повторная отправка проверочного кода..
-     *
-     */
-    public function testApiV2RegistrationIdResendCodePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2RegistrationPost
-     *
-     * Задание логина пользователя/начало процесса регистрации..
-     *
-     */
-    public function testApiV2RegistrationPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
 }

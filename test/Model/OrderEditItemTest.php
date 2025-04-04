@@ -252,6 +252,15 @@ class OrderEditItemTest extends TestCase
     }
 
     /**
+     * Test attribute "open_currency_code"
+     */
+    public function testPropertyOpenCurrencyCode()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "currency_code"
      */
     public function testPropertyCurrencyCode()

@@ -83,16 +83,4 @@ class AclvepTApiTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for apiV2InfoIdHidePost
-     *
-     * Спрятать информационное (reclamnogo) сообщения..
-     *
-     */
-    public function testApiV2InfoIdHidePost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
 }

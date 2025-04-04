@@ -252,15 +252,15 @@ class ChatPostTypeEnum
 
     public const EXPEDITOR_TASK_FREEZE = 'expeditor-task-freeze';
 
-    public const ORDER_DOWNTIME_CLAIM_PROOF = 'order-downtime-claim-proof';
+    public const ORDER_DOWNTIME_CLAIM_REVOKE = 'order-downtime-claim-revoke';
 
-    public const ORDER_DOWNTIME_CLAIM_CANCEL = 'order-downtime-claim-cancel';
+    public const ORDER_DOWNTIME_CLAIM_REJECT = 'order-downtime-claim-reject';
 
-    public const ORDER_DOWNTIME_CLAIM_SIGN = 'order-downtime-claim-sign';
+    public const ORDER_DOWNTIME_CLAIM_APPROVE = 'order-downtime-claim-approve';
 
-    public const ORDER_DOWNTIME_CLAIM_REJECT_BY_EXPEDITOR = 'order-downtime-claim-reject-by-expeditor';
+    public const ORDER_DOWNTIME_CLAIM_DIRECT = 'order-downtime-claim-direct';
 
-    public const ORDER_DOWNTIME_CLAIM_APPROVE_BY_EXPEDITOR = 'order-downtime-claim-approve-by-expeditor';
+    public const ORDER_DOWNTIME_CLAIM_REDIRECT = 'order-downtime-claim-redirect';
 
     public const EXPEDITOR_CARRIER_CONTRACT_UPDATE = 'expeditor-carrier-contract-update';
 
@@ -407,11 +407,11 @@ class ChatPostTypeEnum
             self::EXPEDITOR_TASK_OPEN,
             self::EXPEDITOR_TASK_EXPIRE,
             self::EXPEDITOR_TASK_FREEZE,
-            self::ORDER_DOWNTIME_CLAIM_PROOF,
-            self::ORDER_DOWNTIME_CLAIM_CANCEL,
-            self::ORDER_DOWNTIME_CLAIM_SIGN,
-            self::ORDER_DOWNTIME_CLAIM_REJECT_BY_EXPEDITOR,
-            self::ORDER_DOWNTIME_CLAIM_APPROVE_BY_EXPEDITOR,
+            self::ORDER_DOWNTIME_CLAIM_REVOKE,
+            self::ORDER_DOWNTIME_CLAIM_REJECT,
+            self::ORDER_DOWNTIME_CLAIM_APPROVE,
+            self::ORDER_DOWNTIME_CLAIM_DIRECT,
+            self::ORDER_DOWNTIME_CLAIM_REDIRECT,
             self::EXPEDITOR_CARRIER_CONTRACT_UPDATE,
             self::EXPEDITOR_CARRIER_CONTRACT_CREATE,
             self::EXPEDITOR_CONSIGNOR_CONTRACT_UPDATE,

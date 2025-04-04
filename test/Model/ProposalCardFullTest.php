@@ -279,24 +279,6 @@ class ProposalCardFullTest extends TestCase
     }
 
     /**
-     * Test attribute "carrier_downtime_claim"
-     */
-    public function testPropertyCarrierDowntimeClaim()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "expeditor_downtime_claim"
-     */
-    public function testPropertyExpeditorDowntimeClaim()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "external_id"
      */
     public function testPropertyExternalId()

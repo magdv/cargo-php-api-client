@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 **view_consignor_expeditor_payment** | **bool** | Возможность просматривать информацию об оплате счёта заказчиком экспедитору | [optional] [default to false]
 **update_consignor_expeditor_payment** | **bool** | Возможность создания или обновления информации об оплате заказчиком счёта экспедитора | [optional] [default to false]
 **create_customer_docs_tracking** | **bool** | Возможность создания трек-номера отслеживания отправления с документами для заказчика | [optional] [default to false]
-**create_downtime_claim** | **bool** | Возможность создать претензию Экспедитора о простое по заявке | [optional] [default to false]
+**create_downtime_claim** | **bool** | Возможность создать требование Экспедитора о простое по заявке | [optional] [default to false]
 **update_carrier_document_tracking_number** | **bool** | Возможность создать или обновить трек-номер прикреплённых к заказу документов перевозчика | [optional] [default to false]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

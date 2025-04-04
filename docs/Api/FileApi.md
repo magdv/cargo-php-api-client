@@ -4,76 +4,10 @@ All URIs are relative to https://cargomart.ru.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV2FileClearDelete()**](FileApi.md#apiV2FileClearDelete) | **DELETE** /api/v2/file/clear | Удаление всех временных файлов пользователя, не привязанных к документам.
 [**apiV2FileDelete()**](FileApi.md#apiV2FileDelete) | **DELETE** /api/v2/file | Удаление списка файлов.
 [**apiV2FileGet()**](FileApi.md#apiV2FileGet) | **GET** /api/v2/file | Получение списка не привязанных к документам временных файлов
-[**apiV2FileIdDelete()**](FileApi.md#apiV2FileIdDelete) | **DELETE** /api/v2/file/{id} | Удаление файла по его идентификатору.
 [**apiV2FilePost()**](FileApi.md#apiV2FilePost) | **POST** /api/v2/file | Загрузка не привязанного к документам файла
-[**apiV2UploadPost()**](FileApi.md#apiV2UploadPost) | **POST** /api/v2/upload | Загрузка временного файла, не привязанного ни к чему
 
-
-## `apiV2FileClearDelete()`
-
-```php
-apiV2FileClearDelete()
-```
-
-Удаление всех временных файлов пользователя, не привязанных к документам.
-
-Производится физическое удаление всех временных файлов пользователя, не привязанных к документам.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: CookieTokenAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-
-// Configure API key authorization: HeaderAuthorizationAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new MagDv\Cargomart\Api\FileApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client(),
-    $config
-);
-
-try {
-    $apiInstance->apiV2FileClearDelete();
-} catch (Exception $e) {
-    echo 'Exception when calling FileApi->apiV2FileClearDelete: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
 
 ## `apiV2FileDelete()`
 
@@ -208,72 +142,6 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `apiV2FileIdDelete()`
-
-```php
-apiV2FileIdDelete($id)
-```
-
-Удаление файла по его идентификатору.
-
-Производится физическое удаление файла.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: CookieTokenAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-
-// Configure API key authorization: HeaderAuthorizationAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new MagDv\Cargomart\Api\FileApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client(),
-    $config
-);
-$id = 56; // int | Идентификатор файла.
-
-try {
-    $apiInstance->apiV2FileIdDelete($id);
-} catch (Exception $e) {
-    echo 'Exception when calling FileApi->apiV2FileIdDelete: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| Идентификатор файла. |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
 ## `apiV2FilePost()`
 
 ```php
@@ -329,75 +197,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\MagDv\Cargomart\Dto\FileItem**](../Model/FileItem.md)
-
-### Authorization
-
-[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
-
-### HTTP request headers
-
-- **Content-Type**: `multipart/form-data`
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `apiV2UploadPost()`
-
-```php
-apiV2UploadPost($type, $file): \MagDv\Cargomart\Dto\FileV2Item
-```
-
-Загрузка временного файла, не привязанного ни к чему
-
-Файл помечается как временный и привязывается к тому, кто его загрузил. При успешной загрузке возвращает доступное имя для документа.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: CookieTokenAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-
-// Configure API key authorization: HeaderAuthorizationAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new MagDv\Cargomart\Api\FileApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client(),
-    $config
-);
-$type = new \MagDv\Cargomart\Dto\\MagDv\Cargomart\Dto\TemporaryFileType(); // \MagDv\Cargomart\Dto\TemporaryFileType | Тип загружаемого временного файла
-$file = '/path/to/file.txt'; // \SplFileObject
-
-try {
-    $result = $apiInstance->apiV2UploadPost($type, $file);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling FileApi->apiV2UploadPost: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **type** | [**\MagDv\Cargomart\Dto\TemporaryFileType**](../Model/.md)| Тип загружаемого временного файла |
- **file** | **\SplFileObject****\SplFileObject**|  |
-
-### Return type
-
-[**\MagDv\Cargomart\Dto\FileV2Item**](../Model/FileV2Item.md)
 
 ### Authorization
 

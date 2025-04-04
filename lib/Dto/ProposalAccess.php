@@ -1195,7 +1195,7 @@ class ProposalAccess implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets create_downtime_claim
      *
-     * @param bool|null $create_downtime_claim Возможность создать претензию Экспедитора о простое по заявке
+     * @param bool|null $create_downtime_claim Возможность создать требование Экспедитора о простое по заявке
      *
      * @return self
      */
