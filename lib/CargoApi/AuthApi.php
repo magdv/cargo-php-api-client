@@ -524,7 +524,7 @@ class AuthApi
                     ];
             }
 
-            $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+            $returnType = '\MagDv\Cargomart\Dto\BaseMessageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -592,7 +592,7 @@ class AuthApi
      */
     public function apiV2AuthLogoutPostAsyncWithHttpInfo($logout_request = null)
     {
-        $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+        $returnType = '\MagDv\Cargomart\Dto\BaseMessageResponse';
         $request = $this->apiV2AuthLogoutPostRequest($logout_request);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)

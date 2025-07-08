@@ -187,4 +187,13 @@ class ConfigurationFeaturesTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "non_delivery_car_claim"
+     */
+    public function testPropertyNonDeliveryCarClaim()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

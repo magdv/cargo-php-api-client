@@ -70,7 +70,8 @@ class ConfigurationFeatures implements ModelInterface, ArrayAccess, \JsonSeriali
         'order_roadmap' => 'bool',
         'price_prediction' => 'bool',
         'small_carrier' => 'bool',
-        'web_socket' => 'bool'
+        'web_socket' => 'bool',
+        'non_delivery_car_claim' => 'bool'
     ];
 
     /**
@@ -92,7 +93,8 @@ class ConfigurationFeatures implements ModelInterface, ArrayAccess, \JsonSeriali
         'order_roadmap' => null,
         'price_prediction' => null,
         'small_carrier' => null,
-        'web_socket' => null
+        'web_socket' => null,
+        'non_delivery_car_claim' => null
     ];
 
     /**
@@ -112,7 +114,8 @@ class ConfigurationFeatures implements ModelInterface, ArrayAccess, \JsonSeriali
         'order_roadmap' => false,
         'price_prediction' => false,
         'small_carrier' => false,
-        'web_socket' => false
+        'web_socket' => false,
+        'non_delivery_car_claim' => false
     ];
 
     /**
@@ -212,7 +215,8 @@ class ConfigurationFeatures implements ModelInterface, ArrayAccess, \JsonSeriali
         'order_roadmap' => 'orderRoadmap',
         'price_prediction' => 'pricePrediction',
         'small_carrier' => 'smallCarrier',
-        'web_socket' => 'webSocket'
+        'web_socket' => 'webSocket',
+        'non_delivery_car_claim' => 'nonDeliveryCarClaim'
     ];
 
     /**
@@ -232,7 +236,8 @@ class ConfigurationFeatures implements ModelInterface, ArrayAccess, \JsonSeriali
         'order_roadmap' => 'setOrderRoadmap',
         'price_prediction' => 'setPricePrediction',
         'small_carrier' => 'setSmallCarrier',
-        'web_socket' => 'setWebSocket'
+        'web_socket' => 'setWebSocket',
+        'non_delivery_car_claim' => 'setNonDeliveryCarClaim'
     ];
 
     /**
@@ -252,7 +257,8 @@ class ConfigurationFeatures implements ModelInterface, ArrayAccess, \JsonSeriali
         'order_roadmap' => 'getOrderRoadmap',
         'price_prediction' => 'getPricePrediction',
         'small_carrier' => 'getSmallCarrier',
-        'web_socket' => 'getWebSocket'
+        'web_socket' => 'getWebSocket',
+        'non_delivery_car_claim' => 'getNonDeliveryCarClaim'
     ];
 
     /**
@@ -324,6 +330,7 @@ class ConfigurationFeatures implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('price_prediction', $data ?? [], false);
         $this->setIfExists('small_carrier', $data ?? [], false);
         $this->setIfExists('web_socket', $data ?? [], false);
+        $this->setIfExists('non_delivery_car_claim', $data ?? [], false);
     }
 
     /**
@@ -688,6 +695,33 @@ class ConfigurationFeatures implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable web_socket cannot be null');
         }
         $this->container['web_socket'] = $web_socket;
+
+        return $this;
+    }
+
+    /**
+     * Gets non_delivery_car_claim
+     *
+     * @return bool|null
+     */
+    public function getNonDeliveryCarClaim()
+    {
+        return $this->container['non_delivery_car_claim'];
+    }
+
+    /**
+     * Sets non_delivery_car_claim
+     *
+     * @param bool|null $non_delivery_car_claim Включить фичу требований за срыв погрузки
+     *
+     * @return self
+     */
+    public function setNonDeliveryCarClaim($non_delivery_car_claim)
+    {
+        if (is_null($non_delivery_car_claim)) {
+            throw new \InvalidArgumentException('non-nullable non_delivery_car_claim cannot be null');
+        }
+        $this->container['non_delivery_car_claim'] = $non_delivery_car_claim;
 
         return $this;
     }

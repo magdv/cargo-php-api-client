@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **price_prediction** | **bool** | Использовать предсказания цены | [optional] [default to false]
 **small_carrier** | **bool** | Мелкий перевозчик | [optional] [default to false]
 **web_socket** | **bool** | Возможность использовать WS | [optional] [default to false]
+**non_delivery_car_claim** | **bool** | Включить фичу требований за срыв погрузки | [optional] [default to false]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

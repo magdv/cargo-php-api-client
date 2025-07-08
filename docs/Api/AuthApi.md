@@ -66,7 +66,7 @@ No authorization required
 ## `apiV2AuthLogoutPost()`
 
 ```php
-apiV2AuthLogoutPost($logout_request): \MagDv\Cargomart\Dto\EmptyDataResponse
+apiV2AuthLogoutPost($logout_request): \MagDv\Cargomart\Dto\BaseMessageResponse
 ```
 
 Удаление текущего токена
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MagDv\Cargomart\Dto\EmptyDataResponse**](../Model/EmptyDataResponse.md)
+[**\MagDv\Cargomart\Dto\BaseMessageResponse**](../Model/BaseMessageResponse.md)
 
 ### Authorization
 

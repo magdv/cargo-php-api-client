@@ -97,42 +97,6 @@ class UserApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2UserRecoveryIdConfirmPost
-     *
-     * Подтверждение восстановления/ввод проверочного кода..
-     *
-     */
-    public function testApiV2UserRecoveryIdConfirmPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserRecoveryIdGet
-     *
-     * Получение процесса восстановления пароля..
-     *
-     */
-    public function testApiV2UserRecoveryIdGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserRecoveryPost
-     *
-     * Запрос на восстановление пароля..
-     *
-     */
-    public function testApiV2UserRecoveryPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2UserSelfCertificateGet
      *
      * Получить список сертификатов текущего пользователя.
@@ -145,36 +109,12 @@ class UserApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2UserSelfContactEmailConfirmPost
-     *
-     * Подтерждение контактного email..
-     *
-     */
-    public function testApiV2UserSelfContactEmailConfirmPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2UserSelfDelete
      *
      * Удаление пользователя самим собой..
      *
      */
     public function testApiV2UserSelfDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserSelfEmailCodeConfirmPost
-     *
-     * Подтверждение телефона по коду из email..
-     *
-     */
-    public function testApiV2UserSelfEmailCodeConfirmPost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -199,18 +139,6 @@ class UserApiTest extends TestCase
      *
      */
     public function testApiV2UserSelfPut()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2UserSelfTokenPost
-     *
-     * Создание одноразового токена.
-     *
-     */
-    public function testApiV2UserSelfTokenPost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

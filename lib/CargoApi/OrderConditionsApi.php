@@ -185,7 +185,7 @@ class OrderConditionsApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \MagDv\Cargomart\Dto\OrderConditionsResponse|object|object|object
+     * @return \MagDv\Cargomart\Dto\OrderConditionsResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse
      */
     public function getOrderConditions($route_points, $kind, $storage_point_ids = null, $company_branch_id = null)
     {
@@ -205,7 +205,7 @@ class OrderConditionsApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \MagDv\Cargomart\Dto\OrderConditionsResponse|object|object|object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MagDv\Cargomart\Dto\OrderConditionsResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrderConditionsWithHttpInfo($route_points, $kind, $storage_point_ids = null, $company_branch_id = null)
     {
@@ -251,38 +251,38 @@ class OrderConditionsApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('object' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('object' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('object' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -314,7 +314,7 @@ class OrderConditionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -322,7 +322,7 @@ class OrderConditionsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -330,7 +330,7 @@ class OrderConditionsApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

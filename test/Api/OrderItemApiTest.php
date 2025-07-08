@@ -193,30 +193,6 @@ class OrderItemApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderOrderIdOriginalDocsAcceptPost
-     *
-     * Подтвердить принятие оригиналов документов..
-     *
-     */
-    public function testApiV2OrderOrderIdOriginalDocsAcceptPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2OrderOrderIdOriginalDocsRejectPost
-     *
-     * Отклонить оригиналы документов..
-     *
-     */
-    public function testApiV2OrderOrderIdOriginalDocsRejectPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderOrderIdPinDelete
      *
      * Удаление заказа из списка закрепленных..

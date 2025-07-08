@@ -586,7 +586,7 @@ class DraftDocumentsApi
                     ];
             }
 
-            $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+            $returnType = '\MagDv\Cargomart\Dto\BaseMessageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -662,7 +662,7 @@ class DraftDocumentsApi
      */
     public function deleteDraftDocumentByIdAsyncWithHttpInfo($id)
     {
-        $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+        $returnType = '\MagDv\Cargomart\Dto\BaseMessageResponse';
         $request = $this->deleteDraftDocumentByIdRequest($id);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)

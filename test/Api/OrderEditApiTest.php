@@ -169,18 +169,6 @@ class OrderEditApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2OrderOrderIdModerationDelete
-     *
-     * Забрать заказ на модерации ГП..
-     *
-     */
-    public function testApiV2OrderOrderIdModerationDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2OrderOrderIdModerationPost
      *
      * Отправка заказа на модерацию ГП..
