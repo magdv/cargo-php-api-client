@@ -12,7 +12,6 @@ Method | HTTP request | Description
 [**apiV2OrderOrderIdContactPatch()**](OrderEditApi.md#apiV2OrderOrderIdContactPatch) | **PATCH** /api/v2/order/{orderId}/contact | Отправить список контактов для добавления.
 [**apiV2OrderOrderIdDelete()**](OrderEditApi.md#apiV2OrderOrderIdDelete) | **DELETE** /api/v2/order/{orderId} | Удаление заказа
 [**apiV2OrderOrderIdEditGet()**](OrderEditApi.md#apiV2OrderOrderIdEditGet) | **GET** /api/v2/order/{orderId}/edit | Получение данных для редактирования заказа
-[**apiV2OrderOrderIdModerationDelete()**](OrderEditApi.md#apiV2OrderOrderIdModerationDelete) | **DELETE** /api/v2/order/{orderId}/moderation | Забрать заказ на модерации ГП.
 [**apiV2OrderOrderIdModerationPost()**](OrderEditApi.md#apiV2OrderOrderIdModerationPost) | **POST** /api/v2/order/{orderId}/moderation | Отправка заказа на модерацию ГП.
 [**apiV2OrderOrderIdPatch()**](OrderEditApi.md#apiV2OrderOrderIdPatch) | **PATCH** /api/v2/order/{orderId} | Редактирование информации о заказе
 [**apiV2OrderOrderIdPointPointIdDelete()**](OrderEditApi.md#apiV2OrderOrderIdPointPointIdDelete) | **DELETE** /api/v2/order/{orderId}/point/{pointId} | Удаление маршрутной точки
@@ -526,71 +525,6 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrderEditApi->apiV2OrderOrderIdEditGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **order_id** | **string**| Идентификатор шаблона или базового заказа. |
-
-### Return type
-
-[**\MagDv\Cargomart\Dto\OrderEditResponse**](../Model/OrderEditResponse.md)
-
-### Authorization
-
-[CookieTokenAuth](../../README.md#CookieTokenAuth), [HeaderAuthorizationAuth](../../README.md#HeaderAuthorizationAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `apiV2OrderOrderIdModerationDelete()`
-
-```php
-apiV2OrderOrderIdModerationDelete($order_id): \MagDv\Cargomart\Dto\OrderEditResponse
-```
-
-Забрать заказ на модерации ГП.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: CookieTokenAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('token', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('token', 'Bearer');
-
-// Configure API key authorization: HeaderAuthorizationAuth
-$config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = MagDv\Cargomart\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-
-$apiInstance = new MagDv\Cargomart\Api\OrderEditApi(
-    // If you want use custom http client, pass your client which implements `Psr\Http\Client\ClientInterface`.
-    // This is optional, `Psr18ClientDiscovery` will be used to find http client. For instance `GuzzleHttp\Client` implements that interface
-    new GuzzleHttp\Client(),
-    $config
-);
-$order_id = 'order_id_example'; // string | Идентификатор шаблона или базового заказа.
-
-try {
-    $result = $apiInstance->apiV2OrderOrderIdModerationDelete($order_id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderEditApi->apiV2OrderOrderIdModerationDelete: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

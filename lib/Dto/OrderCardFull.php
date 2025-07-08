@@ -1607,6 +1607,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
      * Gets payment_detail
      *
      * @return string|null
+     * @deprecated
      */
     public function getPaymentDetail()
     {
@@ -1616,9 +1617,10 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payment_detail
      *
-     * @param string|null $payment_detail @Deprecated. Дополнительная информация по оплате
+     * @param string|null $payment_detail @Deprecated в пользу details с типом=payment. Дополнительная информация по оплате
      *
      * @return self
+     * @deprecated
      */
     public function setPaymentDetail($payment_detail)
     {
@@ -2213,7 +2215,7 @@ class OrderCardFull implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets comment
      *
-     * @param string|null $comment @Deprecated. Комментарий к заказу
+     * @param string|null $comment @Deprecated в пользу details с типом=common. Комментарий к заказу
      *
      * @return self
      * @deprecated

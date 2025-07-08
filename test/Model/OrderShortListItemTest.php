@@ -1006,4 +1006,13 @@ class OrderShortListItemTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "is_ecn_available"
+     */
+    public function testPropertyIsEcnAvailable()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

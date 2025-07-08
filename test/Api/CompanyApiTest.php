@@ -121,78 +121,6 @@ class CompanyApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2CompanyHashCarParkGet
-     *
-     * автопарк перевозчика..
-     *
-     */
-    public function testApiV2CompanyHashCarParkGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashCarParkPatch
-     *
-     * автопарк перевозчика..
-     *
-     */
-    public function testApiV2CompanyHashCarParkPatch()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashCarriageDirectionGet
-     *
-     * Направления перевозок отправителя..
-     *
-     */
-    public function testApiV2CompanyHashCarriageDirectionGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashCarriageDirectionPatch
-     *
-     * Направления перевозок отправителя..
-     *
-     */
-    public function testApiV2CompanyHashCarriageDirectionPatch()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashCarriageRegionGet
-     *
-     * Области перевозок..
-     *
-     */
-    public function testApiV2CompanyHashCarriageRegionGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashCarriageRegionPatch
-     *
-     * Области перевозок..
-     *
-     */
-    public function testApiV2CompanyHashCarriageRegionPatch()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2CompanyHashCommunicationContactsGet
      *
      * Получение контактов для связи..
@@ -217,60 +145,12 @@ class CompanyApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2CompanyHashDisabledDelete
-     *
-     * Метод удаляет компанию из чёрного списка..
-     *
-     */
-    public function testApiV2CompanyHashDisabledDelete()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashDisabledPost
-     *
-     * Метод добавления компании в чёрный список..
-     *
-     */
-    public function testApiV2CompanyHashDisabledPost()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashDocumentGet
-     *
-     * Метод возвращает список документов, загруженный компанией..
-     *
-     */
-    public function testApiV2CompanyHashDocumentGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2CompanyHashGet
      *
      * Метод возвращает реквизиты организации по хэшу..
      *
      */
     public function testApiV2CompanyHashGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashKonturReportGet
-     *
-     * Получение ссылки на отчет контура по компании..
-     *
-     */
-    public function testApiV2CompanyHashKonturReportGet()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -313,54 +193,6 @@ class CompanyApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2CompanyHashPartnerConditionsGet
-     *
-     * Получение условий партнёрства..
-     *
-     */
-    public function testApiV2CompanyHashPartnerConditionsGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashPartnerConditionsPatch
-     *
-     * Метод редактирует условия партнёрства..
-     *
-     */
-    public function testApiV2CompanyHashPartnerConditionsPatch()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashPartnerInvitePut
-     *
-     * Метод добавляет компанию в партнёры.
-     *
-     */
-    public function testApiV2CompanyHashPartnerInvitePut()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashPartnerMessageGet
-     *
-     * Получение последнего партнёрского сообщения от компании..
-     *
-     */
-    public function testApiV2CompanyHashPartnerMessageGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2CompanyHashPatch
      *
      * Метод редактирует данные компании..
@@ -379,54 +211,6 @@ class CompanyApiTest extends TestCase
      *
      */
     public function testApiV2CompanyHashPut()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashRequirementGet
-     *
-     * Требования отправителя к перевозкам..
-     *
-     */
-    public function testApiV2CompanyHashRequirementGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashRequirementPatch
-     *
-     * Требования отправителя к перевозкам..
-     *
-     */
-    public function testApiV2CompanyHashRequirementPatch()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashReviewGet
-     *
-     * Отзывы на компанию..
-     *
-     */
-    public function testApiV2CompanyHashReviewGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanyHashReviewPost
-     *
-     * Отзыв на компанию..
-     *
-     */
-    public function testApiV2CompanyHashReviewPost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -481,78 +265,6 @@ class CompanyApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2CompanySelfCarParkGet
-     *
-     * Мой автопарк..
-     *
-     */
-    public function testApiV2CompanySelfCarParkGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanySelfCarParkPatch
-     *
-     * автопарк перевозчика..
-     *
-     */
-    public function testApiV2CompanySelfCarParkPatch()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanySelfCarriageDirectionGet
-     *
-     * Направления своих перевозок..
-     *
-     */
-    public function testApiV2CompanySelfCarriageDirectionGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanySelfCarriageDirectionPatch
-     *
-     * Направления перевозок отправителя..
-     *
-     */
-    public function testApiV2CompanySelfCarriageDirectionPatch()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanySelfCarriageRegionGet
-     *
-     * Области своих перевозок..
-     *
-     */
-    public function testApiV2CompanySelfCarriageRegionGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanySelfCarriageRegionPatch
-     *
-     * Области перевозок..
-     *
-     */
-    public function testApiV2CompanySelfCarriageRegionPatch()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2CompanySelfCommunicationContactsGet
      *
      * Получение контактов для связи..
@@ -589,30 +301,6 @@ class CompanyApiTest extends TestCase
     }
 
     /**
-     * Test case for apiV2CompanySelfPartnerConditionsGet
-     *
-     * Получение условий партнёрства..
-     *
-     */
-    public function testApiV2CompanySelfPartnerConditionsGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanySelfPartnerConditionsPatch
-     *
-     * Метод редактирует условия партнёрства..
-     *
-     */
-    public function testApiV2CompanySelfPartnerConditionsPatch()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for apiV2CompanySelfPatch
      *
      * Метод редактирует данные моей компании..
@@ -631,30 +319,6 @@ class CompanyApiTest extends TestCase
      *
      */
     public function testApiV2CompanySelfPut()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanySelfRequirementGet
-     *
-     * Мои требования к перевозкам..
-     *
-     */
-    public function testApiV2CompanySelfRequirementGet()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for apiV2CompanySelfRequirementPatch
-     *
-     * Требования отправителя к перевозкам..
-     *
-     */
-    public function testApiV2CompanySelfRequirementPatch()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

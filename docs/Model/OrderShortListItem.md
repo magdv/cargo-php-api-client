@@ -107,5 +107,6 @@ Name | Type | Description | Notes
 **cargo_type** | **string** | Описание груза | [optional]
 **contract_type_id** | **int** | Идентификатор типа договора, при ограничении доступа prt_contract_exclude | [optional]
 **temperature** | [**\MagDv\Cargomart\Dto\TemperatureRange**](TemperatureRange.md) | Температурный режим в цельсиях | [optional]
+**is_ecn_available** | **bool** | Возможность создать ЭТРН | [optional] [default to false]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

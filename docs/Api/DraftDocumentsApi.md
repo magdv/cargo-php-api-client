@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 ## `deleteDraftDocumentById()`
 
 ```php
-deleteDraftDocumentById($id): \MagDv\Cargomart\Dto\EmptyDataResponse
+deleteDraftDocumentById($id): \MagDv\Cargomart\Dto\BaseMessageResponse
 ```
 
 Удаление черновика документа.
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MagDv\Cargomart\Dto\EmptyDataResponse**](../Model/EmptyDataResponse.md)
+[**\MagDv\Cargomart\Dto\BaseMessageResponse**](../Model/BaseMessageResponse.md)
 
 ### Authorization
 

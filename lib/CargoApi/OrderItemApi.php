@@ -1013,7 +1013,7 @@ class OrderItemApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \MagDv\Cargomart\Dto\OrderEcnCheckAccessResponse|\MagDv\Cargomart\Dto\OrderEcnCheckAccessResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse
+     * @return \MagDv\Cargomart\Dto\OrderEcnCheckAccessResponse|\MagDv\Cargomart\Dto\OrderEcnCheckAccessResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse
      */
     public function apiV2OrderOrderIdCheckDigitalEcnAccessGet($order_id, $point_index_from, $point_index_to)
     {
@@ -1032,7 +1032,7 @@ class OrderItemApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \MagDv\Cargomart\Dto\OrderEcnCheckAccessResponse|\MagDv\Cargomart\Dto\OrderEcnCheckAccessResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MagDv\Cargomart\Dto\OrderEcnCheckAccessResponse|\MagDv\Cargomart\Dto\OrderEcnCheckAccessResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV2OrderOrderIdCheckDigitalEcnAccessGetWithHttpInfo($order_id, $point_index_from, $point_index_to)
     {
@@ -1090,38 +1090,38 @@ class OrderItemApi
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1161,7 +1161,7 @@ class OrderItemApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1169,7 +1169,7 @@ class OrderItemApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1177,7 +1177,7 @@ class OrderItemApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1407,7 +1407,7 @@ class OrderItemApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \MagDv\Cargomart\Dto\OrderEcnListResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse
+     * @return \MagDv\Cargomart\Dto\OrderEcnListResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse
      */
     public function apiV2OrderOrderIdEcnGet($order_id, $filter_index_from = null, $filter_index_to = null, $filter_type = null, $filter_status_group = null, $filter_status = null, $filter_is_active = null, $page = 1, $per_page = 20)
     {
@@ -1432,7 +1432,7 @@ class OrderItemApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \MagDv\Cargomart\Dto\OrderEcnListResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MagDv\Cargomart\Dto\OrderEcnListResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV2OrderOrderIdEcnGetWithHttpInfo($order_id, $filter_index_from = null, $filter_index_to = null, $filter_type = null, $filter_status_group = null, $filter_status = null, $filter_is_active = null, $page = 1, $per_page = 20)
     {
@@ -1478,50 +1478,50 @@ class OrderItemApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1553,7 +1553,7 @@ class OrderItemApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1561,7 +1561,7 @@ class OrderItemApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1569,7 +1569,7 @@ class OrderItemApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1577,7 +1577,7 @@ class OrderItemApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1872,7 +1872,7 @@ class OrderItemApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \MagDv\Cargomart\Dto\OrderEcnResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse
+     * @return \MagDv\Cargomart\Dto\OrderEcnResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse
      */
     public function apiV2OrderOrderIdEcnPost($order_id, $ecn_additional_data)
     {
@@ -1890,7 +1890,7 @@ class OrderItemApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \MagDv\Cargomart\Dto\OrderEcnResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MagDv\Cargomart\Dto\OrderEcnResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV2OrderOrderIdEcnPostWithHttpInfo($order_id, $ecn_additional_data)
     {
@@ -1936,50 +1936,50 @@ class OrderItemApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2011,7 +2011,7 @@ class OrderItemApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2019,7 +2019,7 @@ class OrderItemApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2027,7 +2027,7 @@ class OrderItemApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2035,7 +2035,7 @@ class OrderItemApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2234,7 +2234,7 @@ class OrderItemApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \MagDv\Cargomart\Dto\FileLinkResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse
+     * @return \MagDv\Cargomart\Dto\FileLinkResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse
      */
     public function apiV2OrderOrderIdEcnTemplateGet($order_id, $format = null, $point_index = null)
     {
@@ -2253,7 +2253,7 @@ class OrderItemApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \MagDv\Cargomart\Dto\FileLinkResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MagDv\Cargomart\Dto\FileLinkResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV2OrderOrderIdEcnTemplateGetWithHttpInfo($order_id, $format = null, $point_index = null)
     {
@@ -2299,50 +2299,50 @@ class OrderItemApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2374,7 +2374,7 @@ class OrderItemApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2382,7 +2382,7 @@ class OrderItemApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2390,7 +2390,7 @@ class OrderItemApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2398,7 +2398,7 @@ class OrderItemApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3402,591 +3402,6 @@ class OrderItemApi
         $uri = $this->createUri($operationHost, $resourcePath, $queryParams);
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
-    }
-
-    /**
-     * Operation apiV2OrderOrderIdOriginalDocsAcceptPost
-     *
-     * Подтвердить принятие оригиналов документов.
-     *
-     * @param  string $order_id Идентификатор шаблона или базового заказа. (required)
-     *
-     * @throws \MagDv\Cargomart\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \MagDv\Cargomart\Dto\OrderCardResponse|\MagDv\Cargomart\Dto\OrderCardResponse
-     */
-    public function apiV2OrderOrderIdOriginalDocsAcceptPost($order_id)
-    {
-        list($response) = $this->apiV2OrderOrderIdOriginalDocsAcceptPostWithHttpInfo($order_id);
-        return $response;
-    }
-
-    /**
-     * Operation apiV2OrderOrderIdOriginalDocsAcceptPostWithHttpInfo
-     *
-     * Подтвердить принятие оригиналов документов.
-     *
-     * @param  string $order_id Идентификатор шаблона или базового заказа. (required)
-     *
-     * @throws \MagDv\Cargomart\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \MagDv\Cargomart\Dto\OrderCardResponse|\MagDv\Cargomart\Dto\OrderCardResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function apiV2OrderOrderIdOriginalDocsAcceptPostWithHttpInfo($order_id)
-    {
-        $request = $this->apiV2OrderOrderIdOriginalDocsAcceptPostRequest($order_id);
-
-        try {
-            try {
-                $response = $this->httpClient->sendRequest($request);
-            } catch (HttpException $e) {
-                $response = $e->getResponse();
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $response->getStatusCode(),
-                        (string) $request->getUri()
-                    ),
-                    $request,
-                    $response,
-                    $e
-                );
-            } catch (ClientExceptionInterface $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $request,
-                    null,
-                    $e
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            switch($statusCode) {
-                case 200:
-                    if ('\MagDv\Cargomart\Dto\OrderCardResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\OrderCardResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 400:
-                    if ('\MagDv\Cargomart\Dto\OrderCardResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\OrderCardResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\MagDv\Cargomart\Dto\OrderCardResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\OrderCardResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\OrderCardResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation apiV2OrderOrderIdOriginalDocsAcceptPostAsync
-     *
-     * Подтвердить принятие оригиналов документов.
-     *
-     * @param  string $order_id Идентификатор шаблона или базового заказа. (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return Promise
-     */
-    public function apiV2OrderOrderIdOriginalDocsAcceptPostAsync($order_id)
-    {
-        return $this->apiV2OrderOrderIdOriginalDocsAcceptPostAsyncWithHttpInfo($order_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation apiV2OrderOrderIdOriginalDocsAcceptPostAsyncWithHttpInfo
-     *
-     * Подтвердить принятие оригиналов документов.
-     *
-     * @param  string $order_id Идентификатор шаблона или базового заказа. (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return Promise
-     */
-    public function apiV2OrderOrderIdOriginalDocsAcceptPostAsyncWithHttpInfo($order_id)
-    {
-        $returnType = '\MagDv\Cargomart\Dto\OrderCardResponse';
-        $request = $this->apiV2OrderOrderIdOriginalDocsAcceptPostRequest($order_id);
-
-        return $this->httpAsyncClient->sendAsyncRequest($request)
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function (HttpException $exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $exception->getRequest(),
-                        $exception->getResponse(),
-                        $exception
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'apiV2OrderOrderIdOriginalDocsAcceptPost'
-     *
-     * @param  string $order_id Идентификатор шаблона или базового заказа. (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return RequestInterface
-     */
-    public function apiV2OrderOrderIdOriginalDocsAcceptPostRequest($order_id)
-    {
-        // verify the required parameter 'order_id' is set
-        if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $order_id when calling apiV2OrderOrderIdOriginalDocsAcceptPost'
-            );
-        }
-
-        $resourcePath = '/api/v2/order/{orderId}/original-docs-accept';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = null;
-        $multipart = false;
-
-
-
-        // path params
-        if ($order_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'orderId' . '}',
-                ObjectSerializer::toPathValue($order_id),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json'],
-            '',
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($this->headerSelector->isJsonMime($headers['Content-Type'])) {
-                $httpBody = json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('token');
-        if ($apiKey !== null) {
-            
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
-        if ($apiKey !== null) {
-            $headers['Authorization'] = $apiKey;
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-
-        $uri = $this->createUri($operationHost, $resourcePath, $queryParams);
-
-        return $this->createRequest('POST', $uri, $headers, $httpBody);
-    }
-
-    /**
-     * Operation apiV2OrderOrderIdOriginalDocsRejectPost
-     *
-     * Отклонить оригиналы документов.
-     *
-     * @param  string $order_id Идентификатор шаблона или базового заказа. (required)
-     * @param  \MagDv\Cargomart\Dto\RejectDocumentRequest $reject_document_request reject_document_request (required)
-     *
-     * @throws \MagDv\Cargomart\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \MagDv\Cargomart\Dto\OrderCardResponse|\MagDv\Cargomart\Dto\OrderCardResponse
-     */
-    public function apiV2OrderOrderIdOriginalDocsRejectPost($order_id, $reject_document_request)
-    {
-        list($response) = $this->apiV2OrderOrderIdOriginalDocsRejectPostWithHttpInfo($order_id, $reject_document_request);
-        return $response;
-    }
-
-    /**
-     * Operation apiV2OrderOrderIdOriginalDocsRejectPostWithHttpInfo
-     *
-     * Отклонить оригиналы документов.
-     *
-     * @param  string $order_id Идентификатор шаблона или базового заказа. (required)
-     * @param  \MagDv\Cargomart\Dto\RejectDocumentRequest $reject_document_request (required)
-     *
-     * @throws \MagDv\Cargomart\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \MagDv\Cargomart\Dto\OrderCardResponse|\MagDv\Cargomart\Dto\OrderCardResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function apiV2OrderOrderIdOriginalDocsRejectPostWithHttpInfo($order_id, $reject_document_request)
-    {
-        $request = $this->apiV2OrderOrderIdOriginalDocsRejectPostRequest($order_id, $reject_document_request);
-
-        try {
-            try {
-                $response = $this->httpClient->sendRequest($request);
-            } catch (HttpException $e) {
-                $response = $e->getResponse();
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $response->getStatusCode(),
-                        (string) $request->getUri()
-                    ),
-                    $request,
-                    $response,
-                    $e
-                );
-            } catch (ClientExceptionInterface $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $request,
-                    null,
-                    $e
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            switch($statusCode) {
-                case 200:
-                    if ('\MagDv\Cargomart\Dto\OrderCardResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\OrderCardResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 400:
-                    if ('\MagDv\Cargomart\Dto\OrderCardResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\OrderCardResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\MagDv\Cargomart\Dto\OrderCardResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\OrderCardResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\OrderCardResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation apiV2OrderOrderIdOriginalDocsRejectPostAsync
-     *
-     * Отклонить оригиналы документов.
-     *
-     * @param  string $order_id Идентификатор шаблона или базового заказа. (required)
-     * @param  \MagDv\Cargomart\Dto\RejectDocumentRequest $reject_document_request (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return Promise
-     */
-    public function apiV2OrderOrderIdOriginalDocsRejectPostAsync($order_id, $reject_document_request)
-    {
-        return $this->apiV2OrderOrderIdOriginalDocsRejectPostAsyncWithHttpInfo($order_id, $reject_document_request)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation apiV2OrderOrderIdOriginalDocsRejectPostAsyncWithHttpInfo
-     *
-     * Отклонить оригиналы документов.
-     *
-     * @param  string $order_id Идентификатор шаблона или базового заказа. (required)
-     * @param  \MagDv\Cargomart\Dto\RejectDocumentRequest $reject_document_request (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return Promise
-     */
-    public function apiV2OrderOrderIdOriginalDocsRejectPostAsyncWithHttpInfo($order_id, $reject_document_request)
-    {
-        $returnType = '\MagDv\Cargomart\Dto\OrderCardResponse';
-        $request = $this->apiV2OrderOrderIdOriginalDocsRejectPostRequest($order_id, $reject_document_request);
-
-        return $this->httpAsyncClient->sendAsyncRequest($request)
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function (HttpException $exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $exception->getRequest(),
-                        $exception->getResponse(),
-                        $exception
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'apiV2OrderOrderIdOriginalDocsRejectPost'
-     *
-     * @param  string $order_id Идентификатор шаблона или базового заказа. (required)
-     * @param  \MagDv\Cargomart\Dto\RejectDocumentRequest $reject_document_request (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return RequestInterface
-     */
-    public function apiV2OrderOrderIdOriginalDocsRejectPostRequest($order_id, $reject_document_request)
-    {
-        // verify the required parameter 'order_id' is set
-        if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $order_id when calling apiV2OrderOrderIdOriginalDocsRejectPost'
-            );
-        }
-        // verify the required parameter 'reject_document_request' is set
-        if ($reject_document_request === null || (is_array($reject_document_request) && count($reject_document_request) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $reject_document_request when calling apiV2OrderOrderIdOriginalDocsRejectPost'
-            );
-        }
-
-        $resourcePath = '/api/v2/order/{orderId}/original-docs-reject';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = null;
-        $multipart = false;
-
-
-
-        // path params
-        if ($order_id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'orderId' . '}',
-                ObjectSerializer::toPathValue($order_id),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json'],
-            'application/json',
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($reject_document_request)) {
-            if ($this->headerSelector->isJsonMime($headers['Content-Type'])) {
-                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($reject_document_request));
-            } else {
-                $httpBody = $reject_document_request;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($this->headerSelector->isJsonMime($headers['Content-Type'])) {
-                $httpBody = json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('token');
-        if ($apiKey !== null) {
-            
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
-        if ($apiKey !== null) {
-            $headers['Authorization'] = $apiKey;
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-
-        $uri = $this->createUri($operationHost, $resourcePath, $queryParams);
-
-        return $this->createRequest('POST', $uri, $headers, $httpBody);
     }
 
     /**
@@ -5336,7 +4751,7 @@ class OrderItemApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \MagDv\Cargomart\Dto\OrderValidateEcnResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse
+     * @return \MagDv\Cargomart\Dto\OrderValidateEcnResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse
      */
     public function apiV2OrderOrderIdValidateEcnDataPost($order_id, $ecn_additional_data)
     {
@@ -5354,7 +4769,7 @@ class OrderItemApi
      *
      * @throws \MagDv\Cargomart\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \MagDv\Cargomart\Dto\OrderValidateEcnResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse|\MagDv\Cargomart\Dto\EmptyDataResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \MagDv\Cargomart\Dto\OrderValidateEcnResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse|\MagDv\Cargomart\Dto\BaseMessageResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV2OrderOrderIdValidateEcnDataPostWithHttpInfo($order_id, $ecn_additional_data)
     {
@@ -5400,50 +4815,50 @@ class OrderItemApi
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\MagDv\Cargomart\Dto\EmptyDataResponse' === '\SplFileObject') {
+                    if ('\MagDv\Cargomart\Dto\BaseMessageResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\EmptyDataResponse', []),
+                        ObjectSerializer::deserialize($content, '\MagDv\Cargomart\Dto\BaseMessageResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5475,7 +4890,7 @@ class OrderItemApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5483,7 +4898,7 @@ class OrderItemApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5491,7 +4906,7 @@ class OrderItemApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5499,7 +4914,7 @@ class OrderItemApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\MagDv\Cargomart\Dto\EmptyDataResponse',
+                        '\MagDv\Cargomart\Dto\BaseMessageResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

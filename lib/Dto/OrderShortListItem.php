@@ -161,7 +161,8 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'device' => 'string[]',
         'cargo_type' => 'string',
         'contract_type_id' => 'int',
-        'temperature' => '\MagDv\Cargomart\Dto\TemperatureRange'
+        'temperature' => '\MagDv\Cargomart\Dto\TemperatureRange',
+        'is_ecn_available' => 'bool'
     ];
 
     /**
@@ -274,7 +275,8 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'device' => null,
         'cargo_type' => null,
         'contract_type_id' => null,
-        'temperature' => null
+        'temperature' => null,
+        'is_ecn_available' => null
     ];
 
     /**
@@ -385,7 +387,8 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'device' => false,
         'cargo_type' => false,
         'contract_type_id' => false,
-        'temperature' => false
+        'temperature' => false,
+        'is_ecn_available' => false
     ];
 
     /**
@@ -576,7 +579,8 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'device' => 'device',
         'cargo_type' => 'cargoType',
         'contract_type_id' => 'contractTypeId',
-        'temperature' => 'temperature'
+        'temperature' => 'temperature',
+        'is_ecn_available' => 'isEcnAvailable'
     ];
 
     /**
@@ -687,7 +691,8 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'device' => 'setDevice',
         'cargo_type' => 'setCargoType',
         'contract_type_id' => 'setContractTypeId',
-        'temperature' => 'setTemperature'
+        'temperature' => 'setTemperature',
+        'is_ecn_available' => 'setIsEcnAvailable'
     ];
 
     /**
@@ -798,7 +803,8 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
         'device' => 'getDevice',
         'cargo_type' => 'getCargoType',
         'contract_type_id' => 'getContractTypeId',
-        'temperature' => 'getTemperature'
+        'temperature' => 'getTemperature',
+        'is_ecn_available' => 'getIsEcnAvailable'
     ];
 
     /**
@@ -961,6 +967,7 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('cargo_type', $data ?? [], null);
         $this->setIfExists('contract_type_id', $data ?? [], null);
         $this->setIfExists('temperature', $data ?? [], null);
+        $this->setIfExists('is_ecn_available', $data ?? [], false);
     }
 
     /**
@@ -3861,6 +3868,33 @@ class OrderShortListItem implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable temperature cannot be null');
         }
         $this->container['temperature'] = $temperature;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_ecn_available
+     *
+     * @return bool|null
+     */
+    public function getIsEcnAvailable()
+    {
+        return $this->container['is_ecn_available'];
+    }
+
+    /**
+     * Sets is_ecn_available
+     *
+     * @param bool|null $is_ecn_available Возможность создать ЭТРН
+     *
+     * @return self
+     */
+    public function setIsEcnAvailable($is_ecn_available)
+    {
+        if (is_null($is_ecn_available)) {
+            throw new \InvalidArgumentException('non-nullable is_ecn_available cannot be null');
+        }
+        $this->container['is_ecn_available'] = $is_ecn_available;
 
         return $this;
     }

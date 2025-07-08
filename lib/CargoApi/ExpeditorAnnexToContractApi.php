@@ -284,7 +284,7 @@ class ExpeditorAnnexToContractApi
                     ];
             }
 
-            $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+            $returnType = '\MagDv\Cargomart\Dto\BaseMessageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -370,7 +370,7 @@ class ExpeditorAnnexToContractApi
      */
     public function apiV2ExpeditorAnnexToContractContractUuidBankingDetailsApprovePostAsyncWithHttpInfo($contract_uuid, $banking_details_approve_request)
     {
-        $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+        $returnType = '\MagDv\Cargomart\Dto\BaseMessageResponse';
         $request = $this->apiV2ExpeditorAnnexToContractContractUuidBankingDetailsApprovePostRequest($contract_uuid, $banking_details_approve_request);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)
@@ -623,7 +623,7 @@ class ExpeditorAnnexToContractApi
                     ];
             }
 
-            $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+            $returnType = '\MagDv\Cargomart\Dto\BaseMessageResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -707,7 +707,7 @@ class ExpeditorAnnexToContractApi
      */
     public function apiV2ExpeditorAnnexToContractContractUuidBankingDetailsDeleteAsyncWithHttpInfo($contract_uuid)
     {
-        $returnType = '\MagDv\Cargomart\Dto\EmptyDataResponse';
+        $returnType = '\MagDv\Cargomart\Dto\BaseMessageResponse';
         $request = $this->apiV2ExpeditorAnnexToContractContractUuidBankingDetailsDeleteRequest($contract_uuid);
 
         return $this->httpAsyncClient->sendAsyncRequest($request)

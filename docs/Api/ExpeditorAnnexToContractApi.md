@@ -14,7 +14,7 @@ Method | HTTP request | Description
 ## `apiV2ExpeditorAnnexToContractContractUuidBankingDetailsApprovePost()`
 
 ```php
-apiV2ExpeditorAnnexToContractContractUuidBankingDetailsApprovePost($contract_uuid, $banking_details_approve_request): \MagDv\Cargomart\Dto\EmptyDataResponse
+apiV2ExpeditorAnnexToContractContractUuidBankingDetailsApprovePost($contract_uuid, $banking_details_approve_request): \MagDv\Cargomart\Dto\BaseMessageResponse
 ```
 
 Отметка банковских реквизитов, как валидных или невалидных и требующих переподписания
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MagDv\Cargomart\Dto\EmptyDataResponse**](../Model/EmptyDataResponse.md)
+[**\MagDv\Cargomart\Dto\BaseMessageResponse**](../Model/BaseMessageResponse.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 ## `apiV2ExpeditorAnnexToContractContractUuidBankingDetailsDelete()`
 
 ```php
-apiV2ExpeditorAnnexToContractContractUuidBankingDetailsDelete($contract_uuid): \MagDv\Cargomart\Dto\EmptyDataResponse
+apiV2ExpeditorAnnexToContractContractUuidBankingDetailsDelete($contract_uuid): \MagDv\Cargomart\Dto\BaseMessageResponse
 ```
 
 Удаление (пометка неактивным) приложения договора с банковскими реквизитами
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\MagDv\Cargomart\Dto\EmptyDataResponse**](../Model/EmptyDataResponse.md)
+[**\MagDv\Cargomart\Dto\BaseMessageResponse**](../Model/BaseMessageResponse.md)
 
 ### Authorization
 
